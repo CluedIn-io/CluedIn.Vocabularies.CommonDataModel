@@ -1,0 +1,1 @@
+# CluedIn.Vocabularies.CommonDataModel
