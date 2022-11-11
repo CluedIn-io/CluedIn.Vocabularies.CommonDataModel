@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LifeEventVocabulary()
         {
-            VocabularyName = "Common Data Model LifeEvent";
+            VocabularyName = "LifeEvent";
             KeyPrefix = "commonDataModel.lifeevent";
             KeySeparator = ".";
             Grouping = "/LifeEvent";
 
-            AddGroup("Common Data Model LifeEvent Details", group =>
+            AddGroup("LifeEvent Details", group =>
             {
                 lifemomentId = group.Add(new VocabularyKey(nameof(lifemomentId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

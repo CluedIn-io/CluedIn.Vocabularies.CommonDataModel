@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailInternalOrgCatHierarchyCollapsedEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RetailInternalOrgCatHierarchyCollapsedEntity";
+            VocabularyName = "RetailInternalOrgCatHierarchyCollapsedEntity";
             KeyPrefix = "commonDataModel.retailinternalorgcathierarchycollapsedentity";
             KeySeparator = ".";
             Grouping = "/RetailInternalOrgCatHierarchyCollapsedEntity";
 
-            AddGroup("Common Data Model RetailInternalOrgCatHierarchyCollapsedEntity Details", group =>
+            AddGroup("RetailInternalOrgCatHierarchyCollapsedEntity Details", group =>
             {
                 AncestorInternalOrg = group.Add(new VocabularyKey(nameof(AncestorInternalOrg), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CategoryHierarchy = group.Add(new VocabularyKey(nameof(CategoryHierarchy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

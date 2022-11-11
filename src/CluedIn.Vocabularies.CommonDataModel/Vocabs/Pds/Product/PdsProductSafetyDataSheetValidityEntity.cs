@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PdsProductSafetyDataSheetValidityEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PdsProductSafetyDataSheetValidityEntity";
+            VocabularyName = "PdsProductSafetyDataSheetValidityEntity";
             KeyPrefix = "commonDataModel.pdsproductsafetydatasheetvalidityentity";
             KeySeparator = ".";
             Grouping = "/PdsProductSafetyDataSheetValidityEntity";
 
-            AddGroup("Common Data Model PdsProductSafetyDataSheetValidityEntity Details", group =>
+            AddGroup("PdsProductSafetyDataSheetValidityEntity Details", group =>
             {
                 ApplicableCountryRegionId = group.Add(new VocabularyKey(nameof(ApplicableCountryRegionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExpirationDays = group.Add(new VocabularyKey(nameof(ExpirationDays), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

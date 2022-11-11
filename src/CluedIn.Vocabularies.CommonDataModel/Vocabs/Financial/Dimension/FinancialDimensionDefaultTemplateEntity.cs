@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FinancialDimensionDefaultTemplateEntityVocabulary()
         {
-            VocabularyName = "Common Data Model FinancialDimensionDefaultTemplateEntity";
+            VocabularyName = "FinancialDimensionDefaultTemplateEntity";
             KeyPrefix = "commonDataModel.financialdimensiondefaulttemplateentity";
             KeySeparator = ".";
             Grouping = "/FinancialDimensionDefaultTemplateEntity";
 
-            AddGroup("Common Data Model FinancialDimensionDefaultTemplateEntity Details", group =>
+            AddGroup("FinancialDimensionDefaultTemplateEntity Details", group =>
             {
                 TemplateName = group.Add(new VocabularyKey(nameof(TemplateName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LegalEntity = group.Add(new VocabularyKey(nameof(LegalEntity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

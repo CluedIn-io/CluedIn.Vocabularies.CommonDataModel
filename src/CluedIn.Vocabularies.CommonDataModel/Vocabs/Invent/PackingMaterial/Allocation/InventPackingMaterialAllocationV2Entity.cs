@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventPackingMaterialAllocationV2EntityVocabulary()
         {
-            VocabularyName = "Common Data Model InventPackingMaterialAllocationV2Entity";
+            VocabularyName = "InventPackingMaterialAllocationV2Entity";
             KeyPrefix = "commonDataModel.inventpackingmaterialallocationv2entity";
             KeySeparator = ".";
             Grouping = "/InventPackingMaterialAllocationV2Entity";
 
-            AddGroup("Common Data Model InventPackingMaterialAllocationV2Entity Details", group =>
+            AddGroup("InventPackingMaterialAllocationV2Entity Details", group =>
             {
                 ItemNumber = group.Add(new VocabularyKey(nameof(ItemNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PackingMaterialGroupId = group.Add(new VocabularyKey(nameof(PackingMaterialGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

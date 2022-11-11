@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRScriptEntityVocabulary()
         {
-            VocabularyName = "Common Data Model MCRScriptEntity";
+            VocabularyName = "MCRScriptEntity";
             KeyPrefix = "commonDataModel.mcrscriptentity";
             KeySeparator = ".";
             Grouping = "/MCRScriptEntity";
 
-            AddGroup("Common Data Model MCRScriptEntity Details", group =>
+            AddGroup("MCRScriptEntity Details", group =>
             {
                 AssociationTypes = group.Add(new VocabularyKey(nameof(AssociationTypes), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ScriptUse = group.Add(new VocabularyKey(nameof(ScriptUse), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

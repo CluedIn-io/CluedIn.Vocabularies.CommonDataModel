@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SystemSecurityDutyCustomizationsEntityVocabulary()
         {
-            VocabularyName = "Common Data Model SystemSecurityDutyCustomizationsEntity";
+            VocabularyName = "SystemSecurityDutyCustomizationsEntity";
             KeyPrefix = "commonDataModel.systemsecuritydutycustomizationsentity";
             KeySeparator = ".";
             Grouping = "/SystemSecurityDutyCustomizationsEntity";
 
-            AddGroup("Common Data Model SystemSecurityDutyCustomizationsEntity Details", group =>
+            AddGroup("SystemSecurityDutyCustomizationsEntity Details", group =>
             {
                 Identifier = group.Add(new VocabularyKey(nameof(Identifier), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 XmlObject = group.Add(new VocabularyKey(nameof(XmlObject), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

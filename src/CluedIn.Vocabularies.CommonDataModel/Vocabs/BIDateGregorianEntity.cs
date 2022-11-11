@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BIDateGregorianEntityVocabulary()
         {
-            VocabularyName = "Common Data Model BIDateGregorianEntity";
+            VocabularyName = "BIDateGregorianEntity";
             KeyPrefix = "commonDataModel.bidategregorianentity";
             KeySeparator = ".";
             Grouping = "/BIDateGregorianEntity";
 
-            AddGroup("Common Data Model BIDateGregorianEntity Details", group =>
+            AddGroup("BIDateGregorianEntity Details", group =>
             {
                 GregorianDate = group.Add(new VocabularyKey(nameof(GregorianDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GregorianDateId = group.Add(new VocabularyKey(nameof(GregorianDateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FIOverdraftVocabulary()
         {
-            VocabularyName = "Common Data Model FIOverdraft";
+            VocabularyName = "FIOverdraft";
             KeyPrefix = "commonDataModel.fioverdraft";
             KeySeparator = ".";
             Grouping = "/FIOverdraft";
 
-            AddGroup("Common Data Model FIOverdraft Details", group =>
+            AddGroup("FIOverdraft Details", group =>
             {
                 fi_OverdraftId = group.Add(new VocabularyKey(nameof(fi_OverdraftId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

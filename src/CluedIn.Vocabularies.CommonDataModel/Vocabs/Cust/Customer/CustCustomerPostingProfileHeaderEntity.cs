@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustCustomerPostingProfileHeaderEntityVocabulary()
         {
-            VocabularyName = "Common Data Model CustCustomerPostingProfileHeaderEntity";
+            VocabularyName = "CustCustomerPostingProfileHeaderEntity";
             KeyPrefix = "commonDataModel.custcustomerpostingprofileheaderentity";
             KeySeparator = ".";
             Grouping = "/CustCustomerPostingProfileHeaderEntity";
 
-            AddGroup("Common Data Model CustCustomerPostingProfileHeaderEntity Details", group =>
+            AddGroup("CustCustomerPostingProfileHeaderEntity Details", group =>
             {
                 IsTransactionIncludedInCollectionLetterGeneration = group.Add(new VocabularyKey(nameof(IsTransactionIncludedInCollectionLetterGeneration), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsTransactionIncludedInInterestCalculation = group.Add(new VocabularyKey(nameof(IsTransactionIncludedInInterestCalculation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

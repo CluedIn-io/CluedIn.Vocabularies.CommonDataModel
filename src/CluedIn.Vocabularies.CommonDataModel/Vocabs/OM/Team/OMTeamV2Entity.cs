@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public OMTeamV2EntityVocabulary()
         {
-            VocabularyName = "Common Data Model OMTeamV2Entity";
+            VocabularyName = "OMTeamV2Entity";
             KeyPrefix = "commonDataModel.omteamv2entity";
             KeySeparator = ".";
             Grouping = "/OMTeamV2Entity";
 
-            AddGroup("Common Data Model OMTeamV2Entity Details", group =>
+            AddGroup("OMTeamV2Entity Details", group =>
             {
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PartyNumber = group.Add(new VocabularyKey(nameof(PartyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

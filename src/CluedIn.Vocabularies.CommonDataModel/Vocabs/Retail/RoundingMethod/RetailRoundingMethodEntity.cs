@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailRoundingMethodEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RetailRoundingMethodEntity";
+            VocabularyName = "RetailRoundingMethodEntity";
             KeyPrefix = "commonDataModel.retailroundingmethodentity";
             KeySeparator = ".";
             Grouping = "/RetailRoundingMethodEntity";
 
-            AddGroup("Common Data Model RetailRoundingMethodEntity Details", group =>
+            AddGroup("RetailRoundingMethodEntity Details", group =>
             {
                 AmountAddedAfter = group.Add(new VocabularyKey(nameof(AmountAddedAfter), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AmountAddedBefore = group.Add(new VocabularyKey(nameof(AmountAddedBefore), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

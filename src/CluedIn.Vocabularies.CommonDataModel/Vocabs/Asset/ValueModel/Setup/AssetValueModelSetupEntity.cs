@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetValueModelSetupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model AssetValueModelSetupEntity";
+            VocabularyName = "AssetValueModelSetupEntity";
             KeyPrefix = "commonDataModel.assetvaluemodelsetupentity";
             KeySeparator = ".";
             Grouping = "/AssetValueModelSetupEntity";
 
-            AddGroup("Common Data Model AssetValueModelSetupEntity Details", group =>
+            AddGroup("AssetValueModelSetupEntity Details", group =>
             {
                 AllowNegativeNetBookValue = group.Add(new VocabularyKey(nameof(AllowNegativeNetBookValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AllowNetBookValueHigherThanAcquisitionCosts = group.Add(new VocabularyKey(nameof(AllowNetBookValueHigherThanAcquisitionCosts), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

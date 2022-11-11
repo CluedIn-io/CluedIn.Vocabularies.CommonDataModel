@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ElectronicTaxDeclarationParameterEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ElectronicTaxDeclarationParameterEntity";
+            VocabularyName = "ElectronicTaxDeclarationParameterEntity";
             KeyPrefix = "commonDataModel.electronictaxdeclarationparameterentity";
             KeySeparator = ".";
             Grouping = "/ElectronicTaxDeclarationParameterEntity";
 
-            AddGroup("Common Data Model ElectronicTaxDeclarationParameterEntity Details", group =>
+            AddGroup("ElectronicTaxDeclarationParameterEntity Details", group =>
             {
                 TimeOut = group.Add(new VocabularyKey(nameof(TimeOut), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ContactId = group.Add(new VocabularyKey(nameof(ContactId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

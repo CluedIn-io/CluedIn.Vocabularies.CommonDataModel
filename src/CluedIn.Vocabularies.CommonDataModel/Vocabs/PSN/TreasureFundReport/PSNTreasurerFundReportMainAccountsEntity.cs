@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PSNTreasurerFundReportMainAccountsEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PSNTreasurerFundReportMainAccountsEntity";
+            VocabularyName = "PSNTreasurerFundReportMainAccountsEntity";
             KeyPrefix = "commonDataModel.psntreasurerfundreportmainaccountsentity";
             KeySeparator = ".";
             Grouping = "/PSNTreasurerFundReportMainAccountsEntity";
 
-            AddGroup("Common Data Model PSNTreasurerFundReportMainAccountsEntity Details", group =>
+            AddGroup("PSNTreasurerFundReportMainAccountsEntity Details", group =>
             {
                 MainAccountRecId = group.Add(new VocabularyKey(nameof(MainAccountRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LedgerChartOfAccountsRecId = group.Add(new VocabularyKey(nameof(LedgerChartOfAccountsRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailLoyaltyCardRewardPointNonTransactionalActivityEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RetailLoyaltyCardRewardPointNonTransactionalActivityEntity";
+            VocabularyName = "RetailLoyaltyCardRewardPointNonTransactionalActivityEntity";
             KeyPrefix = "commonDataModel.retailloyaltycardrewardpointnontransactionalactivityentity";
             KeySeparator = ".";
             Grouping = "/RetailLoyaltyCardRewardPointNonTransactionalActivityEntity";
 
-            AddGroup("Common Data Model RetailLoyaltyCardRewardPointNonTransactionalActivityEntity Details", group =>
+            AddGroup("RetailLoyaltyCardRewardPointNonTransactionalActivityEntity Details", group =>
             {
                 CardNumber = group.Add(new VocabularyKey(nameof(CardNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NonTransactionalActivityId = group.Add(new VocabularyKey(nameof(NonTransactionalActivityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

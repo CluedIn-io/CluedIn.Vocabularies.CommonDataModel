@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProdBatchOrderHeaderEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ProdBatchOrderHeaderEntity";
+            VocabularyName = "ProdBatchOrderHeaderEntity";
             KeyPrefix = "commonDataModel.prodbatchorderheaderentity";
             KeySeparator = ".";
             Grouping = "/ProdBatchOrderHeaderEntity";
 
-            AddGroup("Common Data Model ProdBatchOrderHeaderEntity Details", group =>
+            AddGroup("ProdBatchOrderHeaderEntity Details", group =>
             {
                 AreRouteJobsGenerated = group.Add(new VocabularyKey(nameof(AreRouteJobsGenerated), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AutoReservationMode = group.Add(new VocabularyKey(nameof(AutoReservationMode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

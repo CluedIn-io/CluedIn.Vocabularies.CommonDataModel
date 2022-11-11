@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailDlvModeChannelExplodedEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RetailDlvModeChannelExplodedEntity";
+            VocabularyName = "RetailDlvModeChannelExplodedEntity";
             KeyPrefix = "commonDataModel.retaildlvmodechannelexplodedentity";
             KeySeparator = ".";
             Grouping = "/RetailDlvModeChannelExplodedEntity";
 
-            AddGroup("Common Data Model RetailDlvModeChannelExplodedEntity Details", group =>
+            AddGroup("RetailDlvModeChannelExplodedEntity Details", group =>
             {
                 DlvMode = group.Add(new VocabularyKey(nameof(DlvMode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OMOperatingUnit = group.Add(new VocabularyKey(nameof(OMOperatingUnit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

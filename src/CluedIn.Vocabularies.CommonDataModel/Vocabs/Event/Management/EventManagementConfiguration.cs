@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EventManagementConfigurationVocabulary()
         {
-            VocabularyName = "Common Data Model EventManagementConfiguration";
+            VocabularyName = "EventManagementConfiguration";
             KeyPrefix = "commonDataModel.eventmanagementconfiguration";
             KeySeparator = ".";
             Grouping = "/EventManagementConfiguration";
 
-            AddGroup("Common Data Model EventManagementConfiguration Details", group =>
+            AddGroup("EventManagementConfiguration Details", group =>
             {
                 authenticationResource = group.Add(new VocabularyKey(nameof(authenticationResource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 authenticationTokenEndpoint = group.Add(new VocabularyKey(nameof(authenticationTokenEndpoint), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

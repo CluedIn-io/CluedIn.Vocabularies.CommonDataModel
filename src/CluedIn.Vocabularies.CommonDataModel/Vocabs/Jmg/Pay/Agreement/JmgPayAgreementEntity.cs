@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgPayAgreementEntityVocabulary()
         {
-            VocabularyName = "Common Data Model JmgPayAgreementEntity";
+            VocabularyName = "JmgPayAgreementEntity";
             KeyPrefix = "commonDataModel.jmgpayagreemententity";
             KeySeparator = ".";
             Grouping = "/JmgPayAgreementEntity";
 
-            AddGroup("Common Data Model JmgPayAgreementEntity Details", group =>
+            AddGroup("JmgPayAgreementEntity Details", group =>
             {
                 PayAgreementCode = group.Add(new VocabularyKey(nameof(PayAgreementCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

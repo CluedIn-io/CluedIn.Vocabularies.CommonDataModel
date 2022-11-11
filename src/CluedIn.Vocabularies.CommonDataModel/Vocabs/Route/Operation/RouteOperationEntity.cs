@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RouteOperationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RouteOperationEntity";
+            VocabularyName = "RouteOperationEntity";
             KeyPrefix = "commonDataModel.routeoperationentity";
             KeySeparator = ".";
             Grouping = "/RouteOperationEntity";
 
-            AddGroup("Common Data Model RouteOperationEntity Details", group =>
+            AddGroup("RouteOperationEntity Details", group =>
             {
                 OperationName = group.Add(new VocabularyKey(nameof(OperationName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OperationId = group.Add(new VocabularyKey(nameof(OperationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

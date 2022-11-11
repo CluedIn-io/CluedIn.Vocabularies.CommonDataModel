@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjProjectDefaultOffsetAccountEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ProjProjectDefaultOffsetAccountEntity";
+            VocabularyName = "ProjProjectDefaultOffsetAccountEntity";
             KeyPrefix = "commonDataModel.projprojectdefaultoffsetaccountentity";
             KeySeparator = ".";
             Grouping = "/ProjProjectDefaultOffsetAccountEntity";
 
-            AddGroup("Common Data Model ProjProjectDefaultOffsetAccountEntity Details", group =>
+            AddGroup("ProjProjectDefaultOffsetAccountEntity Details", group =>
             {
                 OffsetAccount = group.Add(new VocabularyKey(nameof(OffsetAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Category = group.Add(new VocabularyKey(nameof(Category), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

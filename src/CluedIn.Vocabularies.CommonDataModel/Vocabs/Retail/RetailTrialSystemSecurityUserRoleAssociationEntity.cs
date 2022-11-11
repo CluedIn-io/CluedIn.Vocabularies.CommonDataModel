@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailTrialSystemSecurityUserRoleAssociationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RetailTrialSystemSecurityUserRoleAssociationEntity";
+            VocabularyName = "RetailTrialSystemSecurityUserRoleAssociationEntity";
             KeyPrefix = "commonDataModel.retailtrialsystemsecurityuserroleassociationentity";
             KeySeparator = ".";
             Grouping = "/RetailTrialSystemSecurityUserRoleAssociationEntity";
 
-            AddGroup("Common Data Model RetailTrialSystemSecurityUserRoleAssociationEntity Details", group =>
+            AddGroup("RetailTrialSystemSecurityUserRoleAssociationEntity Details", group =>
             {
                 UserId = group.Add(new VocabularyKey(nameof(UserId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SecurityRoleIdentifier = group.Add(new VocabularyKey(nameof(SecurityRoleIdentifier), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

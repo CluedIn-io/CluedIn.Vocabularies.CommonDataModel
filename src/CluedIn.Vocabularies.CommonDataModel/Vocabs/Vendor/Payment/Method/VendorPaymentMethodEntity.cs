@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendorPaymentMethodEntityVocabulary()
         {
-            VocabularyName = "Common Data Model VendorPaymentMethodEntity";
+            VocabularyName = "VendorPaymentMethodEntity";
             KeyPrefix = "commonDataModel.vendorpaymentmethodentity";
             KeySeparator = ".";
             Grouping = "/VendorPaymentMethodEntity";
 
-            AddGroup("Common Data Model VendorPaymentMethodEntity Details", group =>
+            AddGroup("VendorPaymentMethodEntity Details", group =>
             {
                 AccountType = group.Add(new VocabularyKey(nameof(AccountType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AllowPaymentCopies = group.Add(new VocabularyKey(nameof(AllowPaymentCopies), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

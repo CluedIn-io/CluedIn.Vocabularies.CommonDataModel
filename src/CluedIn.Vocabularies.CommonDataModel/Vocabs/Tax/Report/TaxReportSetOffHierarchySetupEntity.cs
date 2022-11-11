@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxReportSetOffHierarchySetupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TaxReportSetOffHierarchySetupEntity";
+            VocabularyName = "TaxReportSetOffHierarchySetupEntity";
             KeyPrefix = "commonDataModel.taxreportsetoffhierarchysetupentity";
             KeySeparator = ".";
             Grouping = "/TaxReportSetOffHierarchySetupEntity";
 
-            AddGroup("Common Data Model TaxReportSetOffHierarchySetupEntity Details", group =>
+            AddGroup("TaxReportSetOffHierarchySetupEntity Details", group =>
             {
                 EffectiveDate = group.Add(new VocabularyKey(nameof(EffectiveDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 HierarchyVersion = group.Add(new VocabularyKey(nameof(HierarchyVersion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

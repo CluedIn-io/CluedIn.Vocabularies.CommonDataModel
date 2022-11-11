@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PlSADDocumentLinePurchaseOrderEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PlSADDocumentLinePurchaseOrderEntity";
+            VocabularyName = "PlSADDocumentLinePurchaseOrderEntity";
             KeyPrefix = "commonDataModel.plsaddocumentlinepurchaseorderentity";
             KeySeparator = ".";
             Grouping = "/PlSADDocumentLinePurchaseOrderEntity";
 
-            AddGroup("Common Data Model PlSADDocumentLinePurchaseOrderEntity Details", group =>
+            AddGroup("PlSADDocumentLinePurchaseOrderEntity Details", group =>
             {
                 Dimension = group.Add(new VocabularyKey(nameof(Dimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BaseForSAD = group.Add(new VocabularyKey(nameof(BaseForSAD), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

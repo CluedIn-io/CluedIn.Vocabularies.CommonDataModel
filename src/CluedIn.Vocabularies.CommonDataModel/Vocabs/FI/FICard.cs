@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FICardVocabulary()
         {
-            VocabularyName = "Common Data Model FICard";
+            VocabularyName = "FICard";
             KeyPrefix = "commonDataModel.ficard";
             KeySeparator = ".";
             Grouping = "/FICard";
 
-            AddGroup("Common Data Model FICard Details", group =>
+            AddGroup("FICard Details", group =>
             {
                 fi_CardId = group.Add(new VocabularyKey(nameof(fi_CardId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

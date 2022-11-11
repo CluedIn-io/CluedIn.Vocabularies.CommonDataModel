@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjGrantTypeFrequencyEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ProjGrantTypeFrequencyEntity";
+            VocabularyName = "ProjGrantTypeFrequencyEntity";
             KeyPrefix = "commonDataModel.projgranttypefrequencyentity";
             KeySeparator = ".";
             Grouping = "/ProjGrantTypeFrequencyEntity";
 
-            AddGroup("Common Data Model ProjGrantTypeFrequencyEntity Details", group =>
+            AddGroup("ProjGrantTypeFrequencyEntity Details", group =>
             {
                 Comments = group.Add(new VocabularyKey(nameof(Comments), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Frequency = group.Add(new VocabularyKey(nameof(Frequency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

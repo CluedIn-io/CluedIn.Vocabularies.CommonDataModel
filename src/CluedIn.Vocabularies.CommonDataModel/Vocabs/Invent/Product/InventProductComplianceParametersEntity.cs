@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventProductComplianceParametersEntityVocabulary()
         {
-            VocabularyName = "Common Data Model InventProductComplianceParametersEntity";
+            VocabularyName = "InventProductComplianceParametersEntity";
             KeyPrefix = "commonDataModel.inventproductcomplianceparametersentity";
             KeySeparator = ".";
             Grouping = "/InventProductComplianceParametersEntity";
 
-            AddGroup("Common Data Model InventProductComplianceParametersEntity Details", group =>
+            AddGroup("InventProductComplianceParametersEntity Details", group =>
             {
                 ProductComplianceAdministratorUserId = group.Add(new VocabularyKey(nameof(ProductComplianceAdministratorUserId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultProductDataSheetValidityDays = group.Add(new VocabularyKey(nameof(DefaultProductDataSheetValidityDays), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseLocationFormatSegmentEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSWarehouseLocationFormatSegmentEntity";
+            VocabularyName = "WHSWarehouseLocationFormatSegmentEntity";
             KeyPrefix = "commonDataModel.whswarehouselocationformatsegmententity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseLocationFormatSegmentEntity";
 
-            AddGroup("Common Data Model WHSWarehouseLocationFormatSegmentEntity Details", group =>
+            AddGroup("WHSWarehouseLocationFormatSegmentEntity Details", group =>
             {
                 Sequence = group.Add(new VocabularyKey(nameof(Sequence), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WarehouseLocationFormatId = group.Add(new VocabularyKey(nameof(WarehouseLocationFormatId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

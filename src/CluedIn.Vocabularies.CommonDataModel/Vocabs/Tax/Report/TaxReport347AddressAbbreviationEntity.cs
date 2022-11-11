@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxReport347AddressAbbreviationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TaxReport347AddressAbbreviationEntity";
+            VocabularyName = "TaxReport347AddressAbbreviationEntity";
             KeyPrefix = "commonDataModel.taxreport347addressabbreviationentity";
             KeySeparator = ".";
             Grouping = "/TaxReport347AddressAbbreviationEntity";
 
-            AddGroup("Common Data Model TaxReport347AddressAbbreviationEntity Details", group =>
+            AddGroup("TaxReport347AddressAbbreviationEntity Details", group =>
             {
                 AddressAbbreviation = group.Add(new VocabularyKey(nameof(AddressAbbreviation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

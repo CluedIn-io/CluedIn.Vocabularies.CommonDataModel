@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ContentSettingsVocabulary()
         {
-            VocabularyName = "Common Data Model ContentSettings";
+            VocabularyName = "ContentSettings";
             KeyPrefix = "commonDataModel.contentsettings";
             KeySeparator = ".";
             Grouping = "/ContentSettings";
 
-            AddGroup("Common Data Model ContentSettings Details", group =>
+            AddGroup("ContentSettings Details", group =>
             {
                 addressLine2 = group.Add(new VocabularyKey(nameof(addressLine2), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 addressMain = group.Add(new VocabularyKey(nameof(addressMain), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

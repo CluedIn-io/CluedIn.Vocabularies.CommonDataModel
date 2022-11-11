@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TAMTradeAllowanceAgreementMerchandisingEventEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TAMTradeAllowanceAgreementMerchandisingEventEntity";
+            VocabularyName = "TAMTradeAllowanceAgreementMerchandisingEventEntity";
             KeyPrefix = "commonDataModel.tamtradeallowanceagreementmerchandisingevententity";
             KeySeparator = ".";
             Grouping = "/TAMTradeAllowanceAgreementMerchandisingEventEntity";
 
-            AddGroup("Common Data Model TAMTradeAllowanceAgreementMerchandisingEventEntity Details", group =>
+            AddGroup("TAMTradeAllowanceAgreementMerchandisingEventEntity Details", group =>
             {
                 EventDescription = group.Add(new VocabularyKey(nameof(EventDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EventCostAmount = group.Add(new VocabularyKey(nameof(EventCostAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerRRGCellTable_RUEntityVocabulary()
         {
-            VocabularyName = "Common Data Model LedgerRRGCellTable_RUEntity";
+            VocabularyName = "LedgerRRGCellTable_RUEntity";
             KeyPrefix = "commonDataModel.ledgerrrgcelltable_ruentity";
             KeySeparator = ".";
             Grouping = "/LedgerRRGCellTable_RUEntity";
 
-            AddGroup("Common Data Model LedgerRRGCellTable_RUEntity Details", group =>
+            AddGroup("LedgerRRGCellTable_RUEntity Details", group =>
             {
                 Alignment = group.Add(new VocabularyKey(nameof(Alignment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CellCode = group.Add(new VocabularyKey(nameof(CellCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

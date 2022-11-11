@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SlotServiceTypeVocabulary()
         {
-            VocabularyName = "Common Data Model SlotServiceType";
+            VocabularyName = "SlotServiceType";
             KeyPrefix = "commonDataModel.slotservicetype";
             KeySeparator = ".";
             Grouping = "/SlotServiceType";
 
-            AddGroup("Common Data Model SlotServiceType Details", group =>
+            AddGroup("SlotServiceType Details", group =>
             {
                 name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 slotServiceTypeId = group.Add(new VocabularyKey(nameof(slotServiceTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

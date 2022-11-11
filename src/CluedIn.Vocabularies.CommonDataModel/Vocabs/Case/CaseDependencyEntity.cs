@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CaseDependencyEntityVocabulary()
         {
-            VocabularyName = "Common Data Model CaseDependencyEntity";
+            VocabularyName = "CaseDependencyEntity";
             KeyPrefix = "commonDataModel.casedependencyentity";
             KeySeparator = ".";
             Grouping = "/CaseDependencyEntity";
 
-            AddGroup("Common Data Model CaseDependencyEntity Details", group =>
+            AddGroup("CaseDependencyEntity Details", group =>
             {
                 Case = group.Add(new VocabularyKey(nameof(Case), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ParentCase = group.Add(new VocabularyKey(nameof(ParentCase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public IntrastatSpecialMovementEntityVocabulary()
         {
-            VocabularyName = "Common Data Model IntrastatSpecialMovementEntity";
+            VocabularyName = "IntrastatSpecialMovementEntity";
             KeyPrefix = "commonDataModel.intrastatspecialmovemententity";
             KeySeparator = ".";
             Grouping = "/IntrastatSpecialMovementEntity";
 
-            AddGroup("Common Data Model IntrastatSpecialMovementEntity Details", group =>
+            AddGroup("IntrastatSpecialMovementEntity Details", group =>
             {
                 SpecialMovement = group.Add(new VocabularyKey(nameof(SpecialMovement), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

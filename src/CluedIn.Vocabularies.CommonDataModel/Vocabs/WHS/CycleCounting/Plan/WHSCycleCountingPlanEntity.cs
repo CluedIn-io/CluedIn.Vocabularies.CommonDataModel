@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSCycleCountingPlanEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSCycleCountingPlanEntity";
+            VocabularyName = "WHSCycleCountingPlanEntity";
             KeyPrefix = "commonDataModel.whscyclecountingplanentity";
             KeySeparator = ".";
             Grouping = "/WHSCycleCountingPlanEntity";
 
-            AddGroup("Common Data Model WHSCycleCountingPlanEntity Details", group =>
+            AddGroup("WHSCycleCountingPlanEntity Details", group =>
             {
                 EmptyLocationCycleCountingRule = group.Add(new VocabularyKey(nameof(EmptyLocationCycleCountingRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PlanId = group.Add(new VocabularyKey(nameof(PlanId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

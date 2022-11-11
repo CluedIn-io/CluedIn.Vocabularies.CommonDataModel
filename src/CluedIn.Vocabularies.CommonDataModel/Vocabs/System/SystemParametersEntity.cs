@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SystemParametersEntityVocabulary()
         {
-            VocabularyName = "Common Data Model SystemParametersEntity";
+            VocabularyName = "SystemParametersEntity";
             KeyPrefix = "commonDataModel.systemparametersentity";
             KeySeparator = ".";
             Grouping = "/SystemParametersEntity";
 
-            AddGroup("Common Data Model SystemParametersEntity Details", group =>
+            AddGroup("SystemParametersEntity Details", group =>
             {
                 ID = group.Add(new VocabularyKey(nameof(ID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MaximumRowsOfSSRSReports = group.Add(new VocabularyKey(nameof(MaximumRowsOfSSRSReports), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

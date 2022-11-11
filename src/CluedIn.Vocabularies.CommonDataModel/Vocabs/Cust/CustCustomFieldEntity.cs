@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustCustomFieldEntityVocabulary()
         {
-            VocabularyName = "Common Data Model CustCustomFieldEntity";
+            VocabularyName = "CustCustomFieldEntity";
             KeyPrefix = "commonDataModel.custcustomfieldentity";
             KeySeparator = ".";
             Grouping = "/CustCustomFieldEntity";
 
-            AddGroup("Common Data Model CustCustomFieldEntity Details", group =>
+            AddGroup("CustCustomFieldEntity Details", group =>
             {
                 CustomField = group.Add(new VocabularyKey(nameof(CustomField), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DataType = group.Add(new VocabularyKey(nameof(DataType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

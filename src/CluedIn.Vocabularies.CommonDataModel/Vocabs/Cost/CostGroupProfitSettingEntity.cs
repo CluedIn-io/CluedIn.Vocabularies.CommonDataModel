@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CostGroupProfitSettingEntityVocabulary()
         {
-            VocabularyName = "Common Data Model CostGroupProfitSettingEntity";
+            VocabularyName = "CostGroupProfitSettingEntity";
             KeyPrefix = "commonDataModel.costgroupprofitsettingentity";
             KeySeparator = ".";
             Grouping = "/CostGroupProfitSettingEntity";
 
-            AddGroup("Common Data Model CostGroupProfitSettingEntity Details", group =>
+            AddGroup("CostGroupProfitSettingEntity Details", group =>
             {
                 CostGroupId = group.Add(new VocabularyKey(nameof(CostGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProfitPercentage = group.Add(new VocabularyKey(nameof(ProfitPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

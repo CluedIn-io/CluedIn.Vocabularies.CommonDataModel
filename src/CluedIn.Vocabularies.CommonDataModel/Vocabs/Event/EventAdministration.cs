@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EventAdministrationVocabulary()
         {
-            VocabularyName = "Common Data Model EventAdministration";
+            VocabularyName = "EventAdministration";
             KeyPrefix = "commonDataModel.eventadministration";
             KeySeparator = ".";
             Grouping = "/EventAdministration";
 
-            AddGroup("Common Data Model EventAdministration Details", group =>
+            AddGroup("EventAdministration Details", group =>
             {
                 contactmatchingstrategy = group.Add(new VocabularyKey(nameof(contactmatchingstrategy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 emailTemplateForAttendee = group.Add(new VocabularyKey(nameof(emailTemplateForAttendee), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

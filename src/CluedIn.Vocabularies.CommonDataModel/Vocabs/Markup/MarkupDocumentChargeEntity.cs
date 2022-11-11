@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MarkupDocumentChargeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model MarkupDocumentChargeEntity";
+            VocabularyName = "MarkupDocumentChargeEntity";
             KeyPrefix = "commonDataModel.markupdocumentchargeentity";
             KeySeparator = ".";
             Grouping = "/MarkupDocumentChargeEntity";
 
-            AddGroup("Common Data Model MarkupDocumentChargeEntity Details", group =>
+            AddGroup("MarkupDocumentChargeEntity Details", group =>
             {
                 AccountingDate = group.Add(new VocabularyKey(nameof(AccountingDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CalculatedDocumentCurrencyAmount = group.Add(new VocabularyKey(nameof(CalculatedDocumentCurrencyAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

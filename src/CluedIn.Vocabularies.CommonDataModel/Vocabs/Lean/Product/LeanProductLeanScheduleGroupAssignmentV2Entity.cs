@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LeanProductLeanScheduleGroupAssignmentV2EntityVocabulary()
         {
-            VocabularyName = "Common Data Model LeanProductLeanScheduleGroupAssignmentV2Entity";
+            VocabularyName = "LeanProductLeanScheduleGroupAssignmentV2Entity";
             KeyPrefix = "commonDataModel.leanproductleanschedulegroupassignmentv2entity";
             KeySeparator = ".";
             Grouping = "/LeanProductLeanScheduleGroupAssignmentV2Entity";
 
-            AddGroup("Common Data Model LeanProductLeanScheduleGroupAssignmentV2Entity Details", group =>
+            AddGroup("LeanProductLeanScheduleGroupAssignmentV2Entity Details", group =>
             {
                 LeanScheduleGroup = group.Add(new VocabularyKey(nameof(LeanScheduleGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LeanScheduleGroupId = group.Add(new VocabularyKey(nameof(LeanScheduleGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

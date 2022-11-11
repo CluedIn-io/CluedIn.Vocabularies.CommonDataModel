@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EventMainBusinessProcessFlowVocabulary()
         {
-            VocabularyName = "Common Data Model EventMainBusinessProcessFlow";
+            VocabularyName = "EventMainBusinessProcessFlow";
             KeyPrefix = "commonDataModel.eventmainbusinessprocessflow";
             KeySeparator = ".";
             Grouping = "/EventMainBusinessProcessFlow";
 
-            AddGroup("Common Data Model EventMainBusinessProcessFlow Details", group =>
+            AddGroup("EventMainBusinessProcessFlow Details", group =>
             {
                 activeStageId = group.Add(new VocabularyKey(nameof(activeStageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 activeStageStartedOn = group.Add(new VocabularyKey(nameof(activeStageStartedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

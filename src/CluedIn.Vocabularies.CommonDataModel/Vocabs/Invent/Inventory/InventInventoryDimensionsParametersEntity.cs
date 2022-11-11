@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventInventoryDimensionsParametersEntityVocabulary()
         {
-            VocabularyName = "Common Data Model InventInventoryDimensionsParametersEntity";
+            VocabularyName = "InventInventoryDimensionsParametersEntity";
             KeyPrefix = "commonDataModel.inventinventorydimensionsparametersentity";
             KeySeparator = ".";
             Grouping = "/InventInventoryDimensionsParametersEntity";
 
-            AddGroup("Common Data Model InventInventoryDimensionsParametersEntity Details", group =>
+            AddGroup("InventInventoryDimensionsParametersEntity Details", group =>
             {
                 InventoryDimensionName = group.Add(new VocabularyKey(nameof(InventoryDimensionName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsSalesOrderLineGridDisplayingDimensionByDefault = group.Add(new VocabularyKey(nameof(IsSalesOrderLineGridDisplayingDimensionByDefault), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

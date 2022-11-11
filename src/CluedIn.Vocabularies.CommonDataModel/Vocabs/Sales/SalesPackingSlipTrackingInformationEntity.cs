@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesPackingSlipTrackingInformationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model SalesPackingSlipTrackingInformationEntity";
+            VocabularyName = "SalesPackingSlipTrackingInformationEntity";
             KeyPrefix = "commonDataModel.salespackingsliptrackinginformationentity";
             KeySeparator = ".";
             Grouping = "/SalesPackingSlipTrackingInformationEntity";
 
-            AddGroup("Common Data Model SalesPackingSlipTrackingInformationEntity Details", group =>
+            AddGroup("SalesPackingSlipTrackingInformationEntity Details", group =>
             {
                 SalesOrderNumber = group.Add(new VocabularyKey(nameof(SalesOrderNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PackingSlipNumber = group.Add(new VocabularyKey(nameof(PackingSlipNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

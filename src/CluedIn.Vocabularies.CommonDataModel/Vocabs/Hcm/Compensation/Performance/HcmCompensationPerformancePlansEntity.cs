@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmCompensationPerformancePlansEntityVocabulary()
         {
-            VocabularyName = "Common Data Model HcmCompensationPerformancePlansEntity";
+            VocabularyName = "HcmCompensationPerformancePlansEntity";
             KeyPrefix = "commonDataModel.hcmcompensationperformanceplansentity";
             KeySeparator = ".";
             Grouping = "/HcmCompensationPerformancePlansEntity";
 
-            AddGroup("Common Data Model HcmCompensationPerformancePlansEntity Details", group =>
+            AddGroup("HcmCompensationPerformancePlansEntity Details", group =>
             {
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Plan = group.Add(new VocabularyKey(nameof(Plan), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

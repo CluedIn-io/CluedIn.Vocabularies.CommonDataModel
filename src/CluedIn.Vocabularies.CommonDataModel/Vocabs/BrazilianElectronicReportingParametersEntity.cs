@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BrazilianElectronicReportingParametersEntityVocabulary()
         {
-            VocabularyName = "Common Data Model BrazilianElectronicReportingParametersEntity";
+            VocabularyName = "BrazilianElectronicReportingParametersEntity";
             KeyPrefix = "commonDataModel.brazilianelectronicreportingparametersentity";
             KeySeparator = ".";
             Grouping = "/BrazilianElectronicReportingParametersEntity";
 
-            AddGroup("Common Data Model BrazilianElectronicReportingParametersEntity Details", group =>
+            AddGroup("BrazilianElectronicReportingParametersEntity Details", group =>
             {
                 ReportType = group.Add(new VocabularyKey(nameof(ReportType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ERModelMappingTable = group.Add(new VocabularyKey(nameof(ERModelMappingTable), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

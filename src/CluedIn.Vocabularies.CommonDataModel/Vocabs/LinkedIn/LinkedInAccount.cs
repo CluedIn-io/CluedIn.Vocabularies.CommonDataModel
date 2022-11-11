@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LinkedInAccountVocabulary()
         {
-            VocabularyName = "Common Data Model LinkedInAccount";
+            VocabularyName = "LinkedInAccount";
             KeyPrefix = "commonDataModel.linkedinaccount";
             KeySeparator = ".";
             Grouping = "/LinkedInAccount";
 
-            AddGroup("Common Data Model LinkedInAccount Details", group =>
+            AddGroup("LinkedInAccount Details", group =>
             {
                 campaignSyncStatus = group.Add(new VocabularyKey(nameof(campaignSyncStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 enabledforsync = group.Add(new VocabularyKey(nameof(enabledforsync), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

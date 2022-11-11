@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DirExternalRoleEntityVocabulary()
         {
-            VocabularyName = "Common Data Model DirExternalRoleEntity";
+            VocabularyName = "DirExternalRoleEntity";
             KeyPrefix = "commonDataModel.direxternalroleentity";
             KeySeparator = ".";
             Grouping = "/DirExternalRoleEntity";
 
-            AddGroup("Common Data Model DirExternalRoleEntity Details", group =>
+            AddGroup("DirExternalRoleEntity Details", group =>
             {
                 Role = group.Add(new VocabularyKey(nameof(Role), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Type = group.Add(new VocabularyKey(nameof(Type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

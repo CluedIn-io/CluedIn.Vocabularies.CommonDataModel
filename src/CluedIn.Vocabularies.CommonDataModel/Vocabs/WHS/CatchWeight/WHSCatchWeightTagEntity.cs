@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSCatchWeightTagEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSCatchWeightTagEntity";
+            VocabularyName = "WHSCatchWeightTagEntity";
             KeyPrefix = "commonDataModel.whscatchweighttagentity";
             KeySeparator = ".";
             Grouping = "/WHSCatchWeightTagEntity";
 
-            AddGroup("Common Data Model WHSCatchWeightTagEntity Details", group =>
+            AddGroup("WHSCatchWeightTagEntity Details", group =>
             {
                 TagNumber = group.Add(new VocabularyKey(nameof(TagNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ItemNumber = group.Add(new VocabularyKey(nameof(ItemNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

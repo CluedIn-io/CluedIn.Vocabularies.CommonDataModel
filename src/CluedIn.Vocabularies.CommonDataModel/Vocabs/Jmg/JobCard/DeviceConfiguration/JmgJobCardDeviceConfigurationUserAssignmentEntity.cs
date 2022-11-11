@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgJobCardDeviceConfigurationUserAssignmentEntityVocabulary()
         {
-            VocabularyName = "Common Data Model JmgJobCardDeviceConfigurationUserAssignmentEntity";
+            VocabularyName = "JmgJobCardDeviceConfigurationUserAssignmentEntity";
             KeyPrefix = "commonDataModel.jmgjobcarddeviceconfigurationuserassignmententity";
             KeySeparator = ".";
             Grouping = "/JmgJobCardDeviceConfigurationUserAssignmentEntity";
 
-            AddGroup("Common Data Model JmgJobCardDeviceConfigurationUserAssignmentEntity Details", group =>
+            AddGroup("JmgJobCardDeviceConfigurationUserAssignmentEntity Details", group =>
             {
                 JobCardDeviceConfigurationRecId = group.Add(new VocabularyKey(nameof(JobCardDeviceConfigurationRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 JobCardDeviceConfigurationId = group.Add(new VocabularyKey(nameof(JobCardDeviceConfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

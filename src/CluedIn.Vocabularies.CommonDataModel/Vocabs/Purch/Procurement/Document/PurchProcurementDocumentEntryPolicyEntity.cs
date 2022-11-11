@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchProcurementDocumentEntryPolicyEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PurchProcurementDocumentEntryPolicyEntity";
+            VocabularyName = "PurchProcurementDocumentEntryPolicyEntity";
             KeyPrefix = "commonDataModel.purchprocurementdocumententrypolicyentity";
             KeySeparator = ".";
             Grouping = "/PurchProcurementDocumentEntryPolicyEntity";
 
-            AddGroup("Common Data Model PurchProcurementDocumentEntryPolicyEntity Details", group =>
+            AddGroup("PurchProcurementDocumentEntryPolicyEntity Details", group =>
             {
                 AreFactBoxesAutomaticallyRecalculated = group.Add(new VocabularyKey(nameof(AreFactBoxesAutomaticallyRecalculated), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillDocumentEntryAutomaticallyAllocateHeaderLevelCharges = group.Add(new VocabularyKey(nameof(WillDocumentEntryAutomaticallyAllocateHeaderLevelCharges), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

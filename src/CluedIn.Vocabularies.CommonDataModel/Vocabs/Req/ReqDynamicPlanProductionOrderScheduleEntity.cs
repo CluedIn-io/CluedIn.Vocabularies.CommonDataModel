@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReqDynamicPlanProductionOrderScheduleEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ReqDynamicPlanProductionOrderScheduleEntity";
+            VocabularyName = "ReqDynamicPlanProductionOrderScheduleEntity";
             KeyPrefix = "commonDataModel.reqdynamicplanproductionorderscheduleentity";
             KeySeparator = ".";
             Grouping = "/ReqDynamicPlanProductionOrderScheduleEntity";
 
-            AddGroup("Common Data Model ReqDynamicPlanProductionOrderScheduleEntity Details", group =>
+            AddGroup("ReqDynamicPlanProductionOrderScheduleEntity Details", group =>
             {
                 DynamicMasterPlanId = group.Add(new VocabularyKey(nameof(DynamicMasterPlanId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ItemNumber = group.Add(new VocabularyKey(nameof(ItemNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

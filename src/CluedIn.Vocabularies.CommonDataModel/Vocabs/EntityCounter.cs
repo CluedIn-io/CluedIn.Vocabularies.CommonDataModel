@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EntityCounterVocabulary()
         {
-            VocabularyName = "Common Data Model EntityCounter";
+            VocabularyName = "EntityCounter";
             KeyPrefix = "commonDataModel.entitycounter";
             KeySeparator = ".";
             Grouping = "/EntityCounter";
 
-            AddGroup("Common Data Model EntityCounter Details", group =>
+            AddGroup("EntityCounter Details", group =>
             {
                 counterValue = group.Add(new VocabularyKey(nameof(counterValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 entityCounterId = group.Add(new VocabularyKey(nameof(entityCounterId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

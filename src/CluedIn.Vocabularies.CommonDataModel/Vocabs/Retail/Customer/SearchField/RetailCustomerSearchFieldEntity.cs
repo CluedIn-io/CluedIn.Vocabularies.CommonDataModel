@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailCustomerSearchFieldEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RetailCustomerSearchFieldEntity";
+            VocabularyName = "RetailCustomerSearchFieldEntity";
             KeyPrefix = "commonDataModel.retailcustomersearchfieldentity";
             KeySeparator = ".";
             Grouping = "/RetailCustomerSearchFieldEntity";
 
-            AddGroup("Common Data Model RetailCustomerSearchFieldEntity Details", group =>
+            AddGroup("RetailCustomerSearchFieldEntity Details", group =>
             {
                 RetailCustomerSearchFieldEnumValue = group.Add(new VocabularyKey(nameof(RetailCustomerSearchFieldEnumValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsShortcut = group.Add(new VocabularyKey(nameof(IsShortcut), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

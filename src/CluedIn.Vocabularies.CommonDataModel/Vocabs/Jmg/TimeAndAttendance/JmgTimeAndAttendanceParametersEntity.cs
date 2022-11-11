@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgTimeAndAttendanceParametersEntityVocabulary()
         {
-            VocabularyName = "Common Data Model JmgTimeAndAttendanceParametersEntity";
+            VocabularyName = "JmgTimeAndAttendanceParametersEntity";
             KeyPrefix = "commonDataModel.jmgtimeandattendanceparametersentity";
             KeySeparator = ".";
             Grouping = "/JmgTimeAndAttendanceParametersEntity";
 
-            AddGroup("Common Data Model JmgTimeAndAttendanceParametersEntity Details", group =>
+            AddGroup("JmgTimeAndAttendanceParametersEntity Details", group =>
             {
                 AutomaticAbsenceRegistrationAbsenceCodeJobId = group.Add(new VocabularyKey(nameof(AutomaticAbsenceRegistrationAbsenceCodeJobId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillReachingMaximumWorkingMinutesAutomaticallyRegisterClockOut = group.Add(new VocabularyKey(nameof(WillReachingMaximumWorkingMinutesAutomaticallyRegisterClockOut), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

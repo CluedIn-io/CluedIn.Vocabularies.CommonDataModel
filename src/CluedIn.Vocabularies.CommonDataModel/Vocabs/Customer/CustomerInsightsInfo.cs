@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustomerInsightsInfoVocabulary()
         {
-            VocabularyName = "Common Data Model CustomerInsightsInfo";
+            VocabularyName = "CustomerInsightsInfo";
             KeyPrefix = "commonDataModel.customerinsightsinfo";
             KeySeparator = ".";
             Grouping = "/CustomerInsightsInfo";
 
-            AddGroup("Common Data Model CustomerInsightsInfo Details", group =>
+            AddGroup("CustomerInsightsInfo Details", group =>
             {
                 audienceType = group.Add(new VocabularyKey(nameof(audienceType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 connectorsSuffix = group.Add(new VocabularyKey(nameof(connectorsSuffix), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

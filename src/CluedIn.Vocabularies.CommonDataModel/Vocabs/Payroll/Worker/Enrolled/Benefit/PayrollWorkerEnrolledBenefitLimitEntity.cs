@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollWorkerEnrolledBenefitLimitEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PayrollWorkerEnrolledBenefitLimitEntity";
+            VocabularyName = "PayrollWorkerEnrolledBenefitLimitEntity";
             KeyPrefix = "commonDataModel.payrollworkerenrolledbenefitlimitentity";
             KeySeparator = ".";
             Grouping = "/PayrollWorkerEnrolledBenefitLimitEntity";
 
-            AddGroup("Common Data Model PayrollWorkerEnrolledBenefitLimitEntity Details", group =>
+            AddGroup("PayrollWorkerEnrolledBenefitLimitEntity Details", group =>
             {
                 ContributionLimitAmount = group.Add(new VocabularyKey(nameof(ContributionLimitAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ContributionLimitEndDate = group.Add(new VocabularyKey(nameof(ContributionLimitEndDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

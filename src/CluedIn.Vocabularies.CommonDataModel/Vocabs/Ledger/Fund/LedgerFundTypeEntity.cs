@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerFundTypeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model LedgerFundTypeEntity";
+            VocabularyName = "LedgerFundTypeEntity";
             KeyPrefix = "commonDataModel.ledgerfundtypeentity";
             KeySeparator = ".";
             Grouping = "/LedgerFundTypeEntity";
 
-            AddGroup("Common Data Model LedgerFundTypeEntity Details", group =>
+            AddGroup("LedgerFundTypeEntity Details", group =>
             {
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FundType = group.Add(new VocabularyKey(nameof(FundType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

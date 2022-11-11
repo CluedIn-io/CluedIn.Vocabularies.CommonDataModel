@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesDocumentEntryPolicyEntityVocabulary()
         {
-            VocabularyName = "Common Data Model SalesDocumentEntryPolicyEntity";
+            VocabularyName = "SalesDocumentEntryPolicyEntity";
             KeyPrefix = "commonDataModel.salesdocumententrypolicyentity";
             KeySeparator = ".";
             Grouping = "/SalesDocumentEntryPolicyEntity";
 
-            AddGroup("Common Data Model SalesDocumentEntryPolicyEntity Details", group =>
+            AddGroup("SalesDocumentEntryPolicyEntity Details", group =>
             {
                 AcceptablePriceMarginPercentage = group.Add(new VocabularyKey(nameof(AcceptablePriceMarginPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillDocumentEntryAutomaticallyAllocateHeaderLevelCharges = group.Add(new VocabularyKey(nameof(WillDocumentEntryAutomaticallyAllocateHeaderLevelCharges), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

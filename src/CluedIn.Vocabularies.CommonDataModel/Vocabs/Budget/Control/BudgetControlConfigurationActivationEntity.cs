@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetControlConfigurationActivationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model BudgetControlConfigurationActivationEntity";
+            VocabularyName = "BudgetControlConfigurationActivationEntity";
             KeyPrefix = "commonDataModel.budgetcontrolconfigurationactivationentity";
             KeySeparator = ".";
             Grouping = "/BudgetControlConfigurationActivationEntity";
 
-            AddGroup("Common Data Model BudgetControlConfigurationActivationEntity Details", group =>
+            AddGroup("BudgetControlConfigurationActivationEntity Details", group =>
             {
                 LegalEntityId = group.Add(new VocabularyKey(nameof(LegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ActivateDraft = group.Add(new VocabularyKey(nameof(ActivateDraft), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

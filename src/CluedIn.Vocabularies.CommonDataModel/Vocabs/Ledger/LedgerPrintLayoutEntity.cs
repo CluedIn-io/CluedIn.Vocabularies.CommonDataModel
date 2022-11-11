@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerPrintLayoutEntityVocabulary()
         {
-            VocabularyName = "Common Data Model LedgerPrintLayoutEntity";
+            VocabularyName = "LedgerPrintLayoutEntity";
             KeyPrefix = "commonDataModel.ledgerprintlayoutentity";
             KeySeparator = ".";
             Grouping = "/LedgerPrintLayoutEntity";
 
-            AddGroup("Common Data Model LedgerPrintLayoutEntity Details", group =>
+            AddGroup("LedgerPrintLayoutEntity Details", group =>
             {
                 GroupDescription = group.Add(new VocabularyKey(nameof(GroupDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PrintLayoutGroup = group.Add(new VocabularyKey(nameof(PrintLayoutGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

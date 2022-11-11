@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventQualityTestVariableOutcomeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model InventQualityTestVariableOutcomeEntity";
+            VocabularyName = "InventQualityTestVariableOutcomeEntity";
             KeyPrefix = "commonDataModel.inventqualitytestvariableoutcomeentity";
             KeySeparator = ".";
             Grouping = "/InventQualityTestVariableOutcomeEntity";
 
-            AddGroup("Common Data Model InventQualityTestVariableOutcomeEntity Details", group =>
+            AddGroup("InventQualityTestVariableOutcomeEntity Details", group =>
             {
                 QualityTestVariableId = group.Add(new VocabularyKey(nameof(QualityTestVariableId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OutcomeId = group.Add(new VocabularyKey(nameof(OutcomeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

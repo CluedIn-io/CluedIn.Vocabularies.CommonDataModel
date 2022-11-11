@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRExpediteCodeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model MCRExpediteCodeEntity";
+            VocabularyName = "MCRExpediteCodeEntity";
             KeyPrefix = "commonDataModel.mcrexpeditecodeentity";
             KeySeparator = ".";
             Grouping = "/MCRExpediteCodeEntity";
 
-            AddGroup("Common Data Model MCRExpediteCodeEntity Details", group =>
+            AddGroup("MCRExpediteCodeEntity Details", group =>
             {
                 Expedite = group.Add(new VocabularyKey(nameof(Expedite), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

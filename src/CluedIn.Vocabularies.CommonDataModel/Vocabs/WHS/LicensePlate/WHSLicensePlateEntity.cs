@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSLicensePlateEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSLicensePlateEntity";
+            VocabularyName = "WHSLicensePlateEntity";
             KeyPrefix = "commonDataModel.whslicenseplateentity";
             KeySeparator = ".";
             Grouping = "/WHSLicensePlateEntity";
 
-            AddGroup("Common Data Model WHSLicensePlateEntity Details", group =>
+            AddGroup("WHSLicensePlateEntity Details", group =>
             {
                 LicensePlateNumber = group.Add(new VocabularyKey(nameof(LicensePlateNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AgingDate = group.Add(new VocabularyKey(nameof(AgingDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

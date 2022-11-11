@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FieldMappingVocabulary()
         {
-            VocabularyName = "Common Data Model FieldMapping";
+            VocabularyName = "FieldMapping";
             KeyPrefix = "commonDataModel.fieldmapping";
             KeySeparator = ".";
             Grouping = "/FieldMapping";
 
-            AddGroup("Common Data Model FieldMapping Details", group =>
+            AddGroup("FieldMapping Details", group =>
             {
                 leadField = group.Add(new VocabularyKey(nameof(leadField), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 linkedinfieldmappingId = group.Add(new VocabularyKey(nameof(linkedinfieldmappingId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

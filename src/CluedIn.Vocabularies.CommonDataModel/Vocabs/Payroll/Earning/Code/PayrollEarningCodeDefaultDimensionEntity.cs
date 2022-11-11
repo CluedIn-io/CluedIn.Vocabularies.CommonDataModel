@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollEarningCodeDefaultDimensionEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PayrollEarningCodeDefaultDimensionEntity";
+            VocabularyName = "PayrollEarningCodeDefaultDimensionEntity";
             KeyPrefix = "commonDataModel.payrollearningcodedefaultdimensionentity";
             KeySeparator = ".";
             Grouping = "/PayrollEarningCodeDefaultDimensionEntity";
 
-            AddGroup("Common Data Model PayrollEarningCodeDefaultDimensionEntity Details", group =>
+            AddGroup("PayrollEarningCodeDefaultDimensionEntity Details", group =>
             {
                 DefaultDimension = group.Add(new VocabularyKey(nameof(DefaultDimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EarningCode = group.Add(new VocabularyKey(nameof(EarningCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

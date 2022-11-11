@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollBIWorkerEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PayrollBIWorkerEntity";
+            VocabularyName = "PayrollBIWorkerEntity";
             KeyPrefix = "commonDataModel.payrollbiworkerentity";
             KeySeparator = ".";
             Grouping = "/PayrollBIWorkerEntity";
 
-            AddGroup("Common Data Model PayrollBIWorkerEntity Details", group =>
+            AddGroup("PayrollBIWorkerEntity Details", group =>
             {
                 PersonnelNumber = group.Add(new VocabularyKey(nameof(PersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsUsingDirectDeposit = group.Add(new VocabularyKey(nameof(IsUsingDirectDeposit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

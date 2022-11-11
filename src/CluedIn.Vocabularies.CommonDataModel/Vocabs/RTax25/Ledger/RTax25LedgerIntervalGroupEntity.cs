@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RTax25LedgerIntervalGroupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RTax25LedgerIntervalGroupEntity";
+            VocabularyName = "RTax25LedgerIntervalGroupEntity";
             KeyPrefix = "commonDataModel.rtax25ledgerintervalgroupentity";
             KeySeparator = ".";
             Grouping = "/RTax25LedgerIntervalGroupEntity";
 
-            AddGroup("Common Data Model RTax25LedgerIntervalGroupEntity Details", group =>
+            AddGroup("RTax25LedgerIntervalGroupEntity Details", group =>
             {
                 IntervalGroup = group.Add(new VocabularyKey(nameof(IntervalGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

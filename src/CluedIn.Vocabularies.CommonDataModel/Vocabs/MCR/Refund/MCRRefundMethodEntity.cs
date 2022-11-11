@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRRefundMethodEntityVocabulary()
         {
-            VocabularyName = "Common Data Model MCRRefundMethodEntity";
+            VocabularyName = "MCRRefundMethodEntity";
             KeyPrefix = "commonDataModel.mcrrefundmethodentity";
             KeySeparator = ".";
             Grouping = "/MCRRefundMethodEntity";
 
-            AddGroup("Common Data Model MCRRefundMethodEntity Details", group =>
+            AddGroup("MCRRefundMethodEntity Details", group =>
             {
                 CurrencyCode = group.Add(new VocabularyKey(nameof(CurrencyCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PaymentMode = group.Add(new VocabularyKey(nameof(PaymentMode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

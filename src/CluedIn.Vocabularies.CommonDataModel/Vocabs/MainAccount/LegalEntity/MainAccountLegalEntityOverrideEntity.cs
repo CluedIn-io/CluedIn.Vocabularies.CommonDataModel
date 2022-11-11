@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MainAccountLegalEntityOverrideEntityVocabulary()
         {
-            VocabularyName = "Common Data Model MainAccountLegalEntityOverrideEntity";
+            VocabularyName = "MainAccountLegalEntityOverrideEntity";
             KeyPrefix = "commonDataModel.mainaccountlegalentityoverrideentity";
             KeySeparator = ".";
             Grouping = "/MainAccountLegalEntityOverrideEntity";
 
-            AddGroup("Common Data Model MainAccountLegalEntityOverrideEntity Details", group =>
+            AddGroup("MainAccountLegalEntityOverrideEntity Details", group =>
             {
                 MainAccountId = group.Add(new VocabularyKey(nameof(MainAccountId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ChartOfAccounts = group.Add(new VocabularyKey(nameof(ChartOfAccounts), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

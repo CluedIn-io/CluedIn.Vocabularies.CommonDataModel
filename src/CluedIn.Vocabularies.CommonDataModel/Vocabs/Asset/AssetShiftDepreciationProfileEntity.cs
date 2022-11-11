@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetShiftDepreciationProfileEntityVocabulary()
         {
-            VocabularyName = "Common Data Model AssetShiftDepreciationProfileEntity";
+            VocabularyName = "AssetShiftDepreciationProfileEntity";
             KeyPrefix = "commonDataModel.assetshiftdepreciationprofileentity";
             KeySeparator = ".";
             Grouping = "/AssetShiftDepreciationProfileEntity";
 
-            AddGroup("Common Data Model AssetShiftDepreciationProfileEntity Details", group =>
+            AddGroup("AssetShiftDepreciationProfileEntity Details", group =>
             {
                 DoubleShiftPercentage = group.Add(new VocabularyKey(nameof(DoubleShiftPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FromDate = group.Add(new VocabularyKey(nameof(FromDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FormWhitelistRuleVocabulary()
         {
-            VocabularyName = "Common Data Model FormWhitelistRule";
+            VocabularyName = "FormWhitelistRule";
             KeyPrefix = "commonDataModel.formwhitelistrule";
             KeySeparator = ".";
             Grouping = "/FormWhitelistRule";
 
-            AddGroup("Common Data Model FormWhitelistRule Details", group =>
+            AddGroup("FormWhitelistRule Details", group =>
             {
                 marketingformwhitelistruleId = group.Add(new VocabularyKey(nameof(marketingformwhitelistruleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

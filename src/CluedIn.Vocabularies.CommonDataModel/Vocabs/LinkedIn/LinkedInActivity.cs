@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LinkedInActivityVocabulary()
         {
-            VocabularyName = "Common Data Model LinkedInActivity";
+            VocabularyName = "LinkedInActivity";
             KeyPrefix = "commonDataModel.linkedinactivity";
             KeySeparator = ".";
             Grouping = "/LinkedInActivity";
 
-            AddGroup("Common Data Model LinkedInActivity Details", group =>
+            AddGroup("LinkedInActivity Details", group =>
             {
                 actionStatus = group.Add(new VocabularyKey(nameof(actionStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 activityadditionalparams = group.Add(new VocabularyKey(nameof(activityadditionalparams), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

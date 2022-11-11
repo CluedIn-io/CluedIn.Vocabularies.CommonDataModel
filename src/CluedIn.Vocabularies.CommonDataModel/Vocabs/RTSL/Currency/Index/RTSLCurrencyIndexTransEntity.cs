@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RTSLCurrencyIndexTransEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RTSLCurrencyIndexTransEntity";
+            VocabularyName = "RTSLCurrencyIndexTransEntity";
             KeyPrefix = "commonDataModel.rtslcurrencyindextransentity";
             KeySeparator = ".";
             Grouping = "/RTSLCurrencyIndexTransEntity";
 
-            AddGroup("Common Data Model RTSLCurrencyIndexTransEntity Details", group =>
+            AddGroup("RTSLCurrencyIndexTransEntity Details", group =>
             {
                 InflationIndex = group.Add(new VocabularyKey(nameof(InflationIndex), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FromDate = group.Add(new VocabularyKey(nameof(FromDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

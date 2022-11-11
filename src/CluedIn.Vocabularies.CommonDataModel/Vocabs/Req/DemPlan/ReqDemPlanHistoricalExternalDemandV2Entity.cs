@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReqDemPlanHistoricalExternalDemandV2EntityVocabulary()
         {
-            VocabularyName = "Common Data Model ReqDemPlanHistoricalExternalDemandV2Entity";
+            VocabularyName = "ReqDemPlanHistoricalExternalDemandV2Entity";
             KeyPrefix = "commonDataModel.reqdemplanhistoricalexternaldemandv2entity";
             KeySeparator = ".";
             Grouping = "/ReqDemPlanHistoricalExternalDemandV2Entity";
 
-            AddGroup("Common Data Model ReqDemPlanHistoricalExternalDemandV2Entity Details", group =>
+            AddGroup("ReqDemPlanHistoricalExternalDemandV2Entity Details", group =>
             {
                 CustomerAddressCountryRegionId = group.Add(new VocabularyKey(nameof(CustomerAddressCountryRegionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CustomerAddressStateId = group.Add(new VocabularyKey(nameof(CustomerAddressStateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

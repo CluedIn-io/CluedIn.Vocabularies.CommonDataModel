@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustCollectionAgencyGracePeriodSetupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model CustCollectionAgencyGracePeriodSetupEntity";
+            VocabularyName = "CustCollectionAgencyGracePeriodSetupEntity";
             KeyPrefix = "commonDataModel.custcollectionagencygraceperiodsetupentity";
             KeySeparator = ".";
             Grouping = "/CustCollectionAgencyGracePeriodSetupEntity";
 
-            AddGroup("Common Data Model CustCollectionAgencyGracePeriodSetupEntity Details", group =>
+            AddGroup("CustCollectionAgencyGracePeriodSetupEntity Details", group =>
             {
                 AccountOrGroupNumber = group.Add(new VocabularyKey(nameof(AccountOrGroupNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AccountCode = group.Add(new VocabularyKey(nameof(AccountCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

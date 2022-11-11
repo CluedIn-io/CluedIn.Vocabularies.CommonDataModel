@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailBarcodeMaskCharacterEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RetailBarcodeMaskCharacterEntity";
+            VocabularyName = "RetailBarcodeMaskCharacterEntity";
             KeyPrefix = "commonDataModel.retailbarcodemaskcharacterentity";
             KeySeparator = ".";
             Grouping = "/RetailBarcodeMaskCharacterEntity";
 
-            AddGroup("Common Data Model RetailBarcodeMaskCharacterEntity Details", group =>
+            AddGroup("RetailBarcodeMaskCharacterEntity Details", group =>
             {
                 Character = group.Add(new VocabularyKey(nameof(Character), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CharacterType = group.Add(new VocabularyKey(nameof(CharacterType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

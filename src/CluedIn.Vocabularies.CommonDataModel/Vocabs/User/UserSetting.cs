@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public UserSettingVocabulary()
         {
-            VocabularyName = "Common Data Model UserSetting";
+            VocabularyName = "UserSetting";
             KeyPrefix = "commonDataModel.usersetting";
             KeySeparator = ".";
             Grouping = "/UserSetting";
 
-            AddGroup("Common Data Model UserSetting Details", group =>
+            AddGroup("UserSetting Details", group =>
             {
                 key = group.Add(new VocabularyKey(nameof(key), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 userSettingId = group.Add(new VocabularyKey(nameof(userSettingId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

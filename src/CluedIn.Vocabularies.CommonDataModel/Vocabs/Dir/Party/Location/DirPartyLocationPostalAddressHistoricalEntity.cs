@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DirPartyLocationPostalAddressHistoricalEntityVocabulary()
         {
-            VocabularyName = "Common Data Model DirPartyLocationPostalAddressHistoricalEntity";
+            VocabularyName = "DirPartyLocationPostalAddressHistoricalEntity";
             KeyPrefix = "commonDataModel.dirpartylocationpostaladdresshistoricalentity";
             KeySeparator = ".";
             Grouping = "/DirPartyLocationPostalAddressHistoricalEntity";
 
-            AddGroup("Common Data Model DirPartyLocationPostalAddressHistoricalEntity Details", group =>
+            AddGroup("DirPartyLocationPostalAddressHistoricalEntity Details", group =>
             {
                 AttentionToAddressLine = group.Add(new VocabularyKey(nameof(AttentionToAddressLine), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsLocationOwner = group.Add(new VocabularyKey(nameof(IsLocationOwner), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

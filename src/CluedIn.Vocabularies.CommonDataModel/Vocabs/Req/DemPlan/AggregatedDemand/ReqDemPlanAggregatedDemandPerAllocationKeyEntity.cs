@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReqDemPlanAggregatedDemandPerAllocationKeyEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ReqDemPlanAggregatedDemandPerAllocationKeyEntity";
+            VocabularyName = "ReqDemPlanAggregatedDemandPerAllocationKeyEntity";
             KeyPrefix = "commonDataModel.reqdemplanaggregateddemandperallocationkeyentity";
             KeySeparator = ".";
             Grouping = "/ReqDemPlanAggregatedDemandPerAllocationKeyEntity";
 
-            AddGroup("Common Data Model ReqDemPlanAggregatedDemandPerAllocationKeyEntity Details", group =>
+            AddGroup("ReqDemPlanAggregatedDemandPerAllocationKeyEntity Details", group =>
             {
                 DemandCategory = group.Add(new VocabularyKey(nameof(DemandCategory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DeliveringSiteId = group.Add(new VocabularyKey(nameof(DeliveringSiteId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

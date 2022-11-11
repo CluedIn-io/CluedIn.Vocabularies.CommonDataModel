@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailSharedTwitterParameterEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RetailSharedTwitterParameterEntity";
+            VocabularyName = "RetailSharedTwitterParameterEntity";
             KeyPrefix = "commonDataModel.retailsharedtwitterparameterentity";
             KeySeparator = ".";
             Grouping = "/RetailSharedTwitterParameterEntity";
 
-            AddGroup("Common Data Model RetailSharedTwitterParameterEntity Details", group =>
+            AddGroup("RetailSharedTwitterParameterEntity Details", group =>
             {
                 ConsumerKey = group.Add(new VocabularyKey(nameof(ConsumerKey), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ConsumerSecret = group.Add(new VocabularyKey(nameof(ConsumerSecret), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

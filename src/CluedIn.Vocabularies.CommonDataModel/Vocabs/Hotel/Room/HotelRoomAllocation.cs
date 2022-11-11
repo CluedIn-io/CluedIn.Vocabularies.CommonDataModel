@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HotelRoomAllocationVocabulary()
         {
-            VocabularyName = "Common Data Model HotelRoomAllocation";
+            VocabularyName = "HotelRoomAllocation";
             KeyPrefix = "commonDataModel.hotelroomallocation";
             KeySeparator = ".";
             Grouping = "/HotelRoomAllocation";
 
-            AddGroup("Common Data Model HotelRoomAllocation Details", group =>
+            AddGroup("HotelRoomAllocation Details", group =>
             {
                 exchangeRate = group.Add(new VocabularyKey(nameof(exchangeRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 additionalDetails = group.Add(new VocabularyKey(nameof(additionalDetails), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

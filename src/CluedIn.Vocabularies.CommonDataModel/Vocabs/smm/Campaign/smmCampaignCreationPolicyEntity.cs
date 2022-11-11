@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public smmCampaignCreationPolicyEntityVocabulary()
         {
-            VocabularyName = "Common Data Model smmCampaignCreationPolicyEntity";
+            VocabularyName = "smmCampaignCreationPolicyEntity";
             KeyPrefix = "commonDataModel.smmcampaigncreationpolicyentity";
             KeySeparator = ".";
             Grouping = "/smmCampaignCreationPolicyEntity";
 
-            AddGroup("Common Data Model smmCampaignCreationPolicyEntity Details", group =>
+            AddGroup("smmCampaignCreationPolicyEntity Details", group =>
             {
                 DefaultStatus = group.Add(new VocabularyKey(nameof(DefaultStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultCampaignTypeId = group.Add(new VocabularyKey(nameof(DefaultCampaignTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

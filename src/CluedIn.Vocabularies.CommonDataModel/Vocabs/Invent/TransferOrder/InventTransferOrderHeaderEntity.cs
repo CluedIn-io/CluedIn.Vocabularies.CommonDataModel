@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventTransferOrderHeaderEntityVocabulary()
         {
-            VocabularyName = "Common Data Model InventTransferOrderHeaderEntity";
+            VocabularyName = "InventTransferOrderHeaderEntity";
             KeyPrefix = "commonDataModel.inventtransferorderheaderentity";
             KeySeparator = ".";
             Grouping = "/InventTransferOrderHeaderEntity";
 
-            AddGroup("Common Data Model InventTransferOrderHeaderEntity Details", group =>
+            AddGroup("InventTransferOrderHeaderEntity Details", group =>
             {
                 ATPDelayedDemandOffsetDays = group.Add(new VocabularyKey(nameof(ATPDelayedDemandOffsetDays), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ATPDelayedSupplyOffsetDays = group.Add(new VocabularyKey(nameof(ATPDelayedSupplyOffsetDays), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

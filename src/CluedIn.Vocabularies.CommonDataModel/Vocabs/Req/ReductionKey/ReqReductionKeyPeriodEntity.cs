@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReqReductionKeyPeriodEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ReqReductionKeyPeriodEntity";
+            VocabularyName = "ReqReductionKeyPeriodEntity";
             KeyPrefix = "commonDataModel.reqreductionkeyperiodentity";
             KeySeparator = ".";
             Grouping = "/ReqReductionKeyPeriodEntity";
 
-            AddGroup("Common Data Model ReqReductionKeyPeriodEntity Details", group =>
+            AddGroup("ReqReductionKeyPeriodEntity Details", group =>
             {
                 IncrementalTimeChange = group.Add(new VocabularyKey(nameof(IncrementalTimeChange), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TimeUnit = group.Add(new VocabularyKey(nameof(TimeUnit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TAMTradeAllowanceManagementParametersEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TAMTradeAllowanceManagementParametersEntity";
+            VocabularyName = "TAMTradeAllowanceManagementParametersEntity";
             KeyPrefix = "commonDataModel.tamtradeallowancemanagementparametersentity";
             KeySeparator = ".";
             Grouping = "/TAMTradeAllowanceManagementParametersEntity";
 
-            AddGroup("Common Data Model TAMTradeAllowanceManagementParametersEntity Details", group =>
+            AddGroup("TAMTradeAllowanceManagementParametersEntity Details", group =>
             {
                 DeductionLedgerJournalName = group.Add(new VocabularyKey(nameof(DeductionLedgerJournalName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultCustomerHierarchyName = group.Add(new VocabularyKey(nameof(DefaultCustomerHierarchyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

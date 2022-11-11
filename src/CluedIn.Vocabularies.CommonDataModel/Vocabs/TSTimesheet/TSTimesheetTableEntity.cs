@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TSTimesheetTableEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TSTimesheetTableEntity";
+            VocabularyName = "TSTimesheetTableEntity";
             KeyPrefix = "commonDataModel.tstimesheettableentity";
             KeySeparator = ".";
             Grouping = "/TSTimesheetTableEntity";
 
-            AddGroup("Common Data Model TSTimesheetTableEntity Details", group =>
+            AddGroup("TSTimesheetTableEntity Details", group =>
             {
                 ApprovalStatus = group.Add(new VocabularyKey(nameof(ApprovalStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsWorkflowToBeResubmitted = group.Add(new VocabularyKey(nameof(IsWorkflowToBeResubmitted), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

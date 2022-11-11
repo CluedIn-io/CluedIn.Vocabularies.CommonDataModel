@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PaymentSurveyCodeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PaymentSurveyCodeEntity";
+            VocabularyName = "PaymentSurveyCodeEntity";
             KeyPrefix = "commonDataModel.paymentsurveycodeentity";
             KeySeparator = ".";
             Grouping = "/PaymentSurveyCodeEntity";
 
-            AddGroup("Common Data Model PaymentSurveyCodeEntity Details", group =>
+            AddGroup("PaymentSurveyCodeEntity Details", group =>
             {
                 CountryRegionSummary = group.Add(new VocabularyKey(nameof(CountryRegionSummary), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SurveyCode = group.Add(new VocabularyKey(nameof(SurveyCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankReconciliationMatchRuleSetEntityVocabulary()
         {
-            VocabularyName = "Common Data Model BankReconciliationMatchRuleSetEntity";
+            VocabularyName = "BankReconciliationMatchRuleSetEntity";
             KeyPrefix = "commonDataModel.bankreconciliationmatchrulesetentity";
             KeySeparator = ".";
             Grouping = "/BankReconciliationMatchRuleSetEntity";
 
-            AddGroup("Common Data Model BankReconciliationMatchRuleSetEntity Details", group =>
+            AddGroup("BankReconciliationMatchRuleSetEntity Details", group =>
             {
                 MatchingRuleSet = group.Add(new VocabularyKey(nameof(MatchingRuleSet), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

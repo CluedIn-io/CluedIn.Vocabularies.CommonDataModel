@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EFDocAuthorityEntityVocabulary()
         {
-            VocabularyName = "Common Data Model EFDocAuthorityEntity";
+            VocabularyName = "EFDocAuthorityEntity";
             KeyPrefix = "commonDataModel.efdocauthorityentity";
             KeySeparator = ".";
             Grouping = "/EFDocAuthorityEntity";
 
-            AddGroup("Common Data Model EFDocAuthorityEntity Details", group =>
+            AddGroup("EFDocAuthorityEntity Details", group =>
             {
                 Authority = group.Add(new VocabularyKey(nameof(Authority), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

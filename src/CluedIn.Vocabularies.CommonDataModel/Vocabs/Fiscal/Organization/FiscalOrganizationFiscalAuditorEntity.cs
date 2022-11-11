@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FiscalOrganizationFiscalAuditorEntityVocabulary()
         {
-            VocabularyName = "Common Data Model FiscalOrganizationFiscalAuditorEntity";
+            VocabularyName = "FiscalOrganizationFiscalAuditorEntity";
             KeyPrefix = "commonDataModel.fiscalorganizationfiscalauditorentity";
             KeySeparator = ".";
             Grouping = "/FiscalOrganizationFiscalAuditorEntity";
 
-            AddGroup("Common Data Model FiscalOrganizationFiscalAuditorEntity Details", group =>
+            AddGroup("FiscalOrganizationFiscalAuditorEntity Details", group =>
             {
                 CVMNumber = group.Add(new VocabularyKey(nameof(CVMNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

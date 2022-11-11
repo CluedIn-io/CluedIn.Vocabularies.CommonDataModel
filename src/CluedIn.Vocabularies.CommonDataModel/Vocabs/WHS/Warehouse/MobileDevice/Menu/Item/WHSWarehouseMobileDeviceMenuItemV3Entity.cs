@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseMobileDeviceMenuItemV3EntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSWarehouseMobileDeviceMenuItemV3Entity";
+            VocabularyName = "WHSWarehouseMobileDeviceMenuItemV3Entity";
             KeyPrefix = "commonDataModel.whswarehousemobiledevicemenuitemv3entity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseMobileDeviceMenuItemV3Entity";
 
-            AddGroup("Common Data Model WHSWarehouseMobileDeviceMenuItemV3Entity Details", group =>
+            AddGroup("WHSWarehouseMobileDeviceMenuItemV3Entity Details", group =>
             {
                 MenuItemName = group.Add(new VocabularyKey(nameof(MenuItemName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Title = group.Add(new VocabularyKey(nameof(Title), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

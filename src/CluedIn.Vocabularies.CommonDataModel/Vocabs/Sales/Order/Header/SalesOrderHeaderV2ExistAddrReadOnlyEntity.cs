@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesOrderHeaderV2ExistAddrReadOnlyEntityVocabulary()
         {
-            VocabularyName = "Common Data Model SalesOrderHeaderV2ExistAddrReadOnlyEntity";
+            VocabularyName = "SalesOrderHeaderV2ExistAddrReadOnlyEntity";
             KeyPrefix = "commonDataModel.salesorderheaderv2existaddrreadonlyentity";
             KeySeparator = ".";
             Grouping = "/SalesOrderHeaderV2ExistAddrReadOnlyEntity";
 
-            AddGroup("Common Data Model SalesOrderHeaderV2ExistAddrReadOnlyEntity Details", group =>
+            AddGroup("SalesOrderHeaderV2ExistAddrReadOnlyEntity Details", group =>
             {
                 SalesOrderNumber = group.Add(new VocabularyKey(nameof(SalesOrderNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesOrderStatus = group.Add(new VocabularyKey(nameof(SalesOrderStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

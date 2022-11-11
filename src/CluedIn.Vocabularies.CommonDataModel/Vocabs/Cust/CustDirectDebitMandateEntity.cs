@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustDirectDebitMandateEntityVocabulary()
         {
-            VocabularyName = "Common Data Model CustDirectDebitMandateEntity";
+            VocabularyName = "CustDirectDebitMandateEntity";
             KeyPrefix = "commonDataModel.custdirectdebitmandateentity";
             KeySeparator = ".";
             Grouping = "/CustDirectDebitMandateEntity";
 
-            AddGroup("Common Data Model CustDirectDebitMandateEntity Details", group =>
+            AddGroup("CustDirectDebitMandateEntity Details", group =>
             {
                 CustomerAccount = group.Add(new VocabularyKey(nameof(CustomerAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MandateId = group.Add(new VocabularyKey(nameof(MandateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ConnectionVocabulary()
         {
-            VocabularyName = "Common Data Model Connection";
+            VocabularyName = "Connection";
             KeyPrefix = "commonDataModel.connection";
             KeySeparator = ".";
             Grouping = "/Connection";
 
-            AddGroup("Common Data Model Connection Details", group =>
+            AddGroup("Connection Details", group =>
             {
 
             });

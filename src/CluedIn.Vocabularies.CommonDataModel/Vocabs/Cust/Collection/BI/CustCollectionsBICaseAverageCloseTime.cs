@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustCollectionsBICaseAverageCloseTimeVocabulary()
         {
-            VocabularyName = "Common Data Model CustCollectionsBICaseAverageCloseTime";
+            VocabularyName = "CustCollectionsBICaseAverageCloseTime";
             KeyPrefix = "commonDataModel.custcollectionsbicaseaverageclosetime";
             KeySeparator = ".";
             Grouping = "/CustCollectionsBICaseAverageCloseTime";
 
-            AddGroup("Common Data Model CustCollectionsBICaseAverageCloseTime Details", group =>
+            AddGroup("CustCollectionsBICaseAverageCloseTime Details", group =>
             {
                 CaseId = group.Add(new VocabularyKey(nameof(CaseId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AccountNum = group.Add(new VocabularyKey(nameof(AccountNum), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

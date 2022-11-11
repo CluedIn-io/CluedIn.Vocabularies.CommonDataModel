@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public GBTParametersEntityVocabulary()
         {
-            VocabularyName = "Common Data Model GBTParametersEntity";
+            VocabularyName = "GBTParametersEntity";
             KeyPrefix = "commonDataModel.gbtparametersentity";
             KeySeparator = ".";
             Grouping = "/GBTParametersEntity";
 
-            AddGroup("Common Data Model GBTParametersEntity Details", group =>
+            AddGroup("GBTParametersEntity Details", group =>
             {
                 AcquisitionLedgerDimension = group.Add(new VocabularyKey(nameof(AcquisitionLedgerDimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BalanceSheet = group.Add(new VocabularyKey(nameof(BalanceSheet), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

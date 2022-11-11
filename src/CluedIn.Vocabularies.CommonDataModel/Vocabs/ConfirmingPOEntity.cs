@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ConfirmingPOEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ConfirmingPOEntity";
+            VocabularyName = "ConfirmingPOEntity";
             KeyPrefix = "commonDataModel.confirmingpoentity";
             KeySeparator = ".";
             Grouping = "/ConfirmingPOEntity";
 
-            AddGroup("Common Data Model ConfirmingPOEntity Details", group =>
+            AddGroup("ConfirmingPOEntity Details", group =>
             {
                 ConfirmingPOID = group.Add(new VocabularyKey(nameof(ConfirmingPOID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ConfirmingPOMessage = group.Add(new VocabularyKey(nameof(ConfirmingPOMessage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerAccountStructureEntityVocabulary()
         {
-            VocabularyName = "Common Data Model LedgerAccountStructureEntity";
+            VocabularyName = "LedgerAccountStructureEntity";
             KeyPrefix = "commonDataModel.ledgeraccountstructureentity";
             KeySeparator = ".";
             Grouping = "/LedgerAccountStructureEntity";
 
-            AddGroup("Common Data Model LedgerAccountStructureEntity Details", group =>
+            AddGroup("LedgerAccountStructureEntity Details", group =>
             {
                 AccountStructureName = group.Add(new VocabularyKey(nameof(AccountStructureName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

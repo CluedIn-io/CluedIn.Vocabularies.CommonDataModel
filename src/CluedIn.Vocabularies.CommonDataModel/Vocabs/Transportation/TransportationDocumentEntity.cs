@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TransportationDocumentEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TransportationDocumentEntity";
+            VocabularyName = "TransportationDocumentEntity";
             KeyPrefix = "commonDataModel.transportationdocumententity";
             KeySeparator = ".";
             Grouping = "/TransportationDocumentEntity";
 
-            AddGroup("Common Data Model TransportationDocumentEntity Details", group =>
+            AddGroup("TransportationDocumentEntity Details", group =>
             {
                 Carrier = group.Add(new VocabularyKey(nameof(Carrier), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CarrierType = group.Add(new VocabularyKey(nameof(CarrierType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjCollaborationWorkspaceSettingsEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ProjCollaborationWorkspaceSettingsEntity";
+            VocabularyName = "ProjCollaborationWorkspaceSettingsEntity";
             KeyPrefix = "commonDataModel.projcollaborationworkspacesettingsentity";
             KeySeparator = ".";
             Grouping = "/ProjCollaborationWorkspaceSettingsEntity";
 
-            AddGroup("Common Data Model ProjCollaborationWorkspaceSettingsEntity Details", group =>
+            AddGroup("ProjCollaborationWorkspaceSettingsEntity Details", group =>
             {
                 IsWorkspaceAutoCreatedForCost = group.Add(new VocabularyKey(nameof(IsWorkspaceAutoCreatedForCost), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsWorkspaceAutoCreatedForFixedPrice = group.Add(new VocabularyKey(nameof(IsWorkspaceAutoCreatedForFixedPrice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

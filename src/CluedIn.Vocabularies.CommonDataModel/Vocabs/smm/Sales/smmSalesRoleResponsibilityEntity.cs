@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public smmSalesRoleResponsibilityEntityVocabulary()
         {
-            VocabularyName = "Common Data Model smmSalesRoleResponsibilityEntity";
+            VocabularyName = "smmSalesRoleResponsibilityEntity";
             KeyPrefix = "commonDataModel.smmsalesroleresponsibilityentity";
             KeySeparator = ".";
             Grouping = "/smmSalesRoleResponsibilityEntity";
 
-            AddGroup("Common Data Model smmSalesRoleResponsibilityEntity Details", group =>
+            AddGroup("smmSalesRoleResponsibilityEntity Details", group =>
             {
                 ResponsibilityDescription = group.Add(new VocabularyKey(nameof(ResponsibilityDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 HasProspectResponsibility = group.Add(new VocabularyKey(nameof(HasProspectResponsibility), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

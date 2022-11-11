@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LiveEntityDependencyVocabulary()
         {
-            VocabularyName = "Common Data Model LiveEntityDependency";
+            VocabularyName = "LiveEntityDependency";
             KeyPrefix = "commonDataModel.liveentitydependency";
             KeySeparator = ".";
             Grouping = "/LiveEntityDependency";
 
-            AddGroup("Common Data Model LiveEntityDependency Details", group =>
+            AddGroup("LiveEntityDependency Details", group =>
             {
                 fromId = group.Add(new VocabularyKey(nameof(fromId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 fromType = group.Add(new VocabularyKey(nameof(fromType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

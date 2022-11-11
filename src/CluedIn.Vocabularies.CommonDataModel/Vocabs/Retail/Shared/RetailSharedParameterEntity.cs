@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailSharedParameterEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RetailSharedParameterEntity";
+            VocabularyName = "RetailSharedParameterEntity";
             KeyPrefix = "commonDataModel.retailsharedparameterentity";
             KeySeparator = ".";
             Grouping = "/RetailSharedParameterEntity";
 
-            AddGroup("Common Data Model RetailSharedParameterEntity Details", group =>
+            AddGroup("RetailSharedParameterEntity Details", group =>
             {
                 AllowTerminalAssociationFromDevice = group.Add(new VocabularyKey(nameof(AllowTerminalAssociationFromDevice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CatalogDefaultAttributeGroup = group.Add(new VocabularyKey(nameof(CatalogDefaultAttributeGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

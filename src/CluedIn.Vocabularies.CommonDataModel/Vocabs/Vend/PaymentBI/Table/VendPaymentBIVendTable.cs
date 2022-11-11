@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendPaymentBIVendTableVocabulary()
         {
-            VocabularyName = "Common Data Model VendPaymentBIVendTable";
+            VocabularyName = "VendPaymentBIVendTable";
             KeyPrefix = "commonDataModel.vendpaymentbivendtable";
             KeySeparator = ".";
             Grouping = "/VendPaymentBIVendTable";
 
-            AddGroup("Common Data Model VendPaymentBIVendTable Details", group =>
+            AddGroup("VendPaymentBIVendTable Details", group =>
             {
                 AccountNum = group.Add(new VocabularyKey(nameof(AccountNum), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Company = group.Add(new VocabularyKey(nameof(Company), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

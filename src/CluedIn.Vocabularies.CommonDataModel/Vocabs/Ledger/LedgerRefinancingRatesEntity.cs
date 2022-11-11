@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerRefinancingRatesEntityVocabulary()
         {
-            VocabularyName = "Common Data Model LedgerRefinancingRatesEntity";
+            VocabularyName = "LedgerRefinancingRatesEntity";
             KeyPrefix = "commonDataModel.ledgerrefinancingratesentity";
             KeySeparator = ".";
             Grouping = "/LedgerRefinancingRatesEntity";
 
-            AddGroup("Common Data Model LedgerRefinancingRatesEntity Details", group =>
+            AddGroup("LedgerRefinancingRatesEntity Details", group =>
             {
                 FromDate = group.Add(new VocabularyKey(nameof(FromDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Percent = group.Add(new VocabularyKey(nameof(Percent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

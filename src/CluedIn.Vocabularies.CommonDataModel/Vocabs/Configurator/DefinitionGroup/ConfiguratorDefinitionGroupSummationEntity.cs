@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ConfiguratorDefinitionGroupSummationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ConfiguratorDefinitionGroupSummationEntity";
+            VocabularyName = "ConfiguratorDefinitionGroupSummationEntity";
             KeyPrefix = "commonDataModel.configuratordefinitiongroupsummationentity";
             KeySeparator = ".";
             Grouping = "/ConfiguratorDefinitionGroupSummationEntity";
 
-            AddGroup("Common Data Model ConfiguratorDefinitionGroupSummationEntity Details", group =>
+            AddGroup("ConfiguratorDefinitionGroupSummationEntity Details", group =>
             {
                 Average = group.Add(new VocabularyKey(nameof(Average), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AverageSelected = group.Add(new VocabularyKey(nameof(AverageSelected), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

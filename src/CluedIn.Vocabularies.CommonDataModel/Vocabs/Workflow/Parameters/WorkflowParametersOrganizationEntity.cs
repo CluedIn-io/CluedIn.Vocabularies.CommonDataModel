@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WorkflowParametersOrganizationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WorkflowParametersOrganizationEntity";
+            VocabularyName = "WorkflowParametersOrganizationEntity";
             KeyPrefix = "commonDataModel.workflowparametersorganizationentity";
             KeySeparator = ".";
             Grouping = "/WorkflowParametersOrganizationEntity";
 
-            AddGroup("Common Data Model WorkflowParametersOrganizationEntity Details", group =>
+            AddGroup("WorkflowParametersOrganizationEntity Details", group =>
             {
                 ID = group.Add(new VocabularyKey(nameof(ID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkflowNotifications = group.Add(new VocabularyKey(nameof(WorkflowNotifications), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

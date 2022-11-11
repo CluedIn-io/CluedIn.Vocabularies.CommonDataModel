@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetReservationTypeEntity_PSNVocabulary()
         {
-            VocabularyName = "Common Data Model BudgetReservationTypeEntity_PSN";
+            VocabularyName = "BudgetReservationTypeEntity_PSN";
             KeyPrefix = "commonDataModel.budgetreservationtypeentity_psn";
             KeySeparator = ".";
             Grouping = "/BudgetReservationTypeEntity_PSN";
 
-            AddGroup("Common Data Model BudgetReservationTypeEntity_PSN Details", group =>
+            AddGroup("BudgetReservationTypeEntity_PSN Details", group =>
             {
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReservationType = group.Add(new VocabularyKey(nameof(ReservationType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

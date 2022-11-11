@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventSiteGateEntryLineEntityVocabulary()
         {
-            VocabularyName = "Common Data Model InventSiteGateEntryLineEntity";
+            VocabularyName = "InventSiteGateEntryLineEntity";
             KeyPrefix = "commonDataModel.inventsitegateentrylineentity";
             KeySeparator = ".";
             Grouping = "/InventSiteGateEntryLineEntity";
 
-            AddGroup("Common Data Model InventSiteGateEntryLineEntity Details", group =>
+            AddGroup("InventSiteGateEntryLineEntity Details", group =>
             {
                 ChallanQty = group.Add(new VocabularyKey(nameof(ChallanQty), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

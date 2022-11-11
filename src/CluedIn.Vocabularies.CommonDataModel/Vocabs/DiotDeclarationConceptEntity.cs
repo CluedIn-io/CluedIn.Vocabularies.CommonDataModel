@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DiotDeclarationConceptEntityVocabulary()
         {
-            VocabularyName = "Common Data Model DiotDeclarationConceptEntity";
+            VocabularyName = "DiotDeclarationConceptEntity";
             KeyPrefix = "commonDataModel.diotdeclarationconceptentity";
             KeySeparator = ".";
             Grouping = "/DiotDeclarationConceptEntity";
 
-            AddGroup("Common Data Model DiotDeclarationConceptEntity Details", group =>
+            AddGroup("DiotDeclarationConceptEntity Details", group =>
             {
                 ConceptId = group.Add(new VocabularyKey(nameof(ConceptId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

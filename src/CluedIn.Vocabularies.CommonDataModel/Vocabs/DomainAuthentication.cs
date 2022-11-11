@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DomainAuthenticationVocabulary()
         {
-            VocabularyName = "Common Data Model DomainAuthentication";
+            VocabularyName = "DomainAuthentication";
             KeyPrefix = "commonDataModel.domainauthentication";
             KeySeparator = ".";
             Grouping = "/DomainAuthentication";
 
-            AddGroup("Common Data Model DomainAuthentication Details", group =>
+            AddGroup("DomainAuthentication Details", group =>
             {
                 createdBy = group.Add(new VocabularyKey(nameof(createdBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

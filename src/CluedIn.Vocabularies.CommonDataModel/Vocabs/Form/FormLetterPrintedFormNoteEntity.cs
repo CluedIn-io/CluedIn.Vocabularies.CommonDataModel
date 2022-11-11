@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FormLetterPrintedFormNoteEntityVocabulary()
         {
-            VocabularyName = "Common Data Model FormLetterPrintedFormNoteEntity";
+            VocabularyName = "FormLetterPrintedFormNoteEntity";
             KeyPrefix = "commonDataModel.formletterprintedformnoteentity";
             KeySeparator = ".";
             Grouping = "/FormLetterPrintedFormNoteEntity";
 
-            AddGroup("Common Data Model FormLetterPrintedFormNoteEntity Details", group =>
+            AddGroup("FormLetterPrintedFormNoteEntity Details", group =>
             {
                 FormLetterType = group.Add(new VocabularyKey(nameof(FormLetterType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LanguageId = group.Add(new VocabularyKey(nameof(LanguageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

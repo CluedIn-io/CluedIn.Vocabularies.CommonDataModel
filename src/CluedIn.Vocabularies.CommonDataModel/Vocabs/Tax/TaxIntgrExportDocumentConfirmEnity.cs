@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxIntgrExportDocumentConfirmEnityVocabulary()
         {
-            VocabularyName = "Common Data Model TaxIntgrExportDocumentConfirmEnity";
+            VocabularyName = "TaxIntgrExportDocumentConfirmEnity";
             KeyPrefix = "commonDataModel.taxintgrexportdocumentconfirmenity";
             KeySeparator = ".";
             Grouping = "/TaxIntgrExportDocumentConfirmEnity";
 
-            AddGroup("Common Data Model TaxIntgrExportDocumentConfirmEnity Details", group =>
+            AddGroup("TaxIntgrExportDocumentConfirmEnity Details", group =>
             {
                 ExternalInvoiceId = group.Add(new VocabularyKey(nameof(ExternalInvoiceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BatchName = group.Add(new VocabularyKey(nameof(BatchName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

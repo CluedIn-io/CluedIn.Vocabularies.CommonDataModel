@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DlvDeliveryModeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model DlvDeliveryModeEntity";
+            VocabularyName = "DlvDeliveryModeEntity";
             KeyPrefix = "commonDataModel.dlvdeliverymodeentity";
             KeySeparator = ".";
             Grouping = "/DlvDeliveryModeEntity";
 
-            AddGroup("Common Data Model DlvDeliveryModeEntity Details", group =>
+            AddGroup("DlvDeliveryModeEntity Details", group =>
             {
                 ModeCode = group.Add(new VocabularyKey(nameof(ModeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ChargeDeliveryGroupId = group.Add(new VocabularyKey(nameof(ChargeDeliveryGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

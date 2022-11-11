@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BranchVocabulary()
         {
-            VocabularyName = "Common Data Model Branch";
+            VocabularyName = "Branch";
             KeyPrefix = "commonDataModel.branch";
             KeySeparator = ".";
             Grouping = "/Branch";
 
-            AddGroup("Common Data Model Branch Details", group =>
+            AddGroup("Branch Details", group =>
             {
                 branchId = group.Add(new VocabularyKey(nameof(branchId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
 

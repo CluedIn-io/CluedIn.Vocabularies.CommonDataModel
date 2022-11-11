@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesPriceSmartRoundingVersionRuleEntityVocabulary()
         {
-            VocabularyName = "Common Data Model SalesPriceSmartRoundingVersionRuleEntity";
+            VocabularyName = "SalesPriceSmartRoundingVersionRuleEntity";
             KeyPrefix = "commonDataModel.salespricesmartroundingversionruleentity";
             KeySeparator = ".";
             Grouping = "/SalesPriceSmartRoundingVersionRuleEntity";
 
-            AddGroup("Common Data Model SalesPriceSmartRoundingVersionRuleEntity Details", group =>
+            AddGroup("SalesPriceSmartRoundingVersionRuleEntity Details", group =>
             {
                 SalesPriceSmartRoundingVersionId = group.Add(new VocabularyKey(nameof(SalesPriceSmartRoundingVersionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RoundingSyntax = group.Add(new VocabularyKey(nameof(RoundingSyntax), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

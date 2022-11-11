@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PSAForecastEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PSAForecastEntity";
+            VocabularyName = "PSAForecastEntity";
             KeyPrefix = "commonDataModel.psaforecastentity";
             KeySeparator = ".";
             Grouping = "/PSAForecastEntity";
 
-            AddGroup("Common Data Model PSAForecastEntity Details", group =>
+            AddGroup("PSAForecastEntity Details", group =>
             {
                 ActivityNumber = group.Add(new VocabularyKey(nameof(ActivityNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AmountMst = group.Add(new VocabularyKey(nameof(AmountMst), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

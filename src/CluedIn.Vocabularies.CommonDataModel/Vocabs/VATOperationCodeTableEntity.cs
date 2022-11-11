@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VATOperationCodeTableEntityVocabulary()
         {
-            VocabularyName = "Common Data Model VATOperationCodeTableEntity";
+            VocabularyName = "VATOperationCodeTableEntity";
             KeyPrefix = "commonDataModel.vatoperationcodetableentity";
             KeySeparator = ".";
             Grouping = "/VATOperationCodeTableEntity";
 
-            AddGroup("Common Data Model VATOperationCodeTableEntity Details", group =>
+            AddGroup("VATOperationCodeTableEntity Details", group =>
             {
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VATOperationCode = group.Add(new VocabularyKey(nameof(VATOperationCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

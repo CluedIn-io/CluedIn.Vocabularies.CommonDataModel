@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LeanScheduleGroupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model LeanScheduleGroupEntity";
+            VocabularyName = "LeanScheduleGroupEntity";
             KeyPrefix = "commonDataModel.leanschedulegroupentity";
             KeySeparator = ".";
             Grouping = "/LeanScheduleGroupEntity";
 
-            AddGroup("Common Data Model LeanScheduleGroupEntity Details", group =>
+            AddGroup("LeanScheduleGroupEntity Details", group =>
             {
                 ScheduleColor = group.Add(new VocabularyKey(nameof(ScheduleColor), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ScheduleIntegerRGBColor = group.Add(new VocabularyKey(nameof(ScheduleIntegerRGBColor), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

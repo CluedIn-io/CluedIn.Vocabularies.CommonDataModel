@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FHLoanVocabulary()
         {
-            VocabularyName = "Common Data Model FHLoan";
+            VocabularyName = "FHLoan";
             KeyPrefix = "commonDataModel.fhloan";
             KeySeparator = ".";
             Grouping = "/FHLoan";
 
-            AddGroup("Common Data Model FHLoan Details", group =>
+            AddGroup("FHLoan Details", group =>
             {
                 FH_LoanId = group.Add(new VocabularyKey(nameof(FH_LoanId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

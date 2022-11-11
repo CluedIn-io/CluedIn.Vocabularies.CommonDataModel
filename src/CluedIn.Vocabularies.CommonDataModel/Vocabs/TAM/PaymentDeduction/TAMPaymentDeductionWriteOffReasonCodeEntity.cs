@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TAMPaymentDeductionWriteOffReasonCodeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TAMPaymentDeductionWriteOffReasonCodeEntity";
+            VocabularyName = "TAMPaymentDeductionWriteOffReasonCodeEntity";
             KeyPrefix = "commonDataModel.tampaymentdeductionwriteoffreasoncodeentity";
             KeySeparator = ".";
             Grouping = "/TAMPaymentDeductionWriteOffReasonCodeEntity";
 
-            AddGroup("Common Data Model TAMPaymentDeductionWriteOffReasonCodeEntity Details", group =>
+            AddGroup("TAMPaymentDeductionWriteOffReasonCodeEntity Details", group =>
             {
                 WriteOffMainAccountId = group.Add(new VocabularyKey(nameof(WriteOffMainAccountId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReasonCode = group.Add(new VocabularyKey(nameof(ReasonCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

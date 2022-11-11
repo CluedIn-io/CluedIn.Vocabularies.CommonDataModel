@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSCrossDockingOpportunityPolicyEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSCrossDockingOpportunityPolicyEntity";
+            VocabularyName = "WHSCrossDockingOpportunityPolicyEntity";
             KeyPrefix = "commonDataModel.whscrossdockingopportunitypolicyentity";
             KeySeparator = ".";
             Grouping = "/WHSCrossDockingOpportunityPolicyEntity";
 
-            AddGroup("Common Data Model WHSCrossDockingOpportunityPolicyEntity Details", group =>
+            AddGroup("WHSCrossDockingOpportunityPolicyEntity Details", group =>
             {
                 PolicyName = group.Add(new VocabularyKey(nameof(PolicyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PolicyDescription = group.Add(new VocabularyKey(nameof(PolicyDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

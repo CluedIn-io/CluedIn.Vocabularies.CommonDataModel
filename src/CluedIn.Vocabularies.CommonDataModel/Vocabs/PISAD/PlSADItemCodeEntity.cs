@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PlSADItemCodeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PlSADItemCodeEntity";
+            VocabularyName = "PlSADItemCodeEntity";
             KeyPrefix = "commonDataModel.plsaditemcodeentity";
             KeySeparator = ".";
             Grouping = "/PlSADItemCodeEntity";
 
-            AddGroup("Common Data Model PlSADItemCodeEntity Details", group =>
+            AddGroup("PlSADItemCodeEntity Details", group =>
             {
                 MainAccount = group.Add(new VocabularyKey(nameof(MainAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ItemCommodityCode = group.Add(new VocabularyKey(nameof(ItemCommodityCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

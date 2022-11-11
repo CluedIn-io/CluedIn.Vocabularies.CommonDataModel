@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LogisticsLocationRoleEntityVocabulary()
         {
-            VocabularyName = "Common Data Model LogisticsLocationRoleEntity";
+            VocabularyName = "LogisticsLocationRoleEntity";
             KeyPrefix = "commonDataModel.logisticslocationroleentity";
             KeySeparator = ".";
             Grouping = "/LogisticsLocationRoleEntity";
 
-            AddGroup("Common Data Model LogisticsLocationRoleEntity Details", group =>
+            AddGroup("LogisticsLocationRoleEntity Details", group =>
             {
                 Purpose = group.Add(new VocabularyKey(nameof(Purpose), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

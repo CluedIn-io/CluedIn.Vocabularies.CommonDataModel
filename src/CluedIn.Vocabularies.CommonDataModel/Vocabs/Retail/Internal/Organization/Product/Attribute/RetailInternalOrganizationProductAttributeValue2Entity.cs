@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailInternalOrganizationProductAttributeValue2EntityVocabulary()
         {
-            VocabularyName = "Common Data Model RetailInternalOrganizationProductAttributeValue2Entity";
+            VocabularyName = "RetailInternalOrganizationProductAttributeValue2Entity";
             KeyPrefix = "commonDataModel.retailinternalorganizationproductattributevalue2entity";
             KeySeparator = ".";
             Grouping = "/RetailInternalOrganizationProductAttributeValue2Entity";
 
-            AddGroup("Common Data Model RetailInternalOrganizationProductAttributeValue2Entity Details", group =>
+            AddGroup("RetailInternalOrganizationProductAttributeValue2Entity Details", group =>
             {
                 InternalOrganizationPartyNumber = group.Add(new VocabularyKey(nameof(InternalOrganizationPartyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DisplayProductNumber = group.Add(new VocabularyKey(nameof(DisplayProductNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

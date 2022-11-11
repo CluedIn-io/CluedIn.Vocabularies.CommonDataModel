@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxFreeTextInvoiceLineTransTaxInformationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TaxFreeTextInvoiceLineTransTaxInformationEntity";
+            VocabularyName = "TaxFreeTextInvoiceLineTransTaxInformationEntity";
             KeyPrefix = "commonDataModel.taxfreetextinvoicelinetranstaxinformationentity";
             KeySeparator = ".";
             Grouping = "/TaxFreeTextInvoiceLineTransTaxInformationEntity";
 
-            AddGroup("Common Data Model TaxFreeTextInvoiceLineTransTaxInformationEntity Details", group =>
+            AddGroup("TaxFreeTextInvoiceLineTransTaxInformationEntity Details", group =>
             {
                 ParentRecId = group.Add(new VocabularyKey(nameof(ParentRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineNumber = group.Add(new VocabularyKey(nameof(LineNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

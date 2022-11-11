@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjProjectLinePropertyEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ProjProjectLinePropertyEntity";
+            VocabularyName = "ProjProjectLinePropertyEntity";
             KeyPrefix = "commonDataModel.projprojectlinepropertyentity";
             KeySeparator = ".";
             Grouping = "/ProjProjectLinePropertyEntity";
 
-            AddGroup("Common Data Model ProjProjectLinePropertyEntity Details", group =>
+            AddGroup("ProjProjectLinePropertyEntity Details", group =>
             {
                 CostPercentage = group.Add(new VocabularyKey(nameof(CostPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AddToEfficientHours = group.Add(new VocabularyKey(nameof(AddToEfficientHours), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

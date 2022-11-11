@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BrazilParametersEntityVocabulary()
         {
-            VocabularyName = "Common Data Model BrazilParametersEntity";
+            VocabularyName = "BrazilParametersEntity";
             KeyPrefix = "commonDataModel.brazilparametersentity";
             KeySeparator = ".";
             Grouping = "/BrazilParametersEntity";
 
-            AddGroup("Common Data Model BrazilParametersEntity Details", group =>
+            AddGroup("BrazilParametersEntity Details", group =>
             {
                 ApproximateTaxesPrintOnlyFinalUser = group.Add(new VocabularyKey(nameof(ApproximateTaxesPrintOnlyFinalUser), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ApproximateTaxesSource = group.Add(new VocabularyKey(nameof(ApproximateTaxesSource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

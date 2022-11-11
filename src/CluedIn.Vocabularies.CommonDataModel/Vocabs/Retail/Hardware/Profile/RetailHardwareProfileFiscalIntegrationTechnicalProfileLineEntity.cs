@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailHardwareProfileFiscalIntegrationTechnicalProfileLineEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RetailHardwareProfileFiscalIntegrationTechnicalProfileLineEntity";
+            VocabularyName = "RetailHardwareProfileFiscalIntegrationTechnicalProfileLineEntity";
             KeyPrefix = "commonDataModel.retailhardwareprofilefiscalintegrationtechnicalprofilelineentity";
             KeySeparator = ".";
             Grouping = "/RetailHardwareProfileFiscalIntegrationTechnicalProfileLineEntity";
 
-            AddGroup("Common Data Model RetailHardwareProfileFiscalIntegrationTechnicalProfileLineEntity Details", group =>
+            AddGroup("RetailHardwareProfileFiscalIntegrationTechnicalProfileLineEntity Details", group =>
             {
                 HardwareProfileId = group.Add(new VocabularyKey(nameof(HardwareProfileId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FiscalTechnicalProfileId = group.Add(new VocabularyKey(nameof(FiscalTechnicalProfileId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

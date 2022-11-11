@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventQualityOrderHeaderEntityVocabulary()
         {
-            VocabularyName = "Common Data Model InventQualityOrderHeaderEntity";
+            VocabularyName = "InventQualityOrderHeaderEntity";
             KeyPrefix = "commonDataModel.inventqualityorderheaderentity";
             KeySeparator = ".";
             Grouping = "/InventQualityOrderHeaderEntity";
 
-            AddGroup("Common Data Model InventQualityOrderHeaderEntity Details", group =>
+            AddGroup("InventQualityOrderHeaderEntity Details", group =>
             {
                 AcceptableQualityLevelPercentage = group.Add(new VocabularyKey(nameof(AcceptableQualityLevelPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultDimension = group.Add(new VocabularyKey(nameof(DefaultDimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

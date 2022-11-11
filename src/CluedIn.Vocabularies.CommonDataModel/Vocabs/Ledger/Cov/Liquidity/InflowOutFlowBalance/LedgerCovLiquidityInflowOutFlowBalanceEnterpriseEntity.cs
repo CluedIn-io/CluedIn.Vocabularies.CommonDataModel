@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerCovLiquidityInflowOutFlowBalanceEnterpriseEntityVocabulary()
         {
-            VocabularyName = "Common Data Model LedgerCovLiquidityInflowOutFlowBalanceEnterpriseEntity";
+            VocabularyName = "LedgerCovLiquidityInflowOutFlowBalanceEnterpriseEntity";
             KeyPrefix = "commonDataModel.ledgercovliquidityinflowoutflowbalanceenterpriseentity";
             KeySeparator = ".";
             Grouping = "/LedgerCovLiquidityInflowOutFlowBalanceEnterpriseEntity";
 
-            AddGroup("Common Data Model LedgerCovLiquidityInflowOutFlowBalanceEnterpriseEntity Details", group =>
+            AddGroup("LedgerCovLiquidityInflowOutFlowBalanceEnterpriseEntity Details", group =>
             {
                 TransDate = group.Add(new VocabularyKey(nameof(TransDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InflowAmount = group.Add(new VocabularyKey(nameof(InflowAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

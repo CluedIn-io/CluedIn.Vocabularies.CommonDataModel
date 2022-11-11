@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WrkCtrOperationsResourceCapacityReservationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WrkCtrOperationsResourceCapacityReservationEntity";
+            VocabularyName = "WrkCtrOperationsResourceCapacityReservationEntity";
             KeyPrefix = "commonDataModel.wrkctroperationsresourcecapacityreservationentity";
             KeySeparator = ".";
             Grouping = "/WrkCtrOperationsResourceCapacityReservationEntity";
 
-            AddGroup("Common Data Model WrkCtrOperationsResourceCapacityReservationEntity Details", group =>
+            AddGroup("WrkCtrOperationsResourceCapacityReservationEntity Details", group =>
             {
                 ScheduledEndTime = group.Add(new VocabularyKey(nameof(ScheduledEndTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductionOrderRouteJobId = group.Add(new VocabularyKey(nameof(ProductionOrderRouteJobId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

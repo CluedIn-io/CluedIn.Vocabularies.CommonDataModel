@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DimensionAttributeActivationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model DimensionAttributeActivationEntity";
+            VocabularyName = "DimensionAttributeActivationEntity";
             KeyPrefix = "commonDataModel.dimensionattributeactivationentity";
             KeySeparator = ".";
             Grouping = "/DimensionAttributeActivationEntity";
 
-            AddGroup("Common Data Model DimensionAttributeActivationEntity Details", group =>
+            AddGroup("DimensionAttributeActivationEntity Details", group =>
             {
                 DoActivate = group.Add(new VocabularyKey(nameof(DoActivate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DoCopyValues = group.Add(new VocabularyKey(nameof(DoCopyValues), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

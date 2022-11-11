@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BranchEntityVocabulary()
         {
-            VocabularyName = "Common Data Model BranchEntity";
+            VocabularyName = "BranchEntity";
             KeyPrefix = "commonDataModel.branchentity";
             KeySeparator = ".";
             Grouping = "/BranchEntity";
 
-            AddGroup("Common Data Model BranchEntity Details", group =>
+            AddGroup("BranchEntity Details", group =>
             {
                 VendorAccount = group.Add(new VocabularyKey(nameof(VendorAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AlcoholRegulationAuthority = group.Add(new VocabularyKey(nameof(AlcoholRegulationAuthority), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

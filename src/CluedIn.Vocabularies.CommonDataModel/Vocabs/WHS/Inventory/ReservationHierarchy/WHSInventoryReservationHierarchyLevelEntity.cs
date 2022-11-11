@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSInventoryReservationHierarchyLevelEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSInventoryReservationHierarchyLevelEntity";
+            VocabularyName = "WHSInventoryReservationHierarchyLevelEntity";
             KeyPrefix = "commonDataModel.whsinventoryreservationhierarchylevelentity";
             KeySeparator = ".";
             Grouping = "/WHSInventoryReservationHierarchyLevelEntity";
 
-            AddGroup("Common Data Model WHSInventoryReservationHierarchyLevelEntity Details", group =>
+            AddGroup("WHSInventoryReservationHierarchyLevelEntity Details", group =>
             {
                 InventoryDimensionFieldId = group.Add(new VocabularyKey(nameof(InventoryDimensionFieldId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InventoryDimensionFieldName = group.Add(new VocabularyKey(nameof(InventoryDimensionFieldName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

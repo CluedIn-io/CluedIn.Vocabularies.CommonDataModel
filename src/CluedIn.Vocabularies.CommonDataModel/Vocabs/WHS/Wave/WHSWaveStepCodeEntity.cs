@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWaveStepCodeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSWaveStepCodeEntity";
+            VocabularyName = "WHSWaveStepCodeEntity";
             KeyPrefix = "commonDataModel.whswavestepcodeentity";
             KeySeparator = ".";
             Grouping = "/WHSWaveStepCodeEntity";
 
-            AddGroup("Common Data Model WHSWaveStepCodeEntity Details", group =>
+            AddGroup("WHSWaveStepCodeEntity Details", group =>
             {
                 WaveStepType = group.Add(new VocabularyKey(nameof(WaveStepType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WaveStepCode = group.Add(new VocabularyKey(nameof(WaveStepCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

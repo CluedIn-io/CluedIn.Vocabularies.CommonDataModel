@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSShippingCarrierRatingProfileEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TMSShippingCarrierRatingProfileEntity";
+            VocabularyName = "TMSShippingCarrierRatingProfileEntity";
             KeyPrefix = "commonDataModel.tmsshippingcarrierratingprofileentity";
             KeySeparator = ".";
             Grouping = "/TMSShippingCarrierRatingProfileEntity";
 
-            AddGroup("Common Data Model TMSShippingCarrierRatingProfileEntity Details", group =>
+            AddGroup("TMSShippingCarrierRatingProfileEntity Details", group =>
             {
                 EffectiveEndDateTime = group.Add(new VocabularyKey(nameof(EffectiveEndDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EffectiveStartDateTime = group.Add(new VocabularyKey(nameof(EffectiveStartDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

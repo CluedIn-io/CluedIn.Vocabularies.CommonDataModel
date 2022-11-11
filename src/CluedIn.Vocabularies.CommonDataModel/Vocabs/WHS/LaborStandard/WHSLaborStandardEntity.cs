@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSLaborStandardEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSLaborStandardEntity";
+            VocabularyName = "WHSLaborStandardEntity";
             KeyPrefix = "commonDataModel.whslaborstandardentity";
             KeySeparator = ".";
             Grouping = "/WHSLaborStandardEntity";
 
-            AddGroup("Common Data Model WHSLaborStandardEntity Details", group =>
+            AddGroup("WHSLaborStandardEntity Details", group =>
             {
                 LaborStandardDescription = group.Add(new VocabularyKey(nameof(LaborStandardDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LaborStandardProductQuery = group.Add(new VocabularyKey(nameof(LaborStandardProductQuery), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

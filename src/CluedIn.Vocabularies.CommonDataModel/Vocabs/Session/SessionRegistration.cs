@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SessionRegistrationVocabulary()
         {
-            VocabularyName = "Common Data Model SessionRegistration";
+            VocabularyName = "SessionRegistration";
             KeyPrefix = "commonDataModel.sessionregistration";
             KeySeparator = ".";
             Grouping = "/SessionRegistration";
 
-            AddGroup("Common Data Model SessionRegistration Details", group =>
+            AddGroup("SessionRegistration Details", group =>
             {
                 createdFromApi = group.Add(new VocabularyKey(nameof(createdFromApi), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 isCanceled = group.Add(new VocabularyKey(nameof(isCanceled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

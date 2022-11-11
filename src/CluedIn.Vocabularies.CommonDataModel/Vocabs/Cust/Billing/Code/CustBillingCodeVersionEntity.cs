@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustBillingCodeVersionEntityVocabulary()
         {
-            VocabularyName = "Common Data Model CustBillingCodeVersionEntity";
+            VocabularyName = "CustBillingCodeVersionEntity";
             KeyPrefix = "commonDataModel.custbillingcodeversionentity";
             KeySeparator = ".";
             Grouping = "/CustBillingCodeVersionEntity";
 
-            AddGroup("Common Data Model CustBillingCodeVersionEntity Details", group =>
+            AddGroup("CustBillingCodeVersionEntity Details", group =>
             {
                 AllowChangeAmountOnInvoice = group.Add(new VocabularyKey(nameof(AllowChangeAmountOnInvoice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AllowChangesToLedgerAccounts = group.Add(new VocabularyKey(nameof(AllowChangesToLedgerAccounts), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

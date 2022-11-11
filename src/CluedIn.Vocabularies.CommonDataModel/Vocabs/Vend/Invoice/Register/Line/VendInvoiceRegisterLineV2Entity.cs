@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendInvoiceRegisterLineV2EntityVocabulary()
         {
-            VocabularyName = "Common Data Model VendInvoiceRegisterLineV2Entity";
+            VocabularyName = "VendInvoiceRegisterLineV2Entity";
             KeyPrefix = "commonDataModel.vendinvoiceregisterlinev2entity";
             KeySeparator = ".";
             Grouping = "/VendInvoiceRegisterLineV2Entity";
 
-            AddGroup("Common Data Model VendInvoiceRegisterLineV2Entity Details", group =>
+            AddGroup("VendInvoiceRegisterLineV2Entity Details", group =>
             {
                 Company = group.Add(new VocabularyKey(nameof(Company), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AccountType = group.Add(new VocabularyKey(nameof(AccountType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

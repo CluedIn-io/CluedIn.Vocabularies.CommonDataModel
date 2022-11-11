@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmPositionDetailEntityVocabulary()
         {
-            VocabularyName = "Common Data Model HcmPositionDetailEntity";
+            VocabularyName = "HcmPositionDetailEntity";
             KeyPrefix = "commonDataModel.hcmpositiondetailentity";
             KeySeparator = ".";
             Grouping = "/HcmPositionDetailEntity";
 
-            AddGroup("Common Data Model HcmPositionDetailEntity Details", group =>
+            AddGroup("HcmPositionDetailEntity Details", group =>
             {
                 AvailableForAssignment = group.Add(new VocabularyKey(nameof(AvailableForAssignment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CompensationRegion = group.Add(new VocabularyKey(nameof(CompensationRegion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

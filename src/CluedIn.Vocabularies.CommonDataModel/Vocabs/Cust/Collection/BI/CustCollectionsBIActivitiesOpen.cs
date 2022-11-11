@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustCollectionsBIActivitiesOpenVocabulary()
         {
-            VocabularyName = "Common Data Model CustCollectionsBIActivitiesOpen";
+            VocabularyName = "CustCollectionsBIActivitiesOpen";
             KeyPrefix = "commonDataModel.custcollectionsbiactivitiesopen";
             KeySeparator = ".";
             Grouping = "/CustCollectionsBIActivitiesOpen";
 
-            AddGroup("Common Data Model CustCollectionsBIActivitiesOpen Details", group =>
+            AddGroup("CustCollectionsBIActivitiesOpen Details", group =>
             {
                 ActivityNumber = group.Add(new VocabularyKey(nameof(ActivityNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AccountNum = group.Add(new VocabularyKey(nameof(AccountNum), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSFreightBillTypeAssignmentEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TMSFreightBillTypeAssignmentEntity";
+            VocabularyName = "TMSFreightBillTypeAssignmentEntity";
             KeyPrefix = "commonDataModel.tmsfreightbilltypeassignmententity";
             KeySeparator = ".";
             Grouping = "/TMSFreightBillTypeAssignmentEntity";
 
-            AddGroup("Common Data Model TMSFreightBillTypeAssignmentEntity Details", group =>
+            AddGroup("TMSFreightBillTypeAssignmentEntity Details", group =>
             {
                 ShippingCarrierId = group.Add(new VocabularyKey(nameof(ShippingCarrierId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductMovementDirectionRule = group.Add(new VocabularyKey(nameof(ProductMovementDirectionRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerEliminationRuleLineEntityVocabulary()
         {
-            VocabularyName = "Common Data Model LedgerEliminationRuleLineEntity";
+            VocabularyName = "LedgerEliminationRuleLineEntity";
             KeyPrefix = "commonDataModel.ledgereliminationrulelineentity";
             KeySeparator = ".";
             Grouping = "/LedgerEliminationRuleLineEntity";
 
-            AddGroup("Common Data Model LedgerEliminationRuleLineEntity Details", group =>
+            AddGroup("LedgerEliminationRuleLineEntity Details", group =>
             {
                 RuleId = group.Add(new VocabularyKey(nameof(RuleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EliminationMethod = group.Add(new VocabularyKey(nameof(EliminationMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

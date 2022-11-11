@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSLateShipReasonEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TMSLateShipReasonEntity";
+            VocabularyName = "TMSLateShipReasonEntity";
             KeyPrefix = "commonDataModel.tmslateshipreasonentity";
             KeySeparator = ".";
             Grouping = "/TMSLateShipReasonEntity";
 
-            AddGroup("Common Data Model TMSLateShipReasonEntity Details", group =>
+            AddGroup("TMSLateShipReasonEntity Details", group =>
             {
                 ReasonCode = group.Add(new VocabularyKey(nameof(ReasonCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReasonDescription = group.Add(new VocabularyKey(nameof(ReasonDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

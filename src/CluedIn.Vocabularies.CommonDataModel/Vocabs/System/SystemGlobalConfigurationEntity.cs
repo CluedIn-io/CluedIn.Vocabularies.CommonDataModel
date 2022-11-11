@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SystemGlobalConfigurationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model SystemGlobalConfigurationEntity";
+            VocabularyName = "SystemGlobalConfigurationEntity";
             KeyPrefix = "commonDataModel.systemglobalconfigurationentity";
             KeySeparator = ".";
             Grouping = "/SystemGlobalConfigurationEntity";
 
-            AddGroup("Common Data Model SystemGlobalConfigurationEntity Details", group =>
+            AddGroup("SystemGlobalConfigurationEntity Details", group =>
             {
                 AOSInstanceName = group.Add(new VocabularyKey(nameof(AOSInstanceName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

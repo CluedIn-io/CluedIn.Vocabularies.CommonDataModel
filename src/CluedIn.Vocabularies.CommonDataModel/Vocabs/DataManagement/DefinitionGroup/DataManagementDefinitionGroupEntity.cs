@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DataManagementDefinitionGroupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model DataManagementDefinitionGroupEntity";
+            VocabularyName = "DataManagementDefinitionGroupEntity";
             KeyPrefix = "commonDataModel.datamanagementdefinitiongroupentity";
             KeySeparator = ".";
             Grouping = "/DataManagementDefinitionGroupEntity";
 
-            AddGroup("Common Data Model DataManagementDefinitionGroupEntity Details", group =>
+            AddGroup("DataManagementDefinitionGroupEntity Details", group =>
             {
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

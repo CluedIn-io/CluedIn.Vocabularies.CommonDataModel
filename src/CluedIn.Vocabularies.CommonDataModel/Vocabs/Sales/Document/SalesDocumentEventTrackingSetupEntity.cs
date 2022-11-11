@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesDocumentEventTrackingSetupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model SalesDocumentEventTrackingSetupEntity";
+            VocabularyName = "SalesDocumentEventTrackingSetupEntity";
             KeyPrefix = "commonDataModel.salesdocumenteventtrackingsetupentity";
             KeySeparator = ".";
             Grouping = "/SalesDocumentEventTrackingSetupEntity";
 
-            AddGroup("Common Data Model SalesDocumentEventTrackingSetupEntity Details", group =>
+            AddGroup("SalesDocumentEventTrackingSetupEntity Details", group =>
             {
                 AreFraudHoldAdditionsLogged = group.Add(new VocabularyKey(nameof(AreFraudHoldAdditionsLogged), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AreSalesOrderHoldAdditionsLogged = group.Add(new VocabularyKey(nameof(AreSalesOrderHoldAdditionsLogged), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

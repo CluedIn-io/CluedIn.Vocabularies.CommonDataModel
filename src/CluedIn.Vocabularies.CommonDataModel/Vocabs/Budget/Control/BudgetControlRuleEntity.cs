@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetControlRuleEntityVocabulary()
         {
-            VocabularyName = "Common Data Model BudgetControlRuleEntity";
+            VocabularyName = "BudgetControlRuleEntity";
             KeyPrefix = "commonDataModel.budgetcontrolruleentity";
             KeySeparator = ".";
             Grouping = "/BudgetControlRuleEntity";
 
-            AddGroup("Common Data Model BudgetControlRuleEntity Details", group =>
+            AddGroup("BudgetControlRuleEntity Details", group =>
             {
                 LegalEntityId = group.Add(new VocabularyKey(nameof(LegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Status = group.Add(new VocabularyKey(nameof(Status), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

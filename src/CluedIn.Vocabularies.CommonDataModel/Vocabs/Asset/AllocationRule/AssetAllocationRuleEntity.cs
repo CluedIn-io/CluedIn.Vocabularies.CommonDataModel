@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetAllocationRuleEntityVocabulary()
         {
-            VocabularyName = "Common Data Model AssetAllocationRuleEntity";
+            VocabularyName = "AssetAllocationRuleEntity";
             KeyPrefix = "commonDataModel.assetallocationruleentity";
             KeySeparator = ".";
             Grouping = "/AssetAllocationRuleEntity";
 
-            AddGroup("Common Data Model AssetAllocationRuleEntity Details", group =>
+            AddGroup("AssetAllocationRuleEntity Details", group =>
             {
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DimensionAttribute = group.Add(new VocabularyKey(nameof(DimensionAttribute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

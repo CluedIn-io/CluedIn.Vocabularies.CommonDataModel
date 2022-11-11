@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailSharedFacebookParameterEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RetailSharedFacebookParameterEntity";
+            VocabularyName = "RetailSharedFacebookParameterEntity";
             KeyPrefix = "commonDataModel.retailsharedfacebookparameterentity";
             KeySeparator = ".";
             Grouping = "/RetailSharedFacebookParameterEntity";
 
-            AddGroup("Common Data Model RetailSharedFacebookParameterEntity Details", group =>
+            AddGroup("RetailSharedFacebookParameterEntity Details", group =>
             {
                 ApplicationId = group.Add(new VocabularyKey(nameof(ApplicationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Key = group.Add(new VocabularyKey(nameof(Key), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

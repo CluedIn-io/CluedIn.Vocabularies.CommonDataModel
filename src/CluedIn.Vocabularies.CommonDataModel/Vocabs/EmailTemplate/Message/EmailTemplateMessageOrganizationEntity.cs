@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EmailTemplateMessageOrganizationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model EmailTemplateMessageOrganizationEntity";
+            VocabularyName = "EmailTemplateMessageOrganizationEntity";
             KeyPrefix = "commonDataModel.emailtemplatemessageorganizationentity";
             KeySeparator = ".";
             Grouping = "/EmailTemplateMessageOrganizationEntity";
 
-            AddGroup("Common Data Model EmailTemplateMessageOrganizationEntity Details", group =>
+            AddGroup("EmailTemplateMessageOrganizationEntity Details", group =>
             {
                 EmailId = group.Add(new VocabularyKey(nameof(EmailId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Language = group.Add(new VocabularyKey(nameof(Language), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

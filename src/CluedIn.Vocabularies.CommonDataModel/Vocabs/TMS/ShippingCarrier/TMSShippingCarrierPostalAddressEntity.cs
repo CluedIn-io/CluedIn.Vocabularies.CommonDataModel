@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSShippingCarrierPostalAddressEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TMSShippingCarrierPostalAddressEntity";
+            VocabularyName = "TMSShippingCarrierPostalAddressEntity";
             KeyPrefix = "commonDataModel.tmsshippingcarrierpostaladdressentity";
             KeySeparator = ".";
             Grouping = "/TMSShippingCarrierPostalAddressEntity";
 
-            AddGroup("Common Data Model TMSShippingCarrierPostalAddressEntity Details", group =>
+            AddGroup("TMSShippingCarrierPostalAddressEntity Details", group =>
             {
                 ShippingCarrierId = group.Add(new VocabularyKey(nameof(ShippingCarrierId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsPrimaryAddress = group.Add(new VocabularyKey(nameof(IsPrimaryAddress), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgWorkOrderDocumentGroupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model JmgWorkOrderDocumentGroupEntity";
+            VocabularyName = "JmgWorkOrderDocumentGroupEntity";
             KeyPrefix = "commonDataModel.jmgworkorderdocumentgroupentity";
             KeySeparator = ".";
             Grouping = "/JmgWorkOrderDocumentGroupEntity";
 
-            AddGroup("Common Data Model JmgWorkOrderDocumentGroupEntity Details", group =>
+            AddGroup("JmgWorkOrderDocumentGroupEntity Details", group =>
             {
                 GroupId = group.Add(new VocabularyKey(nameof(GroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GroupDescription = group.Add(new VocabularyKey(nameof(GroupDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PSAComponentectGroupAssignmentEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PSAComponentectGroupAssignmentEntity";
+            VocabularyName = "PSAComponentectGroupAssignmentEntity";
             KeyPrefix = "commonDataModel.psacomponentectgroupassignmententity";
             KeySeparator = ".";
             Grouping = "/PSAComponentectGroupAssignmentEntity";
 
-            AddGroup("Common Data Model PSAComponentectGroupAssignmentEntity Details", group =>
+            AddGroup("PSAComponentectGroupAssignmentEntity Details", group =>
             {
                 Category = group.Add(new VocabularyKey(nameof(Category), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CustomerAccount = group.Add(new VocabularyKey(nameof(CustomerAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

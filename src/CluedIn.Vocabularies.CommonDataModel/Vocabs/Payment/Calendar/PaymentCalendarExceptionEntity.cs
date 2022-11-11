@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PaymentCalendarExceptionEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PaymentCalendarExceptionEntity";
+            VocabularyName = "PaymentCalendarExceptionEntity";
             KeyPrefix = "commonDataModel.paymentcalendarexceptionentity";
             KeySeparator = ".";
             Grouping = "/PaymentCalendarExceptionEntity";
 
-            AddGroup("Common Data Model PaymentCalendarExceptionEntity Details", group =>
+            AddGroup("PaymentCalendarExceptionEntity Details", group =>
             {
                 PaymentCalendar = group.Add(new VocabularyKey(nameof(PaymentCalendar), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PaymentCalendarName = group.Add(new VocabularyKey(nameof(PaymentCalendarName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

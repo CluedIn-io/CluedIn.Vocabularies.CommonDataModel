@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxGSTMinorCodeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TaxGSTMinorCodeEntity";
+            VocabularyName = "TaxGSTMinorCodeEntity";
             KeyPrefix = "commonDataModel.taxgstminorcodeentity";
             KeySeparator = ".";
             Grouping = "/TaxGSTMinorCodeEntity";
 
-            AddGroup("Common Data Model TaxGSTMinorCodeEntity Details", group =>
+            AddGroup("TaxGSTMinorCodeEntity Details", group =>
             {
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MinorCode = group.Add(new VocabularyKey(nameof(MinorCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

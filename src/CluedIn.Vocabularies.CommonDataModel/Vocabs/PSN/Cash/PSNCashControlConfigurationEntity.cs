@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PSNCashControlConfigurationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PSNCashControlConfigurationEntity";
+            VocabularyName = "PSNCashControlConfigurationEntity";
             KeyPrefix = "commonDataModel.psncashcontrolconfigurationentity";
             KeySeparator = ".";
             Grouping = "/PSNCashControlConfigurationEntity";
 
-            AddGroup("Common Data Model PSNCashControlConfigurationEntity Details", group =>
+            AddGroup("PSNCashControlConfigurationEntity Details", group =>
             {
                 AccountsPayableAccountLedgerDimension = group.Add(new VocabularyKey(nameof(AccountsPayableAccountLedgerDimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CashAccountLedgerDimension = group.Add(new VocabularyKey(nameof(CashAccountLedgerDimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

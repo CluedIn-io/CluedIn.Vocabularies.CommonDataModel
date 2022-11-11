@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LeadScoreDeprecatedVocabulary()
         {
-            VocabularyName = "Common Data Model LeadScoreDeprecated";
+            VocabularyName = "LeadScoreDeprecated";
             KeyPrefix = "commonDataModel.leadscoredeprecated";
             KeySeparator = ".";
             Grouping = "/LeadScoreDeprecated";
 
-            AddGroup("Common Data Model LeadScoreDeprecated Details", group =>
+            AddGroup("LeadScoreDeprecated Details", group =>
             {
                 leadscoreId = group.Add(new VocabularyKey(nameof(leadscoreId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

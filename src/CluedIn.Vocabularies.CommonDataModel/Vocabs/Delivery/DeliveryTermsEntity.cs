@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DeliveryTermsEntityVocabulary()
         {
-            VocabularyName = "Common Data Model DeliveryTermsEntity";
+            VocabularyName = "DeliveryTermsEntity";
             KeyPrefix = "commonDataModel.deliverytermsentity";
             KeySeparator = ".";
             Grouping = "/DeliveryTermsEntity";
 
-            AddGroup("Common Data Model DeliveryTermsEntity Details", group =>
+            AddGroup("DeliveryTermsEntity Details", group =>
             {
                 TermsCode = group.Add(new VocabularyKey(nameof(TermsCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IntrastatCode = group.Add(new VocabularyKey(nameof(IntrastatCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

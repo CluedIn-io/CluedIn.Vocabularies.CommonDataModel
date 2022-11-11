@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollEarningCodeGroupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PayrollEarningCodeGroupEntity";
+            VocabularyName = "PayrollEarningCodeGroupEntity";
             KeyPrefix = "commonDataModel.payrollearningcodegroupentity";
             KeySeparator = ".";
             Grouping = "/PayrollEarningCodeGroupEntity";
 
-            AddGroup("Common Data Model PayrollEarningCodeGroupEntity Details", group =>
+            AddGroup("PayrollEarningCodeGroupEntity Details", group =>
             {
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EarningCodeGroup = group.Add(new VocabularyKey(nameof(EarningCodeGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

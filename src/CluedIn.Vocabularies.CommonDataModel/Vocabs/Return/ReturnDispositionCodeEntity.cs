@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReturnDispositionCodeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ReturnDispositionCodeEntity";
+            VocabularyName = "ReturnDispositionCodeEntity";
             KeyPrefix = "commonDataModel.returndispositioncodeentity";
             KeySeparator = ".";
             Grouping = "/ReturnDispositionCodeEntity";
 
-            AddGroup("Common Data Model ReturnDispositionCodeEntity Details", group =>
+            AddGroup("ReturnDispositionCodeEntity Details", group =>
             {
                 DispositionDescription = group.Add(new VocabularyKey(nameof(DispositionDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DispositionAction = group.Add(new VocabularyKey(nameof(DispositionAction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

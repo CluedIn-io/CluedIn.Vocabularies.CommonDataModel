@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CarePlanVocabulary()
         {
-            VocabularyName = "Common Data Model CarePlan";
+            VocabularyName = "CarePlan";
             KeyPrefix = "commonDataModel.careplan";
             KeySeparator = ".";
             Grouping = "/CarePlan";
 
-            AddGroup("Common Data Model CarePlan Details", group =>
+            AddGroup("CarePlan Details", group =>
             {
                 createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
                 createdBy = group.Add(new VocabularyKey(nameof(createdBy), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));

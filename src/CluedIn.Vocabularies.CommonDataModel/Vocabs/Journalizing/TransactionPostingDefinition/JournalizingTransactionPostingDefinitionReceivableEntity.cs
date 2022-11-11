@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JournalizingTransactionPostingDefinitionReceivableEntityVocabulary()
         {
-            VocabularyName = "Common Data Model JournalizingTransactionPostingDefinitionReceivableEntity";
+            VocabularyName = "JournalizingTransactionPostingDefinitionReceivableEntity";
             KeyPrefix = "commonDataModel.journalizingtransactionpostingdefinitionreceivableentity";
             KeySeparator = ".";
             Grouping = "/JournalizingTransactionPostingDefinitionReceivableEntity";
 
-            AddGroup("Common Data Model JournalizingTransactionPostingDefinitionReceivableEntity Details", group =>
+            AddGroup("JournalizingTransactionPostingDefinitionReceivableEntity Details", group =>
             {
                 CustBillingClassificationRecId = group.Add(new VocabularyKey(nameof(CustBillingClassificationRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CustBillingCodeRecId = group.Add(new VocabularyKey(nameof(CustBillingCodeRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

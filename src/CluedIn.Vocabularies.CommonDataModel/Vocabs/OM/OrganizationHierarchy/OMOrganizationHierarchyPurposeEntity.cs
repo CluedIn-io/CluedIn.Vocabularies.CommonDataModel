@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public OMOrganizationHierarchyPurposeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model OMOrganizationHierarchyPurposeEntity";
+            VocabularyName = "OMOrganizationHierarchyPurposeEntity";
             KeyPrefix = "commonDataModel.omorganizationhierarchypurposeentity";
             KeySeparator = ".";
             Grouping = "/OMOrganizationHierarchyPurposeEntity";
 
-            AddGroup("Common Data Model OMOrganizationHierarchyPurposeEntity Details", group =>
+            AddGroup("OMOrganizationHierarchyPurposeEntity Details", group =>
             {
                 HierarchyPurpose = group.Add(new VocabularyKey(nameof(HierarchyPurpose), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 HierarchyTypeRecId = group.Add(new VocabularyKey(nameof(HierarchyTypeRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

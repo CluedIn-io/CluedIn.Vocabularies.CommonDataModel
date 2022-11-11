@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchRequestForQuotationScoringMethodEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PurchRequestForQuotationScoringMethodEntity";
+            VocabularyName = "PurchRequestForQuotationScoringMethodEntity";
             KeyPrefix = "commonDataModel.purchrequestforquotationscoringmethodentity";
             KeySeparator = ".";
             Grouping = "/PurchRequestForQuotationScoringMethodEntity";
 
-            AddGroup("Common Data Model PurchRequestForQuotationScoringMethodEntity Details", group =>
+            AddGroup("PurchRequestForQuotationScoringMethodEntity Details", group =>
             {
                 MethodName = group.Add(new VocabularyKey(nameof(MethodName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MethodDescription = group.Add(new VocabularyKey(nameof(MethodDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

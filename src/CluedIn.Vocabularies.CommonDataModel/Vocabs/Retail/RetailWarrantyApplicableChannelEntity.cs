@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailWarrantyApplicableChannelEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RetailWarrantyApplicableChannelEntity";
+            VocabularyName = "RetailWarrantyApplicableChannelEntity";
             KeyPrefix = "commonDataModel.retailwarrantyapplicablechannelentity";
             KeySeparator = ".";
             Grouping = "/RetailWarrantyApplicableChannelEntity";
 
-            AddGroup("Common Data Model RetailWarrantyApplicableChannelEntity Details", group =>
+            AddGroup("RetailWarrantyApplicableChannelEntity Details", group =>
             {
                 WarrantyGroupId = group.Add(new VocabularyKey(nameof(WarrantyGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OMHierarchyTypeId = group.Add(new VocabularyKey(nameof(OMHierarchyTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

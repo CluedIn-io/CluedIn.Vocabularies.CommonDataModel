@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationRateEngineEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TMSTransportationRateEngineEntity";
+            VocabularyName = "TMSTransportationRateEngineEntity";
             KeyPrefix = "commonDataModel.tmstransportationrateengineentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationRateEngineEntity";
 
-            AddGroup("Common Data Model TMSTransportationRateEngineEntity Details", group =>
+            AddGroup("TMSTransportationRateEngineEntity Details", group =>
             {
                 RateEngineAssemblyName = group.Add(new VocabularyKey(nameof(RateEngineAssemblyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RateEngineClassName = group.Add(new VocabularyKey(nameof(RateEngineClassName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

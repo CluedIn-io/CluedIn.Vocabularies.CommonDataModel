@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InvoiceAutoNumberingGroupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model InvoiceAutoNumberingGroupEntity";
+            VocabularyName = "InvoiceAutoNumberingGroupEntity";
             KeyPrefix = "commonDataModel.invoiceautonumberinggroupentity";
             KeySeparator = ".";
             Grouping = "/InvoiceAutoNumberingGroupEntity";
 
-            AddGroup("Common Data Model InvoiceAutoNumberingGroupEntity Details", group =>
+            AddGroup("InvoiceAutoNumberingGroupEntity Details", group =>
             {
                 Type = group.Add(new VocabularyKey(nameof(Type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AutoNumbering = group.Add(new VocabularyKey(nameof(AutoNumbering), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PmfFormulaLineConsumptionIntervalV2EntityVocabulary()
         {
-            VocabularyName = "Common Data Model PmfFormulaLineConsumptionIntervalV2Entity";
+            VocabularyName = "PmfFormulaLineConsumptionIntervalV2Entity";
             KeyPrefix = "commonDataModel.pmfformulalineconsumptionintervalv2entity";
             KeySeparator = ".";
             Grouping = "/PmfFormulaLineConsumptionIntervalV2Entity";
 
-            AddGroup("Common Data Model PmfFormulaLineConsumptionIntervalV2Entity Details", group =>
+            AddGroup("PmfFormulaLineConsumptionIntervalV2Entity Details", group =>
             {
                 ConsumptionQuantity = group.Add(new VocabularyKey(nameof(ConsumptionQuantity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FromQuantity = group.Add(new VocabularyKey(nameof(FromQuantity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

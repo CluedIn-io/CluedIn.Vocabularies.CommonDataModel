@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ExchangeRateCDSEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ExchangeRateCDSEntity";
+            VocabularyName = "ExchangeRateCDSEntity";
             KeyPrefix = "commonDataModel.exchangeratecdsentity";
             KeySeparator = ".";
             Grouping = "/ExchangeRateCDSEntity";
 
-            AddGroup("Common Data Model ExchangeRateCDSEntity Details", group =>
+            AddGroup("ExchangeRateCDSEntity Details", group =>
             {
                 ExchangeRateForStorage = group.Add(new VocabularyKey(nameof(ExchangeRateForStorage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExchangeRateCurrencyPairId = group.Add(new VocabularyKey(nameof(ExchangeRateCurrencyPairId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

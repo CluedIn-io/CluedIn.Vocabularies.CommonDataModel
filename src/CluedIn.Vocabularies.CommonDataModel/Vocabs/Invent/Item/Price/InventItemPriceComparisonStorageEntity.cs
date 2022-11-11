@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventItemPriceComparisonStorageEntityVocabulary()
         {
-            VocabularyName = "Common Data Model InventItemPriceComparisonStorageEntity";
+            VocabularyName = "InventItemPriceComparisonStorageEntity";
             KeyPrefix = "commonDataModel.inventitempricecomparisonstorageentity";
             KeySeparator = ".";
             Grouping = "/InventItemPriceComparisonStorageEntity";
 
-            AddGroup("Common Data Model InventItemPriceComparisonStorageEntity Details", group =>
+            AddGroup("InventItemPriceComparisonStorageEntity Details", group =>
             {
                 ExecutionName = group.Add(new VocabularyKey(nameof(ExecutionName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExecutionTime = group.Add(new VocabularyKey(nameof(ExecutionTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

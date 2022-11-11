@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgManualPremiumEntityVocabulary()
         {
-            VocabularyName = "Common Data Model JmgManualPremiumEntity";
+            VocabularyName = "JmgManualPremiumEntity";
             KeyPrefix = "commonDataModel.jmgmanualpremiumentity";
             KeySeparator = ".";
             Grouping = "/JmgManualPremiumEntity";
 
-            AddGroup("Common Data Model JmgManualPremiumEntity Details", group =>
+            AddGroup("JmgManualPremiumEntity Details", group =>
             {
                 DefaultLedgerDimension = group.Add(new VocabularyKey(nameof(DefaultLedgerDimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PremiumCode = group.Add(new VocabularyKey(nameof(PremiumCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

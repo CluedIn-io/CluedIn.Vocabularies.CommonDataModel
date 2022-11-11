@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WorkingTimeSchedulingPropertyLinesEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WorkingTimeSchedulingPropertyLinesEntity";
+            VocabularyName = "WorkingTimeSchedulingPropertyLinesEntity";
             KeyPrefix = "commonDataModel.workingtimeschedulingpropertylinesentity";
             KeySeparator = ".";
             Grouping = "/WorkingTimeSchedulingPropertyLinesEntity";
 
-            AddGroup("Common Data Model WorkingTimeSchedulingPropertyLinesEntity Details", group =>
+            AddGroup("WorkingTimeSchedulingPropertyLinesEntity Details", group =>
             {
                 WorkingTimeSchedulingPropertyId = group.Add(new VocabularyKey(nameof(WorkingTimeSchedulingPropertyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineName = group.Add(new VocabularyKey(nameof(LineName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehousePutawayClusterProfileWorkTemplateEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSWarehousePutawayClusterProfileWorkTemplateEntity";
+            VocabularyName = "WHSWarehousePutawayClusterProfileWorkTemplateEntity";
             KeyPrefix = "commonDataModel.whswarehouseputawayclusterprofileworktemplateentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehousePutawayClusterProfileWorkTemplateEntity";
 
-            AddGroup("Common Data Model WHSWarehousePutawayClusterProfileWorkTemplateEntity Details", group =>
+            AddGroup("WHSWarehousePutawayClusterProfileWorkTemplateEntity Details", group =>
             {
                 PutawayWarehouseClusterProfileId = group.Add(new VocabularyKey(nameof(PutawayWarehouseClusterProfileId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WarehouseWorkTemplateWorkOrderType = group.Add(new VocabularyKey(nameof(WarehouseWorkTemplateWorkOrderType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

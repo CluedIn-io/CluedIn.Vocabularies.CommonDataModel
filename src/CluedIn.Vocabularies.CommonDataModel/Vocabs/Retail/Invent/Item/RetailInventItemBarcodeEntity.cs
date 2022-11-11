@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailInventItemBarcodeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RetailInventItemBarcodeEntity";
+            VocabularyName = "RetailInventItemBarcodeEntity";
             KeyPrefix = "commonDataModel.retailinventitembarcodeentity";
             KeySeparator = ".";
             Grouping = "/RetailInventItemBarcodeEntity";
 
-            AddGroup("Common Data Model RetailInventItemBarcodeEntity Details", group =>
+            AddGroup("RetailInventItemBarcodeEntity Details", group =>
             {
                 barcodeSetupId = group.Add(new VocabularyKey(nameof(barcodeSetupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Blocked = group.Add(new VocabularyKey(nameof(Blocked), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

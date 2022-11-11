@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmSigningLimitAgreementEntityVocabulary()
         {
-            VocabularyName = "Common Data Model HcmSigningLimitAgreementEntity";
+            VocabularyName = "HcmSigningLimitAgreementEntity";
             KeyPrefix = "commonDataModel.hcmsigninglimitagreemententity";
             KeySeparator = ".";
             Grouping = "/HcmSigningLimitAgreementEntity";
 
-            AddGroup("Common Data Model HcmSigningLimitAgreementEntity Details", group =>
+            AddGroup("HcmSigningLimitAgreementEntity Details", group =>
             {
                 AgreementName = group.Add(new VocabularyKey(nameof(AgreementName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AttestationPeriod = group.Add(new VocabularyKey(nameof(AttestationPeriod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

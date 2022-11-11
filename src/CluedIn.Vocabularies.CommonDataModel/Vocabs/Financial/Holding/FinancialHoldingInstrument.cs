@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FinancialHoldingInstrumentVocabulary()
         {
-            VocabularyName = "Common Data Model FinancialHoldingInstrument";
+            VocabularyName = "FinancialHoldingInstrument";
             KeyPrefix = "commonDataModel.financialholdinginstrument";
             KeySeparator = ".";
             Grouping = "/FinancialHoldingInstrument";
 
-            AddGroup("Common Data Model FinancialHoldingInstrument Details", group =>
+            AddGroup("FinancialHoldingInstrument Details", group =>
             {
                 financialholdinginstrumentId = group.Add(new VocabularyKey(nameof(financialholdinginstrumentId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

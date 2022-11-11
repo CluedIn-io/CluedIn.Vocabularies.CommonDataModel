@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EFDocumentReceivedXmlEntityVocabulary()
         {
-            VocabularyName = "Common Data Model EFDocumentReceivedXmlEntity";
+            VocabularyName = "EFDocumentReceivedXmlEntity";
             KeyPrefix = "commonDataModel.efdocumentreceivedxmlentity";
             KeySeparator = ".";
             Grouping = "/EFDocumentReceivedXmlEntity";
 
-            AddGroup("Common Data Model EFDocumentReceivedXmlEntity Details", group =>
+            AddGroup("EFDocumentReceivedXmlEntity Details", group =>
             {
                 Accesskey = group.Add(new VocabularyKey(nameof(Accesskey), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CNPJ = group.Add(new VocabularyKey(nameof(CNPJ), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

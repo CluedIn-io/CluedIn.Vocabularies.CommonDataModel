@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerVoucherTypeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model LedgerVoucherTypeEntity";
+            VocabularyName = "LedgerVoucherTypeEntity";
             KeyPrefix = "commonDataModel.ledgervouchertypeentity";
             KeySeparator = ".";
             Grouping = "/LedgerVoucherTypeEntity";
 
-            AddGroup("Common Data Model LedgerVoucherTypeEntity Details", group =>
+            AddGroup("LedgerVoucherTypeEntity Details", group =>
             {
                 DefaultApproverRecId = group.Add(new VocabularyKey(nameof(DefaultApproverRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 JournalName = group.Add(new VocabularyKey(nameof(JournalName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

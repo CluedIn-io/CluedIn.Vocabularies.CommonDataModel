@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SystemSegregationOfDutiesConflictEntityVocabulary()
         {
-            VocabularyName = "Common Data Model SystemSegregationOfDutiesConflictEntity";
+            VocabularyName = "SystemSegregationOfDutiesConflictEntity";
             KeyPrefix = "commonDataModel.systemsegregationofdutiesconflictentity";
             KeySeparator = ".";
             Grouping = "/SystemSegregationOfDutiesConflictEntity";
 
-            AddGroup("Common Data Model SystemSegregationOfDutiesConflictEntity Details", group =>
+            AddGroup("SystemSegregationOfDutiesConflictEntity Details", group =>
             {
                 SegregationOfDutiesRule = group.Add(new VocabularyKey(nameof(SegregationOfDutiesRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SegregationOfDutiesRuleValidFrom = group.Add(new VocabularyKey(nameof(SegregationOfDutiesRuleValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

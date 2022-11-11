@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSContainerClosingProfileEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSContainerClosingProfileEntity";
+            VocabularyName = "WHSContainerClosingProfileEntity";
             KeyPrefix = "commonDataModel.whscontainerclosingprofileentity";
             KeySeparator = ".";
             Grouping = "/WHSContainerClosingProfileEntity";
 
-            AddGroup("Common Data Model WHSContainerClosingProfileEntity Details", group =>
+            AddGroup("WHSContainerClosingProfileEntity Details", group =>
             {
                 ProfileId = group.Add(new VocabularyKey(nameof(ProfileId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FinalShipmentWarehouseLocationId = group.Add(new VocabularyKey(nameof(FinalShipmentWarehouseLocationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

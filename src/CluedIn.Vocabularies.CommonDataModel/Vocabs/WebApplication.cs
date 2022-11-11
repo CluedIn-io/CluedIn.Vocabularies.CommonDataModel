@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WebApplicationVocabulary()
         {
-            VocabularyName = "Common Data Model WebApplication";
+            VocabularyName = "WebApplication";
             KeyPrefix = "commonDataModel.webapplication";
             KeySeparator = ".";
             Grouping = "/WebApplication";
 
-            AddGroup("Common Data Model WebApplication Details", group =>
+            AddGroup("WebApplication Details", group =>
             {
                 createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 createdOnBehalfBy = group.Add(new VocabularyKey(nameof(createdOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SharedCategoryEntityVocabulary()
         {
-            VocabularyName = "Common Data Model SharedCategoryEntity";
+            VocabularyName = "SharedCategoryEntity";
             KeyPrefix = "commonDataModel.sharedcategoryentity";
             KeySeparator = ".";
             Grouping = "/SharedCategoryEntity";
 
-            AddGroup("Common Data Model SharedCategoryEntity Details", group =>
+            AddGroup("SharedCategoryEntity Details", group =>
             {
                 CategoryId = group.Add(new VocabularyKey(nameof(CategoryId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CategoryName = group.Add(new VocabularyKey(nameof(CategoryName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

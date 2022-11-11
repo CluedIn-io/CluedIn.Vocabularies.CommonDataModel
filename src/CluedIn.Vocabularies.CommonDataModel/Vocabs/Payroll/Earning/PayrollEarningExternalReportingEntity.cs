@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollEarningExternalReportingEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PayrollEarningExternalReportingEntity";
+            VocabularyName = "PayrollEarningExternalReportingEntity";
             KeyPrefix = "commonDataModel.payrollearningexternalreportingentity";
             KeySeparator = ".";
             Grouping = "/PayrollEarningExternalReportingEntity";
 
-            AddGroup("Common Data Model PayrollEarningExternalReportingEntity Details", group =>
+            AddGroup("PayrollEarningExternalReportingEntity Details", group =>
             {
                 CountryRegionId = group.Add(new VocabularyKey(nameof(CountryRegionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EarningCode = group.Add(new VocabularyKey(nameof(EarningCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

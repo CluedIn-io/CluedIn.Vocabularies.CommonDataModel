@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FiscalDocumentLineTextReferencedProcessEntityVocabulary()
         {
-            VocabularyName = "Common Data Model FiscalDocumentLineTextReferencedProcessEntity";
+            VocabularyName = "FiscalDocumentLineTextReferencedProcessEntity";
             KeyPrefix = "commonDataModel.fiscaldocumentlinetextreferencedprocessentity";
             KeySeparator = ".";
             Grouping = "/FiscalDocumentLineTextReferencedProcessEntity";
 
-            AddGroup("Common Data Model FiscalDocumentLineTextReferencedProcessEntity Details", group =>
+            AddGroup("FiscalDocumentLineTextReferencedProcessEntity Details", group =>
             {
                 Agency = group.Add(new VocabularyKey(nameof(Agency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DocuRef = group.Add(new VocabularyKey(nameof(DocuRef), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

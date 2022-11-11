@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PSAIndirectCostComponentEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PSAIndirectCostComponentEntity";
+            VocabularyName = "PSAIndirectCostComponentEntity";
             KeyPrefix = "commonDataModel.psaindirectcostcomponententity";
             KeySeparator = ".";
             Grouping = "/PSAIndirectCostComponentEntity";
 
-            AddGroup("Common Data Model PSAIndirectCostComponentEntity Details", group =>
+            AddGroup("PSAIndirectCostComponentEntity Details", group =>
             {
                 Category = group.Add(new VocabularyKey(nameof(Category), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ComponentId = group.Add(new VocabularyKey(nameof(ComponentId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

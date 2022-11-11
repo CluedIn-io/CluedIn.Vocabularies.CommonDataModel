@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public smmComplimentaryClosingEntityVocabulary()
         {
-            VocabularyName = "Common Data Model smmComplimentaryClosingEntity";
+            VocabularyName = "smmComplimentaryClosingEntity";
             KeyPrefix = "commonDataModel.smmcomplimentaryclosingentity";
             KeySeparator = ".";
             Grouping = "/smmComplimentaryClosingEntity";
 
-            AddGroup("Common Data Model smmComplimentaryClosingEntity Details", group =>
+            AddGroup("smmComplimentaryClosingEntity Details", group =>
             {
                 ClosingPhrase = group.Add(new VocabularyKey(nameof(ClosingPhrase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
 

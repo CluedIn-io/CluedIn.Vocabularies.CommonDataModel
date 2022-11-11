@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DocumentRoutingClientAppEntityVocabulary()
         {
-            VocabularyName = "Common Data Model DocumentRoutingClientAppEntity";
+            VocabularyName = "DocumentRoutingClientAppEntity";
             KeyPrefix = "commonDataModel.documentroutingclientappentity";
             KeySeparator = ".";
             Grouping = "/DocumentRoutingClientAppEntity";
 
-            AddGroup("Common Data Model DocumentRoutingClientAppEntity Details", group =>
+            AddGroup("DocumentRoutingClientAppEntity Details", group =>
             {
                 ClientApplicationId = group.Add(new VocabularyKey(nameof(ClientApplicationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ClientApplicationDescription = group.Add(new VocabularyKey(nameof(ClientApplicationDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

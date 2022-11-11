@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PmfFormulaHeaderEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PmfFormulaHeaderEntity";
+            VocabularyName = "PmfFormulaHeaderEntity";
             KeyPrefix = "commonDataModel.pmfformulaheaderentity";
             KeySeparator = ".";
             Grouping = "/PmfFormulaHeaderEntity";
 
-            AddGroup("Common Data Model PmfFormulaHeaderEntity Details", group =>
+            AddGroup("PmfFormulaHeaderEntity Details", group =>
             {
                 IsApproved = group.Add(new VocabularyKey(nameof(IsApproved), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ApproverId = group.Add(new VocabularyKey(nameof(ApproverId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

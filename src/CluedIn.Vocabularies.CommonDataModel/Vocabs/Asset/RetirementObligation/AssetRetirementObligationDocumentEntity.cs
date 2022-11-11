@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetRetirementObligationDocumentEntityVocabulary()
         {
-            VocabularyName = "Common Data Model AssetRetirementObligationDocumentEntity";
+            VocabularyName = "AssetRetirementObligationDocumentEntity";
             KeyPrefix = "commonDataModel.assetretirementobligationdocumententity";
             KeySeparator = ".";
             Grouping = "/AssetRetirementObligationDocumentEntity";
 
-            AddGroup("Common Data Model AssetRetirementObligationDocumentEntity Details", group =>
+            AddGroup("AssetRetirementObligationDocumentEntity Details", group =>
             {
                 AssetDocumentRecId = group.Add(new VocabularyKey(nameof(AssetDocumentRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PostingFrequency = group.Add(new VocabularyKey(nameof(PostingFrequency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

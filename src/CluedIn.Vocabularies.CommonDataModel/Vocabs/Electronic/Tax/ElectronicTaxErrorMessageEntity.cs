@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ElectronicTaxErrorMessageEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ElectronicTaxErrorMessageEntity";
+            VocabularyName = "ElectronicTaxErrorMessageEntity";
             KeyPrefix = "commonDataModel.electronictaxerrormessageentity";
             KeySeparator = ".";
             Grouping = "/ElectronicTaxErrorMessageEntity";
 
-            AddGroup("Common Data Model ElectronicTaxErrorMessageEntity Details", group =>
+            AddGroup("ElectronicTaxErrorMessageEntity Details", group =>
             {
                 ErrorId = group.Add(new VocabularyKey(nameof(ErrorId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ErrorType = group.Add(new VocabularyKey(nameof(ErrorType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchDemandConsolidationNonCatalogItemCategoryEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PurchDemandConsolidationNonCatalogItemCategoryEntity";
+            VocabularyName = "PurchDemandConsolidationNonCatalogItemCategoryEntity";
             KeyPrefix = "commonDataModel.purchdemandconsolidationnoncatalogitemcategoryentity";
             KeySeparator = ".";
             Grouping = "/PurchDemandConsolidationNonCatalogItemCategoryEntity";
 
-            AddGroup("Common Data Model PurchDemandConsolidationNonCatalogItemCategoryEntity Details", group =>
+            AddGroup("PurchDemandConsolidationNonCatalogItemCategoryEntity Details", group =>
             {
                 PurchasingPolicyName = group.Add(new VocabularyKey(nameof(PurchasingPolicyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PurchaseOrderCreationAndDemandConsolidationPolicyRuleValidFrom = group.Add(new VocabularyKey(nameof(PurchaseOrderCreationAndDemandConsolidationPolicyRuleValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

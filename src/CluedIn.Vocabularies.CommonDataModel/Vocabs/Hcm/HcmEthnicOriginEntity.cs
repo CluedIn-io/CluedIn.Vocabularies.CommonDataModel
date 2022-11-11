@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmEthnicOriginEntityVocabulary()
         {
-            VocabularyName = "Common Data Model HcmEthnicOriginEntity";
+            VocabularyName = "HcmEthnicOriginEntity";
             KeyPrefix = "commonDataModel.hcmethnicoriginentity";
             KeySeparator = ".";
             Grouping = "/HcmEthnicOriginEntity";
 
-            AddGroup("Common Data Model HcmEthnicOriginEntity Details", group =>
+            AddGroup("HcmEthnicOriginEntity Details", group =>
             {
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EthnicOriginId = group.Add(new VocabularyKey(nameof(EthnicOriginId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

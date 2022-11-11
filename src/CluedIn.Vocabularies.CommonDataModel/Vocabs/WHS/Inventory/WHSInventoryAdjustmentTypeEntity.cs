@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSInventoryAdjustmentTypeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSInventoryAdjustmentTypeEntity";
+            VocabularyName = "WHSInventoryAdjustmentTypeEntity";
             KeyPrefix = "commonDataModel.whsinventoryadjustmenttypeentity";
             KeySeparator = ".";
             Grouping = "/WHSInventoryAdjustmentTypeEntity";
 
-            AddGroup("Common Data Model WHSInventoryAdjustmentTypeEntity Details", group =>
+            AddGroup("WHSInventoryAdjustmentTypeEntity Details", group =>
             {
                 TypeId = group.Add(new VocabularyKey(nameof(TypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TypeDescription = group.Add(new VocabularyKey(nameof(TypeDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

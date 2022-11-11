@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EventRegistrationVocabulary()
         {
-            VocabularyName = "Common Data Model EventRegistration";
+            VocabularyName = "EventRegistration";
             KeyPrefix = "commonDataModel.eventregistration";
             KeySeparator = ".";
             Grouping = "/EventRegistration";
 
-            AddGroup("Common Data Model EventRegistration Details", group =>
+            AddGroup("EventRegistration Details", group =>
             {
                 area = group.Add(new VocabularyKey(nameof(area), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 companySize = group.Add(new VocabularyKey(nameof(companySize), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

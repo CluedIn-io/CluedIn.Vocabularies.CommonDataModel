@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetRBSLFactorEntityVocabulary()
         {
-            VocabularyName = "Common Data Model AssetRBSLFactorEntity";
+            VocabularyName = "AssetRBSLFactorEntity";
             KeyPrefix = "commonDataModel.assetrbslfactorentity";
             KeySeparator = ".";
             Grouping = "/AssetRBSLFactorEntity";
 
-            AddGroup("Common Data Model AssetRBSLFactorEntity Details", group =>
+            AddGroup("AssetRBSLFactorEntity Details", group =>
             {
                 AssetRBSLFactor = group.Add(new VocabularyKey(nameof(AssetRBSLFactor), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FromDate = group.Add(new VocabularyKey(nameof(FromDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

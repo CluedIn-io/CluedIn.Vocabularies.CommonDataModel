@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProductionOrderSequencingSequenceValueEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ProductionOrderSequencingSequenceValueEntity";
+            VocabularyName = "ProductionOrderSequencingSequenceValueEntity";
             KeyPrefix = "commonDataModel.productionordersequencingsequencevalueentity";
             KeySeparator = ".";
             Grouping = "/ProductionOrderSequencingSequenceValueEntity";
 
-            AddGroup("Common Data Model ProductionOrderSequencingSequenceValueEntity Details", group =>
+            AddGroup("ProductionOrderSequencingSequenceValueEntity Details", group =>
             {
                 ProductionOrderSequencingSequenceId = group.Add(new VocabularyKey(nameof(ProductionOrderSequencingSequenceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SequenceValue = group.Add(new VocabularyKey(nameof(SequenceValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

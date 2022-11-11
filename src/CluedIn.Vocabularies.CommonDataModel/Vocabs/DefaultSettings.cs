@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DefaultSettingsVocabulary()
         {
-            VocabularyName = "Common Data Model DefaultSettings";
+            VocabularyName = "DefaultSettings";
             KeyPrefix = "commonDataModel.defaultsettings";
             KeySeparator = ".";
             Grouping = "/DefaultSettings";
 
-            AddGroup("Common Data Model DefaultSettings Details", group =>
+            AddGroup("DefaultSettings Details", group =>
             {
                 @default = group.Add(new VocabularyKey(nameof(@default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 defaultmarketingsettingId = group.Add(new VocabularyKey(nameof(defaultmarketingsettingId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustomRegistrationFieldVocabulary()
         {
-            VocabularyName = "Common Data Model CustomRegistrationField";
+            VocabularyName = "CustomRegistrationField";
             KeyPrefix = "commonDataModel.customregistrationfield";
             KeySeparator = ".";
             Grouping = "/CustomRegistrationField";
 
-            AddGroup("Common Data Model CustomRegistrationField Details", group =>
+            AddGroup("CustomRegistrationField Details", group =>
             {
                 choices = group.Add(new VocabularyKey(nameof(choices), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 customRegistrationFieldId = group.Add(new VocabularyKey(nameof(customRegistrationFieldId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

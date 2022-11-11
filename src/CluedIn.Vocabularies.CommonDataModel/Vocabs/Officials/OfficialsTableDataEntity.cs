@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public OfficialsTableDataEntityVocabulary()
         {
-            VocabularyName = "Common Data Model OfficialsTableDataEntity";
+            VocabularyName = "OfficialsTableDataEntity";
             KeyPrefix = "commonDataModel.officialstabledataentity";
             KeySeparator = ".";
             Grouping = "/OfficialsTableDataEntity";
 
-            AddGroup("Common Data Model OfficialsTableDataEntity Details", group =>
+            AddGroup("OfficialsTableDataEntity Details", group =>
             {
                 ReportType = group.Add(new VocabularyKey(nameof(ReportType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AccountCode = group.Add(new VocabularyKey(nameof(AccountCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

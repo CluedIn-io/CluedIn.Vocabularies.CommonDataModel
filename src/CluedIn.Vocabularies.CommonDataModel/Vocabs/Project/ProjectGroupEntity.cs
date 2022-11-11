@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjectGroupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ProjectGroupEntity";
+            VocabularyName = "ProjectGroupEntity";
             KeyPrefix = "commonDataModel.projectgroupentity";
             KeySeparator = ".";
             Grouping = "/ProjectGroupEntity";
 
-            AddGroup("Common Data Model ProjectGroupEntity Details", group =>
+            AddGroup("ProjectGroupEntity Details", group =>
             {
                 AccruedLossCategoryId = group.Add(new VocabularyKey(nameof(AccruedLossCategoryId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CanVerifyCostAgainstRemainingForecast = group.Add(new VocabularyKey(nameof(CanVerifyCostAgainstRemainingForecast), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

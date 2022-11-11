@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSLessThanTruckloadClassEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSLessThanTruckloadClassEntity";
+            VocabularyName = "WHSLessThanTruckloadClassEntity";
             KeyPrefix = "commonDataModel.whslessthantruckloadclassentity";
             KeySeparator = ".";
             Grouping = "/WHSLessThanTruckloadClassEntity";
 
-            AddGroup("Common Data Model WHSLessThanTruckloadClassEntity Details", group =>
+            AddGroup("WHSLessThanTruckloadClassEntity Details", group =>
             {
                 Class = group.Add(new VocabularyKey(nameof(Class), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ClassCode = group.Add(new VocabularyKey(nameof(ClassCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

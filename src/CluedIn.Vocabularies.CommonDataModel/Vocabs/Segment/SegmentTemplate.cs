@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SegmentTemplateVocabulary()
         {
-            VocabularyName = "Common Data Model SegmentTemplate";
+            VocabularyName = "SegmentTemplate";
             KeyPrefix = "commonDataModel.segmenttemplate";
             KeySeparator = ".";
             Grouping = "/SegmentTemplate";
 
-            AddGroup("Common Data Model SegmentTemplate Details", group =>
+            AddGroup("SegmentTemplate Details", group =>
             {
                 segmentName = group.Add(new VocabularyKey(nameof(segmentName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 segmentTemplateId = group.Add(new VocabularyKey(nameof(segmentTemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

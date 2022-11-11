@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HMIMItemMaterialSimpleEntityVocabulary()
         {
-            VocabularyName = "Common Data Model HMIMItemMaterialSimpleEntity";
+            VocabularyName = "HMIMItemMaterialSimpleEntity";
             KeyPrefix = "commonDataModel.hmimitemmaterialsimpleentity";
             KeySeparator = ".";
             Grouping = "/HMIMItemMaterialSimpleEntity";
 
-            AddGroup("Common Data Model HMIMItemMaterialSimpleEntity Details", group =>
+            AddGroup("HMIMItemMaterialSimpleEntity Details", group =>
             {
                 ItemId = group.Add(new VocabularyKey(nameof(ItemId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MaterialCode = group.Add(new VocabularyKey(nameof(MaterialCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

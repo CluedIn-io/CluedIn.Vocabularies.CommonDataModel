@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSFreightBillMatchingAuditToleranceLevelEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TMSFreightBillMatchingAuditToleranceLevelEntity";
+            VocabularyName = "TMSFreightBillMatchingAuditToleranceLevelEntity";
             KeyPrefix = "commonDataModel.tmsfreightbillmatchingaudittolerancelevelentity";
             KeySeparator = ".";
             Grouping = "/TMSFreightBillMatchingAuditToleranceLevelEntity";
 
-            AddGroup("Common Data Model TMSFreightBillMatchingAuditToleranceLevelEntity Details", group =>
+            AddGroup("TMSFreightBillMatchingAuditToleranceLevelEntity Details", group =>
             {
                 UnderpaymentFreightBillReconcilliationReasonCode = group.Add(new VocabularyKey(nameof(UnderpaymentFreightBillReconcilliationReasonCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ToleranceLevelId = group.Add(new VocabularyKey(nameof(ToleranceLevelId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

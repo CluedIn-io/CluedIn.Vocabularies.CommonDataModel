@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSLocatedWarehouseSlottingDemandV2EntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSLocatedWarehouseSlottingDemandV2Entity";
+            VocabularyName = "WHSLocatedWarehouseSlottingDemandV2Entity";
             KeyPrefix = "commonDataModel.whslocatedwarehouseslottingdemandv2entity";
             KeySeparator = ".";
             Grouping = "/WHSLocatedWarehouseSlottingDemandV2Entity";
 
-            AddGroup("Common Data Model WHSLocatedWarehouseSlottingDemandV2Entity Details", group =>
+            AddGroup("WHSLocatedWarehouseSlottingDemandV2Entity Details", group =>
             {
                 WillDemandCreateLetUpWork = group.Add(new VocabularyKey(nameof(WillDemandCreateLetUpWork), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillDemandUseOverflowLocation = group.Add(new VocabularyKey(nameof(WillDemandUseOverflowLocation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

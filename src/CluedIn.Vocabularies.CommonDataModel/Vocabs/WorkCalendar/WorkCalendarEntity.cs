@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WorkCalendarEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WorkCalendarEntity";
+            VocabularyName = "WorkCalendarEntity";
             KeyPrefix = "commonDataModel.workcalendarentity";
             KeySeparator = ".";
             Grouping = "/WorkCalendarEntity";
 
-            AddGroup("Common Data Model WorkCalendarEntity Details", group =>
+            AddGroup("WorkCalendarEntity Details", group =>
             {
                 BaseWorkCalendarId = group.Add(new VocabularyKey(nameof(BaseWorkCalendarId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CalendarId = group.Add(new VocabularyKey(nameof(CalendarId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

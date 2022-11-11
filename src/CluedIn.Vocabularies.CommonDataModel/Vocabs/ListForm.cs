@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ListFormVocabulary()
         {
-            VocabularyName = "Common Data Model ListForm";
+            VocabularyName = "ListForm";
             KeyPrefix = "commonDataModel.listform";
             KeySeparator = ".";
             Grouping = "/ListForm";
 
-            AddGroup("Common Data Model ListForm Details", group =>
+            AddGroup("ListForm Details", group =>
             {
                 listFormId = group.Add(new VocabularyKey(nameof(listFormId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

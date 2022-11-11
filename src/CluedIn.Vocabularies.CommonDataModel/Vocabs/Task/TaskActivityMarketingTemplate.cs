@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaskActivityMarketingTemplateVocabulary()
         {
-            VocabularyName = "Common Data Model TaskActivityMarketingTemplate";
+            VocabularyName = "TaskActivityMarketingTemplate";
             KeyPrefix = "commonDataModel.taskactivitymarketingtemplate";
             KeySeparator = ".";
             Grouping = "/TaskActivityMarketingTemplate";
 
-            AddGroup("Common Data Model TaskActivityMarketingTemplate Details", group =>
+            AddGroup("TaskActivityMarketingTemplate Details", group =>
             {
                 scheduleddurationminutes = group.Add(new VocabularyKey(nameof(scheduleddurationminutes), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 description = group.Add(new VocabularyKey(nameof(description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

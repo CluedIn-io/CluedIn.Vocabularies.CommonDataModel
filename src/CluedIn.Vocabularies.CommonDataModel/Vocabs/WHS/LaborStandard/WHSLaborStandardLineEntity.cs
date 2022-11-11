@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSLaborStandardLineEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSLaborStandardLineEntity";
+            VocabularyName = "WHSLaborStandardLineEntity";
             KeyPrefix = "commonDataModel.whslaborstandardlineentity";
             KeySeparator = ".";
             Grouping = "/WHSLaborStandardLineEntity";
 
-            AddGroup("Common Data Model WHSLaborStandardLineEntity Details", group =>
+            AddGroup("WHSLaborStandardLineEntity Details", group =>
             {
                 LaborMeasurementType = group.Add(new VocabularyKey(nameof(LaborMeasurementType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineSequenceNumber = group.Add(new VocabularyKey(nameof(LineSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

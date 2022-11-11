@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesOrderConfirmationHeaderEntityVocabulary()
         {
-            VocabularyName = "Common Data Model SalesOrderConfirmationHeaderEntity";
+            VocabularyName = "SalesOrderConfirmationHeaderEntity";
             KeyPrefix = "commonDataModel.salesorderconfirmationheaderentity";
             KeySeparator = ".";
             Grouping = "/SalesOrderConfirmationHeaderEntity";
 
-            AddGroup("Common Data Model SalesOrderConfirmationHeaderEntity Details", group =>
+            AddGroup("SalesOrderConfirmationHeaderEntity Details", group =>
             {
                 OrderingCustomerAccountNumber = group.Add(new VocabularyKey(nameof(OrderingCustomerAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CashDiscountCode = group.Add(new VocabularyKey(nameof(CashDiscountCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

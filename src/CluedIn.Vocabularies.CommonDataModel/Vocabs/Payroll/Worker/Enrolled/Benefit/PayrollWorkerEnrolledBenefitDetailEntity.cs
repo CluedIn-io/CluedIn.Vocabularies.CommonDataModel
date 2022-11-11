@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollWorkerEnrolledBenefitDetailEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PayrollWorkerEnrolledBenefitDetailEntity";
+            VocabularyName = "PayrollWorkerEnrolledBenefitDetailEntity";
             KeyPrefix = "commonDataModel.payrollworkerenrolledbenefitdetailentity";
             KeySeparator = ".";
             Grouping = "/PayrollWorkerEnrolledBenefitDetailEntity";
 
-            AddGroup("Common Data Model PayrollWorkerEnrolledBenefitDetailEntity Details", group =>
+            AddGroup("PayrollWorkerEnrolledBenefitDetailEntity Details", group =>
             {
                 CalculationPriorityNumber = group.Add(new VocabularyKey(nameof(CalculationPriorityNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ContributionAmountCur = group.Add(new VocabularyKey(nameof(ContributionAmountCur), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSContainerMixingConstraintEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSContainerMixingConstraintEntity";
+            VocabularyName = "WHSContainerMixingConstraintEntity";
             KeyPrefix = "commonDataModel.whscontainermixingconstraintentity";
             KeySeparator = ".";
             Grouping = "/WHSContainerMixingConstraintEntity";
 
-            AddGroup("Common Data Model WHSContainerMixingConstraintEntity Details", group =>
+            AddGroup("WHSContainerMixingConstraintEntity Details", group =>
             {
                 ConstraintFieldName = group.Add(new VocabularyKey(nameof(ConstraintFieldName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ConstraintTableId = group.Add(new VocabularyKey(nameof(ConstraintTableId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DMFEntityExecutionParametersEntityVocabulary()
         {
-            VocabularyName = "Common Data Model DMFEntityExecutionParametersEntity";
+            VocabularyName = "DMFEntityExecutionParametersEntity";
             KeyPrefix = "commonDataModel.dmfentityexecutionparametersentity";
             KeySeparator = ".";
             Grouping = "/DMFEntityExecutionParametersEntity";
 
-            AddGroup("Common Data Model DMFEntityExecutionParametersEntity Details", group =>
+            AddGroup("DMFEntityExecutionParametersEntity Details", group =>
             {
                 EntityName = group.Add(new VocabularyKey(nameof(EntityName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ImportThresholdRecordCount = group.Add(new VocabularyKey(nameof(ImportThresholdRecordCount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

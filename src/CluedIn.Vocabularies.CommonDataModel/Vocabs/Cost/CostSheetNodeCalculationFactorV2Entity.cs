@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CostSheetNodeCalculationFactorV2EntityVocabulary()
         {
-            VocabularyName = "Common Data Model CostSheetNodeCalculationFactorV2Entity";
+            VocabularyName = "CostSheetNodeCalculationFactorV2Entity";
             KeyPrefix = "commonDataModel.costsheetnodecalculationfactorv2entity";
             KeySeparator = ".";
             Grouping = "/CostSheetNodeCalculationFactorV2Entity";
 
-            AddGroup("Common Data Model CostSheetNodeCalculationFactorV2Entity Details", group =>
+            AddGroup("CostSheetNodeCalculationFactorV2Entity Details", group =>
             {
                 FromDate = group.Add(new VocabularyKey(nameof(FromDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PriceSiteId = group.Add(new VocabularyKey(nameof(PriceSiteId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TNVEDCodesEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TNVEDCodesEntity";
+            VocabularyName = "TNVEDCodesEntity";
             KeyPrefix = "commonDataModel.tnvedcodesentity";
             KeySeparator = ".";
             Grouping = "/TNVEDCodesEntity";
 
-            AddGroup("Common Data Model TNVEDCodesEntity Details", group =>
+            AddGroup("TNVEDCodesEntity Details", group =>
             {
                 Blocked = group.Add(new VocabularyKey(nameof(Blocked), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

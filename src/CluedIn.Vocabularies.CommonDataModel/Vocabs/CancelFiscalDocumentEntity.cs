@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CancelFiscalDocumentEntityVocabulary()
         {
-            VocabularyName = "Common Data Model CancelFiscalDocumentEntity";
+            VocabularyName = "CancelFiscalDocumentEntity";
             KeyPrefix = "commonDataModel.cancelfiscaldocumententity";
             KeySeparator = ".";
             Grouping = "/CancelFiscalDocumentEntity";
 
-            AddGroup("Common Data Model CancelFiscalDocumentEntity Details", group =>
+            AddGroup("CancelFiscalDocumentEntity Details", group =>
             {
                 Direction = group.Add(new VocabularyKey(nameof(Direction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FiscalDocumentNumber = group.Add(new VocabularyKey(nameof(FiscalDocumentNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

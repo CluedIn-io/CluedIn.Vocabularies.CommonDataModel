@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LeadScoreModelVocabulary()
         {
-            VocabularyName = "Common Data Model LeadScoreModel";
+            VocabularyName = "LeadScoreModel";
             KeyPrefix = "commonDataModel.leadscoremodel";
             KeySeparator = ".";
             Grouping = "/LeadScoreModel";
 
-            AddGroup("Common Data Model LeadScoreModel Details", group =>
+            AddGroup("LeadScoreModel Details", group =>
             {
                 description = group.Add(new VocabularyKey(nameof(description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 insightsPlaceholder = group.Add(new VocabularyKey(nameof(insightsPlaceholder), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

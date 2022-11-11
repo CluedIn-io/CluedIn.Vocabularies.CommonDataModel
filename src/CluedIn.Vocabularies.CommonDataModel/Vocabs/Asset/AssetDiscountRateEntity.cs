@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetDiscountRateEntityVocabulary()
         {
-            VocabularyName = "Common Data Model AssetDiscountRateEntity";
+            VocabularyName = "AssetDiscountRateEntity";
             KeyPrefix = "commonDataModel.assetdiscountrateentity";
             KeySeparator = ".";
             Grouping = "/AssetDiscountRateEntity";
 
-            AddGroup("Common Data Model AssetDiscountRateEntity Details", group =>
+            AddGroup("AssetDiscountRateEntity Details", group =>
             {
                 MarketDiscountRatePercentage = group.Add(new VocabularyKey(nameof(MarketDiscountRatePercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StartDate = group.Add(new VocabularyKey(nameof(StartDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

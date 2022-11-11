@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WaitlistItemVocabulary()
         {
-            VocabularyName = "Common Data Model WaitlistItem";
+            VocabularyName = "WaitlistItem";
             KeyPrefix = "commonDataModel.waitlistitem";
             KeySeparator = ".";
             Grouping = "/WaitlistItem";
 
-            AddGroup("Common Data Model WaitlistItem Details", group =>
+            AddGroup("WaitlistItem Details", group =>
             {
                 autoregister = group.Add(new VocabularyKey(nameof(autoregister), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 invited = group.Add(new VocabularyKey(nameof(invited), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

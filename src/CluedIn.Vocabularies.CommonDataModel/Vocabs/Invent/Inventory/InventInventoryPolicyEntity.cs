@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventInventoryPolicyEntityVocabulary()
         {
-            VocabularyName = "Common Data Model InventInventoryPolicyEntity";
+            VocabularyName = "InventInventoryPolicyEntity";
             KeyPrefix = "commonDataModel.inventinventorypolicyentity";
             KeySeparator = ".";
             Grouping = "/InventInventoryPolicyEntity";
 
-            AddGroup("Common Data Model InventInventoryPolicyEntity Details", group =>
+            AddGroup("InventInventoryPolicyEntity Details", group =>
             {
                 PolicyId = group.Add(new VocabularyKey(nameof(PolicyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsNegativePhysicalInventoryAllowed = group.Add(new VocabularyKey(nameof(IsNegativePhysicalInventoryAllowed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationTenderHistoryEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TMSTransportationTenderHistoryEntity";
+            VocabularyName = "TMSTransportationTenderHistoryEntity";
             KeyPrefix = "commonDataModel.tmstransportationtenderhistoryentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationTenderHistoryEntity";
 
-            AddGroup("Common Data Model TMSTransportationTenderHistoryEntity Details", group =>
+            AddGroup("TMSTransportationTenderHistoryEntity Details", group =>
             {
                 ConfirmedPickupDateTime = group.Add(new VocabularyKey(nameof(ConfirmedPickupDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ConfirmedRate = group.Add(new VocabularyKey(nameof(ConfirmedRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

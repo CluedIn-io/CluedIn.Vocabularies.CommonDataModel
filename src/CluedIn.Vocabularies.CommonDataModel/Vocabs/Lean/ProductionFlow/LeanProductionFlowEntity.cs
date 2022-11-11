@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LeanProductionFlowEntityVocabulary()
         {
-            VocabularyName = "Common Data Model LeanProductionFlowEntity";
+            VocabularyName = "LeanProductionFlowEntity";
             KeyPrefix = "commonDataModel.leanproductionflowentity";
             KeySeparator = ".";
             Grouping = "/LeanProductionFlowEntity";
 
-            AddGroup("Common Data Model LeanProductionFlowEntity Details", group =>
+            AddGroup("LeanProductionFlowEntity Details", group =>
             {
                 ControllingOrganization = group.Add(new VocabularyKey(nameof(ControllingOrganization), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultLedgerDimension = group.Add(new VocabularyKey(nameof(DefaultLedgerDimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

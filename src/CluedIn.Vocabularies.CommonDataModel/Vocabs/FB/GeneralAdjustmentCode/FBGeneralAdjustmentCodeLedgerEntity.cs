@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FBGeneralAdjustmentCodeLedgerEntityVocabulary()
         {
-            VocabularyName = "Common Data Model FBGeneralAdjustmentCodeLedgerEntity";
+            VocabularyName = "FBGeneralAdjustmentCodeLedgerEntity";
             KeyPrefix = "commonDataModel.fbgeneraladjustmentcodeledgerentity";
             KeySeparator = ".";
             Grouping = "/FBGeneralAdjustmentCodeLedgerEntity";
 
-            AddGroup("Common Data Model FBGeneralAdjustmentCodeLedgerEntity Details", group =>
+            AddGroup("FBGeneralAdjustmentCodeLedgerEntity Details", group =>
             {
                 FBGeneralAdjustmentCodeRecId = group.Add(new VocabularyKey(nameof(FBGeneralAdjustmentCodeRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FBGeneralAdjustmentCodeIdentification = group.Add(new VocabularyKey(nameof(FBGeneralAdjustmentCodeIdentification), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

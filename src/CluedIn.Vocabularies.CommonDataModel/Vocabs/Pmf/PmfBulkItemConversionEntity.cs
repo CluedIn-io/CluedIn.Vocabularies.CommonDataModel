@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PmfBulkItemConversionEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PmfBulkItemConversionEntity";
+            VocabularyName = "PmfBulkItemConversionEntity";
             KeyPrefix = "commonDataModel.pmfbulkitemconversionentity";
             KeySeparator = ".";
             Grouping = "/PmfBulkItemConversionEntity";
 
-            AddGroup("Common Data Model PmfBulkItemConversionEntity Details", group =>
+            AddGroup("PmfBulkItemConversionEntity Details", group =>
             {
                 PackedItemNumber = group.Add(new VocabularyKey(nameof(PackedItemNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BulkItemNumber = group.Add(new VocabularyKey(nameof(BulkItemNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

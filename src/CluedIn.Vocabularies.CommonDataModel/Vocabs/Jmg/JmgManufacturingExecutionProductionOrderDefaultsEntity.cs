@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgManufacturingExecutionProductionOrderDefaultsEntityVocabulary()
         {
-            VocabularyName = "Common Data Model JmgManufacturingExecutionProductionOrderDefaultsEntity";
+            VocabularyName = "JmgManufacturingExecutionProductionOrderDefaultsEntity";
             KeyPrefix = "commonDataModel.jmgmanufacturingexecutionproductionorderdefaultsentity";
             KeySeparator = ".";
             Grouping = "/JmgManufacturingExecutionProductionOrderDefaultsEntity";
 
-            AddGroup("Common Data Model JmgManufacturingExecutionProductionOrderDefaultsEntity Details", group =>
+            AddGroup("JmgManufacturingExecutionProductionOrderDefaultsEntity Details", group =>
             {
                 BundledJobsTimeAllocationMethod = group.Add(new VocabularyKey(nameof(BundledJobsTimeAllocationMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ArePieceworkProductionOrdersSpecifiedSeparately = group.Add(new VocabularyKey(nameof(ArePieceworkProductionOrdersSpecifiedSeparately), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

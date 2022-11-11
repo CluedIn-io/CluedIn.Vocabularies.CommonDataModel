@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CollateralVocabulary()
         {
-            VocabularyName = "Common Data Model Collateral";
+            VocabularyName = "Collateral";
             KeyPrefix = "commonDataModel.collateral";
             KeySeparator = ".";
             Grouping = "/Collateral";
 
-            AddGroup("Common Data Model Collateral Details", group =>
+            AddGroup("Collateral Details", group =>
             {
                 collateralId = group.Add(new VocabularyKey(nameof(collateralId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

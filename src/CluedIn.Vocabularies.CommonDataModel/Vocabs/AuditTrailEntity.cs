@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AuditTrailEntityVocabulary()
         {
-            VocabularyName = "Common Data Model AuditTrailEntity";
+            VocabularyName = "AuditTrailEntity";
             KeyPrefix = "commonDataModel.audittrailentity";
             KeySeparator = ".";
             Grouping = "/AuditTrailEntity";
 
-            AddGroup("Common Data Model AuditTrailEntity Details", group =>
+            AddGroup("AuditTrailEntity Details", group =>
             {
                 TransactionId = group.Add(new VocabularyKey(nameof(TransactionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransactionType = group.Add(new VocabularyKey(nameof(TransactionType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseMobileDeviceMenuItemSystemDirectedSortingOrderEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSWarehouseMobileDeviceMenuItemSystemDirectedSortingOrderEntity";
+            VocabularyName = "WHSWarehouseMobileDeviceMenuItemSystemDirectedSortingOrderEntity";
             KeyPrefix = "commonDataModel.whswarehousemobiledevicemenuitemsystemdirectedsortingorderentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseMobileDeviceMenuItemSystemDirectedSortingOrderEntity";
 
-            AddGroup("Common Data Model WHSWarehouseMobileDeviceMenuItemSystemDirectedSortingOrderEntity Details", group =>
+            AddGroup("WHSWarehouseMobileDeviceMenuItemSystemDirectedSortingOrderEntity Details", group =>
             {
                 WarehouseMobileDeviceMenuItemId = group.Add(new VocabularyKey(nameof(WarehouseMobileDeviceMenuItemId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SequenceNumber = group.Add(new VocabularyKey(nameof(SequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

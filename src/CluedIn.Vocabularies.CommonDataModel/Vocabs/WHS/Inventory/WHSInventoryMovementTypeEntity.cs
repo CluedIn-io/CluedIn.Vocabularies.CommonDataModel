@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSInventoryMovementTypeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSInventoryMovementTypeEntity";
+            VocabularyName = "WHSInventoryMovementTypeEntity";
             KeyPrefix = "commonDataModel.whsinventorymovementtypeentity";
             KeySeparator = ".";
             Grouping = "/WHSInventoryMovementTypeEntity";
 
-            AddGroup("Common Data Model WHSInventoryMovementTypeEntity Details", group =>
+            AddGroup("WHSInventoryMovementTypeEntity Details", group =>
             {
                 MovementTypeDescription = group.Add(new VocabularyKey(nameof(MovementTypeDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MovementTypeCode = group.Add(new VocabularyKey(nameof(MovementTypeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

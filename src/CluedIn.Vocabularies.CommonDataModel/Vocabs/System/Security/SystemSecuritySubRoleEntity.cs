@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SystemSecuritySubRoleEntityVocabulary()
         {
-            VocabularyName = "Common Data Model SystemSecuritySubRoleEntity";
+            VocabularyName = "SystemSecuritySubRoleEntity";
             KeyPrefix = "commonDataModel.systemsecuritysubroleentity";
             KeySeparator = ".";
             Grouping = "/SystemSecuritySubRoleEntity";
 
-            AddGroup("Common Data Model SystemSecuritySubRoleEntity Details", group =>
+            AddGroup("SystemSecuritySubRoleEntity Details", group =>
             {
                 SecurityRoleIdentifier = group.Add(new VocabularyKey(nameof(SecurityRoleIdentifier), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SecurityRoleName = group.Add(new VocabularyKey(nameof(SecurityRoleName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

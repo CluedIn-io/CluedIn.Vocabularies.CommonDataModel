@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SessionTrackVocabulary()
         {
-            VocabularyName = "Common Data Model SessionTrack";
+            VocabularyName = "SessionTrack";
             KeyPrefix = "commonDataModel.sessiontrack";
             KeySeparator = ".";
             Grouping = "/SessionTrack";
 
-            AddGroup("Common Data Model SessionTrack Details", group =>
+            AddGroup("SessionTrack Details", group =>
             {
                 audienceType = group.Add(new VocabularyKey(nameof(audienceType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 description = group.Add(new VocabularyKey(nameof(description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

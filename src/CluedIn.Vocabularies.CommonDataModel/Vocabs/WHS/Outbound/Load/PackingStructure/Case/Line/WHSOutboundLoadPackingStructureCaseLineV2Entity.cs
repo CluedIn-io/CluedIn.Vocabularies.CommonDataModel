@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSOutboundLoadPackingStructureCaseLineV2EntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSOutboundLoadPackingStructureCaseLineV2Entity";
+            VocabularyName = "WHSOutboundLoadPackingStructureCaseLineV2Entity";
             KeyPrefix = "commonDataModel.whsoutboundloadpackingstructurecaselinev2entity";
             KeySeparator = ".";
             Grouping = "/WHSOutboundLoadPackingStructureCaseLineV2Entity";
 
-            AddGroup("Common Data Model WHSOutboundLoadPackingStructureCaseLineV2Entity Details", group =>
+            AddGroup("WHSOutboundLoadPackingStructureCaseLineV2Entity Details", group =>
             {
                 OutboundShipmentId = group.Add(new VocabularyKey(nameof(OutboundShipmentId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PackingStructureLicensePlateNumber = group.Add(new VocabularyKey(nameof(PackingStructureLicensePlateNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWaveLabelLayoutRowSettingsEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSWaveLabelLayoutRowSettingsEntity";
+            VocabularyName = "WHSWaveLabelLayoutRowSettingsEntity";
             KeyPrefix = "commonDataModel.whswavelabellayoutrowsettingsentity";
             KeySeparator = ".";
             Grouping = "/WHSWaveLabelLayoutRowSettingsEntity";
 
-            AddGroup("Common Data Model WHSWaveLabelLayoutRowSettingsEntity Details", group =>
+            AddGroup("WHSWaveLabelLayoutRowSettingsEntity Details", group =>
             {
                 LabelLayout = group.Add(new VocabularyKey(nameof(LabelLayout), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RowHeight = group.Add(new VocabularyKey(nameof(RowHeight), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

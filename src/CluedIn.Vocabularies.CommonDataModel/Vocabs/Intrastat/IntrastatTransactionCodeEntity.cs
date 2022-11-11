@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public IntrastatTransactionCodeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model IntrastatTransactionCodeEntity";
+            VocabularyName = "IntrastatTransactionCodeEntity";
             KeyPrefix = "commonDataModel.intrastattransactioncodeentity";
             KeySeparator = ".";
             Grouping = "/IntrastatTransactionCodeEntity";
 
-            AddGroup("Common Data Model IntrastatTransactionCodeEntity Details", group =>
+            AddGroup("IntrastatTransactionCodeEntity Details", group =>
             {
                 TransactionCode = group.Add(new VocabularyKey(nameof(TransactionCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

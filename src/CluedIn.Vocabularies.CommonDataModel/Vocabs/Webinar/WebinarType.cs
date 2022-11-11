@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WebinarTypeVocabulary()
         {
-            VocabularyName = "Common Data Model WebinarType";
+            VocabularyName = "WebinarType";
             KeyPrefix = "commonDataModel.webinartype";
             KeySeparator = ".";
             Grouping = "/WebinarType";
 
-            AddGroup("Common Data Model WebinarType Details", group =>
+            AddGroup("WebinarType Details", group =>
             {
                 createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 createdOnBehalfBy = group.Add(new VocabularyKey(nameof(createdOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

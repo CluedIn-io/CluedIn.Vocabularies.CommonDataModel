@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DataProtectionVocabulary()
         {
-            VocabularyName = "Common Data Model DataProtection";
+            VocabularyName = "DataProtection";
             KeyPrefix = "commonDataModel.dataprotection";
             KeySeparator = ".";
             Grouping = "/DataProtection";
 
-            AddGroup("Common Data Model DataProtection Details", group =>
+            AddGroup("DataProtection Details", group =>
             {
                 createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 createdOnBehalfBy = group.Add(new VocabularyKey(nameof(createdOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

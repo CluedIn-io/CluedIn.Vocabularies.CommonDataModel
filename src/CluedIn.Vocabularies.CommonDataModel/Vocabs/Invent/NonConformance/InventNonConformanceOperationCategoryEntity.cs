@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventNonConformanceOperationCategoryEntityVocabulary()
         {
-            VocabularyName = "Common Data Model InventNonConformanceOperationCategoryEntity";
+            VocabularyName = "InventNonConformanceOperationCategoryEntity";
             KeyPrefix = "commonDataModel.inventnonconformanceoperationcategoryentity";
             KeySeparator = ".";
             Grouping = "/InventNonConformanceOperationCategoryEntity";
 
-            AddGroup("Common Data Model InventNonConformanceOperationCategoryEntity Details", group =>
+            AddGroup("InventNonConformanceOperationCategoryEntity Details", group =>
             {
                 CategoryCode = group.Add(new VocabularyKey(nameof(CategoryCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AssociatedOperationType = group.Add(new VocabularyKey(nameof(AssociatedOperationType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

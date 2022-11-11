@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AgingPeriodDefinitionEntityVocabulary()
         {
-            VocabularyName = "Common Data Model AgingPeriodDefinitionEntity";
+            VocabularyName = "AgingPeriodDefinitionEntity";
             KeyPrefix = "commonDataModel.agingperioddefinitionentity";
             KeySeparator = ".";
             Grouping = "/AgingPeriodDefinitionEntity";
 
-            AddGroup("Common Data Model AgingPeriodDefinitionEntity Details", group =>
+            AddGroup("AgingPeriodDefinitionEntity Details", group =>
             {
                 AgingPeriodDefinition = group.Add(new VocabularyKey(nameof(AgingPeriodDefinition), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

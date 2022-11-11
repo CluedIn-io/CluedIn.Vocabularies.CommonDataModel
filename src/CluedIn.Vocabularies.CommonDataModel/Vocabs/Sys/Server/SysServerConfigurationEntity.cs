@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SysServerConfigurationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model SysServerConfigurationEntity";
+            VocabularyName = "SysServerConfigurationEntity";
             KeyPrefix = "commonDataModel.sysserverconfigurationentity";
             KeySeparator = ".";
             Grouping = "/SysServerConfigurationEntity";
 
-            AddGroup("Common Data Model SysServerConfigurationEntity Details", group =>
+            AddGroup("SysServerConfigurationEntity Details", group =>
             {
                 AOSInstanceName = group.Add(new VocabularyKey(nameof(AOSInstanceName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AzureDeploymentId = group.Add(new VocabularyKey(nameof(AzureDeploymentId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

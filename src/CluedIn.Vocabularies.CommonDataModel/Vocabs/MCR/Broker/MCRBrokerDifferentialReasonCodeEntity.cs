@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRBrokerDifferentialReasonCodeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model MCRBrokerDifferentialReasonCodeEntity";
+            VocabularyName = "MCRBrokerDifferentialReasonCodeEntity";
             KeyPrefix = "commonDataModel.mcrbrokerdifferentialreasoncodeentity";
             KeySeparator = ".";
             Grouping = "/MCRBrokerDifferentialReasonCodeEntity";
 
-            AddGroup("Common Data Model MCRBrokerDifferentialReasonCodeEntity Details", group =>
+            AddGroup("MCRBrokerDifferentialReasonCodeEntity Details", group =>
             {
                 ReasonDescription = group.Add(new VocabularyKey(nameof(ReasonDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReasonCode = group.Add(new VocabularyKey(nameof(ReasonCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

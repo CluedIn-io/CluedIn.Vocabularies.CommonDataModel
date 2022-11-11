@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SMAServiceIntervalEntityVocabulary()
         {
-            VocabularyName = "Common Data Model SMAServiceIntervalEntity";
+            VocabularyName = "SMAServiceIntervalEntity";
             KeyPrefix = "commonDataModel.smaserviceintervalentity";
             KeySeparator = ".";
             Grouping = "/SMAServiceIntervalEntity";
 
-            AddGroup("Common Data Model SMAServiceIntervalEntity Details", group =>
+            AddGroup("SMAServiceIntervalEntity Details", group =>
             {
                 IntervalDescription = group.Add(new VocabularyKey(nameof(IntervalDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IntervalUnitFactor = group.Add(new VocabularyKey(nameof(IntervalUnitFactor), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

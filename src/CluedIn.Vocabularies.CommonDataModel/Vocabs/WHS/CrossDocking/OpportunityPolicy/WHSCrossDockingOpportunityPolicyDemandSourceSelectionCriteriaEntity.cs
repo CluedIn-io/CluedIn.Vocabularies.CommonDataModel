@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSCrossDockingOpportunityPolicyDemandSourceSelectionCriteriaEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSCrossDockingOpportunityPolicyDemandSourceSelectionCriteriaEntity";
+            VocabularyName = "WHSCrossDockingOpportunityPolicyDemandSourceSelectionCriteriaEntity";
             KeyPrefix = "commonDataModel.whscrossdockingopportunitypolicydemandsourceselectioncriteriaentity";
             KeySeparator = ".";
             Grouping = "/WHSCrossDockingOpportunityPolicyDemandSourceSelectionCriteriaEntity";
 
-            AddGroup("Common Data Model WHSCrossDockingOpportunityPolicyDemandSourceSelectionCriteriaEntity Details", group =>
+            AddGroup("WHSCrossDockingOpportunityPolicyDemandSourceSelectionCriteriaEntity Details", group =>
             {
                 DemandSourceTypeCriterion = group.Add(new VocabularyKey(nameof(DemandSourceTypeCriterion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PrioritySequenceNumber = group.Add(new VocabularyKey(nameof(PrioritySequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

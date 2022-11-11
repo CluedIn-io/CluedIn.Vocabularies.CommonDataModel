@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DocuFileTypesEntityVocabulary()
         {
-            VocabularyName = "Common Data Model DocuFileTypesEntity";
+            VocabularyName = "DocuFileTypesEntity";
             KeyPrefix = "commonDataModel.docufiletypesentity";
             KeySeparator = ".";
             Grouping = "/DocuFileTypesEntity";
 
-            AddGroup("Common Data Model DocuFileTypesEntity Details", group =>
+            AddGroup("DocuFileTypesEntity Details", group =>
             {
                 FileType = group.Add(new VocabularyKey(nameof(FileType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FileTypeDescription = group.Add(new VocabularyKey(nameof(FileTypeDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

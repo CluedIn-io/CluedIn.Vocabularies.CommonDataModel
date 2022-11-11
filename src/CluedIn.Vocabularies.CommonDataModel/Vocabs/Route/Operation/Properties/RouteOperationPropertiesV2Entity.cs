@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RouteOperationPropertiesV2EntityVocabulary()
         {
-            VocabularyName = "Common Data Model RouteOperationPropertiesV2Entity";
+            VocabularyName = "RouteOperationPropertiesV2Entity";
             KeyPrefix = "commonDataModel.routeoperationpropertiesv2entity";
             KeySeparator = ".";
             Grouping = "/RouteOperationPropertiesV2Entity";
 
-            AddGroup("Common Data Model RouteOperationPropertiesV2Entity Details", group =>
+            AddGroup("RouteOperationPropertiesV2Entity Details", group =>
             {
                 SetupCostCategoryId = group.Add(new VocabularyKey(nameof(SetupCostCategoryId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 QuantityCostCategoryId = group.Add(new VocabularyKey(nameof(QuantityCostCategoryId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

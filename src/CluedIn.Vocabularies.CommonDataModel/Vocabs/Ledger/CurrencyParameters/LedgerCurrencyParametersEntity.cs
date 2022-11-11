@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerCurrencyParametersEntityVocabulary()
         {
-            VocabularyName = "Common Data Model LedgerCurrencyParametersEntity";
+            VocabularyName = "LedgerCurrencyParametersEntity";
             KeyPrefix = "commonDataModel.ledgercurrencyparametersentity";
             KeySeparator = ".";
             Grouping = "/LedgerCurrencyParametersEntity";
 
-            AddGroup("Common Data Model LedgerCurrencyParametersEntity Details", group =>
+            AddGroup("LedgerCurrencyParametersEntity Details", group =>
             {
                 ConversionLoss = group.Add(new VocabularyKey(nameof(ConversionLoss), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ConversionGain = group.Add(new VocabularyKey(nameof(ConversionGain), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

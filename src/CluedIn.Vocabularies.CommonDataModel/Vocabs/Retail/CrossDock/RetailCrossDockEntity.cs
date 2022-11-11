@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailCrossDockEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RetailCrossDockEntity";
+            VocabularyName = "RetailCrossDockEntity";
             KeyPrefix = "commonDataModel.retailcrossdockentity";
             KeySeparator = ".";
             Grouping = "/RetailCrossDockEntity";
 
-            AddGroup("Common Data Model RetailCrossDockEntity Details", group =>
+            AddGroup("RetailCrossDockEntity Details", group =>
             {
                 CrossDockId = group.Add(new VocabularyKey(nameof(CrossDockId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

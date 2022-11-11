@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankReturnFormatErrorCodesEntityVocabulary()
         {
-            VocabularyName = "Common Data Model BankReturnFormatErrorCodesEntity";
+            VocabularyName = "BankReturnFormatErrorCodesEntity";
             KeyPrefix = "commonDataModel.bankreturnformaterrorcodesentity";
             KeySeparator = ".";
             Grouping = "/BankReturnFormatErrorCodesEntity";
 
-            AddGroup("Common Data Model BankReturnFormatErrorCodesEntity Details", group =>
+            AddGroup("BankReturnFormatErrorCodesEntity Details", group =>
             {
                 Code = group.Add(new VocabularyKey(nameof(Code), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FormPageTemplateVocabulary()
         {
-            VocabularyName = "Common Data Model FormPageTemplate";
+            VocabularyName = "FormPageTemplate";
             KeyPrefix = "commonDataModel.formpagetemplate";
             KeySeparator = ".";
             Grouping = "/FormPageTemplate";
 
-            AddGroup("Common Data Model FormPageTemplate Details", group =>
+            AddGroup("FormPageTemplate Details", group =>
             {
                 confirmationMessage = group.Add(new VocabularyKey(nameof(confirmationMessage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 errorMessage = group.Add(new VocabularyKey(nameof(errorMessage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

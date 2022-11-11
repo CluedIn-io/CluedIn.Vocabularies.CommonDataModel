@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WorkflowWorkItemQueueAssigneeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WorkflowWorkItemQueueAssigneeEntity";
+            VocabularyName = "WorkflowWorkItemQueueAssigneeEntity";
             KeyPrefix = "commonDataModel.workflowworkitemqueueassigneeentity";
             KeySeparator = ".";
             Grouping = "/WorkflowWorkItemQueueAssigneeEntity";
 
-            AddGroup("Common Data Model WorkflowWorkItemQueueAssigneeEntity Details", group =>
+            AddGroup("WorkflowWorkItemQueueAssigneeEntity Details", group =>
             {
                 IsOwner = group.Add(new VocabularyKey(nameof(IsOwner), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 User = group.Add(new VocabularyKey(nameof(User), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

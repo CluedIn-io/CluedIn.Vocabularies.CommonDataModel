@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerRRGDimensionInterval_RUEntityVocabulary()
         {
-            VocabularyName = "Common Data Model LedgerRRGDimensionInterval_RUEntity";
+            VocabularyName = "LedgerRRGDimensionInterval_RUEntity";
             KeyPrefix = "commonDataModel.ledgerrrgdimensioninterval_ruentity";
             KeySeparator = ".";
             Grouping = "/LedgerRRGDimensionInterval_RUEntity";
 
-            AddGroup("Common Data Model LedgerRRGDimensionInterval_RUEntity Details", group =>
+            AddGroup("LedgerRRGDimensionInterval_RUEntity Details", group =>
             {
                 DimensionAttributeName = group.Add(new VocabularyKey(nameof(DimensionAttributeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DimensionFromValue = group.Add(new VocabularyKey(nameof(DimensionFromValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

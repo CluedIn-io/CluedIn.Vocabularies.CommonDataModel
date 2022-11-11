@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerDateIntervalEntityVocabulary()
         {
-            VocabularyName = "Common Data Model LedgerDateIntervalEntity";
+            VocabularyName = "LedgerDateIntervalEntity";
             KeyPrefix = "commonDataModel.ledgerdateintervalentity";
             KeySeparator = ".";
             Grouping = "/LedgerDateIntervalEntity";
 
-            AddGroup("Common Data Model LedgerDateIntervalEntity Details", group =>
+            AddGroup("LedgerDateIntervalEntity Details", group =>
             {
                 DateIntervalCode = group.Add(new VocabularyKey(nameof(DateIntervalCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

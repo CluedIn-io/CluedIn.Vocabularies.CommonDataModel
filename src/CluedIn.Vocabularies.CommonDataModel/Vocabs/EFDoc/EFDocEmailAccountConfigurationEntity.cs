@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EFDocEmailAccountConfigurationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model EFDocEmailAccountConfigurationEntity";
+            VocabularyName = "EFDocEmailAccountConfigurationEntity";
             KeyPrefix = "commonDataModel.efdocemailaccountconfigurationentity";
             KeySeparator = ".";
             Grouping = "/EFDocEmailAccountConfigurationEntity";
 
-            AddGroup("Common Data Model EFDocEmailAccountConfigurationEntity Details", group =>
+            AddGroup("EFDocEmailAccountConfigurationEntity Details", group =>
             {
                 ServerAddress = group.Add(new VocabularyKey(nameof(ServerAddress), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Port = group.Add(new VocabularyKey(nameof(Port), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SlotVocabulary()
         {
-            VocabularyName = "Common Data Model Slot";
+            VocabularyName = "Slot";
             KeyPrefix = "commonDataModel.slot";
             KeySeparator = ".";
             Grouping = "/Slot";
 
-            AddGroup("Common Data Model Slot Details", group =>
+            AddGroup("Slot Details", group =>
             {
                 appointmentTypeNew = group.Add(new VocabularyKey(nameof(appointmentTypeNew), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 comment = group.Add(new VocabularyKey(nameof(comment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

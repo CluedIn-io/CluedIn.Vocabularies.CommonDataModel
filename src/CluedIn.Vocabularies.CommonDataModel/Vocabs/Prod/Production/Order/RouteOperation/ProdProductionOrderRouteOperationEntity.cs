@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProdProductionOrderRouteOperationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ProdProductionOrderRouteOperationEntity";
+            VocabularyName = "ProdProductionOrderRouteOperationEntity";
             KeyPrefix = "commonDataModel.prodproductionorderrouteoperationentity";
             KeySeparator = ".";
             Grouping = "/ProdProductionOrderRouteOperationEntity";
 
-            AddGroup("Common Data Model ProdProductionOrderRouteOperationEntity Details", group =>
+            AddGroup("ProdProductionOrderRouteOperationEntity Details", group =>
             {
                 AccumulatedScrapPercentage = group.Add(new VocabularyKey(nameof(AccumulatedScrapPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CostingOperationResourceId = group.Add(new VocabularyKey(nameof(CostingOperationResourceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

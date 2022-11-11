@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CdnConfigurationVocabulary()
         {
-            VocabularyName = "Common Data Model CdnConfiguration";
+            VocabularyName = "CdnConfiguration";
             KeyPrefix = "commonDataModel.cdnconfiguration";
             KeySeparator = ".";
             Grouping = "/CdnConfiguration";
 
-            AddGroup("Common Data Model CdnConfiguration Details", group =>
+            AddGroup("CdnConfiguration Details", group =>
             {
                 CDNConfigurationId = group.Add(new VocabularyKey(nameof(CDNConfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CDNEnabled = group.Add(new VocabularyKey(nameof(CDNEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

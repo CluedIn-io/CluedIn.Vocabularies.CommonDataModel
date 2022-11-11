@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WorkflowEscalationPathEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WorkflowEscalationPathEntity";
+            VocabularyName = "WorkflowEscalationPathEntity";
             KeyPrefix = "commonDataModel.workflowescalationpathentity";
             KeySeparator = ".";
             Grouping = "/WorkflowEscalationPathEntity";
 
-            AddGroup("Common Data Model WorkflowEscalationPathEntity Details", group =>
+            AddGroup("WorkflowEscalationPathEntity Details", group =>
             {
                 Level = group.Add(new VocabularyKey(nameof(Level), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StepId = group.Add(new VocabularyKey(nameof(StepId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

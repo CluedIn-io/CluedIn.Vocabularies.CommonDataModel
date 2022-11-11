@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseWorkExceptionEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSWarehouseWorkExceptionEntity";
+            VocabularyName = "WHSWarehouseWorkExceptionEntity";
             KeyPrefix = "commonDataModel.whswarehouseworkexceptionentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseWorkExceptionEntity";
 
-            AddGroup("Common Data Model WHSWarehouseWorkExceptionEntity Details", group =>
+            AddGroup("WHSWarehouseWorkExceptionEntity Details", group =>
             {
                 WillExceptionAdjustInventory = group.Add(new VocabularyKey(nameof(WillExceptionAdjustInventory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillExceptionCreateCycleCounting = group.Add(new VocabularyKey(nameof(WillExceptionCreateCycleCounting), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

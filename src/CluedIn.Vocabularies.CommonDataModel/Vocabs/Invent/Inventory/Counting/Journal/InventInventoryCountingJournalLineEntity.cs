@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventInventoryCountingJournalLineEntityVocabulary()
         {
-            VocabularyName = "Common Data Model InventInventoryCountingJournalLineEntity";
+            VocabularyName = "InventInventoryCountingJournalLineEntity";
             KeyPrefix = "commonDataModel.inventinventorycountingjournallineentity";
             KeySeparator = ".";
             Grouping = "/InventInventoryCountingJournalLineEntity";
 
-            AddGroup("Common Data Model InventInventoryCountingJournalLineEntity Details", group =>
+            AddGroup("InventInventoryCountingJournalLineEntity Details", group =>
             {
                 JournalNumber = group.Add(new VocabularyKey(nameof(JournalNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineNumber = group.Add(new VocabularyKey(nameof(LineNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

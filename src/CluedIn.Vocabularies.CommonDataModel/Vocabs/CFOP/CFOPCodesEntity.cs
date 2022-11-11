@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CFOPCodesEntityVocabulary()
         {
-            VocabularyName = "Common Data Model CFOPCodesEntity";
+            VocabularyName = "CFOPCodesEntity";
             KeyPrefix = "commonDataModel.cfopcodesentity";
             KeySeparator = ".";
             Grouping = "/CFOPCodesEntity";
 
-            AddGroup("Common Data Model CFOPCodesEntity Details", group =>
+            AddGroup("CFOPCodesEntity Details", group =>
             {
                 CFOP = group.Add(new VocabularyKey(nameof(CFOP), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

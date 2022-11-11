@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CreditCheckVocabulary()
         {
-            VocabularyName = "Common Data Model CreditCheck";
+            VocabularyName = "CreditCheck";
             KeyPrefix = "commonDataModel.creditcheck";
             KeySeparator = ".";
             Grouping = "/CreditCheck";
 
-            AddGroup("Common Data Model CreditCheck Details", group =>
+            AddGroup("CreditCheck Details", group =>
             {
                 creditCheckId = group.Add(new VocabularyKey(nameof(creditCheckId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

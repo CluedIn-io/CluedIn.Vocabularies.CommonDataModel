@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRBrokerContractHeaderEntityVocabulary()
         {
-            VocabularyName = "Common Data Model MCRBrokerContractHeaderEntity";
+            VocabularyName = "MCRBrokerContractHeaderEntity";
             KeyPrefix = "commonDataModel.mcrbrokercontractheaderentity";
             KeySeparator = ".";
             Grouping = "/MCRBrokerContractHeaderEntity";
 
-            AddGroup("Common Data Model MCRBrokerContractHeaderEntity Details", group =>
+            AddGroup("MCRBrokerContractHeaderEntity Details", group =>
             {
                 BrokerVendorAccountNumber = group.Add(new VocabularyKey(nameof(BrokerVendorAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ContractId = group.Add(new VocabularyKey(nameof(ContractId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

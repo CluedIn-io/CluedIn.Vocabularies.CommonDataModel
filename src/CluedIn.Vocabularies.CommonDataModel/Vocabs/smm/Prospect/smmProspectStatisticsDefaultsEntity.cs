@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public smmProspectStatisticsDefaultsEntityVocabulary()
         {
-            VocabularyName = "Common Data Model smmProspectStatisticsDefaultsEntity";
+            VocabularyName = "smmProspectStatisticsDefaultsEntity";
             KeyPrefix = "commonDataModel.smmprospectstatisticsdefaultsentity";
             KeySeparator = ".";
             Grouping = "/smmProspectStatisticsDefaultsEntity";
 
-            AddGroup("Common Data Model smmProspectStatisticsDefaultsEntity Details", group =>
+            AddGroup("smmProspectStatisticsDefaultsEntity Details", group =>
             {
                 StatisticsPeriodTypeCode = group.Add(new VocabularyKey(nameof(StatisticsPeriodTypeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultStartDate = group.Add(new VocabularyKey(nameof(DefaultStartDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

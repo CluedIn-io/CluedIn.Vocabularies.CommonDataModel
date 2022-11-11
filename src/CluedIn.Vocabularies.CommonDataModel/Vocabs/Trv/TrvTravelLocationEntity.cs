@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvTravelLocationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TrvTravelLocationEntity";
+            VocabularyName = "TrvTravelLocationEntity";
             KeyPrefix = "commonDataModel.trvtravellocationentity";
             KeySeparator = ".";
             Grouping = "/TrvTravelLocationEntity";
 
-            AddGroup("Common Data Model TrvTravelLocationEntity Details", group =>
+            AddGroup("TrvTravelLocationEntity Details", group =>
             {
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Destination = group.Add(new VocabularyKey(nameof(Destination), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

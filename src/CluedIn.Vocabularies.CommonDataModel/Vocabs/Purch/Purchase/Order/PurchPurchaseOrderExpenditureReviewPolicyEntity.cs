@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPurchaseOrderExpenditureReviewPolicyEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PurchPurchaseOrderExpenditureReviewPolicyEntity";
+            VocabularyName = "PurchPurchaseOrderExpenditureReviewPolicyEntity";
             KeyPrefix = "commonDataModel.purchpurchaseorderexpenditurereviewpolicyentity";
             KeySeparator = ".";
             Grouping = "/PurchPurchaseOrderExpenditureReviewPolicyEntity";
 
-            AddGroup("Common Data Model PurchPurchaseOrderExpenditureReviewPolicyEntity Details", group =>
+            AddGroup("PurchPurchaseOrderExpenditureReviewPolicyEntity Details", group =>
             {
                 IsProjectControllerExpenditureReviewer = group.Add(new VocabularyKey(nameof(IsProjectControllerExpenditureReviewer), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsProjectManagerExpenditureReviewer = group.Add(new VocabularyKey(nameof(IsProjectManagerExpenditureReviewer), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

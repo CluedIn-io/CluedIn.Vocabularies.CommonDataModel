@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventLedgerPostingDefinitionCombinationRuleEntityVocabulary()
         {
-            VocabularyName = "Common Data Model InventLedgerPostingDefinitionCombinationRuleEntity";
+            VocabularyName = "InventLedgerPostingDefinitionCombinationRuleEntity";
             KeyPrefix = "commonDataModel.inventledgerpostingdefinitioncombinationruleentity";
             KeySeparator = ".";
             Grouping = "/InventLedgerPostingDefinitionCombinationRuleEntity";
 
-            AddGroup("Common Data Model InventLedgerPostingDefinitionCombinationRuleEntity Details", group =>
+            AddGroup("InventLedgerPostingDefinitionCombinationRuleEntity Details", group =>
             {
                 AreAllAccountLedgerPostingDefinitionsActive = group.Add(new VocabularyKey(nameof(AreAllAccountLedgerPostingDefinitionsActive), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AreAccountGroupLedgerPostingDefinitionsActive = group.Add(new VocabularyKey(nameof(AreAccountGroupLedgerPostingDefinitionsActive), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

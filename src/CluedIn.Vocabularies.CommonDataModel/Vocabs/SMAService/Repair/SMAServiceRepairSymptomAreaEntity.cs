@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SMAServiceRepairSymptomAreaEntityVocabulary()
         {
-            VocabularyName = "Common Data Model SMAServiceRepairSymptomAreaEntity";
+            VocabularyName = "SMAServiceRepairSymptomAreaEntity";
             KeyPrefix = "commonDataModel.smaservicerepairsymptomareaentity";
             KeySeparator = ".";
             Grouping = "/SMAServiceRepairSymptomAreaEntity";
 
-            AddGroup("Common Data Model SMAServiceRepairSymptomAreaEntity Details", group =>
+            AddGroup("SMAServiceRepairSymptomAreaEntity Details", group =>
             {
                 AreaDescription = group.Add(new VocabularyKey(nameof(AreaDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AreaId = group.Add(new VocabularyKey(nameof(AreaId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

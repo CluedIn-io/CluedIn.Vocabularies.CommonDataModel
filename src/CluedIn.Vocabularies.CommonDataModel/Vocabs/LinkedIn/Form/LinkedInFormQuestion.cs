@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LinkedInFormQuestionVocabulary()
         {
-            VocabularyName = "Common Data Model LinkedInFormQuestion";
+            VocabularyName = "LinkedInFormQuestion";
             KeyPrefix = "commonDataModel.linkedinformquestion";
             KeySeparator = ".";
             Grouping = "/LinkedInFormQuestion";
 
-            AddGroup("Common Data Model LinkedInFormQuestion Details", group =>
+            AddGroup("LinkedInFormQuestion Details", group =>
             {
                 displayName = group.Add(new VocabularyKey(nameof(displayName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 isConsentCheckbox = group.Add(new VocabularyKey(nameof(isConsentCheckbox), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

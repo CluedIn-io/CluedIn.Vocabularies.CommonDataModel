@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgElectronicTimecardActivityRegistrationHeaderEntityVocabulary()
         {
-            VocabularyName = "Common Data Model JmgElectronicTimecardActivityRegistrationHeaderEntity";
+            VocabularyName = "JmgElectronicTimecardActivityRegistrationHeaderEntity";
             KeyPrefix = "commonDataModel.jmgelectronictimecardactivityregistrationheaderentity";
             KeySeparator = ".";
             Grouping = "/JmgElectronicTimecardActivityRegistrationHeaderEntity";
 
-            AddGroup("Common Data Model JmgElectronicTimecardActivityRegistrationHeaderEntity Details", group =>
+            AddGroup("JmgElectronicTimecardActivityRegistrationHeaderEntity Details", group =>
             {
                 TimeProfileDate = group.Add(new VocabularyKey(nameof(TimeProfileDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TimeProfileId = group.Add(new VocabularyKey(nameof(TimeProfileId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

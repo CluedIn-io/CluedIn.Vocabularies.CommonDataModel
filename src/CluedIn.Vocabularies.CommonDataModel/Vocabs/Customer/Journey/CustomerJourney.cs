@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustomerJourneyVocabulary()
         {
-            VocabularyName = "Common Data Model CustomerJourney";
+            VocabularyName = "CustomerJourney";
             KeyPrefix = "commonDataModel.customerjourney";
             KeySeparator = ".";
             Grouping = "/CustomerJourney";
 
-            AddGroup("Common Data Model CustomerJourney Details", group =>
+            AddGroup("CustomerJourney Details", group =>
             {
                 requiredconsent = group.Add(new VocabularyKey(nameof(requiredconsent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
 

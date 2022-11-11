@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxItemGroupHeadingEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TaxItemGroupHeadingEntity";
+            VocabularyName = "TaxItemGroupHeadingEntity";
             KeyPrefix = "commonDataModel.taxitemgroupheadingentity";
             KeySeparator = ".";
             Grouping = "/TaxItemGroupHeadingEntity";
 
-            AddGroup("Common Data Model TaxItemGroupHeadingEntity Details", group =>
+            AddGroup("TaxItemGroupHeadingEntity Details", group =>
             {
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxItemGroup = group.Add(new VocabularyKey(nameof(TaxItemGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public KanbanCirculatingKanbanCardEntityVocabulary()
         {
-            VocabularyName = "Common Data Model KanbanCirculatingKanbanCardEntity";
+            VocabularyName = "KanbanCirculatingKanbanCardEntity";
             KeyPrefix = "commonDataModel.kanbancirculatingkanbancardentity";
             KeySeparator = ".";
             Grouping = "/KanbanCirculatingKanbanCardEntity";
 
-            AddGroup("Common Data Model KanbanCirculatingKanbanCardEntity Details", group =>
+            AddGroup("KanbanCirculatingKanbanCardEntity Details", group =>
             {
                 CardNumber = group.Add(new VocabularyKey(nameof(CardNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Kanban = group.Add(new VocabularyKey(nameof(Kanban), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

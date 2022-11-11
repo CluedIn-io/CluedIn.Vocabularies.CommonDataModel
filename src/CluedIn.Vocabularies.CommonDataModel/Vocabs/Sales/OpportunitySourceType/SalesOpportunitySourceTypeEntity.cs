@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesOpportunitySourceTypeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model SalesOpportunitySourceTypeEntity";
+            VocabularyName = "SalesOpportunitySourceTypeEntity";
             KeyPrefix = "commonDataModel.salesopportunitysourcetypeentity";
             KeySeparator = ".";
             Grouping = "/SalesOpportunitySourceTypeEntity";
 
-            AddGroup("Common Data Model SalesOpportunitySourceTypeEntity Details", group =>
+            AddGroup("SalesOpportunitySourceTypeEntity Details", group =>
             {
                 IsFreeformTextAllowed = group.Add(new VocabularyKey(nameof(IsFreeformTextAllowed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SourceType = group.Add(new VocabularyKey(nameof(SourceType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailTrialUserVocabulary()
         {
-            VocabularyName = "Common Data Model RetailTrialUser";
+            VocabularyName = "RetailTrialUser";
             KeyPrefix = "commonDataModel.retailtrialuser";
             KeySeparator = ".";
             Grouping = "/RetailTrialUser";
 
-            AddGroup("Common Data Model RetailTrialUser Details", group =>
+            AddGroup("RetailTrialUser Details", group =>
             {
                 UserID = group.Add(new VocabularyKey(nameof(UserID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Alias = group.Add(new VocabularyKey(nameof(Alias), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

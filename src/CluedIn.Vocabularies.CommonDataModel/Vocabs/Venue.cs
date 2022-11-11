@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VenueVocabulary()
         {
-            VocabularyName = "Common Data Model Venue";
+            VocabularyName = "Venue";
             KeyPrefix = "commonDataModel.venue";
             KeySeparator = ".";
             Grouping = "/Venue";
 
-            AddGroup("Common Data Model Venue Details", group =>
+            AddGroup("Venue Details", group =>
             {
                 exchangeRate = group.Add(new VocabularyKey(nameof(exchangeRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 accessibleToilets = group.Add(new VocabularyKey(nameof(accessibleToilets), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReverseChargeSalesListEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ReverseChargeSalesListEntity";
+            VocabularyName = "ReverseChargeSalesListEntity";
             KeyPrefix = "commonDataModel.reversechargesaleslistentity";
             KeySeparator = ".";
             Grouping = "/ReverseChargeSalesListEntity";
 
-            AddGroup("Common Data Model ReverseChargeSalesListEntity Details", group =>
+            AddGroup("ReverseChargeSalesListEntity Details", group =>
             {
                 CustomerAccount = group.Add(new VocabularyKey(nameof(CustomerAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Value = group.Add(new VocabularyKey(nameof(Value), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

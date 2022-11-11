@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerFiscalCloseGroupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model LedgerFiscalCloseGroupEntity";
+            VocabularyName = "LedgerFiscalCloseGroupEntity";
             KeyPrefix = "commonDataModel.ledgerfiscalclosegroupentity";
             KeySeparator = ".";
             Grouping = "/LedgerFiscalCloseGroupEntity";
 
-            AddGroup("Common Data Model LedgerFiscalCloseGroupEntity Details", group =>
+            AddGroup("LedgerFiscalCloseGroupEntity Details", group =>
             {
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FiscalCalendar = group.Add(new VocabularyKey(nameof(FiscalCalendar), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

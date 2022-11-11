@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailLoyaltyPriceGroupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RetailLoyaltyPriceGroupEntity";
+            VocabularyName = "RetailLoyaltyPriceGroupEntity";
             KeyPrefix = "commonDataModel.retailloyaltypricegroupentity";
             KeySeparator = ".";
             Grouping = "/RetailLoyaltyPriceGroupEntity";
 
-            AddGroup("Common Data Model RetailLoyaltyPriceGroupEntity Details", group =>
+            AddGroup("RetailLoyaltyPriceGroupEntity Details", group =>
             {
                 LoyaltyName = group.Add(new VocabularyKey(nameof(LoyaltyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PriceCustomerGroupCode = group.Add(new VocabularyKey(nameof(PriceCustomerGroupCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

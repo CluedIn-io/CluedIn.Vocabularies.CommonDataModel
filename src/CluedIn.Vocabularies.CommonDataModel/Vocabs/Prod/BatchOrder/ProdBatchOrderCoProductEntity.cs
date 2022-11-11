@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProdBatchOrderCoProductEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ProdBatchOrderCoProductEntity";
+            VocabularyName = "ProdBatchOrderCoProductEntity";
             KeyPrefix = "commonDataModel.prodbatchordercoproductentity";
             KeySeparator = ".";
             Grouping = "/ProdBatchOrderCoProductEntity";
 
-            AddGroup("Common Data Model ProdBatchOrderCoProductEntity Details", group =>
+            AddGroup("ProdBatchOrderCoProductEntity Details", group =>
             {
                 BatchOrderRemainderStatus = group.Add(new VocabularyKey(nameof(BatchOrderRemainderStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EstimatedDate = group.Add(new VocabularyKey(nameof(EstimatedDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

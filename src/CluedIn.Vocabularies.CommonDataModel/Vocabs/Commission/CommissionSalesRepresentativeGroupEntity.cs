@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CommissionSalesRepresentativeGroupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model CommissionSalesRepresentativeGroupEntity";
+            VocabularyName = "CommissionSalesRepresentativeGroupEntity";
             KeyPrefix = "commonDataModel.commissionsalesrepresentativegroupentity";
             KeySeparator = ".";
             Grouping = "/CommissionSalesRepresentativeGroupEntity";
 
-            AddGroup("Common Data Model CommissionSalesRepresentativeGroupEntity Details", group =>
+            AddGroup("CommissionSalesRepresentativeGroupEntity Details", group =>
             {
                 GroupId = group.Add(new VocabularyKey(nameof(GroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GroupName = group.Add(new VocabularyKey(nameof(GroupName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

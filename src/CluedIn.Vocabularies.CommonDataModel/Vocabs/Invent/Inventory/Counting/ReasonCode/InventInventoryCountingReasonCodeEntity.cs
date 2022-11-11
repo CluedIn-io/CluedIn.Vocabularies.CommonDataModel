@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventInventoryCountingReasonCodeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model InventInventoryCountingReasonCodeEntity";
+            VocabularyName = "InventInventoryCountingReasonCodeEntity";
             KeyPrefix = "commonDataModel.inventinventorycountingreasoncodeentity";
             KeySeparator = ".";
             Grouping = "/InventInventoryCountingReasonCodeEntity";
 
-            AddGroup("Common Data Model InventInventoryCountingReasonCodeEntity Details", group =>
+            AddGroup("InventInventoryCountingReasonCodeEntity Details", group =>
             {
                 ReasonCode = group.Add(new VocabularyKey(nameof(ReasonCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

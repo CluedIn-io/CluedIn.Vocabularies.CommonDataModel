@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmSignLimitParametersEntityVocabulary()
         {
-            VocabularyName = "Common Data Model HcmSignLimitParametersEntity";
+            VocabularyName = "HcmSignLimitParametersEntity";
             KeyPrefix = "commonDataModel.hcmsignlimitparametersentity";
             KeySeparator = ".";
             Grouping = "/HcmSignLimitParametersEntity";
 
-            AddGroup("Common Data Model HcmSignLimitParametersEntity Details", group =>
+            AddGroup("HcmSignLimitParametersEntity Details", group =>
             {
                 SigningLimitsForEmployeesOnly = group.Add(new VocabularyKey(nameof(SigningLimitsForEmployeesOnly), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RequireExplicitSigningLimitRequest = group.Add(new VocabularyKey(nameof(RequireExplicitSigningLimitRequest), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FormMatchingVocabulary()
         {
-            VocabularyName = "Common Data Model FormMatching";
+            VocabularyName = "FormMatching";
             KeyPrefix = "commonDataModel.formmatching";
             KeySeparator = ".";
             Grouping = "/FormMatching";
 
-            AddGroup("Common Data Model FormMatching Details", group =>
+            AddGroup("FormMatching Details", group =>
             {
                 createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 createdOnBehalfBy = group.Add(new VocabularyKey(nameof(createdOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PdsCommodityQuantityMarginTemplateV2EntityVocabulary()
         {
-            VocabularyName = "Common Data Model PdsCommodityQuantityMarginTemplateV2Entity";
+            VocabularyName = "PdsCommodityQuantityMarginTemplateV2Entity";
             KeyPrefix = "commonDataModel.pdscommodityquantitymargintemplatev2entity";
             KeySeparator = ".";
             Grouping = "/PdsCommodityQuantityMarginTemplateV2Entity";
 
-            AddGroup("Common Data Model PdsCommodityQuantityMarginTemplateV2Entity Details", group =>
+            AddGroup("PdsCommodityQuantityMarginTemplateV2Entity Details", group =>
             {
                 CommodityPricingTemplateId = group.Add(new VocabularyKey(nameof(CommodityPricingTemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MarginAccountCode = group.Add(new VocabularyKey(nameof(MarginAccountCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

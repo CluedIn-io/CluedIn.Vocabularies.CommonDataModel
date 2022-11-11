@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProdProductionOrderRouteOperationResourceRequirementEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ProdProductionOrderRouteOperationResourceRequirementEntity";
+            VocabularyName = "ProdProductionOrderRouteOperationResourceRequirementEntity";
             KeyPrefix = "commonDataModel.prodproductionorderrouteoperationresourcerequiremententity";
             KeySeparator = ".";
             Grouping = "/ProdProductionOrderRouteOperationResourceRequirementEntity";
 
-            AddGroup("Common Data Model ProdProductionOrderRouteOperationResourceRequirementEntity Details", group =>
+            AddGroup("ProdProductionOrderRouteOperationResourceRequirementEntity Details", group =>
             {
                 RelationshipType = group.Add(new VocabularyKey(nameof(RelationshipType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Capability = group.Add(new VocabularyKey(nameof(Capability), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

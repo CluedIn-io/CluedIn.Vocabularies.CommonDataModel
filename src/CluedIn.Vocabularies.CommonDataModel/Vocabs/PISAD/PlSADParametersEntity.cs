@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PlSADParametersEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PlSADParametersEntity";
+            VocabularyName = "PlSADParametersEntity";
             KeyPrefix = "commonDataModel.plsadparametersentity";
             KeySeparator = ".";
             Grouping = "/PlSADParametersEntity";
 
-            AddGroup("Common Data Model PlSADParametersEntity Details", group =>
+            AddGroup("PlSADParametersEntity Details", group =>
             {
                 InsuranceAccount = group.Add(new VocabularyKey(nameof(InsuranceAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AdditionalCostsFormInvoice = group.Add(new VocabularyKey(nameof(AdditionalCostsFormInvoice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

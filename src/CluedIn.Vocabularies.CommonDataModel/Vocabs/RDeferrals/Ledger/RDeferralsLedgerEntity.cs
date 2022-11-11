@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RDeferralsLedgerEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RDeferralsLedgerEntity";
+            VocabularyName = "RDeferralsLedgerEntity";
             KeyPrefix = "commonDataModel.rdeferralsledgerentity";
             KeySeparator = ".";
             Grouping = "/RDeferralsLedgerEntity";
 
-            AddGroup("Common Data Model RDeferralsLedgerEntity Details", group =>
+            AddGroup("RDeferralsLedgerEntity Details", group =>
             {
                 PostingProfile = group.Add(new VocabularyKey(nameof(PostingProfile), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollAccrualPlanEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PayrollAccrualPlanEntity";
+            VocabularyName = "PayrollAccrualPlanEntity";
             KeyPrefix = "commonDataModel.payrollaccrualplanentity";
             KeySeparator = ".";
             Grouping = "/PayrollAccrualPlanEntity";
 
-            AddGroup("Common Data Model PayrollAccrualPlanEntity Details", group =>
+            AddGroup("PayrollAccrualPlanEntity Details", group =>
             {
                 AccrualId = group.Add(new VocabularyKey(nameof(AccrualId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CanCarryForward = group.Add(new VocabularyKey(nameof(CanCarryForward), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

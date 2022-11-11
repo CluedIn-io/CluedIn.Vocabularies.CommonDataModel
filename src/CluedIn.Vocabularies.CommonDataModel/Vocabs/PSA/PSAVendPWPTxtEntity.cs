@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PSAVendPWPTxtEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PSAVendPWPTxtEntity";
+            VocabularyName = "PSAVendPWPTxtEntity";
             KeyPrefix = "commonDataModel.psavendpwptxtentity";
             KeySeparator = ".";
             Grouping = "/PSAVendPWPTxtEntity";
 
-            AddGroup("Common Data Model PSAVendPWPTxtEntity Details", group =>
+            AddGroup("PSAVendPWPTxtEntity Details", group =>
             {
                 AccountCode = group.Add(new VocabularyKey(nameof(AccountCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorAccount = group.Add(new VocabularyKey(nameof(VendorAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

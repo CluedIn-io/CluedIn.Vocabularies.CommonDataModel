@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventWarehouseQuarantineZoneEntityVocabulary()
         {
-            VocabularyName = "Common Data Model InventWarehouseQuarantineZoneEntity";
+            VocabularyName = "InventWarehouseQuarantineZoneEntity";
             KeyPrefix = "commonDataModel.inventwarehousequarantinezoneentity";
             KeySeparator = ".";
             Grouping = "/InventWarehouseQuarantineZoneEntity";
 
-            AddGroup("Common Data Model InventWarehouseQuarantineZoneEntity Details", group =>
+            AddGroup("InventWarehouseQuarantineZoneEntity Details", group =>
             {
                 ZoneDescription = group.Add(new VocabularyKey(nameof(ZoneDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ZoneId = group.Add(new VocabularyKey(nameof(ZoneId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

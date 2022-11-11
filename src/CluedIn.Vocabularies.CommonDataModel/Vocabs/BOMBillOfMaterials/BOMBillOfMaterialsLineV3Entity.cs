@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BOMBillOfMaterialsLineV3EntityVocabulary()
         {
-            VocabularyName = "Common Data Model BOMBillOfMaterialsLineV3Entity";
+            VocabularyName = "BOMBillOfMaterialsLineV3Entity";
             KeyPrefix = "commonDataModel.bombillofmaterialslinev3entity";
             KeySeparator = ".";
             Grouping = "/BOMBillOfMaterialsLineV3Entity";
 
-            AddGroup("Common Data Model BOMBillOfMaterialsLineV3Entity Details", group =>
+            AddGroup("BOMBillOfMaterialsLineV3Entity Details", group =>
             {
                 ConsumptionType = group.Add(new VocabularyKey(nameof(ConsumptionType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BOMId = group.Add(new VocabularyKey(nameof(BOMId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

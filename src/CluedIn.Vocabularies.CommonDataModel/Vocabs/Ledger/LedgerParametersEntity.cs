@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerParametersEntityVocabulary()
         {
-            VocabularyName = "Common Data Model LedgerParametersEntity";
+            VocabularyName = "LedgerParametersEntity";
             KeyPrefix = "commonDataModel.ledgerparametersentity";
             KeySeparator = ".";
             Grouping = "/LedgerParametersEntity";
 
-            AddGroup("Common Data Model LedgerParametersEntity Details", group =>
+            AddGroup("LedgerParametersEntity Details", group =>
             {
                 DoNotUseErrorAccount = group.Add(new VocabularyKey(nameof(DoNotUseErrorAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RequireContinuousNumberSequences = group.Add(new VocabularyKey(nameof(RequireContinuousNumberSequences), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

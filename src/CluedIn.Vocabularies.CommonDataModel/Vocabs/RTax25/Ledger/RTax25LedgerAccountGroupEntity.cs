@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RTax25LedgerAccountGroupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RTax25LedgerAccountGroupEntity";
+            VocabularyName = "RTax25LedgerAccountGroupEntity";
             KeyPrefix = "commonDataModel.rtax25ledgeraccountgroupentity";
             KeySeparator = ".";
             Grouping = "/RTax25LedgerAccountGroupEntity";
 
-            AddGroup("Common Data Model RTax25LedgerAccountGroupEntity Details", group =>
+            AddGroup("RTax25LedgerAccountGroupEntity Details", group =>
             {
                 AccountForFATaxes = group.Add(new VocabularyKey(nameof(AccountForFATaxes), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CTA = group.Add(new VocabularyKey(nameof(CTA), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

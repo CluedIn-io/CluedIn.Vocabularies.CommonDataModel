@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FBCFOPCreditBaseSourceEntityVocabulary()
         {
-            VocabularyName = "Common Data Model FBCFOPCreditBaseSourceEntity";
+            VocabularyName = "FBCFOPCreditBaseSourceEntity";
             KeyPrefix = "commonDataModel.fbcfopcreditbasesourceentity";
             KeySeparator = ".";
             Grouping = "/FBCFOPCreditBaseSourceEntity";
 
-            AddGroup("Common Data Model FBCFOPCreditBaseSourceEntity Details", group =>
+            AddGroup("FBCFOPCreditBaseSourceEntity Details", group =>
             {
                 CFOP = group.Add(new VocabularyKey(nameof(CFOP), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CFOPDescription = group.Add(new VocabularyKey(nameof(CFOPDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

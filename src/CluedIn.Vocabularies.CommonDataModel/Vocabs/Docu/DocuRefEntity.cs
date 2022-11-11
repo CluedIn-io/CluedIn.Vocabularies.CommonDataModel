@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DocuRefEntityVocabulary()
         {
-            VocabularyName = "Common Data Model DocuRefEntity";
+            VocabularyName = "DocuRefEntity";
             KeyPrefix = "commonDataModel.docurefentity";
             KeySeparator = ".";
             Grouping = "/DocuRefEntity";
 
-            AddGroup("Common Data Model DocuRefEntity Details", group =>
+            AddGroup("DocuRefEntity Details", group =>
             {
                 DocumentId = group.Add(new VocabularyKey(nameof(DocumentId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ActualCompanyId = group.Add(new VocabularyKey(nameof(ActualCompanyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

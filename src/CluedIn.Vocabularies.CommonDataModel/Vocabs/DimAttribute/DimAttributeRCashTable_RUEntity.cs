@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DimAttributeRCashTable_RUEntityVocabulary()
         {
-            VocabularyName = "Common Data Model DimAttributeRCashTable_RUEntity";
+            VocabularyName = "DimAttributeRCashTable_RUEntity";
             KeyPrefix = "commonDataModel.dimattributercashtable_ruentity";
             KeySeparator = ".";
             Grouping = "/DimAttributeRCashTable_RUEntity";
 
-            AddGroup("Common Data Model DimAttributeRCashTable_RUEntity Details", group =>
+            AddGroup("DimAttributeRCashTable_RUEntity Details", group =>
             {
                 Value = group.Add(new VocabularyKey(nameof(Value), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

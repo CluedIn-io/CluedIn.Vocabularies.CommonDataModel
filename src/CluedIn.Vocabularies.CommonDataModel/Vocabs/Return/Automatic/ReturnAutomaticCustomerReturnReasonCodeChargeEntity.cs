@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReturnAutomaticCustomerReturnReasonCodeChargeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ReturnAutomaticCustomerReturnReasonCodeChargeEntity";
+            VocabularyName = "ReturnAutomaticCustomerReturnReasonCodeChargeEntity";
             KeyPrefix = "commonDataModel.returnautomaticcustomerreturnreasoncodechargeentity";
             KeySeparator = ".";
             Grouping = "/ReturnAutomaticCustomerReturnReasonCodeChargeEntity";
 
-            AddGroup("Common Data Model ReturnAutomaticCustomerReturnReasonCodeChargeEntity Details", group =>
+            AddGroup("ReturnAutomaticCustomerReturnReasonCodeChargeEntity Details", group =>
             {
                 CustomerReturnReasonCode = group.Add(new VocabularyKey(nameof(CustomerReturnReasonCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReturnRelation = group.Add(new VocabularyKey(nameof(ReturnRelation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

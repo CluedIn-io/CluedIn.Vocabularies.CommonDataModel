@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustFormletterCustomerFacingFormPrintingConfigurationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model CustFormletterCustomerFacingFormPrintingConfigurationEntity";
+            VocabularyName = "CustFormletterCustomerFacingFormPrintingConfigurationEntity";
             KeyPrefix = "commonDataModel.custformlettercustomerfacingformprintingconfigurationentity";
             KeySeparator = ".";
             Grouping = "/CustFormletterCustomerFacingFormPrintingConfigurationEntity";
 
-            AddGroup("Common Data Model CustFormletterCustomerFacingFormPrintingConfigurationEntity Details", group =>
+            AddGroup("CustFormletterCustomerFacingFormPrintingConfigurationEntity Details", group =>
             {
                 NotDisplayedItemNumber = group.Add(new VocabularyKey(nameof(NotDisplayedItemNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Key = group.Add(new VocabularyKey(nameof(Key), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

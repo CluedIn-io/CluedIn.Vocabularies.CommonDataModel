@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FIStandingOrderVocabulary()
         {
-            VocabularyName = "Common Data Model FIStandingOrder";
+            VocabularyName = "FIStandingOrder";
             KeyPrefix = "commonDataModel.fistandingorder";
             KeySeparator = ".";
             Grouping = "/FIStandingOrder";
 
-            AddGroup("Common Data Model FIStandingOrder Details", group =>
+            AddGroup("FIStandingOrder Details", group =>
             {
                 fi_StandingOrderId = group.Add(new VocabularyKey(nameof(fi_StandingOrderId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

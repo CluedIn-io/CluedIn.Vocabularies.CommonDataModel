@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MarkupChargesToleranceEntityVocabulary()
         {
-            VocabularyName = "Common Data Model MarkupChargesToleranceEntity";
+            VocabularyName = "MarkupChargesToleranceEntity";
             KeyPrefix = "commonDataModel.markupchargestoleranceentity";
             KeySeparator = ".";
             Grouping = "/MarkupChargesToleranceEntity";
 
-            AddGroup("Common Data Model MarkupChargesToleranceEntity Details", group =>
+            AddGroup("MarkupChargesToleranceEntity Details", group =>
             {
                 ChargesCode = group.Add(new VocabularyKey(nameof(ChargesCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LayoutVocabulary()
         {
-            VocabularyName = "Common Data Model Layout";
+            VocabularyName = "Layout";
             KeyPrefix = "commonDataModel.layout";
             KeySeparator = ".";
             Grouping = "/Layout";
 
-            AddGroup("Common Data Model Layout Details", group =>
+            AddGroup("Layout Details", group =>
             {
                 capacity = group.Add(new VocabularyKey(nameof(capacity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 description = group.Add(new VocabularyKey(nameof(description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EInvoiceCFDIParametersEntityVocabulary()
         {
-            VocabularyName = "Common Data Model EInvoiceCFDIParametersEntity";
+            VocabularyName = "EInvoiceCFDIParametersEntity";
             KeyPrefix = "commonDataModel.einvoicecfdiparametersentity";
             KeySeparator = ".";
             Grouping = "/EInvoiceCFDIParametersEntity";
 
-            AddGroup("Common Data Model EInvoiceCFDIParametersEntity Details", group =>
+            AddGroup("EInvoiceCFDIParametersEntity Details", group =>
             {
                 Certificate = group.Add(new VocabularyKey(nameof(Certificate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CFDIDigestAlgorithm = group.Add(new VocabularyKey(nameof(CFDIDigestAlgorithm), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

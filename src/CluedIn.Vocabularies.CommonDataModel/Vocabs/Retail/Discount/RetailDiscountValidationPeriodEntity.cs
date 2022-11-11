@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailDiscountValidationPeriodEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RetailDiscountValidationPeriodEntity";
+            VocabularyName = "RetailDiscountValidationPeriodEntity";
             KeyPrefix = "commonDataModel.retaildiscountvalidationperiodentity";
             KeySeparator = ".";
             Grouping = "/RetailDiscountValidationPeriodEntity";
 
-            AddGroup("Common Data Model RetailDiscountValidationPeriodEntity Details", group =>
+            AddGroup("RetailDiscountValidationPeriodEntity Details", group =>
             {
                 endingTime = group.Add(new VocabularyKey(nameof(endingTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 endingTimeAfterMidnight = group.Add(new VocabularyKey(nameof(endingTimeAfterMidnight), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

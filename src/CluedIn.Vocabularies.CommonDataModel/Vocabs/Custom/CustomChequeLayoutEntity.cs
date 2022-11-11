@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustomChequeLayoutEntityVocabulary()
         {
-            VocabularyName = "Common Data Model CustomChequeLayoutEntity";
+            VocabularyName = "CustomChequeLayoutEntity";
             KeyPrefix = "commonDataModel.customchequelayoutentity";
             KeySeparator = ".";
             Grouping = "/CustomChequeLayoutEntity";
 
-            AddGroup("Common Data Model CustomChequeLayoutEntity Details", group =>
+            AddGroup("CustomChequeLayoutEntity Details", group =>
             {
                 LayoutId = group.Add(new VocabularyKey(nameof(LayoutId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

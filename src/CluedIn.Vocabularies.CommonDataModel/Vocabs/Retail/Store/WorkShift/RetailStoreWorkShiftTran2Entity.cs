@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailStoreWorkShiftTran2EntityVocabulary()
         {
-            VocabularyName = "Common Data Model RetailStoreWorkShiftTran2Entity";
+            VocabularyName = "RetailStoreWorkShiftTran2Entity";
             KeyPrefix = "commonDataModel.retailstoreworkshifttran2entity";
             KeySeparator = ".";
             Grouping = "/RetailStoreWorkShiftTran2Entity";
 
-            AddGroup("Common Data Model RetailStoreWorkShiftTran2Entity Details", group =>
+            AddGroup("RetailStoreWorkShiftTran2Entity Details", group =>
             {
                 ClosingDate = group.Add(new VocabularyKey(nameof(ClosingDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ClosingTime = group.Add(new VocabularyKey(nameof(ClosingTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

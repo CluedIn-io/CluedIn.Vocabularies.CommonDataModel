@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DimensionSetEntityVocabulary()
         {
-            VocabularyName = "Common Data Model DimensionSetEntity";
+            VocabularyName = "DimensionSetEntity";
             KeyPrefix = "commonDataModel.dimensionsetentity";
             KeySeparator = ".";
             Grouping = "/DimensionSetEntity";
 
-            AddGroup("Common Data Model DimensionSetEntity Details", group =>
+            AddGroup("DimensionSetEntity Details", group =>
             {
                 DisplayValue = group.Add(new VocabularyKey(nameof(DisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RecordId = group.Add(new VocabularyKey(nameof(RecordId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

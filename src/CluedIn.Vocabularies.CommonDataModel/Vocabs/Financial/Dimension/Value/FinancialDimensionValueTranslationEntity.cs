@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FinancialDimensionValueTranslationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model FinancialDimensionValueTranslationEntity";
+            VocabularyName = "FinancialDimensionValueTranslationEntity";
             KeyPrefix = "commonDataModel.financialdimensionvaluetranslationentity";
             KeySeparator = ".";
             Grouping = "/FinancialDimensionValueTranslationEntity";
 
-            AddGroup("Common Data Model FinancialDimensionValueTranslationEntity Details", group =>
+            AddGroup("FinancialDimensionValueTranslationEntity Details", group =>
             {
                 FinancialDimension = group.Add(new VocabularyKey(nameof(FinancialDimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FinancialDimensionValue = group.Add(new VocabularyKey(nameof(FinancialDimensionValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

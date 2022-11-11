@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationRouteScheduleEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TMSTransportationRouteScheduleEntity";
+            VocabularyName = "TMSTransportationRouteScheduleEntity";
             KeyPrefix = "commonDataModel.tmstransportationroutescheduleentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationRouteScheduleEntity";
 
-            AddGroup("Common Data Model TMSTransportationRouteScheduleEntity Details", group =>
+            AddGroup("TMSTransportationRouteScheduleEntity Details", group =>
             {
                 IsRouteRecurrenceActive = group.Add(new VocabularyKey(nameof(IsRouteRecurrenceActive), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EffectiveStartDateTime = group.Add(new VocabularyKey(nameof(EffectiveStartDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

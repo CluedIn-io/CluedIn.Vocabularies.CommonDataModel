@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventDestinationAddressTransportationTimeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model InventDestinationAddressTransportationTimeEntity";
+            VocabularyName = "InventDestinationAddressTransportationTimeEntity";
             KeyPrefix = "commonDataModel.inventdestinationaddresstransportationtimeentity";
             KeySeparator = ".";
             Grouping = "/InventDestinationAddressTransportationTimeEntity";
 
-            AddGroup("Common Data Model InventDestinationAddressTransportationTimeEntity Details", group =>
+            AddGroup("InventDestinationAddressTransportationTimeEntity Details", group =>
             {
                 OriginWarehouseId = group.Add(new VocabularyKey(nameof(OriginWarehouseId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DestinationAddressCountryRegionId = group.Add(new VocabularyKey(nameof(DestinationAddressCountryRegionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

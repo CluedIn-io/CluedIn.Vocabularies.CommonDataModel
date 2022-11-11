@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSFreightReconciliationReasonCodeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TMSFreightReconciliationReasonCodeEntity";
+            VocabularyName = "TMSFreightReconciliationReasonCodeEntity";
             KeyPrefix = "commonDataModel.tmsfreightreconciliationreasoncodeentity";
             KeySeparator = ".";
             Grouping = "/TMSFreightReconciliationReasonCodeEntity";
 
-            AddGroup("Common Data Model TMSFreightReconciliationReasonCodeEntity Details", group =>
+            AddGroup("TMSFreightReconciliationReasonCodeEntity Details", group =>
             {
                 ReasonDescription = group.Add(new VocabularyKey(nameof(ReasonDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReasonCode = group.Add(new VocabularyKey(nameof(ReasonCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

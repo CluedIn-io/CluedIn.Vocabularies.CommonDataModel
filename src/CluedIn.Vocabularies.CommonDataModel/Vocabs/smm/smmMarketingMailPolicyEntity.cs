@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public smmMarketingMailPolicyEntityVocabulary()
         {
-            VocabularyName = "Common Data Model smmMarketingMailPolicyEntity";
+            VocabularyName = "smmMarketingMailPolicyEntity";
             KeyPrefix = "commonDataModel.smmmarketingmailpolicyentity";
             KeySeparator = ".";
             Grouping = "/smmMarketingMailPolicyEntity";
 
-            AddGroup("Common Data Model smmMarketingMailPolicyEntity Details", group =>
+            AddGroup("smmMarketingMailPolicyEntity Details", group =>
             {
                 GroupEmailRecipientType = group.Add(new VocabularyKey(nameof(GroupEmailRecipientType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DocumentAgeLimitDays = group.Add(new VocabularyKey(nameof(DocumentAgeLimitDays), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

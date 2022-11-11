@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSLoadMixGroupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSLoadMixGroupEntity";
+            VocabularyName = "WHSLoadMixGroupEntity";
             KeyPrefix = "commonDataModel.whsloadmixgroupentity";
             KeySeparator = ".";
             Grouping = "/WHSLoadMixGroupEntity";
 
-            AddGroup("Common Data Model WHSLoadMixGroupEntity Details", group =>
+            AddGroup("WHSLoadMixGroupEntity Details", group =>
             {
                 GroupId = group.Add(new VocabularyKey(nameof(GroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GroupDescription = group.Add(new VocabularyKey(nameof(GroupDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

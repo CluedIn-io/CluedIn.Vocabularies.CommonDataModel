@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ISRRateEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ISRRateEntity";
+            VocabularyName = "ISRRateEntity";
             KeyPrefix = "commonDataModel.isrrateentity";
             KeySeparator = ".";
             Grouping = "/ISRRateEntity";
 
-            AddGroup("Common Data Model ISRRateEntity Details", group =>
+            AddGroup("ISRRateEntity Details", group =>
             {
                 FixedAmount = group.Add(new VocabularyKey(nameof(FixedAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Month = group.Add(new VocabularyKey(nameof(Month), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

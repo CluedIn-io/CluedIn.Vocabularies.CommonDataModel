@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollWorkerAccrualAdjustmentEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PayrollWorkerAccrualAdjustmentEntity";
+            VocabularyName = "PayrollWorkerAccrualAdjustmentEntity";
             KeyPrefix = "commonDataModel.payrollworkeraccrualadjustmententity";
             KeySeparator = ".";
             Grouping = "/PayrollWorkerAccrualAdjustmentEntity";
 
-            AddGroup("Common Data Model PayrollWorkerAccrualAdjustmentEntity Details", group =>
+            AddGroup("PayrollWorkerAccrualAdjustmentEntity Details", group =>
             {
                 AdjustedHours = group.Add(new VocabularyKey(nameof(AdjustedHours), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AdjustmentType = group.Add(new VocabularyKey(nameof(AdjustmentType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

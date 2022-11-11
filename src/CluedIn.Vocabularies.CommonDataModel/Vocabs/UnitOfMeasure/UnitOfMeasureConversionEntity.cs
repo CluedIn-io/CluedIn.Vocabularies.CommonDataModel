@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public UnitOfMeasureConversionEntityVocabulary()
         {
-            VocabularyName = "Common Data Model UnitOfMeasureConversionEntity";
+            VocabularyName = "UnitOfMeasureConversionEntity";
             KeyPrefix = "commonDataModel.unitofmeasureconversionentity";
             KeySeparator = ".";
             Grouping = "/UnitOfMeasureConversionEntity";
 
-            AddGroup("Common Data Model UnitOfMeasureConversionEntity Details", group =>
+            AddGroup("UnitOfMeasureConversionEntity Details", group =>
             {
                 Denominator = group.Add(new VocabularyKey(nameof(Denominator), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Factor = group.Add(new VocabularyKey(nameof(Factor), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

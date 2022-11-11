@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollPositivePayExportEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PayrollPositivePayExportEntity";
+            VocabularyName = "PayrollPositivePayExportEntity";
             KeyPrefix = "commonDataModel.payrollpositivepayexportentity";
             KeySeparator = ".";
             Grouping = "/PayrollPositivePayExportEntity";
 
-            AddGroup("Common Data Model PayrollPositivePayExportEntity Details", group =>
+            AddGroup("PayrollPositivePayExportEntity Details", group =>
             {
                 CompanyId = group.Add(new VocabularyKey(nameof(CompanyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PositivePayNumber = group.Add(new VocabularyKey(nameof(PositivePayNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSSecondWarehouseWaveAttributeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSSecondWarehouseWaveAttributeEntity";
+            VocabularyName = "WHSSecondWarehouseWaveAttributeEntity";
             KeyPrefix = "commonDataModel.whssecondwarehousewaveattributeentity";
             KeySeparator = ".";
             Grouping = "/WHSSecondWarehouseWaveAttributeEntity";
 
-            AddGroup("Common Data Model WHSSecondWarehouseWaveAttributeEntity Details", group =>
+            AddGroup("WHSSecondWarehouseWaveAttributeEntity Details", group =>
             {
                 AttributeValue = group.Add(new VocabularyKey(nameof(AttributeValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AttributeDescription = group.Add(new VocabularyKey(nameof(AttributeDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ScheduleSpecialtyVocabulary()
         {
-            VocabularyName = "Common Data Model ScheduleSpecialty";
+            VocabularyName = "ScheduleSpecialty";
             KeyPrefix = "commonDataModel.schedulespecialty";
             KeySeparator = ".";
             Grouping = "/ScheduleSpecialty";
 
-            AddGroup("Common Data Model ScheduleSpecialty Details", group =>
+            AddGroup("ScheduleSpecialty Details", group =>
             {
                 name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 scheduleSpecialtyId = group.Add(new VocabularyKey(nameof(scheduleSpecialtyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

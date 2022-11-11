@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxSMAServiceOrderLineTransTaxInformationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TaxSMAServiceOrderLineTransTaxInformationEntity";
+            VocabularyName = "TaxSMAServiceOrderLineTransTaxInformationEntity";
             KeyPrefix = "commonDataModel.taxsmaserviceorderlinetranstaxinformationentity";
             KeySeparator = ".";
             Grouping = "/TaxSMAServiceOrderLineTransTaxInformationEntity";
 
-            AddGroup("Common Data Model TaxSMAServiceOrderLineTransTaxInformationEntity Details", group =>
+            AddGroup("TaxSMAServiceOrderLineTransTaxInformationEntity Details", group =>
             {
                 ServiceOrderId = group.Add(new VocabularyKey(nameof(ServiceOrderId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ServiceOrderLineNum = group.Add(new VocabularyKey(nameof(ServiceOrderLineNum), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

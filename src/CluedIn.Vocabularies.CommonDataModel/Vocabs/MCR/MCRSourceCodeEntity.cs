@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRSourceCodeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model MCRSourceCodeEntity";
+            VocabularyName = "MCRSourceCodeEntity";
             KeyPrefix = "commonDataModel.mcrsourcecodeentity";
             KeySeparator = ".";
             Grouping = "/MCRSourceCodeEntity";
 
-            AddGroup("Common Data Model MCRSourceCodeEntity Details", group =>
+            AddGroup("MCRSourceCodeEntity Details", group =>
             {
                 ActualCost = group.Add(new VocabularyKey(nameof(ActualCost), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

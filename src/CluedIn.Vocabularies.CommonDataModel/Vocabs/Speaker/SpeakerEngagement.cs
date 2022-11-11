@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SpeakerEngagementVocabulary()
         {
-            VocabularyName = "Common Data Model SpeakerEngagement";
+            VocabularyName = "SpeakerEngagement";
             KeyPrefix = "commonDataModel.speakerengagement";
             KeySeparator = ".";
             Grouping = "/SpeakerEngagement";
 
-            AddGroup("Common Data Model SpeakerEngagement Details", group =>
+            AddGroup("SpeakerEngagement Details", group =>
             {
                 entityImage = group.Add(new VocabularyKey(nameof(entityImage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 exchangeRate = group.Add(new VocabularyKey(nameof(exchangeRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendorFormSetupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model VendorFormSetupEntity";
+            VocabularyName = "VendorFormSetupEntity";
             KeyPrefix = "commonDataModel.vendorformsetupentity";
             KeySeparator = ".";
             Grouping = "/VendorFormSetupEntity";
 
-            AddGroup("Common Data Model VendorFormSetupEntity Details", group =>
+            AddGroup("VendorFormSetupEntity Details", group =>
             {
                 InventoryDimensionsForPrintingInvoice = group.Add(new VocabularyKey(nameof(InventoryDimensionsForPrintingInvoice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PrintAmountInEuroCurrency = group.Add(new VocabularyKey(nameof(PrintAmountInEuroCurrency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

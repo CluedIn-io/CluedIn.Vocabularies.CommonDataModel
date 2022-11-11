@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RTSLDimensionRuleEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RTSLDimensionRuleEntity";
+            VocabularyName = "RTSLDimensionRuleEntity";
             KeyPrefix = "commonDataModel.rtsldimensionruleentity";
             KeySeparator = ".";
             Grouping = "/RTSLDimensionRuleEntity";
 
-            AddGroup("Common Data Model RTSLDimensionRuleEntity Details", group =>
+            AddGroup("RTSLDimensionRuleEntity Details", group =>
             {
                 ConversionMethod = group.Add(new VocabularyKey(nameof(ConversionMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Dimension = group.Add(new VocabularyKey(nameof(Dimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

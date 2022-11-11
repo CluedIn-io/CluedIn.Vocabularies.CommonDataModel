@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MarketingEmailTestSendVocabulary()
         {
-            VocabularyName = "Common Data Model MarketingEmailTestSend";
+            VocabularyName = "MarketingEmailTestSend";
             KeyPrefix = "commonDataModel.marketingemailtestsend";
             KeySeparator = ".";
             Grouping = "/MarketingEmailTestSend";
 
-            AddGroup("Common Data Model MarketingEmailTestSend Details", group =>
+            AddGroup("MarketingEmailTestSend Details", group =>
             {
                 emailBody = group.Add(new VocabularyKey(nameof(emailBody), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 emailID = group.Add(new VocabularyKey(nameof(emailID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationItemConstraintEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TMSTransportationItemConstraintEntity";
+            VocabularyName = "TMSTransportationItemConstraintEntity";
             KeyPrefix = "commonDataModel.tmstransportationitemconstraintentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationItemConstraintEntity";
 
-            AddGroup("Common Data Model TMSTransportationItemConstraintEntity Details", group =>
+            AddGroup("TMSTransportationItemConstraintEntity Details", group =>
             {
                 ConstraintActionMode = group.Add(new VocabularyKey(nameof(ConstraintActionMode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ShippingCarrierId = group.Add(new VocabularyKey(nameof(ShippingCarrierId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

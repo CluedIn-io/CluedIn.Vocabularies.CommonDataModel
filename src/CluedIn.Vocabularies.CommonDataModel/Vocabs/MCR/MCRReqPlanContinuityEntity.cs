@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRReqPlanContinuityEntityVocabulary()
         {
-            VocabularyName = "Common Data Model MCRReqPlanContinuityEntity";
+            VocabularyName = "MCRReqPlanContinuityEntity";
             KeyPrefix = "commonDataModel.mcrreqplancontinuityentity";
             KeySeparator = ".";
             Grouping = "/MCRReqPlanContinuityEntity";
 
-            AddGroup("Common Data Model MCRReqPlanContinuityEntity Details", group =>
+            AddGroup("MCRReqPlanContinuityEntity Details", group =>
             {
                 IssueMargin = group.Add(new VocabularyKey(nameof(IssueMargin), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

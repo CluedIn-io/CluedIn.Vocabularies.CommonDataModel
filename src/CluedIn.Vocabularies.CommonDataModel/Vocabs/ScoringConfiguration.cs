@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ScoringConfigurationVocabulary()
         {
-            VocabularyName = "Common Data Model ScoringConfiguration";
+            VocabularyName = "ScoringConfiguration";
             KeyPrefix = "commonDataModel.scoringconfiguration";
             KeySeparator = ".";
             Grouping = "/ScoringConfiguration";
 
-            AddGroup("Common Data Model ScoringConfiguration Details", group =>
+            AddGroup("ScoringConfiguration Details", group =>
             {
                 automaticleadscorescleanupEnabled = group.Add(new VocabularyKey(nameof(automaticleadscorescleanupEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 automaticqualificationEnabled = group.Add(new VocabularyKey(nameof(automaticqualificationEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

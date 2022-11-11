@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CredManCreditLimitRuleLineEntityVocabulary()
         {
-            VocabularyName = "Common Data Model CredManCreditLimitRuleLineEntity";
+            VocabularyName = "CredManCreditLimitRuleLineEntity";
             KeyPrefix = "commonDataModel.credmancreditlimitrulelineentity";
             KeySeparator = ".";
             Grouping = "/CredManCreditLimitRuleLineEntity";
 
-            AddGroup("Common Data Model CredManCreditLimitRuleLineEntity Details", group =>
+            AddGroup("CredManCreditLimitRuleLineEntity Details", group =>
             {
                 ComparisonOperator = group.Add(new VocabularyKey(nameof(ComparisonOperator), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ComparisonValue = group.Add(new VocabularyKey(nameof(ComparisonValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

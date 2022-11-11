@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvAntiCorruptionLanguageTextEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TrvAntiCorruptionLanguageTextEntity";
+            VocabularyName = "TrvAntiCorruptionLanguageTextEntity";
             KeyPrefix = "commonDataModel.trvanticorruptionlanguagetextentity";
             KeySeparator = ".";
             Grouping = "/TrvAntiCorruptionLanguageTextEntity";
 
-            AddGroup("Common Data Model TrvAntiCorruptionLanguageTextEntity Details", group =>
+            AddGroup("TrvAntiCorruptionLanguageTextEntity Details", group =>
             {
                 LanguageId = group.Add(new VocabularyKey(nameof(LanguageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AttestationMessage = group.Add(new VocabularyKey(nameof(AttestationMessage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

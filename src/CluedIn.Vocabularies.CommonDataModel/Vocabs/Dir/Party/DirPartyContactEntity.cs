@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DirPartyContactEntityVocabulary()
         {
-            VocabularyName = "Common Data Model DirPartyContactEntity";
+            VocabularyName = "DirPartyContactEntity";
             KeyPrefix = "commonDataModel.dirpartycontactentity";
             KeySeparator = ".";
             Grouping = "/DirPartyContactEntity";
 
-            AddGroup("Common Data Model DirPartyContactEntity Details", group =>
+            AddGroup("DirPartyContactEntity Details", group =>
             {
                 PartyNumber = group.Add(new VocabularyKey(nameof(PartyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LocationId = group.Add(new VocabularyKey(nameof(LocationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SysPolicyOrganizationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model SysPolicyOrganizationEntity";
+            VocabularyName = "SysPolicyOrganizationEntity";
             KeyPrefix = "commonDataModel.syspolicyorganizationentity";
             KeySeparator = ".";
             Grouping = "/SysPolicyOrganizationEntity";
 
-            AddGroup("Common Data Model SysPolicyOrganizationEntity Details", group =>
+            AddGroup("SysPolicyOrganizationEntity Details", group =>
             {
                 HierarchyType = group.Add(new VocabularyKey(nameof(HierarchyType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 HierarchyName = group.Add(new VocabularyKey(nameof(HierarchyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

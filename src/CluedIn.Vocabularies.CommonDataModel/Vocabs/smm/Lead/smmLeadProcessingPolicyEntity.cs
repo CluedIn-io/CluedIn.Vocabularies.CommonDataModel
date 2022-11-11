@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public smmLeadProcessingPolicyEntityVocabulary()
         {
-            VocabularyName = "Common Data Model smmLeadProcessingPolicyEntity";
+            VocabularyName = "smmLeadProcessingPolicyEntity";
             KeyPrefix = "commonDataModel.smmleadprocessingpolicyentity";
             KeySeparator = ".";
             Grouping = "/smmLeadProcessingPolicyEntity";
 
-            AddGroup("Common Data Model smmLeadProcessingPolicyEntity Details", group =>
+            AddGroup("smmLeadProcessingPolicyEntity Details", group =>
             {
                 WillLeadQualificationCreateOpportunity = group.Add(new VocabularyKey(nameof(WillLeadQualificationCreateOpportunity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillLeadQualificationCreateCustomer = group.Add(new VocabularyKey(nameof(WillLeadQualificationCreateCustomer), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

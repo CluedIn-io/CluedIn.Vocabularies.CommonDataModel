@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ElectronicPaymentReturnOccurrenceCodeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ElectronicPaymentReturnOccurrenceCodeEntity";
+            VocabularyName = "ElectronicPaymentReturnOccurrenceCodeEntity";
             KeyPrefix = "commonDataModel.electronicpaymentreturnoccurrencecodeentity";
             KeySeparator = ".";
             Grouping = "/ElectronicPaymentReturnOccurrenceCodeEntity";
 
-            AddGroup("Common Data Model ElectronicPaymentReturnOccurrenceCodeEntity Details", group =>
+            AddGroup("ElectronicPaymentReturnOccurrenceCodeEntity Details", group =>
             {
                 LayoutGroupId = group.Add(new VocabularyKey(nameof(LayoutGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LayoutReturnOccurrenceCode = group.Add(new VocabularyKey(nameof(LayoutReturnOccurrenceCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

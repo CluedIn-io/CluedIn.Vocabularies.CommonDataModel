@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PSAActualEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PSAActualEntity";
+            VocabularyName = "PSAActualEntity";
             KeyPrefix = "commonDataModel.psaactualentity";
             KeySeparator = ".";
             Grouping = "/PSAActualEntity";
 
-            AddGroup("Common Data Model PSAActualEntity Details", group =>
+            AddGroup("PSAActualEntity Details", group =>
             {
                 ActivityNumber = group.Add(new VocabularyKey(nameof(ActivityNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AmountMst = group.Add(new VocabularyKey(nameof(AmountMst), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

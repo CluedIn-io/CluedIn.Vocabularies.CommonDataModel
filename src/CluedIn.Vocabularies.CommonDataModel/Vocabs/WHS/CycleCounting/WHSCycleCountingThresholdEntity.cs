@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSCycleCountingThresholdEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSCycleCountingThresholdEntity";
+            VocabularyName = "WHSCycleCountingThresholdEntity";
             KeyPrefix = "commonDataModel.whscyclecountingthresholdentity";
             KeySeparator = ".";
             Grouping = "/WHSCycleCountingThresholdEntity";
 
-            AddGroup("Common Data Model WHSCycleCountingThresholdEntity Details", group =>
+            AddGroup("WHSCycleCountingThresholdEntity Details", group =>
             {
                 ThresholdId = group.Add(new VocabularyKey(nameof(ThresholdId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ThresholdType = group.Add(new VocabularyKey(nameof(ThresholdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

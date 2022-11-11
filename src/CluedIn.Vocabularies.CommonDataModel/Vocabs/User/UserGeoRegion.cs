@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public UserGeoRegionVocabulary()
         {
-            VocabularyName = "Common Data Model UserGeoRegion";
+            VocabularyName = "UserGeoRegion";
             KeyPrefix = "commonDataModel.usergeoregion";
             KeySeparator = ".";
             Grouping = "/UserGeoRegion";
 
-            AddGroup("Common Data Model UserGeoRegion Details", group =>
+            AddGroup("UserGeoRegion Details", group =>
             {
                 geoRegion = group.Add(new VocabularyKey(nameof(geoRegion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

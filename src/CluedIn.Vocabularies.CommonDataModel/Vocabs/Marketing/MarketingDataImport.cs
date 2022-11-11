@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MarketingDataImportVocabulary()
         {
-            VocabularyName = "Common Data Model MarketingDataImport";
+            VocabularyName = "MarketingDataImport";
             KeyPrefix = "commonDataModel.marketingdataimport";
             KeySeparator = ".";
             Grouping = "/MarketingDataImport";
 
-            AddGroup("Common Data Model MarketingDataImport Details", group =>
+            AddGroup("MarketingDataImport Details", group =>
             {
                 dataversion = group.Add(new VocabularyKey(nameof(dataversion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 importcompleted = group.Add(new VocabularyKey(nameof(importcompleted), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

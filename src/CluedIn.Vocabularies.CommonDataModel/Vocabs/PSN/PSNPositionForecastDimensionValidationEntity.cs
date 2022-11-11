@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PSNPositionForecastDimensionValidationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PSNPositionForecastDimensionValidationEntity";
+            VocabularyName = "PSNPositionForecastDimensionValidationEntity";
             KeyPrefix = "commonDataModel.psnpositionforecastdimensionvalidationentity";
             KeySeparator = ".";
             Grouping = "/PSNPositionForecastDimensionValidationEntity";
 
-            AddGroup("Common Data Model PSNPositionForecastDimensionValidationEntity Details", group =>
+            AddGroup("PSNPositionForecastDimensionValidationEntity Details", group =>
             {
                 DimensionValidatedBy = group.Add(new VocabularyKey(nameof(DimensionValidatedBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DimensionValidatedDateTime = group.Add(new VocabularyKey(nameof(DimensionValidatedDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

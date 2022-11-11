@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PowerBIFormControlBindingEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PowerBIFormControlBindingEntity";
+            VocabularyName = "PowerBIFormControlBindingEntity";
             KeyPrefix = "commonDataModel.powerbiformcontrolbindingentity";
             KeySeparator = ".";
             Grouping = "/PowerBIFormControlBindingEntity";
 
-            AddGroup("Common Data Model PowerBIFormControlBindingEntity Details", group =>
+            AddGroup("PowerBIFormControlBindingEntity Details", group =>
             {
                 formName = group.Add(new VocabularyKey(nameof(formName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 userId = group.Add(new VocabularyKey(nameof(userId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

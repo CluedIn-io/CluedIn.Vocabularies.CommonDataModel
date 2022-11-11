@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmEmploymentTermEntityVocabulary()
         {
-            VocabularyName = "Common Data Model HcmEmploymentTermEntity";
+            VocabularyName = "HcmEmploymentTermEntity";
             KeyPrefix = "commonDataModel.hcmemploymenttermentity";
             KeySeparator = ".";
             Grouping = "/HcmEmploymentTermEntity";
 
-            AddGroup("Common Data Model HcmEmploymentTermEntity Details", group =>
+            AddGroup("HcmEmploymentTermEntity Details", group =>
             {
                 AgreementTermId = group.Add(new VocabularyKey(nameof(AgreementTermId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LegalEntityId = group.Add(new VocabularyKey(nameof(LegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

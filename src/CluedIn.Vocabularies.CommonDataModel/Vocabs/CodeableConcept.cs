@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CodeableConceptVocabulary()
         {
-            VocabularyName = "Common Data Model CodeableConcept";
+            VocabularyName = "CodeableConcept";
             KeyPrefix = "commonDataModel.codeableconcept";
             KeySeparator = ".";
             Grouping = "/CodeableConcept";
 
-            AddGroup("Common Data Model CodeableConcept Details", group =>
+            AddGroup("CodeableConcept Details", group =>
             {
                 codeableConceptId = group.Add(new VocabularyKey(nameof(codeableConceptId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
                 createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));

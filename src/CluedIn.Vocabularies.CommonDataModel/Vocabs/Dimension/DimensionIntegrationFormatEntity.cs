@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DimensionIntegrationFormatEntityVocabulary()
         {
-            VocabularyName = "Common Data Model DimensionIntegrationFormatEntity";
+            VocabularyName = "DimensionIntegrationFormatEntity";
             KeyPrefix = "commonDataModel.dimensionintegrationformatentity";
             KeySeparator = ".";
             Grouping = "/DimensionIntegrationFormatEntity";
 
-            AddGroup("Common Data Model DimensionIntegrationFormatEntity Details", group =>
+            AddGroup("DimensionIntegrationFormatEntity Details", group =>
             {
                 DimensionFormatName = group.Add(new VocabularyKey(nameof(DimensionFormatName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DimensionFormatType = group.Add(new VocabularyKey(nameof(DimensionFormatType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

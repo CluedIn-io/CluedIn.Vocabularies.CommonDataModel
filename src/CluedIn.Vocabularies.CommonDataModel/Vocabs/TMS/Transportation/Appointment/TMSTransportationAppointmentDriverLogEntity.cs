@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationAppointmentDriverLogEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TMSTransportationAppointmentDriverLogEntity";
+            VocabularyName = "TMSTransportationAppointmentDriverLogEntity";
             KeyPrefix = "commonDataModel.tmstransportationappointmentdriverlogentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationAppointmentDriverLogEntity";
 
-            AddGroup("Common Data Model TMSTransportationAppointmentDriverLogEntity Details", group =>
+            AddGroup("TMSTransportationAppointmentDriverLogEntity Details", group =>
             {
                 ActualAppointmentEndDateTime = group.Add(new VocabularyKey(nameof(ActualAppointmentEndDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ActualAppointmentStartDateTime = group.Add(new VocabularyKey(nameof(ActualAppointmentStartDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

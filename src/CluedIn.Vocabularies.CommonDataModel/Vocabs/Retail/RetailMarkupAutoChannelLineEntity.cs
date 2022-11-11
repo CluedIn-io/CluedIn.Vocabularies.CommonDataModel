@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailMarkupAutoChannelLineEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RetailMarkupAutoChannelLineEntity";
+            VocabularyName = "RetailMarkupAutoChannelLineEntity";
             KeyPrefix = "commonDataModel.retailmarkupautochannellineentity";
             KeySeparator = ".";
             Grouping = "/RetailMarkupAutoChannelLineEntity";
 
-            AddGroup("Common Data Model RetailMarkupAutoChannelLineEntity Details", group =>
+            AddGroup("RetailMarkupAutoChannelLineEntity Details", group =>
             {
                 OMInternalOrganizationId = group.Add(new VocabularyKey(nameof(OMInternalOrganizationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OMHierarchyTypeId = group.Add(new VocabularyKey(nameof(OMHierarchyTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

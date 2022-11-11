@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FBReasonCodeForRestitutionComplementEntity_BRVocabulary()
         {
-            VocabularyName = "Common Data Model FBReasonCodeForRestitutionComplementEntity_BR";
+            VocabularyName = "FBReasonCodeForRestitutionComplementEntity_BR";
             KeyPrefix = "commonDataModel.fbreasoncodeforrestitutioncomplemententity_br";
             KeySeparator = ".";
             Grouping = "/FBReasonCodeForRestitutionComplementEntity_BR";
 
-            AddGroup("Common Data Model FBReasonCodeForRestitutionComplementEntity_BR Details", group =>
+            AddGroup("FBReasonCodeForRestitutionComplementEntity_BR Details", group =>
             {
                 ReasonCode = group.Add(new VocabularyKey(nameof(ReasonCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

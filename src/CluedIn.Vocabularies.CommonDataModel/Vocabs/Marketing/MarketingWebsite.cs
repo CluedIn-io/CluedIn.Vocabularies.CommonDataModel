@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MarketingWebsiteVocabulary()
         {
-            VocabularyName = "Common Data Model MarketingWebsite";
+            VocabularyName = "MarketingWebsite";
             KeyPrefix = "commonDataModel.marketingwebsite";
             KeySeparator = ".";
             Grouping = "/MarketingWebsite";
 
-            AddGroup("Common Data Model MarketingWebsite Details", group =>
+            AddGroup("MarketingWebsite Details", group =>
             {
                 description = group.Add(new VocabularyKey(nameof(description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 insightsPlaceholder = group.Add(new VocabularyKey(nameof(insightsPlaceholder), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

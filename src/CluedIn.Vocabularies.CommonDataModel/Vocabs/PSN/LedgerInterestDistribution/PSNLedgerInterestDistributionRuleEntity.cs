@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PSNLedgerInterestDistributionRuleEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PSNLedgerInterestDistributionRuleEntity";
+            VocabularyName = "PSNLedgerInterestDistributionRuleEntity";
             KeyPrefix = "commonDataModel.psnledgerinterestdistributionruleentity";
             KeySeparator = ".";
             Grouping = "/PSNLedgerInterestDistributionRuleEntity";
 
-            AddGroup("Common Data Model PSNLedgerInterestDistributionRuleEntity Details", group =>
+            AddGroup("PSNLedgerInterestDistributionRuleEntity Details", group =>
             {
                 CashAccount = group.Add(new VocabularyKey(nameof(CashAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CashAccountDisplayValue = group.Add(new VocabularyKey(nameof(CashAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

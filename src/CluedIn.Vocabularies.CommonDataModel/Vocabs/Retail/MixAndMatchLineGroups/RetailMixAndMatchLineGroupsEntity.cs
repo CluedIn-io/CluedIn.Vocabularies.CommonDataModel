@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailMixAndMatchLineGroupsEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RetailMixAndMatchLineGroupsEntity";
+            VocabularyName = "RetailMixAndMatchLineGroupsEntity";
             KeyPrefix = "commonDataModel.retailmixandmatchlinegroupsentity";
             KeySeparator = ".";
             Grouping = "/RetailMixAndMatchLineGroupsEntity";
 
-            AddGroup("Common Data Model RetailMixAndMatchLineGroupsEntity Details", group =>
+            AddGroup("RetailMixAndMatchLineGroupsEntity Details", group =>
             {
                 DiscountLineColor = group.Add(new VocabularyKey(nameof(DiscountLineColor), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MixAndMatchOfferId = group.Add(new VocabularyKey(nameof(MixAndMatchOfferId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

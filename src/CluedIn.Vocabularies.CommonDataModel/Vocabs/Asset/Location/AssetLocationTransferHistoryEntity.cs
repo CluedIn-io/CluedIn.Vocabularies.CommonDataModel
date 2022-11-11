@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetLocationTransferHistoryEntityVocabulary()
         {
-            VocabularyName = "Common Data Model AssetLocationTransferHistoryEntity";
+            VocabularyName = "AssetLocationTransferHistoryEntity";
             KeyPrefix = "commonDataModel.assetlocationtransferhistoryentity";
             KeySeparator = ".";
             Grouping = "/AssetLocationTransferHistoryEntity";
 
-            AddGroup("Common Data Model AssetLocationTransferHistoryEntity Details", group =>
+            AddGroup("AssetLocationTransferHistoryEntity Details", group =>
             {
                 FixedAssetNumber = group.Add(new VocabularyKey(nameof(FixedAssetNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FromLocation = group.Add(new VocabularyKey(nameof(FromLocation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

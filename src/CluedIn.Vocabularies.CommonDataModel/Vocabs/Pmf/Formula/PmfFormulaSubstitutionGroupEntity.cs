@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PmfFormulaSubstitutionGroupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PmfFormulaSubstitutionGroupEntity";
+            VocabularyName = "PmfFormulaSubstitutionGroupEntity";
             KeyPrefix = "commonDataModel.pmfformulasubstitutiongroupentity";
             KeySeparator = ".";
             Grouping = "/PmfFormulaSubstitutionGroupEntity";
 
-            AddGroup("Common Data Model PmfFormulaSubstitutionGroupEntity Details", group =>
+            AddGroup("PmfFormulaSubstitutionGroupEntity Details", group =>
             {
                 GroupId = group.Add(new VocabularyKey(nameof(GroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GroupDescription = group.Add(new VocabularyKey(nameof(GroupDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

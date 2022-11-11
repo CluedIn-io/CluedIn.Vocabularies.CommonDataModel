@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CredManCustGuaranteeInsuranceEntityVocabulary()
         {
-            VocabularyName = "Common Data Model CredManCustGuaranteeInsuranceEntity";
+            VocabularyName = "CredManCustGuaranteeInsuranceEntity";
             KeyPrefix = "commonDataModel.credmancustguaranteeinsuranceentity";
             KeySeparator = ".";
             Grouping = "/CredManCustGuaranteeInsuranceEntity";
 
-            AddGroup("Common Data Model CredManCustGuaranteeInsuranceEntity Details", group =>
+            AddGroup("CredManCustGuaranteeInsuranceEntity Details", group =>
             {
                 CustAccount = group.Add(new VocabularyKey(nameof(CustAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GuaranteeInsurance = group.Add(new VocabularyKey(nameof(GuaranteeInsurance), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

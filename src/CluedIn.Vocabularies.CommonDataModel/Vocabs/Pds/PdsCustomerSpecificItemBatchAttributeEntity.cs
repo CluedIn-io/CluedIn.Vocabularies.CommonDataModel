@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PdsCustomerSpecificItemBatchAttributeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PdsCustomerSpecificItemBatchAttributeEntity";
+            VocabularyName = "PdsCustomerSpecificItemBatchAttributeEntity";
             KeyPrefix = "commonDataModel.pdscustomerspecificitembatchattributeentity";
             KeySeparator = ".";
             Grouping = "/PdsCustomerSpecificItemBatchAttributeEntity";
 
-            AddGroup("Common Data Model PdsCustomerSpecificItemBatchAttributeEntity Details", group =>
+            AddGroup("PdsCustomerSpecificItemBatchAttributeEntity Details", group =>
             {
                 ItemNumber = group.Add(new VocabularyKey(nameof(ItemNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BatchAttributeAccountCode = group.Add(new VocabularyKey(nameof(BatchAttributeAccountCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

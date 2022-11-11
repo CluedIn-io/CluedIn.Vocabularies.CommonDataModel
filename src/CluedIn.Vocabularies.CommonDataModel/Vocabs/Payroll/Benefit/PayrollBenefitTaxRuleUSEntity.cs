@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollBenefitTaxRuleUSEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PayrollBenefitTaxRuleUSEntity";
+            VocabularyName = "PayrollBenefitTaxRuleUSEntity";
             KeyPrefix = "commonDataModel.payrollbenefittaxruleusentity";
             KeySeparator = ".";
             Grouping = "/PayrollBenefitTaxRuleUSEntity";
 
-            AddGroup("Common Data Model PayrollBenefitTaxRuleUSEntity Details", group =>
+            AddGroup("PayrollBenefitTaxRuleUSEntity Details", group =>
             {
                 BenefitPlan = group.Add(new VocabularyKey(nameof(BenefitPlan), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CustomPretaxMethod = group.Add(new VocabularyKey(nameof(CustomPretaxMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgSiteSpecificManufacturingExecutionProductionOrderDefaultsEntityVocabulary()
         {
-            VocabularyName = "Common Data Model JmgSiteSpecificManufacturingExecutionProductionOrderDefaultsEntity";
+            VocabularyName = "JmgSiteSpecificManufacturingExecutionProductionOrderDefaultsEntity";
             KeyPrefix = "commonDataModel.jmgsitespecificmanufacturingexecutionproductionorderdefaultsentity";
             KeySeparator = ".";
             Grouping = "/JmgSiteSpecificManufacturingExecutionProductionOrderDefaultsEntity";
 
-            AddGroup("Common Data Model JmgSiteSpecificManufacturingExecutionProductionOrderDefaultsEntity Details", group =>
+            AddGroup("JmgSiteSpecificManufacturingExecutionProductionOrderDefaultsEntity Details", group =>
             {
                 InventDimId = group.Add(new VocabularyKey(nameof(InventDimId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductionSiteId = group.Add(new VocabularyKey(nameof(ProductionSiteId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

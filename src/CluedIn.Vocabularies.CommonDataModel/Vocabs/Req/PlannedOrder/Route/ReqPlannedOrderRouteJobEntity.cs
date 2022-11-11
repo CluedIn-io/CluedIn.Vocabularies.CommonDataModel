@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReqPlannedOrderRouteJobEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ReqPlannedOrderRouteJobEntity";
+            VocabularyName = "ReqPlannedOrderRouteJobEntity";
             KeyPrefix = "commonDataModel.reqplannedorderroutejobentity";
             KeySeparator = ".";
             Grouping = "/ReqPlannedOrderRouteJobEntity";
 
-            AddGroup("Common Data Model ReqPlannedOrderRouteJobEntity Details", group =>
+            AddGroup("ReqPlannedOrderRouteJobEntity Details", group =>
             {
                 CalculatedJobDurationHours = group.Add(new VocabularyKey(nameof(CalculatedJobDurationHours), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ScheduledStartDate = group.Add(new VocabularyKey(nameof(ScheduledStartDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

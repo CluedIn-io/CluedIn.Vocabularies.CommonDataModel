@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WMSItemArrivalJournalHeaderV2EntityVocabulary()
         {
-            VocabularyName = "Common Data Model WMSItemArrivalJournalHeaderV2Entity";
+            VocabularyName = "WMSItemArrivalJournalHeaderV2Entity";
             KeyPrefix = "commonDataModel.wmsitemarrivaljournalheaderv2entity";
             KeySeparator = ".";
             Grouping = "/WMSItemArrivalJournalHeaderV2Entity";
 
-            AddGroup("Common Data Model WMSItemArrivalJournalHeaderV2Entity Details", group =>
+            AddGroup("WMSItemArrivalJournalHeaderV2Entity Details", group =>
             {
                 JournalNumber = group.Add(new VocabularyKey(nameof(JournalNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 JournalNameId = group.Add(new VocabularyKey(nameof(JournalNameId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

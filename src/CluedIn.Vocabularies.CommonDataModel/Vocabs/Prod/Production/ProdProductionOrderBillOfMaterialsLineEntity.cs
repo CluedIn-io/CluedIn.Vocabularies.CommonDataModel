@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProdProductionOrderBillOfMaterialsLineEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ProdProductionOrderBillOfMaterialsLineEntity";
+            VocabularyName = "ProdProductionOrderBillOfMaterialsLineEntity";
             KeyPrefix = "commonDataModel.prodproductionorderbillofmaterialslineentity";
             KeySeparator = ".";
             Grouping = "/ProdProductionOrderBillOfMaterialsLineEntity";
 
-            AddGroup("Common Data Model ProdProductionOrderBillOfMaterialsLineEntity Details", group =>
+            AddGroup("ProdProductionOrderBillOfMaterialsLineEntity Details", group =>
             {
                 AutoReservationMode = group.Add(new VocabularyKey(nameof(AutoReservationMode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BOMLineQuantity = group.Add(new VocabularyKey(nameof(BOMLineQuantity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

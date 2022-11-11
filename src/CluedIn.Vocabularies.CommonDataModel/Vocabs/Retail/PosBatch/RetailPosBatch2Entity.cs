@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailPosBatch2EntityVocabulary()
         {
-            VocabularyName = "Common Data Model RetailPosBatch2Entity";
+            VocabularyName = "RetailPosBatch2Entity";
             KeyPrefix = "commonDataModel.retailposbatch2entity";
             KeySeparator = ".";
             Grouping = "/RetailPosBatch2Entity";
 
-            AddGroup("Common Data Model RetailPosBatch2Entity Details", group =>
+            AddGroup("RetailPosBatch2Entity Details", group =>
             {
                 Terminal = group.Add(new VocabularyKey(nameof(Terminal), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BatchShiftId = group.Add(new VocabularyKey(nameof(BatchShiftId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

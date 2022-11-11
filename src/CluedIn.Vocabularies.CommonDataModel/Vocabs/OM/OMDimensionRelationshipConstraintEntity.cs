@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public OMDimensionRelationshipConstraintEntityVocabulary()
         {
-            VocabularyName = "Common Data Model OMDimensionRelationshipConstraintEntity";
+            VocabularyName = "OMDimensionRelationshipConstraintEntity";
             KeyPrefix = "commonDataModel.omdimensionrelationshipconstraintentity";
             KeySeparator = ".";
             Grouping = "/OMDimensionRelationshipConstraintEntity";
 
-            AddGroup("Common Data Model OMDimensionRelationshipConstraintEntity Details", group =>
+            AddGroup("OMDimensionRelationshipConstraintEntity Details", group =>
             {
                 LeftSegment = group.Add(new VocabularyKey(nameof(LeftSegment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LeftDimensionHierarchyLevel = group.Add(new VocabularyKey(nameof(LeftDimensionHierarchyLevel), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

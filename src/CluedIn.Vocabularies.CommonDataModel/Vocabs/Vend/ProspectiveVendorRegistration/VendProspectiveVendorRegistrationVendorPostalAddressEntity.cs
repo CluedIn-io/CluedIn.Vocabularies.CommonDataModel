@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendProspectiveVendorRegistrationVendorPostalAddressEntityVocabulary()
         {
-            VocabularyName = "Common Data Model VendProspectiveVendorRegistrationVendorPostalAddressEntity";
+            VocabularyName = "VendProspectiveVendorRegistrationVendorPostalAddressEntity";
             KeyPrefix = "commonDataModel.vendprospectivevendorregistrationvendorpostaladdressentity";
             KeySeparator = ".";
             Grouping = "/VendProspectiveVendorRegistrationVendorPostalAddressEntity";
 
-            AddGroup("Common Data Model VendProspectiveVendorRegistrationVendorPostalAddressEntity Details", group =>
+            AddGroup("VendProspectiveVendorRegistrationVendorPostalAddressEntity Details", group =>
             {
                 FormattedAddress = group.Add(new VocabularyKey(nameof(FormattedAddress), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AddressZipCode = group.Add(new VocabularyKey(nameof(AddressZipCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

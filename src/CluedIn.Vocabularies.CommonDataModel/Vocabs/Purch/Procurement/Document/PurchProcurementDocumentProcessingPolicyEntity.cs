@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchProcurementDocumentProcessingPolicyEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PurchProcurementDocumentProcessingPolicyEntity";
+            VocabularyName = "PurchProcurementDocumentProcessingPolicyEntity";
             KeyPrefix = "commonDataModel.purchprocurementdocumentprocessingpolicyentity";
             KeySeparator = ".";
             Grouping = "/PurchProcurementDocumentProcessingPolicyEntity";
 
-            AddGroup("Common Data Model PurchProcurementDocumentProcessingPolicyEntity Details", group =>
+            AddGroup("PurchProcurementDocumentProcessingPolicyEntity Details", group =>
             {
                 AreThreeWayMatchedPurchaseOrderLinesDecentrallyReceivedOnly = group.Add(new VocabularyKey(nameof(AreThreeWayMatchedPurchaseOrderLinesDecentrallyReceivedOnly), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultSummaryUpdateMethod = group.Add(new VocabularyKey(nameof(DefaultSummaryUpdateMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

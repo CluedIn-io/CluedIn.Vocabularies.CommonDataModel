@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSItemDefaultInventoryStatusEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSItemDefaultInventoryStatusEntity";
+            VocabularyName = "WHSItemDefaultInventoryStatusEntity";
             KeyPrefix = "commonDataModel.whsitemdefaultinventorystatusentity";
             KeySeparator = ".";
             Grouping = "/WHSItemDefaultInventoryStatusEntity";
 
-            AddGroup("Common Data Model WHSItemDefaultInventoryStatusEntity Details", group =>
+            AddGroup("WHSItemDefaultInventoryStatusEntity Details", group =>
             {
                 AccountNumber = group.Add(new VocabularyKey(nameof(AccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultInventoryStatusId = group.Add(new VocabularyKey(nameof(DefaultInventoryStatusId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

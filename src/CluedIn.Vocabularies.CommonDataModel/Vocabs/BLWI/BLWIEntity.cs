@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BLWIEntityVocabulary()
         {
-            VocabularyName = "Common Data Model BLWIEntity";
+            VocabularyName = "BLWIEntity";
             KeyPrefix = "commonDataModel.blwientity";
             KeySeparator = ".";
             Grouping = "/BLWIEntity";
 
-            AddGroup("Common Data Model BLWIEntity Details", group =>
+            AddGroup("BLWIEntity Details", group =>
             {
                 Company = group.Add(new VocabularyKey(nameof(Company), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BLWITransaction = group.Add(new VocabularyKey(nameof(BLWITransaction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

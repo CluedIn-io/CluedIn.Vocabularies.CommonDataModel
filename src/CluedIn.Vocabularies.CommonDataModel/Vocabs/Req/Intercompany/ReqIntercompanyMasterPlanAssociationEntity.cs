@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReqIntercompanyMasterPlanAssociationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ReqIntercompanyMasterPlanAssociationEntity";
+            VocabularyName = "ReqIntercompanyMasterPlanAssociationEntity";
             KeyPrefix = "commonDataModel.reqintercompanymasterplanassociationentity";
             KeySeparator = ".";
             Grouping = "/ReqIntercompanyMasterPlanAssociationEntity";
 
-            AddGroup("Common Data Model ReqIntercompanyMasterPlanAssociationEntity Details", group =>
+            AddGroup("ReqIntercompanyMasterPlanAssociationEntity Details", group =>
             {
                 DownstreamCompanyId = group.Add(new VocabularyKey(nameof(DownstreamCompanyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DownstreamMasterPlanId = group.Add(new VocabularyKey(nameof(DownstreamMasterPlanId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

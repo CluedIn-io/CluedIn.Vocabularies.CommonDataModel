@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseWaveTemplateGroupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSWarehouseWaveTemplateGroupEntity";
+            VocabularyName = "WHSWarehouseWaveTemplateGroupEntity";
             KeyPrefix = "commonDataModel.whswarehousewavetemplategroupentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseWaveTemplateGroupEntity";
 
-            AddGroup("Common Data Model WHSWarehouseWaveTemplateGroupEntity Details", group =>
+            AddGroup("WHSWarehouseWaveTemplateGroupEntity Details", group =>
             {
                 WaveTemplate = group.Add(new VocabularyKey(nameof(WaveTemplate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineNumber = group.Add(new VocabularyKey(nameof(LineNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

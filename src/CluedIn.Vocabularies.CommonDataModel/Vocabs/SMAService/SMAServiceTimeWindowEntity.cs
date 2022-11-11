@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SMAServiceTimeWindowEntityVocabulary()
         {
-            VocabularyName = "Common Data Model SMAServiceTimeWindowEntity";
+            VocabularyName = "SMAServiceTimeWindowEntity";
             KeyPrefix = "commonDataModel.smaservicetimewindowentity";
             KeySeparator = ".";
             Grouping = "/SMAServiceTimeWindowEntity";
 
-            AddGroup("Common Data Model SMAServiceTimeWindowEntity Details", group =>
+            AddGroup("SMAServiceTimeWindowEntity Details", group =>
             {
                 MaximumManualForwardMovementDays = group.Add(new VocabularyKey(nameof(MaximumManualForwardMovementDays), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MaximumManualBackwardMovementDays = group.Add(new VocabularyKey(nameof(MaximumManualBackwardMovementDays), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

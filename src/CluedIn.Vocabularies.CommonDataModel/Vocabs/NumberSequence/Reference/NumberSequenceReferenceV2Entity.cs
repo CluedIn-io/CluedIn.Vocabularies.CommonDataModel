@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public NumberSequenceReferenceV2EntityVocabulary()
         {
-            VocabularyName = "Common Data Model NumberSequenceReferenceV2Entity";
+            VocabularyName = "NumberSequenceReferenceV2Entity";
             KeyPrefix = "commonDataModel.numbersequencereferencev2entity";
             KeySeparator = ".";
             Grouping = "/NumberSequenceReferenceV2Entity";
 
-            AddGroup("Common Data Model NumberSequenceReferenceV2Entity Details", group =>
+            AddGroup("NumberSequenceReferenceV2Entity Details", group =>
             {
                 ReuseNumbers = group.Add(new VocabularyKey(nameof(ReuseNumbers), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NumberSequenceDatatype = group.Add(new VocabularyKey(nameof(NumberSequenceDatatype), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

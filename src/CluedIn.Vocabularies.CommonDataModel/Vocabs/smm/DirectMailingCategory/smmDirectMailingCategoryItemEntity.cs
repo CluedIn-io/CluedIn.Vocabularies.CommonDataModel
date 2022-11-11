@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public smmDirectMailingCategoryItemEntityVocabulary()
         {
-            VocabularyName = "Common Data Model smmDirectMailingCategoryItemEntity";
+            VocabularyName = "smmDirectMailingCategoryItemEntity";
             KeyPrefix = "commonDataModel.smmdirectmailingcategoryitementity";
             KeySeparator = ".";
             Grouping = "/smmDirectMailingCategoryItemEntity";
 
-            AddGroup("Common Data Model smmDirectMailingCategoryItemEntity Details", group =>
+            AddGroup("smmDirectMailingCategoryItemEntity Details", group =>
             {
                 DirectMailingCategoryName = group.Add(new VocabularyKey(nameof(DirectMailingCategoryName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ItemDescription = group.Add(new VocabularyKey(nameof(ItemDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustCollectionsBIActivitiesAverageCloseTimeVocabulary()
         {
-            VocabularyName = "Common Data Model CustCollectionsBIActivitiesAverageCloseTime";
+            VocabularyName = "CustCollectionsBIActivitiesAverageCloseTime";
             KeyPrefix = "commonDataModel.custcollectionsbiactivitiesaverageclosetime";
             KeySeparator = ".";
             Grouping = "/CustCollectionsBIActivitiesAverageCloseTime";
 
-            AddGroup("Common Data Model CustCollectionsBIActivitiesAverageCloseTime Details", group =>
+            AddGroup("CustCollectionsBIActivitiesAverageCloseTime Details", group =>
             {
                 ActivityNumber = group.Add(new VocabularyKey(nameof(ActivityNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AverageClosedTime = group.Add(new VocabularyKey(nameof(AverageClosedTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

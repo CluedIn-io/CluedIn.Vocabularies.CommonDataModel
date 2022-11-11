@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchImportDeclarationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PurchImportDeclarationEntity";
+            VocabularyName = "PurchImportDeclarationEntity";
             KeyPrefix = "commonDataModel.purchimportdeclarationentity";
             KeySeparator = ".";
             Grouping = "/PurchImportDeclarationEntity";
 
-            AddGroup("Common Data Model PurchImportDeclarationEntity Details", group =>
+            AddGroup("PurchImportDeclarationEntity Details", group =>
             {
                 ImportDeclarationNumber = group.Add(new VocabularyKey(nameof(ImportDeclarationNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ImportDeclarationDate = group.Add(new VocabularyKey(nameof(ImportDeclarationDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

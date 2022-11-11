@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public smmOpportunityProbabilityRateEntityVocabulary()
         {
-            VocabularyName = "Common Data Model smmOpportunityProbabilityRateEntity";
+            VocabularyName = "smmOpportunityProbabilityRateEntity";
             KeyPrefix = "commonDataModel.smmopportunityprobabilityrateentity";
             KeySeparator = ".";
             Grouping = "/smmOpportunityProbabilityRateEntity";
 
-            AddGroup("Common Data Model smmOpportunityProbabilityRateEntity Details", group =>
+            AddGroup("smmOpportunityProbabilityRateEntity Details", group =>
             {
                 ProbabilityDescription = group.Add(new VocabularyKey(nameof(ProbabilityDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProbabilityPercentage = group.Add(new VocabularyKey(nameof(ProbabilityPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

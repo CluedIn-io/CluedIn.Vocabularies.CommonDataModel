@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DimAttributeFinancialTagEntityVocabulary()
         {
-            VocabularyName = "Common Data Model DimAttributeFinancialTagEntity";
+            VocabularyName = "DimAttributeFinancialTagEntity";
             KeyPrefix = "commonDataModel.dimattributefinancialtagentity";
             KeySeparator = ".";
             Grouping = "/DimAttributeFinancialTagEntity";
 
-            AddGroup("Common Data Model DimAttributeFinancialTagEntity Details", group =>
+            AddGroup("DimAttributeFinancialTagEntity Details", group =>
             {
                 Value = group.Add(new VocabularyKey(nameof(Value), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

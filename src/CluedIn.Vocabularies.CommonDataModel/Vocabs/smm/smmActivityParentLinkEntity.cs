@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public smmActivityParentLinkEntityVocabulary()
         {
-            VocabularyName = "Common Data Model smmActivityParentLinkEntity";
+            VocabularyName = "smmActivityParentLinkEntity";
             KeyPrefix = "commonDataModel.smmactivityparentlinkentity";
             KeySeparator = ".";
             Grouping = "/smmActivityParentLinkEntity";
 
-            AddGroup("Common Data Model smmActivityParentLinkEntity Details", group =>
+            AddGroup("smmActivityParentLinkEntity Details", group =>
             {
                 ActivityNumber = group.Add(new VocabularyKey(nameof(ActivityNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ParentType = group.Add(new VocabularyKey(nameof(ParentType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustWriteOffFinancialReasonsSetupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model CustWriteOffFinancialReasonsSetupEntity";
+            VocabularyName = "CustWriteOffFinancialReasonsSetupEntity";
             KeyPrefix = "commonDataModel.custwriteofffinancialreasonssetupentity";
             KeySeparator = ".";
             Grouping = "/CustWriteOffFinancialReasonsSetupEntity";
 
-            AddGroup("Common Data Model CustWriteOffFinancialReasonsSetupEntity Details", group =>
+            AddGroup("CustWriteOffFinancialReasonsSetupEntity Details", group =>
             {
                 Company = group.Add(new VocabularyKey(nameof(Company), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WriteOffReason = group.Add(new VocabularyKey(nameof(WriteOffReason), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

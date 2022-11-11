@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSCarrierFuelIndexLineEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TMSCarrierFuelIndexLineEntity";
+            VocabularyName = "TMSCarrierFuelIndexLineEntity";
             KeyPrefix = "commonDataModel.tmscarrierfuelindexlineentity";
             KeySeparator = ".";
             Grouping = "/TMSCarrierFuelIndexLineEntity";
 
-            AddGroup("Common Data Model TMSCarrierFuelIndexLineEntity Details", group =>
+            AddGroup("TMSCarrierFuelIndexLineEntity Details", group =>
             {
                 CarrierFuelIndexCode = group.Add(new VocabularyKey(nameof(CarrierFuelIndexCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EffectiveDateTime = group.Add(new VocabularyKey(nameof(EffectiveDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

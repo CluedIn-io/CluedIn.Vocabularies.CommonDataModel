@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MarketingFormSubmissionVocabulary()
         {
-            VocabularyName = "Common Data Model MarketingFormSubmission";
+            VocabularyName = "MarketingFormSubmission";
             KeyPrefix = "commonDataModel.marketingformsubmission";
             KeySeparator = ".";
             Grouping = "/MarketingFormSubmission";
 
-            AddGroup("Common Data Model MarketingFormSubmission Details", group =>
+            AddGroup("MarketingFormSubmission Details", group =>
             {
                 customerjourneyidValue = group.Add(new VocabularyKey(nameof(customerjourneyidValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 failuredescription = group.Add(new VocabularyKey(nameof(failuredescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

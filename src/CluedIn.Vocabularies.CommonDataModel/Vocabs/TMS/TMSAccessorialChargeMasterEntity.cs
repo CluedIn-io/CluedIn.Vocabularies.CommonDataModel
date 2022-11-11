@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSAccessorialChargeMasterEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TMSAccessorialChargeMasterEntity";
+            VocabularyName = "TMSAccessorialChargeMasterEntity";
             KeyPrefix = "commonDataModel.tmsaccessorialchargemasterentity";
             KeySeparator = ".";
             Grouping = "/TMSAccessorialChargeMasterEntity";
 
-            AddGroup("Common Data Model TMSAccessorialChargeMasterEntity Details", group =>
+            AddGroup("TMSAccessorialChargeMasterEntity Details", group =>
             {
                 MasterCode = group.Add(new VocabularyKey(nameof(MasterCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ChargeMasterType = group.Add(new VocabularyKey(nameof(ChargeMasterType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BatchJobHistoryEntityVocabulary()
         {
-            VocabularyName = "Common Data Model BatchJobHistoryEntity";
+            VocabularyName = "BatchJobHistoryEntity";
             KeyPrefix = "commonDataModel.batchjobhistoryentity";
             KeySeparator = ".";
             Grouping = "/BatchJobHistoryEntity";
 
-            AddGroup("Common Data Model BatchJobHistoryEntity Details", group =>
+            AddGroup("BatchJobHistoryEntity Details", group =>
             {
                 AlertsProcessed = group.Add(new VocabularyKey(nameof(AlertsProcessed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 JobDescription = group.Add(new VocabularyKey(nameof(JobDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

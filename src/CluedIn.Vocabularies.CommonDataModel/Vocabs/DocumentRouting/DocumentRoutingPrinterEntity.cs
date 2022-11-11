@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DocumentRoutingPrinterEntityVocabulary()
         {
-            VocabularyName = "Common Data Model DocumentRoutingPrinterEntity";
+            VocabularyName = "DocumentRoutingPrinterEntity";
             KeyPrefix = "commonDataModel.documentroutingprinterentity";
             KeySeparator = ".";
             Grouping = "/DocumentRoutingPrinterEntity";
 
-            AddGroup("Common Data Model DocumentRoutingPrinterEntity Details", group =>
+            AddGroup("DocumentRoutingPrinterEntity Details", group =>
             {
                 ClientApp = group.Add(new VocabularyKey(nameof(ClientApp), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Printer = group.Add(new VocabularyKey(nameof(Printer), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

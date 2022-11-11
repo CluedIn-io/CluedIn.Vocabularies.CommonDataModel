@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxNIPTableEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TaxNIPTableEntity";
+            VocabularyName = "TaxNIPTableEntity";
             KeyPrefix = "commonDataModel.taxniptableentity";
             KeySeparator = ".";
             Grouping = "/TaxNIPTableEntity";
 
-            AddGroup("Common Data Model TaxNIPTableEntity Details", group =>
+            AddGroup("TaxNIPTableEntity Details", group =>
             {
                 AccountName = group.Add(new VocabularyKey(nameof(AccountName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Addressing = group.Add(new VocabularyKey(nameof(Addressing), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

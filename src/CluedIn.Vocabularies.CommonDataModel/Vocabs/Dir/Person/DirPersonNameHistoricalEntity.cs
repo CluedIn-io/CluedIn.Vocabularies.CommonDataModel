@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DirPersonNameHistoricalEntityVocabulary()
         {
-            VocabularyName = "Common Data Model DirPersonNameHistoricalEntity";
+            VocabularyName = "DirPersonNameHistoricalEntity";
             KeyPrefix = "commonDataModel.dirpersonnamehistoricalentity";
             KeySeparator = ".";
             Grouping = "/DirPersonNameHistoricalEntity";
 
-            AddGroup("Common Data Model DirPersonNameHistoricalEntity Details", group =>
+            AddGroup("DirPersonNameHistoricalEntity Details", group =>
             {
                 FirstName = group.Add(new VocabularyKey(nameof(FirstName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LastNamePrefix = group.Add(new VocabularyKey(nameof(LastNamePrefix), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

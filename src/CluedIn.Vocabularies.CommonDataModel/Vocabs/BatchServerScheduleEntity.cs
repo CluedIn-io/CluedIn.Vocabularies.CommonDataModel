@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BatchServerScheduleEntityVocabulary()
         {
-            VocabularyName = "Common Data Model BatchServerScheduleEntity";
+            VocabularyName = "BatchServerScheduleEntity";
             KeyPrefix = "commonDataModel.batchserverscheduleentity";
             KeySeparator = ".";
             Grouping = "/BatchServerScheduleEntity";
 
-            AddGroup("Common Data Model BatchServerScheduleEntity Details", group =>
+            AddGroup("BatchServerScheduleEntity Details", group =>
             {
                 EndTime = group.Add(new VocabularyKey(nameof(EndTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MaximumBatchThreads = group.Add(new VocabularyKey(nameof(MaximumBatchThreads), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

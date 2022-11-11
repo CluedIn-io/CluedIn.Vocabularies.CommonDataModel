@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FiscalBooksParametersPerStateEntityVocabulary()
         {
-            VocabularyName = "Common Data Model FiscalBooksParametersPerStateEntity";
+            VocabularyName = "FiscalBooksParametersPerStateEntity";
             KeyPrefix = "commonDataModel.fiscalbooksparametersperstateentity";
             KeySeparator = ".";
             Grouping = "/FiscalBooksParametersPerStateEntity";
 
-            AddGroup("Common Data Model FiscalBooksParametersPerStateEntity Details", group =>
+            AddGroup("FiscalBooksParametersPerStateEntity Details", group =>
             {
                 CIAPCalculateInstallmentForOutgoing = group.Add(new VocabularyKey(nameof(CIAPCalculateInstallmentForOutgoing), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ByFiscalDocument = group.Add(new VocabularyKey(nameof(ByFiscalDocument), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

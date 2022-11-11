@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventTransferOrderCFOPMappingEntityVocabulary()
         {
-            VocabularyName = "Common Data Model InventTransferOrderCFOPMappingEntity";
+            VocabularyName = "InventTransferOrderCFOPMappingEntity";
             KeyPrefix = "commonDataModel.inventtransferordercfopmappingentity";
             KeySeparator = ".";
             Grouping = "/InventTransferOrderCFOPMappingEntity";
 
-            AddGroup("Common Data Model InventTransferOrderCFOPMappingEntity Details", group =>
+            AddGroup("InventTransferOrderCFOPMappingEntity Details", group =>
             {
                 ShipmentCFOPRecId = group.Add(new VocabularyKey(nameof(ShipmentCFOPRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReceiptCFOPRecId = group.Add(new VocabularyKey(nameof(ReceiptCFOPRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

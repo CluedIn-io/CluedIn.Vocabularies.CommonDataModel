@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FHAccountVocabulary()
         {
-            VocabularyName = "Common Data Model FHAccount";
+            VocabularyName = "FHAccount";
             KeyPrefix = "commonDataModel.fhaccount";
             KeySeparator = ".";
             Grouping = "/FHAccount";
 
-            AddGroup("Common Data Model FHAccount Details", group =>
+            AddGroup("FHAccount Details", group =>
             {
                 FH_AccountId = group.Add(new VocabularyKey(nameof(FH_AccountId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

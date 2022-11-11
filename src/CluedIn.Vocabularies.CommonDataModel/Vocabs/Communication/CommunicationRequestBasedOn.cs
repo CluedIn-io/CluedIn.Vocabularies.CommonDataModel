@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CommunicationRequestBasedOnVocabulary()
         {
-            VocabularyName = "Common Data Model CommunicationRequestBasedOn";
+            VocabularyName = "CommunicationRequestBasedOn";
             KeyPrefix = "commonDataModel.communicationrequestbasedon";
             KeySeparator = ".";
             Grouping = "/CommunicationRequestBasedOn";
 
-            AddGroup("Common Data Model CommunicationRequestBasedOn Details", group =>
+            AddGroup("CommunicationRequestBasedOn Details", group =>
             {
                 basedOn = group.Add(new VocabularyKey(nameof(basedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 communicationRequestBasedOnId = group.Add(new VocabularyKey(nameof(communicationRequestBasedOnId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

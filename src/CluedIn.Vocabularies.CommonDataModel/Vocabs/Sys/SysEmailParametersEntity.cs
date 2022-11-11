@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SysEmailParametersEntityVocabulary()
         {
-            VocabularyName = "Common Data Model SysEmailParametersEntity";
+            VocabularyName = "SysEmailParametersEntity";
             KeyPrefix = "commonDataModel.sysemailparametersentity";
             KeySeparator = ".";
             Grouping = "/SysEmailParametersEntity";
 
-            AddGroup("Common Data Model SysEmailParametersEntity Details", group =>
+            AddGroup("SysEmailParametersEntity Details", group =>
             {
                 ID = group.Add(new VocabularyKey(nameof(ID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MaximumEmailAttachmentSize = group.Add(new VocabularyKey(nameof(MaximumEmailAttachmentSize), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

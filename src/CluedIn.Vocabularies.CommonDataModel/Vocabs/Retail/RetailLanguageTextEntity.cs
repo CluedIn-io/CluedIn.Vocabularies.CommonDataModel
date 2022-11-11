@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailLanguageTextEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RetailLanguageTextEntity";
+            VocabularyName = "RetailLanguageTextEntity";
             KeyPrefix = "commonDataModel.retaillanguagetextentity";
             KeySeparator = ".";
             Grouping = "/RetailLanguageTextEntity";
 
-            AddGroup("Common Data Model RetailLanguageTextEntity Details", group =>
+            AddGroup("RetailLanguageTextEntity Details", group =>
             {
                 DateCreated = group.Add(new VocabularyKey(nameof(DateCreated), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DateUpdated = group.Add(new VocabularyKey(nameof(DateUpdated), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

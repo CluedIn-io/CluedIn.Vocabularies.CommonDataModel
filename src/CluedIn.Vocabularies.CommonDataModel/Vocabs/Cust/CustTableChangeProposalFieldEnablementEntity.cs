@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustTableChangeProposalFieldEnablementEntityVocabulary()
         {
-            VocabularyName = "Common Data Model CustTableChangeProposalFieldEnablementEntity";
+            VocabularyName = "CustTableChangeProposalFieldEnablementEntity";
             KeyPrefix = "commonDataModel.custtablechangeproposalfieldenablemententity";
             KeySeparator = ".";
             Grouping = "/CustTableChangeProposalFieldEnablementEntity";
 
-            AddGroup("Common Data Model CustTableChangeProposalFieldEnablementEntity Details", group =>
+            AddGroup("CustTableChangeProposalFieldEnablementEntity Details", group =>
             {
                 Field = group.Add(new VocabularyKey(nameof(Field), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsEnabled = group.Add(new VocabularyKey(nameof(IsEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

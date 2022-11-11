@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public OpResOperationsResourceGroupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model OpResOperationsResourceGroupEntity";
+            VocabularyName = "OpResOperationsResourceGroupEntity";
             KeyPrefix = "commonDataModel.opresoperationsresourcegroupentity";
             KeySeparator = ".";
             Grouping = "/OpResOperationsResourceGroupEntity";
 
-            AddGroup("Common Data Model OpResOperationsResourceGroupEntity Details", group =>
+            AddGroup("OpResOperationsResourceGroupEntity Details", group =>
             {
                 BatchCapacity = group.Add(new VocabularyKey(nameof(BatchCapacity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Capacity = group.Add(new VocabularyKey(nameof(Capacity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerAdvancedRuleStructureActiveOnlyEntityVocabulary()
         {
-            VocabularyName = "Common Data Model LedgerAdvancedRuleStructureActiveOnlyEntity";
+            VocabularyName = "LedgerAdvancedRuleStructureActiveOnlyEntity";
             KeyPrefix = "commonDataModel.ledgeradvancedrulestructureactiveonlyentity";
             KeySeparator = ".";
             Grouping = "/LedgerAdvancedRuleStructureActiveOnlyEntity";
 
-            AddGroup("Common Data Model LedgerAdvancedRuleStructureActiveOnlyEntity Details", group =>
+            AddGroup("LedgerAdvancedRuleStructureActiveOnlyEntity Details", group =>
             {
                 AccountRuleStructureName = group.Add(new VocabularyKey(nameof(AccountRuleStructureName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesOrderOriginEntityVocabulary()
         {
-            VocabularyName = "Common Data Model SalesOrderOriginEntity";
+            VocabularyName = "SalesOrderOriginEntity";
             KeyPrefix = "commonDataModel.salesorderoriginentity";
             KeySeparator = ".";
             Grouping = "/SalesOrderOriginEntity";
 
-            AddGroup("Common Data Model SalesOrderOriginEntity Details", group =>
+            AddGroup("SalesOrderOriginEntity Details", group =>
             {
                 OriginDescription = group.Add(new VocabularyKey(nameof(OriginDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OriginCode = group.Add(new VocabularyKey(nameof(OriginCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

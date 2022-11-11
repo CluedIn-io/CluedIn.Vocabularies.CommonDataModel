@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmTotalCompStatementSectionEarningEntityVocabulary()
         {
-            VocabularyName = "Common Data Model HcmTotalCompStatementSectionEarningEntity";
+            VocabularyName = "HcmTotalCompStatementSectionEarningEntity";
             KeyPrefix = "commonDataModel.hcmtotalcompstatementsectionearningentity";
             KeySeparator = ".";
             Grouping = "/HcmTotalCompStatementSectionEarningEntity";
 
-            AddGroup("Common Data Model HcmTotalCompStatementSectionEarningEntity Details", group =>
+            AddGroup("HcmTotalCompStatementSectionEarningEntity Details", group =>
             {
                 EarningCode = group.Add(new VocabularyKey(nameof(EarningCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EarningCodeOrGroupType = group.Add(new VocabularyKey(nameof(EarningCodeOrGroupType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

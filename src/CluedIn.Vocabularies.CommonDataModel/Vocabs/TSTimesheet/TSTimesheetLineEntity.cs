@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TSTimesheetLineEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TSTimesheetLineEntity";
+            VocabularyName = "TSTimesheetLineEntity";
             KeyPrefix = "commonDataModel.tstimesheetlineentity";
             KeySeparator = ".";
             Grouping = "/TSTimesheetLineEntity";
 
-            AddGroup("Common Data Model TSTimesheetLineEntity Details", group =>
+            AddGroup("TSTimesheetLineEntity Details", group =>
             {
                 Resource = group.Add(new VocabularyKey(nameof(Resource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CategoryId = group.Add(new VocabularyKey(nameof(CategoryId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

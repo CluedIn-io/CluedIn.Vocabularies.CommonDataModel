@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvExpenseDelegateEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TrvExpenseDelegateEntity";
+            VocabularyName = "TrvExpenseDelegateEntity";
             KeyPrefix = "commonDataModel.trvexpensedelegateentity";
             KeySeparator = ".";
             Grouping = "/TrvExpenseDelegateEntity";
 
-            AddGroup("Common Data Model TrvExpenseDelegateEntity Details", group =>
+            AddGroup("TrvExpenseDelegateEntity Details", group =>
             {
                 DelegatedUser = group.Add(new VocabularyKey(nameof(DelegatedUser), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DelegatedWorker = group.Add(new VocabularyKey(nameof(DelegatedWorker), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

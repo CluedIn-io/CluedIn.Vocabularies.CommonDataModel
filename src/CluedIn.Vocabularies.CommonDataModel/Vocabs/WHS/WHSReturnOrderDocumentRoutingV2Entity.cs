@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSReturnOrderDocumentRoutingV2EntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSReturnOrderDocumentRoutingV2Entity";
+            VocabularyName = "WHSReturnOrderDocumentRoutingV2Entity";
             KeyPrefix = "commonDataModel.whsreturnorderdocumentroutingv2entity";
             KeySeparator = ".";
             Grouping = "/WHSReturnOrderDocumentRoutingV2Entity";
 
-            AddGroup("Common Data Model WHSReturnOrderDocumentRoutingV2Entity Details", group =>
+            AddGroup("WHSReturnOrderDocumentRoutingV2Entity Details", group =>
             {
                 CustomerAccountNumber = group.Add(new VocabularyKey(nameof(CustomerAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ShippingCarrierId = group.Add(new VocabularyKey(nameof(ShippingCarrierId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

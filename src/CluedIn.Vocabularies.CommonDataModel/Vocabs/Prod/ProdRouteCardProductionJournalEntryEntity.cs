@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProdRouteCardProductionJournalEntryEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ProdRouteCardProductionJournalEntryEntity";
+            VocabularyName = "ProdRouteCardProductionJournalEntryEntity";
             KeyPrefix = "commonDataModel.prodroutecardproductionjournalentryentity";
             KeySeparator = ".";
             Grouping = "/ProdRouteCardProductionJournalEntryEntity";
 
-            AddGroup("Common Data Model ProdRouteCardProductionJournalEntryEntity Details", group =>
+            AddGroup("ProdRouteCardProductionJournalEntryEntity Details", group =>
             {
                 IsJobCancelled = group.Add(new VocabularyKey(nameof(IsJobCancelled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 HoursRouteCostCategoryId = group.Add(new VocabularyKey(nameof(HoursRouteCostCategoryId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseWorkOperationProcessingRuleEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSWarehouseWorkOperationProcessingRuleEntity";
+            VocabularyName = "WHSWarehouseWorkOperationProcessingRuleEntity";
             KeyPrefix = "commonDataModel.whswarehouseworkoperationprocessingruleentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseWorkOperationProcessingRuleEntity";
 
-            AddGroup("Common Data Model WHSWarehouseWorkOperationProcessingRuleEntity Details", group =>
+            AddGroup("WHSWarehouseWorkOperationProcessingRuleEntity Details", group =>
             {
                 WarehouseWorkProcessingPolicyName = group.Add(new VocabularyKey(nameof(WarehouseWorkProcessingPolicyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkOrderType = group.Add(new VocabularyKey(nameof(WorkOrderType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxReportExtraFieldsEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TaxReportExtraFieldsEntity";
+            VocabularyName = "TaxReportExtraFieldsEntity";
             KeyPrefix = "commonDataModel.taxreportextrafieldsentity";
             KeySeparator = ".";
             Grouping = "/TaxReportExtraFieldsEntity";
 
-            AddGroup("Common Data Model TaxReportExtraFieldsEntity Details", group =>
+            AddGroup("TaxReportExtraFieldsEntity Details", group =>
             {
                 deferredGSTOnImport = group.Add(new VocabularyKey(nameof(deferredGSTOnImport), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DeferredInstalment = group.Add(new VocabularyKey(nameof(DeferredInstalment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

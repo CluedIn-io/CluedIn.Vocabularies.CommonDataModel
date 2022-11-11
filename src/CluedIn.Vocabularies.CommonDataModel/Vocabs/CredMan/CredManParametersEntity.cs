@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CredManParametersEntityVocabulary()
         {
-            VocabularyName = "Common Data Model CredManParametersEntity";
+            VocabularyName = "CredManParametersEntity";
             KeyPrefix = "commonDataModel.credmanparametersentity";
             KeySeparator = ".";
             Grouping = "/CredManParametersEntity";
 
-            AddGroup("Common Data Model CredManParametersEntity Details", group =>
+            AddGroup("CredManParametersEntity Details", group =>
             {
                 AllowBlankCreditLimitExpiryDate = group.Add(new VocabularyKey(nameof(AllowBlankCreditLimitExpiryDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AllowConfirmation = group.Add(new VocabularyKey(nameof(AllowConfirmation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

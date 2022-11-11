@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EFDocReturnCodeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model EFDocReturnCodeEntity";
+            VocabularyName = "EFDocReturnCodeEntity";
             KeyPrefix = "commonDataModel.efdocreturncodeentity";
             KeySeparator = ".";
             Grouping = "/EFDocReturnCodeEntity";
 
-            AddGroup("Common Data Model EFDocReturnCodeEntity Details", group =>
+            AddGroup("EFDocReturnCodeEntity Details", group =>
             {
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MessageType = group.Add(new VocabularyKey(nameof(MessageType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

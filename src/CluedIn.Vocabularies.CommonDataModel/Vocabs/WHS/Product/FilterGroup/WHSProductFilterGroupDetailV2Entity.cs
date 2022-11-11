@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSProductFilterGroupDetailV2EntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSProductFilterGroupDetailV2Entity";
+            VocabularyName = "WHSProductFilterGroupDetailV2Entity";
             KeyPrefix = "commonDataModel.whsproductfiltergroupdetailv2entity";
             KeySeparator = ".";
             Grouping = "/WHSProductFilterGroupDetailV2Entity";
 
-            AddGroup("Common Data Model WHSProductFilterGroupDetailV2Entity Details", group =>
+            AddGroup("WHSProductFilterGroupDetailV2Entity Details", group =>
             {
                 FromDateTime = group.Add(new VocabularyKey(nameof(FromDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductGroupId = group.Add(new VocabularyKey(nameof(ProductGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

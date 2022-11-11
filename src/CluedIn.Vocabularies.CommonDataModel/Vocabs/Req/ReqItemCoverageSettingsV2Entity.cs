@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReqItemCoverageSettingsV2EntityVocabulary()
         {
-            VocabularyName = "Common Data Model ReqItemCoverageSettingsV2Entity";
+            VocabularyName = "ReqItemCoverageSettingsV2Entity";
             KeyPrefix = "commonDataModel.reqitemcoveragesettingsv2entity";
             KeySeparator = ".";
             Grouping = "/ReqItemCoverageSettingsV2Entity";
 
-            AddGroup("Common Data Model ReqItemCoverageSettingsV2Entity Details", group =>
+            AddGroup("ReqItemCoverageSettingsV2Entity Details", group =>
             {
                 ItemNumber = group.Add(new VocabularyKey(nameof(ItemNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CoverageItemBatchNumber = group.Add(new VocabularyKey(nameof(CoverageItemBatchNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

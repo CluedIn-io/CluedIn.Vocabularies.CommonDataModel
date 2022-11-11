@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public GDPRConsentChangeRecordVocabulary()
         {
-            VocabularyName = "Common Data Model GDPRConsentChangeRecord";
+            VocabularyName = "GDPRConsentChangeRecord";
             KeyPrefix = "commonDataModel.gdprconsentchangerecord";
             KeySeparator = ".";
             Grouping = "/GDPRConsentChangeRecord";
 
-            AddGroup("Common Data Model GDPRConsentChangeRecord Details", group =>
+            AddGroup("GDPRConsentChangeRecord Details", group =>
             {
                 createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 createdOnBehalfBy = group.Add(new VocabularyKey(nameof(createdOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

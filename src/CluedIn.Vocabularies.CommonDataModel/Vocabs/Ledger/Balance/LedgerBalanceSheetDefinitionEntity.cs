@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerBalanceSheetDefinitionEntityVocabulary()
         {
-            VocabularyName = "Common Data Model LedgerBalanceSheetDefinitionEntity";
+            VocabularyName = "LedgerBalanceSheetDefinitionEntity";
             KeyPrefix = "commonDataModel.ledgerbalancesheetdefinitionentity";
             KeySeparator = ".";
             Grouping = "/LedgerBalanceSheetDefinitionEntity";
 
-            AddGroup("Common Data Model LedgerBalanceSheetDefinitionEntity Details", group =>
+            AddGroup("LedgerBalanceSheetDefinitionEntity Details", group =>
             {
                 LineType = group.Add(new VocabularyKey(nameof(LineType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Line = group.Add(new VocabularyKey(nameof(Line), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

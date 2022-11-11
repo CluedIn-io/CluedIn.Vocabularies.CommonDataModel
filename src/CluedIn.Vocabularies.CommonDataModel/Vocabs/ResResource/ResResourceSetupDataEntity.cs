@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ResResourceSetupDataEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ResResourceSetupDataEntity";
+            VocabularyName = "ResResourceSetupDataEntity";
             KeyPrefix = "commonDataModel.resresourcesetupdataentity";
             KeySeparator = ".";
             Grouping = "/ResResourceSetupDataEntity";
 
-            AddGroup("Common Data Model ResResourceSetupDataEntity Details", group =>
+            AddGroup("ResResourceSetupDataEntity Details", group =>
             {
                 DefaultTimeCategory = group.Add(new VocabularyKey(nameof(DefaultTimeCategory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LegalEntity = group.Add(new VocabularyKey(nameof(LegalEntity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

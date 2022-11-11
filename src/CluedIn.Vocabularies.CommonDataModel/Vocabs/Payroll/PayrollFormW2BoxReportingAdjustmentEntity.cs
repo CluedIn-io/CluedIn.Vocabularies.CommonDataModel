@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollFormW2BoxReportingAdjustmentEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PayrollFormW2BoxReportingAdjustmentEntity";
+            VocabularyName = "PayrollFormW2BoxReportingAdjustmentEntity";
             KeyPrefix = "commonDataModel.payrollformw2boxreportingadjustmententity";
             KeySeparator = ".";
             Grouping = "/PayrollFormW2BoxReportingAdjustmentEntity";
 
-            AddGroup("Common Data Model PayrollFormW2BoxReportingAdjustmentEntity Details", group =>
+            AddGroup("PayrollFormW2BoxReportingAdjustmentEntity Details", group =>
             {
                 Amount = group.Add(new VocabularyKey(nameof(Amount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReportingDate = group.Add(new VocabularyKey(nameof(ReportingDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

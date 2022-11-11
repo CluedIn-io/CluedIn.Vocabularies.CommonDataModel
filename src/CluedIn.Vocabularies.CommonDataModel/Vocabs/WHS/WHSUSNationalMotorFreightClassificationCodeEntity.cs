@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSUSNationalMotorFreightClassificationCodeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSUSNationalMotorFreightClassificationCodeEntity";
+            VocabularyName = "WHSUSNationalMotorFreightClassificationCodeEntity";
             KeyPrefix = "commonDataModel.whsusnationalmotorfreightclassificationcodeentity";
             KeySeparator = ".";
             Grouping = "/WHSUSNationalMotorFreightClassificationCodeEntity";
 
-            AddGroup("Common Data Model WHSUSNationalMotorFreightClassificationCodeEntity Details", group =>
+            AddGroup("WHSUSNationalMotorFreightClassificationCodeEntity Details", group =>
             {
                 DefaultBillOfLadingHandlingType = group.Add(new VocabularyKey(nameof(DefaultBillOfLadingHandlingType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LTLClassCode = group.Add(new VocabularyKey(nameof(LTLClassCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

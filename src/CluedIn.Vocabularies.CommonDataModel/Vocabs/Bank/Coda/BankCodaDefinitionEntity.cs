@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankCodaDefinitionEntityVocabulary()
         {
-            VocabularyName = "Common Data Model BankCodaDefinitionEntity";
+            VocabularyName = "BankCodaDefinitionEntity";
             KeyPrefix = "commonDataModel.bankcodadefinitionentity";
             KeySeparator = ".";
             Grouping = "/BankCodaDefinitionEntity";
 
-            AddGroup("Common Data Model BankCodaDefinitionEntity Details", group =>
+            AddGroup("BankCodaDefinitionEntity Details", group =>
             {
                 BankAccount = group.Add(new VocabularyKey(nameof(BankAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AccountType = group.Add(new VocabularyKey(nameof(AccountType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

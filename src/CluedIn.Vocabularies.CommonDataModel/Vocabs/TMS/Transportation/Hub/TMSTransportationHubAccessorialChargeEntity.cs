@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationHubAccessorialChargeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TMSTransportationHubAccessorialChargeEntity";
+            VocabularyName = "TMSTransportationHubAccessorialChargeEntity";
             KeyPrefix = "commonDataModel.tmstransportationhubaccessorialchargeentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationHubAccessorialChargeEntity";
 
-            AddGroup("Common Data Model TMSTransportationHubAccessorialChargeEntity Details", group =>
+            AddGroup("TMSTransportationHubAccessorialChargeEntity Details", group =>
             {
                 AccessorialChargeMasterCode = group.Add(new VocabularyKey(nameof(AccessorialChargeMasterCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransportationBillingGroupId = group.Add(new VocabularyKey(nameof(TransportationBillingGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

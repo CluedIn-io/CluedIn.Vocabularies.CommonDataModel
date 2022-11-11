@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public NumberSequenceTableV2EntityVocabulary()
         {
-            VocabularyName = "Common Data Model NumberSequenceTableV2Entity";
+            VocabularyName = "NumberSequenceTableV2Entity";
             KeyPrefix = "commonDataModel.numbersequencetablev2entity";
             KeySeparator = ".";
             Grouping = "/NumberSequenceTableV2Entity";
 
-            AddGroup("Common Data Model NumberSequenceTableV2Entity Details", group =>
+            AddGroup("NumberSequenceTableV2Entity Details", group =>
             {
                 ToALowerNumber = group.Add(new VocabularyKey(nameof(ToALowerNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ToAHigherNumber = group.Add(new VocabularyKey(nameof(ToAHigherNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

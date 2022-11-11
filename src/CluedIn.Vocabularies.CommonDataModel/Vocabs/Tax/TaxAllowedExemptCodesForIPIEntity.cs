@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxAllowedExemptCodesForIPIEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TaxAllowedExemptCodesForIPIEntity";
+            VocabularyName = "TaxAllowedExemptCodesForIPIEntity";
             KeyPrefix = "commonDataModel.taxallowedexemptcodesforipientity";
             KeySeparator = ".";
             Grouping = "/TaxAllowedExemptCodesForIPIEntity";
 
-            AddGroup("Common Data Model TaxAllowedExemptCodesForIPIEntity Details", group =>
+            AddGroup("TaxAllowedExemptCodesForIPIEntity Details", group =>
             {
                 ExemptCode = group.Add(new VocabularyKey(nameof(ExemptCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxationCode = group.Add(new VocabularyKey(nameof(TaxationCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

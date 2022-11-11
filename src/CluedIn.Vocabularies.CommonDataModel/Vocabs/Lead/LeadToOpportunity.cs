@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LeadToOpportunityVocabulary()
         {
-            VocabularyName = "Common Data Model LeadToOpportunity";
+            VocabularyName = "LeadToOpportunity";
             KeyPrefix = "commonDataModel.leadtoopportunity";
             KeySeparator = ".";
             Grouping = "/LeadToOpportunity";
 
-            AddGroup("Common Data Model LeadToOpportunity Details", group =>
+            AddGroup("LeadToOpportunity Details", group =>
             {
                 activeStageId = group.Add(new VocabularyKey(nameof(activeStageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 activeStageStartedOn = group.Add(new VocabularyKey(nameof(activeStageStartedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

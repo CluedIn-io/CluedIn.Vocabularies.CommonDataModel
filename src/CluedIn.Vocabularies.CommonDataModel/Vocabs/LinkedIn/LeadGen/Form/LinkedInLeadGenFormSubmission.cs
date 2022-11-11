@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LinkedInLeadGenFormSubmissionVocabulary()
         {
-            VocabularyName = "Common Data Model LinkedInLeadGenFormSubmission";
+            VocabularyName = "LinkedInLeadGenFormSubmission";
             KeyPrefix = "commonDataModel.linkedinleadgenformsubmission";
             KeySeparator = ".";
             Grouping = "/LinkedInLeadGenFormSubmission";
 
-            AddGroup("Common Data Model LinkedInLeadGenFormSubmission Details", group =>
+            AddGroup("LinkedInLeadGenFormSubmission Details", group =>
             {
                 linkedInAccountId = group.Add(new VocabularyKey(nameof(linkedInAccountId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 linkedInCampaignID = group.Add(new VocabularyKey(nameof(linkedInCampaignID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

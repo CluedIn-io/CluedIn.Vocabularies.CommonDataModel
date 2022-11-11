@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FBContribCreditTypeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model FBContribCreditTypeEntity";
+            VocabularyName = "FBContribCreditTypeEntity";
             KeyPrefix = "commonDataModel.fbcontribcredittypeentity";
             KeySeparator = ".";
             Grouping = "/FBContribCreditTypeEntity";
 
-            AddGroup("Common Data Model FBContribCreditTypeEntity Details", group =>
+            AddGroup("FBContribCreditTypeEntity Details", group =>
             {
                 CreditType = group.Add(new VocabularyKey(nameof(CreditType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

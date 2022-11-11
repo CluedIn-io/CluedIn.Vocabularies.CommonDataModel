@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PCProductConfigurationModelVersionEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PCProductConfigurationModelVersionEntity";
+            VocabularyName = "PCProductConfigurationModelVersionEntity";
             KeyPrefix = "commonDataModel.pcproductconfigurationmodelversionentity";
             KeySeparator = ".";
             Grouping = "/PCProductConfigurationModelVersionEntity";
 
-            AddGroup("Common Data Model PCProductConfigurationModelVersionEntity Details", group =>
+            AddGroup("PCProductConfigurationModelVersionEntity Details", group =>
             {
                 ValidFromDate = group.Add(new VocabularyKey(nameof(ValidFromDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidToDate = group.Add(new VocabularyKey(nameof(ValidToDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

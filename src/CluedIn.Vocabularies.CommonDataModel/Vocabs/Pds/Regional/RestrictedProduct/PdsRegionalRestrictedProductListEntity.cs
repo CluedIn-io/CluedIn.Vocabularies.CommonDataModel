@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PdsRegionalRestrictedProductListEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PdsRegionalRestrictedProductListEntity";
+            VocabularyName = "PdsRegionalRestrictedProductListEntity";
             KeyPrefix = "commonDataModel.pdsregionalrestrictedproductlistentity";
             KeySeparator = ".";
             Grouping = "/PdsRegionalRestrictedProductListEntity";
 
-            AddGroup("Common Data Model PdsRegionalRestrictedProductListEntity Details", group =>
+            AddGroup("PdsRegionalRestrictedProductListEntity Details", group =>
             {
                 RestrictingCountryRegionId = group.Add(new VocabularyKey(nameof(RestrictingCountryRegionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RestrictingStateId = group.Add(new VocabularyKey(nameof(RestrictingStateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

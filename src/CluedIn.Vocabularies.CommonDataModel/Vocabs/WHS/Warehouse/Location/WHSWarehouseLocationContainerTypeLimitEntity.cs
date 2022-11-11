@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseLocationContainerTypeLimitEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSWarehouseLocationContainerTypeLimitEntity";
+            VocabularyName = "WHSWarehouseLocationContainerTypeLimitEntity";
             KeyPrefix = "commonDataModel.whswarehouselocationcontainertypelimitentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseLocationContainerTypeLimitEntity";
 
-            AddGroup("Common Data Model WHSWarehouseLocationContainerTypeLimitEntity Details", group =>
+            AddGroup("WHSWarehouseLocationContainerTypeLimitEntity Details", group =>
             {
                 IsUnlimitedQuantityAllowed = group.Add(new VocabularyKey(nameof(IsUnlimitedQuantityAllowed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ContainerTypeId = group.Add(new VocabularyKey(nameof(ContainerTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

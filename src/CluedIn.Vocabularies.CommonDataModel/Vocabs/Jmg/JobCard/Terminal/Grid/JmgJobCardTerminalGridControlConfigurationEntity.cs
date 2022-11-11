@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgJobCardTerminalGridControlConfigurationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model JmgJobCardTerminalGridControlConfigurationEntity";
+            VocabularyName = "JmgJobCardTerminalGridControlConfigurationEntity";
             KeyPrefix = "commonDataModel.jmgjobcardterminalgridcontrolconfigurationentity";
             KeySeparator = ".";
             Grouping = "/JmgJobCardTerminalGridControlConfigurationEntity";
 
-            AddGroup("Common Data Model JmgJobCardTerminalGridControlConfigurationEntity Details", group =>
+            AddGroup("JmgJobCardTerminalGridControlConfigurationEntity Details", group =>
             {
                 FieldName = group.Add(new VocabularyKey(nameof(FieldName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ControlLocation = group.Add(new VocabularyKey(nameof(ControlLocation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

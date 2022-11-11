@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSLoadingDockManagementProfileEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSLoadingDockManagementProfileEntity";
+            VocabularyName = "WHSLoadingDockManagementProfileEntity";
             KeyPrefix = "commonDataModel.whsloadingdockmanagementprofileentity";
             KeySeparator = ".";
             Grouping = "/WHSLoadingDockManagementProfileEntity";
 
-            AddGroup("Common Data Model WHSLoadingDockManagementProfileEntity Details", group =>
+            AddGroup("WHSLoadingDockManagementProfileEntity Details", group =>
             {
                 WillWaveAllocateToEmptyDockLocationsOnly = group.Add(new VocabularyKey(nameof(WillWaveAllocateToEmptyDockLocationsOnly), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProfileDescription = group.Add(new VocabularyKey(nameof(ProfileDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

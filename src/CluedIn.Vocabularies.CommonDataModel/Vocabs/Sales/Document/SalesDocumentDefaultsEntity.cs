@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesDocumentDefaultsEntityVocabulary()
         {
-            VocabularyName = "Common Data Model SalesDocumentDefaultsEntity";
+            VocabularyName = "SalesDocumentDefaultsEntity";
             KeyPrefix = "commonDataModel.salesdocumentdefaultsentity";
             KeySeparator = ".";
             Grouping = "/SalesDocumentDefaultsEntity";
 
-            AddGroup("Common Data Model SalesDocumentDefaultsEntity Details", group =>
+            AddGroup("SalesDocumentDefaultsEntity Details", group =>
             {
                 DefaultBillOfLadingCarrierName = group.Add(new VocabularyKey(nameof(DefaultBillOfLadingCarrierName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultBillOfLadingFreightChargeTerms = group.Add(new VocabularyKey(nameof(DefaultBillOfLadingFreightChargeTerms), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

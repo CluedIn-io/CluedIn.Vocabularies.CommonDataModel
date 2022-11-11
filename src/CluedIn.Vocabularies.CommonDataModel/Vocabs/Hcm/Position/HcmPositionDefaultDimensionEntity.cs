@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmPositionDefaultDimensionEntityVocabulary()
         {
-            VocabularyName = "Common Data Model HcmPositionDefaultDimensionEntity";
+            VocabularyName = "HcmPositionDefaultDimensionEntity";
             KeyPrefix = "commonDataModel.hcmpositiondefaultdimensionentity";
             KeySeparator = ".";
             Grouping = "/HcmPositionDefaultDimensionEntity";
 
-            AddGroup("Common Data Model HcmPositionDefaultDimensionEntity Details", group =>
+            AddGroup("HcmPositionDefaultDimensionEntity Details", group =>
             {
                 DistributionTemplate = group.Add(new VocabularyKey(nameof(DistributionTemplate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Dimension = group.Add(new VocabularyKey(nameof(Dimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

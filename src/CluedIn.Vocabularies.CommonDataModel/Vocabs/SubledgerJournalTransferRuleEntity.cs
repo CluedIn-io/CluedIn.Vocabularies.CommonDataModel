@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SubledgerJournalTransferRuleEntityVocabulary()
         {
-            VocabularyName = "Common Data Model SubledgerJournalTransferRuleEntity";
+            VocabularyName = "SubledgerJournalTransferRuleEntity";
             KeyPrefix = "commonDataModel.subledgerjournaltransferruleentity";
             KeySeparator = ".";
             Grouping = "/SubledgerJournalTransferRuleEntity";
 
-            AddGroup("Common Data Model SubledgerJournalTransferRuleEntity Details", group =>
+            AddGroup("SubledgerJournalTransferRuleEntity Details", group =>
             {
                 SummarizeAccountingEntries = group.Add(new VocabularyKey(nameof(SummarizeAccountingEntries), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Ledger = group.Add(new VocabularyKey(nameof(Ledger), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

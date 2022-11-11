@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSOutboundSortingTemplateV2EntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSOutboundSortingTemplateV2Entity";
+            VocabularyName = "WHSOutboundSortingTemplateV2Entity";
             KeyPrefix = "commonDataModel.whsoutboundsortingtemplatev2entity";
             KeySeparator = ".";
             Grouping = "/WHSOutboundSortingTemplateV2Entity";
 
-            AddGroup("Common Data Model WHSOutboundSortingTemplateV2Entity Details", group =>
+            AddGroup("WHSOutboundSortingTemplateV2Entity Details", group =>
             {
                 WillPositionCloseCreateWork = group.Add(new VocabularyKey(nameof(WillPositionCloseCreateWork), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PositionAssignmentMethod = group.Add(new VocabularyKey(nameof(PositionAssignmentMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

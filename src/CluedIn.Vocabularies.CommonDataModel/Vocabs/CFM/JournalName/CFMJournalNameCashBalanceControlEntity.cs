@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CFMJournalNameCashBalanceControlEntityVocabulary()
         {
-            VocabularyName = "Common Data Model CFMJournalNameCashBalanceControlEntity";
+            VocabularyName = "CFMJournalNameCashBalanceControlEntity";
             KeyPrefix = "commonDataModel.cfmjournalnamecashbalancecontrolentity";
             KeySeparator = ".";
             Grouping = "/CFMJournalNameCashBalanceControlEntity";
 
-            AddGroup("Common Data Model CFMJournalNameCashBalanceControlEntity Details", group =>
+            AddGroup("CFMJournalNameCashBalanceControlEntity Details", group =>
             {
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MinimumCashBalance = group.Add(new VocabularyKey(nameof(MinimumCashBalance), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

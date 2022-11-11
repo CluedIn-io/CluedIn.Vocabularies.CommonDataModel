@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxGSTReportConfigurationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TaxGSTReportConfigurationEntity";
+            VocabularyName = "TaxGSTReportConfigurationEntity";
             KeyPrefix = "commonDataModel.taxgstreportconfigurationentity";
             KeySeparator = ".";
             Grouping = "/TaxGSTReportConfigurationEntity";
 
-            AddGroup("Common Data Model TaxGSTReportConfigurationEntity Details", group =>
+            AddGroup("TaxGSTReportConfigurationEntity Details", group =>
             {
                 ReportingCodesForGSTAmount = group.Add(new VocabularyKey(nameof(ReportingCodesForGSTAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReportingCodesForTransactionAmount = group.Add(new VocabularyKey(nameof(ReportingCodesForTransactionAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

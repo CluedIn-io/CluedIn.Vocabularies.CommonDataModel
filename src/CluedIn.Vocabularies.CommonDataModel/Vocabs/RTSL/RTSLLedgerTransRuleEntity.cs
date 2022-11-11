@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RTSLLedgerTransRuleEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RTSLLedgerTransRuleEntity";
+            VocabularyName = "RTSLLedgerTransRuleEntity";
             KeyPrefix = "commonDataModel.rtslledgertransruleentity";
             KeySeparator = ".";
             Grouping = "/RTSLLedgerTransRuleEntity";
 
-            AddGroup("Common Data Model RTSLLedgerTransRuleEntity Details", group =>
+            AddGroup("RTSLLedgerTransRuleEntity Details", group =>
             {
                 Crediting = group.Add(new VocabularyKey(nameof(Crediting), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CurrencyRuleGroupId = group.Add(new VocabularyKey(nameof(CurrencyRuleGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

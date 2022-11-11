@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public IntrastatStatisticProcedureEntityVocabulary()
         {
-            VocabularyName = "Common Data Model IntrastatStatisticProcedureEntity";
+            VocabularyName = "IntrastatStatisticProcedureEntity";
             KeyPrefix = "commonDataModel.intrastatstatisticprocedureentity";
             KeySeparator = ".";
             Grouping = "/IntrastatStatisticProcedureEntity";
 
-            AddGroup("Common Data Model IntrastatStatisticProcedureEntity Details", group =>
+            AddGroup("IntrastatStatisticProcedureEntity Details", group =>
             {
                 Text1 = group.Add(new VocabularyKey(nameof(Text1), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Text2 = group.Add(new VocabularyKey(nameof(Text2), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

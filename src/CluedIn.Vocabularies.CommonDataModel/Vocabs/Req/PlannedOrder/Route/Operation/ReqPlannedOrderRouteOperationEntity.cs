@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReqPlannedOrderRouteOperationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ReqPlannedOrderRouteOperationEntity";
+            VocabularyName = "ReqPlannedOrderRouteOperationEntity";
             KeyPrefix = "commonDataModel.reqplannedorderrouteoperationentity";
             KeySeparator = ".";
             Grouping = "/ReqPlannedOrderRouteOperationEntity";
 
-            AddGroup("Common Data Model ReqPlannedOrderRouteOperationEntity Details", group =>
+            AddGroup("ReqPlannedOrderRouteOperationEntity Details", group =>
             {
                 AccumulatedScrapPercentage = group.Add(new VocabularyKey(nameof(AccumulatedScrapPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ScrapPercentage = group.Add(new VocabularyKey(nameof(ScrapPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

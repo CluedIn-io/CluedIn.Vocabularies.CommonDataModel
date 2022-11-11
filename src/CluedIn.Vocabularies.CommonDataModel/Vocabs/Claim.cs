@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ClaimVocabulary()
         {
-            VocabularyName = "Common Data Model Claim";
+            VocabularyName = "Claim";
             KeyPrefix = "commonDataModel.claim";
             KeySeparator = ".";
             Grouping = "/Claim";
 
-            AddGroup("Common Data Model Claim Details", group =>
+            AddGroup("Claim Details", group =>
             {
                 billablePeriodEnd = group.Add(new VocabularyKey(nameof(billablePeriodEnd), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 billablePeriodStart = group.Add(new VocabularyKey(nameof(billablePeriodStart), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

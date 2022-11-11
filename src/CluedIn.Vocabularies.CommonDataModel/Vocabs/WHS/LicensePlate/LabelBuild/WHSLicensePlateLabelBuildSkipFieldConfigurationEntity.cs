@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSLicensePlateLabelBuildSkipFieldConfigurationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSLicensePlateLabelBuildSkipFieldConfigurationEntity";
+            VocabularyName = "WHSLicensePlateLabelBuildSkipFieldConfigurationEntity";
             KeyPrefix = "commonDataModel.whslicenseplatelabelbuildskipfieldconfigurationentity";
             KeySeparator = ".";
             Grouping = "/WHSLicensePlateLabelBuildSkipFieldConfigurationEntity";
 
-            AddGroup("Common Data Model WHSLicensePlateLabelBuildSkipFieldConfigurationEntity Details", group =>
+            AddGroup("WHSLicensePlateLabelBuildSkipFieldConfigurationEntity Details", group =>
             {
                 LicensePlateLabelBuildConfigurationId = group.Add(new VocabularyKey(nameof(LicensePlateLabelBuildConfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SkipFieldName = group.Add(new VocabularyKey(nameof(SkipFieldName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

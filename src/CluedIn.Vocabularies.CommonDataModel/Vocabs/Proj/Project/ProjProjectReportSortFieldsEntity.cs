@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjProjectReportSortFieldsEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ProjProjectReportSortFieldsEntity";
+            VocabularyName = "ProjProjectReportSortFieldsEntity";
             KeyPrefix = "commonDataModel.projprojectreportsortfieldsentity";
             KeySeparator = ".";
             Grouping = "/ProjProjectReportSortFieldsEntity";
 
-            AddGroup("Common Data Model ProjProjectReportSortFieldsEntity Details", group =>
+            AddGroup("ProjProjectReportSortFieldsEntity Details", group =>
             {
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SortCode = group.Add(new VocabularyKey(nameof(SortCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

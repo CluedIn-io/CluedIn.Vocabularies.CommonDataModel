@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseMobileDeviceMenuItemCycleCountingEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSWarehouseMobileDeviceMenuItemCycleCountingEntity";
+            VocabularyName = "WHSWarehouseMobileDeviceMenuItemCycleCountingEntity";
             KeyPrefix = "commonDataModel.whswarehousemobiledevicemenuitemcyclecountingentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseMobileDeviceMenuItemCycleCountingEntity";
 
-            AddGroup("Common Data Model WHSWarehouseMobileDeviceMenuItemCycleCountingEntity Details", group =>
+            AddGroup("WHSWarehouseMobileDeviceMenuItemCycleCountingEntity Details", group =>
             {
                 WarehouseMobileDeviceMenuItemId = group.Add(new VocabularyKey(nameof(WarehouseMobileDeviceMenuItemId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AttemptsNumber = group.Add(new VocabularyKey(nameof(AttemptsNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

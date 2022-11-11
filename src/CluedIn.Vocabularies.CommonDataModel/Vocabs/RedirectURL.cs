@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RedirectURLVocabulary()
         {
-            VocabularyName = "Common Data Model RedirectURL";
+            VocabularyName = "RedirectURL";
             KeyPrefix = "commonDataModel.redirecturl";
             KeySeparator = ".";
             Grouping = "/RedirectURL";
 
-            AddGroup("Common Data Model RedirectURL Details", group =>
+            AddGroup("RedirectURL Details", group =>
             {
                 insightsResults = group.Add(new VocabularyKey(nameof(insightsResults), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 insightsTimeline = group.Add(new VocabularyKey(nameof(insightsTimeline), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

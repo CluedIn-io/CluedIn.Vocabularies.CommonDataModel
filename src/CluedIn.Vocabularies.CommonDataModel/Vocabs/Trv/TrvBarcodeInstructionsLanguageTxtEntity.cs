@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvBarcodeInstructionsLanguageTxtEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TrvBarcodeInstructionsLanguageTxtEntity";
+            VocabularyName = "TrvBarcodeInstructionsLanguageTxtEntity";
             KeyPrefix = "commonDataModel.trvbarcodeinstructionslanguagetxtentity";
             KeySeparator = ".";
             Grouping = "/TrvBarcodeInstructionsLanguageTxtEntity";
 
-            AddGroup("Common Data Model TrvBarcodeInstructionsLanguageTxtEntity Details", group =>
+            AddGroup("TrvBarcodeInstructionsLanguageTxtEntity Details", group =>
             {
                 Language = group.Add(new VocabularyKey(nameof(Language), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Text = group.Add(new VocabularyKey(nameof(Text), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

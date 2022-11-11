@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvExpenseParametersEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TrvExpenseParametersEntity";
+            VocabularyName = "TrvExpenseParametersEntity";
             KeyPrefix = "commonDataModel.trvexpenseparametersentity";
             KeySeparator = ".";
             Grouping = "/TrvExpenseParametersEntity";
 
-            AddGroup("Common Data Model TrvExpenseParametersEntity Details", group =>
+            AddGroup("TrvExpenseParametersEntity Details", group =>
             {
                 AllowEditDistributions = group.Add(new VocabularyKey(nameof(AllowEditDistributions), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BarCodeSetupId = group.Add(new VocabularyKey(nameof(BarCodeSetupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

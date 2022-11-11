@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxAuthorityOKATOEntity_RUVocabulary()
         {
-            VocabularyName = "Common Data Model TaxAuthorityOKATOEntity_RU";
+            VocabularyName = "TaxAuthorityOKATOEntity_RU";
             KeyPrefix = "commonDataModel.taxauthorityokatoentity_ru";
             KeySeparator = ".";
             Grouping = "/TaxAuthorityOKATOEntity_RU";
 
-            AddGroup("Common Data Model TaxAuthorityOKATOEntity_RU Details", group =>
+            AddGroup("TaxAuthorityOKATOEntity_RU Details", group =>
             {
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OKATO = group.Add(new VocabularyKey(nameof(OKATO), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

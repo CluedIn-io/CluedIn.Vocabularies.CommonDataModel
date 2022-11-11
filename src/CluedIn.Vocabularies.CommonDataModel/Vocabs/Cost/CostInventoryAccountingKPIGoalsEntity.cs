@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CostInventoryAccountingKPIGoalsEntityVocabulary()
         {
-            VocabularyName = "Common Data Model CostInventoryAccountingKPIGoalsEntity";
+            VocabularyName = "CostInventoryAccountingKPIGoalsEntity";
             KeyPrefix = "commonDataModel.costinventoryaccountingkpigoalsentity";
             KeySeparator = ".";
             Grouping = "/CostInventoryAccountingKPIGoalsEntity";
 
-            AddGroup("Common Data Model CostInventoryAccountingKPIGoalsEntity Details", group =>
+            AddGroup("CostInventoryAccountingKPIGoalsEntity Details", group =>
             {
                 AnnualInventoryTurn = group.Add(new VocabularyKey(nameof(AnnualInventoryTurn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InventoryAccuracy = group.Add(new VocabularyKey(nameof(InventoryAccuracy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

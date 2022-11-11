@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FiasStructureStatusEntityVocabulary()
         {
-            VocabularyName = "Common Data Model FiasStructureStatusEntity";
+            VocabularyName = "FiasStructureStatusEntity";
             KeyPrefix = "commonDataModel.fiasstructurestatusentity";
             KeySeparator = ".";
             Grouping = "/FiasStructureStatusEntity";
 
-            AddGroup("Common Data Model FiasStructureStatusEntity Details", group =>
+            AddGroup("FiasStructureStatusEntity Details", group =>
             {
                 StrStatId = group.Add(new VocabularyKey(nameof(StrStatId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseClusterProfileSortingEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSWarehouseClusterProfileSortingEntity";
+            VocabularyName = "WHSWarehouseClusterProfileSortingEntity";
             KeyPrefix = "commonDataModel.whswarehouseclusterprofilesortingentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseClusterProfileSortingEntity";
 
-            AddGroup("Common Data Model WHSWarehouseClusterProfileSortingEntity Details", group =>
+            AddGroup("WHSWarehouseClusterProfileSortingEntity Details", group =>
             {
                 ClusterSortingMethod = group.Add(new VocabularyKey(nameof(ClusterSortingMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ClusterProfileId = group.Add(new VocabularyKey(nameof(ClusterProfileId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

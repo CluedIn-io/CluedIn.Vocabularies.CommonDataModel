@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BatchJobEntityVocabulary()
         {
-            VocabularyName = "Common Data Model BatchJobEntity";
+            VocabularyName = "BatchJobEntity";
             KeyPrefix = "commonDataModel.batchjobentity";
             KeySeparator = ".";
             Grouping = "/BatchJobEntity";
 
-            AddGroup("Common Data Model BatchJobEntity Details", group =>
+            AddGroup("BatchJobEntity Details", group =>
             {
                 CanceledBy = group.Add(new VocabularyKey(nameof(CanceledBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 JobDescription = group.Add(new VocabularyKey(nameof(JobDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

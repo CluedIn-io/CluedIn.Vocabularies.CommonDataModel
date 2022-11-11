@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxWithholdNatureOfRemittanceEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TaxWithholdNatureOfRemittanceEntity";
+            VocabularyName = "TaxWithholdNatureOfRemittanceEntity";
             KeyPrefix = "commonDataModel.taxwithholdnatureofremittanceentity";
             KeySeparator = ".";
             Grouping = "/TaxWithholdNatureOfRemittanceEntity";
 
-            AddGroup("Common Data Model TaxWithholdNatureOfRemittanceEntity Details", group =>
+            AddGroup("TaxWithholdNatureOfRemittanceEntity Details", group =>
             {
                 RemittanceCategoryCode = group.Add(new VocabularyKey(nameof(RemittanceCategoryCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RemittanceDetails = group.Add(new VocabularyKey(nameof(RemittanceDetails), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

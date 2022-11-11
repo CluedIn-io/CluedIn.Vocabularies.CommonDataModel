@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public IntrastatForeignTradeParameterEntityVocabulary()
         {
-            VocabularyName = "Common Data Model IntrastatForeignTradeParameterEntity";
+            VocabularyName = "IntrastatForeignTradeParameterEntity";
             KeyPrefix = "commonDataModel.intrastatforeigntradeparameterentity";
             KeySeparator = ".";
             Grouping = "/IntrastatForeignTradeParameterEntity";
 
-            AddGroup("Common Data Model IntrastatForeignTradeParameterEntity Details", group =>
+            AddGroup("IntrastatForeignTradeParameterEntity Details", group =>
             {
                 AdditionalUnits = group.Add(new VocabularyKey(nameof(AdditionalUnits), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AgentBranchId = group.Add(new VocabularyKey(nameof(AgentBranchId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

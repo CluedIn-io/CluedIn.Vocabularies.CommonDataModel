@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DirNameSequenceEntityVocabulary()
         {
-            VocabularyName = "Common Data Model DirNameSequenceEntity";
+            VocabularyName = "DirNameSequenceEntity";
             KeyPrefix = "commonDataModel.dirnamesequenceentity";
             KeySeparator = ".";
             Grouping = "/DirNameSequenceEntity";
 
-            AddGroup("Common Data Model DirNameSequenceEntity Details", group =>
+            AddGroup("DirNameSequenceEntity Details", group =>
             {
                 NameSequence = group.Add(new VocabularyKey(nameof(NameSequence), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailStoreTenderTypeTableEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RetailStoreTenderTypeTableEntity";
+            VocabularyName = "RetailStoreTenderTypeTableEntity";
             KeyPrefix = "commonDataModel.retailstoretendertypetableentity";
             KeySeparator = ".";
             Grouping = "/RetailStoreTenderTypeTableEntity";
 
-            AddGroup("Common Data Model RetailStoreTenderTypeTableEntity Details", group =>
+            AddGroup("RetailStoreTenderTypeTableEntity Details", group =>
             {
                 ChangeTenderId = group.Add(new VocabularyKey(nameof(ChangeTenderId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AboveMinimumTenderId = group.Add(new VocabularyKey(nameof(AboveMinimumTenderId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjVendorRetentionTermScheduleEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ProjVendorRetentionTermScheduleEntity";
+            VocabularyName = "ProjVendorRetentionTermScheduleEntity";
             KeyPrefix = "commonDataModel.projvendorretentiontermscheduleentity";
             KeySeparator = ".";
             Grouping = "/ProjVendorRetentionTermScheduleEntity";
 
-            AddGroup("Common Data Model ProjVendorRetentionTermScheduleEntity Details", group =>
+            AddGroup("ProjVendorRetentionTermScheduleEntity Details", group =>
             {
                 PercentageToRetain = group.Add(new VocabularyKey(nameof(PercentageToRetain), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PercentageToRelease = group.Add(new VocabularyKey(nameof(PercentageToRelease), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

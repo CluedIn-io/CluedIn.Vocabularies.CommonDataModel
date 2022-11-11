@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PSNCashPositionColumnSetupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PSNCashPositionColumnSetupEntity";
+            VocabularyName = "PSNCashPositionColumnSetupEntity";
             KeyPrefix = "commonDataModel.psncashpositioncolumnsetupentity";
             KeySeparator = ".";
             Grouping = "/PSNCashPositionColumnSetupEntity";
 
-            AddGroup("Common Data Model PSNCashPositionColumnSetupEntity Details", group =>
+            AddGroup("PSNCashPositionColumnSetupEntity Details", group =>
             {
                 ColumnOneLabel = group.Add(new VocabularyKey(nameof(ColumnOneLabel), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ColumnOneRange = group.Add(new VocabularyKey(nameof(ColumnOneRange), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

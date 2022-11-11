@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SessionVocabulary()
         {
-            VocabularyName = "Common Data Model Session";
+            VocabularyName = "Session";
             KeyPrefix = "commonDataModel.session";
             KeySeparator = ".";
             Grouping = "/Session";
 
-            AddGroup("Common Data Model Session Details", group =>
+            AddGroup("Session Details", group =>
             {
                 allowAttendeesToUnmute = group.Add(new VocabularyKey(nameof(allowAttendeesToUnmute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 allowMeetingChat = group.Add(new VocabularyKey(nameof(allowMeetingChat), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

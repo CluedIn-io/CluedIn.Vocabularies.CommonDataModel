@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgTransferredTimeAndAttendanceActivityRegistrationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model JmgTransferredTimeAndAttendanceActivityRegistrationEntity";
+            VocabularyName = "JmgTransferredTimeAndAttendanceActivityRegistrationEntity";
             KeyPrefix = "commonDataModel.jmgtransferredtimeandattendanceactivityregistrationentity";
             KeySeparator = ".";
             Grouping = "/JmgTransferredTimeAndAttendanceActivityRegistrationEntity";
 
-            AddGroup("Common Data Model JmgTransferredTimeAndAttendanceActivityRegistrationEntity Details", group =>
+            AddGroup("JmgTransferredTimeAndAttendanceActivityRegistrationEntity Details", group =>
             {
                 AbsencePayUnits = group.Add(new VocabularyKey(nameof(AbsencePayUnits), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IndirectActivityName = group.Add(new VocabularyKey(nameof(IndirectActivityName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesShipmentReportFormPrintingConfigurationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model SalesShipmentReportFormPrintingConfigurationEntity";
+            VocabularyName = "SalesShipmentReportFormPrintingConfigurationEntity";
             KeyPrefix = "commonDataModel.salesshipmentreportformprintingconfigurationentity";
             KeySeparator = ".";
             Grouping = "/SalesShipmentReportFormPrintingConfigurationEntity";
 
-            AddGroup("Common Data Model SalesShipmentReportFormPrintingConfigurationEntity Details", group =>
+            AddGroup("SalesShipmentReportFormPrintingConfigurationEntity Details", group =>
             {
                 ReportLayout = group.Add(new VocabularyKey(nameof(ReportLayout), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
 

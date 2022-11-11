@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ConfiguratorLayoutFieldEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ConfiguratorLayoutFieldEntity";
+            VocabularyName = "ConfiguratorLayoutFieldEntity";
             KeyPrefix = "commonDataModel.configuratorlayoutfieldentity";
             KeySeparator = ".";
             Grouping = "/ConfiguratorLayoutFieldEntity";
 
-            AddGroup("Common Data Model ConfiguratorLayoutFieldEntity Details", group =>
+            AddGroup("ConfiguratorLayoutFieldEntity Details", group =>
             {
                 BatchId = group.Add(new VocabularyKey(nameof(BatchId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Comments = group.Add(new VocabularyKey(nameof(Comments), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

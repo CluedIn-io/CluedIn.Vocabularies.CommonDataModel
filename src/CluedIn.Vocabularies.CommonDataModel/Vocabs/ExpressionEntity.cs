@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ExpressionEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ExpressionEntity";
+            VocabularyName = "ExpressionEntity";
             KeyPrefix = "commonDataModel.expressionentity";
             KeySeparator = ".";
             Grouping = "/ExpressionEntity";
 
-            AddGroup("Common Data Model ExpressionEntity Details", group =>
+            AddGroup("ExpressionEntity Details", group =>
             {
                 ExpressionId = group.Add(new VocabularyKey(nameof(ExpressionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExpressionClassName = group.Add(new VocabularyKey(nameof(ExpressionClassName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CFPSTableEntityVocabulary()
         {
-            VocabularyName = "Common Data Model CFPSTableEntity";
+            VocabularyName = "CFPSTableEntity";
             KeyPrefix = "commonDataModel.cfpstableentity";
             KeySeparator = ".";
             Grouping = "/CFPSTableEntity";
 
-            AddGroup("Common Data Model CFPSTableEntity Details", group =>
+            AddGroup("CFPSTableEntity Details", group =>
             {
                 CFPSCode = group.Add(new VocabularyKey(nameof(CFPSCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransactionType = group.Add(new VocabularyKey(nameof(TransactionType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

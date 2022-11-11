@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchFormletterProductReceiptFormPrintingConfigurationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PurchFormletterProductReceiptFormPrintingConfigurationEntity";
+            VocabularyName = "PurchFormletterProductReceiptFormPrintingConfigurationEntity";
             KeyPrefix = "commonDataModel.purchformletterproductreceiptformprintingconfigurationentity";
             KeySeparator = ".";
             Grouping = "/PurchFormletterProductReceiptFormPrintingConfigurationEntity";
 
-            AddGroup("Common Data Model PurchFormletterProductReceiptFormPrintingConfigurationEntity Details", group =>
+            AddGroup("PurchFormletterProductReceiptFormPrintingConfigurationEntity Details", group =>
             {
                 IsInventoryStatusIdDisplayed = group.Add(new VocabularyKey(nameof(IsInventoryStatusIdDisplayed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsItemBatchNumberDisplayed = group.Add(new VocabularyKey(nameof(IsItemBatchNumberDisplayed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

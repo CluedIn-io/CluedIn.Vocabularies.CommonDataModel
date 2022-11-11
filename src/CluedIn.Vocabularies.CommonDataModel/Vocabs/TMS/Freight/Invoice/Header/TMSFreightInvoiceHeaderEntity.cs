@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSFreightInvoiceHeaderEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TMSFreightInvoiceHeaderEntity";
+            VocabularyName = "TMSFreightInvoiceHeaderEntity";
             KeyPrefix = "commonDataModel.tmsfreightinvoiceheaderentity";
             KeySeparator = ".";
             Grouping = "/TMSFreightInvoiceHeaderEntity";
 
-            AddGroup("Common Data Model TMSFreightInvoiceHeaderEntity Details", group =>
+            AddGroup("TMSFreightInvoiceHeaderEntity Details", group =>
             {
                 ShippingCarrierVendorAccountNumber = group.Add(new VocabularyKey(nameof(ShippingCarrierVendorAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DestinationCountryRegionId = group.Add(new VocabularyKey(nameof(DestinationCountryRegionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

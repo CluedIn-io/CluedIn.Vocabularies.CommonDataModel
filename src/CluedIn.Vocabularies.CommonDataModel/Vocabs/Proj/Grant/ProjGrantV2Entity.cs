@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjGrantV2EntityVocabulary()
         {
-            VocabularyName = "Common Data Model ProjGrantV2Entity";
+            VocabularyName = "ProjGrantV2Entity";
             KeyPrefix = "commonDataModel.projgrantv2entity";
             KeySeparator = ".";
             Grouping = "/ProjGrantV2Entity";
 
-            AddGroup("Common Data Model ProjGrantV2Entity Details", group =>
+            AddGroup("ProjGrantV2Entity Details", group =>
             {
                 ActualAwardDate = group.Add(new VocabularyKey(nameof(ActualAwardDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ActualExpirationDate = group.Add(new VocabularyKey(nameof(ActualExpirationDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

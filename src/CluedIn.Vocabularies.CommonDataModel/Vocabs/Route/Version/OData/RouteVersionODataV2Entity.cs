@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RouteVersionODataV2EntityVocabulary()
         {
-            VocabularyName = "Common Data Model RouteVersionODataV2Entity";
+            VocabularyName = "RouteVersionODataV2Entity";
             KeyPrefix = "commonDataModel.routeversionodatav2entity";
             KeySeparator = ".";
             Grouping = "/RouteVersionODataV2Entity";
 
-            AddGroup("Common Data Model RouteVersionODataV2Entity Details", group =>
+            AddGroup("RouteVersionODataV2Entity Details", group =>
             {
                 ApproverPersonnelNumber = group.Add(new VocabularyKey(nameof(ApproverPersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsApproved = group.Add(new VocabularyKey(nameof(IsApproved), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

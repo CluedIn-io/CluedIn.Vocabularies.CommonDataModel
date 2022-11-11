@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProdBatchOrderFormulaLineEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ProdBatchOrderFormulaLineEntity";
+            VocabularyName = "ProdBatchOrderFormulaLineEntity";
             KeyPrefix = "commonDataModel.prodbatchorderformulalineentity";
             KeySeparator = ".";
             Grouping = "/ProdBatchOrderFormulaLineEntity";
 
-            AddGroup("Common Data Model ProdBatchOrderFormulaLineEntity Details", group =>
+            AddGroup("ProdBatchOrderFormulaLineEntity Details", group =>
             {
                 WillCostCalculationIncludeLine = group.Add(new VocabularyKey(nameof(WillCostCalculationIncludeLine), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ConsumptionCalculationConstant = group.Add(new VocabularyKey(nameof(ConsumptionCalculationConstant), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

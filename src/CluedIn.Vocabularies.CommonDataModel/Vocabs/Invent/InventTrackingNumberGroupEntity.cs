@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventTrackingNumberGroupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model InventTrackingNumberGroupEntity";
+            VocabularyName = "InventTrackingNumberGroupEntity";
             KeyPrefix = "commonDataModel.inventtrackingnumbergroupentity";
             KeySeparator = ".";
             Grouping = "/InventTrackingNumberGroupEntity";
 
-            AddGroup("Common Data Model InventTrackingNumberGroupEntity Details", group =>
+            AddGroup("InventTrackingNumberGroupEntity Details", group =>
             {
                 IsExpectedDateIncluded = group.Add(new VocabularyKey(nameof(IsExpectedDateIncluded), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsLotIdIncluded = group.Add(new VocabularyKey(nameof(IsLotIdIncluded), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

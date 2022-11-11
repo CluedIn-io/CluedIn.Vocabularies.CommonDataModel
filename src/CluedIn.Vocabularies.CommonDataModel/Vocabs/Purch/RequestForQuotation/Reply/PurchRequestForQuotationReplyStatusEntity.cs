@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchRequestForQuotationReplyStatusEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PurchRequestForQuotationReplyStatusEntity";
+            VocabularyName = "PurchRequestForQuotationReplyStatusEntity";
             KeyPrefix = "commonDataModel.purchrequestforquotationreplystatusentity";
             KeySeparator = ".";
             Grouping = "/PurchRequestForQuotationReplyStatusEntity";
 
-            AddGroup("Common Data Model PurchRequestForQuotationReplyStatusEntity Details", group =>
+            AddGroup("PurchRequestForQuotationReplyStatusEntity Details", group =>
             {
                 StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StatusDescription = group.Add(new VocabularyKey(nameof(StatusDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

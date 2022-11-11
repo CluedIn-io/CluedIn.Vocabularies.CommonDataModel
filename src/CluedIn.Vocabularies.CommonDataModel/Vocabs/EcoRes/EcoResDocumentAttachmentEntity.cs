@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResDocumentAttachmentEntityVocabulary()
         {
-            VocabularyName = "Common Data Model EcoResDocumentAttachmentEntity";
+            VocabularyName = "EcoResDocumentAttachmentEntity";
             KeyPrefix = "commonDataModel.ecoresdocumentattachmententity";
             KeySeparator = ".";
             Grouping = "/EcoResDocumentAttachmentEntity";
 
-            AddGroup("Common Data Model EcoResDocumentAttachmentEntity Details", group =>
+            AddGroup("EcoResDocumentAttachmentEntity Details", group =>
             {
                 ParentLegalEntityId = group.Add(new VocabularyKey(nameof(ParentLegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ParentTableId = group.Add(new VocabularyKey(nameof(ParentTableId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSInboundShipmentHeaderEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSInboundShipmentHeaderEntity";
+            VocabularyName = "WHSInboundShipmentHeaderEntity";
             KeyPrefix = "commonDataModel.whsinboundshipmentheaderentity";
             KeySeparator = ".";
             Grouping = "/WHSInboundShipmentHeaderEntity";
 
-            AddGroup("Common Data Model WHSInboundShipmentHeaderEntity Details", group =>
+            AddGroup("WHSInboundShipmentHeaderEntity Details", group =>
             {
                 DeliveryTermsCode = group.Add(new VocabularyKey(nameof(DeliveryTermsCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ShipmentId = group.Add(new VocabularyKey(nameof(ShipmentId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

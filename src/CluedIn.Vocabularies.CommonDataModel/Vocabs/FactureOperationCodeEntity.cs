@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FactureOperationCodeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model FactureOperationCodeEntity";
+            VocabularyName = "FactureOperationCodeEntity";
             KeyPrefix = "commonDataModel.factureoperationcodeentity";
             KeySeparator = ".";
             Grouping = "/FactureOperationCodeEntity";
 
-            AddGroup("Common Data Model FactureOperationCodeEntity Details", group =>
+            AddGroup("FactureOperationCodeEntity Details", group =>
             {
                 Code = group.Add(new VocabularyKey(nameof(Code), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Derive = group.Add(new VocabularyKey(nameof(Derive), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BOMBillOfMaterialsParametersEntityVocabulary()
         {
-            VocabularyName = "Common Data Model BOMBillOfMaterialsParametersEntity";
+            VocabularyName = "BOMBillOfMaterialsParametersEntity";
             KeyPrefix = "commonDataModel.bombillofmaterialsparametersentity";
             KeySeparator = ".";
             Grouping = "/BOMBillOfMaterialsParametersEntity";
 
-            AddGroup("Common Data Model BOMBillOfMaterialsParametersEntity Details", group =>
+            AddGroup("BOMBillOfMaterialsParametersEntity Details", group =>
             {
                 CircularityCheckLevel = group.Add(new VocabularyKey(nameof(CircularityCheckLevel), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MaximumBOMLevel = group.Add(new VocabularyKey(nameof(MaximumBOMLevel), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

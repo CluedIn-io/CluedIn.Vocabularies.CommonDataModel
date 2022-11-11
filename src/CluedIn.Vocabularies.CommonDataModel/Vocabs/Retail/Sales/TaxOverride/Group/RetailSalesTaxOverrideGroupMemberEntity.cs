@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailSalesTaxOverrideGroupMemberEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RetailSalesTaxOverrideGroupMemberEntity";
+            VocabularyName = "RetailSalesTaxOverrideGroupMemberEntity";
             KeyPrefix = "commonDataModel.retailsalestaxoverridegroupmemberentity";
             KeySeparator = ".";
             Grouping = "/RetailSalesTaxOverrideGroupMemberEntity";
 
-            AddGroup("Common Data Model RetailSalesTaxOverrideGroupMemberEntity Details", group =>
+            AddGroup("RetailSalesTaxOverrideGroupMemberEntity Details", group =>
             {
                 SalesTaxOverrideCode = group.Add(new VocabularyKey(nameof(SalesTaxOverrideCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesTaxOverrideGroupCode = group.Add(new VocabularyKey(nameof(SalesTaxOverrideGroupCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SMAServiceObjectGroupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model SMAServiceObjectGroupEntity";
+            VocabularyName = "SMAServiceObjectGroupEntity";
             KeyPrefix = "commonDataModel.smaserviceobjectgroupentity";
             KeySeparator = ".";
             Grouping = "/SMAServiceObjectGroupEntity";
 
-            AddGroup("Common Data Model SMAServiceObjectGroupEntity Details", group =>
+            AddGroup("SMAServiceObjectGroupEntity Details", group =>
             {
                 GroupDescription = group.Add(new VocabularyKey(nameof(GroupDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GroupId = group.Add(new VocabularyKey(nameof(GroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

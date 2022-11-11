@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public GeoPinVocabulary()
         {
-            VocabularyName = "Common Data Model GeoPin";
+            VocabularyName = "GeoPin";
             KeyPrefix = "commonDataModel.geopin";
             KeySeparator = ".";
             Grouping = "/GeoPin";
 
-            AddGroup("Common Data Model GeoPin Details", group =>
+            AddGroup("GeoPin Details", group =>
             {
                 centerLatitude = group.Add(new VocabularyKey(nameof(centerLatitude), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 centerLongitude = group.Add(new VocabularyKey(nameof(centerLongitude), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

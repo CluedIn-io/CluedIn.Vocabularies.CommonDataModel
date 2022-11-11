@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public smmEmploymentJobFunctionEntityVocabulary()
         {
-            VocabularyName = "Common Data Model smmEmploymentJobFunctionEntity";
+            VocabularyName = "smmEmploymentJobFunctionEntity";
             KeyPrefix = "commonDataModel.smmemploymentjobfunctionentity";
             KeySeparator = ".";
             Grouping = "/smmEmploymentJobFunctionEntity";
 
-            AddGroup("Common Data Model smmEmploymentJobFunctionEntity Details", group =>
+            AddGroup("smmEmploymentJobFunctionEntity Details", group =>
             {
                 FunctionDescription = group.Add(new VocabularyKey(nameof(FunctionDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FunctionName = group.Add(new VocabularyKey(nameof(FunctionName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

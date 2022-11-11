@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetPostingProfileEntityVocabulary()
         {
-            VocabularyName = "Common Data Model AssetPostingProfileEntity";
+            VocabularyName = "AssetPostingProfileEntity";
             KeyPrefix = "commonDataModel.assetpostingprofileentity";
             KeySeparator = ".";
             Grouping = "/AssetPostingProfileEntity";
 
-            AddGroup("Common Data Model AssetPostingProfileEntity Details", group =>
+            AddGroup("AssetPostingProfileEntity Details", group =>
             {
                 PostingProfileId = group.Add(new VocabularyKey(nameof(PostingProfileId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

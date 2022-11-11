@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesQuotationLineCDSEntityVocabulary()
         {
-            VocabularyName = "Common Data Model SalesQuotationLineCDSEntity";
+            VocabularyName = "SalesQuotationLineCDSEntity";
             KeyPrefix = "commonDataModel.salesquotationlinecdsentity";
             KeySeparator = ".";
             Grouping = "/SalesQuotationLineCDSEntity";
 
-            AddGroup("Common Data Model SalesQuotationLineCDSEntity Details", group =>
+            AddGroup("SalesQuotationLineCDSEntity Details", group =>
             {
                 AllowedOverdeliveryPercentage = group.Add(new VocabularyKey(nameof(AllowedOverdeliveryPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AllowedUnderdeliveryPercentage = group.Add(new VocabularyKey(nameof(AllowedUnderdeliveryPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

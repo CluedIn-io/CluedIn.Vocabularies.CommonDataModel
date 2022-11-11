@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HMIMTechnicalNameEntityVocabulary()
         {
-            VocabularyName = "Common Data Model HMIMTechnicalNameEntity";
+            VocabularyName = "HMIMTechnicalNameEntity";
             KeyPrefix = "commonDataModel.hmimtechnicalnameentity";
             KeySeparator = ".";
             Grouping = "/HMIMTechnicalNameEntity";
 
-            AddGroup("Common Data Model HMIMTechnicalNameEntity Details", group =>
+            AddGroup("HMIMTechnicalNameEntity Details", group =>
             {
                 TechnicalNameCode = group.Add(new VocabularyKey(nameof(TechnicalNameCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

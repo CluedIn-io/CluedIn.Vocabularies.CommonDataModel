@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ExpenseFieldsVisibilityEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ExpenseFieldsVisibilityEntity";
+            VocabularyName = "ExpenseFieldsVisibilityEntity";
             KeyPrefix = "commonDataModel.expensefieldsvisibilityentity";
             KeySeparator = ".";
             Grouping = "/ExpenseFieldsVisibilityEntity";
 
-            AddGroup("Common Data Model ExpenseFieldsVisibilityEntity Details", group =>
+            AddGroup("ExpenseFieldsVisibilityEntity Details", group =>
             {
                 Area = group.Add(new VocabularyKey(nameof(Area), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VisibilityType = group.Add(new VocabularyKey(nameof(VisibilityType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

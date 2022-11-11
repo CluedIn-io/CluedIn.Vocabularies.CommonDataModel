@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSUnitOfMeasureConversionSequenceGroupSequenceEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSUnitOfMeasureConversionSequenceGroupSequenceEntity";
+            VocabularyName = "WHSUnitOfMeasureConversionSequenceGroupSequenceEntity";
             KeyPrefix = "commonDataModel.whsunitofmeasureconversionsequencegroupsequenceentity";
             KeySeparator = ".";
             Grouping = "/WHSUnitOfMeasureConversionSequenceGroupSequenceEntity";
 
-            AddGroup("Common Data Model WHSUnitOfMeasureConversionSequenceGroupSequenceEntity Details", group =>
+            AddGroup("WHSUnitOfMeasureConversionSequenceGroupSequenceEntity Details", group =>
             {
                 IsCycleCountingUnit = group.Add(new VocabularyKey(nameof(IsCycleCountingUnit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsDefaultProductionReceivingUnit = group.Add(new VocabularyKey(nameof(IsDefaultProductionReceivingUnit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InflationAdjJournalEntityVocabulary()
         {
-            VocabularyName = "Common Data Model InflationAdjJournalEntity";
+            VocabularyName = "InflationAdjJournalEntity";
             KeyPrefix = "commonDataModel.inflationadjjournalentity";
             KeySeparator = ".";
             Grouping = "/InflationAdjJournalEntity";
 
-            AddGroup("Common Data Model InflationAdjJournalEntity Details", group =>
+            AddGroup("InflationAdjJournalEntity Details", group =>
             {
                 FromDate = group.Add(new VocabularyKey(nameof(FromDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ToDate = group.Add(new VocabularyKey(nameof(ToDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

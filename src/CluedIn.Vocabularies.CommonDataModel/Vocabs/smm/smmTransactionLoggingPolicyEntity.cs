@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public smmTransactionLoggingPolicyEntityVocabulary()
         {
-            VocabularyName = "Common Data Model smmTransactionLoggingPolicyEntity";
+            VocabularyName = "smmTransactionLoggingPolicyEntity";
             KeyPrefix = "commonDataModel.smmtransactionloggingpolicyentity";
             KeySeparator = ".";
             Grouping = "/smmTransactionLoggingPolicyEntity";
 
-            AddGroup("Common Data Model smmTransactionLoggingPolicyEntity Details", group =>
+            AddGroup("smmTransactionLoggingPolicyEntity Details", group =>
             {
                 AreCustomerChangesLogged = group.Add(new VocabularyKey(nameof(AreCustomerChangesLogged), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AreCustomerTransactionChangesLogged = group.Add(new VocabularyKey(nameof(AreCustomerTransactionChangesLogged), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

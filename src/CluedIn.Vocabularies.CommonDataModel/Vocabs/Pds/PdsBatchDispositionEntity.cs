@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PdsBatchDispositionEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PdsBatchDispositionEntity";
+            VocabularyName = "PdsBatchDispositionEntity";
             KeyPrefix = "commonDataModel.pdsbatchdispositionentity";
             KeySeparator = ".";
             Grouping = "/PdsBatchDispositionEntity";
 
-            AddGroup("Common Data Model PdsBatchDispositionEntity Details", group =>
+            AddGroup("PdsBatchDispositionEntity Details", group =>
             {
                 DispositionCode = group.Add(new VocabularyKey(nameof(DispositionCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DispositionDescription = group.Add(new VocabularyKey(nameof(DispositionDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

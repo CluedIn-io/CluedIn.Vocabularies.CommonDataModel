@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CFMJournalNameAggregationFieldEntityVocabulary()
         {
-            VocabularyName = "Common Data Model CFMJournalNameAggregationFieldEntity";
+            VocabularyName = "CFMJournalNameAggregationFieldEntity";
             KeyPrefix = "commonDataModel.cfmjournalnameaggregationfieldentity";
             KeySeparator = ".";
             Grouping = "/CFMJournalNameAggregationFieldEntity";
 
-            AddGroup("Common Data Model CFMJournalNameAggregationFieldEntity Details", group =>
+            AddGroup("CFMJournalNameAggregationFieldEntity Details", group =>
             {
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Dimension = group.Add(new VocabularyKey(nameof(Dimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

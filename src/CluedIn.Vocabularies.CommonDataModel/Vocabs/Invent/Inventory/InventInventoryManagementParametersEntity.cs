@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventInventoryManagementParametersEntityVocabulary()
         {
-            VocabularyName = "Common Data Model InventInventoryManagementParametersEntity";
+            VocabularyName = "InventInventoryManagementParametersEntity";
             KeyPrefix = "commonDataModel.inventinventorymanagementparametersentity";
             KeySeparator = ".";
             Grouping = "/InventInventoryManagementParametersEntity";
 
-            AddGroup("Common Data Model InventInventoryManagementParametersEntity Details", group =>
+            AddGroup("InventInventoryManagementParametersEntity Details", group =>
             {
                 WillOrderPickingAutomaticallyEndInventoryOutputOrders = group.Add(new VocabularyKey(nameof(WillOrderPickingAutomaticallyEndInventoryOutputOrders), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PrintedPickingListPickingRouteIdBarcodeSetupId = group.Add(new VocabularyKey(nameof(PrintedPickingListPickingRouteIdBarcodeSetupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

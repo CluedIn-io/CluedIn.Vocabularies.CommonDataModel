@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LandingPagesVocabulary()
         {
-            VocabularyName = "Common Data Model LandingPages";
+            VocabularyName = "LandingPages";
             KeyPrefix = "commonDataModel.landingpages";
             KeySeparator = ".";
             Grouping = "/LandingPages";
 
-            AddGroup("Common Data Model LandingPages Details", group =>
+            AddGroup("LandingPages Details", group =>
             {
                 createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 createdOnBehalfBy = group.Add(new VocabularyKey(nameof(createdOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

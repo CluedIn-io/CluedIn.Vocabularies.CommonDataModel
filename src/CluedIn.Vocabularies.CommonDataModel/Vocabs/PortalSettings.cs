@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PortalSettingsVocabulary()
         {
-            VocabularyName = "Common Data Model PortalSettings";
+            VocabularyName = "PortalSettings";
             KeyPrefix = "commonDataModel.portalsettings";
             KeySeparator = ".";
             Grouping = "/PortalSettings";
 
-            AddGroup("Common Data Model PortalSettings Details", group =>
+            AddGroup("PortalSettings Details", group =>
             {
                 createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 createdOnBehalfBy = group.Add(new VocabularyKey(nameof(createdOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

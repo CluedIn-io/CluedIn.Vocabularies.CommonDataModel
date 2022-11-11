@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetAcquisitionMethodEntityVocabulary()
         {
-            VocabularyName = "Common Data Model AssetAcquisitionMethodEntity";
+            VocabularyName = "AssetAcquisitionMethodEntity";
             KeyPrefix = "commonDataModel.assetacquisitionmethodentity";
             KeySeparator = ".";
             Grouping = "/AssetAcquisitionMethodEntity";
 
-            AddGroup("Common Data Model AssetAcquisitionMethodEntity Details", group =>
+            AddGroup("AssetAcquisitionMethodEntity Details", group =>
             {
                 AcquisitionMethod = group.Add(new VocabularyKey(nameof(AcquisitionMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

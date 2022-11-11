@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CFMJournalNameSourceListEntityVocabulary()
         {
-            VocabularyName = "Common Data Model CFMJournalNameSourceListEntity";
+            VocabularyName = "CFMJournalNameSourceListEntity";
             KeyPrefix = "commonDataModel.cfmjournalnamesourcelistentity";
             KeySeparator = ".";
             Grouping = "/CFMJournalNameSourceListEntity";
 
-            AddGroup("Common Data Model CFMJournalNameSourceListEntity Details", group =>
+            AddGroup("CFMJournalNameSourceListEntity Details", group =>
             {
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 JournalDataSource = group.Add(new VocabularyKey(nameof(JournalDataSource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

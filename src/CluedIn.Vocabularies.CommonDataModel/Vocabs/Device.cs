@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DeviceVocabulary()
         {
-            VocabularyName = "Common Data Model Device";
+            VocabularyName = "Device";
             KeyPrefix = "commonDataModel.device";
             KeySeparator = ".";
             Grouping = "/Device";
 
-            AddGroup("Common Data Model Device Details", group =>
+            AddGroup("Device Details", group =>
             {
                 createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
                 createdBy = group.Add(new VocabularyKey(nameof(createdBy), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));

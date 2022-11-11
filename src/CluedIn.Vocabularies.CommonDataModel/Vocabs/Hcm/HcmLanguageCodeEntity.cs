@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmLanguageCodeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model HcmLanguageCodeEntity";
+            VocabularyName = "HcmLanguageCodeEntity";
             KeyPrefix = "commonDataModel.hcmlanguagecodeentity";
             KeySeparator = ".";
             Grouping = "/HcmLanguageCodeEntity";
 
-            AddGroup("Common Data Model HcmLanguageCodeEntity Details", group =>
+            AddGroup("HcmLanguageCodeEntity Details", group =>
             {
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LanguageCodeId = group.Add(new VocabularyKey(nameof(LanguageCodeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

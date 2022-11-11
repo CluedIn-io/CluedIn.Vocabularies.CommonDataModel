@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MainAccountTotalAccountIntervalEntityVocabulary()
         {
-            VocabularyName = "Common Data Model MainAccountTotalAccountIntervalEntity";
+            VocabularyName = "MainAccountTotalAccountIntervalEntity";
             KeyPrefix = "commonDataModel.mainaccounttotalaccountintervalentity";
             KeySeparator = ".";
             Grouping = "/MainAccountTotalAccountIntervalEntity";
 
-            AddGroup("Common Data Model MainAccountTotalAccountIntervalEntity Details", group =>
+            AddGroup("MainAccountTotalAccountIntervalEntity Details", group =>
             {
                 MainAccountId = group.Add(new VocabularyKey(nameof(MainAccountId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ChartOfAccounts = group.Add(new VocabularyKey(nameof(ChartOfAccounts), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

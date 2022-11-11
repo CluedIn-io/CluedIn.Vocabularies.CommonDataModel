@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ExceptionCodeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ExceptionCodeEntity";
+            VocabularyName = "ExceptionCodeEntity";
             KeyPrefix = "commonDataModel.exceptioncodeentity";
             KeySeparator = ".";
             Grouping = "/ExceptionCodeEntity";
 
-            AddGroup("Common Data Model ExceptionCodeEntity Details", group =>
+            AddGroup("ExceptionCodeEntity Details", group =>
             {
                 ApproximateTaxRateForImportedProducts = group.Add(new VocabularyKey(nameof(ApproximateTaxRateForImportedProducts), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ApproximateTaxRateForNationalProducts = group.Add(new VocabularyKey(nameof(ApproximateTaxRateForNationalProducts), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AnalyticsConfigurationVocabulary()
         {
-            VocabularyName = "Common Data Model AnalyticsConfiguration";
+            VocabularyName = "AnalyticsConfiguration";
             KeyPrefix = "commonDataModel.analyticsconfiguration";
             KeySeparator = ".";
             Grouping = "/AnalyticsConfiguration";
 
-            AddGroup("Common Data Model AnalyticsConfiguration Details", group =>
+            AddGroup("AnalyticsConfiguration Details", group =>
             {
                 cdsaconnectorconfigurationId = group.Add(new VocabularyKey(nameof(cdsaconnectorconfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 exporttoblobstoragesastoken = group.Add(new VocabularyKey(nameof(exporttoblobstoragesastoken), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

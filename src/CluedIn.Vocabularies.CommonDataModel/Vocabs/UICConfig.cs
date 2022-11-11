@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public UICConfigVocabulary()
         {
-            VocabularyName = "Common Data Model UICConfig";
+            VocabularyName = "UICConfig";
             KeyPrefix = "commonDataModel.uicconfig";
             KeySeparator = ".";
             Grouping = "/UICConfig";
 
-            AddGroup("Common Data Model UICConfig Details", group =>
+            AddGroup("UICConfig Details", group =>
             {
                 eventHubAccessKey = group.Add(new VocabularyKey(nameof(eventHubAccessKey), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 eventHubName = group.Add(new VocabularyKey(nameof(eventHubName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

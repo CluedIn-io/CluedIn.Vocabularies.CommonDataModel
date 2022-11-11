@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSDockDoorAppointmentChangeReasonEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TMSDockDoorAppointmentChangeReasonEntity";
+            VocabularyName = "TMSDockDoorAppointmentChangeReasonEntity";
             KeyPrefix = "commonDataModel.tmsdockdoorappointmentchangereasonentity";
             KeySeparator = ".";
             Grouping = "/TMSDockDoorAppointmentChangeReasonEntity";
 
-            AddGroup("Common Data Model TMSDockDoorAppointmentChangeReasonEntity Details", group =>
+            AddGroup("TMSDockDoorAppointmentChangeReasonEntity Details", group =>
             {
                 ReasonCode = group.Add(new VocabularyKey(nameof(ReasonCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReasonDescription = group.Add(new VocabularyKey(nameof(ReasonDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

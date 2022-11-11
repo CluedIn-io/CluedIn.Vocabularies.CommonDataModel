@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseWorkAuditTemplateEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSWarehouseWorkAuditTemplateEntity";
+            VocabularyName = "WHSWarehouseWorkAuditTemplateEntity";
             KeyPrefix = "commonDataModel.whswarehouseworkaudittemplateentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseWorkAuditTemplateEntity";
 
-            AddGroup("Common Data Model WHSWarehouseWorkAuditTemplateEntity Details", group =>
+            AddGroup("WHSWarehouseWorkAuditTemplateEntity Details", group =>
             {
                 AuditTriggeringEvent = group.Add(new VocabularyKey(nameof(AuditTriggeringEvent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AuditTriggeringReferenceWarehouseWorkFieldName = group.Add(new VocabularyKey(nameof(AuditTriggeringReferenceWarehouseWorkFieldName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

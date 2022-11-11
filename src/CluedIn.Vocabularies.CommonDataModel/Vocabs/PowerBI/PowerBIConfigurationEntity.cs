@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PowerBIConfigurationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PowerBIConfigurationEntity";
+            VocabularyName = "PowerBIConfigurationEntity";
             KeyPrefix = "commonDataModel.powerbiconfigurationentity";
             KeySeparator = ".";
             Grouping = "/PowerBIConfigurationEntity";
 
-            AddGroup("Common Data Model PowerBIConfigurationEntity Details", group =>
+            AddGroup("PowerBIConfigurationEntity Details", group =>
             {
                 IsEnabled = group.Add(new VocabularyKey(nameof(IsEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AzureADAuthorityUri = group.Add(new VocabularyKey(nameof(AzureADAuthorityUri), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

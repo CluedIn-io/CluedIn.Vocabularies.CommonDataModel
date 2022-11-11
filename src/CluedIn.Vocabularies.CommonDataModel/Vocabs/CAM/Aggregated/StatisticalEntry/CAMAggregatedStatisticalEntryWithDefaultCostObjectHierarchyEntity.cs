@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CAMAggregatedStatisticalEntryWithDefaultCostObjectHierarchyEntityVocabulary()
         {
-            VocabularyName = "Common Data Model CAMAggregatedStatisticalEntryWithDefaultCostObjectHierarchyEntity";
+            VocabularyName = "CAMAggregatedStatisticalEntryWithDefaultCostObjectHierarchyEntity";
             KeyPrefix = "commonDataModel.camaggregatedstatisticalentrywithdefaultcostobjecthierarchyentity";
             KeySeparator = ".";
             Grouping = "/CAMAggregatedStatisticalEntryWithDefaultCostObjectHierarchyEntity";
 
-            AddGroup("Common Data Model CAMAggregatedStatisticalEntryWithDefaultCostObjectHierarchyEntity Details", group =>
+            AddGroup("CAMAggregatedStatisticalEntryWithDefaultCostObjectHierarchyEntity Details", group =>
             {
                 Magnitude = group.Add(new VocabularyKey(nameof(Magnitude), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CostObjectDimensionHierarchyLevel1 = group.Add(new VocabularyKey(nameof(CostObjectDimensionHierarchyLevel1), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollDisposableIncomeBenefitEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PayrollDisposableIncomeBenefitEntity";
+            VocabularyName = "PayrollDisposableIncomeBenefitEntity";
             KeyPrefix = "commonDataModel.payrolldisposableincomebenefitentity";
             KeySeparator = ".";
             Grouping = "/PayrollDisposableIncomeBenefitEntity";
 
-            AddGroup("Common Data Model PayrollDisposableIncomeBenefitEntity Details", group =>
+            AddGroup("PayrollDisposableIncomeBenefitEntity Details", group =>
             {
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BenefitId = group.Add(new VocabularyKey(nameof(BenefitId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

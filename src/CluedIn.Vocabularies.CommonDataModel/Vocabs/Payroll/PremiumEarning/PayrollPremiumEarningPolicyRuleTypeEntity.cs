@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollPremiumEarningPolicyRuleTypeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PayrollPremiumEarningPolicyRuleTypeEntity";
+            VocabularyName = "PayrollPremiumEarningPolicyRuleTypeEntity";
             KeyPrefix = "commonDataModel.payrollpremiumearningpolicyruletypeentity";
             KeySeparator = ".";
             Grouping = "/PayrollPremiumEarningPolicyRuleTypeEntity";
 
-            AddGroup("Common Data Model PayrollPremiumEarningPolicyRuleTypeEntity Details", group =>
+            AddGroup("PayrollPremiumEarningPolicyRuleTypeEntity Details", group =>
             {
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RuleName = group.Add(new VocabularyKey(nameof(RuleName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CredManBlockExclusionRuleEntityVocabulary()
         {
-            VocabularyName = "Common Data Model CredManBlockExclusionRuleEntity";
+            VocabularyName = "CredManBlockExclusionRuleEntity";
             KeyPrefix = "commonDataModel.credmanblockexclusionruleentity";
             KeySeparator = ".";
             Grouping = "/CredManBlockExclusionRuleEntity";
 
-            AddGroup("Common Data Model CredManBlockExclusionRuleEntity Details", group =>
+            AddGroup("CredManBlockExclusionRuleEntity Details", group =>
             {
                 CreditLimitThreshold = group.Add(new VocabularyKey(nameof(CreditLimitThreshold), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CustRelation = group.Add(new VocabularyKey(nameof(CustRelation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReqMasterPlanningParametersEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ReqMasterPlanningParametersEntity";
+            VocabularyName = "ReqMasterPlanningParametersEntity";
             KeyPrefix = "commonDataModel.reqmasterplanningparametersentity";
             KeySeparator = ".";
             Grouping = "/ReqMasterPlanningParametersEntity";
 
-            AddGroup("Common Data Model ReqMasterPlanningParametersEntity Details", group =>
+            AddGroup("ReqMasterPlanningParametersEntity Details", group =>
             {
                 WillCompletedStaticPlanBeCopiedToDynamicPlan = group.Add(new VocabularyKey(nameof(WillCompletedStaticPlanBeCopiedToDynamicPlan), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MaximumBundleSize = group.Add(new VocabularyKey(nameof(MaximumBundleSize), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

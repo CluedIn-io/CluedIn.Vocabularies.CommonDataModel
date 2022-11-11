@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MarketingEmailDynamicContentMetadataVocabulary()
         {
-            VocabularyName = "Common Data Model MarketingEmailDynamicContentMetadata";
+            VocabularyName = "MarketingEmailDynamicContentMetadata";
             KeyPrefix = "commonDataModel.marketingemaildynamiccontentmetadata";
             KeySeparator = ".";
             Grouping = "/MarketingEmailDynamicContentMetadata";
 
-            AddGroup("Common Data Model MarketingEmailDynamicContentMetadata Details", group =>
+            AddGroup("MarketingEmailDynamicContentMetadata Details", group =>
             {
                 fields = group.Add(new VocabularyKey(nameof(fields), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 isContextEntity = group.Add(new VocabularyKey(nameof(isContextEntity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

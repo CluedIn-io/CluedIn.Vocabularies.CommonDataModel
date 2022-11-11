@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CFOPMatrixEntityVocabulary()
         {
-            VocabularyName = "Common Data Model CFOPMatrixEntity";
+            VocabularyName = "CFOPMatrixEntity";
             KeyPrefix = "commonDataModel.cfopmatrixentity";
             KeySeparator = ".";
             Grouping = "/CFOPMatrixEntity";
 
-            AddGroup("Common Data Model CFOPMatrixEntity Details", group =>
+            AddGroup("CFOPMatrixEntity Details", group =>
             {
                 CFOPGroupRecId = group.Add(new VocabularyKey(nameof(CFOPGroupRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CFOPTableRecId = group.Add(new VocabularyKey(nameof(CFOPTableRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSQualityCheckTemplateEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSQualityCheckTemplateEntity";
+            VocabularyName = "WHSQualityCheckTemplateEntity";
             KeyPrefix = "commonDataModel.whsqualitychecktemplateentity";
             KeySeparator = ".";
             Grouping = "/WHSQualityCheckTemplateEntity";
 
-            AddGroup("Common Data Model WHSQualityCheckTemplateEntity Details", group =>
+            AddGroup("WHSQualityCheckTemplateEntity Details", group =>
             {
                 TemplateId = group.Add(new VocabularyKey(nameof(TemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 QualityTestGroupId = group.Add(new VocabularyKey(nameof(QualityTestGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

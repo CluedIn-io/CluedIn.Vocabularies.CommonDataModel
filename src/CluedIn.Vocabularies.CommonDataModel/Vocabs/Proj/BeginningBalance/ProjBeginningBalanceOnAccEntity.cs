@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjBeginningBalanceOnAccEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ProjBeginningBalanceOnAccEntity";
+            VocabularyName = "ProjBeginningBalanceOnAccEntity";
             KeyPrefix = "commonDataModel.projbeginningbalanceonaccentity";
             KeySeparator = ".";
             Grouping = "/ProjBeginningBalanceOnAccEntity";
 
-            AddGroup("Common Data Model ProjBeginningBalanceOnAccEntity Details", group =>
+            AddGroup("ProjBeginningBalanceOnAccEntity Details", group =>
             {
                 JournalId = group.Add(new VocabularyKey(nameof(JournalId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 JournalName = group.Add(new VocabularyKey(nameof(JournalName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MarketingEmailTemplateVocabulary()
         {
-            VocabularyName = "Common Data Model MarketingEmailTemplate";
+            VocabularyName = "MarketingEmailTemplate";
             KeyPrefix = "commonDataModel.marketingemailtemplate";
             KeySeparator = ".";
             Grouping = "/MarketingEmailTemplate";
 
-            AddGroup("Common Data Model MarketingEmailTemplate Details", group =>
+            AddGroup("MarketingEmailTemplate Details", group =>
             {
                 formToSave = group.Add(new VocabularyKey(nameof(formToSave), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 entityImage = group.Add(new VocabularyKey(nameof(entityImage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EFDocTechResponsibleInformationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model EFDocTechResponsibleInformationEntity";
+            VocabularyName = "EFDocTechResponsibleInformationEntity";
             KeyPrefix = "commonDataModel.efdoctechresponsibleinformationentity";
             KeySeparator = ".";
             Grouping = "/EFDocTechResponsibleInformationEntity";
 
-            AddGroup("Common Data Model EFDocTechResponsibleInformationEntity Details", group =>
+            AddGroup("EFDocTechResponsibleInformationEntity Details", group =>
             {
                 State = group.Add(new VocabularyKey(nameof(State), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TechnicalResponsibleCNPJ = group.Add(new VocabularyKey(nameof(TechnicalResponsibleCNPJ), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

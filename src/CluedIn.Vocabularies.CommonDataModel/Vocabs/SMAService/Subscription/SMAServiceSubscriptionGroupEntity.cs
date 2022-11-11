@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SMAServiceSubscriptionGroupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model SMAServiceSubscriptionGroupEntity";
+            VocabularyName = "SMAServiceSubscriptionGroupEntity";
             KeyPrefix = "commonDataModel.smaservicesubscriptiongroupentity";
             KeySeparator = ".";
             Grouping = "/SMAServiceSubscriptionGroupEntity";
 
-            AddGroup("Common Data Model SMAServiceSubscriptionGroupEntity Details", group =>
+            AddGroup("SMAServiceSubscriptionGroupEntity Details", group =>
             {
                 InvoiceFrequencyPeriodTypeCode = group.Add(new VocabularyKey(nameof(InvoiceFrequencyPeriodTypeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AccrualFrequencyPeriodTypeCode = group.Add(new VocabularyKey(nameof(AccrualFrequencyPeriodTypeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

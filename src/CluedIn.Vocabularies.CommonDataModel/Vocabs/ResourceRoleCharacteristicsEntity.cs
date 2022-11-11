@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ResourceRoleCharacteristicsEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ResourceRoleCharacteristicsEntity";
+            VocabularyName = "ResourceRoleCharacteristicsEntity";
             KeyPrefix = "commonDataModel.resourcerolecharacteristicsentity";
             KeySeparator = ".";
             Grouping = "/ResourceRoleCharacteristicsEntity";
 
-            AddGroup("Common Data Model ResourceRoleCharacteristicsEntity Details", group =>
+            AddGroup("ResourceRoleCharacteristicsEntity Details", group =>
             {
                 CharacteristicId = group.Add(new VocabularyKey(nameof(CharacteristicId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CharacteristicRequirement = group.Add(new VocabularyKey(nameof(CharacteristicRequirement), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

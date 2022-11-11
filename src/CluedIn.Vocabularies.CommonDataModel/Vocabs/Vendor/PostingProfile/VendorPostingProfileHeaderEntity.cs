@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendorPostingProfileHeaderEntityVocabulary()
         {
-            VocabularyName = "Common Data Model VendorPostingProfileHeaderEntity";
+            VocabularyName = "VendorPostingProfileHeaderEntity";
             KeyPrefix = "commonDataModel.vendorpostingprofileheaderentity";
             KeySeparator = ".";
             Grouping = "/VendorPostingProfileHeaderEntity";
 
-            AddGroup("Common Data Model VendorPostingProfileHeaderEntity Details", group =>
+            AddGroup("VendorPostingProfileHeaderEntity Details", group =>
             {
                 IsTransactionCancelEnabled = group.Add(new VocabularyKey(nameof(IsTransactionCancelEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

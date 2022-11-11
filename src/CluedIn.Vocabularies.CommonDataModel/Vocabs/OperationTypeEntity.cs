@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public OperationTypeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model OperationTypeEntity";
+            VocabularyName = "OperationTypeEntity";
             KeyPrefix = "commonDataModel.operationtypeentity";
             KeySeparator = ".";
             Grouping = "/OperationTypeEntity";
 
-            AddGroup("Common Data Model OperationTypeEntity Details", group =>
+            AddGroup("OperationTypeEntity Details", group =>
             {
                 CreateFinancialTrans = group.Add(new VocabularyKey(nameof(CreateFinancialTrans), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CreateInventTrans = group.Add(new VocabularyKey(nameof(CreateInventTrans), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

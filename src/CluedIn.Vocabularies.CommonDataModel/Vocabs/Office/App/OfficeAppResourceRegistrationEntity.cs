@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public OfficeAppResourceRegistrationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model OfficeAppResourceRegistrationEntity";
+            VocabularyName = "OfficeAppResourceRegistrationEntity";
             KeyPrefix = "commonDataModel.officeappresourceregistrationentity";
             KeySeparator = ".";
             Grouping = "/OfficeAppResourceRegistrationEntity";
 
-            AddGroup("Common Data Model OfficeAppResourceRegistrationEntity Details", group =>
+            AddGroup("OfficeAppResourceRegistrationEntity Details", group =>
             {
                 ResourceID = group.Add(new VocabularyKey(nameof(ResourceID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RelativeUrl = group.Add(new VocabularyKey(nameof(RelativeUrl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

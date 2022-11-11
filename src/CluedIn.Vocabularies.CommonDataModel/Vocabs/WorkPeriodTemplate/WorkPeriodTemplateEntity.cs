@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WorkPeriodTemplateEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WorkPeriodTemplateEntity";
+            VocabularyName = "WorkPeriodTemplateEntity";
             KeyPrefix = "commonDataModel.workperiodtemplateentity";
             KeySeparator = ".";
             Grouping = "/WorkPeriodTemplateEntity";
 
-            AddGroup("Common Data Model WorkPeriodTemplateEntity Details", group =>
+            AddGroup("WorkPeriodTemplateEntity Details", group =>
             {
                 FixedStartWeekDay = group.Add(new VocabularyKey(nameof(FixedStartWeekDay), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsDefault = group.Add(new VocabularyKey(nameof(IsDefault), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

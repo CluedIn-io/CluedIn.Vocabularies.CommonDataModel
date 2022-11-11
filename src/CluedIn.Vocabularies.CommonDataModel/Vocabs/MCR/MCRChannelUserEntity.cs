@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRChannelUserEntityVocabulary()
         {
-            VocabularyName = "Common Data Model MCRChannelUserEntity";
+            VocabularyName = "MCRChannelUserEntity";
             KeyPrefix = "commonDataModel.mcrchanneluserentity";
             KeySeparator = ".";
             Grouping = "/MCRChannelUserEntity";
 
-            AddGroup("Common Data Model MCRChannelUserEntity Details", group =>
+            AddGroup("MCRChannelUserEntity Details", group =>
             {
                 OperatingUnitNumber = group.Add(new VocabularyKey(nameof(OperatingUnitNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 User = group.Add(new VocabularyKey(nameof(User), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

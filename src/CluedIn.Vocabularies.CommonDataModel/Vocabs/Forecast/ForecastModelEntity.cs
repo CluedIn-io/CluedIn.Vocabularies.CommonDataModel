@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ForecastModelEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ForecastModelEntity";
+            VocabularyName = "ForecastModelEntity";
             KeyPrefix = "commonDataModel.forecastmodelentity";
             KeySeparator = ".";
             Grouping = "/ForecastModelEntity";
 
-            AddGroup("Common Data Model ForecastModelEntity Details", group =>
+            AddGroup("ForecastModelEntity Details", group =>
             {
                 ModelId = group.Add(new VocabularyKey(nameof(ModelId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ModelName = group.Add(new VocabularyKey(nameof(ModelName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

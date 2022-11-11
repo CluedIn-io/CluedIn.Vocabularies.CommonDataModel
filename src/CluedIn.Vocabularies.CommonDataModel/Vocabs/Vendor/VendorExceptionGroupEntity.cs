@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendorExceptionGroupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model VendorExceptionGroupEntity";
+            VocabularyName = "VendorExceptionGroupEntity";
             KeyPrefix = "commonDataModel.vendorexceptiongroupentity";
             KeySeparator = ".";
             Grouping = "/VendorExceptionGroupEntity";
 
-            AddGroup("Common Data Model VendorExceptionGroupEntity Details", group =>
+            AddGroup("VendorExceptionGroupEntity Details", group =>
             {
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GroupId = group.Add(new VocabularyKey(nameof(GroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

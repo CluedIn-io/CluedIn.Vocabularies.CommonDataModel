@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReqIntercompanyPlanningGroupMemberEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ReqIntercompanyPlanningGroupMemberEntity";
+            VocabularyName = "ReqIntercompanyPlanningGroupMemberEntity";
             KeyPrefix = "commonDataModel.reqintercompanyplanninggroupmemberentity";
             KeySeparator = ".";
             Grouping = "/ReqIntercompanyPlanningGroupMemberEntity";
 
-            AddGroup("Common Data Model ReqIntercompanyPlanningGroupMemberEntity Details", group =>
+            AddGroup("ReqIntercompanyPlanningGroupMemberEntity Details", group =>
             {
                 WillIntercompanyPlanAutomaticallyBeCopiedToDynamicPlan = group.Add(new VocabularyKey(nameof(WillIntercompanyPlanAutomaticallyBeCopiedToDynamicPlan), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillIntercompanyPlanAutomaticallyBeCopiedToStaticPlan = group.Add(new VocabularyKey(nameof(WillIntercompanyPlanAutomaticallyBeCopiedToStaticPlan), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

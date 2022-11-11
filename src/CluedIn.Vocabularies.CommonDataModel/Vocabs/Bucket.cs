@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BucketVocabulary()
         {
-            VocabularyName = "Common Data Model Bucket";
+            VocabularyName = "Bucket";
             KeyPrefix = "commonDataModel.bucket";
             KeySeparator = ".";
             Grouping = "/Bucket";
 
-            AddGroup("Common Data Model Bucket Details", group =>
+            AddGroup("Bucket Details", group =>
             {
                 bucketId = group.Add(new VocabularyKey(nameof(bucketId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

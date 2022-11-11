@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvPBSItemizationsEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TrvPBSItemizationsEntity";
+            VocabularyName = "TrvPBSItemizationsEntity";
             KeyPrefix = "commonDataModel.trvpbsitemizationsentity";
             KeySeparator = ".";
             Grouping = "/TrvPBSItemizationsEntity";
 
-            AddGroup("Common Data Model TrvPBSItemizationsEntity Details", group =>
+            AddGroup("TrvPBSItemizationsEntity Details", group =>
             {
                 CCTransUniqueID = group.Add(new VocabularyKey(nameof(CCTransUniqueID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SubcategoryCode = group.Add(new VocabularyKey(nameof(SubcategoryCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

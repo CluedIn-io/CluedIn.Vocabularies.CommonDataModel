@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FIDirectDebitVocabulary()
         {
-            VocabularyName = "Common Data Model FIDirectDebit";
+            VocabularyName = "FIDirectDebit";
             KeyPrefix = "commonDataModel.fidirectdebit";
             KeySeparator = ".";
             Grouping = "/FIDirectDebit";
 
-            AddGroup("Common Data Model FIDirectDebit Details", group =>
+            AddGroup("FIDirectDebit Details", group =>
             {
                 fi_DirectDebitId = group.Add(new VocabularyKey(nameof(fi_DirectDebitId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

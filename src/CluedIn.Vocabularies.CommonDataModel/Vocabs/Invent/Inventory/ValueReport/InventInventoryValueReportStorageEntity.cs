@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventInventoryValueReportStorageEntityVocabulary()
         {
-            VocabularyName = "Common Data Model InventInventoryValueReportStorageEntity";
+            VocabularyName = "InventInventoryValueReportStorageEntity";
             KeyPrefix = "commonDataModel.inventinventoryvaluereportstorageentity";
             KeySeparator = ".";
             Grouping = "/InventInventoryValueReportStorageEntity";
 
-            AddGroup("Common Data Model InventInventoryValueReportStorageEntity Details", group =>
+            AddGroup("InventInventoryValueReportStorageEntity Details", group =>
             {
                 COGSFinancialAmount = group.Add(new VocabularyKey(nameof(COGSFinancialAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 COGSFinancialQuantity = group.Add(new VocabularyKey(nameof(COGSFinancialQuantity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

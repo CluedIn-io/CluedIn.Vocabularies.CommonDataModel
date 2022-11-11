@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DerivedDimensionAttributeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model DerivedDimensionAttributeEntity";
+            VocabularyName = "DerivedDimensionAttributeEntity";
             KeyPrefix = "commonDataModel.deriveddimensionattributeentity";
             KeySeparator = ".";
             Grouping = "/DerivedDimensionAttributeEntity";
 
-            AddGroup("Common Data Model DerivedDimensionAttributeEntity Details", group =>
+            AddGroup("DerivedDimensionAttributeEntity Details", group =>
             {
                 DrivingDimension = group.Add(new VocabularyKey(nameof(DrivingDimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DerivedDimension1 = group.Add(new VocabularyKey(nameof(DerivedDimension1), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

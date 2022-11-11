@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EFDocSchemaEntityVocabulary()
         {
-            VocabularyName = "Common Data Model EFDocSchemaEntity";
+            VocabularyName = "EFDocSchemaEntity";
             KeyPrefix = "commonDataModel.efdocschemaentity";
             KeySeparator = ".";
             Grouping = "/EFDocSchemaEntity";
 
-            AddGroup("Common Data Model EFDocSchemaEntity Details", group =>
+            AddGroup("EFDocSchemaEntity Details", group =>
             {
                 SchemaType = group.Add(new VocabularyKey(nameof(SchemaType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Version = group.Add(new VocabularyKey(nameof(Version), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MatchingStrategyAttributeVocabulary()
         {
-            VocabularyName = "Common Data Model MatchingStrategyAttribute";
+            VocabularyName = "MatchingStrategyAttribute";
             KeyPrefix = "commonDataModel.matchingstrategyattribute";
             KeySeparator = ".";
             Grouping = "/MatchingStrategyAttribute";
 
-            AddGroup("Common Data Model MatchingStrategyAttribute Details", group =>
+            AddGroup("MatchingStrategyAttribute Details", group =>
             {
                 name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 matchingstrategyattributeId = group.Add(new VocabularyKey(nameof(matchingstrategyattributeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DeliveryReasonEntityVocabulary()
         {
-            VocabularyName = "Common Data Model DeliveryReasonEntity";
+            VocabularyName = "DeliveryReasonEntity";
             KeyPrefix = "commonDataModel.deliveryreasonentity";
             KeySeparator = ".";
             Grouping = "/DeliveryReasonEntity";
 
-            AddGroup("Common Data Model DeliveryReasonEntity Details", group =>
+            AddGroup("DeliveryReasonEntity Details", group =>
             {
                 ReasonCode = group.Add(new VocabularyKey(nameof(ReasonCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReasonDescription = group.Add(new VocabularyKey(nameof(ReasonDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

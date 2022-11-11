@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DimAttributeRDeferralsTable_RUEntityVocabulary()
         {
-            VocabularyName = "Common Data Model DimAttributeRDeferralsTable_RUEntity";
+            VocabularyName = "DimAttributeRDeferralsTable_RUEntity";
             KeyPrefix = "commonDataModel.dimattributerdeferralstable_ruentity";
             KeySeparator = ".";
             Grouping = "/DimAttributeRDeferralsTable_RUEntity";
 
-            AddGroup("Common Data Model DimAttributeRDeferralsTable_RUEntity Details", group =>
+            AddGroup("DimAttributeRDeferralsTable_RUEntity Details", group =>
             {
                 Value = group.Add(new VocabularyKey(nameof(Value), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

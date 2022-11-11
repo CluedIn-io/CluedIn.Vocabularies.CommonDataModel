@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjPeriodTimesheetWeekEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ProjPeriodTimesheetWeekEntity";
+            VocabularyName = "ProjPeriodTimesheetWeekEntity";
             KeyPrefix = "commonDataModel.projperiodtimesheetweekentity";
             KeySeparator = ".";
             Grouping = "/ProjPeriodTimesheetWeekEntity";
 
-            AddGroup("Common Data Model ProjPeriodTimesheetWeekEntity Details", group =>
+            AddGroup("ProjPeriodTimesheetWeekEntity Details", group =>
             {
                 PeriodFrom = group.Add(new VocabularyKey(nameof(PeriodFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PeriodId = group.Add(new VocabularyKey(nameof(PeriodId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

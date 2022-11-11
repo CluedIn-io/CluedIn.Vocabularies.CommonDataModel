@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AuthenticationSettingsVocabulary()
         {
-            VocabularyName = "Common Data Model AuthenticationSettings";
+            VocabularyName = "AuthenticationSettings";
             KeyPrefix = "commonDataModel.authenticationsettings";
             KeySeparator = ".";
             Grouping = "/AuthenticationSettings";
 
-            AddGroup("Common Data Model AuthenticationSettings Details", group =>
+            AddGroup("AuthenticationSettings Details", group =>
             {
                 authenticationSettingsId = group.Add(new VocabularyKey(nameof(authenticationSettingsId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 authenticationType = group.Add(new VocabularyKey(nameof(authenticationType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

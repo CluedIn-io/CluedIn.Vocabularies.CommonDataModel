@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventItemBatchEntityVocabulary()
         {
-            VocabularyName = "Common Data Model InventItemBatchEntity";
+            VocabularyName = "InventItemBatchEntity";
             KeyPrefix = "commonDataModel.inventitembatchentity";
             KeySeparator = ".";
             Grouping = "/InventItemBatchEntity";
 
-            AddGroup("Common Data Model InventItemBatchEntity Details", group =>
+            AddGroup("InventItemBatchEntity Details", group =>
             {
                 BatchDescription = group.Add(new VocabularyKey(nameof(BatchDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BatchExpirationDate = group.Add(new VocabularyKey(nameof(BatchExpirationDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

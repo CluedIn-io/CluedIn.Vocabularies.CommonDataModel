@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProdBatchOrderByProductEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ProdBatchOrderByProductEntity";
+            VocabularyName = "ProdBatchOrderByProductEntity";
             KeyPrefix = "commonDataModel.prodbatchorderbyproductentity";
             KeySeparator = ".";
             Grouping = "/ProdBatchOrderByProductEntity";
 
-            AddGroup("Common Data Model ProdBatchOrderByProductEntity Details", group =>
+            AddGroup("ProdBatchOrderByProductEntity Details", group =>
             {
                 BatchOrderRemainderStatus = group.Add(new VocabularyKey(nameof(BatchOrderRemainderStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BurdenAllocationMethod = group.Add(new VocabularyKey(nameof(BurdenAllocationMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

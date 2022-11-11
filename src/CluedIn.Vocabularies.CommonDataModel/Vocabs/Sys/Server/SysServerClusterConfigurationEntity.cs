@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SysServerClusterConfigurationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model SysServerClusterConfigurationEntity";
+            VocabularyName = "SysServerClusterConfigurationEntity";
             KeyPrefix = "commonDataModel.sysserverclusterconfigurationentity";
             KeySeparator = ".";
             Grouping = "/SysServerClusterConfigurationEntity";
 
-            AddGroup("Common Data Model SysServerClusterConfigurationEntity Details", group =>
+            AddGroup("SysServerClusterConfigurationEntity Details", group =>
             {
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

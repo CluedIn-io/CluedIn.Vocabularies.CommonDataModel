@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchaseOrderResponseLineEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PurchaseOrderResponseLineEntity";
+            VocabularyName = "PurchaseOrderResponseLineEntity";
             KeyPrefix = "commonDataModel.purchaseorderresponselineentity";
             KeySeparator = ".";
             Grouping = "/PurchaseOrderResponseLineEntity";
 
-            AddGroup("Common Data Model PurchaseOrderResponseLineEntity Details", group =>
+            AddGroup("PurchaseOrderResponseLineEntity Details", group =>
             {
                 PurchaseOrderResponseLastModificationDateTime = group.Add(new VocabularyKey(nameof(PurchaseOrderResponseLastModificationDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PurchaseOrderNumber = group.Add(new VocabularyKey(nameof(PurchaseOrderNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

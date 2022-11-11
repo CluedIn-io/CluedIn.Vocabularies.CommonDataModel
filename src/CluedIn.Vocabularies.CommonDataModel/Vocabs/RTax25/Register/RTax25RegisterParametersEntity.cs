@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RTax25RegisterParametersEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RTax25RegisterParametersEntity";
+            VocabularyName = "RTax25RegisterParametersEntity";
             KeyPrefix = "commonDataModel.rtax25registerparametersentity";
             KeySeparator = ".";
             Grouping = "/RTax25RegisterParametersEntity";
 
-            AddGroup("Common Data Model RTax25RegisterParametersEntity Details", group =>
+            AddGroup("RTax25RegisterParametersEntity Details", group =>
             {
                 MainAccount = group.Add(new VocabularyKey(nameof(MainAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Value = group.Add(new VocabularyKey(nameof(Value), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

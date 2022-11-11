@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxCodeExternalCodeClassEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TaxCodeExternalCodeClassEntity";
+            VocabularyName = "TaxCodeExternalCodeClassEntity";
             KeyPrefix = "commonDataModel.taxcodeexternalcodeclassentity";
             KeySeparator = ".";
             Grouping = "/TaxCodeExternalCodeClassEntity";
 
-            AddGroup("Common Data Model TaxCodeExternalCodeClassEntity Details", group =>
+            AddGroup("TaxCodeExternalCodeClassEntity Details", group =>
             {
                 CodeClassDefinition = group.Add(new VocabularyKey(nameof(CodeClassDefinition), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CodeClassDescription = group.Add(new VocabularyKey(nameof(CodeClassDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public NAFCodeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model NAFCodeEntity";
+            VocabularyName = "NAFCodeEntity";
             KeyPrefix = "commonDataModel.nafcodeentity";
             KeySeparator = ".";
             Grouping = "/NAFCodeEntity";
 
-            AddGroup("Common Data Model NAFCodeEntity Details", group =>
+            AddGroup("NAFCodeEntity Details", group =>
             {
                 NAFCode = group.Add(new VocabularyKey(nameof(NAFCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

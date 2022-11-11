@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WrkCtrSiteSpecificOperationsResourceSchedulingParametersEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WrkCtrSiteSpecificOperationsResourceSchedulingParametersEntity";
+            VocabularyName = "WrkCtrSiteSpecificOperationsResourceSchedulingParametersEntity";
             KeyPrefix = "commonDataModel.wrkctrsitespecificoperationsresourceschedulingparametersentity";
             KeySeparator = ".";
             Grouping = "/WrkCtrSiteSpecificOperationsResourceSchedulingParametersEntity";
 
-            AddGroup("Common Data Model WrkCtrSiteSpecificOperationsResourceSchedulingParametersEntity Details", group =>
+            AddGroup("WrkCtrSiteSpecificOperationsResourceSchedulingParametersEntity Details", group =>
             {
                 SiteId = group.Add(new VocabularyKey(nameof(SiteId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsSchedulingSequenceTimeoutEnabled = group.Add(new VocabularyKey(nameof(IsSchedulingSequenceTimeoutEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PmfFormulaVersionDocumentAttachmentEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PmfFormulaVersionDocumentAttachmentEntity";
+            VocabularyName = "PmfFormulaVersionDocumentAttachmentEntity";
             KeyPrefix = "commonDataModel.pmfformulaversiondocumentattachmententity";
             KeySeparator = ".";
             Grouping = "/PmfFormulaVersionDocumentAttachmentEntity";
 
-            AddGroup("Common Data Model PmfFormulaVersionDocumentAttachmentEntity Details", group =>
+            AddGroup("PmfFormulaVersionDocumentAttachmentEntity Details", group =>
             {
                 DocumentId = group.Add(new VocabularyKey(nameof(DocumentId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DocumentAttachmentTypeCode = group.Add(new VocabularyKey(nameof(DocumentAttachmentTypeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

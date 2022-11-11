@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ISRConceptEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ISRConceptEntity";
+            VocabularyName = "ISRConceptEntity";
             KeyPrefix = "commonDataModel.isrconceptentity";
             KeySeparator = ".";
             Grouping = "/ISRConceptEntity";
 
-            AddGroup("Common Data Model ISRConceptEntity Details", group =>
+            AddGroup("ISRConceptEntity Details", group =>
             {
                 DebitCreditIndicator = group.Add(new VocabularyKey(nameof(DebitCreditIndicator), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Concept = group.Add(new VocabularyKey(nameof(Concept), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

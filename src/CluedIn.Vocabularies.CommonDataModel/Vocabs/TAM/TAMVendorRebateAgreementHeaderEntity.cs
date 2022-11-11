@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TAMVendorRebateAgreementHeaderEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TAMVendorRebateAgreementHeaderEntity";
+            VocabularyName = "TAMVendorRebateAgreementHeaderEntity";
             KeyPrefix = "commonDataModel.tamvendorrebateagreementheaderentity";
             KeySeparator = ".";
             Grouping = "/TAMVendorRebateAgreementHeaderEntity";
 
-            AddGroup("Common Data Model TAMVendorRebateAgreementHeaderEntity Details", group =>
+            AddGroup("TAMVendorRebateAgreementHeaderEntity Details", group =>
             {
                 IsApprovalRequired = group.Add(new VocabularyKey(nameof(IsApprovalRequired), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PurchaseCumulationMethod = group.Add(new VocabularyKey(nameof(PurchaseCumulationMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResCategoryTaxInformationAssignmentEntityVocabulary()
         {
-            VocabularyName = "Common Data Model EcoResCategoryTaxInformationAssignmentEntity";
+            VocabularyName = "EcoResCategoryTaxInformationAssignmentEntity";
             KeyPrefix = "commonDataModel.ecorescategorytaxinformationassignmententity";
             KeySeparator = ".";
             Grouping = "/EcoResCategoryTaxInformationAssignmentEntity";
 
-            AddGroup("Common Data Model EcoResCategoryTaxInformationAssignmentEntity Details", group =>
+            AddGroup("EcoResCategoryTaxInformationAssignmentEntity Details", group =>
             {
                 Exempt = group.Add(new VocabularyKey(nameof(Exempt), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NonGST = group.Add(new VocabularyKey(nameof(NonGST), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

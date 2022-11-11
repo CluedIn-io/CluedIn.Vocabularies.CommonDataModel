@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSPhysicalDimensionGroupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSPhysicalDimensionGroupEntity";
+            VocabularyName = "WHSPhysicalDimensionGroupEntity";
             KeyPrefix = "commonDataModel.whsphysicaldimensiongroupentity";
             KeySeparator = ".";
             Grouping = "/WHSPhysicalDimensionGroupEntity";
 
-            AddGroup("Common Data Model WHSPhysicalDimensionGroupEntity Details", group =>
+            AddGroup("WHSPhysicalDimensionGroupEntity Details", group =>
             {
                 GroupDescription = group.Add(new VocabularyKey(nameof(GroupDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GroupId = group.Add(new VocabularyKey(nameof(GroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

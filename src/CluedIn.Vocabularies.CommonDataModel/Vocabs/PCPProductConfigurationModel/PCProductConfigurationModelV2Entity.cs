@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PCProductConfigurationModelV2EntityVocabulary()
         {
-            VocabularyName = "Common Data Model PCProductConfigurationModelV2Entity";
+            VocabularyName = "PCProductConfigurationModelV2Entity";
             KeyPrefix = "commonDataModel.pcproductconfigurationmodelv2entity";
             KeySeparator = ".";
             Grouping = "/PCProductConfigurationModelV2Entity";
 
-            AddGroup("Common Data Model PCProductConfigurationModelV2Entity Details", group =>
+            AddGroup("PCProductConfigurationModelV2Entity Details", group =>
             {
                 ModelName = group.Add(new VocabularyKey(nameof(ModelName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ModelXml = group.Add(new VocabularyKey(nameof(ModelXml), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

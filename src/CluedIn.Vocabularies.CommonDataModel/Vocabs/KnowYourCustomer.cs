@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public KnowYourCustomerVocabulary()
         {
-            VocabularyName = "Common Data Model KnowYourCustomer";
+            VocabularyName = "KnowYourCustomer";
             KeyPrefix = "commonDataModel.knowyourcustomer";
             KeySeparator = ".";
             Grouping = "/KnowYourCustomer";
 
-            AddGroup("Common Data Model KnowYourCustomer Details", group =>
+            AddGroup("KnowYourCustomer Details", group =>
             {
                 kycId = group.Add(new VocabularyKey(nameof(kycId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

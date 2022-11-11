@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollWorkerTaxCodeParameterEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PayrollWorkerTaxCodeParameterEntity";
+            VocabularyName = "PayrollWorkerTaxCodeParameterEntity";
             KeyPrefix = "commonDataModel.payrollworkertaxcodeparameterentity";
             KeySeparator = ".";
             Grouping = "/PayrollWorkerTaxCodeParameterEntity";
 
-            AddGroup("Common Data Model PayrollWorkerTaxCodeParameterEntity Details", group =>
+            AddGroup("PayrollWorkerTaxCodeParameterEntity Details", group =>
             {
                 LegalEntity = group.Add(new VocabularyKey(nameof(LegalEntity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxCodeParameter = group.Add(new VocabularyKey(nameof(TaxCodeParameter), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

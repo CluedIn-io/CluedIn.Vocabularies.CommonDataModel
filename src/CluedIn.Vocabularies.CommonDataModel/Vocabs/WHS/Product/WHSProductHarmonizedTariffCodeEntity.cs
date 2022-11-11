@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSProductHarmonizedTariffCodeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSProductHarmonizedTariffCodeEntity";
+            VocabularyName = "WHSProductHarmonizedTariffCodeEntity";
             KeyPrefix = "commonDataModel.whsproductharmonizedtariffcodeentity";
             KeySeparator = ".";
             Grouping = "/WHSProductHarmonizedTariffCodeEntity";
 
-            AddGroup("Common Data Model WHSProductHarmonizedTariffCodeEntity Details", group =>
+            AddGroup("WHSProductHarmonizedTariffCodeEntity Details", group =>
             {
                 TariffCode = group.Add(new VocabularyKey(nameof(TariffCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TariffName = group.Add(new VocabularyKey(nameof(TariffName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

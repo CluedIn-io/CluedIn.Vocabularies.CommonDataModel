@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CAMImportedStatisticalDimensionMemberEntityVocabulary()
         {
-            VocabularyName = "Common Data Model CAMImportedStatisticalDimensionMemberEntity";
+            VocabularyName = "CAMImportedStatisticalDimensionMemberEntity";
             KeyPrefix = "commonDataModel.camimportedstatisticaldimensionmemberentity";
             KeySeparator = ".";
             Grouping = "/CAMImportedStatisticalDimensionMemberEntity";
 
-            AddGroup("Common Data Model CAMImportedStatisticalDimensionMemberEntity Details", group =>
+            AddGroup("CAMImportedStatisticalDimensionMemberEntity Details", group =>
             {
                 SourceIdentifier = group.Add(new VocabularyKey(nameof(SourceIdentifier), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MemberName = group.Add(new VocabularyKey(nameof(MemberName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

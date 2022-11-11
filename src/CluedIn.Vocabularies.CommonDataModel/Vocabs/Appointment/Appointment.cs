@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AppointmentVocabulary()
         {
-            VocabularyName = "Common Data Model Appointment";
+            VocabularyName = "Appointment";
             KeyPrefix = "commonDataModel.appointment";
             KeySeparator = ".";
             Grouping = "/Appointment";
 
-            AddGroup("Common Data Model Appointment Details", group =>
+            AddGroup("Appointment Details", group =>
             {
 
             });

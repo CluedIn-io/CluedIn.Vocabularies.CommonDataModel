@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxGSTReliefCategoryEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TaxGSTReliefCategoryEntity";
+            VocabularyName = "TaxGSTReliefCategoryEntity";
             KeyPrefix = "commonDataModel.taxgstreliefcategoryentity";
             KeySeparator = ".";
             Grouping = "/TaxGSTReliefCategoryEntity";
 
-            AddGroup("Common Data Model TaxGSTReliefCategoryEntity Details", group =>
+            AddGroup("TaxGSTReliefCategoryEntity Details", group =>
             {
                 ReliefCategoryEntityKey = group.Add(new VocabularyKey(nameof(ReliefCategoryEntityKey), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReliefCategoryId = group.Add(new VocabularyKey(nameof(ReliefCategoryId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

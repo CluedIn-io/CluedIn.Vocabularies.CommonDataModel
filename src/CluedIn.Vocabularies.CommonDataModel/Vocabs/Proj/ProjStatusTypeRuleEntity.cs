@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjStatusTypeRuleEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ProjStatusTypeRuleEntity";
+            VocabularyName = "ProjStatusTypeRuleEntity";
             KeyPrefix = "commonDataModel.projstatustyperuleentity";
             KeySeparator = ".";
             Grouping = "/ProjStatusTypeRuleEntity";
 
-            AddGroup("Common Data Model ProjStatusTypeRuleEntity Details", group =>
+            AddGroup("ProjStatusTypeRuleEntity Details", group =>
             {
                 ProjStatus = group.Add(new VocabularyKey(nameof(ProjStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProjStatusRule = group.Add(new VocabularyKey(nameof(ProjStatusRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchBookVATProcessParametersEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PurchBookVATProcessParametersEntity";
+            VocabularyName = "PurchBookVATProcessParametersEntity";
             KeyPrefix = "commonDataModel.purchbookvatprocessparametersentity";
             KeySeparator = ".";
             Grouping = "/PurchBookVATProcessParametersEntity";
 
-            AddGroup("Common Data Model PurchBookVATProcessParametersEntity Details", group =>
+            AddGroup("PurchBookVATProcessParametersEntity Details", group =>
             {
                 Dimension = group.Add(new VocabularyKey(nameof(Dimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultDimensionEnabled = group.Add(new VocabularyKey(nameof(DefaultDimensionEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

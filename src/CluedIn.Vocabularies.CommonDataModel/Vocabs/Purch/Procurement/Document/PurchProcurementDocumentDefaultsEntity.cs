@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchProcurementDocumentDefaultsEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PurchProcurementDocumentDefaultsEntity";
+            VocabularyName = "PurchProcurementDocumentDefaultsEntity";
             KeyPrefix = "commonDataModel.purchprocurementdocumentdefaultsentity";
             KeySeparator = ".";
             Grouping = "/PurchProcurementDocumentDefaultsEntity";
 
-            AddGroup("Common Data Model PurchProcurementDocumentDefaultsEntity Details", group =>
+            AddGroup("PurchProcurementDocumentDefaultsEntity Details", group =>
             {
                 ArePurchaseOrderAmountsPrintedByDefault = group.Add(new VocabularyKey(nameof(ArePurchaseOrderAmountsPrintedByDefault), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultPurchaseOrderPoolId = group.Add(new VocabularyKey(nameof(DefaultPurchaseOrderPoolId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

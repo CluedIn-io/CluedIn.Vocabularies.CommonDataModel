@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FiscalDocumentMiscChargeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model FiscalDocumentMiscChargeEntity";
+            VocabularyName = "FiscalDocumentMiscChargeEntity";
             KeyPrefix = "commonDataModel.fiscaldocumentmiscchargeentity";
             KeySeparator = ".";
             Grouping = "/FiscalDocumentMiscChargeEntity";
 
-            AddGroup("Common Data Model FiscalDocumentMiscChargeEntity Details", group =>
+            AddGroup("FiscalDocumentMiscChargeEntity Details", group =>
             {
                 Amount = group.Add(new VocabularyKey(nameof(Amount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ChargeNumber = group.Add(new VocabularyKey(nameof(ChargeNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

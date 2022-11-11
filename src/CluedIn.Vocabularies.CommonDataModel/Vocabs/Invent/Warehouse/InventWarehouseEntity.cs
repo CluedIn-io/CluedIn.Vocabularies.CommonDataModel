@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventWarehouseEntityVocabulary()
         {
-            VocabularyName = "Common Data Model InventWarehouseEntity";
+            VocabularyName = "InventWarehouseEntity";
             KeyPrefix = "commonDataModel.inventwarehouseentity";
             KeySeparator = ".";
             Grouping = "/InventWarehouseEntity";
 
-            AddGroup("Common Data Model InventWarehouseEntity Details", group =>
+            AddGroup("InventWarehouseEntity Details", group =>
             {
                 AreLaborStandardsAllowed = group.Add(new VocabularyKey(nameof(AreLaborStandardsAllowed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InventoryStatusChangeReservationRemovalLevel = group.Add(new VocabularyKey(nameof(InventoryStatusChangeReservationRemovalLevel), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

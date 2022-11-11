@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRTaxGroupDefaultRulesEntityVocabulary()
         {
-            VocabularyName = "Common Data Model MCRTaxGroupDefaultRulesEntity";
+            VocabularyName = "MCRTaxGroupDefaultRulesEntity";
             KeyPrefix = "commonDataModel.mcrtaxgroupdefaultrulesentity";
             KeySeparator = ".";
             Grouping = "/MCRTaxGroupDefaultRulesEntity";
 
-            AddGroup("Common Data Model MCRTaxGroupDefaultRulesEntity Details", group =>
+            AddGroup("MCRTaxGroupDefaultRulesEntity Details", group =>
             {
                 IncludeCity = group.Add(new VocabularyKey(nameof(IncludeCity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IncludeCountry = group.Add(new VocabularyKey(nameof(IncludeCountry), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

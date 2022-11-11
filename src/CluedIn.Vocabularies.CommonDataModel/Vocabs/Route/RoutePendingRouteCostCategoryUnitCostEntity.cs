@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RoutePendingRouteCostCategoryUnitCostEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RoutePendingRouteCostCategoryUnitCostEntity";
+            VocabularyName = "RoutePendingRouteCostCategoryUnitCostEntity";
             KeyPrefix = "commonDataModel.routependingroutecostcategoryunitcostentity";
             KeySeparator = ".";
             Grouping = "/RoutePendingRouteCostCategoryUnitCostEntity";
 
-            AddGroup("Common Data Model RoutePendingRouteCostCategoryUnitCostEntity Details", group =>
+            AddGroup("RoutePendingRouteCostCategoryUnitCostEntity Details", group =>
             {
                 RouteCostCategoryId = group.Add(new VocabularyKey(nameof(RouteCostCategoryId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EffectiveDate = group.Add(new VocabularyKey(nameof(EffectiveDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

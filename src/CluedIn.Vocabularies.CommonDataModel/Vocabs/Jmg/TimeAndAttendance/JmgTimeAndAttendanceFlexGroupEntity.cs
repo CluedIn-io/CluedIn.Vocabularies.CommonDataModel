@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgTimeAndAttendanceFlexGroupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model JmgTimeAndAttendanceFlexGroupEntity";
+            VocabularyName = "JmgTimeAndAttendanceFlexGroupEntity";
             KeyPrefix = "commonDataModel.jmgtimeandattendanceflexgroupentity";
             KeySeparator = ".";
             Grouping = "/JmgTimeAndAttendanceFlexGroupEntity";
 
-            AddGroup("Common Data Model JmgTimeAndAttendanceFlexGroupEntity Details", group =>
+            AddGroup("JmgTimeAndAttendanceFlexGroupEntity Details", group =>
             {
                 FlexGroupId = group.Add(new VocabularyKey(nameof(FlexGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

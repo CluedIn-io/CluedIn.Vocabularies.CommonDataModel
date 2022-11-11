@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CredManCreditLimitAdvancedEntityVocabulary()
         {
-            VocabularyName = "Common Data Model CredManCreditLimitAdvancedEntity";
+            VocabularyName = "CredManCreditLimitAdvancedEntity";
             KeyPrefix = "commonDataModel.credmancreditlimitadvancedentity";
             KeySeparator = ".";
             Grouping = "/CredManCreditLimitAdvancedEntity";
 
-            AddGroup("Common Data Model CredManCreditLimitAdvancedEntity Details", group =>
+            AddGroup("CredManCreditLimitAdvancedEntity Details", group =>
             {
                 CreditLimitId = group.Add(new VocabularyKey(nameof(CreditLimitId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CreditMax = group.Add(new VocabularyKey(nameof(CreditMax), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

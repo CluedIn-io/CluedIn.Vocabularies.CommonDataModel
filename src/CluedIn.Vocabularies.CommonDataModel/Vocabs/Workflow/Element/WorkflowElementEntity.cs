@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WorkflowElementEntityVocabulary()
         {
-            VocabularyName = "Common Data Model WorkflowElementEntity";
+            VocabularyName = "WorkflowElementEntity";
             KeyPrefix = "commonDataModel.workflowelemententity";
             KeySeparator = ".";
             Grouping = "/WorkflowElementEntity";
 
-            AddGroup("Common Data Model WorkflowElementEntity Details", group =>
+            AddGroup("WorkflowElementEntity Details", group =>
             {
                 ConditionId = group.Add(new VocabularyKey(nameof(ConditionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AutoCompleteAction = group.Add(new VocabularyKey(nameof(AutoCompleteAction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

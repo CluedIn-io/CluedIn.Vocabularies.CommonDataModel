@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LinkedInLeadGenIntegrationConfigurationVocabulary()
         {
-            VocabularyName = "Common Data Model LinkedInLeadGenIntegrationConfiguration";
+            VocabularyName = "LinkedInLeadGenIntegrationConfiguration";
             KeyPrefix = "commonDataModel.linkedinleadgenintegrationconfiguration";
             KeySeparator = ".";
             Grouping = "/LinkedInLeadGenIntegrationConfiguration";
 
-            AddGroup("Common Data Model LinkedInLeadGenIntegrationConfiguration Details", group =>
+            AddGroup("LinkedInLeadGenIntegrationConfiguration Details", group =>
             {
                 authenticationResource = group.Add(new VocabularyKey(nameof(authenticationResource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 authenticationTokenEndpoint = group.Add(new VocabularyKey(nameof(authenticationTokenEndpoint), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

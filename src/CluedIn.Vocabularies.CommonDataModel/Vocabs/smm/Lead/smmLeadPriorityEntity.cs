@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public smmLeadPriorityEntityVocabulary()
         {
-            VocabularyName = "Common Data Model smmLeadPriorityEntity";
+            VocabularyName = "smmLeadPriorityEntity";
             KeyPrefix = "commonDataModel.smmleadpriorityentity";
             KeySeparator = ".";
             Grouping = "/smmLeadPriorityEntity";
 
-            AddGroup("Common Data Model smmLeadPriorityEntity Details", group =>
+            AddGroup("smmLeadPriorityEntity Details", group =>
             {
                 PriorityDescription = group.Add(new VocabularyKey(nameof(PriorityDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillCustomerServiceIssueHotAlert = group.Add(new VocabularyKey(nameof(WillCustomerServiceIssueHotAlert), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

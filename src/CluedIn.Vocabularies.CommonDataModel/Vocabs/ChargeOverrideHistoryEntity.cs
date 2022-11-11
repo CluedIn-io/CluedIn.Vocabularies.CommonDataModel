@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ChargeOverrideHistoryEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ChargeOverrideHistoryEntity";
+            VocabularyName = "ChargeOverrideHistoryEntity";
             KeyPrefix = "commonDataModel.chargeoverridehistoryentity";
             KeySeparator = ".";
             Grouping = "/ChargeOverrideHistoryEntity";
 
-            AddGroup("Common Data Model ChargeOverrideHistoryEntity Details", group =>
+            AddGroup("ChargeOverrideHistoryEntity Details", group =>
             {
                 ChargeCode = group.Add(new VocabularyKey(nameof(ChargeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OriginalAmount = group.Add(new VocabularyKey(nameof(OriginalAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

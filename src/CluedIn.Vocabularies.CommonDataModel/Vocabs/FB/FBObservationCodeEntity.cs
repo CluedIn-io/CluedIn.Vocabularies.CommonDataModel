@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FBObservationCodeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model FBObservationCodeEntity";
+            VocabularyName = "FBObservationCodeEntity";
             KeyPrefix = "commonDataModel.fbobservationcodeentity";
             KeySeparator = ".";
             Grouping = "/FBObservationCodeEntity";
 
-            AddGroup("Common Data Model FBObservationCodeEntity Details", group =>
+            AddGroup("FBObservationCodeEntity Details", group =>
             {
                 ObservationCode = group.Add(new VocabularyKey(nameof(ObservationCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

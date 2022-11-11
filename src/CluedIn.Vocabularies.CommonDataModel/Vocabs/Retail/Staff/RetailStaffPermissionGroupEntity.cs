@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailStaffPermissionGroupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RetailStaffPermissionGroupEntity";
+            VocabularyName = "RetailStaffPermissionGroupEntity";
             KeyPrefix = "commonDataModel.retailstaffpermissiongroupentity";
             KeySeparator = ".";
             Grouping = "/RetailStaffPermissionGroupEntity";
 
-            AddGroup("Common Data Model RetailStaffPermissionGroupEntity Details", group =>
+            AddGroup("RetailStaffPermissionGroupEntity Details", group =>
             {
                 IsAllowChangeNoVoid = group.Add(new VocabularyKey(nameof(IsAllowChangeNoVoid), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsAllowFloatingTenderDeclaration = group.Add(new VocabularyKey(nameof(IsAllowFloatingTenderDeclaration), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

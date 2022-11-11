@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustomChannelActivityVocabulary()
         {
-            VocabularyName = "Common Data Model CustomChannelActivity";
+            VocabularyName = "CustomChannelActivity";
             KeyPrefix = "commonDataModel.customchannelactivity";
             KeySeparator = ".";
             Grouping = "/CustomChannelActivity";
 
-            AddGroup("Common Data Model CustomChannelActivity Details", group =>
+            AddGroup("CustomChannelActivity Details", group =>
             {
                 activityID = group.Add(new VocabularyKey(nameof(activityID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 customerJourneyId = group.Add(new VocabularyKey(nameof(customerJourneyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

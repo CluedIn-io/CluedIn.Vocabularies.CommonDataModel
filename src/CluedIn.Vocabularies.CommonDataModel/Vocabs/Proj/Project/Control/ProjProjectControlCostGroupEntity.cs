@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjProjectControlCostGroupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model ProjProjectControlCostGroupEntity";
+            VocabularyName = "ProjProjectControlCostGroupEntity";
             KeyPrefix = "commonDataModel.projprojectcontrolcostgroupentity";
             KeySeparator = ".";
             Grouping = "/ProjProjectControlCostGroupEntity";
 
-            AddGroup("Common Data Model ProjProjectControlCostGroupEntity Details", group =>
+            AddGroup("ProjProjectControlCostGroupEntity Details", group =>
             {
                 MandatoryCostLine = group.Add(new VocabularyKey(nameof(MandatoryCostLine), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PercentageOfCompletion = group.Add(new VocabularyKey(nameof(PercentageOfCompletion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

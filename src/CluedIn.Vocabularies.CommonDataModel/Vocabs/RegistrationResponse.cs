@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RegistrationResponseVocabulary()
         {
-            VocabularyName = "Common Data Model RegistrationResponse";
+            VocabularyName = "RegistrationResponse";
             KeyPrefix = "commonDataModel.registrationresponse";
             KeySeparator = ".";
             Grouping = "/RegistrationResponse";
 
-            AddGroup("Common Data Model RegistrationResponse Details", group =>
+            AddGroup("RegistrationResponse Details", group =>
             {
                 createdFromApi = group.Add(new VocabularyKey(nameof(createdFromApi), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 registrationResponseId = group.Add(new VocabularyKey(nameof(registrationResponseId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

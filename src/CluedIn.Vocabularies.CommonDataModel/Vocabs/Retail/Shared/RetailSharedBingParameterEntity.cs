@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailSharedBingParameterEntityVocabulary()
         {
-            VocabularyName = "Common Data Model RetailSharedBingParameterEntity";
+            VocabularyName = "RetailSharedBingParameterEntity";
             KeyPrefix = "commonDataModel.retailsharedbingparameterentity";
             KeySeparator = ".";
             Grouping = "/RetailSharedBingParameterEntity";
 
-            AddGroup("Common Data Model RetailSharedBingParameterEntity Details", group =>
+            AddGroup("RetailSharedBingParameterEntity Details", group =>
             {
                 ApiKey = group.Add(new VocabularyKey(nameof(ApiKey), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Key = group.Add(new VocabularyKey(nameof(Key), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

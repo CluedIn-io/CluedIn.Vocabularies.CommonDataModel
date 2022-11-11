@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendFormletterVendorInvoiceFormPrintingConfigurationEntityVocabulary()
         {
-            VocabularyName = "Common Data Model VendFormletterVendorInvoiceFormPrintingConfigurationEntity";
+            VocabularyName = "VendFormletterVendorInvoiceFormPrintingConfigurationEntity";
             KeyPrefix = "commonDataModel.vendformlettervendorinvoiceformprintingconfigurationentity";
             KeySeparator = ".";
             Grouping = "/VendFormletterVendorInvoiceFormPrintingConfigurationEntity";
 
-            AddGroup("Common Data Model VendFormletterVendorInvoiceFormPrintingConfigurationEntity Details", group =>
+            AddGroup("VendFormletterVendorInvoiceFormPrintingConfigurationEntity Details", group =>
             {
                 IsTaxExemptNumberDisplayed = group.Add(new VocabularyKey(nameof(IsTaxExemptNumberDisplayed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsInventoryStatusIdDisplayed = group.Add(new VocabularyKey(nameof(IsInventoryStatusIdDisplayed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

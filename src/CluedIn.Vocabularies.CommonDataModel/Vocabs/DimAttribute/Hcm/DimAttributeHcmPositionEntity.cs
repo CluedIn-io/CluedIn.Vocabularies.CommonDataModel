@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DimAttributeHcmPositionEntityVocabulary()
         {
-            VocabularyName = "Common Data Model DimAttributeHcmPositionEntity";
+            VocabularyName = "DimAttributeHcmPositionEntity";
             KeyPrefix = "commonDataModel.dimattributehcmpositionentity";
             KeySeparator = ".";
             Grouping = "/DimAttributeHcmPositionEntity";
 
-            AddGroup("Common Data Model DimAttributeHcmPositionEntity Details", group =>
+            AddGroup("DimAttributeHcmPositionEntity Details", group =>
             {
                 Value = group.Add(new VocabularyKey(nameof(Value), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

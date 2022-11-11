@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPublishedRequestForQuotationAndReplyLineEntityVocabulary()
         {
-            VocabularyName = "Common Data Model PurchPublishedRequestForQuotationAndReplyLineEntity";
+            VocabularyName = "PurchPublishedRequestForQuotationAndReplyLineEntity";
             KeyPrefix = "commonDataModel.purchpublishedrequestforquotationandreplylineentity";
             KeySeparator = ".";
             Grouping = "/PurchPublishedRequestForQuotationAndReplyLineEntity";
 
-            AddGroup("Common Data Model PurchPublishedRequestForQuotationAndReplyLineEntity Details", group =>
+            AddGroup("PurchPublishedRequestForQuotationAndReplyLineEntity Details", group =>
             {
                 RFQNumber = group.Add(new VocabularyKey(nameof(RFQNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReplyLineNumber = group.Add(new VocabularyKey(nameof(ReplyLineNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

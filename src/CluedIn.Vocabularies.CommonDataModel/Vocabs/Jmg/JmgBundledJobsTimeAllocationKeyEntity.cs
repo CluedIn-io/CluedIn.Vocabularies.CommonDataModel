@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgBundledJobsTimeAllocationKeyEntityVocabulary()
         {
-            VocabularyName = "Common Data Model JmgBundledJobsTimeAllocationKeyEntity";
+            VocabularyName = "JmgBundledJobsTimeAllocationKeyEntity";
             KeyPrefix = "commonDataModel.jmgbundledjobstimeallocationkeyentity";
             KeySeparator = ".";
             Grouping = "/JmgBundledJobsTimeAllocationKeyEntity";
 
-            AddGroup("Common Data Model JmgBundledJobsTimeAllocationKeyEntity Details", group =>
+            AddGroup("JmgBundledJobsTimeAllocationKeyEntity Details", group =>
             {
                 TimeAllocationMethod = group.Add(new VocabularyKey(nameof(TimeAllocationMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductionSiteId = group.Add(new VocabularyKey(nameof(ProductionSiteId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

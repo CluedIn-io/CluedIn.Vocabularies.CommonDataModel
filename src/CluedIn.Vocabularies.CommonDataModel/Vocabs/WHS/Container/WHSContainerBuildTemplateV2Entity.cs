@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSContainerBuildTemplateV2EntityVocabulary()
         {
-            VocabularyName = "Common Data Model WHSContainerBuildTemplateV2Entity";
+            VocabularyName = "WHSContainerBuildTemplateV2Entity";
             KeyPrefix = "commonDataModel.whscontainerbuildtemplatev2entity";
             KeySeparator = ".";
             Grouping = "/WHSContainerBuildTemplateV2Entity";
 
-            AddGroup("Common Data Model WHSContainerBuildTemplateV2Entity Details", group =>
+            AddGroup("WHSContainerBuildTemplateV2Entity Details", group =>
             {
                 IsSplitPickingAllowed = group.Add(new VocabularyKey(nameof(IsSplitPickingAllowed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ContainerGroupId = group.Add(new VocabularyKey(nameof(ContainerGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

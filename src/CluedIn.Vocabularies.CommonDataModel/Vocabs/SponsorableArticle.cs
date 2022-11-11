@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SponsorableArticleVocabulary()
         {
-            VocabularyName = "Common Data Model SponsorableArticle";
+            VocabularyName = "SponsorableArticle";
             KeyPrefix = "commonDataModel.sponsorablearticle";
             KeySeparator = ".";
             Grouping = "/SponsorableArticle";
 
-            AddGroup("Common Data Model SponsorableArticle Details", group =>
+            AddGroup("SponsorableArticle Details", group =>
             {
                 exchangeRate = group.Add(new VocabularyKey(nameof(exchangeRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 costPerUnit = group.Add(new VocabularyKey(nameof(costPerUnit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

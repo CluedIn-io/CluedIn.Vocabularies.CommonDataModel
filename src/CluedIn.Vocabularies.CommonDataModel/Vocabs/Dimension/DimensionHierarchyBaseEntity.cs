@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DimensionHierarchyBaseEntityVocabulary()
         {
-            VocabularyName = "Common Data Model DimensionHierarchyBaseEntity";
+            VocabularyName = "DimensionHierarchyBaseEntity";
             KeyPrefix = "commonDataModel.dimensionhierarchybaseentity";
             KeySeparator = ".";
             Grouping = "/DimensionHierarchyBaseEntity";
 
-            AddGroup("Common Data Model DimensionHierarchyBaseEntity Details", group =>
+            AddGroup("DimensionHierarchyBaseEntity Details", group =>
             {
                 HierarchyName = group.Add(new VocabularyKey(nameof(HierarchyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 HierarchyDescription = group.Add(new VocabularyKey(nameof(HierarchyDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

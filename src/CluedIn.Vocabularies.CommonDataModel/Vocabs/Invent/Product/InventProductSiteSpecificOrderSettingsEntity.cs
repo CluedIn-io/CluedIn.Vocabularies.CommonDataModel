@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventProductSiteSpecificOrderSettingsEntityVocabulary()
         {
-            VocabularyName = "Common Data Model InventProductSiteSpecificOrderSettingsEntity";
+            VocabularyName = "InventProductSiteSpecificOrderSettingsEntity";
             KeyPrefix = "commonDataModel.inventproductsitespecificordersettingsentity";
             KeySeparator = ".";
             Grouping = "/InventProductSiteSpecificOrderSettingsEntity";
 
-            AddGroup("Common Data Model InventProductSiteSpecificOrderSettingsEntity Details", group =>
+            AddGroup("InventProductSiteSpecificOrderSettingsEntity Details", group =>
             {
                 ItemNumber = group.Add(new VocabularyKey(nameof(ItemNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OperationalSiteId = group.Add(new VocabularyKey(nameof(OperationalSiteId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerAllocationRuleSourceEntityVocabulary()
         {
-            VocabularyName = "Common Data Model LedgerAllocationRuleSourceEntity";
+            VocabularyName = "LedgerAllocationRuleSourceEntity";
             KeyPrefix = "commonDataModel.ledgerallocationrulesourceentity";
             KeySeparator = ".";
             Grouping = "/LedgerAllocationRuleSourceEntity";
 
-            AddGroup("Common Data Model LedgerAllocationRuleSourceEntity Details", group =>
+            AddGroup("LedgerAllocationRuleSourceEntity Details", group =>
             {
                 FieldSetting = group.Add(new VocabularyKey(nameof(FieldSetting), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineNumber = group.Add(new VocabularyKey(nameof(LineNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

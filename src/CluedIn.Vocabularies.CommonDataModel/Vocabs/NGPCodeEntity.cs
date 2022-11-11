@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public NGPCodeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model NGPCodeEntity";
+            VocabularyName = "NGPCodeEntity";
             KeyPrefix = "commonDataModel.ngpcodeentity";
             KeySeparator = ".";
             Grouping = "/NGPCodeEntity";
 
-            AddGroup("Common Data Model NGPCodeEntity Details", group =>
+            AddGroup("NGPCodeEntity Details", group =>
             {
                 NGP = group.Add(new VocabularyKey(nameof(NGP), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

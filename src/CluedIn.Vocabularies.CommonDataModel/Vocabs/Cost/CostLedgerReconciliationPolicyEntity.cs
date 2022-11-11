@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CostLedgerReconciliationPolicyEntityVocabulary()
         {
-            VocabularyName = "Common Data Model CostLedgerReconciliationPolicyEntity";
+            VocabularyName = "CostLedgerReconciliationPolicyEntity";
             KeyPrefix = "commonDataModel.costledgerreconciliationpolicyentity";
             KeySeparator = ".";
             Grouping = "/CostLedgerReconciliationPolicyEntity";
 
-            AddGroup("Common Data Model CostLedgerReconciliationPolicyEntity Details", group =>
+            AddGroup("CostLedgerReconciliationPolicyEntity Details", group =>
             {
                 ReconciliationPrinciple = group.Add(new VocabularyKey(nameof(ReconciliationPrinciple), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InventoryMainAccountIdDisplayValue = group.Add(new VocabularyKey(nameof(InventoryMainAccountIdDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetProvisionTypeEntityVocabulary()
         {
-            VocabularyName = "Common Data Model AssetProvisionTypeEntity";
+            VocabularyName = "AssetProvisionTypeEntity";
             KeyPrefix = "commonDataModel.assetprovisiontypeentity";
             KeySeparator = ".";
             Grouping = "/AssetProvisionTypeEntity";
 
-            AddGroup("Common Data Model AssetProvisionTypeEntity Details", group =>
+            AddGroup("AssetProvisionTypeEntity Details", group =>
             {
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LengthOfOwnership = group.Add(new VocabularyKey(nameof(LengthOfOwnership), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

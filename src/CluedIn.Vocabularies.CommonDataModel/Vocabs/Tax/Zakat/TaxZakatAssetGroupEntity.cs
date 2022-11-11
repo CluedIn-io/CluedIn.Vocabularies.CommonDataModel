@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxZakatAssetGroupEntityVocabulary()
         {
-            VocabularyName = "Common Data Model TaxZakatAssetGroupEntity";
+            VocabularyName = "TaxZakatAssetGroupEntity";
             KeyPrefix = "commonDataModel.taxzakatassetgroupentity";
             KeySeparator = ".";
             Grouping = "/TaxZakatAssetGroupEntity";
 
-            AddGroup("Common Data Model TaxZakatAssetGroupEntity Details", group =>
+            AddGroup("TaxZakatAssetGroupEntity Details", group =>
             {
                 GroupName = group.Add(new VocabularyKey(nameof(GroupName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GroupType = group.Add(new VocabularyKey(nameof(GroupType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

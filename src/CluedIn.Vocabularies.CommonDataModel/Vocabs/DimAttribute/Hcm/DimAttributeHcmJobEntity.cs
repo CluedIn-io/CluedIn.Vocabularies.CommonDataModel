@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DimAttributeHcmJobEntityVocabulary()
         {
-            VocabularyName = "Common Data Model DimAttributeHcmJobEntity";
+            VocabularyName = "DimAttributeHcmJobEntity";
             KeyPrefix = "commonDataModel.dimattributehcmjobentity";
             KeySeparator = ".";
             Grouping = "/DimAttributeHcmJobEntity";
 
-            AddGroup("Common Data Model DimAttributeHcmJobEntity Details", group =>
+            AddGroup("DimAttributeHcmJobEntity Details", group =>
             {
                 Value = group.Add(new VocabularyKey(nameof(Value), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

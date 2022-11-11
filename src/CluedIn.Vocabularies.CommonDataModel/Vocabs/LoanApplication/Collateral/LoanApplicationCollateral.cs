@@ -6,12 +6,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LoanApplicationCollateralVocabulary()
         {
-            VocabularyName = "Common Data Model LoanApplicationCollateral";
+            VocabularyName = "LoanApplicationCollateral";
             KeyPrefix = "commonDataModel.loanapplicationcollateral";
             KeySeparator = ".";
             Grouping = "/LoanApplicationCollateral";
 
-            AddGroup("Common Data Model LoanApplicationCollateral Details", group =>
+            AddGroup("LoanApplicationCollateral Details", group =>
             {
                 loanApplicationCollateralId = group.Add(new VocabularyKey(nameof(loanApplicationCollateralId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
