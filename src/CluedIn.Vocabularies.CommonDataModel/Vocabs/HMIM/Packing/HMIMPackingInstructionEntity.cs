@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model HMIMPackingInstructionEntity Details", group =>
             {
-                PackInstCode = group.Add(new VocabularyKey(nameof(PackInstCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                PackInstCode = group.Add(new VocabularyKey(nameof(PackInstCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey PackInstCode { get; private set; }
-public VocabularyKey Description { get; private set; }
+        public VocabularyKey PackInstCode { get; private set; }
+        public VocabularyKey Description { get; private set; }
 
 
     }

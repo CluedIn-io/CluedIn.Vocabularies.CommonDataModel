@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,18 +13,18 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model TrvExchSetupEntity Details", group =>
             {
-                AccountType = group.Add(new VocabularyKey(nameof(AccountType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-AdvanceAccountLedgerDimension = group.Add(new VocabularyKey(nameof(AdvanceAccountLedgerDimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ExchangeCode = group.Add(new VocabularyKey(nameof(ExchangeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-AdvanceAccountLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(AdvanceAccountLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                AccountType = group.Add(new VocabularyKey(nameof(AccountType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AdvanceAccountLedgerDimension = group.Add(new VocabularyKey(nameof(AdvanceAccountLedgerDimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExchangeCode = group.Add(new VocabularyKey(nameof(ExchangeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AdvanceAccountLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(AdvanceAccountLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey AccountType { get; private set; }
-public VocabularyKey AdvanceAccountLedgerDimension { get; private set; }
-public VocabularyKey ExchangeCode { get; private set; }
-public VocabularyKey AdvanceAccountLedgerDimensionDisplayValue { get; private set; }
+        public VocabularyKey AccountType { get; private set; }
+        public VocabularyKey AdvanceAccountLedgerDimension { get; private set; }
+        public VocabularyKey ExchangeCode { get; private set; }
+        public VocabularyKey AdvanceAccountLedgerDimensionDisplayValue { get; private set; }
 
 
     }

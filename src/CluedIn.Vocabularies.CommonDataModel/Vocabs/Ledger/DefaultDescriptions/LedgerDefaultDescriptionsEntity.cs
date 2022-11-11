@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,16 +13,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model LedgerDefaultDescriptionsEntity Details", group =>
             {
-                Language = group.Add(new VocabularyKey(nameof(Language), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Text = group.Add(new VocabularyKey(nameof(Text), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                Language = group.Add(new VocabularyKey(nameof(Language), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Text = group.Add(new VocabularyKey(nameof(Text), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey Language { get; private set; }
-public VocabularyKey Description { get; private set; }
-public VocabularyKey Text { get; private set; }
+        public VocabularyKey Language { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey Text { get; private set; }
 
 
     }

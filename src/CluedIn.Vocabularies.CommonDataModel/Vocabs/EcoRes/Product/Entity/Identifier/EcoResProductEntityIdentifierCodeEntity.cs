@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,18 +13,18 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model EcoResProductEntityIdentifierCodeEntity Details", group =>
             {
-                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Id = group.Add(new VocabularyKey(nameof(Id), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Type = group.Add(new VocabularyKey(nameof(Type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Id = group.Add(new VocabularyKey(nameof(Id), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Type = group.Add(new VocabularyKey(nameof(Type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey Description { get; private set; }
-public VocabularyKey Id { get; private set; }
-public VocabularyKey Name { get; private set; }
-public VocabularyKey Type { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey Id { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey Type { get; private set; }
 
 
     }

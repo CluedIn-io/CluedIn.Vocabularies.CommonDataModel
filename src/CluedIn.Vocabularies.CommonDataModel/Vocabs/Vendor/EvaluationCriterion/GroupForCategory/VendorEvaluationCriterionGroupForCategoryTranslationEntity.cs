@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,18 +13,18 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model VendorEvaluationCriterionGroupForCategoryTranslationEntity Details", group =>
             {
-                VendorEvaluationCriterionGroupRecId = group.Add(new VocabularyKey(nameof(VendorEvaluationCriterionGroupRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-VendorEvaluationCriterionGroupName = group.Add(new VocabularyKey(nameof(VendorEvaluationCriterionGroupName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-LanguageId = group.Add(new VocabularyKey(nameof(LanguageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-TranslatedGroupDescription = group.Add(new VocabularyKey(nameof(TranslatedGroupDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                VendorEvaluationCriterionGroupRecId = group.Add(new VocabularyKey(nameof(VendorEvaluationCriterionGroupRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                VendorEvaluationCriterionGroupName = group.Add(new VocabularyKey(nameof(VendorEvaluationCriterionGroupName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LanguageId = group.Add(new VocabularyKey(nameof(LanguageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TranslatedGroupDescription = group.Add(new VocabularyKey(nameof(TranslatedGroupDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey VendorEvaluationCriterionGroupRecId { get; private set; }
-public VocabularyKey VendorEvaluationCriterionGroupName { get; private set; }
-public VocabularyKey LanguageId { get; private set; }
-public VocabularyKey TranslatedGroupDescription { get; private set; }
+        public VocabularyKey VendorEvaluationCriterionGroupRecId { get; private set; }
+        public VocabularyKey VendorEvaluationCriterionGroupName { get; private set; }
+        public VocabularyKey LanguageId { get; private set; }
+        public VocabularyKey TranslatedGroupDescription { get; private set; }
 
 
     }

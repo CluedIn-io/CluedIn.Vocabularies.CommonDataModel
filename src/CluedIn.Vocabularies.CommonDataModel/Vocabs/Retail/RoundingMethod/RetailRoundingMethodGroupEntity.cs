@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model RetailRoundingMethodGroupEntity Details", group =>
             {
-                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-RoundingMethodId = group.Add(new VocabularyKey(nameof(RoundingMethodId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RoundingMethodId = group.Add(new VocabularyKey(nameof(RoundingMethodId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey Description { get; private set; }
-public VocabularyKey RoundingMethodId { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey RoundingMethodId { get; private set; }
 
 
     }

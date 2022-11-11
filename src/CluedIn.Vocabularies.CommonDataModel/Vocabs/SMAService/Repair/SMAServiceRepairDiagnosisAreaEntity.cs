@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model SMAServiceRepairDiagnosisAreaEntity Details", group =>
             {
-                AreaCode = group.Add(new VocabularyKey(nameof(AreaCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-AreaDescription = group.Add(new VocabularyKey(nameof(AreaDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                AreaCode = group.Add(new VocabularyKey(nameof(AreaCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AreaDescription = group.Add(new VocabularyKey(nameof(AreaDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey AreaCode { get; private set; }
-public VocabularyKey AreaDescription { get; private set; }
+        public VocabularyKey AreaCode { get; private set; }
+        public VocabularyKey AreaDescription { get; private set; }
 
 
     }

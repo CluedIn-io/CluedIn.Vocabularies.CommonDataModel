@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model TrvExpensePurposeEntity Details", group =>
             {
-                BusinessPurpose = group.Add(new VocabularyKey(nameof(BusinessPurpose), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ExpenseType = group.Add(new VocabularyKey(nameof(ExpenseType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                BusinessPurpose = group.Add(new VocabularyKey(nameof(BusinessPurpose), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExpenseType = group.Add(new VocabularyKey(nameof(ExpenseType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey BusinessPurpose { get; private set; }
-public VocabularyKey ExpenseType { get; private set; }
+        public VocabularyKey BusinessPurpose { get; private set; }
+        public VocabularyKey ExpenseType { get; private set; }
 
 
     }

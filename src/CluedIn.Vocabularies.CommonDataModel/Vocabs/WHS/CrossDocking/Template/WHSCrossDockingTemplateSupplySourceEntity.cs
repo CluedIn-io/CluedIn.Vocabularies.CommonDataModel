@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,18 +13,18 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model WHSCrossDockingTemplateSupplySourceEntity Details", group =>
             {
-                CrossDockingTemplateId = group.Add(new VocabularyKey(nameof(CrossDockingTemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-SupplySource = group.Add(new VocabularyKey(nameof(SupplySource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-SupplyQuery = group.Add(new VocabularyKey(nameof(SupplyQuery), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-SequenceNumber = group.Add(new VocabularyKey(nameof(SequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                CrossDockingTemplateId = group.Add(new VocabularyKey(nameof(CrossDockingTemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SupplySource = group.Add(new VocabularyKey(nameof(SupplySource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SupplyQuery = group.Add(new VocabularyKey(nameof(SupplyQuery), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SequenceNumber = group.Add(new VocabularyKey(nameof(SequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey CrossDockingTemplateId { get; private set; }
-public VocabularyKey SupplySource { get; private set; }
-public VocabularyKey SupplyQuery { get; private set; }
-public VocabularyKey SequenceNumber { get; private set; }
+        public VocabularyKey CrossDockingTemplateId { get; private set; }
+        public VocabularyKey SupplySource { get; private set; }
+        public VocabularyKey SupplyQuery { get; private set; }
+        public VocabularyKey SequenceNumber { get; private set; }
 
 
     }

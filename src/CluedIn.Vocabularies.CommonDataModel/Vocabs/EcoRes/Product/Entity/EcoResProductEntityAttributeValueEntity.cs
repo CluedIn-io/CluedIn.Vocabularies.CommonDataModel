@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,16 +13,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model EcoResProductEntityAttributeValueEntity Details", group =>
             {
-                ProductAttributeName = group.Add(new VocabularyKey(nameof(ProductAttributeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ProductAttributeTextValue = group.Add(new VocabularyKey(nameof(ProductAttributeTextValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ProductNumber = group.Add(new VocabularyKey(nameof(ProductNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                ProductAttributeName = group.Add(new VocabularyKey(nameof(ProductAttributeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProductAttributeTextValue = group.Add(new VocabularyKey(nameof(ProductAttributeTextValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProductNumber = group.Add(new VocabularyKey(nameof(ProductNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey ProductAttributeName { get; private set; }
-public VocabularyKey ProductAttributeTextValue { get; private set; }
-public VocabularyKey ProductNumber { get; private set; }
+        public VocabularyKey ProductAttributeName { get; private set; }
+        public VocabularyKey ProductAttributeTextValue { get; private set; }
+        public VocabularyKey ProductNumber { get; private set; }
 
 
     }

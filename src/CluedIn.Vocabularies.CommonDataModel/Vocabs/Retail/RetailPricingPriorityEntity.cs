@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model RetailPricingPriorityEntity Details", group =>
             {
-                PricingPriorityName = group.Add(new VocabularyKey(nameof(PricingPriorityName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-PricingPriorityNumber = group.Add(new VocabularyKey(nameof(PricingPriorityNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                PricingPriorityName = group.Add(new VocabularyKey(nameof(PricingPriorityName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PricingPriorityNumber = group.Add(new VocabularyKey(nameof(PricingPriorityNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey PricingPriorityName { get; private set; }
-public VocabularyKey PricingPriorityNumber { get; private set; }
+        public VocabularyKey PricingPriorityName { get; private set; }
+        public VocabularyKey PricingPriorityNumber { get; private set; }
 
 
     }

@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model ProcurementReturnActionEntity Details", group =>
             {
-                ActionId = group.Add(new VocabularyKey(nameof(ActionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ActionDescription = group.Add(new VocabularyKey(nameof(ActionDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                ActionId = group.Add(new VocabularyKey(nameof(ActionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ActionDescription = group.Add(new VocabularyKey(nameof(ActionDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey ActionId { get; private set; }
-public VocabularyKey ActionDescription { get; private set; }
+        public VocabularyKey ActionId { get; private set; }
+        public VocabularyKey ActionDescription { get; private set; }
 
 
     }

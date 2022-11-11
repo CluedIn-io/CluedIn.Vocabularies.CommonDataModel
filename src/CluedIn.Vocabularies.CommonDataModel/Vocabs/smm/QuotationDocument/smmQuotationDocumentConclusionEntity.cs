@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model smmQuotationDocumentConclusionEntity Details", group =>
             {
-                ConclusionName = group.Add(new VocabularyKey(nameof(ConclusionName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ConcludingParagraph = group.Add(new VocabularyKey(nameof(ConcludingParagraph), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                ConclusionName = group.Add(new VocabularyKey(nameof(ConclusionName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ConcludingParagraph = group.Add(new VocabularyKey(nameof(ConcludingParagraph), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey ConclusionName { get; private set; }
-public VocabularyKey ConcludingParagraph { get; private set; }
+        public VocabularyKey ConclusionName { get; private set; }
+        public VocabularyKey ConcludingParagraph { get; private set; }
 
 
     }

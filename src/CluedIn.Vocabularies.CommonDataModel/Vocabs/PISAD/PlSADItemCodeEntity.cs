@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,18 +13,18 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model PlSADItemCodeEntity Details", group =>
             {
-                MainAccount = group.Add(new VocabularyKey(nameof(MainAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ItemCommodityCode = group.Add(new VocabularyKey(nameof(ItemCommodityCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ProductName = group.Add(new VocabularyKey(nameof(ProductName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-MainAccountDisplayValue = group.Add(new VocabularyKey(nameof(MainAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                MainAccount = group.Add(new VocabularyKey(nameof(MainAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ItemCommodityCode = group.Add(new VocabularyKey(nameof(ItemCommodityCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProductName = group.Add(new VocabularyKey(nameof(ProductName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MainAccountDisplayValue = group.Add(new VocabularyKey(nameof(MainAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey MainAccount { get; private set; }
-public VocabularyKey ItemCommodityCode { get; private set; }
-public VocabularyKey ProductName { get; private set; }
-public VocabularyKey MainAccountDisplayValue { get; private set; }
+        public VocabularyKey MainAccount { get; private set; }
+        public VocabularyKey ItemCommodityCode { get; private set; }
+        public VocabularyKey ProductName { get; private set; }
+        public VocabularyKey MainAccountDisplayValue { get; private set; }
 
 
     }

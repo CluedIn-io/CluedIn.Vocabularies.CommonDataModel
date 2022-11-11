@@ -8,7 +8,6 @@ using CluedIn.Core.Webhooks;
 using CluedIn.Providers.Models;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace CluedIn.Provider.CommonDataModel

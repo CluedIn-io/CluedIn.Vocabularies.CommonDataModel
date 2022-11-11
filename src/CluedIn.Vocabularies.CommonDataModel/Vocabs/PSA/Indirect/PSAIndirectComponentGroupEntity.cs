@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model PSAIndirectComponentGroupEntity Details", group =>
             {
-                IndirectCostComponentGroup = group.Add(new VocabularyKey(nameof(IndirectCostComponentGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-IndirectComponentGroupName = group.Add(new VocabularyKey(nameof(IndirectComponentGroupName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                IndirectCostComponentGroup = group.Add(new VocabularyKey(nameof(IndirectCostComponentGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IndirectComponentGroupName = group.Add(new VocabularyKey(nameof(IndirectComponentGroupName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey IndirectCostComponentGroup { get; private set; }
-public VocabularyKey IndirectComponentGroupName { get; private set; }
+        public VocabularyKey IndirectCostComponentGroup { get; private set; }
+        public VocabularyKey IndirectComponentGroupName { get; private set; }
 
 
     }

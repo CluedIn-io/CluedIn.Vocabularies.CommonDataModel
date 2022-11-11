@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,26 +13,26 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model RetailCatalogProductCategoryEntity Details", group =>
             {
-                CatalogNumber = group.Add(new VocabularyKey(nameof(CatalogNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-DisplayProductNumber = group.Add(new VocabularyKey(nameof(DisplayProductNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-CategoryName = group.Add(new VocabularyKey(nameof(CategoryName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-CategoryHierarchyName = group.Add(new VocabularyKey(nameof(CategoryHierarchyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-IncludeExcludeType = group.Add(new VocabularyKey(nameof(IncludeExcludeType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-CatalogProduct = group.Add(new VocabularyKey(nameof(CatalogProduct), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Category = group.Add(new VocabularyKey(nameof(Category), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-CategoryHierarchy = group.Add(new VocabularyKey(nameof(CategoryHierarchy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                CatalogNumber = group.Add(new VocabularyKey(nameof(CatalogNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DisplayProductNumber = group.Add(new VocabularyKey(nameof(DisplayProductNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CategoryName = group.Add(new VocabularyKey(nameof(CategoryName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CategoryHierarchyName = group.Add(new VocabularyKey(nameof(CategoryHierarchyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IncludeExcludeType = group.Add(new VocabularyKey(nameof(IncludeExcludeType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CatalogProduct = group.Add(new VocabularyKey(nameof(CatalogProduct), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Category = group.Add(new VocabularyKey(nameof(Category), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CategoryHierarchy = group.Add(new VocabularyKey(nameof(CategoryHierarchy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey CatalogNumber { get; private set; }
-public VocabularyKey DisplayProductNumber { get; private set; }
-public VocabularyKey CategoryName { get; private set; }
-public VocabularyKey CategoryHierarchyName { get; private set; }
-public VocabularyKey IncludeExcludeType { get; private set; }
-public VocabularyKey CatalogProduct { get; private set; }
-public VocabularyKey Category { get; private set; }
-public VocabularyKey CategoryHierarchy { get; private set; }
+        public VocabularyKey CatalogNumber { get; private set; }
+        public VocabularyKey DisplayProductNumber { get; private set; }
+        public VocabularyKey CategoryName { get; private set; }
+        public VocabularyKey CategoryHierarchyName { get; private set; }
+        public VocabularyKey IncludeExcludeType { get; private set; }
+        public VocabularyKey CatalogProduct { get; private set; }
+        public VocabularyKey Category { get; private set; }
+        public VocabularyKey CategoryHierarchy { get; private set; }
 
 
     }

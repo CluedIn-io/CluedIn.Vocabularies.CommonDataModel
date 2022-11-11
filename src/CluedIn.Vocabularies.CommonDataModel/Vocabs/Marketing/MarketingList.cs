@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,12 +13,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model MarketingList Details", group =>
             {
-                issubscription = group.Add(new VocabularyKey(nameof(issubscription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                issubscription = group.Add(new VocabularyKey(nameof(issubscription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey issubscription { get; private set; }
+        public VocabularyKey issubscription { get; private set; }
 
 
     }

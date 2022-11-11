@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,16 +13,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model PaymentInstructionEntity Details", group =>
             {
-                PaymentInstructionCode = group.Add(new VocabularyKey(nameof(PaymentInstructionCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                PaymentInstructionCode = group.Add(new VocabularyKey(nameof(PaymentInstructionCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey PaymentInstructionCode { get; private set; }
-public VocabularyKey Name { get; private set; }
-public VocabularyKey Description { get; private set; }
+        public VocabularyKey PaymentInstructionCode { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey Description { get; private set; }
 
 
     }

@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,20 +13,20 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model RetailKitEntity Details", group =>
             {
-                DisassemblyAtRegisterAllowed = group.Add(new VocabularyKey(nameof(DisassemblyAtRegisterAllowed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-DiscontinueKit = group.Add(new VocabularyKey(nameof(DiscontinueKit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ProductMaster = group.Add(new VocabularyKey(nameof(ProductMaster), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Status = group.Add(new VocabularyKey(nameof(Status), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-KitProductNumber = group.Add(new VocabularyKey(nameof(KitProductNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                DisassemblyAtRegisterAllowed = group.Add(new VocabularyKey(nameof(DisassemblyAtRegisterAllowed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DiscontinueKit = group.Add(new VocabularyKey(nameof(DiscontinueKit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProductMaster = group.Add(new VocabularyKey(nameof(ProductMaster), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Status = group.Add(new VocabularyKey(nameof(Status), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                KitProductNumber = group.Add(new VocabularyKey(nameof(KitProductNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey DisassemblyAtRegisterAllowed { get; private set; }
-public VocabularyKey DiscontinueKit { get; private set; }
-public VocabularyKey ProductMaster { get; private set; }
-public VocabularyKey Status { get; private set; }
-public VocabularyKey KitProductNumber { get; private set; }
+        public VocabularyKey DisassemblyAtRegisterAllowed { get; private set; }
+        public VocabularyKey DiscontinueKit { get; private set; }
+        public VocabularyKey ProductMaster { get; private set; }
+        public VocabularyKey Status { get; private set; }
+        public VocabularyKey KitProductNumber { get; private set; }
 
 
     }

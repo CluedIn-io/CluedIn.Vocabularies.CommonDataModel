@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,12 +13,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model MCRAutoTaxHeaderEntity Details", group =>
             {
-                Warnings = group.Add(new VocabularyKey(nameof(Warnings), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                Warnings = group.Add(new VocabularyKey(nameof(Warnings), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey Warnings { get; private set; }
+        public VocabularyKey Warnings { get; private set; }
 
 
     }

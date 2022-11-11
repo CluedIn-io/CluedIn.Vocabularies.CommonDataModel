@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,18 +13,18 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model SMAServiceIntervalEntity Details", group =>
             {
-                IntervalDescription = group.Add(new VocabularyKey(nameof(IntervalDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-IntervalUnitFactor = group.Add(new VocabularyKey(nameof(IntervalUnitFactor), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-IntervalId = group.Add(new VocabularyKey(nameof(IntervalId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-IntervalUnit = group.Add(new VocabularyKey(nameof(IntervalUnit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                IntervalDescription = group.Add(new VocabularyKey(nameof(IntervalDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IntervalUnitFactor = group.Add(new VocabularyKey(nameof(IntervalUnitFactor), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IntervalId = group.Add(new VocabularyKey(nameof(IntervalId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IntervalUnit = group.Add(new VocabularyKey(nameof(IntervalUnit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey IntervalDescription { get; private set; }
-public VocabularyKey IntervalUnitFactor { get; private set; }
-public VocabularyKey IntervalId { get; private set; }
-public VocabularyKey IntervalUnit { get; private set; }
+        public VocabularyKey IntervalDescription { get; private set; }
+        public VocabularyKey IntervalUnitFactor { get; private set; }
+        public VocabularyKey IntervalId { get; private set; }
+        public VocabularyKey IntervalUnit { get; private set; }
 
 
     }

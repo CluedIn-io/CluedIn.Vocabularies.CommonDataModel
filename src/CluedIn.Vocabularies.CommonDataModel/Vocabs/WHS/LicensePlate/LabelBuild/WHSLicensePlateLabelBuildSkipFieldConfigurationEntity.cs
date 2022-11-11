@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,16 +13,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model WHSLicensePlateLabelBuildSkipFieldConfigurationEntity Details", group =>
             {
-                LicensePlateLabelBuildConfigurationId = group.Add(new VocabularyKey(nameof(LicensePlateLabelBuildConfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-SkipFieldName = group.Add(new VocabularyKey(nameof(SkipFieldName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-LicensePlateLabelBuildConfigurationRecId = group.Add(new VocabularyKey(nameof(LicensePlateLabelBuildConfigurationRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                LicensePlateLabelBuildConfigurationId = group.Add(new VocabularyKey(nameof(LicensePlateLabelBuildConfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SkipFieldName = group.Add(new VocabularyKey(nameof(SkipFieldName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LicensePlateLabelBuildConfigurationRecId = group.Add(new VocabularyKey(nameof(LicensePlateLabelBuildConfigurationRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey LicensePlateLabelBuildConfigurationId { get; private set; }
-public VocabularyKey SkipFieldName { get; private set; }
-public VocabularyKey LicensePlateLabelBuildConfigurationRecId { get; private set; }
+        public VocabularyKey LicensePlateLabelBuildConfigurationId { get; private set; }
+        public VocabularyKey SkipFieldName { get; private set; }
+        public VocabularyKey LicensePlateLabelBuildConfigurationRecId { get; private set; }
 
 
     }

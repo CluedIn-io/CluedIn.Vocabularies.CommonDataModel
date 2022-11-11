@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,20 +13,20 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model ProjCDSTaskEntity Details", group =>
             {
-                Task = group.Add(new VocabularyKey(nameof(Task), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ParentTask = group.Add(new VocabularyKey(nameof(ParentTask), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-WorkBreakdownStructureID = group.Add(new VocabularyKey(nameof(WorkBreakdownStructureID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ProjectId = group.Add(new VocabularyKey(nameof(ProjectId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                Task = group.Add(new VocabularyKey(nameof(Task), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ParentTask = group.Add(new VocabularyKey(nameof(ParentTask), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WorkBreakdownStructureID = group.Add(new VocabularyKey(nameof(WorkBreakdownStructureID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProjectId = group.Add(new VocabularyKey(nameof(ProjectId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey Task { get; private set; }
-public VocabularyKey ParentTask { get; private set; }
-public VocabularyKey WorkBreakdownStructureID { get; private set; }
-public VocabularyKey ProjectId { get; private set; }
-public VocabularyKey Name { get; private set; }
+        public VocabularyKey Task { get; private set; }
+        public VocabularyKey ParentTask { get; private set; }
+        public VocabularyKey WorkBreakdownStructureID { get; private set; }
+        public VocabularyKey ProjectId { get; private set; }
+        public VocabularyKey Name { get; private set; }
 
 
     }

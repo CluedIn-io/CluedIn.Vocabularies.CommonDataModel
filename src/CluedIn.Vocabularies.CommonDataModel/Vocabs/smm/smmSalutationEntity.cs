@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,12 +13,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model smmSalutationEntity Details", group =>
             {
-                SalutationPhrase = group.Add(new VocabularyKey(nameof(SalutationPhrase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                SalutationPhrase = group.Add(new VocabularyKey(nameof(SalutationPhrase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey SalutationPhrase { get; private set; }
+        public VocabularyKey SalutationPhrase { get; private set; }
 
 
     }

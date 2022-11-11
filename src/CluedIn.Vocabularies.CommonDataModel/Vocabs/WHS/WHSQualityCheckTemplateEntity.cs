@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,18 +13,18 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model WHSQualityCheckTemplateEntity Details", group =>
             {
-                TemplateId = group.Add(new VocabularyKey(nameof(TemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-QualityTestGroupId = group.Add(new VocabularyKey(nameof(QualityTestGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-AcceptancePolicy = group.Add(new VocabularyKey(nameof(AcceptancePolicy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ProcessingPolicy = group.Add(new VocabularyKey(nameof(ProcessingPolicy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                TemplateId = group.Add(new VocabularyKey(nameof(TemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                QualityTestGroupId = group.Add(new VocabularyKey(nameof(QualityTestGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AcceptancePolicy = group.Add(new VocabularyKey(nameof(AcceptancePolicy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProcessingPolicy = group.Add(new VocabularyKey(nameof(ProcessingPolicy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey TemplateId { get; private set; }
-public VocabularyKey QualityTestGroupId { get; private set; }
-public VocabularyKey AcceptancePolicy { get; private set; }
-public VocabularyKey ProcessingPolicy { get; private set; }
+        public VocabularyKey TemplateId { get; private set; }
+        public VocabularyKey QualityTestGroupId { get; private set; }
+        public VocabularyKey AcceptancePolicy { get; private set; }
+        public VocabularyKey ProcessingPolicy { get; private set; }
 
 
     }

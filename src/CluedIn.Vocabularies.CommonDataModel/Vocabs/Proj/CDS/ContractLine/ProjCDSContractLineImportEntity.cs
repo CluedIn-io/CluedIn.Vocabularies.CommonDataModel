@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,24 +13,24 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model ProjCDSContractLineImportEntity Details", group =>
             {
-                TransactionId = group.Add(new VocabularyKey(nameof(TransactionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ContractId = group.Add(new VocabularyKey(nameof(ContractId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ContractLine = group.Add(new VocabularyKey(nameof(ContractLine), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Type = group.Add(new VocabularyKey(nameof(Type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ProjectId = group.Add(new VocabularyKey(nameof(ProjectId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ForecastInvoiceFrequency = group.Add(new VocabularyKey(nameof(ForecastInvoiceFrequency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                TransactionId = group.Add(new VocabularyKey(nameof(TransactionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ContractId = group.Add(new VocabularyKey(nameof(ContractId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ContractLine = group.Add(new VocabularyKey(nameof(ContractLine), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Type = group.Add(new VocabularyKey(nameof(Type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProjectId = group.Add(new VocabularyKey(nameof(ProjectId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ForecastInvoiceFrequency = group.Add(new VocabularyKey(nameof(ForecastInvoiceFrequency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey TransactionId { get; private set; }
-public VocabularyKey ContractId { get; private set; }
-public VocabularyKey ContractLine { get; private set; }
-public VocabularyKey Type { get; private set; }
-public VocabularyKey Description { get; private set; }
-public VocabularyKey ProjectId { get; private set; }
-public VocabularyKey ForecastInvoiceFrequency { get; private set; }
+        public VocabularyKey TransactionId { get; private set; }
+        public VocabularyKey ContractId { get; private set; }
+        public VocabularyKey ContractLine { get; private set; }
+        public VocabularyKey Type { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey ProjectId { get; private set; }
+        public VocabularyKey ForecastInvoiceFrequency { get; private set; }
 
 
     }

@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,16 +13,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model BudgetControlConfigurationActivationEntity Details", group =>
             {
-                LegalEntityId = group.Add(new VocabularyKey(nameof(LegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ActivateDraft = group.Add(new VocabularyKey(nameof(ActivateDraft), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-TurnOnBudgetControl = group.Add(new VocabularyKey(nameof(TurnOnBudgetControl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                LegalEntityId = group.Add(new VocabularyKey(nameof(LegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ActivateDraft = group.Add(new VocabularyKey(nameof(ActivateDraft), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TurnOnBudgetControl = group.Add(new VocabularyKey(nameof(TurnOnBudgetControl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey LegalEntityId { get; private set; }
-public VocabularyKey ActivateDraft { get; private set; }
-public VocabularyKey TurnOnBudgetControl { get; private set; }
+        public VocabularyKey LegalEntityId { get; private set; }
+        public VocabularyKey ActivateDraft { get; private set; }
+        public VocabularyKey TurnOnBudgetControl { get; private set; }
 
 
     }

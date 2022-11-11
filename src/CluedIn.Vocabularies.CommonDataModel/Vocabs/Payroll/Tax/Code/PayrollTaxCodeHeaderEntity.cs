@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,22 +13,22 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model PayrollTaxCodeHeaderEntity Details", group =>
             {
-                CodeId = group.Add(new VocabularyKey(nameof(CodeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-CountryRegionId = group.Add(new VocabularyKey(nameof(CountryRegionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-IsEmployerTax = group.Add(new VocabularyKey(nameof(IsEmployerTax), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-IsPayStatementLineLocked = group.Add(new VocabularyKey(nameof(IsPayStatementLineLocked), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Type = group.Add(new VocabularyKey(nameof(Type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                CodeId = group.Add(new VocabularyKey(nameof(CodeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CountryRegionId = group.Add(new VocabularyKey(nameof(CountryRegionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsEmployerTax = group.Add(new VocabularyKey(nameof(IsEmployerTax), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsPayStatementLineLocked = group.Add(new VocabularyKey(nameof(IsPayStatementLineLocked), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Type = group.Add(new VocabularyKey(nameof(Type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey CodeId { get; private set; }
-public VocabularyKey CountryRegionId { get; private set; }
-public VocabularyKey Description { get; private set; }
-public VocabularyKey IsEmployerTax { get; private set; }
-public VocabularyKey IsPayStatementLineLocked { get; private set; }
-public VocabularyKey Type { get; private set; }
+        public VocabularyKey CodeId { get; private set; }
+        public VocabularyKey CountryRegionId { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey IsEmployerTax { get; private set; }
+        public VocabularyKey IsPayStatementLineLocked { get; private set; }
+        public VocabularyKey Type { get; private set; }
 
 
     }

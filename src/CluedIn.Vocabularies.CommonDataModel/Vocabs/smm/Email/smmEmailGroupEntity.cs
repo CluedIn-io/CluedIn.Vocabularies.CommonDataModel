@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,16 +13,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model smmEmailGroupEntity Details", group =>
             {
-                EmailCategoryName = group.Add(new VocabularyKey(nameof(EmailCategoryName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-GroupId = group.Add(new VocabularyKey(nameof(GroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-GroupDescription = group.Add(new VocabularyKey(nameof(GroupDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                EmailCategoryName = group.Add(new VocabularyKey(nameof(EmailCategoryName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                GroupId = group.Add(new VocabularyKey(nameof(GroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                GroupDescription = group.Add(new VocabularyKey(nameof(GroupDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey EmailCategoryName { get; private set; }
-public VocabularyKey GroupId { get; private set; }
-public VocabularyKey GroupDescription { get; private set; }
+        public VocabularyKey EmailCategoryName { get; private set; }
+        public VocabularyKey GroupId { get; private set; }
+        public VocabularyKey GroupDescription { get; private set; }
 
 
     }

@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model WHSProductHarmonizedTariffCodeEntity Details", group =>
             {
-                TariffCode = group.Add(new VocabularyKey(nameof(TariffCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-TariffName = group.Add(new VocabularyKey(nameof(TariffName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                TariffCode = group.Add(new VocabularyKey(nameof(TariffCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TariffName = group.Add(new VocabularyKey(nameof(TariffName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey TariffCode { get; private set; }
-public VocabularyKey TariffName { get; private set; }
+        public VocabularyKey TariffCode { get; private set; }
+        public VocabularyKey TariffName { get; private set; }
 
 
     }

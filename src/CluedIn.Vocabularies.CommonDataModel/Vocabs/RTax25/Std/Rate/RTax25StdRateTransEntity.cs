@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,20 +13,20 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model RTax25StdRateTransEntity Details", group =>
             {
-                CriterionType = group.Add(new VocabularyKey(nameof(CriterionType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-StartDate = group.Add(new VocabularyKey(nameof(StartDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Value = group.Add(new VocabularyKey(nameof(Value), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-RateCode = group.Add(new VocabularyKey(nameof(RateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-LineId = group.Add(new VocabularyKey(nameof(LineId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                CriterionType = group.Add(new VocabularyKey(nameof(CriterionType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StartDate = group.Add(new VocabularyKey(nameof(StartDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Value = group.Add(new VocabularyKey(nameof(Value), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RateCode = group.Add(new VocabularyKey(nameof(RateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LineId = group.Add(new VocabularyKey(nameof(LineId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey CriterionType { get; private set; }
-public VocabularyKey StartDate { get; private set; }
-public VocabularyKey Value { get; private set; }
-public VocabularyKey RateCode { get; private set; }
-public VocabularyKey LineId { get; private set; }
+        public VocabularyKey CriterionType { get; private set; }
+        public VocabularyKey StartDate { get; private set; }
+        public VocabularyKey Value { get; private set; }
+        public VocabularyKey RateCode { get; private set; }
+        public VocabularyKey LineId { get; private set; }
 
 
     }

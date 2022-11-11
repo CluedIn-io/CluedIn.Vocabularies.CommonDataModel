@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model LedgerAdvancedRuleStructureActivationEntity Details", group =>
             {
-                AdvancedRuleStructure = group.Add(new VocabularyKey(nameof(AdvancedRuleStructure), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-DoActivate = group.Add(new VocabularyKey(nameof(DoActivate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                AdvancedRuleStructure = group.Add(new VocabularyKey(nameof(AdvancedRuleStructure), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DoActivate = group.Add(new VocabularyKey(nameof(DoActivate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey AdvancedRuleStructure { get; private set; }
-public VocabularyKey DoActivate { get; private set; }
+        public VocabularyKey AdvancedRuleStructure { get; private set; }
+        public VocabularyKey DoActivate { get; private set; }
 
 
     }

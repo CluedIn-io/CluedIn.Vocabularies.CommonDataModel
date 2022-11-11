@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,20 +13,20 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model VendVendorExternalCodeEntity Details", group =>
             {
-                VendorExternalCodeClassId = group.Add(new VocabularyKey(nameof(VendorExternalCodeClassId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-VendorAccountNumber = group.Add(new VocabularyKey(nameof(VendorAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ExternalCode = group.Add(new VocabularyKey(nameof(ExternalCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ExtCodeRelationTableId = group.Add(new VocabularyKey(nameof(ExtCodeRelationTableId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ExtCodeTableTableId = group.Add(new VocabularyKey(nameof(ExtCodeTableTableId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                VendorExternalCodeClassId = group.Add(new VocabularyKey(nameof(VendorExternalCodeClassId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                VendorAccountNumber = group.Add(new VocabularyKey(nameof(VendorAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExternalCode = group.Add(new VocabularyKey(nameof(ExternalCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExtCodeRelationTableId = group.Add(new VocabularyKey(nameof(ExtCodeRelationTableId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExtCodeTableTableId = group.Add(new VocabularyKey(nameof(ExtCodeTableTableId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey VendorExternalCodeClassId { get; private set; }
-public VocabularyKey VendorAccountNumber { get; private set; }
-public VocabularyKey ExternalCode { get; private set; }
-public VocabularyKey ExtCodeRelationTableId { get; private set; }
-public VocabularyKey ExtCodeTableTableId { get; private set; }
+        public VocabularyKey VendorExternalCodeClassId { get; private set; }
+        public VocabularyKey VendorAccountNumber { get; private set; }
+        public VocabularyKey ExternalCode { get; private set; }
+        public VocabularyKey ExtCodeRelationTableId { get; private set; }
+        public VocabularyKey ExtCodeTableTableId { get; private set; }
 
 
     }

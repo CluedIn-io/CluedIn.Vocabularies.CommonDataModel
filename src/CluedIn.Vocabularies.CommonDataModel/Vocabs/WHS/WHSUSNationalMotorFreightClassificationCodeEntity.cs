@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,18 +13,18 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model WHSUSNationalMotorFreightClassificationCodeEntity Details", group =>
             {
-                DefaultBillOfLadingHandlingType = group.Add(new VocabularyKey(nameof(DefaultBillOfLadingHandlingType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-LTLClassCode = group.Add(new VocabularyKey(nameof(LTLClassCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-NMFCName = group.Add(new VocabularyKey(nameof(NMFCName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-NMFCCode = group.Add(new VocabularyKey(nameof(NMFCCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                DefaultBillOfLadingHandlingType = group.Add(new VocabularyKey(nameof(DefaultBillOfLadingHandlingType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LTLClassCode = group.Add(new VocabularyKey(nameof(LTLClassCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                NMFCName = group.Add(new VocabularyKey(nameof(NMFCName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                NMFCCode = group.Add(new VocabularyKey(nameof(NMFCCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey DefaultBillOfLadingHandlingType { get; private set; }
-public VocabularyKey LTLClassCode { get; private set; }
-public VocabularyKey NMFCName { get; private set; }
-public VocabularyKey NMFCCode { get; private set; }
+        public VocabularyKey DefaultBillOfLadingHandlingType { get; private set; }
+        public VocabularyKey LTLClassCode { get; private set; }
+        public VocabularyKey NMFCName { get; private set; }
+        public VocabularyKey NMFCCode { get; private set; }
 
 
     }

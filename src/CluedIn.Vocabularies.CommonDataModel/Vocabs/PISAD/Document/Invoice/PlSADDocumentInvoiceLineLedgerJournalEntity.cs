@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,30 +13,30 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model PlSADDocumentInvoiceLineLedgerJournalEntity Details", group =>
             {
-                Amount = group.Add(new VocabularyKey(nameof(Amount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-InvoiceDate = group.Add(new VocabularyKey(nameof(InvoiceDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Invoice = group.Add(new VocabularyKey(nameof(Invoice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-LedgerAccount = group.Add(new VocabularyKey(nameof(LedgerAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-SADDate = group.Add(new VocabularyKey(nameof(SADDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Position = group.Add(new VocabularyKey(nameof(Position), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ItemCommodityCode = group.Add(new VocabularyKey(nameof(ItemCommodityCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-SADNumber = group.Add(new VocabularyKey(nameof(SADNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-LedgerAccountDisplayValue = group.Add(new VocabularyKey(nameof(LedgerAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-RecordId = group.Add(new VocabularyKey(nameof(RecordId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                Amount = group.Add(new VocabularyKey(nameof(Amount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InvoiceDate = group.Add(new VocabularyKey(nameof(InvoiceDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Invoice = group.Add(new VocabularyKey(nameof(Invoice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LedgerAccount = group.Add(new VocabularyKey(nameof(LedgerAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SADDate = group.Add(new VocabularyKey(nameof(SADDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Position = group.Add(new VocabularyKey(nameof(Position), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ItemCommodityCode = group.Add(new VocabularyKey(nameof(ItemCommodityCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SADNumber = group.Add(new VocabularyKey(nameof(SADNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LedgerAccountDisplayValue = group.Add(new VocabularyKey(nameof(LedgerAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RecordId = group.Add(new VocabularyKey(nameof(RecordId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey Amount { get; private set; }
-public VocabularyKey InvoiceDate { get; private set; }
-public VocabularyKey Invoice { get; private set; }
-public VocabularyKey LedgerAccount { get; private set; }
-public VocabularyKey SADDate { get; private set; }
-public VocabularyKey Position { get; private set; }
-public VocabularyKey ItemCommodityCode { get; private set; }
-public VocabularyKey SADNumber { get; private set; }
-public VocabularyKey LedgerAccountDisplayValue { get; private set; }
-public VocabularyKey RecordId { get; private set; }
+        public VocabularyKey Amount { get; private set; }
+        public VocabularyKey InvoiceDate { get; private set; }
+        public VocabularyKey Invoice { get; private set; }
+        public VocabularyKey LedgerAccount { get; private set; }
+        public VocabularyKey SADDate { get; private set; }
+        public VocabularyKey Position { get; private set; }
+        public VocabularyKey ItemCommodityCode { get; private set; }
+        public VocabularyKey SADNumber { get; private set; }
+        public VocabularyKey LedgerAccountDisplayValue { get; private set; }
+        public VocabularyKey RecordId { get; private set; }
 
 
     }

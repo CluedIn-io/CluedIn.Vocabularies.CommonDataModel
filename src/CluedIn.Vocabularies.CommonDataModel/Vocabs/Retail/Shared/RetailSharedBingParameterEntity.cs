@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,16 +13,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model RetailSharedBingParameterEntity Details", group =>
             {
-                ApiKey = group.Add(new VocabularyKey(nameof(ApiKey), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Key = group.Add(new VocabularyKey(nameof(Key), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Enabled = group.Add(new VocabularyKey(nameof(Enabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                ApiKey = group.Add(new VocabularyKey(nameof(ApiKey), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Key = group.Add(new VocabularyKey(nameof(Key), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Enabled = group.Add(new VocabularyKey(nameof(Enabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey ApiKey { get; private set; }
-public VocabularyKey Key { get; private set; }
-public VocabularyKey Enabled { get; private set; }
+        public VocabularyKey ApiKey { get; private set; }
+        public VocabularyKey Key { get; private set; }
+        public VocabularyKey Enabled { get; private set; }
 
 
     }

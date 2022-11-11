@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,18 +13,18 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model ProjPeriodTimesheetWeekEntity Details", group =>
             {
-                PeriodFrom = group.Add(new VocabularyKey(nameof(PeriodFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-PeriodId = group.Add(new VocabularyKey(nameof(PeriodId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-PeriodName = group.Add(new VocabularyKey(nameof(PeriodName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-PeriodTo = group.Add(new VocabularyKey(nameof(PeriodTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                PeriodFrom = group.Add(new VocabularyKey(nameof(PeriodFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PeriodId = group.Add(new VocabularyKey(nameof(PeriodId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PeriodName = group.Add(new VocabularyKey(nameof(PeriodName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PeriodTo = group.Add(new VocabularyKey(nameof(PeriodTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey PeriodFrom { get; private set; }
-public VocabularyKey PeriodId { get; private set; }
-public VocabularyKey PeriodName { get; private set; }
-public VocabularyKey PeriodTo { get; private set; }
+        public VocabularyKey PeriodFrom { get; private set; }
+        public VocabularyKey PeriodId { get; private set; }
+        public VocabularyKey PeriodName { get; private set; }
+        public VocabularyKey PeriodTo { get; private set; }
 
 
     }

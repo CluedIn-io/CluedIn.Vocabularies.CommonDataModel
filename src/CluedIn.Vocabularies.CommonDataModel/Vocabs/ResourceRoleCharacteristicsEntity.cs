@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,22 +13,22 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model ResourceRoleCharacteristicsEntity Details", group =>
             {
-                CharacteristicId = group.Add(new VocabularyKey(nameof(CharacteristicId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-CharacteristicRequirement = group.Add(new VocabularyKey(nameof(CharacteristicRequirement), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-CharacteristicSet = group.Add(new VocabularyKey(nameof(CharacteristicSet), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-RoleId = group.Add(new VocabularyKey(nameof(RoleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Characteristic = group.Add(new VocabularyKey(nameof(Characteristic), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ReqEntityType = group.Add(new VocabularyKey(nameof(ReqEntityType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                CharacteristicId = group.Add(new VocabularyKey(nameof(CharacteristicId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CharacteristicRequirement = group.Add(new VocabularyKey(nameof(CharacteristicRequirement), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CharacteristicSet = group.Add(new VocabularyKey(nameof(CharacteristicSet), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RoleId = group.Add(new VocabularyKey(nameof(RoleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Characteristic = group.Add(new VocabularyKey(nameof(Characteristic), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ReqEntityType = group.Add(new VocabularyKey(nameof(ReqEntityType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey CharacteristicId { get; private set; }
-public VocabularyKey CharacteristicRequirement { get; private set; }
-public VocabularyKey CharacteristicSet { get; private set; }
-public VocabularyKey RoleId { get; private set; }
-public VocabularyKey Characteristic { get; private set; }
-public VocabularyKey ReqEntityType { get; private set; }
+        public VocabularyKey CharacteristicId { get; private set; }
+        public VocabularyKey CharacteristicRequirement { get; private set; }
+        public VocabularyKey CharacteristicSet { get; private set; }
+        public VocabularyKey RoleId { get; private set; }
+        public VocabularyKey Characteristic { get; private set; }
+        public VocabularyKey ReqEntityType { get; private set; }
 
 
     }

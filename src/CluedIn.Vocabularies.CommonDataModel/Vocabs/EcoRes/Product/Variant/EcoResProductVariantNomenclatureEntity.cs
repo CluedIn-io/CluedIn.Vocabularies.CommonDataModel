@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model EcoResProductVariantNomenclatureEntity Details", group =>
             {
-                NomenclatureName = group.Add(new VocabularyKey(nameof(NomenclatureName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-NomenclatureDescription = group.Add(new VocabularyKey(nameof(NomenclatureDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                NomenclatureName = group.Add(new VocabularyKey(nameof(NomenclatureName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                NomenclatureDescription = group.Add(new VocabularyKey(nameof(NomenclatureDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey NomenclatureName { get; private set; }
-public VocabularyKey NomenclatureDescription { get; private set; }
+        public VocabularyKey NomenclatureName { get; private set; }
+        public VocabularyKey NomenclatureDescription { get; private set; }
 
 
     }

@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,12 +13,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model CustomerJourney Details", group =>
             {
-                requiredconsent = group.Add(new VocabularyKey(nameof(requiredconsent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                requiredconsent = group.Add(new VocabularyKey(nameof(requiredconsent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey requiredconsent { get; private set; }
+        public VocabularyKey requiredconsent { get; private set; }
 
 
     }

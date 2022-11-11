@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,18 +13,18 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model ExpressionEntity Details", group =>
             {
-                ExpressionId = group.Add(new VocabularyKey(nameof(ExpressionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ExpressionClassName = group.Add(new VocabularyKey(nameof(ExpressionClassName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-XPathQuery = group.Add(new VocabularyKey(nameof(XPathQuery), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ExpressionDefinition = group.Add(new VocabularyKey(nameof(ExpressionDefinition), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                ExpressionId = group.Add(new VocabularyKey(nameof(ExpressionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExpressionClassName = group.Add(new VocabularyKey(nameof(ExpressionClassName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                XPathQuery = group.Add(new VocabularyKey(nameof(XPathQuery), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExpressionDefinition = group.Add(new VocabularyKey(nameof(ExpressionDefinition), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey ExpressionId { get; private set; }
-public VocabularyKey ExpressionClassName { get; private set; }
-public VocabularyKey XPathQuery { get; private set; }
-public VocabularyKey ExpressionDefinition { get; private set; }
+        public VocabularyKey ExpressionId { get; private set; }
+        public VocabularyKey ExpressionClassName { get; private set; }
+        public VocabularyKey XPathQuery { get; private set; }
+        public VocabularyKey ExpressionDefinition { get; private set; }
 
 
     }

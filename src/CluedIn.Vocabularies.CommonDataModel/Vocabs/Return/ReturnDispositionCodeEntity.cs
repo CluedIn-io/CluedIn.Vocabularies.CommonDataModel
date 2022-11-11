@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,16 +13,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model ReturnDispositionCodeEntity Details", group =>
             {
-                DispositionDescription = group.Add(new VocabularyKey(nameof(DispositionDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-DispositionAction = group.Add(new VocabularyKey(nameof(DispositionAction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-DispositionCode = group.Add(new VocabularyKey(nameof(DispositionCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                DispositionDescription = group.Add(new VocabularyKey(nameof(DispositionDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DispositionAction = group.Add(new VocabularyKey(nameof(DispositionAction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DispositionCode = group.Add(new VocabularyKey(nameof(DispositionCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey DispositionDescription { get; private set; }
-public VocabularyKey DispositionAction { get; private set; }
-public VocabularyKey DispositionCode { get; private set; }
+        public VocabularyKey DispositionDescription { get; private set; }
+        public VocabularyKey DispositionAction { get; private set; }
+        public VocabularyKey DispositionCode { get; private set; }
 
 
     }

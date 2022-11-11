@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model DeliveryDestinationEntity Details", group =>
             {
-                DestinationDescription = group.Add(new VocabularyKey(nameof(DestinationDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-DestinationCode = group.Add(new VocabularyKey(nameof(DestinationCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                DestinationDescription = group.Add(new VocabularyKey(nameof(DestinationDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DestinationCode = group.Add(new VocabularyKey(nameof(DestinationCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey DestinationDescription { get; private set; }
-public VocabularyKey DestinationCode { get; private set; }
+        public VocabularyKey DestinationDescription { get; private set; }
+        public VocabularyKey DestinationCode { get; private set; }
 
 
     }

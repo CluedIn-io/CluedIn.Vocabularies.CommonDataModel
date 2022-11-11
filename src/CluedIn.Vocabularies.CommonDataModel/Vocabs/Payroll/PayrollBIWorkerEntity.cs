@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model PayrollBIWorkerEntity Details", group =>
             {
-                PersonnelNumber = group.Add(new VocabularyKey(nameof(PersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-IsUsingDirectDeposit = group.Add(new VocabularyKey(nameof(IsUsingDirectDeposit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                PersonnelNumber = group.Add(new VocabularyKey(nameof(PersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsUsingDirectDeposit = group.Add(new VocabularyKey(nameof(IsUsingDirectDeposit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey PersonnelNumber { get; private set; }
-public VocabularyKey IsUsingDirectDeposit { get; private set; }
+        public VocabularyKey PersonnelNumber { get; private set; }
+        public VocabularyKey IsUsingDirectDeposit { get; private set; }
 
 
     }

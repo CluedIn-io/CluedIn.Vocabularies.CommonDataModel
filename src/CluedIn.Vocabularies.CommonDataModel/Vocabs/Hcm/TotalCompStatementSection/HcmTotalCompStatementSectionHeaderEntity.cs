@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model HcmTotalCompStatementSectionHeaderEntity Details", group =>
             {
-                StatementSectionId = group.Add(new VocabularyKey(nameof(StatementSectionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-StatementSectionName = group.Add(new VocabularyKey(nameof(StatementSectionName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                StatementSectionId = group.Add(new VocabularyKey(nameof(StatementSectionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatementSectionName = group.Add(new VocabularyKey(nameof(StatementSectionName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey StatementSectionId { get; private set; }
-public VocabularyKey StatementSectionName { get; private set; }
+        public VocabularyKey StatementSectionId { get; private set; }
+        public VocabularyKey StatementSectionName { get; private set; }
 
 
     }

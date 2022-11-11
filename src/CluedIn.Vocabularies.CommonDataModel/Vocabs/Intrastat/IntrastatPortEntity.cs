@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,18 +13,18 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model IntrastatPortEntity Details", group =>
             {
-                PortId = group.Add(new VocabularyKey(nameof(PortId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-DescribePort = group.Add(new VocabularyKey(nameof(DescribePort), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-CountryRegionId = group.Add(new VocabularyKey(nameof(CountryRegionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-PortState = group.Add(new VocabularyKey(nameof(PortState), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                PortId = group.Add(new VocabularyKey(nameof(PortId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DescribePort = group.Add(new VocabularyKey(nameof(DescribePort), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CountryRegionId = group.Add(new VocabularyKey(nameof(CountryRegionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PortState = group.Add(new VocabularyKey(nameof(PortState), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey PortId { get; private set; }
-public VocabularyKey DescribePort { get; private set; }
-public VocabularyKey CountryRegionId { get; private set; }
-public VocabularyKey PortState { get; private set; }
+        public VocabularyKey PortId { get; private set; }
+        public VocabularyKey DescribePort { get; private set; }
+        public VocabularyKey CountryRegionId { get; private set; }
+        public VocabularyKey PortState { get; private set; }
 
 
     }

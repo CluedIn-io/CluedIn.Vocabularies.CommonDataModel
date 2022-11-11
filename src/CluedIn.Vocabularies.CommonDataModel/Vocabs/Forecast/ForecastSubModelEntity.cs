@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,16 +13,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model ForecastSubModelEntity Details", group =>
             {
-                ModelId = group.Add(new VocabularyKey(nameof(ModelId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-SubModelId = group.Add(new VocabularyKey(nameof(SubModelId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-SubModelName = group.Add(new VocabularyKey(nameof(SubModelName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                ModelId = group.Add(new VocabularyKey(nameof(ModelId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SubModelId = group.Add(new VocabularyKey(nameof(SubModelId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SubModelName = group.Add(new VocabularyKey(nameof(SubModelName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey ModelId { get; private set; }
-public VocabularyKey SubModelId { get; private set; }
-public VocabularyKey SubModelName { get; private set; }
+        public VocabularyKey ModelId { get; private set; }
+        public VocabularyKey SubModelId { get; private set; }
+        public VocabularyKey SubModelName { get; private set; }
 
 
     }

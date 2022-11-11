@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,16 +13,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model JmgTimeAndAttendanceProfileTypeEntity Details", group =>
             {
-                ProfileTypeId = group.Add(new VocabularyKey(nameof(ProfileTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ProfileSpecificationTypeCode = group.Add(new VocabularyKey(nameof(ProfileSpecificationTypeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                ProfileTypeId = group.Add(new VocabularyKey(nameof(ProfileTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProfileSpecificationTypeCode = group.Add(new VocabularyKey(nameof(ProfileSpecificationTypeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey ProfileTypeId { get; private set; }
-public VocabularyKey Description { get; private set; }
-public VocabularyKey ProfileSpecificationTypeCode { get; private set; }
+        public VocabularyKey ProfileTypeId { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey ProfileSpecificationTypeCode { get; private set; }
 
 
     }

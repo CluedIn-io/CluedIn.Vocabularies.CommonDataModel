@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,18 +13,18 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model RetailDiscountThresholdTierEntity Details", group =>
             {
-                AmountThreshold = group.Add(new VocabularyKey(nameof(AmountThreshold), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-DiscountMethod = group.Add(new VocabularyKey(nameof(DiscountMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-DiscountValue = group.Add(new VocabularyKey(nameof(DiscountValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-OfferId = group.Add(new VocabularyKey(nameof(OfferId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                AmountThreshold = group.Add(new VocabularyKey(nameof(AmountThreshold), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DiscountMethod = group.Add(new VocabularyKey(nameof(DiscountMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DiscountValue = group.Add(new VocabularyKey(nameof(DiscountValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OfferId = group.Add(new VocabularyKey(nameof(OfferId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey AmountThreshold { get; private set; }
-public VocabularyKey DiscountMethod { get; private set; }
-public VocabularyKey DiscountValue { get; private set; }
-public VocabularyKey OfferId { get; private set; }
+        public VocabularyKey AmountThreshold { get; private set; }
+        public VocabularyKey DiscountMethod { get; private set; }
+        public VocabularyKey DiscountValue { get; private set; }
+        public VocabularyKey OfferId { get; private set; }
 
 
     }

@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model TrvCardTypesEntity Details", group =>
             {
-                TrvCreditCardDesc = group.Add(new VocabularyKey(nameof(TrvCreditCardDesc), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-TrvCreditCardType = group.Add(new VocabularyKey(nameof(TrvCreditCardType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                TrvCreditCardDesc = group.Add(new VocabularyKey(nameof(TrvCreditCardDesc), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TrvCreditCardType = group.Add(new VocabularyKey(nameof(TrvCreditCardType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey TrvCreditCardDesc { get; private set; }
-public VocabularyKey TrvCreditCardType { get; private set; }
+        public VocabularyKey TrvCreditCardDesc { get; private set; }
+        public VocabularyKey TrvCreditCardType { get; private set; }
 
 
     }

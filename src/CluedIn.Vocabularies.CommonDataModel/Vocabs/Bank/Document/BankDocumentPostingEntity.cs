@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,24 +13,24 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model BankDocumentPostingEntity Details", group =>
             {
-                AccountCode = group.Add(new VocabularyKey(nameof(AccountCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-FacilityGroup = group.Add(new VocabularyKey(nameof(FacilityGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-FacilityType = group.Add(new VocabularyKey(nameof(FacilityType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-LGLiquidationLedgerAccount = group.Add(new VocabularyKey(nameof(LGLiquidationLedgerAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-MarginLedgerAccount = group.Add(new VocabularyKey(nameof(MarginLedgerAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-MiscChargesLedgerAccount = group.Add(new VocabularyKey(nameof(MiscChargesLedgerAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-SettleLedgerAccount = group.Add(new VocabularyKey(nameof(SettleLedgerAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                AccountCode = group.Add(new VocabularyKey(nameof(AccountCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FacilityGroup = group.Add(new VocabularyKey(nameof(FacilityGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FacilityType = group.Add(new VocabularyKey(nameof(FacilityType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LGLiquidationLedgerAccount = group.Add(new VocabularyKey(nameof(LGLiquidationLedgerAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MarginLedgerAccount = group.Add(new VocabularyKey(nameof(MarginLedgerAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MiscChargesLedgerAccount = group.Add(new VocabularyKey(nameof(MiscChargesLedgerAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SettleLedgerAccount = group.Add(new VocabularyKey(nameof(SettleLedgerAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey AccountCode { get; private set; }
-public VocabularyKey FacilityGroup { get; private set; }
-public VocabularyKey FacilityType { get; private set; }
-public VocabularyKey LGLiquidationLedgerAccount { get; private set; }
-public VocabularyKey MarginLedgerAccount { get; private set; }
-public VocabularyKey MiscChargesLedgerAccount { get; private set; }
-public VocabularyKey SettleLedgerAccount { get; private set; }
+        public VocabularyKey AccountCode { get; private set; }
+        public VocabularyKey FacilityGroup { get; private set; }
+        public VocabularyKey FacilityType { get; private set; }
+        public VocabularyKey LGLiquidationLedgerAccount { get; private set; }
+        public VocabularyKey MarginLedgerAccount { get; private set; }
+        public VocabularyKey MiscChargesLedgerAccount { get; private set; }
+        public VocabularyKey SettleLedgerAccount { get; private set; }
 
 
     }

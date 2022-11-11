@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,16 +13,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model TrvExpenseMerchantEntity Details", group =>
             {
-                ExpenseType = group.Add(new VocabularyKey(nameof(ExpenseType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-MerchantId = group.Add(new VocabularyKey(nameof(MerchantId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Preferred = group.Add(new VocabularyKey(nameof(Preferred), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                ExpenseType = group.Add(new VocabularyKey(nameof(ExpenseType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MerchantId = group.Add(new VocabularyKey(nameof(MerchantId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Preferred = group.Add(new VocabularyKey(nameof(Preferred), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey ExpenseType { get; private set; }
-public VocabularyKey MerchantId { get; private set; }
-public VocabularyKey Preferred { get; private set; }
+        public VocabularyKey ExpenseType { get; private set; }
+        public VocabularyKey MerchantId { get; private set; }
+        public VocabularyKey Preferred { get; private set; }
 
 
     }

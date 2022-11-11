@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model WHSAllowedContainerTypeEntity Details", group =>
             {
-                AllowedContainerTypeId = group.Add(new VocabularyKey(nameof(AllowedContainerTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-AllowedContainerTypeGroupName = group.Add(new VocabularyKey(nameof(AllowedContainerTypeGroupName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                AllowedContainerTypeId = group.Add(new VocabularyKey(nameof(AllowedContainerTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AllowedContainerTypeGroupName = group.Add(new VocabularyKey(nameof(AllowedContainerTypeGroupName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey AllowedContainerTypeId { get; private set; }
-public VocabularyKey AllowedContainerTypeGroupName { get; private set; }
+        public VocabularyKey AllowedContainerTypeId { get; private set; }
+        public VocabularyKey AllowedContainerTypeGroupName { get; private set; }
 
 
     }

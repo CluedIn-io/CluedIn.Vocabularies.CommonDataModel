@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,16 +13,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model VendorInvoiceTotalToleranceEntity Details", group =>
             {
-                VendorAccount = group.Add(new VocabularyKey(nameof(VendorAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-VendorName = group.Add(new VocabularyKey(nameof(VendorName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-InvoiceTotalsPercentage = group.Add(new VocabularyKey(nameof(InvoiceTotalsPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                VendorAccount = group.Add(new VocabularyKey(nameof(VendorAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                VendorName = group.Add(new VocabularyKey(nameof(VendorName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InvoiceTotalsPercentage = group.Add(new VocabularyKey(nameof(InvoiceTotalsPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey VendorAccount { get; private set; }
-public VocabularyKey VendorName { get; private set; }
-public VocabularyKey InvoiceTotalsPercentage { get; private set; }
+        public VocabularyKey VendorAccount { get; private set; }
+        public VocabularyKey VendorName { get; private set; }
+        public VocabularyKey InvoiceTotalsPercentage { get; private set; }
 
 
     }

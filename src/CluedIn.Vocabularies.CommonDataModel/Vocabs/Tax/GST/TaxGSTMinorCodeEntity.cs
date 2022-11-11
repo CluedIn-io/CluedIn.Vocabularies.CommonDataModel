@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,16 +13,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model TaxGSTMinorCodeEntity Details", group =>
             {
-                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-MinorCode = group.Add(new VocabularyKey(nameof(MinorCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-TaxComponent = group.Add(new VocabularyKey(nameof(TaxComponent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MinorCode = group.Add(new VocabularyKey(nameof(MinorCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TaxComponent = group.Add(new VocabularyKey(nameof(TaxComponent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey Description { get; private set; }
-public VocabularyKey MinorCode { get; private set; }
-public VocabularyKey TaxComponent { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey MinorCode { get; private set; }
+        public VocabularyKey TaxComponent { get; private set; }
 
 
     }

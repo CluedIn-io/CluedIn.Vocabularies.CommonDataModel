@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,20 +13,20 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model EFDocAuthorityWebserviceEntity Details", group =>
             {
-                Authority = group.Add(new VocabularyKey(nameof(Authority), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-EnvironmentType = group.Add(new VocabularyKey(nameof(EnvironmentType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Url = group.Add(new VocabularyKey(nameof(Url), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Version = group.Add(new VocabularyKey(nameof(Version), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-WebServiceType = group.Add(new VocabularyKey(nameof(WebServiceType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                Authority = group.Add(new VocabularyKey(nameof(Authority), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EnvironmentType = group.Add(new VocabularyKey(nameof(EnvironmentType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Url = group.Add(new VocabularyKey(nameof(Url), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Version = group.Add(new VocabularyKey(nameof(Version), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WebServiceType = group.Add(new VocabularyKey(nameof(WebServiceType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey Authority { get; private set; }
-public VocabularyKey EnvironmentType { get; private set; }
-public VocabularyKey Url { get; private set; }
-public VocabularyKey Version { get; private set; }
-public VocabularyKey WebServiceType { get; private set; }
+        public VocabularyKey Authority { get; private set; }
+        public VocabularyKey EnvironmentType { get; private set; }
+        public VocabularyKey Url { get; private set; }
+        public VocabularyKey Version { get; private set; }
+        public VocabularyKey WebServiceType { get; private set; }
 
 
     }

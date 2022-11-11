@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,16 +13,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model TrvAntiCorruptionLanguageTextEntity Details", group =>
             {
-                LanguageId = group.Add(new VocabularyKey(nameof(LanguageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-AttestationMessage = group.Add(new VocabularyKey(nameof(AttestationMessage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ApproverMessage = group.Add(new VocabularyKey(nameof(ApproverMessage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                LanguageId = group.Add(new VocabularyKey(nameof(LanguageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AttestationMessage = group.Add(new VocabularyKey(nameof(AttestationMessage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ApproverMessage = group.Add(new VocabularyKey(nameof(ApproverMessage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey LanguageId { get; private set; }
-public VocabularyKey AttestationMessage { get; private set; }
-public VocabularyKey ApproverMessage { get; private set; }
+        public VocabularyKey LanguageId { get; private set; }
+        public VocabularyKey AttestationMessage { get; private set; }
+        public VocabularyKey ApproverMessage { get; private set; }
 
 
     }

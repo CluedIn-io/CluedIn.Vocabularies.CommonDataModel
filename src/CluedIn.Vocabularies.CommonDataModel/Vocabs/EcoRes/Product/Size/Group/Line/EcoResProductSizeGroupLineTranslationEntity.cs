@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,20 +13,20 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model EcoResProductSizeGroupLineTranslationEntity Details", group =>
             {
-                ProductSizeGroupId = group.Add(new VocabularyKey(nameof(ProductSizeGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ProductSizeId = group.Add(new VocabularyKey(nameof(ProductSizeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-TranslatedSizeName = group.Add(new VocabularyKey(nameof(TranslatedSizeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-TranslatedSizeDescription = group.Add(new VocabularyKey(nameof(TranslatedSizeDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-LanguageId = group.Add(new VocabularyKey(nameof(LanguageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                ProductSizeGroupId = group.Add(new VocabularyKey(nameof(ProductSizeGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProductSizeId = group.Add(new VocabularyKey(nameof(ProductSizeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TranslatedSizeName = group.Add(new VocabularyKey(nameof(TranslatedSizeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TranslatedSizeDescription = group.Add(new VocabularyKey(nameof(TranslatedSizeDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LanguageId = group.Add(new VocabularyKey(nameof(LanguageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey ProductSizeGroupId { get; private set; }
-public VocabularyKey ProductSizeId { get; private set; }
-public VocabularyKey TranslatedSizeName { get; private set; }
-public VocabularyKey TranslatedSizeDescription { get; private set; }
-public VocabularyKey LanguageId { get; private set; }
+        public VocabularyKey ProductSizeGroupId { get; private set; }
+        public VocabularyKey ProductSizeId { get; private set; }
+        public VocabularyKey TranslatedSizeName { get; private set; }
+        public VocabularyKey TranslatedSizeDescription { get; private set; }
+        public VocabularyKey LanguageId { get; private set; }
 
 
     }

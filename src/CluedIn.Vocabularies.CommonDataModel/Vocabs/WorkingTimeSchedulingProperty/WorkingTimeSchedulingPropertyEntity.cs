@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model WorkingTimeSchedulingPropertyEntity Details", group =>
             {
-                PropertyId = group.Add(new VocabularyKey(nameof(PropertyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-PropertyName = group.Add(new VocabularyKey(nameof(PropertyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                PropertyId = group.Add(new VocabularyKey(nameof(PropertyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PropertyName = group.Add(new VocabularyKey(nameof(PropertyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey PropertyId { get; private set; }
-public VocabularyKey PropertyName { get; private set; }
+        public VocabularyKey PropertyId { get; private set; }
+        public VocabularyKey PropertyName { get; private set; }
 
 
     }

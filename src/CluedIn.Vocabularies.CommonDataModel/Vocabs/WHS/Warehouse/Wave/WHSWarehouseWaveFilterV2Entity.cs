@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,16 +13,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model WHSWarehouseWaveFilterV2Entity Details", group =>
             {
-                WarehouseWaveFilterDescription = group.Add(new VocabularyKey(nameof(WarehouseWaveFilterDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-WarehouseWaveFilterCode = group.Add(new VocabularyKey(nameof(WarehouseWaveFilterCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-WarehouseWaveFilterQuery = group.Add(new VocabularyKey(nameof(WarehouseWaveFilterQuery), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                WarehouseWaveFilterDescription = group.Add(new VocabularyKey(nameof(WarehouseWaveFilterDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WarehouseWaveFilterCode = group.Add(new VocabularyKey(nameof(WarehouseWaveFilterCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WarehouseWaveFilterQuery = group.Add(new VocabularyKey(nameof(WarehouseWaveFilterQuery), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey WarehouseWaveFilterDescription { get; private set; }
-public VocabularyKey WarehouseWaveFilterCode { get; private set; }
-public VocabularyKey WarehouseWaveFilterQuery { get; private set; }
+        public VocabularyKey WarehouseWaveFilterDescription { get; private set; }
+        public VocabularyKey WarehouseWaveFilterCode { get; private set; }
+        public VocabularyKey WarehouseWaveFilterQuery { get; private set; }
 
 
     }

@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,16 +13,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model WHSWarehouseAppFieldEntity Details", group =>
             {
-                FieldName = group.Add(new VocabularyKey(nameof(FieldName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-InputType = group.Add(new VocabularyKey(nameof(InputType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-InputMode = group.Add(new VocabularyKey(nameof(InputMode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                FieldName = group.Add(new VocabularyKey(nameof(FieldName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InputType = group.Add(new VocabularyKey(nameof(InputType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InputMode = group.Add(new VocabularyKey(nameof(InputMode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey FieldName { get; private set; }
-public VocabularyKey InputType { get; private set; }
-public VocabularyKey InputMode { get; private set; }
+        public VocabularyKey FieldName { get; private set; }
+        public VocabularyKey InputType { get; private set; }
+        public VocabularyKey InputMode { get; private set; }
 
 
     }

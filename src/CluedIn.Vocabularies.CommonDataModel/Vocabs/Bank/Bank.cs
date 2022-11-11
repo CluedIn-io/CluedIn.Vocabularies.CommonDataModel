@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,12 +13,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model Bank Details", group =>
             {
-                bankId = group.Add(new VocabularyKey(nameof(bankId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                bankId = group.Add(new VocabularyKey(nameof(bankId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey bankId { get; private set; }
+        public VocabularyKey bankId { get; private set; }
 
 
     }

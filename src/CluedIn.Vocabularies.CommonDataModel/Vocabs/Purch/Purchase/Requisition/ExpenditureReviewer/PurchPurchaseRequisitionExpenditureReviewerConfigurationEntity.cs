@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model PurchPurchaseRequisitionExpenditureReviewerConfigurationEntity Details", group =>
             {
-                ConfigurationName = group.Add(new VocabularyKey(nameof(ConfigurationName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ExpenditureDocumentType = group.Add(new VocabularyKey(nameof(ExpenditureDocumentType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                ConfigurationName = group.Add(new VocabularyKey(nameof(ConfigurationName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExpenditureDocumentType = group.Add(new VocabularyKey(nameof(ExpenditureDocumentType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey ConfigurationName { get; private set; }
-public VocabularyKey ExpenditureDocumentType { get; private set; }
+        public VocabularyKey ConfigurationName { get; private set; }
+        public VocabularyKey ExpenditureDocumentType { get; private set; }
 
 
     }

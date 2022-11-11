@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model AssetConditionEntity Details", group =>
             {
-                ConditionCode = group.Add(new VocabularyKey(nameof(ConditionCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                ConditionCode = group.Add(new VocabularyKey(nameof(ConditionCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey ConditionCode { get; private set; }
-public VocabularyKey Description { get; private set; }
+        public VocabularyKey ConditionCode { get; private set; }
+        public VocabularyKey Description { get; private set; }
 
 
     }

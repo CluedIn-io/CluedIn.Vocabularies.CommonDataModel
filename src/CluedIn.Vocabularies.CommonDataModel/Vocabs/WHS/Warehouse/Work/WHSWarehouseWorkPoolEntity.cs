@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model WHSWarehouseWorkPoolEntity Details", group =>
             {
-                WorkPoolDescription = group.Add(new VocabularyKey(nameof(WorkPoolDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-WorkPoolId = group.Add(new VocabularyKey(nameof(WorkPoolId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                WorkPoolDescription = group.Add(new VocabularyKey(nameof(WorkPoolDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WorkPoolId = group.Add(new VocabularyKey(nameof(WorkPoolId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey WorkPoolDescription { get; private set; }
-public VocabularyKey WorkPoolId { get; private set; }
+        public VocabularyKey WorkPoolDescription { get; private set; }
+        public VocabularyKey WorkPoolId { get; private set; }
 
 
     }

@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,16 +13,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model TaxSalesTaxFormTypesEntity Details", group =>
             {
-                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-FormType = group.Add(new VocabularyKey(nameof(FormType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-TaxType = group.Add(new VocabularyKey(nameof(TaxType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FormType = group.Add(new VocabularyKey(nameof(FormType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TaxType = group.Add(new VocabularyKey(nameof(TaxType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey Description { get; private set; }
-public VocabularyKey FormType { get; private set; }
-public VocabularyKey TaxType { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey FormType { get; private set; }
+        public VocabularyKey TaxType { get; private set; }
 
 
     }

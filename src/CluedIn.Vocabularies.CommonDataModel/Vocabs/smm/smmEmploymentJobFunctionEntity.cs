@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model smmEmploymentJobFunctionEntity Details", group =>
             {
-                FunctionDescription = group.Add(new VocabularyKey(nameof(FunctionDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-FunctionName = group.Add(new VocabularyKey(nameof(FunctionName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                FunctionDescription = group.Add(new VocabularyKey(nameof(FunctionDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FunctionName = group.Add(new VocabularyKey(nameof(FunctionName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey FunctionDescription { get; private set; }
-public VocabularyKey FunctionName { get; private set; }
+        public VocabularyKey FunctionDescription { get; private set; }
+        public VocabularyKey FunctionName { get; private set; }
 
 
     }

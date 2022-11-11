@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,12 +13,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model GroupMember Details", group =>
             {
-                groupMemberId = group.Add(new VocabularyKey(nameof(groupMemberId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                groupMemberId = group.Add(new VocabularyKey(nameof(groupMemberId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey groupMemberId { get; private set; }
+        public VocabularyKey groupMemberId { get; private set; }
 
 
     }

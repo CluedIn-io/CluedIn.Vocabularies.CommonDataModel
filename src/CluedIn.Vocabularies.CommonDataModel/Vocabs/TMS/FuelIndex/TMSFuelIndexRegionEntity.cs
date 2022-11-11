@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model TMSFuelIndexRegionEntity Details", group =>
             {
-                RegionId = group.Add(new VocabularyKey(nameof(RegionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-RegionName = group.Add(new VocabularyKey(nameof(RegionName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                RegionId = group.Add(new VocabularyKey(nameof(RegionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RegionName = group.Add(new VocabularyKey(nameof(RegionName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey RegionId { get; private set; }
-public VocabularyKey RegionName { get; private set; }
+        public VocabularyKey RegionId { get; private set; }
+        public VocabularyKey RegionName { get; private set; }
 
 
     }

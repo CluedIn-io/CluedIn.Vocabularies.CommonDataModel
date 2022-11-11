@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,20 +13,20 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model VendorInvoiceSubLineEntity Details", group =>
             {
-                ProductReceiptNumber = group.Add(new VocabularyKey(nameof(ProductReceiptNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-InvoiceLineReference = group.Add(new VocabularyKey(nameof(InvoiceLineReference), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-PurchaseQuantity = group.Add(new VocabularyKey(nameof(PurchaseQuantity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-PurchaseOrder = group.Add(new VocabularyKey(nameof(PurchaseOrder), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-InvoiceLineNumber = group.Add(new VocabularyKey(nameof(InvoiceLineNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                ProductReceiptNumber = group.Add(new VocabularyKey(nameof(ProductReceiptNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InvoiceLineReference = group.Add(new VocabularyKey(nameof(InvoiceLineReference), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PurchaseQuantity = group.Add(new VocabularyKey(nameof(PurchaseQuantity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PurchaseOrder = group.Add(new VocabularyKey(nameof(PurchaseOrder), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InvoiceLineNumber = group.Add(new VocabularyKey(nameof(InvoiceLineNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey ProductReceiptNumber { get; private set; }
-public VocabularyKey InvoiceLineReference { get; private set; }
-public VocabularyKey PurchaseQuantity { get; private set; }
-public VocabularyKey PurchaseOrder { get; private set; }
-public VocabularyKey InvoiceLineNumber { get; private set; }
+        public VocabularyKey ProductReceiptNumber { get; private set; }
+        public VocabularyKey InvoiceLineReference { get; private set; }
+        public VocabularyKey PurchaseQuantity { get; private set; }
+        public VocabularyKey PurchaseOrder { get; private set; }
+        public VocabularyKey InvoiceLineNumber { get; private set; }
 
 
     }

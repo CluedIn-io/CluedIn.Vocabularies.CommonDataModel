@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model smmLoyaltyLevelEntity Details", group =>
             {
-                LevelDescription = group.Add(new VocabularyKey(nameof(LevelDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-LevelPhrase = group.Add(new VocabularyKey(nameof(LevelPhrase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                LevelDescription = group.Add(new VocabularyKey(nameof(LevelDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LevelPhrase = group.Add(new VocabularyKey(nameof(LevelPhrase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey LevelDescription { get; private set; }
-public VocabularyKey LevelPhrase { get; private set; }
+        public VocabularyKey LevelDescription { get; private set; }
+        public VocabularyKey LevelPhrase { get; private set; }
 
 
     }

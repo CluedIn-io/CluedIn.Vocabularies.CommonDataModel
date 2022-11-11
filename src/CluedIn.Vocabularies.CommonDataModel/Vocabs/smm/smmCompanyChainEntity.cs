@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model smmCompanyChainEntity Details", group =>
             {
-                ChainName = group.Add(new VocabularyKey(nameof(ChainName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ChainDescription = group.Add(new VocabularyKey(nameof(ChainDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                ChainName = group.Add(new VocabularyKey(nameof(ChainName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ChainDescription = group.Add(new VocabularyKey(nameof(ChainDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey ChainName { get; private set; }
-public VocabularyKey ChainDescription { get; private set; }
+        public VocabularyKey ChainName { get; private set; }
+        public VocabularyKey ChainDescription { get; private set; }
 
 
     }

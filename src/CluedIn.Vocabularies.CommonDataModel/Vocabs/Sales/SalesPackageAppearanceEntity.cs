@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model SalesPackageAppearanceEntity Details", group =>
             {
-                AppearanceId = group.Add(new VocabularyKey(nameof(AppearanceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-AppearanceDescription = group.Add(new VocabularyKey(nameof(AppearanceDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                AppearanceId = group.Add(new VocabularyKey(nameof(AppearanceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AppearanceDescription = group.Add(new VocabularyKey(nameof(AppearanceDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey AppearanceId { get; private set; }
-public VocabularyKey AppearanceDescription { get; private set; }
+        public VocabularyKey AppearanceId { get; private set; }
+        public VocabularyKey AppearanceDescription { get; private set; }
 
 
     }

@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model RetailCDXDataStoreChannelEntity Details", group =>
             {
-                ChannelId = group.Add(new VocabularyKey(nameof(ChannelId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ChannelDatabaseId = group.Add(new VocabularyKey(nameof(ChannelDatabaseId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                ChannelId = group.Add(new VocabularyKey(nameof(ChannelId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ChannelDatabaseId = group.Add(new VocabularyKey(nameof(ChannelDatabaseId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey ChannelId { get; private set; }
-public VocabularyKey ChannelDatabaseId { get; private set; }
+        public VocabularyKey ChannelId { get; private set; }
+        public VocabularyKey ChannelDatabaseId { get; private set; }
 
 
     }

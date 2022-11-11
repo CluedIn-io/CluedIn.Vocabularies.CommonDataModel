@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,18 +13,18 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model WorkCalendarDayEntity Details", group =>
             {
-                WorkCalendarId = group.Add(new VocabularyKey(nameof(WorkCalendarId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-CalendarDate = group.Add(new VocabularyKey(nameof(CalendarDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-IsPickingUpClosed = group.Add(new VocabularyKey(nameof(IsPickingUpClosed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-WorkingDayDefinition = group.Add(new VocabularyKey(nameof(WorkingDayDefinition), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                WorkCalendarId = group.Add(new VocabularyKey(nameof(WorkCalendarId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CalendarDate = group.Add(new VocabularyKey(nameof(CalendarDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsPickingUpClosed = group.Add(new VocabularyKey(nameof(IsPickingUpClosed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WorkingDayDefinition = group.Add(new VocabularyKey(nameof(WorkingDayDefinition), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey WorkCalendarId { get; private set; }
-public VocabularyKey CalendarDate { get; private set; }
-public VocabularyKey IsPickingUpClosed { get; private set; }
-public VocabularyKey WorkingDayDefinition { get; private set; }
+        public VocabularyKey WorkCalendarId { get; private set; }
+        public VocabularyKey CalendarDate { get; private set; }
+        public VocabularyKey IsPickingUpClosed { get; private set; }
+        public VocabularyKey WorkingDayDefinition { get; private set; }
 
 
     }

@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,16 +13,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model DocuEnabledTableEntity Details", group =>
             {
-                AllowEditAlways = group.Add(new VocabularyKey(nameof(AllowEditAlways), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-TableEnabledId = group.Add(new VocabularyKey(nameof(TableEnabledId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-TableName = group.Add(new VocabularyKey(nameof(TableName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                AllowEditAlways = group.Add(new VocabularyKey(nameof(AllowEditAlways), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TableEnabledId = group.Add(new VocabularyKey(nameof(TableEnabledId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TableName = group.Add(new VocabularyKey(nameof(TableName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey AllowEditAlways { get; private set; }
-public VocabularyKey TableEnabledId { get; private set; }
-public VocabularyKey TableName { get; private set; }
+        public VocabularyKey AllowEditAlways { get; private set; }
+        public VocabularyKey TableEnabledId { get; private set; }
+        public VocabularyKey TableName { get; private set; }
 
 
     }

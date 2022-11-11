@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,20 +13,20 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model EFDocAuthorityStateEntity Details", group =>
             {
-                Authority = group.Add(new VocabularyKey(nameof(Authority), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-StateId = group.Add(new VocabularyKey(nameof(StateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-State = group.Add(new VocabularyKey(nameof(State), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-AddExempt = group.Add(new VocabularyKey(nameof(AddExempt), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ValidateBenefitCodes = group.Add(new VocabularyKey(nameof(ValidateBenefitCodes), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                Authority = group.Add(new VocabularyKey(nameof(Authority), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateId = group.Add(new VocabularyKey(nameof(StateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                State = group.Add(new VocabularyKey(nameof(State), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AddExempt = group.Add(new VocabularyKey(nameof(AddExempt), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ValidateBenefitCodes = group.Add(new VocabularyKey(nameof(ValidateBenefitCodes), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey Authority { get; private set; }
-public VocabularyKey StateId { get; private set; }
-public VocabularyKey State { get; private set; }
-public VocabularyKey AddExempt { get; private set; }
-public VocabularyKey ValidateBenefitCodes { get; private set; }
+        public VocabularyKey Authority { get; private set; }
+        public VocabularyKey StateId { get; private set; }
+        public VocabularyKey State { get; private set; }
+        public VocabularyKey AddExempt { get; private set; }
+        public VocabularyKey ValidateBenefitCodes { get; private set; }
 
 
     }

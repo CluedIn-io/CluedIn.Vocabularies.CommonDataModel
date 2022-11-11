@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model CredManCashDiscRankEntity Details", group =>
             {
-                CashDiscCode = group.Add(new VocabularyKey(nameof(CashDiscCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-CashDiscRanking = group.Add(new VocabularyKey(nameof(CashDiscRanking), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                CashDiscCode = group.Add(new VocabularyKey(nameof(CashDiscCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CashDiscRanking = group.Add(new VocabularyKey(nameof(CashDiscRanking), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey CashDiscCode { get; private set; }
-public VocabularyKey CashDiscRanking { get; private set; }
+        public VocabularyKey CashDiscCode { get; private set; }
+        public VocabularyKey CashDiscRanking { get; private set; }
 
 
     }

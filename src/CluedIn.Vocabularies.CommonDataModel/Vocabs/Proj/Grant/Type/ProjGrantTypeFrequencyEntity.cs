@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,18 +13,18 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model ProjGrantTypeFrequencyEntity Details", group =>
             {
-                Comments = group.Add(new VocabularyKey(nameof(Comments), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Frequency = group.Add(new VocabularyKey(nameof(Frequency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ProjGrantType = group.Add(new VocabularyKey(nameof(ProjGrantType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ProjGrantType_GrantType = group.Add(new VocabularyKey(nameof(ProjGrantType_GrantType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                Comments = group.Add(new VocabularyKey(nameof(Comments), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Frequency = group.Add(new VocabularyKey(nameof(Frequency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProjGrantType = group.Add(new VocabularyKey(nameof(ProjGrantType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProjGrantType_GrantType = group.Add(new VocabularyKey(nameof(ProjGrantType_GrantType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey Comments { get; private set; }
-public VocabularyKey Frequency { get; private set; }
-public VocabularyKey ProjGrantType { get; private set; }
-public VocabularyKey ProjGrantType_GrantType { get; private set; }
+        public VocabularyKey Comments { get; private set; }
+        public VocabularyKey Frequency { get; private set; }
+        public VocabularyKey ProjGrantType { get; private set; }
+        public VocabularyKey ProjGrantType_GrantType { get; private set; }
 
 
     }

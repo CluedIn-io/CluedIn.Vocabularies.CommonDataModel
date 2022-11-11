@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,16 +13,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model LedgerRRGAccountInterval_RUEntity Details", group =>
             {
-                FromLedgerDimensionAccountIdDisplayValue = group.Add(new VocabularyKey(nameof(FromLedgerDimensionAccountIdDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ToLedgerDimensionAccountIdDisplayValue = group.Add(new VocabularyKey(nameof(ToLedgerDimensionAccountIdDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-OperationLineId = group.Add(new VocabularyKey(nameof(OperationLineId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                FromLedgerDimensionAccountIdDisplayValue = group.Add(new VocabularyKey(nameof(FromLedgerDimensionAccountIdDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ToLedgerDimensionAccountIdDisplayValue = group.Add(new VocabularyKey(nameof(ToLedgerDimensionAccountIdDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OperationLineId = group.Add(new VocabularyKey(nameof(OperationLineId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey FromLedgerDimensionAccountIdDisplayValue { get; private set; }
-public VocabularyKey ToLedgerDimensionAccountIdDisplayValue { get; private set; }
-public VocabularyKey OperationLineId { get; private set; }
+        public VocabularyKey FromLedgerDimensionAccountIdDisplayValue { get; private set; }
+        public VocabularyKey ToLedgerDimensionAccountIdDisplayValue { get; private set; }
+        public VocabularyKey OperationLineId { get; private set; }
 
 
     }

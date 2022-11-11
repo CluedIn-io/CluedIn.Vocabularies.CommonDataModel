@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,20 +13,20 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model InventQualityTestEntity Details", group =>
             {
-                TestDescription = group.Add(new VocabularyKey(nameof(TestDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-TestId = group.Add(new VocabularyKey(nameof(TestId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-TestInstrumentId = group.Add(new VocabularyKey(nameof(TestInstrumentId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-QualityTestMeasurementType = group.Add(new VocabularyKey(nameof(QualityTestMeasurementType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-TestMeasurementUnitSymbol = group.Add(new VocabularyKey(nameof(TestMeasurementUnitSymbol), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                TestDescription = group.Add(new VocabularyKey(nameof(TestDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TestId = group.Add(new VocabularyKey(nameof(TestId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TestInstrumentId = group.Add(new VocabularyKey(nameof(TestInstrumentId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                QualityTestMeasurementType = group.Add(new VocabularyKey(nameof(QualityTestMeasurementType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TestMeasurementUnitSymbol = group.Add(new VocabularyKey(nameof(TestMeasurementUnitSymbol), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey TestDescription { get; private set; }
-public VocabularyKey TestId { get; private set; }
-public VocabularyKey TestInstrumentId { get; private set; }
-public VocabularyKey QualityTestMeasurementType { get; private set; }
-public VocabularyKey TestMeasurementUnitSymbol { get; private set; }
+        public VocabularyKey TestDescription { get; private set; }
+        public VocabularyKey TestId { get; private set; }
+        public VocabularyKey TestInstrumentId { get; private set; }
+        public VocabularyKey QualityTestMeasurementType { get; private set; }
+        public VocabularyKey TestMeasurementUnitSymbol { get; private set; }
 
 
     }

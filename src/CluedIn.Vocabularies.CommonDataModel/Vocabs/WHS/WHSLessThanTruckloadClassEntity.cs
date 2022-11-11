@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,16 +13,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model WHSLessThanTruckloadClassEntity Details", group =>
             {
-                Class = group.Add(new VocabularyKey(nameof(Class), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ClassCode = group.Add(new VocabularyKey(nameof(ClassCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ClassName = group.Add(new VocabularyKey(nameof(ClassName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                Class = group.Add(new VocabularyKey(nameof(Class), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ClassCode = group.Add(new VocabularyKey(nameof(ClassCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ClassName = group.Add(new VocabularyKey(nameof(ClassName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey Class { get; private set; }
-public VocabularyKey ClassCode { get; private set; }
-public VocabularyKey ClassName { get; private set; }
+        public VocabularyKey Class { get; private set; }
+        public VocabularyKey ClassCode { get; private set; }
+        public VocabularyKey ClassName { get; private set; }
 
 
     }

@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model RouteOperationEntity Details", group =>
             {
-                OperationName = group.Add(new VocabularyKey(nameof(OperationName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-OperationId = group.Add(new VocabularyKey(nameof(OperationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                OperationName = group.Add(new VocabularyKey(nameof(OperationName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OperationId = group.Add(new VocabularyKey(nameof(OperationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey OperationName { get; private set; }
-public VocabularyKey OperationId { get; private set; }
+        public VocabularyKey OperationName { get; private set; }
+        public VocabularyKey OperationId { get; private set; }
 
 
     }

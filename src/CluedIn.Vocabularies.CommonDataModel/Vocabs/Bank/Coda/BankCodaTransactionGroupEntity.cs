@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,22 +13,22 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model BankCodaTransactionGroupEntity Details", group =>
             {
-                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Code = group.Add(new VocabularyKey(nameof(Code), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Transaction = group.Add(new VocabularyKey(nameof(Transaction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-TransactionDescription = group.Add(new VocabularyKey(nameof(TransactionDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-TransactionCategory = group.Add(new VocabularyKey(nameof(TransactionCategory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-CategoryDescription = group.Add(new VocabularyKey(nameof(CategoryDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Code = group.Add(new VocabularyKey(nameof(Code), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Transaction = group.Add(new VocabularyKey(nameof(Transaction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TransactionDescription = group.Add(new VocabularyKey(nameof(TransactionDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TransactionCategory = group.Add(new VocabularyKey(nameof(TransactionCategory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CategoryDescription = group.Add(new VocabularyKey(nameof(CategoryDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey Description { get; private set; }
-public VocabularyKey Code { get; private set; }
-public VocabularyKey Transaction { get; private set; }
-public VocabularyKey TransactionDescription { get; private set; }
-public VocabularyKey TransactionCategory { get; private set; }
-public VocabularyKey CategoryDescription { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey Code { get; private set; }
+        public VocabularyKey Transaction { get; private set; }
+        public VocabularyKey TransactionDescription { get; private set; }
+        public VocabularyKey TransactionCategory { get; private set; }
+        public VocabularyKey CategoryDescription { get; private set; }
 
 
     }

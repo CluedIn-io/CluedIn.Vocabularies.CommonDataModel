@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,16 +13,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model BudgetPlanProjectLookupEntity Details", group =>
             {
-                ProjectId = group.Add(new VocabularyKey(nameof(ProjectId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ProjectStatusRule = group.Add(new VocabularyKey(nameof(ProjectStatusRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                ProjectId = group.Add(new VocabularyKey(nameof(ProjectId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProjectStatusRule = group.Add(new VocabularyKey(nameof(ProjectStatusRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey ProjectId { get; private set; }
-public VocabularyKey Name { get; private set; }
-public VocabularyKey ProjectStatusRule { get; private set; }
+        public VocabularyKey ProjectId { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey ProjectStatusRule { get; private set; }
 
 
     }

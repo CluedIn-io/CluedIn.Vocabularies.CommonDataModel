@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,16 +13,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model smmBusinessSubsegmentEntity Details", group =>
             {
-                BusinessSegmentCode = group.Add(new VocabularyKey(nameof(BusinessSegmentCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-SubsegmentDescription = group.Add(new VocabularyKey(nameof(SubsegmentDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-SubsegmentCode = group.Add(new VocabularyKey(nameof(SubsegmentCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                BusinessSegmentCode = group.Add(new VocabularyKey(nameof(BusinessSegmentCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SubsegmentDescription = group.Add(new VocabularyKey(nameof(SubsegmentDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SubsegmentCode = group.Add(new VocabularyKey(nameof(SubsegmentCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey BusinessSegmentCode { get; private set; }
-public VocabularyKey SubsegmentDescription { get; private set; }
-public VocabularyKey SubsegmentCode { get; private set; }
+        public VocabularyKey BusinessSegmentCode { get; private set; }
+        public VocabularyKey SubsegmentDescription { get; private set; }
+        public VocabularyKey SubsegmentCode { get; private set; }
 
 
     }

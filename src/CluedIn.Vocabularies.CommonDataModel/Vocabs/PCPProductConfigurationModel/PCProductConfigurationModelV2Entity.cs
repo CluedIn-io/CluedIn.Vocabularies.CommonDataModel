@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model PCProductConfigurationModelV2Entity Details", group =>
             {
-                ModelName = group.Add(new VocabularyKey(nameof(ModelName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ModelXml = group.Add(new VocabularyKey(nameof(ModelXml), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                ModelName = group.Add(new VocabularyKey(nameof(ModelName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModelXml = group.Add(new VocabularyKey(nameof(ModelXml), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey ModelName { get; private set; }
-public VocabularyKey ModelXml { get; private set; }
+        public VocabularyKey ModelName { get; private set; }
+        public VocabularyKey ModelXml { get; private set; }
 
 
     }

@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model smmBusinessClassificationEntity Details", group =>
             {
-                ClassificationCode = group.Add(new VocabularyKey(nameof(ClassificationCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ClassificationDescription = group.Add(new VocabularyKey(nameof(ClassificationDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                ClassificationCode = group.Add(new VocabularyKey(nameof(ClassificationCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ClassificationDescription = group.Add(new VocabularyKey(nameof(ClassificationDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey ClassificationCode { get; private set; }
-public VocabularyKey ClassificationDescription { get; private set; }
+        public VocabularyKey ClassificationCode { get; private set; }
+        public VocabularyKey ClassificationDescription { get; private set; }
 
 
     }

@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,16 +13,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model CustEInvoiceErrorCodeEntity Details", group =>
             {
-                Code = group.Add(new VocabularyKey(nameof(Code), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ErrorText = group.Add(new VocabularyKey(nameof(ErrorText), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Change = group.Add(new VocabularyKey(nameof(Change), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                Code = group.Add(new VocabularyKey(nameof(Code), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ErrorText = group.Add(new VocabularyKey(nameof(ErrorText), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Change = group.Add(new VocabularyKey(nameof(Change), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey Code { get; private set; }
-public VocabularyKey ErrorText { get; private set; }
-public VocabularyKey Change { get; private set; }
+        public VocabularyKey Code { get; private set; }
+        public VocabularyKey ErrorText { get; private set; }
+        public VocabularyKey Change { get; private set; }
 
 
     }

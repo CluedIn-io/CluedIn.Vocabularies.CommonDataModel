@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,18 +13,18 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model WorkflowElementActionEntity Details", group =>
             {
-                Enabled = group.Add(new VocabularyKey(nameof(Enabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-IsOutcome = group.Add(new VocabularyKey(nameof(IsOutcome), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ElementId = group.Add(new VocabularyKey(nameof(ElementId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                Enabled = group.Add(new VocabularyKey(nameof(Enabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsOutcome = group.Add(new VocabularyKey(nameof(IsOutcome), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ElementId = group.Add(new VocabularyKey(nameof(ElementId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey Enabled { get; private set; }
-public VocabularyKey IsOutcome { get; private set; }
-public VocabularyKey Name { get; private set; }
-public VocabularyKey ElementId { get; private set; }
+        public VocabularyKey Enabled { get; private set; }
+        public VocabularyKey IsOutcome { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey ElementId { get; private set; }
 
 
     }

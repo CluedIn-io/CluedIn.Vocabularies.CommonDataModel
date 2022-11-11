@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,16 +13,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model MCRCouponCatalogEntity Details", group =>
             {
-                CatalogCode = group.Add(new VocabularyKey(nameof(CatalogCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-CouponId = group.Add(new VocabularyKey(nameof(CouponId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-CatalogNumber = group.Add(new VocabularyKey(nameof(CatalogNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                CatalogCode = group.Add(new VocabularyKey(nameof(CatalogCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CouponId = group.Add(new VocabularyKey(nameof(CouponId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CatalogNumber = group.Add(new VocabularyKey(nameof(CatalogNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey CatalogCode { get; private set; }
-public VocabularyKey CouponId { get; private set; }
-public VocabularyKey CatalogNumber { get; private set; }
+        public VocabularyKey CatalogCode { get; private set; }
+        public VocabularyKey CouponId { get; private set; }
+        public VocabularyKey CatalogNumber { get; private set; }
 
 
     }

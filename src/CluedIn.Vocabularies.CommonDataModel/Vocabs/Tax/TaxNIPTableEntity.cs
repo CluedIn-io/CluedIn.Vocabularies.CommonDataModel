@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,18 +13,18 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model TaxNIPTableEntity Details", group =>
             {
-                AccountName = group.Add(new VocabularyKey(nameof(AccountName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Addressing = group.Add(new VocabularyKey(nameof(Addressing), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Code = group.Add(new VocabularyKey(nameof(Code), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-NIPNumber = group.Add(new VocabularyKey(nameof(NIPNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                AccountName = group.Add(new VocabularyKey(nameof(AccountName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Addressing = group.Add(new VocabularyKey(nameof(Addressing), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Code = group.Add(new VocabularyKey(nameof(Code), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                NIPNumber = group.Add(new VocabularyKey(nameof(NIPNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey AccountName { get; private set; }
-public VocabularyKey Addressing { get; private set; }
-public VocabularyKey Code { get; private set; }
-public VocabularyKey NIPNumber { get; private set; }
+        public VocabularyKey AccountName { get; private set; }
+        public VocabularyKey Addressing { get; private set; }
+        public VocabularyKey Code { get; private set; }
+        public VocabularyKey NIPNumber { get; private set; }
 
 
     }

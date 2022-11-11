@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,18 +13,18 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model WHSWarehouseMobileDeviceMenuItemSystemDirectedWorkSequenceQueryV2Entity Details", group =>
             {
-                QueryDescription = group.Add(new VocabularyKey(nameof(QueryDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-WorkSequenceQuery = group.Add(new VocabularyKey(nameof(WorkSequenceQuery), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-WarehouseMobileDeviceMenuItemId = group.Add(new VocabularyKey(nameof(WarehouseMobileDeviceMenuItemId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-SequenceNumber = group.Add(new VocabularyKey(nameof(SequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                QueryDescription = group.Add(new VocabularyKey(nameof(QueryDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WorkSequenceQuery = group.Add(new VocabularyKey(nameof(WorkSequenceQuery), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WarehouseMobileDeviceMenuItemId = group.Add(new VocabularyKey(nameof(WarehouseMobileDeviceMenuItemId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SequenceNumber = group.Add(new VocabularyKey(nameof(SequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey QueryDescription { get; private set; }
-public VocabularyKey WorkSequenceQuery { get; private set; }
-public VocabularyKey WarehouseMobileDeviceMenuItemId { get; private set; }
-public VocabularyKey SequenceNumber { get; private set; }
+        public VocabularyKey QueryDescription { get; private set; }
+        public VocabularyKey WorkSequenceQuery { get; private set; }
+        public VocabularyKey WarehouseMobileDeviceMenuItemId { get; private set; }
+        public VocabularyKey SequenceNumber { get; private set; }
 
 
     }

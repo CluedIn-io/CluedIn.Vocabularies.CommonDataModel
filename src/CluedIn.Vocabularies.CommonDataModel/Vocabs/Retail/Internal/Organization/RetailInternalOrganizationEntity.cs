@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,18 +13,18 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model RetailInternalOrganizationEntity Details", group =>
             {
-                PartyNumber = group.Add(new VocabularyKey(nameof(PartyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-OrganizationName = group.Add(new VocabularyKey(nameof(OrganizationName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-CategoryHierarchyName = group.Add(new VocabularyKey(nameof(CategoryHierarchyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-InheritEnabled = group.Add(new VocabularyKey(nameof(InheritEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                PartyNumber = group.Add(new VocabularyKey(nameof(PartyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OrganizationName = group.Add(new VocabularyKey(nameof(OrganizationName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CategoryHierarchyName = group.Add(new VocabularyKey(nameof(CategoryHierarchyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InheritEnabled = group.Add(new VocabularyKey(nameof(InheritEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey PartyNumber { get; private set; }
-public VocabularyKey OrganizationName { get; private set; }
-public VocabularyKey CategoryHierarchyName { get; private set; }
-public VocabularyKey InheritEnabled { get; private set; }
+        public VocabularyKey PartyNumber { get; private set; }
+        public VocabularyKey OrganizationName { get; private set; }
+        public VocabularyKey CategoryHierarchyName { get; private set; }
+        public VocabularyKey InheritEnabled { get; private set; }
 
 
     }

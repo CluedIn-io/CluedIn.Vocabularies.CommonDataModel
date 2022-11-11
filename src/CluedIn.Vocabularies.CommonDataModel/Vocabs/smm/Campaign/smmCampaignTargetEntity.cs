@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model smmCampaignTargetEntity Details", group =>
             {
-                TargetDescription = group.Add(new VocabularyKey(nameof(TargetDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-TargetId = group.Add(new VocabularyKey(nameof(TargetId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                TargetDescription = group.Add(new VocabularyKey(nameof(TargetDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TargetId = group.Add(new VocabularyKey(nameof(TargetId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey TargetDescription { get; private set; }
-public VocabularyKey TargetId { get; private set; }
+        public VocabularyKey TargetDescription { get; private set; }
+        public VocabularyKey TargetId { get; private set; }
 
 
     }

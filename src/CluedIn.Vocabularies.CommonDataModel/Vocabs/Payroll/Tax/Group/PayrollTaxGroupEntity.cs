@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,18 +13,18 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model PayrollTaxGroupEntity Details", group =>
             {
-                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-GroupId = group.Add(new VocabularyKey(nameof(GroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-IsEnabledForPostingDefinition = group.Add(new VocabularyKey(nameof(IsEnabledForPostingDefinition), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-IsImmutable = group.Add(new VocabularyKey(nameof(IsImmutable), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                GroupId = group.Add(new VocabularyKey(nameof(GroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsEnabledForPostingDefinition = group.Add(new VocabularyKey(nameof(IsEnabledForPostingDefinition), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsImmutable = group.Add(new VocabularyKey(nameof(IsImmutable), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey Description { get; private set; }
-public VocabularyKey GroupId { get; private set; }
-public VocabularyKey IsEnabledForPostingDefinition { get; private set; }
-public VocabularyKey IsImmutable { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey GroupId { get; private set; }
+        public VocabularyKey IsEnabledForPostingDefinition { get; private set; }
+        public VocabularyKey IsImmutable { get; private set; }
 
 
     }

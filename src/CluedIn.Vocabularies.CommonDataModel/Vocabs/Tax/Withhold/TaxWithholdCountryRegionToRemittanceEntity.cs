@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,16 +13,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model TaxWithholdCountryRegionToRemittanceEntity Details", group =>
             {
-                CountryCode = group.Add(new VocabularyKey(nameof(CountryCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-CountryRegionCode = group.Add(new VocabularyKey(nameof(CountryRegionCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-CountryRegionName = group.Add(new VocabularyKey(nameof(CountryRegionName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                CountryCode = group.Add(new VocabularyKey(nameof(CountryCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CountryRegionCode = group.Add(new VocabularyKey(nameof(CountryRegionCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CountryRegionName = group.Add(new VocabularyKey(nameof(CountryRegionName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey CountryCode { get; private set; }
-public VocabularyKey CountryRegionCode { get; private set; }
-public VocabularyKey CountryRegionName { get; private set; }
+        public VocabularyKey CountryCode { get; private set; }
+        public VocabularyKey CountryRegionCode { get; private set; }
+        public VocabularyKey CountryRegionName { get; private set; }
 
 
     }

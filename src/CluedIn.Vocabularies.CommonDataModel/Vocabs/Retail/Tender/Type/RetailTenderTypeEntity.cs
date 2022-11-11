@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,16 +13,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model RetailTenderTypeEntity Details", group =>
             {
-                DefaultFunction = group.Add(new VocabularyKey(nameof(DefaultFunction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-PaymentMethodNumber = group.Add(new VocabularyKey(nameof(PaymentMethodNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                DefaultFunction = group.Add(new VocabularyKey(nameof(DefaultFunction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PaymentMethodNumber = group.Add(new VocabularyKey(nameof(PaymentMethodNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey DefaultFunction { get; private set; }
-public VocabularyKey Name { get; private set; }
-public VocabularyKey PaymentMethodNumber { get; private set; }
+        public VocabularyKey DefaultFunction { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey PaymentMethodNumber { get; private set; }
 
 
     }

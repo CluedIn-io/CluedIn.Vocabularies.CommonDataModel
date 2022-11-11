@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,12 +13,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model LeadScoringModel Details", group =>
             {
-                requiredConsent = group.Add(new VocabularyKey(nameof(requiredConsent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                requiredConsent = group.Add(new VocabularyKey(nameof(requiredConsent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey requiredConsent { get; private set; }
+        public VocabularyKey requiredConsent { get; private set; }
 
 
     }

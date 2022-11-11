@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model DimensionAttributeActivationEntity Details", group =>
             {
-                DoActivate = group.Add(new VocabularyKey(nameof(DoActivate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-DoCopyValues = group.Add(new VocabularyKey(nameof(DoCopyValues), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                DoActivate = group.Add(new VocabularyKey(nameof(DoActivate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DoCopyValues = group.Add(new VocabularyKey(nameof(DoCopyValues), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey DoActivate { get; private set; }
-public VocabularyKey DoCopyValues { get; private set; }
+        public VocabularyKey DoActivate { get; private set; }
+        public VocabularyKey DoCopyValues { get; private set; }
 
 
     }

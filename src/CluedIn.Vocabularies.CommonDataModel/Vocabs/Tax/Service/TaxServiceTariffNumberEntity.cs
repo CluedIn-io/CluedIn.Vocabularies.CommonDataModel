@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model TaxServiceTariffNumberEntity Details", group =>
             {
-                ServiceTariffNumber = group.Add(new VocabularyKey(nameof(ServiceTariffNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ServiceTariffDescription = group.Add(new VocabularyKey(nameof(ServiceTariffDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                ServiceTariffNumber = group.Add(new VocabularyKey(nameof(ServiceTariffNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ServiceTariffDescription = group.Add(new VocabularyKey(nameof(ServiceTariffDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey ServiceTariffNumber { get; private set; }
-public VocabularyKey ServiceTariffDescription { get; private set; }
+        public VocabularyKey ServiceTariffNumber { get; private set; }
+        public VocabularyKey ServiceTariffDescription { get; private set; }
 
 
     }

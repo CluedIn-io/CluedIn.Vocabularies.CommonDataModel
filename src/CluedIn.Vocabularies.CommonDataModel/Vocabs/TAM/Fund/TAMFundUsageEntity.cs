@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model TAMFundUsageEntity Details", group =>
             {
-                UsageCode = group.Add(new VocabularyKey(nameof(UsageCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-UsageDescription = group.Add(new VocabularyKey(nameof(UsageDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                UsageCode = group.Add(new VocabularyKey(nameof(UsageCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                UsageDescription = group.Add(new VocabularyKey(nameof(UsageDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey UsageCode { get; private set; }
-public VocabularyKey UsageDescription { get; private set; }
+        public VocabularyKey UsageCode { get; private set; }
+        public VocabularyKey UsageDescription { get; private set; }
 
 
     }

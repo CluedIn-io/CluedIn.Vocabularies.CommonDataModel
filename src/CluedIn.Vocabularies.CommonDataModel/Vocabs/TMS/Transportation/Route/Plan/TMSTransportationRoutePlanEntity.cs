@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model TMSTransportationRoutePlanEntity Details", group =>
             {
-                PlanId = group.Add(new VocabularyKey(nameof(PlanId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-PlanName = group.Add(new VocabularyKey(nameof(PlanName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                PlanId = group.Add(new VocabularyKey(nameof(PlanId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PlanName = group.Add(new VocabularyKey(nameof(PlanName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey PlanId { get; private set; }
-public VocabularyKey PlanName { get; private set; }
+        public VocabularyKey PlanId { get; private set; }
+        public VocabularyKey PlanName { get; private set; }
 
 
     }

@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model SMAServiceTaskEntity Details", group =>
             {
-                TaskDescription = group.Add(new VocabularyKey(nameof(TaskDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-TaskId = group.Add(new VocabularyKey(nameof(TaskId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                TaskDescription = group.Add(new VocabularyKey(nameof(TaskDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TaskId = group.Add(new VocabularyKey(nameof(TaskId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey TaskDescription { get; private set; }
-public VocabularyKey TaskId { get; private set; }
+        public VocabularyKey TaskDescription { get; private set; }
+        public VocabularyKey TaskId { get; private set; }
 
 
     }

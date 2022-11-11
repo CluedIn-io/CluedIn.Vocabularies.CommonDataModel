@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,16 +13,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model CFMJournalNameSourceListEntity Details", group =>
             {
-                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-JournalDataSource = group.Add(new VocabularyKey(nameof(JournalDataSource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-Direction = group.Add(new VocabularyKey(nameof(Direction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                JournalDataSource = group.Add(new VocabularyKey(nameof(JournalDataSource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Direction = group.Add(new VocabularyKey(nameof(Direction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey Name { get; private set; }
-public VocabularyKey JournalDataSource { get; private set; }
-public VocabularyKey Direction { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey JournalDataSource { get; private set; }
+        public VocabularyKey Direction { get; private set; }
 
 
     }

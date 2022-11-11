@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model WHSWarehouseMobileDeviceMenuItemWorkClassEntity Details", group =>
             {
-                WarehouseMobileDeviceMenuItemId = group.Add(new VocabularyKey(nameof(WarehouseMobileDeviceMenuItemId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-WorkClassId = group.Add(new VocabularyKey(nameof(WorkClassId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                WarehouseMobileDeviceMenuItemId = group.Add(new VocabularyKey(nameof(WarehouseMobileDeviceMenuItemId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WorkClassId = group.Add(new VocabularyKey(nameof(WorkClassId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey WarehouseMobileDeviceMenuItemId { get; private set; }
-public VocabularyKey WorkClassId { get; private set; }
+        public VocabularyKey WarehouseMobileDeviceMenuItemId { get; private set; }
+        public VocabularyKey WorkClassId { get; private set; }
 
 
     }

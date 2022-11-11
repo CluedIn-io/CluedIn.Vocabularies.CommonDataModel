@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
@@ -14,14 +13,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Common Data Model SMAServiceRepairConditionEntity Details", group =>
             {
-                ConditionId = group.Add(new VocabularyKey(nameof(ConditionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-ConditionDescription = group.Add(new VocabularyKey(nameof(ConditionDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-             
+                ConditionId = group.Add(new VocabularyKey(nameof(ConditionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ConditionDescription = group.Add(new VocabularyKey(nameof(ConditionDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+
             });
         }
 
-       public VocabularyKey ConditionId { get; private set; }
-public VocabularyKey ConditionDescription { get; private set; }
+        public VocabularyKey ConditionId { get; private set; }
+        public VocabularyKey ConditionDescription { get; private set; }
 
 
     }
