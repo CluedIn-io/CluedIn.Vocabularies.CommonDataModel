@@ -11,7 +11,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             KeySeparator = ".";
             Grouping = "/Account";
 
-            AddGroup("Metadata", group =>
+            AddGroup("Account Details", group =>
             {
                 hotelGroup = group.Add(new VocabularyKey(nameof(hotelGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 rentalCarProvider = group.Add(new VocabularyKey(nameof(rentalCarProvider), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));

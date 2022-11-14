@@ -11,7 +11,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             KeySeparator = ".";
             Grouping = "/AccountantEntity";
 
-            AddGroup("Metadata", group =>
+            AddGroup("AccountantEntity Details", group =>
             {
                 CNPJ = group.Add(new VocabularyKey(nameof(CNPJ), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CPF = group.Add(new VocabularyKey(nameof(CPF), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
