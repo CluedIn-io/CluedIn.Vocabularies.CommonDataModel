@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ForecastModelEntityVocabulary()
         {
-            VocabularyName = "ForecastModelEntity";
+            VocabularyName = "Forecast Model Entity";
             KeyPrefix = "commonDataModel.forecastmodelentity";
             KeySeparator = ".";
             Grouping = "/ForecastModelEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsProjectHourForecastAutomaticallyReduced = group.Add(new VocabularyKey(nameof(IsProjectHourForecastAutomaticallyReduced), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsProjectItemForecastAutomaticallyReduced = group.Add(new VocabularyKey(nameof(IsProjectItemForecastAutomaticallyReduced), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillProjectForecastGenerationUseProjectDate = group.Add(new VocabularyKey(nameof(WillProjectForecastGenerationUseProjectDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ModelId { get; private set; }
         public VocabularyKey ModelName { get; private set; }
         public VocabularyKey IsModelStopped { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsProjectHourForecastAutomaticallyReduced { get; private set; }
         public VocabularyKey IsProjectItemForecastAutomaticallyReduced { get; private set; }
         public VocabularyKey WillProjectForecastGenerationUseProjectDate { get; private set; }
-
-
     }
 }

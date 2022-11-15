@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DataManagementEntityVocabulary()
         {
-            VocabularyName = "DataManagementEntity";
+            VocabularyName = "Data Management Entity";
             KeyPrefix = "commonDataModel.datamanagemententity";
             KeySeparator = ".";
             Grouping = "/DataManagementEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 EntityKey = group.Add(new VocabularyKey(nameof(EntityKey), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RecVersionValue = group.Add(new VocabularyKey(nameof(RecVersionValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ChangeTrackingType = group.Add(new VocabularyKey(nameof(ChangeTrackingType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey EntityName { get; private set; }
         public VocabularyKey StagingTableName { get; private set; }
         public VocabularyKey TargetName { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey EntityKey { get; private set; }
         public VocabularyKey RecVersionValue { get; private set; }
         public VocabularyKey ChangeTrackingType { get; private set; }
-
-
     }
 }

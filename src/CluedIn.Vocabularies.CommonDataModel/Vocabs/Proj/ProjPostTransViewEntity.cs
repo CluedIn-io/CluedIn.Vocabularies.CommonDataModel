@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjPostTransViewEntityVocabulary()
         {
-            VocabularyName = "ProjPostTransViewEntity";
+            VocabularyName = "Proj Post Trans View Entity";
             KeyPrefix = "commonDataModel.projposttransviewentity";
             KeySeparator = ".";
             Grouping = "/ProjPostTransViewEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TransactionId = group.Add(new VocabularyKey(nameof(TransactionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorAccount = group.Add(new VocabularyKey(nameof(VendorAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorName = group.Add(new VocabularyKey(nameof(VendorName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CategoryId { get; private set; }
         public VocabularyKey CurrencyId { get; private set; }
         public VocabularyKey ItemId { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TransactionId { get; private set; }
         public VocabularyKey VendorAccount { get; private set; }
         public VocabularyKey VendorName { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvPBSItemizationsEntityVocabulary()
         {
-            VocabularyName = "TrvPBSItemizationsEntity";
+            VocabularyName = "Trv PBS Itemizations Entity";
             KeyPrefix = "commonDataModel.trvpbsitemizationsentity";
             KeySeparator = ".";
             Grouping = "/TrvPBSItemizationsEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ExchCode_CreditCardCurrency = group.Add(new VocabularyKey(nameof(ExchCode_CreditCardCurrency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExchCode_LocalCurrency = group.Add(new VocabularyKey(nameof(ExchCode_LocalCurrency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransactionDate = group.Add(new VocabularyKey(nameof(TransactionDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CCTransUniqueID { get; private set; }
         public VocabularyKey SubcategoryCode { get; private set; }
         public VocabularyKey Amount_CreditCardCurrency { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ExchCode_CreditCardCurrency { get; private set; }
         public VocabularyKey ExchCode_LocalCurrency { get; private set; }
         public VocabularyKey TransactionDate { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailCouponEntityVocabulary()
         {
-            VocabularyName = "RetailCouponEntity";
+            VocabularyName = "Retail Coupon Entity";
             KeyPrefix = "commonDataModel.retailcouponentity";
             KeySeparator = ".";
             Grouping = "/RetailCouponEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsExclusive = group.Add(new VocabularyKey(nameof(IsExclusive), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DiscountOfferId = group.Add(new VocabularyKey(nameof(DiscountOfferId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ApplyWithoutCouponCode = group.Add(new VocabularyKey(nameof(ApplyWithoutCouponCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CouponNumber { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey Status { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsExclusive { get; private set; }
         public VocabularyKey DiscountOfferId { get; private set; }
         public VocabularyKey ApplyWithoutCouponCode { get; private set; }
-
-
     }
 }

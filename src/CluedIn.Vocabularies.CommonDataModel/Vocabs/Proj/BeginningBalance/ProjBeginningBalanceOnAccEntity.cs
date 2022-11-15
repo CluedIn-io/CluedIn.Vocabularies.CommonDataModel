@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjBeginningBalanceOnAccEntityVocabulary()
         {
-            VocabularyName = "ProjBeginningBalanceOnAccEntity";
+            VocabularyName = "Proj Beginning Balance On Acc Entity";
             KeyPrefix = "commonDataModel.projbeginningbalanceonaccentity";
             KeySeparator = ".";
             Grouping = "/ProjBeginningBalanceOnAccEntity";
@@ -37,10 +37,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 VoucherDraw = group.Add(new VocabularyKey(nameof(VoucherDraw), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultDimension = group.Add(new VocabularyKey(nameof(DefaultDimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProjFundingSource = group.Add(new VocabularyKey(nameof(ProjFundingSource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey JournalId { get; private set; }
         public VocabularyKey JournalName { get; private set; }
         public VocabularyKey JournalDescription { get; private set; }
@@ -65,7 +63,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey VoucherDraw { get; private set; }
         public VocabularyKey DefaultDimension { get; private set; }
         public VocabularyKey ProjFundingSource { get; private set; }
-
-
     }
 }

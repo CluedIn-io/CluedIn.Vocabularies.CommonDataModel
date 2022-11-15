@@ -2,16 +2,16 @@ using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 {
-    public class smmLeadEntityVocabulary : SimpleVocabulary
+    public class SmmLeadEntityVocabulary : SimpleVocabulary
     {
-        public smmLeadEntityVocabulary()
+        public SmmLeadEntityVocabulary()
         {
-            VocabularyName = "smmLeadEntity";
+            VocabularyName = "Smm Lead Entity";
             KeyPrefix = "commonDataModel.smmleadentity";
             KeySeparator = ".";
-            Grouping = "/smmLeadEntity";
+            Grouping = "/SmmLeadEntity";
 
-            AddGroup("smmLeadEntity Details", group =>
+            AddGroup("SmmLeadEntity Details", group =>
             {
                 LeadId = group.Add(new VocabularyKey(nameof(LeadId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Comments = group.Add(new VocabularyKey(nameof(Comments), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
@@ -40,10 +40,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SourceVendorAccountNumber = group.Add(new VocabularyKey(nameof(SourceVendorAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SourceWorkerPersonnelNumber = group.Add(new VocabularyKey(nameof(SourceWorkerPersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UserDefinedSourceId = group.Add(new VocabularyKey(nameof(UserDefinedSourceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LeadId { get; private set; }
         public VocabularyKey Comments { get; private set; }
         public VocabularyKey Memo { get; private set; }
@@ -71,7 +69,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SourceVendorAccountNumber { get; private set; }
         public VocabularyKey SourceWorkerPersonnelNumber { get; private set; }
         public VocabularyKey UserDefinedSourceId { get; private set; }
-
-
     }
 }

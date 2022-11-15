@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustBillingCodeAccountingDistributionEntityVocabulary()
         {
-            VocabularyName = "CustBillingCodeAccountingDistributionEntity";
+            VocabularyName = "Cust Billing Code Accounting Distribution Entity";
             KeyPrefix = "commonDataModel.custbillingcodeaccountingdistributionentity";
             KeySeparator = ".";
             Grouping = "/CustBillingCodeAccountingDistributionEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ValidTo = group.Add(new VocabularyKey(nameof(ValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BillingCode = group.Add(new VocabularyKey(nameof(BillingCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LedgerAccountDisplayValue = group.Add(new VocabularyKey(nameof(LedgerAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CustBillingCodeVersion { get; private set; }
         public VocabularyKey LedgerAccount { get; private set; }
         public VocabularyKey Percent { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ValidTo { get; private set; }
         public VocabularyKey BillingCode { get; private set; }
         public VocabularyKey LedgerAccountDisplayValue { get; private set; }
-
-
     }
 }

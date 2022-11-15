@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailDeliveryModeChannelLineEntityVocabulary()
         {
-            VocabularyName = "RetailDeliveryModeChannelLineEntity";
+            VocabularyName = "Retail Delivery Mode Channel Line Entity";
             KeyPrefix = "commonDataModel.retaildeliverymodechannellineentity";
             KeySeparator = ".";
             Grouping = "/RetailDeliveryModeChannelLineEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PartyNumber = group.Add(new VocabularyKey(nameof(PartyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OrganizationName = group.Add(new VocabularyKey(nameof(OrganizationName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OrganizationHierarchyType = group.Add(new VocabularyKey(nameof(OrganizationHierarchyType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ModeOfDeliveryCode { get; private set; }
         public VocabularyKey PartyNumber { get; private set; }
         public VocabularyKey OrganizationName { get; private set; }
         public VocabularyKey OrganizationHierarchyType { get; private set; }
-
-
     }
 }

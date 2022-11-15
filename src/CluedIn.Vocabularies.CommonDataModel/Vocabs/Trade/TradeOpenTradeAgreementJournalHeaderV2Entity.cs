@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TradeOpenTradeAgreementJournalHeaderV2EntityVocabulary()
         {
-            VocabularyName = "TradeOpenTradeAgreementJournalHeaderV2Entity";
+            VocabularyName = "Trade Open Trade Agreement Journal Header V2 Entity";
             KeyPrefix = "commonDataModel.tradeopentradeagreementjournalheaderv2entity";
             KeySeparator = ".";
             Grouping = "/TradeOpenTradeAgreementJournalHeaderV2Entity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TradeAgreementJournalNameId = group.Add(new VocabularyKey(nameof(TradeAgreementJournalNameId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 JournalDescription = group.Add(new VocabularyKey(nameof(JournalDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsCurrentPriceExported = group.Add(new VocabularyKey(nameof(IsCurrentPriceExported), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey JournalNumber { get; private set; }
         public VocabularyKey DefaultTradeAgreementType { get; private set; }
         public VocabularyKey TradeAgreementJournalNameId { get; private set; }
         public VocabularyKey JournalDescription { get; private set; }
         public VocabularyKey IsCurrentPriceExported { get; private set; }
-
-
     }
 }

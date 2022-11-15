@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollEarningCodeDefaultDimensionEntityVocabulary()
         {
-            VocabularyName = "PayrollEarningCodeDefaultDimensionEntity";
+            VocabularyName = "Payroll Earning Code Default Dimension Entity";
             KeyPrefix = "commonDataModel.payrollearningcodedefaultdimensionentity";
             KeySeparator = ".";
             Grouping = "/PayrollEarningCodeDefaultDimensionEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AccountingDistributionTemplateId = group.Add(new VocabularyKey(nameof(AccountingDistributionTemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CategoryCompanyInfoId = group.Add(new VocabularyKey(nameof(CategoryCompanyInfoId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CategoryId = group.Add(new VocabularyKey(nameof(CategoryId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DefaultDimension { get; private set; }
         public VocabularyKey EarningCode { get; private set; }
         public VocabularyKey CompanyInfo { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AccountingDistributionTemplateId { get; private set; }
         public VocabularyKey CategoryCompanyInfoId { get; private set; }
         public VocabularyKey CategoryId { get; private set; }
-
-
     }
 }

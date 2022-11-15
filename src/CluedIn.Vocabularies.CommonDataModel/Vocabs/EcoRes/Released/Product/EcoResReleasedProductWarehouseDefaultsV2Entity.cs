@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResReleasedProductWarehouseDefaultsV2EntityVocabulary()
         {
-            VocabularyName = "EcoResReleasedProductWarehouseDefaultsV2Entity";
+            VocabularyName = "Eco Res Released Product Warehouse Defaults V2 Entity";
             KeyPrefix = "commonDataModel.ecoresreleasedproductwarehousedefaultsv2entity";
             KeySeparator = ".";
             Grouping = "/EcoResReleasedProductWarehouseDefaultsV2Entity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PickingWarehouseLocationId = group.Add(new VocabularyKey(nameof(PickingWarehouseLocationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CountingJournalNumber = group.Add(new VocabularyKey(nameof(CountingJournalNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsCountingStarted = group.Add(new VocabularyKey(nameof(IsCountingStarted), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ItemNumber { get; private set; }
         public VocabularyKey ProductColorId { get; private set; }
         public VocabularyKey ProductConfigurationId { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PickingWarehouseLocationId { get; private set; }
         public VocabularyKey CountingJournalNumber { get; private set; }
         public VocabularyKey IsCountingStarted { get; private set; }
-
-
     }
 }

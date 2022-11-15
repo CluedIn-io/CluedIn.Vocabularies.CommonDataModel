@@ -6,44 +6,40 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LinkedInLeadGenFormSubmissionVocabulary()
         {
-            VocabularyName = "LinkedInLeadGenFormSubmission";
+            VocabularyName = "Linked In Lead Gen Form Submission";
             KeyPrefix = "commonDataModel.linkedinleadgenformsubmission";
             KeySeparator = ".";
             Grouping = "/LinkedInLeadGenFormSubmission";
 
             AddGroup("LinkedInLeadGenFormSubmission Details", group =>
             {
-                linkedInAccountId = group.Add(new VocabularyKey(nameof(linkedInAccountId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                linkedInCampaignID = group.Add(new VocabularyKey(nameof(linkedInCampaignID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                linkedInCreativeID = group.Add(new VocabularyKey(nameof(linkedInCreativeID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                linkedInFormName = group.Add(new VocabularyKey(nameof(linkedInFormName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                linkedinformsubmissionTextid = group.Add(new VocabularyKey(nameof(linkedinformsubmissionTextid), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                linkedinformsubmissionId = group.Add(new VocabularyKey(nameof(linkedinformsubmissionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                matchingStatus = group.Add(new VocabularyKey(nameof(matchingStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                processingState = group.Add(new VocabularyKey(nameof(processingState), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                submissionDate = group.Add(new VocabularyKey(nameof(submissionDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                type = group.Add(new VocabularyKey(nameof(type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                LinkedInAccountId = group.Add(new VocabularyKey(nameof(LinkedInAccountId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LinkedInCampaignID = group.Add(new VocabularyKey(nameof(LinkedInCampaignID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LinkedInCreativeID = group.Add(new VocabularyKey(nameof(LinkedInCreativeID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LinkedInFormName = group.Add(new VocabularyKey(nameof(LinkedInFormName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LinkedinformsubmissionTextid = group.Add(new VocabularyKey(nameof(LinkedinformsubmissionTextid), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LinkedinformsubmissionId = group.Add(new VocabularyKey(nameof(LinkedinformsubmissionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MatchingStatus = group.Add(new VocabularyKey(nameof(MatchingStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProcessingState = group.Add(new VocabularyKey(nameof(ProcessingState), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SubmissionDate = group.Add(new VocabularyKey(nameof(SubmissionDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Type = group.Add(new VocabularyKey(nameof(Type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey linkedInAccountId { get; private set; }
-        public VocabularyKey linkedInCampaignID { get; private set; }
-        public VocabularyKey linkedInCreativeID { get; private set; }
-        public VocabularyKey linkedInFormName { get; private set; }
-        public VocabularyKey linkedinformsubmissionTextid { get; private set; }
-        public VocabularyKey linkedinformsubmissionId { get; private set; }
-        public VocabularyKey matchingStatus { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey processingState { get; private set; }
-        public VocabularyKey submissionDate { get; private set; }
-        public VocabularyKey type { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey LinkedInAccountId { get; private set; }
+        public VocabularyKey LinkedInCampaignID { get; private set; }
+        public VocabularyKey LinkedInCreativeID { get; private set; }
+        public VocabularyKey LinkedInFormName { get; private set; }
+        public VocabularyKey LinkedinformsubmissionTextid { get; private set; }
+        public VocabularyKey LinkedinformsubmissionId { get; private set; }
+        public VocabularyKey MatchingStatus { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey ProcessingState { get; private set; }
+        public VocabularyKey SubmissionDate { get; private set; }
+        public VocabularyKey Type { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

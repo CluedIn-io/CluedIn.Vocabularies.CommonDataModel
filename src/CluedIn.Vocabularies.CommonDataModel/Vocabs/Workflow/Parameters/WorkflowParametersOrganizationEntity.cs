@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WorkflowParametersOrganizationEntityVocabulary()
         {
-            VocabularyName = "WorkflowParametersOrganizationEntity";
+            VocabularyName = "Workflow Parameters Organization Entity";
             KeyPrefix = "commonDataModel.workflowparametersorganizationentity";
             KeySeparator = ".";
             Grouping = "/WorkflowParametersOrganizationEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 ID = group.Add(new VocabularyKey(nameof(ID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkflowNotifications = group.Add(new VocabularyKey(nameof(WorkflowNotifications), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ID { get; private set; }
         public VocabularyKey WorkflowNotifications { get; private set; }
-
-
     }
 }

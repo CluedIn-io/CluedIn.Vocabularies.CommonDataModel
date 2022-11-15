@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetLocationEntityVocabulary()
         {
-            VocabularyName = "AssetLocationEntity";
+            VocabularyName = "Asset Location Entity";
             KeyPrefix = "commonDataModel.assetlocationentity";
             KeySeparator = ".";
             Grouping = "/AssetLocationEntity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AddressStreetInKana = group.Add(new VocabularyKey(nameof(AddressStreetInKana), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AddressValidFrom = group.Add(new VocabularyKey(nameof(AddressValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AddressValidTo = group.Add(new VocabularyKey(nameof(AddressValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LocationId { get; private set; }
         public VocabularyKey Location { get; private set; }
         public VocabularyKey Name { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AddressStreetInKana { get; private set; }
         public VocabularyKey AddressValidFrom { get; private set; }
         public VocabularyKey AddressValidTo { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxGroupEntityVocabulary()
         {
-            VocabularyName = "TaxGroupEntity";
+            VocabularyName = "Tax Group Entity";
             KeyPrefix = "commonDataModel.taxgroupentity";
             KeySeparator = ".";
             Grouping = "/TaxGroupEntity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 EUTrade_W = group.Add(new VocabularyKey(nameof(EUTrade_W), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FillSalesDate_W = group.Add(new VocabularyKey(nameof(FillSalesDate_W), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MandatorySalesDate_W = group.Add(new VocabularyKey(nameof(MandatorySalesDate_W), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TaxGroupCode { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey RoundingBy { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey EUTrade_W { get; private set; }
         public VocabularyKey FillSalesDate_W { get; private set; }
         public VocabularyKey MandatorySalesDate_W { get; private set; }
-
-
     }
 }

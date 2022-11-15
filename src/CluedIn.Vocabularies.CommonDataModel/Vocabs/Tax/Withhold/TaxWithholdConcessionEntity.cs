@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxWithholdConcessionEntityVocabulary()
         {
-            VocabularyName = "TaxWithholdConcessionEntity";
+            VocabularyName = "Tax Withhold Concession Entity";
             KeyPrefix = "commonDataModel.taxwithholdconcessionentity";
             KeySeparator = ".";
             Grouping = "/TaxWithholdConcessionEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CustAccount = group.Add(new VocabularyKey(nameof(CustAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 HeaderId = group.Add(new VocabularyKey(nameof(HeaderId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineID = group.Add(new VocabularyKey(nameof(LineID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FromDate { get; private set; }
         public VocabularyKey Remark { get; private set; }
         public VocabularyKey SectionCode { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CustAccount { get; private set; }
         public VocabularyKey HeaderId { get; private set; }
         public VocabularyKey LineID { get; private set; }
-
-
     }
 }

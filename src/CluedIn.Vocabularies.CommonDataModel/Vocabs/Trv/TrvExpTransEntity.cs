@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvExpTransEntityVocabulary()
         {
-            VocabularyName = "TrvExpTransEntity";
+            VocabularyName = "Trv Exp Trans Entity";
             KeyPrefix = "commonDataModel.trvexptransentity";
             KeySeparator = ".";
             Grouping = "/TrvExpTransEntity";
@@ -122,10 +122,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LocationsCountryRegionId = group.Add(new VocabularyKey(nameof(LocationsCountryRegionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LocationsStateId = group.Add(new VocabularyKey(nameof(LocationsStateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DimensionDisplayValue = group.Add(new VocabularyKey(nameof(DimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ExpenseTransactionNumber { get; private set; }
         public VocabularyKey Currency { get; private set; }
         public VocabularyKey Amount { get; private set; }
@@ -235,7 +233,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LocationsCountryRegionId { get; private set; }
         public VocabularyKey LocationsStateId { get; private set; }
         public VocabularyKey DimensionDisplayValue { get; private set; }
-
-
     }
 }

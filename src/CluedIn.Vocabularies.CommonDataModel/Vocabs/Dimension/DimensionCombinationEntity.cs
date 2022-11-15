@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DimensionCombinationEntityVocabulary()
         {
-            VocabularyName = "DimensionCombinationEntity";
+            VocabularyName = "Dimension Combination Entity";
             KeyPrefix = "commonDataModel.dimensioncombinationentity";
             KeySeparator = ".";
             Grouping = "/DimensionCombinationEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RecordId = group.Add(new VocabularyKey(nameof(RecordId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AccountValue = group.Add(new VocabularyKey(nameof(AccountValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MainAccount = group.Add(new VocabularyKey(nameof(MainAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DisplayValue { get; private set; }
         public VocabularyKey AccountStructure { get; private set; }
         public VocabularyKey RecordId { get; private set; }
         public VocabularyKey AccountValue { get; private set; }
         public VocabularyKey MainAccount { get; private set; }
-
-
     }
 }

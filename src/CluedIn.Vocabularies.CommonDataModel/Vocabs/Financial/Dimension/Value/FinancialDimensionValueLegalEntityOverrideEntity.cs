@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FinancialDimensionValueLegalEntityOverrideEntityVocabulary()
         {
-            VocabularyName = "FinancialDimensionValueLegalEntityOverrideEntity";
+            VocabularyName = "Financial Dimension Value Legal Entity Override Entity";
             KeyPrefix = "commonDataModel.financialdimensionvaluelegalentityoverrideentity";
             KeySeparator = ".";
             Grouping = "/FinancialDimensionValueLegalEntityOverrideEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsSuspended = group.Add(new VocabularyKey(nameof(IsSuspended), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OwnerRefRecId = group.Add(new VocabularyKey(nameof(OwnerRefRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Owner = group.Add(new VocabularyKey(nameof(Owner), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FinancialDimension { get; private set; }
         public VocabularyKey EntityInstance { get; private set; }
         public VocabularyKey DimensionValue { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsSuspended { get; private set; }
         public VocabularyKey OwnerRefRecId { get; private set; }
         public VocabularyKey Owner { get; private set; }
-
-
     }
 }

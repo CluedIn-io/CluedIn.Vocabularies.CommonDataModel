@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgPlannedTimeAndAttendanceAbsenceRegistrationEntityVocabulary()
         {
-            VocabularyName = "JmgPlannedTimeAndAttendanceAbsenceRegistrationEntity";
+            VocabularyName = "Jmg Planned Time And Attendance Absence Registration Entity";
             KeyPrefix = "commonDataModel.jmgplannedtimeandattendanceabsenceregistrationentity";
             KeySeparator = ".";
             Grouping = "/JmgPlannedTimeAndAttendanceAbsenceRegistrationEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 EndDateTime = group.Add(new VocabularyKey(nameof(EndDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkerPersonnelNumber = group.Add(new VocabularyKey(nameof(WorkerPersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PlannedAbsenceRegistrationEntryNumber = group.Add(new VocabularyKey(nameof(PlannedAbsenceRegistrationEntryNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsTimeAndAttendanceActivityRegistration { get; private set; }
         public VocabularyKey IsPlannedAbsenceInterruptionAllowed { get; private set; }
         public VocabularyKey IsPlannedAbsenceInterrupted { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey EndDateTime { get; private set; }
         public VocabularyKey WorkerPersonnelNumber { get; private set; }
         public VocabularyKey PlannedAbsenceRegistrationEntryNumber { get; private set; }
-
-
     }
 }

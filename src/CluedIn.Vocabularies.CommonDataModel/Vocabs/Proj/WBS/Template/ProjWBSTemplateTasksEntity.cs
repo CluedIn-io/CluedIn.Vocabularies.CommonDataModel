@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjWBSTemplateTasksEntityVocabulary()
         {
-            VocabularyName = "ProjWBSTemplateTasksEntity";
+            VocabularyName = "Proj WBS Template Tasks Entity";
             KeyPrefix = "commonDataModel.projwbstemplatetasksentity";
             KeySeparator = ".";
             Grouping = "/ProjWBSTemplateTasksEntity";
@@ -30,10 +30,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TaskPriority = group.Add(new VocabularyKey(nameof(TaskPriority), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsCategoryMandatory = group.Add(new VocabularyKey(nameof(IsCategoryMandatory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsTemplate = group.Add(new VocabularyKey(nameof(IsTemplate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey HierarchyId { get; private set; }
         public VocabularyKey TaskId { get; private set; }
         public VocabularyKey WBSId { get; private set; }
@@ -51,7 +49,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TaskPriority { get; private set; }
         public VocabularyKey IsCategoryMandatory { get; private set; }
         public VocabularyKey IsTemplate { get; private set; }
-
-
     }
 }

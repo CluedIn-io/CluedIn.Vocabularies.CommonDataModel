@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DirRelationshipTypeEntityVocabulary()
         {
-            VocabularyName = "DirRelationshipTypeEntity";
+            VocabularyName = "Dir Relationship Type Entity";
             KeyPrefix = "commonDataModel.dirrelationshiptypeentity";
             KeySeparator = ".";
             Grouping = "/DirRelationshipTypeEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PartyBType = group.Add(new VocabularyKey(nameof(PartyBType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ID = group.Add(new VocabularyKey(nameof(ID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SystemType = group.Add(new VocabularyKey(nameof(SystemType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RelationshipAToB { get; private set; }
         public VocabularyKey PartyAType { get; private set; }
         public VocabularyKey Description { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PartyBType { get; private set; }
         public VocabularyKey ID { get; private set; }
         public VocabularyKey SystemType { get; private set; }
-
-
     }
 }

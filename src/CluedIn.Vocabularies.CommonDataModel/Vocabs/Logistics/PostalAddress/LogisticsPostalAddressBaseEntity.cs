@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LogisticsPostalAddressBaseEntityVocabulary()
         {
-            VocabularyName = "LogisticsPostalAddressBaseEntity";
+            VocabularyName = "Logistics Postal Address Base Entity";
             KeyPrefix = "commonDataModel.logisticspostaladdressbaseentity";
             KeySeparator = ".";
             Grouping = "/LogisticsPostalAddressBaseEntity";
@@ -45,10 +45,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PrivateForParty = group.Add(new VocabularyKey(nameof(PrivateForParty), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AddressRecId = group.Add(new VocabularyKey(nameof(AddressRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ResolveDuplicateAddress = group.Add(new VocabularyKey(nameof(ResolveDuplicateAddress), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Address { get; private set; }
         public VocabularyKey Apartment_RU { get; private set; }
         public VocabularyKey Building_RU { get; private set; }
@@ -81,7 +79,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PrivateForParty { get; private set; }
         public VocabularyKey AddressRecId { get; private set; }
         public VocabularyKey ResolveDuplicateAddress { get; private set; }
-
-
     }
 }

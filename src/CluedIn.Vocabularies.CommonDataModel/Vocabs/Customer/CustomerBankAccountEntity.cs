@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustomerBankAccountEntityVocabulary()
         {
-            VocabularyName = "CustomerBankAccountEntity";
+            VocabularyName = "Customer Bank Account Entity";
             KeyPrefix = "commonDataModel.customerbankaccountentity";
             KeySeparator = ".";
             Grouping = "/CustomerBankAccountEntity";
@@ -62,10 +62,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ControlInternalNumber = group.Add(new VocabularyKey(nameof(ControlInternalNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsDefaultBankAccount = group.Add(new VocabularyKey(nameof(IsDefaultBankAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 QRIBAN = group.Add(new VocabularyKey(nameof(QRIBAN), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CustomerAccountNumber { get; private set; }
         public VocabularyKey BankAccountId { get; private set; }
         public VocabularyKey BankAccountNumber { get; private set; }
@@ -115,7 +113,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ControlInternalNumber { get; private set; }
         public VocabularyKey IsDefaultBankAccount { get; private set; }
         public VocabularyKey QRIBAN { get; private set; }
-
-
     }
 }

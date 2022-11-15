@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailBuyersPushEntityVocabulary()
         {
-            VocabularyName = "RetailBuyersPushEntity";
+            VocabularyName = "Retail Buyers Push Entity";
             KeyPrefix = "commonDataModel.retailbuyerspushentity";
             KeySeparator = ".";
             Grouping = "/RetailBuyersPushEntity";
@@ -30,10 +30,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ReplenishmentHierarchyValidTo = group.Add(new VocabularyKey(nameof(ReplenishmentHierarchyValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReplenishmentHierarchyTypeName = group.Add(new VocabularyKey(nameof(ReplenishmentHierarchyTypeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReplenishmentOrganizationPartyNumber = group.Add(new VocabularyKey(nameof(ReplenishmentOrganizationPartyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BuyersPushId { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey DistributionType { get; private set; }
@@ -51,7 +49,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ReplenishmentHierarchyValidTo { get; private set; }
         public VocabularyKey ReplenishmentHierarchyTypeName { get; private set; }
         public VocabularyKey ReplenishmentOrganizationPartyNumber { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankJournalLineEntityVocabulary()
         {
-            VocabularyName = "BankJournalLineEntity";
+            VocabularyName = "Bank Journal Line Entity";
             KeyPrefix = "commonDataModel.bankjournallineentity";
             KeySeparator = ".";
             Grouping = "/BankJournalLineEntity";
@@ -36,10 +36,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OffsetAccountDisplayValue = group.Add(new VocabularyKey(nameof(OffsetAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AccountDisplayValue = group.Add(new VocabularyKey(nameof(AccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BankTransactionType = group.Add(new VocabularyKey(nameof(BankTransactionType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountType { get; private set; }
         public VocabularyKey CreditAmount { get; private set; }
         public VocabularyKey DebitAmount { get; private set; }
@@ -63,7 +61,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OffsetAccountDisplayValue { get; private set; }
         public VocabularyKey AccountDisplayValue { get; private set; }
         public VocabularyKey BankTransactionType { get; private set; }
-
-
     }
 }

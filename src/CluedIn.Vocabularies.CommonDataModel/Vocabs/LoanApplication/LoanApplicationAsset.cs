@@ -6,62 +6,58 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LoanApplicationAssetVocabulary()
         {
-            VocabularyName = "LoanApplicationAsset";
+            VocabularyName = "Loan Application Asset";
             KeyPrefix = "commonDataModel.loanapplicationasset";
             KeySeparator = ".";
             Grouping = "/LoanApplicationAsset";
 
             AddGroup("LoanApplicationAsset Details", group =>
             {
-                loanApplicationAssetId = group.Add(new VocabularyKey(nameof(loanApplicationAssetId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                modifiedOn = group.Add(new VocabularyKey(nameof(modifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statecode = group.Add(new VocabularyKey(nameof(statecode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statuscode = group.Add(new VocabularyKey(nameof(statuscode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                importSequenceNumber = group.Add(new VocabularyKey(nameof(importSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                overriddenCreatedOn = group.Add(new VocabularyKey(nameof(overriddenCreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                timeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(timeZoneRuleVersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LoanApplicationAssetId = group.Add(new VocabularyKey(nameof(LoanApplicationAssetId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Statecode = group.Add(new VocabularyKey(nameof(Statecode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Statuscode = group.Add(new VocabularyKey(nameof(Statuscode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                accountNumber = group.Add(new VocabularyKey(nameof(accountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                assetType = group.Add(new VocabularyKey(nameof(assetType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                city = group.Add(new VocabularyKey(nameof(city), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                countryRegion = group.Add(new VocabularyKey(nameof(countryRegion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                description = group.Add(new VocabularyKey(nameof(description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateProvince = group.Add(new VocabularyKey(nameof(stateProvince), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                street1 = group.Add(new VocabularyKey(nameof(street1), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                street2 = group.Add(new VocabularyKey(nameof(street2), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                street3 = group.Add(new VocabularyKey(nameof(street3), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                value = group.Add(new VocabularyKey(nameof(value), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                value_Base = group.Add(new VocabularyKey(nameof(value_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                zipPostalCode = group.Add(new VocabularyKey(nameof(zipPostalCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AccountNumber = group.Add(new VocabularyKey(nameof(AccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AssetType = group.Add(new VocabularyKey(nameof(AssetType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                City = group.Add(new VocabularyKey(nameof(City), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CountryRegion = group.Add(new VocabularyKey(nameof(CountryRegion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateProvince = group.Add(new VocabularyKey(nameof(StateProvince), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Street1 = group.Add(new VocabularyKey(nameof(Street1), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Street2 = group.Add(new VocabularyKey(nameof(Street2), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Street3 = group.Add(new VocabularyKey(nameof(Street3), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Value = group.Add(new VocabularyKey(nameof(Value), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Value_Base = group.Add(new VocabularyKey(nameof(Value_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ZipPostalCode = group.Add(new VocabularyKey(nameof(ZipPostalCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey loanApplicationAssetId { get; private set; }
-        public VocabularyKey createdOn { get; private set; }
-        public VocabularyKey modifiedOn { get; private set; }
-        public VocabularyKey statecode { get; private set; }
-        public VocabularyKey statuscode { get; private set; }
-        public VocabularyKey importSequenceNumber { get; private set; }
-        public VocabularyKey overriddenCreatedOn { get; private set; }
-        public VocabularyKey timeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey LoanApplicationAssetId { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Statecode { get; private set; }
+        public VocabularyKey Statuscode { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey accountNumber { get; private set; }
-        public VocabularyKey assetType { get; private set; }
-        public VocabularyKey city { get; private set; }
-        public VocabularyKey countryRegion { get; private set; }
-        public VocabularyKey description { get; private set; }
-        public VocabularyKey stateProvince { get; private set; }
-        public VocabularyKey street1 { get; private set; }
-        public VocabularyKey street2 { get; private set; }
-        public VocabularyKey street3 { get; private set; }
-        public VocabularyKey value { get; private set; }
-        public VocabularyKey value_Base { get; private set; }
-        public VocabularyKey zipPostalCode { get; private set; }
-
-
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey AccountNumber { get; private set; }
+        public VocabularyKey AssetType { get; private set; }
+        public VocabularyKey City { get; private set; }
+        public VocabularyKey CountryRegion { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey StateProvince { get; private set; }
+        public VocabularyKey Street1 { get; private set; }
+        public VocabularyKey Street2 { get; private set; }
+        public VocabularyKey Street3 { get; private set; }
+        public VocabularyKey Value { get; private set; }
+        public VocabularyKey Value_Base { get; private set; }
+        public VocabularyKey ZipPostalCode { get; private set; }
     }
 }

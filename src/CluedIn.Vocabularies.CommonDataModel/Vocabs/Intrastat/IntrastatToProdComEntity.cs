@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public IntrastatToProdComEntityVocabulary()
         {
-            VocabularyName = "IntrastatToProdComEntity";
+            VocabularyName = "Intrastat To Prod Com Entity";
             KeyPrefix = "commonDataModel.intrastattoprodcomentity";
             KeySeparator = ".";
             Grouping = "/IntrastatToProdComEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProdComCode = group.Add(new VocabularyKey(nameof(ProdComCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Unit = group.Add(new VocabularyKey(nameof(Unit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Variable = group.Add(new VocabularyKey(nameof(Variable), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CommodityHierarchyName { get; private set; }
         public VocabularyKey CommodityName { get; private set; }
         public VocabularyKey FromYear { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProdComCode { get; private set; }
         public VocabularyKey Unit { get; private set; }
         public VocabularyKey Variable { get; private set; }
-
-
     }
 }

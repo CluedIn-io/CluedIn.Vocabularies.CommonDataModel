@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxWithholdParametersEntityVocabulary()
         {
-            VocabularyName = "TaxWithholdParametersEntity";
+            VocabularyName = "Tax Withhold Parameters Entity";
             KeyPrefix = "commonDataModel.taxwithholdparametersentity";
             KeySeparator = ".";
             Grouping = "/TaxWithholdParametersEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TDSInvoice = group.Add(new VocabularyKey(nameof(TDSInvoice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TDSPayment = group.Add(new VocabularyKey(nameof(TDSPayment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Key = group.Add(new VocabularyKey(nameof(Key), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CrossCompanyPayment { get; private set; }
         public VocabularyKey EnableWarningMsg { get; private set; }
         public VocabularyKey TCSActivate { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TDSInvoice { get; private set; }
         public VocabularyKey TDSPayment { get; private set; }
         public VocabularyKey Key { get; private set; }
-
-
     }
 }

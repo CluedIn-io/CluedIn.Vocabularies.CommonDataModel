@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventProductGroupEntityVocabulary()
         {
-            VocabularyName = "InventProductGroupEntity";
+            VocabularyName = "Invent Product Group Entity";
             KeyPrefix = "commonDataModel.inventproductgroupentity";
             KeySeparator = ".";
             Grouping = "/InventProductGroupEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RevRecMedianPriceMinimumTolerance = group.Add(new VocabularyKey(nameof(RevRecMedianPriceMinimumTolerance), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RevRecRevenueRecognitionEnabled = group.Add(new VocabularyKey(nameof(RevRecRevenueRecognitionEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RevRecRevenueType = group.Add(new VocabularyKey(nameof(RevRecRevenueType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey GroupId { get; private set; }
         public VocabularyKey GroupName { get; private set; }
         public VocabularyKey DefaultForecastAllocationKeyId { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RevRecMedianPriceMinimumTolerance { get; private set; }
         public VocabularyKey RevRecRevenueRecognitionEnabled { get; private set; }
         public VocabularyKey RevRecRevenueType { get; private set; }
-
-
     }
 }

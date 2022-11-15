@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProdBatchOrderFormulaLineEntityVocabulary()
         {
-            VocabularyName = "ProdBatchOrderFormulaLineEntity";
+            VocabularyName = "Prod Batch Order Formula Line Entity";
             KeyPrefix = "commonDataModel.prodbatchorderformulalineentity";
             KeySeparator = ".";
             Grouping = "/ProdBatchOrderFormulaLineEntity";
@@ -97,10 +97,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SourceFormulaId = group.Add(new VocabularyKey(nameof(SourceFormulaId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FormulaLineQuantityDenominator = group.Add(new VocabularyKey(nameof(FormulaLineQuantityDenominator), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InventDimId = group.Add(new VocabularyKey(nameof(InventDimId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WillCostCalculationIncludeLine { get; private set; }
         public VocabularyKey ConsumptionCalculationConstant { get; private set; }
         public VocabularyKey IsConstantConsumptionReleased { get; private set; }
@@ -185,7 +183,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SourceFormulaId { get; private set; }
         public VocabularyKey FormulaLineQuantityDenominator { get; private set; }
         public VocabularyKey InventDimId { get; private set; }
-
-
     }
 }

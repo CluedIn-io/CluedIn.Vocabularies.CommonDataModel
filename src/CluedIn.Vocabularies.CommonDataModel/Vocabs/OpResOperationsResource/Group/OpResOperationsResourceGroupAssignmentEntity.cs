@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public OpResOperationsResourceGroupAssignmentEntityVocabulary()
         {
-            VocabularyName = "OpResOperationsResourceGroupAssignmentEntity";
+            VocabularyName = "Op Res Operations Resource Group Assignment Entity";
             KeyPrefix = "commonDataModel.opresoperationsresourcegroupassignmententity";
             KeySeparator = ".";
             Grouping = "/OpResOperationsResourceGroupAssignmentEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OperationsResourceGroupId = group.Add(new VocabularyKey(nameof(OperationsResourceGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OutputWarehouseId = group.Add(new VocabularyKey(nameof(OutputWarehouseId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OutputWarehouseLocationId = group.Add(new VocabularyKey(nameof(OutputWarehouseLocationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InputWarehouseId { get; private set; }
         public VocabularyKey InputWarehouseLocationId { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OperationsResourceGroupId { get; private set; }
         public VocabularyKey OutputWarehouseId { get; private set; }
         public VocabularyKey OutputWarehouseLocationId { get; private set; }
-
-
     }
 }

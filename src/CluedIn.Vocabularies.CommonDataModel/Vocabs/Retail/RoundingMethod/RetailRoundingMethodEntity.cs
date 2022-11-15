@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailRoundingMethodEntityVocabulary()
         {
-            VocabularyName = "RetailRoundingMethodEntity";
+            VocabularyName = "Retail Rounding Method Entity";
             KeyPrefix = "commonDataModel.retailroundingmethodentity";
             KeySeparator = ".";
             Grouping = "/RetailRoundingMethodEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Precision = group.Add(new VocabularyKey(nameof(Precision), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RoundingMethodId = group.Add(new VocabularyKey(nameof(RoundingMethodId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RoundingType = group.Add(new VocabularyKey(nameof(RoundingType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AmountAddedAfter { get; private set; }
         public VocabularyKey AmountAddedBefore { get; private set; }
         public VocabularyKey Minimum { get; private set; }
         public VocabularyKey Precision { get; private set; }
         public VocabularyKey RoundingMethodId { get; private set; }
         public VocabularyKey RoundingType { get; private set; }
-
-
     }
 }

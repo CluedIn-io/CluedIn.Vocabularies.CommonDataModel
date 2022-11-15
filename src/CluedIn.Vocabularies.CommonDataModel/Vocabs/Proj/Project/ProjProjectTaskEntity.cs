@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjProjectTaskEntityVocabulary()
         {
-            VocabularyName = "ProjProjectTaskEntity";
+            VocabularyName = "Proj Project Task Entity";
             KeyPrefix = "commonDataModel.projprojecttaskentity";
             KeySeparator = ".";
             Grouping = "/ProjProjectTaskEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TaskStatus = group.Add(new VocabularyKey(nameof(TaskStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaskOwningCompany = group.Add(new VocabularyKey(nameof(TaskOwningCompany), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaskSubject = group.Add(new VocabularyKey(nameof(TaskSubject), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TaskElementId { get; private set; }
         public VocabularyKey TaskHierarchyId { get; private set; }
         public VocabularyKey TaskOutlineLevel { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TaskStatus { get; private set; }
         public VocabularyKey TaskOwningCompany { get; private set; }
         public VocabularyKey TaskSubject { get; private set; }
-
-
     }
 }

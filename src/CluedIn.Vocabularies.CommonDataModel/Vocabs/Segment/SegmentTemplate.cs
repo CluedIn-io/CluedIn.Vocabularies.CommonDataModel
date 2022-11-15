@@ -6,46 +6,42 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SegmentTemplateVocabulary()
         {
-            VocabularyName = "SegmentTemplate";
+            VocabularyName = "Segment Template";
             KeyPrefix = "commonDataModel.segmenttemplate";
             KeySeparator = ".";
             Grouping = "/SegmentTemplate";
 
             AddGroup("SegmentTemplate Details", group =>
             {
-                segmentName = group.Add(new VocabularyKey(nameof(segmentName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                segmentTemplateId = group.Add(new VocabularyKey(nameof(segmentTemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                entityImage = group.Add(new VocabularyKey(nameof(entityImage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                description = group.Add(new VocabularyKey(nameof(description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                segmentfilterquery = group.Add(new VocabularyKey(nameof(segmentfilterquery), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                segmentmemberids = group.Add(new VocabularyKey(nameof(segmentmemberids), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                segmentquery = group.Add(new VocabularyKey(nameof(segmentquery), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                segmentType = group.Add(new VocabularyKey(nameof(segmentType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                queryType = group.Add(new VocabularyKey(nameof(queryType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                language = group.Add(new VocabularyKey(nameof(language), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                tag = group.Add(new VocabularyKey(nameof(tag), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                label = group.Add(new VocabularyKey(nameof(label), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                SegmentName = group.Add(new VocabularyKey(nameof(SegmentName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SegmentTemplateId = group.Add(new VocabularyKey(nameof(SegmentTemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EntityImage = group.Add(new VocabularyKey(nameof(EntityImage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Segmentfilterquery = group.Add(new VocabularyKey(nameof(Segmentfilterquery), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Segmentmemberids = group.Add(new VocabularyKey(nameof(Segmentmemberids), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Segmentquery = group.Add(new VocabularyKey(nameof(Segmentquery), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SegmentType = group.Add(new VocabularyKey(nameof(SegmentType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                QueryType = group.Add(new VocabularyKey(nameof(QueryType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Language = group.Add(new VocabularyKey(nameof(Language), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Tag = group.Add(new VocabularyKey(nameof(Tag), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Label = group.Add(new VocabularyKey(nameof(Label), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey segmentName { get; private set; }
-        public VocabularyKey segmentTemplateId { get; private set; }
-        public VocabularyKey entityImage { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-        public VocabularyKey description { get; private set; }
-        public VocabularyKey segmentfilterquery { get; private set; }
-        public VocabularyKey segmentmemberids { get; private set; }
-        public VocabularyKey segmentquery { get; private set; }
-        public VocabularyKey segmentType { get; private set; }
-        public VocabularyKey queryType { get; private set; }
-        public VocabularyKey language { get; private set; }
-        public VocabularyKey tag { get; private set; }
-        public VocabularyKey label { get; private set; }
-
-
+        public VocabularyKey SegmentName { get; private set; }
+        public VocabularyKey SegmentTemplateId { get; private set; }
+        public VocabularyKey EntityImage { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey Segmentfilterquery { get; private set; }
+        public VocabularyKey Segmentmemberids { get; private set; }
+        public VocabularyKey Segmentquery { get; private set; }
+        public VocabularyKey SegmentType { get; private set; }
+        public VocabularyKey QueryType { get; private set; }
+        public VocabularyKey Language { get; private set; }
+        public VocabularyKey Tag { get; private set; }
+        public VocabularyKey Label { get; private set; }
     }
 }

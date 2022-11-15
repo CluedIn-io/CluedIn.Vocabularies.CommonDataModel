@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailNotificationSubscriptionsEntityVocabulary()
         {
-            VocabularyName = "RetailNotificationSubscriptionsEntity";
+            VocabularyName = "Retail Notification Subscriptions Entity";
             KeyPrefix = "commonDataModel.retailnotificationsubscriptionsentity";
             KeySeparator = ".";
             Grouping = "/RetailNotificationSubscriptionsEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RetailPosPermissionGroup = group.Add(new VocabularyKey(nameof(RetailPosPermissionGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RetailPosPermissionGroup_PosPermissionGroupId = group.Add(new VocabularyKey(nameof(RetailPosPermissionGroup_PosPermissionGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RetailOperation_OperationId = group.Add(new VocabularyKey(nameof(RetailOperation_OperationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DisplayOrder { get; private set; }
         public VocabularyKey RetailOperation { get; private set; }
         public VocabularyKey RetailPosPermissionGroup { get; private set; }
         public VocabularyKey RetailPosPermissionGroup_PosPermissionGroupId { get; private set; }
         public VocabularyKey RetailOperation_OperationId { get; private set; }
-
-
     }
 }

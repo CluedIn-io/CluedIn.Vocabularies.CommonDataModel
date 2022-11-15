@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BOMBillOfMaterialsParametersEntityVocabulary()
         {
-            VocabularyName = "BOMBillOfMaterialsParametersEntity";
+            VocabularyName = "BOM Bill Of Materials Parameters Entity";
             KeyPrefix = "commonDataModel.bombillofmaterialsparametersentity";
             KeySeparator = ".";
             Grouping = "/BOMBillOfMaterialsParametersEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsBOMEditingBlocked = group.Add(new VocabularyKey(nameof(IsBOMEditingBlocked), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CircularityCheckStrategy = group.Add(new VocabularyKey(nameof(CircularityCheckStrategy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FallbackCostCalculationGroupId = group.Add(new VocabularyKey(nameof(FallbackCostCalculationGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CircularityCheckLevel { get; private set; }
         public VocabularyKey MaximumBOMLevel { get; private set; }
         public VocabularyKey AreQuantitiesOnBOMLinesAndDatesOnBOMVersionMandatory { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsBOMEditingBlocked { get; private set; }
         public VocabularyKey CircularityCheckStrategy { get; private set; }
         public VocabularyKey FallbackCostCalculationGroupId { get; private set; }
-
-
     }
 }

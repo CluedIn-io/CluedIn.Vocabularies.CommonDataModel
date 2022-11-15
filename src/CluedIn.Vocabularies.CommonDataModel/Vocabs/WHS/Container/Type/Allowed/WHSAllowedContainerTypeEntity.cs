@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSAllowedContainerTypeEntityVocabulary()
         {
-            VocabularyName = "WHSAllowedContainerTypeEntity";
+            VocabularyName = "WHS Allowed Container Type Entity";
             KeyPrefix = "commonDataModel.whsallowedcontainertypeentity";
             KeySeparator = ".";
             Grouping = "/WHSAllowedContainerTypeEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 AllowedContainerTypeId = group.Add(new VocabularyKey(nameof(AllowedContainerTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AllowedContainerTypeGroupName = group.Add(new VocabularyKey(nameof(AllowedContainerTypeGroupName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AllowedContainerTypeId { get; private set; }
         public VocabularyKey AllowedContainerTypeGroupName { get; private set; }
-
-
     }
 }

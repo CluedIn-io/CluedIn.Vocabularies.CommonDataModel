@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventPackingMaterialFeeEntityVocabulary()
         {
-            VocabularyName = "InventPackingMaterialFeeEntity";
+            VocabularyName = "Invent Packing Material Fee Entity";
             KeyPrefix = "commonDataModel.inventpackingmaterialfeeentity";
             KeySeparator = ".";
             Grouping = "/InventPackingMaterialFeeEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PriceCurrencyCode = group.Add(new VocabularyKey(nameof(PriceCurrencyCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FromDate = group.Add(new VocabularyKey(nameof(FromDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ToDate = group.Add(new VocabularyKey(nameof(ToDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PackingMaterialCode { get; private set; }
         public VocabularyKey PricePerUnit { get; private set; }
         public VocabularyKey PriceCurrencyCode { get; private set; }
         public VocabularyKey FromDate { get; private set; }
         public VocabularyKey ToDate { get; private set; }
-
-
     }
 }

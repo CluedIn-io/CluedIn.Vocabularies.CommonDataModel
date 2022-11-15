@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailTmpCategoryMediaEntityVocabulary()
         {
-            VocabularyName = "RetailTmpCategoryMediaEntity";
+            VocabularyName = "Retail Tmp Category Media Entity";
             KeyPrefix = "commonDataModel.retailtmpcategorymediaentity";
             KeySeparator = ".";
             Grouping = "/RetailTmpCategoryMediaEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AssociationStatus = group.Add(new VocabularyKey(nameof(AssociationStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CategoryName { get; private set; }
         public VocabularyKey CategoryHierarchy { get; private set; }
         public VocabularyKey FileName { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CreatedOn { get; private set; }
         public VocabularyKey ModifiedOn { get; private set; }
         public VocabularyKey AssociationStatus { get; private set; }
-
-
     }
 }

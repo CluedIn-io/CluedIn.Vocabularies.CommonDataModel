@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventPackingMaterialEntityVocabulary()
         {
-            VocabularyName = "InventPackingMaterialEntity";
+            VocabularyName = "Invent Packing Material Entity";
             KeyPrefix = "commonDataModel.inventpackingmaterialentity";
             KeySeparator = ".";
             Grouping = "/InventPackingMaterialEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MaterialName = group.Add(new VocabularyKey(nameof(MaterialName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MaterialCode = group.Add(new VocabularyKey(nameof(MaterialCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UnitSymbol = group.Add(new VocabularyKey(nameof(UnitSymbol), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey MaterialName { get; private set; }
         public VocabularyKey MaterialCode { get; private set; }
         public VocabularyKey UnitSymbol { get; private set; }
-
-
     }
 }

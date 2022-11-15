@@ -6,26 +6,22 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CommunicationRequestReplaceVocabulary()
         {
-            VocabularyName = "CommunicationRequestReplace";
+            VocabularyName = "Communication Request Replace";
             KeyPrefix = "commonDataModel.communicationrequestreplace";
             KeySeparator = ".";
             Grouping = "/CommunicationRequestReplace";
 
             AddGroup("CommunicationRequestReplace Details", group =>
             {
-                communicationRequestReplaceId = group.Add(new VocabularyKey(nameof(communicationRequestReplaceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                CommunicationRequestReplaceId = group.Add(new VocabularyKey(nameof(CommunicationRequestReplaceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey communicationRequestReplaceId { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey CommunicationRequestReplaceId { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

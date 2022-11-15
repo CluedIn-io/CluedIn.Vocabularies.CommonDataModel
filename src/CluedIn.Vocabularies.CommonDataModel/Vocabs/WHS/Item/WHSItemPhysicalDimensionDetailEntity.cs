@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSItemPhysicalDimensionDetailEntityVocabulary()
         {
-            VocabularyName = "WHSItemPhysicalDimensionDetailEntity";
+            VocabularyName = "WHS Item Physical Dimension Detail Entity";
             KeyPrefix = "commonDataModel.whsitemphysicaldimensiondetailentity";
             KeySeparator = ".";
             Grouping = "/WHSItemPhysicalDimensionDetailEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PhysicalUnitSymbol = group.Add(new VocabularyKey(nameof(PhysicalUnitSymbol), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PhysicalWeight = group.Add(new VocabularyKey(nameof(PhysicalWeight), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PhysicalWidth = group.Add(new VocabularyKey(nameof(PhysicalWidth), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PhysicalDepth { get; private set; }
         public VocabularyKey PhysicalHeight { get; private set; }
         public VocabularyKey ItemNumber { get; private set; }
         public VocabularyKey PhysicalUnitSymbol { get; private set; }
         public VocabularyKey PhysicalWeight { get; private set; }
         public VocabularyKey PhysicalWidth { get; private set; }
-
-
     }
 }

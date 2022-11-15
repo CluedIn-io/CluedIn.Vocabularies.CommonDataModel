@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjPeriodEmplEntityVocabulary()
         {
-            VocabularyName = "ProjPeriodEmplEntity";
+            VocabularyName = "Proj Period Empl Entity";
             KeyPrefix = "commonDataModel.projperiodemplentity";
             KeySeparator = ".";
             Grouping = "/ProjPeriodEmplEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PostedDate = group.Add(new VocabularyKey(nameof(PostedDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Resource = group.Add(new VocabularyKey(nameof(Resource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ResourceId = group.Add(new VocabularyKey(nameof(ResourceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey NormBillable { get; private set; }
         public VocabularyKey NormEfficiency { get; private set; }
         public VocabularyKey PeriodFrom { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PostedDate { get; private set; }
         public VocabularyKey Resource { get; private set; }
         public VocabularyKey ResourceId { get; private set; }
-
-
     }
 }

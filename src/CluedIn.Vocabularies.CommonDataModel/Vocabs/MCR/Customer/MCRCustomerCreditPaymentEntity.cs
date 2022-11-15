@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRCustomerCreditPaymentEntityVocabulary()
         {
-            VocabularyName = "MCRCustomerCreditPaymentEntity";
+            VocabularyName = "MCR Customer Credit Payment Entity";
             KeyPrefix = "commonDataModel.mcrcustomercreditpaymententity";
             KeySeparator = ".";
             Grouping = "/MCRCustomerCreditPaymentEntity";
@@ -35,10 +35,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RetailChannelId = group.Add(new VocabularyKey(nameof(RetailChannelId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CustomerCreditId = group.Add(new VocabularyKey(nameof(CustomerCreditId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineNumber = group.Add(new VocabularyKey(nameof(LineNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Amount { get; private set; }
         public VocabularyKey IsCheckAuthorized { get; private set; }
         public VocabularyKey CheckNumber { get; private set; }
@@ -61,7 +59,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RetailChannelId { get; private set; }
         public VocabularyKey CustomerCreditId { get; private set; }
         public VocabularyKey LineNumber { get; private set; }
-
-
     }
 }

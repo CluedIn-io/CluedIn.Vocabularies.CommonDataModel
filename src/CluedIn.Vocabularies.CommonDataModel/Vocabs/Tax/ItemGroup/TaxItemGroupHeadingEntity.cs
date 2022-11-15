@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxItemGroupHeadingEntityVocabulary()
         {
-            VocabularyName = "TaxItemGroupHeadingEntity";
+            VocabularyName = "Tax Item Group Heading Entity";
             KeyPrefix = "commonDataModel.taxitemgroupheadingentity";
             KeySeparator = ".";
             Grouping = "/TaxItemGroupHeadingEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxItemGroup = group.Add(new VocabularyKey(nameof(TaxItemGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Name { get; private set; }
         public VocabularyKey TaxItemGroup { get; private set; }
-
-
     }
 }

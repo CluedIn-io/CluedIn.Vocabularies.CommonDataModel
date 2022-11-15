@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailStaffEntityVocabulary()
         {
-            VocabularyName = "RetailStaffEntity";
+            VocabularyName = "Retail Staff Entity";
             KeyPrefix = "commonDataModel.retailstaffentity";
             KeySeparator = ".";
             Grouping = "/RetailStaffEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 NameOnReceipt = group.Add(new VocabularyKey(nameof(NameOnReceipt), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExternalIdentityAlias = group.Add(new VocabularyKey(nameof(ExternalIdentityAlias), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LayoutId = group.Add(new VocabularyKey(nameof(LayoutId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PersonnelNumber { get; private set; }
         public VocabularyKey CultureName { get; private set; }
         public VocabularyKey ExternalName { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey NameOnReceipt { get; private set; }
         public VocabularyKey ExternalIdentityAlias { get; private set; }
         public VocabularyKey LayoutId { get; private set; }
-
-
     }
 }

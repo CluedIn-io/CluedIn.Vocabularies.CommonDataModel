@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankReconciliationMatchingRuleEntityVocabulary()
         {
-            VocabularyName = "BankReconciliationMatchingRuleEntity";
+            VocabularyName = "Bank Reconciliation Matching Rule Entity";
             KeyPrefix = "commonDataModel.bankreconciliationmatchingruleentity";
             KeySeparator = ".";
             Grouping = "/BankReconciliationMatchingRuleEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LineType = group.Add(new VocabularyKey(nameof(LineType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CompareFieldExpression = group.Add(new VocabularyKey(nameof(CompareFieldExpression), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SystemGeneratedType = group.Add(new VocabularyKey(nameof(SystemGeneratedType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey MatchActionType { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey MatchingRule { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LineType { get; private set; }
         public VocabularyKey CompareFieldExpression { get; private set; }
         public VocabularyKey SystemGeneratedType { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendorInvoiceHeaderEntityVocabulary()
         {
-            VocabularyName = "VendorInvoiceHeaderEntity";
+            VocabularyName = "Vendor Invoice Header Entity";
             KeyPrefix = "commonDataModel.vendorinvoiceheaderentity";
             KeySeparator = ".";
             Grouping = "/VendorInvoiceHeaderEntity";
@@ -133,10 +133,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PSNReferenceInvoiceNumber = group.Add(new VocabularyKey(nameof(PSNReferenceInvoiceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PSNPurchasingCardTransactionType = group.Add(new VocabularyKey(nameof(PSNPurchasingCardTransactionType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PSNVendorAccountForBalancePayoff = group.Add(new VocabularyKey(nameof(PSNVendorAccountForBalancePayoff), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PostingProfile { get; private set; }
         public VocabularyKey VendorAccount { get; private set; }
         public VocabularyKey TemplateId { get; private set; }
@@ -257,7 +255,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PSNReferenceInvoiceNumber { get; private set; }
         public VocabularyKey PSNPurchasingCardTransactionType { get; private set; }
         public VocabularyKey PSNVendorAccountForBalancePayoff { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public StateHolidayEntityVocabulary()
         {
-            VocabularyName = "StateHolidayEntity";
+            VocabularyName = "State Holiday Entity";
             KeyPrefix = "commonDataModel.stateholidayentity";
             KeySeparator = ".";
             Grouping = "/StateHolidayEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 State = group.Add(new VocabularyKey(nameof(State), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CountryRegionId = group.Add(new VocabularyKey(nameof(CountryRegionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StateId = group.Add(new VocabularyKey(nameof(StateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey HolidayDate { get; private set; }
         public VocabularyKey State { get; private set; }
         public VocabularyKey CountryRegionId { get; private set; }
         public VocabularyKey StateId { get; private set; }
-
-
     }
 }

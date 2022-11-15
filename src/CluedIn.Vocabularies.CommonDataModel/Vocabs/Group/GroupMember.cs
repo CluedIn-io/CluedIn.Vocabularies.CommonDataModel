@@ -6,20 +6,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public GroupMemberVocabulary()
         {
-            VocabularyName = "GroupMember";
+            VocabularyName = "Group Member";
             KeyPrefix = "commonDataModel.groupmember";
             KeySeparator = ".";
             Grouping = "/GroupMember";
 
             AddGroup("GroupMember Details", group =>
             {
-                groupMemberId = group.Add(new VocabularyKey(nameof(groupMemberId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                GroupMemberId = group.Add(new VocabularyKey(nameof(GroupMemberId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey groupMemberId { get; private set; }
-
-
+        public VocabularyKey GroupMemberId { get; private set; }
     }
 }

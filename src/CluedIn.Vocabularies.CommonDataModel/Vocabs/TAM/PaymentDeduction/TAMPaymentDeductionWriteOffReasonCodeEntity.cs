@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TAMPaymentDeductionWriteOffReasonCodeEntityVocabulary()
         {
-            VocabularyName = "TAMPaymentDeductionWriteOffReasonCodeEntity";
+            VocabularyName = "TAM Payment Deduction Write Off Reason Code Entity";
             KeyPrefix = "commonDataModel.tampaymentdeductionwriteoffreasoncodeentity";
             KeySeparator = ".";
             Grouping = "/TAMPaymentDeductionWriteOffReasonCodeEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ReasonDescription = group.Add(new VocabularyKey(nameof(ReasonDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MaximumWriteOffAmount = group.Add(new VocabularyKey(nameof(MaximumWriteOffAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WriteOffMainAccountIdDisplayValue = group.Add(new VocabularyKey(nameof(WriteOffMainAccountIdDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WriteOffMainAccountId { get; private set; }
         public VocabularyKey ReasonCode { get; private set; }
         public VocabularyKey ReasonDescription { get; private set; }
         public VocabularyKey MaximumWriteOffAmount { get; private set; }
         public VocabularyKey WriteOffMainAccountIdDisplayValue { get; private set; }
-
-
     }
 }

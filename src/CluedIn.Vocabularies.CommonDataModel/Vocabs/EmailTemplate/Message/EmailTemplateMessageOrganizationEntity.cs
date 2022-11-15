@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EmailTemplateMessageOrganizationEntityVocabulary()
         {
-            VocabularyName = "EmailTemplateMessageOrganizationEntity";
+            VocabularyName = "Email Template Message Organization Entity";
             KeyPrefix = "commonDataModel.emailtemplatemessageorganizationentity";
             KeySeparator = ".";
             Grouping = "/EmailTemplateMessageOrganizationEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Subject = group.Add(new VocabularyKey(nameof(Subject), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 XSLTTransform = group.Add(new VocabularyKey(nameof(XSLTTransform), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EmailTemplateString = group.Add(new VocabularyKey(nameof(EmailTemplateString), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey EmailId { get; private set; }
         public VocabularyKey Language { get; private set; }
         public VocabularyKey Layout { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Subject { get; private set; }
         public VocabularyKey XSLTTransform { get; private set; }
         public VocabularyKey EmailTemplateString { get; private set; }
-
-
     }
 }

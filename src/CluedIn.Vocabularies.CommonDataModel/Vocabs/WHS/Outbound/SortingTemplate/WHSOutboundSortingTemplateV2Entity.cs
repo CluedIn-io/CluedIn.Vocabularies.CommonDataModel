@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSOutboundSortingTemplateV2EntityVocabulary()
         {
-            VocabularyName = "WHSOutboundSortingTemplateV2Entity";
+            VocabularyName = "WHS Outbound Sorting Template V2 Entity";
             KeyPrefix = "commonDataModel.whsoutboundsortingtemplatev2entity";
             KeySeparator = ".";
             Grouping = "/WHSOutboundSortingTemplateV2Entity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WarehousePackingProfileId = group.Add(new VocabularyKey(nameof(WarehousePackingProfileId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SortingPositionPrefix = group.Add(new VocabularyKey(nameof(SortingPositionPrefix), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WaveStepCode = group.Add(new VocabularyKey(nameof(WaveStepCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WillPositionCloseCreateWork { get; private set; }
         public VocabularyKey PositionAssignmentMethod { get; private set; }
         public VocabularyKey TemplateDescription { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WarehousePackingProfileId { get; private set; }
         public VocabularyKey SortingPositionPrefix { get; private set; }
         public VocabularyKey WaveStepCode { get; private set; }
-
-
     }
 }

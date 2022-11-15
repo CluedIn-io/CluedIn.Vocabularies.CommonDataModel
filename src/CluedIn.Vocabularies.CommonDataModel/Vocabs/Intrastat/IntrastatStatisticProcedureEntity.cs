@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public IntrastatStatisticProcedureEntityVocabulary()
         {
-            VocabularyName = "IntrastatStatisticProcedureEntity";
+            VocabularyName = "Intrastat Statistic Procedure Entity";
             KeyPrefix = "commonDataModel.intrastatstatisticprocedureentity";
             KeySeparator = ".";
             Grouping = "/IntrastatStatisticProcedureEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 StatisticProcedureId = group.Add(new VocabularyKey(nameof(StatisticProcedureId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CommodityName = group.Add(new VocabularyKey(nameof(CommodityName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CommodityHierarchyName = group.Add(new VocabularyKey(nameof(CommodityHierarchyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Text1 { get; private set; }
         public VocabularyKey Text2 { get; private set; }
         public VocabularyKey StatisticProcedureId { get; private set; }
         public VocabularyKey CommodityName { get; private set; }
         public VocabularyKey CommodityHierarchyName { get; private set; }
-
-
     }
 }

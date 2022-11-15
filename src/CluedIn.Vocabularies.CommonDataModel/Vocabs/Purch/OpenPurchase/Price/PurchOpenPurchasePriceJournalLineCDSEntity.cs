@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchOpenPurchasePriceJournalLineCDSEntityVocabulary()
         {
-            VocabularyName = "PurchOpenPurchasePriceJournalLineCDSEntity";
+            VocabularyName = "Purch Open Purchase Price Journal Line CDS Entity";
             KeyPrefix = "commonDataModel.purchopenpurchasepricejournallinecdsentity";
             KeySeparator = ".";
             Grouping = "/PurchOpenPurchasePriceJournalLineCDSEntity";
@@ -41,10 +41,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 VendorAccountNumber = group.Add(new VocabularyKey(nameof(VendorAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillDeliveryDateControlDisregardLeadTime = group.Add(new VocabularyKey(nameof(WillDeliveryDateControlDisregardLeadTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillSearchContinue = group.Add(new VocabularyKey(nameof(WillSearchContinue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductNumber { get; private set; }
         public VocabularyKey AttributeBasedPricingId { get; private set; }
         public VocabularyKey FixedPriceCharges { get; private set; }
@@ -73,7 +71,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey VendorAccountNumber { get; private set; }
         public VocabularyKey WillDeliveryDateControlDisregardLeadTime { get; private set; }
         public VocabularyKey WillSearchContinue { get; private set; }
-
-
     }
 }

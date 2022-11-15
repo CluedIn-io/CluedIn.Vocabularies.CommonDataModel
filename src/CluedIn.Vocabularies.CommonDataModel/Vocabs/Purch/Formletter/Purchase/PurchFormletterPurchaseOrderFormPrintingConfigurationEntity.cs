@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchFormletterPurchaseOrderFormPrintingConfigurationEntityVocabulary()
         {
-            VocabularyName = "PurchFormletterPurchaseOrderFormPrintingConfigurationEntity";
+            VocabularyName = "Purch Formletter Purchase Order Form Printing Configuration Entity";
             KeyPrefix = "commonDataModel.purchformletterpurchaseorderformprintingconfigurationentity";
             KeySeparator = ".";
             Grouping = "/PurchFormletterPurchaseOrderFormPrintingConfigurationEntity";
@@ -30,10 +30,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AreUpdatedPurchaseOrderLinesMarked = group.Add(new VocabularyKey(nameof(AreUpdatedPurchaseOrderLinesMarked), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DocumentAttachmentDisplayRule = group.Add(new VocabularyKey(nameof(DocumentAttachmentDisplayRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DisplayedDocumentAttachmentTypeCode = group.Add(new VocabularyKey(nameof(DisplayedDocumentAttachmentTypeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsInventoryStatusIdDisplayed { get; private set; }
         public VocabularyKey IsItemBatchNumberDisplayed { get; private set; }
         public VocabularyKey IsItemSerialNumberDisplayed { get; private set; }
@@ -51,7 +49,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AreUpdatedPurchaseOrderLinesMarked { get; private set; }
         public VocabularyKey DocumentAttachmentDisplayRule { get; private set; }
         public VocabularyKey DisplayedDocumentAttachmentTypeCode { get; private set; }
-
-
     }
 }

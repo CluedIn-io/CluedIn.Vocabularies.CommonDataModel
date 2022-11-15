@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailHardwareStationEntityVocabulary()
         {
-            VocabularyName = "RetailHardwareStationEntity";
+            VocabularyName = "Retail Hardware Station Entity";
             KeyPrefix = "commonDataModel.retailhardwarestationentity";
             KeySeparator = ".";
             Grouping = "/RetailHardwareStationEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SelfServicePackage = group.Add(new VocabularyKey(nameof(SelfServicePackage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SelfServicePackageName = group.Add(new VocabularyKey(nameof(SelfServicePackageName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MergedSelfServicePackageReference = group.Add(new VocabularyKey(nameof(MergedSelfServicePackageReference), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey HardwareStationId { get; private set; }
         public VocabularyKey HardwareStationName { get; private set; }
         public VocabularyKey HardwareProfileId { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SelfServicePackage { get; private set; }
         public VocabularyKey SelfServicePackageName { get; private set; }
         public VocabularyKey MergedSelfServicePackageReference { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustomerPaymentMethodEntityVocabulary()
         {
-            VocabularyName = "CustomerPaymentMethodEntity";
+            VocabularyName = "Customer Payment Method Entity";
             KeyPrefix = "commonDataModel.customerpaymentmethodentity";
             KeySeparator = ".";
             Grouping = "/CustomerPaymentMethodEntity";
@@ -69,10 +69,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SplitPayment = group.Add(new VocabularyKey(nameof(SplitPayment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PostingProfileBillsRemitCollection = group.Add(new VocabularyKey(nameof(PostingProfileBillsRemitCollection), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PostingProfileBillsRemitDiscount = group.Add(new VocabularyKey(nameof(PostingProfileBillsRemitDiscount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountType { get; private set; }
         public VocabularyKey BankTransactionType { get; private set; }
         public VocabularyKey ExportFormatClassId { get; private set; }
@@ -129,7 +127,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SplitPayment { get; private set; }
         public VocabularyKey PostingProfileBillsRemitCollection { get; private set; }
         public VocabularyKey PostingProfileBillsRemitDiscount { get; private set; }
-
-
     }
 }

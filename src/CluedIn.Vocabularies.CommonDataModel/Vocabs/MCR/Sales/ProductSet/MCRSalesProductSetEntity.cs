@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRSalesProductSetEntityVocabulary()
         {
-            VocabularyName = "MCRSalesProductSetEntity";
+            VocabularyName = "MCR Sales Product Set Entity";
             KeyPrefix = "commonDataModel.mcrsalesproductsetentity";
             KeySeparator = ".";
             Grouping = "/MCRSalesProductSetEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductSetNumber = group.Add(new VocabularyKey(nameof(ProductSetNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductSetDescription = group.Add(new VocabularyKey(nameof(ProductSetDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CustomerAccountNumber = group.Add(new VocabularyKey(nameof(CustomerAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductSetNumber { get; private set; }
         public VocabularyKey ProductSetDescription { get; private set; }
         public VocabularyKey CustomerAccountNumber { get; private set; }
-
-
     }
 }

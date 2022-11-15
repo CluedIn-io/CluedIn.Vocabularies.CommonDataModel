@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetImpairmentCashGeneratingUnitSharedAssetsAllocationEntityVocabulary()
         {
-            VocabularyName = "AssetImpairmentCashGeneratingUnitSharedAssetsAllocationEntity";
+            VocabularyName = "Asset Impairment Cash Generating Unit Shared Assets Allocation Entity";
             KeyPrefix = "commonDataModel.assetimpairmentcashgeneratingunitsharedassetsallocationentity";
             KeySeparator = ".";
             Grouping = "/AssetImpairmentCashGeneratingUnitSharedAssetsAllocationEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SharedAssetBookId = group.Add(new VocabularyKey(nameof(SharedAssetBookId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CashGeneratingUnitNumber = group.Add(new VocabularyKey(nameof(CashGeneratingUnitNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Proportion = group.Add(new VocabularyKey(nameof(Proportion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CGUGroupName { get; private set; }
         public VocabularyKey SharedAssetId { get; private set; }
         public VocabularyKey SharedAssetBookId { get; private set; }
         public VocabularyKey CashGeneratingUnitNumber { get; private set; }
         public VocabularyKey Proportion { get; private set; }
-
-
     }
 }

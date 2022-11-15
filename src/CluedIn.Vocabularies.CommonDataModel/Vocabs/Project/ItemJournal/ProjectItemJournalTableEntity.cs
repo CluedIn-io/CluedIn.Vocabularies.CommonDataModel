@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjectItemJournalTableEntityVocabulary()
         {
-            VocabularyName = "ProjectItemJournalTableEntity";
+            VocabularyName = "Project Item Journal Table Entity";
             KeyPrefix = "commonDataModel.projectitemjournaltableentity";
             KeySeparator = ".";
             Grouping = "/ProjectItemJournalTableEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Posted = group.Add(new VocabularyKey(nameof(Posted), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Reservation = group.Add(new VocabularyKey(nameof(Reservation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OffsetAccountDisplayValue = group.Add(new VocabularyKey(nameof(OffsetAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BlockUserGroupId { get; private set; }
         public VocabularyKey IsLinesDeletedAfterPosting { get; private set; }
         public VocabularyKey Description { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Posted { get; private set; }
         public VocabularyKey Reservation { get; private set; }
         public VocabularyKey OffsetAccountDisplayValue { get; private set; }
-
-
     }
 }

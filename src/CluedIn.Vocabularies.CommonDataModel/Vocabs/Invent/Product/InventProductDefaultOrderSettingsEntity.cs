@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventProductDefaultOrderSettingsEntityVocabulary()
         {
-            VocabularyName = "InventProductDefaultOrderSettingsEntity";
+            VocabularyName = "Invent Product Default Order Settings Entity";
             KeyPrefix = "commonDataModel.inventproductdefaultordersettingsentity";
             KeySeparator = ".";
             Grouping = "/InventProductDefaultOrderSettingsEntity";
@@ -63,10 +63,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsProcurementWarehouseMandatory = group.Add(new VocabularyKey(nameof(IsProcurementWarehouseMandatory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesWarehouseId = group.Add(new VocabularyKey(nameof(SalesWarehouseId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsSalesWarehouseMandatory = group.Add(new VocabularyKey(nameof(IsSalesWarehouseMandatory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InventorySiteId { get; private set; }
         public VocabularyKey AreInventoryOrderPromisingDefaultsOverridden { get; private set; }
         public VocabularyKey InventoryOrderPromisingMethod { get; private set; }
@@ -117,7 +115,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsProcurementWarehouseMandatory { get; private set; }
         public VocabularyKey SalesWarehouseId { get; private set; }
         public VocabularyKey IsSalesWarehouseMandatory { get; private set; }
-
-
     }
 }

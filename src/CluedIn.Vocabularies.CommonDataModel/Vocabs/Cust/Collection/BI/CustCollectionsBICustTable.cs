@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustCollectionsBICustTableVocabulary()
         {
-            VocabularyName = "CustCollectionsBICustTable";
+            VocabularyName = "Cust Collections BI Cust Table";
             KeyPrefix = "commonDataModel.custcollectionsbicusttable";
             KeySeparator = ".";
             Grouping = "/CustCollectionsBICustTable";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ValidTo = group.Add(new VocabularyKey(nameof(ValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ZipCode = group.Add(new VocabularyKey(nameof(ZipCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountNum { get; private set; }
         public VocabularyKey Company { get; private set; }
         public VocabularyKey CustGroup { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ValidTo { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey ZipCode { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankDocumentFacilityGroupEntityVocabulary()
         {
-            VocabularyName = "BankDocumentFacilityGroupEntity";
+            VocabularyName = "Bank Document Facility Group Entity";
             KeyPrefix = "commonDataModel.bankdocumentfacilitygroupentity";
             KeySeparator = ".";
             Grouping = "/BankDocumentFacilityGroupEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 FacilityGroup = group.Add(new VocabularyKey(nameof(FacilityGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FacilityGroup { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

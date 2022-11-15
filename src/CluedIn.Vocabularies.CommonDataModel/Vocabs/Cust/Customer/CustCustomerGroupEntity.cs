@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustCustomerGroupEntityVocabulary()
         {
-            VocabularyName = "CustCustomerGroupEntity";
+            VocabularyName = "Cust Customer Group Entity";
             KeyPrefix = "commonDataModel.custcustomergroupentity";
             KeySeparator = ".";
             Grouping = "/CustCustomerGroupEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ClearingPeriodPaymentTermName = group.Add(new VocabularyKey(nameof(ClearingPeriodPaymentTermName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CustAccountNumSeq = group.Add(new VocabularyKey(nameof(CustAccountNumSeq), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CustomerAccountNumberSequence = group.Add(new VocabularyKey(nameof(CustomerAccountNumberSequence), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CustomerGroupId { get; private set; }
         public VocabularyKey DefaultDimension { get; private set; }
         public VocabularyKey Description { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ClearingPeriodPaymentTermName { get; private set; }
         public VocabularyKey CustAccountNumSeq { get; private set; }
         public VocabularyKey CustomerAccountNumberSequence { get; private set; }
-
-
     }
 }

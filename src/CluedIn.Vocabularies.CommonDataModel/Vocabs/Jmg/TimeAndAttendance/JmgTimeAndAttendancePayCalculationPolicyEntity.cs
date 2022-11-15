@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgTimeAndAttendancePayCalculationPolicyEntityVocabulary()
         {
-            VocabularyName = "JmgTimeAndAttendancePayCalculationPolicyEntity";
+            VocabularyName = "Jmg Time And Attendance Pay Calculation Policy Entity";
             KeyPrefix = "commonDataModel.jmgtimeandattendancepaycalculationpolicyentity";
             KeySeparator = ".";
             Grouping = "/JmgTimeAndAttendancePayCalculationPolicyEntity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsFlexMinusIncludedInPay = group.Add(new VocabularyKey(nameof(IsFlexMinusIncludedInPay), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsOverTimeIncludedInPay = group.Add(new VocabularyKey(nameof(IsOverTimeIncludedInPay), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsPayTimeIncludedInPay = group.Add(new VocabularyKey(nameof(IsPayTimeIncludedInPay), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProfileSpecificationTypeCode { get; private set; }
         public VocabularyKey RegistrationSpecificationType { get; private set; }
         public VocabularyKey IsIllegalAbsenceIncludedInCalculation { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsFlexMinusIncludedInPay { get; private set; }
         public VocabularyKey IsOverTimeIncludedInPay { get; private set; }
         public VocabularyKey IsPayTimeIncludedInPay { get; private set; }
-
-
     }
 }

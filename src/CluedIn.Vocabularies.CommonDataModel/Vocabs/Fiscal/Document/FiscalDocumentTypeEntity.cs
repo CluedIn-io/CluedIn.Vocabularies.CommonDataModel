@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FiscalDocumentTypeEntityVocabulary()
         {
-            VocabularyName = "FiscalDocumentTypeEntity";
+            VocabularyName = "Fiscal Document Type Entity";
             KeyPrefix = "commonDataModel.fiscaldocumenttypeentity";
             KeySeparator = ".";
             Grouping = "/FiscalDocumentTypeEntity";
@@ -43,10 +43,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FiscalDocumentTypeNumberSequence = group.Add(new VocabularyKey(nameof(FiscalDocumentTypeNumberSequence), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Company = group.Add(new VocabularyKey(nameof(Company), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FiscalDocumentNumberSequence = group.Add(new VocabularyKey(nameof(FiscalDocumentNumberSequence), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FiscalEstablishmentId { get; private set; }
         public VocabularyKey FiscalDocumentType { get; private set; }
         public VocabularyKey Name { get; private set; }
@@ -77,7 +75,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FiscalDocumentTypeNumberSequence { get; private set; }
         public VocabularyKey Company { get; private set; }
         public VocabularyKey FiscalDocumentNumberSequence { get; private set; }
-
-
     }
 }

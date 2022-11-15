@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ResResourceSetupDataEntityVocabulary()
         {
-            VocabularyName = "ResResourceSetupDataEntity";
+            VocabularyName = "Res Resource Setup Data Entity";
             KeyPrefix = "commonDataModel.resresourcesetupdataentity";
             KeySeparator = ".";
             Grouping = "/ResResourceSetupDataEntity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MaxHoursCalendarId = group.Add(new VocabularyKey(nameof(MaxHoursCalendarId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MaxWorkingHours = group.Add(new VocabularyKey(nameof(MaxWorkingHours), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RequireStartStopTime = group.Add(new VocabularyKey(nameof(RequireStartStopTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DefaultTimeCategory { get; private set; }
         public VocabularyKey LegalEntity { get; private set; }
         public VocabularyKey Period { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey MaxHoursCalendarId { get; private set; }
         public VocabularyKey MaxWorkingHours { get; private set; }
         public VocabularyKey RequireStartStopTime { get; private set; }
-
-
     }
 }

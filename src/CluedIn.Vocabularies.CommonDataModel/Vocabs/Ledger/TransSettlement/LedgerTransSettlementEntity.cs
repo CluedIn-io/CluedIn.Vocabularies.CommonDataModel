@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerTransSettlementEntityVocabulary()
         {
-            VocabularyName = "LedgerTransSettlementEntity";
+            VocabularyName = "Ledger Trans Settlement Entity";
             KeyPrefix = "commonDataModel.ledgertranssettlemententity";
             KeySeparator = ".";
             Grouping = "/LedgerTransSettlementEntity";
@@ -35,10 +35,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MainAccount = group.Add(new VocabularyKey(nameof(MainAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Text = group.Add(new VocabularyKey(nameof(Text), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Ledger = group.Add(new VocabularyKey(nameof(Ledger), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey JournalNumber { get; private set; }
         public VocabularyKey SubledgerVoucher { get; private set; }
         public VocabularyKey AccountingDate { get; private set; }
@@ -61,7 +59,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey MainAccount { get; private set; }
         public VocabularyKey Text { get; private set; }
         public VocabularyKey Ledger { get; private set; }
-
-
     }
 }

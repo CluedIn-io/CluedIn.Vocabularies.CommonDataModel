@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjJournalTableEntityVocabulary()
         {
-            VocabularyName = "ProjJournalTableEntity";
+            VocabularyName = "Proj Journal Table Entity";
             KeyPrefix = "commonDataModel.projjournaltableentity";
             KeySeparator = ".";
             Grouping = "/ProjJournalTableEntity";
@@ -36,10 +36,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ResourceCompanyId = group.Add(new VocabularyKey(nameof(ResourceCompanyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PostedUserId = group.Add(new VocabularyKey(nameof(PostedUserId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Status = group.Add(new VocabularyKey(nameof(Status), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProjCategory { get; private set; }
         public VocabularyKey DeleteLinesAfterPosting { get; private set; }
         public VocabularyKey Description { get; private set; }
@@ -63,7 +61,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ResourceCompanyId { get; private set; }
         public VocabularyKey PostedUserId { get; private set; }
         public VocabularyKey Status { get; private set; }
-
-
     }
 }

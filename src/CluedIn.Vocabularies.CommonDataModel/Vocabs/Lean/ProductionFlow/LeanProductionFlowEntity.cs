@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LeanProductionFlowEntityVocabulary()
         {
-            VocabularyName = "LeanProductionFlowEntity";
+            VocabularyName = "Lean Production Flow Entity";
             KeyPrefix = "commonDataModel.leanproductionflowentity";
             KeySeparator = ".";
             Grouping = "/LeanProductionFlowEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LegalEntityId = group.Add(new VocabularyKey(nameof(LegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductionGroupId = group.Add(new VocabularyKey(nameof(ProductionGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(DefaultLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ControllingOrganization { get; private set; }
         public VocabularyKey DefaultLedgerDimension { get; private set; }
         public VocabularyKey ValueStreamNumber { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LegalEntityId { get; private set; }
         public VocabularyKey ProductionGroupId { get; private set; }
         public VocabularyKey DefaultLedgerDimensionDisplayValue { get; private set; }
-
-
     }
 }

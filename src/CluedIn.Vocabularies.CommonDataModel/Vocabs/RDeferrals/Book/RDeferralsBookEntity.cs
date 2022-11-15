@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RDeferralsBookEntityVocabulary()
         {
-            VocabularyName = "RDeferralsBookEntity";
+            VocabularyName = "R Deferrals Book Entity";
             KeyPrefix = "commonDataModel.rdeferralsbookentity";
             KeySeparator = ".";
             Grouping = "/RDeferralsBookEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BeginningDateOfWritingOff = group.Add(new VocabularyKey(nameof(BeginningDateOfWritingOff), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DimensionDisplayValue = group.Add(new VocabularyKey(nameof(DimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MainAccountDisplayValue = group.Add(new VocabularyKey(nameof(MainAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Dimension { get; private set; }
         public VocabularyKey DeferralsSum { get; private set; }
         public VocabularyKey ModelNumber { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey BeginningDateOfWritingOff { get; private set; }
         public VocabularyKey DimensionDisplayValue { get; private set; }
         public VocabularyKey MainAccountDisplayValue { get; private set; }
-
-
     }
 }

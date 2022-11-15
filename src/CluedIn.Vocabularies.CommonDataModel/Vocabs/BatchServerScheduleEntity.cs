@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BatchServerScheduleEntityVocabulary()
         {
-            VocabularyName = "BatchServerScheduleEntity";
+            VocabularyName = "Batch Server Schedule Entity";
             KeyPrefix = "commonDataModel.batchserverscheduleentity";
             KeySeparator = ".";
             Grouping = "/BatchServerScheduleEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MaximumBatchThreads = group.Add(new VocabularyKey(nameof(MaximumBatchThreads), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AOSInstanceName = group.Add(new VocabularyKey(nameof(AOSInstanceName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StartTime = group.Add(new VocabularyKey(nameof(StartTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey EndTime { get; private set; }
         public VocabularyKey MaximumBatchThreads { get; private set; }
         public VocabularyKey AOSInstanceName { get; private set; }
         public VocabularyKey StartTime { get; private set; }
-
-
     }
 }

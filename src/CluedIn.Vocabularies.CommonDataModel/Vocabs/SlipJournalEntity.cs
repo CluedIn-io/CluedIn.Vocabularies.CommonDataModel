@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SlipJournalEntityVocabulary()
         {
-            VocabularyName = "SlipJournalEntity";
+            VocabularyName = "Slip Journal Entity";
             KeyPrefix = "commonDataModel.slipjournalentity";
             KeySeparator = ".";
             Grouping = "/SlipJournalEntity";
@@ -73,10 +73,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RCashTransStatus = group.Add(new VocabularyKey(nameof(RCashTransStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReportingCurrencyExchRate = group.Add(new VocabularyKey(nameof(ReportingCurrencyExchRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReportingCurrencyExchRateSecondary = group.Add(new VocabularyKey(nameof(ReportingCurrencyExchRateSecondary), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ApprovedBy { get; private set; }
         public VocabularyKey Currency { get; private set; }
         public VocabularyKey PostingLayer { get; private set; }
@@ -137,7 +135,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RCashTransStatus { get; private set; }
         public VocabularyKey ReportingCurrencyExchRate { get; private set; }
         public VocabularyKey ReportingCurrencyExchRateSecondary { get; private set; }
-
-
     }
 }

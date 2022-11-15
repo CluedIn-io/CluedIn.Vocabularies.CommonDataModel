@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailUserStoreEntityVocabulary()
         {
-            VocabularyName = "RetailUserStoreEntity";
+            VocabularyName = "Retail User Store Entity";
             KeyPrefix = "commonDataModel.retailuserstoreentity";
             KeySeparator = ".";
             Grouping = "/RetailUserStoreEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 StoreName = group.Add(new VocabularyKey(nameof(StoreName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StoreNumber = group.Add(new VocabularyKey(nameof(StoreNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 User = group.Add(new VocabularyKey(nameof(User), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PrimaryStore { get; private set; }
         public VocabularyKey StoreName { get; private set; }
         public VocabularyKey StoreNumber { get; private set; }
         public VocabularyKey User { get; private set; }
-
-
     }
 }

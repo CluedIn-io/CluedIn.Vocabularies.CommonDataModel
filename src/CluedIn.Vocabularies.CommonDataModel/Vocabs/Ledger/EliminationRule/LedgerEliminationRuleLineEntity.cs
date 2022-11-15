@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerEliminationRuleLineEntityVocabulary()
         {
-            VocabularyName = "LedgerEliminationRuleLineEntity";
+            VocabularyName = "Ledger Elimination Rule Line Entity";
             KeyPrefix = "commonDataModel.ledgereliminationrulelineentity";
             KeySeparator = ".";
             Grouping = "/LedgerEliminationRuleLineEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DefaultDimension = group.Add(new VocabularyKey(nameof(DefaultDimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LedgerDimension = group.Add(new VocabularyKey(nameof(LedgerDimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultDimensionDisplayValue = group.Add(new VocabularyKey(nameof(DefaultDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RuleId { get; private set; }
         public VocabularyKey EliminationMethod { get; private set; }
         public VocabularyKey SourceAccount { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DefaultDimension { get; private set; }
         public VocabularyKey LedgerDimension { get; private set; }
         public VocabularyKey DefaultDimensionDisplayValue { get; private set; }
-
-
     }
 }

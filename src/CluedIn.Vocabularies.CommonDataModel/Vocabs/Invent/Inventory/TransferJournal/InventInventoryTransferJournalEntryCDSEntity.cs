@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventInventoryTransferJournalEntryCDSEntityVocabulary()
         {
-            VocabularyName = "InventInventoryTransferJournalEntryCDSEntity";
+            VocabularyName = "Invent Inventory Transfer Journal Entry CDS Entity";
             KeyPrefix = "commonDataModel.inventinventorytransferjournalentrycdsentity";
             KeySeparator = ".";
             Grouping = "/InventInventoryTransferJournalEntryCDSEntity";
@@ -35,10 +35,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DestinationProductConfigurationId = group.Add(new VocabularyKey(nameof(DestinationProductConfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(DefaultLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultLedgerDimension = group.Add(new VocabularyKey(nameof(DefaultLedgerDimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey JournalNameId { get; private set; }
         public VocabularyKey JournalNumber { get; private set; }
         public VocabularyKey LineNumber { get; private set; }
@@ -61,7 +59,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DestinationProductConfigurationId { get; private set; }
         public VocabularyKey DefaultLedgerDimensionDisplayValue { get; private set; }
         public VocabularyKey DefaultLedgerDimension { get; private set; }
-
-
     }
 }

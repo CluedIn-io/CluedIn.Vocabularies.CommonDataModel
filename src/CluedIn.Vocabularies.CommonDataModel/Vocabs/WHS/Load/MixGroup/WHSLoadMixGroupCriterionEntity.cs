@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSLoadMixGroupCriterionEntityVocabulary()
         {
-            VocabularyName = "WHSLoadMixGroupCriterionEntity";
+            VocabularyName = "WHS Load Mix Group Criterion Entity";
             KeyPrefix = "commonDataModel.whsloadmixgroupcriterionentity";
             KeySeparator = ".";
             Grouping = "/WHSLoadMixGroupCriterionEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LoadMixGroupId = group.Add(new VocabularyKey(nameof(LoadMixGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductGroupId = group.Add(new VocabularyKey(nameof(ProductGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WarehouseFilterCode = group.Add(new VocabularyKey(nameof(WarehouseFilterCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LoadMixGroupId { get; private set; }
         public VocabularyKey ProductGroupId { get; private set; }
         public VocabularyKey WarehouseFilterCode { get; private set; }
-
-
     }
 }

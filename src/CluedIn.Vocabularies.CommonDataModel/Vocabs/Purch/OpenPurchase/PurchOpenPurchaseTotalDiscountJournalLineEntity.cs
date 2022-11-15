@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchOpenPurchaseTotalDiscountJournalLineEntityVocabulary()
         {
-            VocabularyName = "PurchOpenPurchaseTotalDiscountJournalLineEntity";
+            VocabularyName = "Purch Open Purchase Total Discount Journal Line Entity";
             KeyPrefix = "commonDataModel.purchopenpurchasetotaldiscountjournallineentity";
             KeySeparator = ".";
             Grouping = "/PurchOpenPurchaseTotalDiscountJournalLineEntity";
@@ -32,10 +32,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ItemCode = group.Add(new VocabularyKey(nameof(ItemCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ItemRelation = group.Add(new VocabularyKey(nameof(ItemRelation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 JournalNum = group.Add(new VocabularyKey(nameof(JournalNum), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TradeAgreementJournalNumber { get; private set; }
         public VocabularyKey LineNumber { get; private set; }
         public VocabularyKey TotalDiscountVendorGroupCode { get; private set; }
@@ -55,7 +53,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ItemCode { get; private set; }
         public VocabularyKey ItemRelation { get; private set; }
         public VocabularyKey JournalNum { get; private set; }
-
-
     }
 }

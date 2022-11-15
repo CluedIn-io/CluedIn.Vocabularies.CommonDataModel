@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DirPersonNameHistoricalEntityVocabulary()
         {
-            VocabularyName = "DirPersonNameHistoricalEntity";
+            VocabularyName = "Dir Person Name Historical Entity";
             KeyPrefix = "commonDataModel.dirpersonnamehistoricalentity";
             KeySeparator = ".";
             Grouping = "/DirPersonNameHistoricalEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ValidFrom = group.Add(new VocabularyKey(nameof(ValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidTo = group.Add(new VocabularyKey(nameof(ValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PartyNumber = group.Add(new VocabularyKey(nameof(PartyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FirstName { get; private set; }
         public VocabularyKey LastNamePrefix { get; private set; }
         public VocabularyKey LastName { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey ValidTo { get; private set; }
         public VocabularyKey PartyNumber { get; private set; }
-
-
     }
 }

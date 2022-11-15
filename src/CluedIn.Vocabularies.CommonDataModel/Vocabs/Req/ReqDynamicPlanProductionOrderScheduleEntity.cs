@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReqDynamicPlanProductionOrderScheduleEntityVocabulary()
         {
-            VocabularyName = "ReqDynamicPlanProductionOrderScheduleEntity";
+            VocabularyName = "Req Dynamic Plan Production Order Schedule Entity";
             KeyPrefix = "commonDataModel.reqdynamicplanproductionorderscheduleentity";
             KeySeparator = ".";
             Grouping = "/ReqDynamicPlanProductionOrderScheduleEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ReferenceOrderId = group.Add(new VocabularyKey(nameof(ReferenceOrderId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RequirementDate = group.Add(new VocabularyKey(nameof(RequirementDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ScheduledEndDate = group.Add(new VocabularyKey(nameof(ScheduledEndDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DynamicMasterPlanId { get; private set; }
         public VocabularyKey ItemNumber { get; private set; }
         public VocabularyKey ReferenceOrderId { get; private set; }
         public VocabularyKey RequirementDate { get; private set; }
         public VocabularyKey ScheduledEndDate { get; private set; }
-
-
     }
 }

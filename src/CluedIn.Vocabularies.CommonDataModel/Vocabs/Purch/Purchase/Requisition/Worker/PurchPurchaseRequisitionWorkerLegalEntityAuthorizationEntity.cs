@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPurchaseRequisitionWorkerLegalEntityAuthorizationEntityVocabulary()
         {
-            VocabularyName = "PurchPurchaseRequisitionWorkerLegalEntityAuthorizationEntity";
+            VocabularyName = "Purch Purchase Requisition Worker Legal Entity Authorization Entity";
             KeyPrefix = "commonDataModel.purchpurchaserequisitionworkerlegalentityauthorizationentity";
             KeySeparator = ".";
             Grouping = "/PurchPurchaseRequisitionWorkerLegalEntityAuthorizationEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LegalEntityId = group.Add(new VocabularyKey(nameof(LegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidFrom = group.Add(new VocabularyKey(nameof(ValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidTo = group.Add(new VocabularyKey(nameof(ValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Requisitioner { get; private set; }
         public VocabularyKey LegalEntity { get; private set; }
         public VocabularyKey RequisitionerPersonnelNumber { get; private set; }
         public VocabularyKey LegalEntityId { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey ValidTo { get; private set; }
-
-
     }
 }

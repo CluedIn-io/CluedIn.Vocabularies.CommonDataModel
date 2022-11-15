@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetPostingProfileEntityVocabulary()
         {
-            VocabularyName = "AssetPostingProfileEntity";
+            VocabularyName = "Asset Posting Profile Entity";
             KeyPrefix = "commonDataModel.assetpostingprofileentity";
             KeySeparator = ".";
             Grouping = "/AssetPostingProfileEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OffsetMainAccountIdDisplayValue = group.Add(new VocabularyKey(nameof(OffsetMainAccountIdDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AllocationRule = group.Add(new VocabularyKey(nameof(AllocationRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AllocationRuleId = group.Add(new VocabularyKey(nameof(AllocationRuleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PostingProfileId { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey TransactionType { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OffsetMainAccountIdDisplayValue { get; private set; }
         public VocabularyKey AllocationRule { get; private set; }
         public VocabularyKey AllocationRuleId { get; private set; }
-
-
     }
 }

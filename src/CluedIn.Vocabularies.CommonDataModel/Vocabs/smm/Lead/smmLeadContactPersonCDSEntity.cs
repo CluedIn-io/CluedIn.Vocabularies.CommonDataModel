@@ -2,26 +2,22 @@ using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 {
-    public class smmLeadContactPersonCDSEntityVocabulary : SimpleVocabulary
+    public class SmmLeadContactPersonCDSEntityVocabulary : SimpleVocabulary
     {
-        public smmLeadContactPersonCDSEntityVocabulary()
+        public SmmLeadContactPersonCDSEntityVocabulary()
         {
-            VocabularyName = "smmLeadContactPersonCDSEntity";
+            VocabularyName = "Smm Lead Contact Person CDS Entity";
             KeyPrefix = "commonDataModel.smmleadcontactpersoncdsentity";
             KeySeparator = ".";
-            Grouping = "/smmLeadContactPersonCDSEntity";
+            Grouping = "/SmmLeadContactPersonCDSEntity";
 
-            AddGroup("smmLeadContactPersonCDSEntity Details", group =>
+            AddGroup("SmmLeadContactPersonCDSEntity Details", group =>
             {
                 ContactPersonPartyNumber = group.Add(new VocabularyKey(nameof(ContactPersonPartyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LeadId = group.Add(new VocabularyKey(nameof(LeadId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ContactPersonPartyNumber { get; private set; }
         public VocabularyKey LeadId { get; private set; }
-
-
     }
 }

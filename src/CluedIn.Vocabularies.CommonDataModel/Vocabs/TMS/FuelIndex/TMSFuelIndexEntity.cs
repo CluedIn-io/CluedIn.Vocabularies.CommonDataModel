@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSFuelIndexEntityVocabulary()
         {
-            VocabularyName = "TMSFuelIndexEntity";
+            VocabularyName = "TMS Fuel Index Entity";
             KeyPrefix = "commonDataModel.tmsfuelindexentity";
             KeySeparator = ".";
             Grouping = "/TMSFuelIndexEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 EffectiveDateTime = group.Add(new VocabularyKey(nameof(EffectiveDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FuelIndexRegionId = group.Add(new VocabularyKey(nameof(FuelIndexRegionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GallonPrice = group.Add(new VocabularyKey(nameof(GallonPrice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey EffectiveDateTime { get; private set; }
         public VocabularyKey FuelIndexRegionId { get; private set; }
         public VocabularyKey GallonPrice { get; private set; }
-
-
     }
 }

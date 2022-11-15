@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustCustomFieldEntityVocabulary()
         {
-            VocabularyName = "CustCustomFieldEntity";
+            VocabularyName = "Cust Custom Field Entity";
             KeyPrefix = "commonDataModel.custcustomfieldentity";
             KeySeparator = ".";
             Grouping = "/CustCustomFieldEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MinValue = group.Add(new VocabularyKey(nameof(MinValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidateMaximum = group.Add(new VocabularyKey(nameof(ValidateMaximum), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidateMinimum = group.Add(new VocabularyKey(nameof(ValidateMinimum), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CustomField { get; private set; }
         public VocabularyKey DataType { get; private set; }
         public VocabularyKey DefaultBoolean { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey MinValue { get; private set; }
         public VocabularyKey ValidateMaximum { get; private set; }
         public VocabularyKey ValidateMinimum { get; private set; }
-
-
     }
 }

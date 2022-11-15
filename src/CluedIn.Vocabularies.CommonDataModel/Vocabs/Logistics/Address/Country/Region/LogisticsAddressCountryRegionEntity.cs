@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LogisticsAddressCountryRegionEntityVocabulary()
         {
-            VocabularyName = "LogisticsAddressCountryRegionEntity";
+            VocabularyName = "Logistics Address Country Region Entity";
             KeyPrefix = "commonDataModel.logisticsaddresscountryregionentity";
             KeySeparator = ".";
             Grouping = "/LogisticsAddressCountryRegionEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ParentCountryRegion = group.Add(new VocabularyKey(nameof(ParentCountryRegion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BrazilCentralBankCountryCode = group.Add(new VocabularyKey(nameof(BrazilCentralBankCountryCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OKSMCode_RU = group.Add(new VocabularyKey(nameof(OKSMCode_RU), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CountryRegion { get; private set; }
         public VocabularyKey AddressFormat { get; private set; }
         public VocabularyKey TimeZone { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ParentCountryRegion { get; private set; }
         public VocabularyKey BrazilCentralBankCountryCode { get; private set; }
         public VocabularyKey OKSMCode_RU { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventProductSpecificOrderSettingsV3EntityVocabulary()
         {
-            VocabularyName = "InventProductSpecificOrderSettingsV3Entity";
+            VocabularyName = "Invent Product Specific Order Settings V3 Entity";
             KeyPrefix = "commonDataModel.inventproductspecificordersettingsv3entity";
             KeySeparator = ".";
             Grouping = "/InventProductSpecificOrderSettingsV3Entity";
@@ -74,10 +74,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsDefaultProcurementStorageDimensionOverridden = group.Add(new VocabularyKey(nameof(IsDefaultProcurementStorageDimensionOverridden), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsDefaultSalesStorageDimensionOverridden = group.Add(new VocabularyKey(nameof(IsDefaultSalesStorageDimensionOverridden), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsDefaultInventoryStorageDimensionOverridden = group.Add(new VocabularyKey(nameof(IsDefaultInventoryStorageDimensionOverridden), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey OrderSettingsRank { get; private set; }
         public VocabularyKey ItemNumber { get; private set; }
         public VocabularyKey OperationalSiteId { get; private set; }
@@ -139,7 +137,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsDefaultProcurementStorageDimensionOverridden { get; private set; }
         public VocabularyKey IsDefaultSalesStorageDimensionOverridden { get; private set; }
         public VocabularyKey IsDefaultInventoryStorageDimensionOverridden { get; private set; }
-
-
     }
 }

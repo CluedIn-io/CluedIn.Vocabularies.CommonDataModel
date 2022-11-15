@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailTenderDiscountThresholdTiersEntityVocabulary()
         {
-            VocabularyName = "RetailTenderDiscountThresholdTiersEntity";
+            VocabularyName = "Retail Tender Discount Threshold Tiers Entity";
             KeyPrefix = "commonDataModel.retailtenderdiscountthresholdtiersentity";
             KeySeparator = ".";
             Grouping = "/RetailTenderDiscountThresholdTiersEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DiscountValue = group.Add(new VocabularyKey(nameof(DiscountValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AmountThreshold = group.Add(new VocabularyKey(nameof(AmountThreshold), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OfferId = group.Add(new VocabularyKey(nameof(OfferId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DiscountValue { get; private set; }
         public VocabularyKey AmountThreshold { get; private set; }
         public VocabularyKey OfferId { get; private set; }
-
-
     }
 }

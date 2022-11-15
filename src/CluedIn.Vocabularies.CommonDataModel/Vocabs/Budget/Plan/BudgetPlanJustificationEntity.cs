@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetPlanJustificationEntityVocabulary()
         {
-            VocabularyName = "BudgetPlanJustificationEntity";
+            VocabularyName = "Budget Plan Justification Entity";
             KeyPrefix = "commonDataModel.budgetplanjustificationentity";
             KeySeparator = ".";
             Grouping = "/BudgetPlanJustificationEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ResponsibilityCenter = group.Add(new VocabularyKey(nameof(ResponsibilityCenter), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BudgetPlanPreparer = group.Add(new VocabularyKey(nameof(BudgetPlanPreparer), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Comment = group.Add(new VocabularyKey(nameof(Comment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountingCurrencyExpenseAmount { get; private set; }
         public VocabularyKey AccountingCurrencyRevenueAmount { get; private set; }
         public VocabularyKey DocumentNumber { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ResponsibilityCenter { get; private set; }
         public VocabularyKey BudgetPlanPreparer { get; private set; }
         public VocabularyKey Comment { get; private set; }
-
-
     }
 }

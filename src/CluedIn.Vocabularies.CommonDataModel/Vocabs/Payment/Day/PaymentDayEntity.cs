@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PaymentDayEntityVocabulary()
         {
-            VocabularyName = "PaymentDayEntity";
+            VocabularyName = "Payment Day Entity";
             KeyPrefix = "commonDataModel.paymentdayentity";
             KeySeparator = ".";
             Grouping = "/PaymentDayEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Frequency = group.Add(new VocabularyKey(nameof(Frequency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DayOfMonth { get; private set; }
         public VocabularyKey DayOfWeek { get; private set; }
         public VocabularyKey Frequency { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

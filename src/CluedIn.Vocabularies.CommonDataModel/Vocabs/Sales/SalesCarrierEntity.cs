@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesCarrierEntityVocabulary()
         {
-            VocabularyName = "SalesCarrierEntity";
+            VocabularyName = "Sales Carrier Entity";
             KeyPrefix = "commonDataModel.salescarrierentity";
             KeySeparator = ".";
             Grouping = "/SalesCarrierEntity";
@@ -39,10 +39,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AddressZipCode = group.Add(new VocabularyKey(nameof(AddressZipCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FormattedAddress = group.Add(new VocabularyKey(nameof(FormattedAddress), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Location = group.Add(new VocabularyKey(nameof(Location), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CarrierName { get; private set; }
         public VocabularyKey CnpjOrCpf { get; private set; }
         public VocabularyKey IE { get; private set; }
@@ -69,7 +67,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AddressZipCode { get; private set; }
         public VocabularyKey FormattedAddress { get; private set; }
         public VocabularyKey Location { get; private set; }
-
-
     }
 }

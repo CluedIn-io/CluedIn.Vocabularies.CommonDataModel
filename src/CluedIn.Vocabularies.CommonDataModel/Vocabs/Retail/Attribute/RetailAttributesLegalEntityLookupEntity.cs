@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailAttributesLegalEntityLookupEntityVocabulary()
         {
-            VocabularyName = "RetailAttributesLegalEntityLookupEntity";
+            VocabularyName = "Retail Attributes Legal Entity Lookup Entity";
             KeyPrefix = "commonDataModel.retailattributeslegalentitylookupentity";
             KeySeparator = ".";
             Grouping = "/RetailAttributesLegalEntityLookupEntity";
@@ -137,10 +137,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RetailLifeTo = group.Add(new VocabularyKey(nameof(RetailLifeTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesRetailInventoryAvailabilityBuffer = group.Add(new VocabularyKey(nameof(SalesRetailInventoryAvailabilityBuffer), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesRetailInventoryAvailabilityLevelProfile = group.Add(new VocabularyKey(nameof(SalesRetailInventoryAvailabilityLevelProfile), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CategoryHierarchyName { get; private set; }
         public VocabularyKey CategoryName { get; private set; }
         public VocabularyKey LegalEntity { get; private set; }
@@ -265,7 +263,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RetailLifeTo { get; private set; }
         public VocabularyKey SalesRetailInventoryAvailabilityBuffer { get; private set; }
         public VocabularyKey SalesRetailInventoryAvailabilityLevelProfile { get; private set; }
-
-
     }
 }

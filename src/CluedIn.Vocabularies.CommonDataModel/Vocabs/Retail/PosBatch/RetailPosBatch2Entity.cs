@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailPosBatch2EntityVocabulary()
         {
-            VocabularyName = "RetailPosBatch2Entity";
+            VocabularyName = "Retail Pos Batch 2 Entity";
             KeyPrefix = "commonDataModel.retailposbatch2entity";
             KeySeparator = ".";
             Grouping = "/RetailPosBatch2Entity";
@@ -64,10 +64,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 GiftCardCashOutTotal = group.Add(new VocabularyKey(nameof(GiftCardCashOutTotal), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ChargeTotal = group.Add(new VocabularyKey(nameof(ChargeTotal), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ZeroSalesCount = group.Add(new VocabularyKey(nameof(ZeroSalesCount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Terminal { get; private set; }
         public VocabularyKey BatchShiftId { get; private set; }
         public VocabularyKey Channel { get; private set; }
@@ -119,7 +117,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey GiftCardCashOutTotal { get; private set; }
         public VocabularyKey ChargeTotal { get; private set; }
         public VocabularyKey ZeroSalesCount { get; private set; }
-
-
     }
 }

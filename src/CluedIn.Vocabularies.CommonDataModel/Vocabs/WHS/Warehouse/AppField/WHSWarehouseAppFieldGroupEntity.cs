@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseAppFieldGroupEntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseAppFieldGroupEntity";
+            VocabularyName = "WHS Warehouse App Field Group Entity";
             KeyPrefix = "commonDataModel.whswarehouseappfieldgroupentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseAppFieldGroupEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 Priority = group.Add(new VocabularyKey(nameof(Priority), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GroupName = group.Add(new VocabularyKey(nameof(GroupName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Priority { get; private set; }
         public VocabularyKey GroupName { get; private set; }
-
-
     }
 }

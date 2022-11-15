@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWaveStepCodeEntityVocabulary()
         {
-            VocabularyName = "WHSWaveStepCodeEntity";
+            VocabularyName = "WHS Wave Step Code Entity";
             KeyPrefix = "commonDataModel.whswavestepcodeentity";
             KeySeparator = ".";
             Grouping = "/WHSWaveStepCodeEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WaveStepType = group.Add(new VocabularyKey(nameof(WaveStepType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WaveStepCode = group.Add(new VocabularyKey(nameof(WaveStepCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WaveStepDescription = group.Add(new VocabularyKey(nameof(WaveStepDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WaveStepType { get; private set; }
         public VocabularyKey WaveStepCode { get; private set; }
         public VocabularyKey WaveStepDescription { get; private set; }
-
-
     }
 }

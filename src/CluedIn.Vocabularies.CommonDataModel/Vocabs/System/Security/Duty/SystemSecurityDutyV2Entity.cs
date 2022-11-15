@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SystemSecurityDutyV2EntityVocabulary()
         {
-            VocabularyName = "SystemSecurityDutyV2Entity";
+            VocabularyName = "System Security Duty V2 Entity";
             KeyPrefix = "commonDataModel.systemsecuritydutyv2entity";
             KeySeparator = ".";
             Grouping = "/SystemSecurityDutyV2Entity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SecurityPrivilegeName = group.Add(new VocabularyKey(nameof(SecurityPrivilegeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SecurityPrivilege = group.Add(new VocabularyKey(nameof(SecurityPrivilege), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SecurityPrivilegeIdentifier = group.Add(new VocabularyKey(nameof(SecurityPrivilegeIdentifier), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SecurityRoleIdentifier { get; private set; }
         public VocabularyKey SecurityRoleName { get; private set; }
         public VocabularyKey SecurityDutyIdentifier { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SecurityPrivilegeName { get; private set; }
         public VocabularyKey SecurityPrivilege { get; private set; }
         public VocabularyKey SecurityPrivilegeIdentifier { get; private set; }
-
-
     }
 }

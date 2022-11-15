@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerPrintLayoutEntityVocabulary()
         {
-            VocabularyName = "LedgerPrintLayoutEntity";
+            VocabularyName = "Ledger Print Layout Entity";
             KeyPrefix = "commonDataModel.ledgerprintlayoutentity";
             KeySeparator = ".";
             Grouping = "/LedgerPrintLayoutEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PrintLayoutGroup = group.Add(new VocabularyKey(nameof(PrintLayoutGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PrintLayoutCode = group.Add(new VocabularyKey(nameof(PrintLayoutCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CodeDescription = group.Add(new VocabularyKey(nameof(CodeDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey GroupDescription { get; private set; }
         public VocabularyKey PrintLayoutGroup { get; private set; }
         public VocabularyKey PrintLayoutCode { get; private set; }
         public VocabularyKey CodeDescription { get; private set; }
-
-
     }
 }

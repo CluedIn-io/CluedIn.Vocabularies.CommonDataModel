@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesOpportunitySourceTypeOptionEntityVocabulary()
         {
-            VocabularyName = "SalesOpportunitySourceTypeOptionEntity";
+            VocabularyName = "Sales Opportunity Source Type Option Entity";
             KeyPrefix = "commonDataModel.salesopportunitysourcetypeoptionentity";
             KeySeparator = ".";
             Grouping = "/SalesOpportunitySourceTypeOptionEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OpportunitySourceType = group.Add(new VocabularyKey(nameof(OpportunitySourceType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OpportunitySourceTypeUserDefinedSourceTypeName = group.Add(new VocabularyKey(nameof(OpportunitySourceTypeUserDefinedSourceTypeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TypeId = group.Add(new VocabularyKey(nameof(TypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey OptionDescription { get; private set; }
         public VocabularyKey OptionName { get; private set; }
         public VocabularyKey OpportunitySourceType { get; private set; }
         public VocabularyKey OpportunitySourceTypeUserDefinedSourceTypeName { get; private set; }
         public VocabularyKey TypeId { get; private set; }
-
-
     }
 }

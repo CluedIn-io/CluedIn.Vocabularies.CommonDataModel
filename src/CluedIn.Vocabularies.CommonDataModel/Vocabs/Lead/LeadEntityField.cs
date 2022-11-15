@@ -6,44 +6,40 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LeadEntityFieldVocabulary()
         {
-            VocabularyName = "LeadEntityField";
+            VocabularyName = "Lead Entity Field";
             KeyPrefix = "commonDataModel.leadentityfield";
             KeySeparator = ".";
             Grouping = "/LeadEntityField";
 
             AddGroup("LeadEntityField Details", group =>
             {
-                createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                createdOnBehalfBy = group.Add(new VocabularyKey(nameof(createdOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                importSequenceNumber = group.Add(new VocabularyKey(nameof(importSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                modifiedOn = group.Add(new VocabularyKey(nameof(modifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                modifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(modifiedOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                leadEntityFieldId = group.Add(new VocabularyKey(nameof(leadEntityFieldId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                logicalName = group.Add(new VocabularyKey(nameof(logicalName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                overriddenCreatedOn = group.Add(new VocabularyKey(nameof(overriddenCreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                timeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(timeZoneRuleVersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOnBehalfBy = group.Add(new VocabularyKey(nameof(CreatedOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(ModifiedOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LeadEntityFieldId = group.Add(new VocabularyKey(nameof(LeadEntityFieldId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LogicalName = group.Add(new VocabularyKey(nameof(LogicalName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
-        public VocabularyKey createdOn { get; private set; }
-        public VocabularyKey createdOnBehalfBy { get; private set; }
-        public VocabularyKey importSequenceNumber { get; private set; }
-        public VocabularyKey modifiedOn { get; private set; }
-        public VocabularyKey modifiedOnBehalfBy { get; private set; }
-        public VocabularyKey leadEntityFieldId { get; private set; }
-        public VocabularyKey logicalName { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey overriddenCreatedOn { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-        public VocabularyKey timeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey CreatedOnBehalfBy { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey ModifiedOnBehalfBy { get; private set; }
+        public VocabularyKey LeadEntityFieldId { get; private set; }
+        public VocabularyKey LogicalName { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-
-
     }
 }

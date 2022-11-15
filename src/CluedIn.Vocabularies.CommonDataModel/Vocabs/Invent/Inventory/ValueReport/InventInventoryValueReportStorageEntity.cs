@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventInventoryValueReportStorageEntityVocabulary()
         {
-            VocabularyName = "InventInventoryValueReportStorageEntity";
+            VocabularyName = "Invent Inventory Value Report Storage Entity";
             KeyPrefix = "commonDataModel.inventinventoryvaluereportstorageentity";
             KeySeparator = ".";
             Grouping = "/InventInventoryValueReportStorageEntity";
@@ -64,10 +64,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WarehouseLocationId = group.Add(new VocabularyKey(nameof(WarehouseLocationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExecutionName = group.Add(new VocabularyKey(nameof(ExecutionName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExecutionTime = group.Add(new VocabularyKey(nameof(ExecutionTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey COGSFinancialAmount { get; private set; }
         public VocabularyKey COGSFinancialQuantity { get; private set; }
         public VocabularyKey ProductConfigurationId { get; private set; }
@@ -119,7 +117,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WarehouseLocationId { get; private set; }
         public VocabularyKey ExecutionName { get; private set; }
         public VocabularyKey ExecutionTime { get; private set; }
-
-
     }
 }

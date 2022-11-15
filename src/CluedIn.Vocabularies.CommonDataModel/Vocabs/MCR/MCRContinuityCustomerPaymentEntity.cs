@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRContinuityCustomerPaymentEntityVocabulary()
         {
-            VocabularyName = "MCRContinuityCustomerPaymentEntity";
+            VocabularyName = "MCR Continuity Customer Payment Entity";
             KeyPrefix = "commonDataModel.mcrcontinuitycustomerpaymententity";
             KeySeparator = ".";
             Grouping = "/MCRContinuityCustomerPaymentEntity";
@@ -36,10 +36,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ContinuityInventoryTransactionId = group.Add(new VocabularyKey(nameof(ContinuityInventoryTransactionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ContinuityScheduleId = group.Add(new VocabularyKey(nameof(ContinuityScheduleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineNumber = group.Add(new VocabularyKey(nameof(LineNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Amount { get; private set; }
         public VocabularyKey IsCheckAuthorized { get; private set; }
         public VocabularyKey CheckNumber { get; private set; }
@@ -63,7 +61,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ContinuityInventoryTransactionId { get; private set; }
         public VocabularyKey ContinuityScheduleId { get; private set; }
         public VocabularyKey LineNumber { get; private set; }
-
-
     }
 }

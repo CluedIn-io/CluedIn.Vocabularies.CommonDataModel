@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxItemGroupEntityVocabulary()
         {
-            VocabularyName = "TaxItemGroupEntity";
+            VocabularyName = "Tax Item Group Entity";
             KeyPrefix = "commonDataModel.taxitemgroupentity";
             KeySeparator = ".";
             Grouping = "/TaxItemGroupEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WithoutTaxCredit = group.Add(new VocabularyKey(nameof(WithoutTaxCredit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxationCodeTable = group.Add(new VocabularyKey(nameof(TaxationCodeTable), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxExemptCode = group.Add(new VocabularyKey(nameof(TaxExemptCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TaxItemGroupCode { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey EUSalesListType { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WithoutTaxCredit { get; private set; }
         public VocabularyKey TaxationCodeTable { get; private set; }
         public VocabularyKey TaxExemptCode { get; private set; }
-
-
     }
 }

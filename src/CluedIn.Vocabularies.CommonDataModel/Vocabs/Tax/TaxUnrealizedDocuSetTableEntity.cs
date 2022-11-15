@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxUnrealizedDocuSetTableEntityVocabulary()
         {
-            VocabularyName = "TaxUnrealizedDocuSetTableEntity";
+            VocabularyName = "Tax Unrealized Docu Set Table Entity";
             KeyPrefix = "commonDataModel.taxunrealizeddocusettableentity";
             KeySeparator = ".";
             Grouping = "/TaxUnrealizedDocuSetTableEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PrintHeader = group.Add(new VocabularyKey(nameof(PrintHeader), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineId = group.Add(new VocabularyKey(nameof(LineId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Code { get; private set; }
         public VocabularyKey Location { get; private set; }
         public VocabularyKey MiscText { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PrintHeader { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey LineId { get; private set; }
-
-
     }
 }

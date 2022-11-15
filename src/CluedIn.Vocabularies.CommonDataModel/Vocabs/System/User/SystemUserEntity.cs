@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SystemUserEntityVocabulary()
         {
-            VocabularyName = "SystemUserEntity";
+            VocabularyName = "System User Entity";
             KeyPrefix = "commonDataModel.systemuserentity";
             KeySeparator = ".";
             Grouping = "/SystemUserEntity";
@@ -57,10 +57,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PersonName = group.Add(new VocabularyKey(nameof(PersonName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AutomaticUrlUpdate = group.Add(new VocabularyKey(nameof(AutomaticUrlUpdate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UserObjectId = group.Add(new VocabularyKey(nameof(UserObjectId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DefaultCountryRegion { get; private set; }
         public VocabularyKey DocumentHandlingActive { get; private set; }
         public VocabularyKey ShowAttachmentStatus { get; private set; }
@@ -105,7 +103,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PersonName { get; private set; }
         public VocabularyKey AutomaticUrlUpdate { get; private set; }
         public VocabularyKey UserObjectId { get; private set; }
-
-
     }
 }

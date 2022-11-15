@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LvOtherClientsEntityVocabulary()
         {
-            VocabularyName = "LvOtherClientsEntity";
+            VocabularyName = "Lv Other Clients Entity";
             KeyPrefix = "commonDataModel.lvotherclientsentity";
             KeySeparator = ".";
             Grouping = "/LvOtherClientsEntity";
@@ -46,10 +46,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AddressCountryRegionISOCode = group.Add(new VocabularyKey(nameof(AddressCountryRegionISOCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AddressValidFrom = group.Add(new VocabularyKey(nameof(AddressValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AddressValidTo = group.Add(new VocabularyKey(nameof(AddressValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Bank { get; private set; }
         public VocabularyKey BankAccountNumber { get; private set; }
         public VocabularyKey BankAddress { get; private set; }
@@ -83,7 +81,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AddressCountryRegionISOCode { get; private set; }
         public VocabularyKey AddressValidFrom { get; private set; }
         public VocabularyKey AddressValidTo { get; private set; }
-
-
     }
 }

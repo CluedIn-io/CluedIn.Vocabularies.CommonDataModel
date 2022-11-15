@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetInventoryFixedAssetTransferJournalNameEntityVocabulary()
         {
-            VocabularyName = "AssetInventoryFixedAssetTransferJournalNameEntity";
+            VocabularyName = "Asset Inventory Fixed Asset Transfer Journal Name Entity";
             KeyPrefix = "commonDataModel.assetinventoryfixedassettransferjournalnameentity";
             KeySeparator = ".";
             Grouping = "/AssetInventoryFixedAssetTransferJournalNameEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DefaultVoucherNumberSequenceCode = group.Add(new VocabularyKey(nameof(DefaultVoucherNumberSequenceCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultVoucherNumberSequenceScope = group.Add(new VocabularyKey(nameof(DefaultVoucherNumberSequenceScope), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultVoucherNumberSequenceDataArea = group.Add(new VocabularyKey(nameof(DefaultVoucherNumberSequenceDataArea), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey JournalNameId { get; private set; }
         public VocabularyKey DefaultJournalDescription { get; private set; }
         public VocabularyKey IsPostingDeletingLinesByDefault { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DefaultVoucherNumberSequenceCode { get; private set; }
         public VocabularyKey DefaultVoucherNumberSequenceScope { get; private set; }
         public VocabularyKey DefaultVoucherNumberSequenceDataArea { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReturnAutomaticReturnDispositionCodeChargeEntityVocabulary()
         {
-            VocabularyName = "ReturnAutomaticReturnDispositionCodeChargeEntity";
+            VocabularyName = "Return Automatic Return Disposition Code Charge Entity";
             KeyPrefix = "commonDataModel.returnautomaticreturndispositioncodechargeentity";
             KeySeparator = ".";
             Grouping = "/ReturnAutomaticReturnDispositionCodeChargeEntity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Value = group.Add(new VocabularyKey(nameof(Value), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesTaxGroupCode = group.Add(new VocabularyKey(nameof(SalesTaxGroupCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillInvoiceProcessingKeepCharge = group.Add(new VocabularyKey(nameof(WillInvoiceProcessingKeepCharge), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ReturnDispositionCode { get; private set; }
         public VocabularyKey ReturnRelation { get; private set; }
         public VocabularyKey LineNumber { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Value { get; private set; }
         public VocabularyKey SalesTaxGroupCode { get; private set; }
         public VocabularyKey WillInvoiceProcessingKeepCharge { get; private set; }
-
-
     }
 }

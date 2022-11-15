@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResProductStyleEntityVocabulary()
         {
-            VocabularyName = "EcoResProductStyleEntity";
+            VocabularyName = "Eco Res Product Style Entity";
             KeyPrefix = "commonDataModel.ecoresproductstyleentity";
             KeySeparator = ".";
             Grouping = "/EcoResProductStyleEntity";
@@ -14,12 +14,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             AddGroup("EcoResProductStyleEntity Details", group =>
             {
                 StyleId = group.Add(new VocabularyKey(nameof(StyleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey StyleId { get; private set; }
-
-
     }
 }

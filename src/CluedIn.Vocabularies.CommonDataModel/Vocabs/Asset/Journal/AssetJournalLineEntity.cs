@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetJournalLineEntityVocabulary()
         {
-            VocabularyName = "AssetJournalLineEntity";
+            VocabularyName = "Asset Journal Line Entity";
             KeyPrefix = "commonDataModel.assetjournallineentity";
             KeySeparator = ".";
             Grouping = "/AssetJournalLineEntity";
@@ -39,10 +39,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DocumentId = group.Add(new VocabularyKey(nameof(DocumentId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CreditAmountReportingCurrency = group.Add(new VocabularyKey(nameof(CreditAmountReportingCurrency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DebitAmountReportingCurrency = group.Add(new VocabularyKey(nameof(DebitAmountReportingCurrency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountType { get; private set; }
         public VocabularyKey CreditAmount { get; private set; }
         public VocabularyKey DebitAmount { get; private set; }
@@ -69,7 +67,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DocumentId { get; private set; }
         public VocabularyKey CreditAmountReportingCurrency { get; private set; }
         public VocabularyKey DebitAmountReportingCurrency { get; private set; }
-
-
     }
 }

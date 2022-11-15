@@ -6,28 +6,24 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EventCustomRegistrationFieldVocabulary()
         {
-            VocabularyName = "EventCustomRegistrationField";
+            VocabularyName = "Event Custom Registration Field";
             KeyPrefix = "commonDataModel.eventcustomregistrationfield";
             KeySeparator = ".";
             Grouping = "/EventCustomRegistrationField";
 
             AddGroup("EventCustomRegistrationField Details", group =>
             {
-                eventCustomRegistrationFieldId = group.Add(new VocabularyKey(nameof(eventCustomRegistrationFieldId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                order = group.Add(new VocabularyKey(nameof(order), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                EventCustomRegistrationFieldId = group.Add(new VocabularyKey(nameof(EventCustomRegistrationFieldId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Order = group.Add(new VocabularyKey(nameof(Order), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey eventCustomRegistrationFieldId { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey order { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey EventCustomRegistrationFieldId { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey Order { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

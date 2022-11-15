@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CostLedgerReconciliationPolicyEntityVocabulary()
         {
-            VocabularyName = "CostLedgerReconciliationPolicyEntity";
+            VocabularyName = "Cost Ledger Reconciliation Policy Entity";
             KeyPrefix = "commonDataModel.costledgerreconciliationpolicyentity";
             KeySeparator = ".";
             Grouping = "/CostLedgerReconciliationPolicyEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WIPMainAccountIdDisplayValue = group.Add(new VocabularyKey(nameof(WIPMainAccountIdDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InventoryMainAccountCategoryReferenceId = group.Add(new VocabularyKey(nameof(InventoryMainAccountCategoryReferenceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WIPMainAccountCategoryReferenceId = group.Add(new VocabularyKey(nameof(WIPMainAccountCategoryReferenceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ReconciliationPrinciple { get; private set; }
         public VocabularyKey InventoryMainAccountIdDisplayValue { get; private set; }
         public VocabularyKey WIPMainAccountIdDisplayValue { get; private set; }
         public VocabularyKey InventoryMainAccountCategoryReferenceId { get; private set; }
         public VocabularyKey WIPMainAccountCategoryReferenceId { get; private set; }
-
-
     }
 }

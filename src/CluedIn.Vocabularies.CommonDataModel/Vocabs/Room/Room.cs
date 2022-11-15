@@ -14,34 +14,30 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             AddGroup("Room Details", group =>
             {
                 AVSupport = group.Add(new VocabularyKey(nameof(AVSupport), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                capacity = group.Add(new VocabularyKey(nameof(capacity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                description = group.Add(new VocabularyKey(nameof(description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                disabledAccess = group.Add(new VocabularyKey(nameof(disabledAccess), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                internetConnection = group.Add(new VocabularyKey(nameof(internetConnection), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                other = group.Add(new VocabularyKey(nameof(other), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                roomId = group.Add(new VocabularyKey(nameof(roomId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                videoConferencing = group.Add(new VocabularyKey(nameof(videoConferencing), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                whiteboard = group.Add(new VocabularyKey(nameof(whiteboard), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                Capacity = group.Add(new VocabularyKey(nameof(Capacity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DisabledAccess = group.Add(new VocabularyKey(nameof(DisabledAccess), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InternetConnection = group.Add(new VocabularyKey(nameof(InternetConnection), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Other = group.Add(new VocabularyKey(nameof(Other), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RoomId = group.Add(new VocabularyKey(nameof(RoomId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                VideoConferencing = group.Add(new VocabularyKey(nameof(VideoConferencing), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Whiteboard = group.Add(new VocabularyKey(nameof(Whiteboard), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
         public VocabularyKey AVSupport { get; private set; }
-        public VocabularyKey capacity { get; private set; }
-        public VocabularyKey description { get; private set; }
-        public VocabularyKey disabledAccess { get; private set; }
-        public VocabularyKey internetConnection { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey other { get; private set; }
-        public VocabularyKey roomId { get; private set; }
-        public VocabularyKey videoConferencing { get; private set; }
-        public VocabularyKey whiteboard { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey Capacity { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey DisabledAccess { get; private set; }
+        public VocabularyKey InternetConnection { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey Other { get; private set; }
+        public VocabularyKey RoomId { get; private set; }
+        public VocabularyKey VideoConferencing { get; private set; }
+        public VocabularyKey Whiteboard { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

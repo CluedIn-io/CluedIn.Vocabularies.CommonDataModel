@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReqIntercompanyPlanningGroupMemberEntityVocabulary()
         {
-            VocabularyName = "ReqIntercompanyPlanningGroupMemberEntity";
+            VocabularyName = "Req Intercompany Planning Group Member Entity";
             KeyPrefix = "commonDataModel.reqintercompanyplanninggroupmemberentity";
             KeySeparator = ".";
             Grouping = "/ReqIntercompanyPlanningGroupMemberEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IntercompanyPlanningGroupName = group.Add(new VocabularyKey(nameof(IntercompanyPlanningGroupName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LegalEntityId = group.Add(new VocabularyKey(nameof(LegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IntercompanyPlanDataAreaId = group.Add(new VocabularyKey(nameof(IntercompanyPlanDataAreaId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WillIntercompanyPlanAutomaticallyBeCopiedToDynamicPlan { get; private set; }
         public VocabularyKey WillIntercompanyPlanAutomaticallyBeCopiedToStaticPlan { get; private set; }
         public VocabularyKey MasterPlanId { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IntercompanyPlanningGroupName { get; private set; }
         public VocabularyKey LegalEntityId { get; private set; }
         public VocabularyKey IntercompanyPlanDataAreaId { get; private set; }
-
-
     }
 }

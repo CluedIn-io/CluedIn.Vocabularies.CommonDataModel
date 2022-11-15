@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerLiquidityEntityVocabulary()
         {
-            VocabularyName = "LedgerLiquidityEntity";
+            VocabularyName = "Ledger Liquidity Entity";
             KeyPrefix = "commonDataModel.ledgerliquidityentity";
             KeySeparator = ".";
             Grouping = "/LedgerLiquidityEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ChartOfAccounts = group.Add(new VocabularyKey(nameof(ChartOfAccounts), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MainAccountId = group.Add(new VocabularyKey(nameof(MainAccountId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ChartOfAccountsName = group.Add(new VocabularyKey(nameof(ChartOfAccountsName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey MainAccount { get; private set; }
         public VocabularyKey ChartOfAccounts { get; private set; }
         public VocabularyKey MainAccountId { get; private set; }
         public VocabularyKey ChartOfAccountsName { get; private set; }
-
-
     }
 }

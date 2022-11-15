@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailReturnPolicyEntityVocabulary()
         {
-            VocabularyName = "RetailReturnPolicyEntity";
+            VocabularyName = "Retail Return Policy Entity";
             KeyPrefix = "commonDataModel.retailreturnpolicyentity";
             KeySeparator = ".";
             Grouping = "/RetailReturnPolicyEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PolicyNumber = group.Add(new VocabularyKey(nameof(PolicyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PolicyPrintLabels = group.Add(new VocabularyKey(nameof(PolicyPrintLabels), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BlockInDefaultReturnLocation { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey PolicyNumber { get; private set; }
         public VocabularyKey PolicyPrintLabels { get; private set; }
-
-
     }
 }

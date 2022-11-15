@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailEventNotificationProfileEntityVocabulary()
         {
-            VocabularyName = "RetailEventNotificationProfileEntity";
+            VocabularyName = "Retail Event Notification Profile Entity";
             KeyPrefix = "commonDataModel.retaileventnotificationprofileentity";
             KeySeparator = ".";
             Grouping = "/RetailEventNotificationProfileEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Active = group.Add(new VocabularyKey(nameof(Active), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProfileId = group.Add(new VocabularyKey(nameof(ProfileId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Active { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey ProfileId { get; private set; }
-
-
     }
 }

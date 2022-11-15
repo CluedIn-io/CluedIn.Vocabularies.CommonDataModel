@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PSNLedgerInterestDistributionRuleEntityVocabulary()
         {
-            VocabularyName = "PSNLedgerInterestDistributionRuleEntity";
+            VocabularyName = "PSN Ledger Interest Distribution Rule Entity";
             KeyPrefix = "commonDataModel.psnledgerinterestdistributionruleentity";
             KeySeparator = ".";
             Grouping = "/PSNLedgerInterestDistributionRuleEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 NegativeInterest = group.Add(new VocabularyKey(nameof(NegativeInterest), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Rounding = group.Add(new VocabularyKey(nameof(Rounding), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RuleId = group.Add(new VocabularyKey(nameof(RuleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CashAccount { get; private set; }
         public VocabularyKey CashAccountDisplayValue { get; private set; }
         public VocabularyKey CashAccountName { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey NegativeInterest { get; private set; }
         public VocabularyKey Rounding { get; private set; }
         public VocabularyKey RuleId { get; private set; }
-
-
     }
 }

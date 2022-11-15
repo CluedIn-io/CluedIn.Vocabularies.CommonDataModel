@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerAdvancedRuleEntityVocabulary()
         {
-            VocabularyName = "LedgerAdvancedRuleEntity";
+            VocabularyName = "Ledger Advanced Rule Entity";
             KeyPrefix = "commonDataModel.ledgeradvancedruleentity";
             KeySeparator = ".";
             Grouping = "/LedgerAdvancedRuleEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AdvancedRuleStructure2 = group.Add(new VocabularyKey(nameof(AdvancedRuleStructure2), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AdvancedRuleStructure3 = group.Add(new VocabularyKey(nameof(AdvancedRuleStructure3), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AdvancedRuleStructure4 = group.Add(new VocabularyKey(nameof(AdvancedRuleStructure4), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountStructure { get; private set; }
         public VocabularyKey AdvancedRuleName { get; private set; }
         public VocabularyKey Status { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AdvancedRuleStructure2 { get; private set; }
         public VocabularyKey AdvancedRuleStructure3 { get; private set; }
         public VocabularyKey AdvancedRuleStructure4 { get; private set; }
-
-
     }
 }

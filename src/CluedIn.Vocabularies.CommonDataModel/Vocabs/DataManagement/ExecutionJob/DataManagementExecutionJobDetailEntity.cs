@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DataManagementExecutionJobDetailEntityVocabulary()
         {
-            VocabularyName = "DataManagementExecutionJobDetailEntity";
+            VocabularyName = "Data Management Execution Job Detail Entity";
             KeyPrefix = "commonDataModel.datamanagementexecutionjobdetailentity";
             KeySeparator = ".";
             Grouping = "/DataManagementExecutionJobDetailEntity";
@@ -43,10 +43,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SequenceInLevel = group.Add(new VocabularyKey(nameof(SequenceInLevel), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FailExecutionUnitOnError = group.Add(new VocabularyKey(nameof(FailExecutionUnitOnError), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FailLevelOnError = group.Add(new VocabularyKey(nameof(FailLevelOnError), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DefinitionGroupId { get; private set; }
         public VocabularyKey EntityName { get; private set; }
         public VocabularyKey JobId { get; private set; }
@@ -77,7 +75,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SequenceInLevel { get; private set; }
         public VocabularyKey FailExecutionUnitOnError { get; private set; }
         public VocabularyKey FailLevelOnError { get; private set; }
-
-
     }
 }

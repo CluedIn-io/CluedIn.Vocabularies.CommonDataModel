@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProductFiscalDocTextReferenceProcessEntityVocabulary()
         {
-            VocabularyName = "ProductFiscalDocTextReferenceProcessEntity";
+            VocabularyName = "Product Fiscal Doc Text Reference Process Entity";
             KeyPrefix = "commonDataModel.productfiscaldoctextreferenceprocessentity";
             KeySeparator = ".";
             Grouping = "/ProductFiscalDocTextReferenceProcessEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RefRecId = group.Add(new VocabularyKey(nameof(RefRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RefTableId = group.Add(new VocabularyKey(nameof(RefTableId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RefCompanyId = group.Add(new VocabularyKey(nameof(RefCompanyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Item { get; private set; }
         public VocabularyKey FiscalDocumentText { get; private set; }
         public VocabularyKey Agency { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RefRecId { get; private set; }
         public VocabularyKey RefTableId { get; private set; }
         public VocabularyKey RefCompanyId { get; private set; }
-
-
     }
 }

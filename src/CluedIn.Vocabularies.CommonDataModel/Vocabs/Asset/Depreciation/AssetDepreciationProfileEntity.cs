@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetDepreciationProfileEntityVocabulary()
         {
-            VocabularyName = "AssetDepreciationProfileEntity";
+            VocabularyName = "Asset Depreciation Profile Entity";
             KeyPrefix = "commonDataModel.assetdepreciationprofileentity";
             KeySeparator = ".";
             Grouping = "/AssetDepreciationProfileEntity";
@@ -36,10 +36,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SpecialDepreciationRate = group.Add(new VocabularyKey(nameof(SpecialDepreciationRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FullYearDepreciationOnAdditionalAcquisitions = group.Add(new VocabularyKey(nameof(FullYearDepreciationOnAdditionalAcquisitions), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsShiftDepreciation = group.Add(new VocabularyKey(nameof(IsShiftDepreciation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DepreciationProfileId { get; private set; }
         public VocabularyKey DepreciationYear { get; private set; }
         public VocabularyKey FullDepreciation { get; private set; }
@@ -63,7 +61,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SpecialDepreciationRate { get; private set; }
         public VocabularyKey FullYearDepreciationOnAdditionalAcquisitions { get; private set; }
         public VocabularyKey IsShiftDepreciation { get; private set; }
-
-
     }
 }

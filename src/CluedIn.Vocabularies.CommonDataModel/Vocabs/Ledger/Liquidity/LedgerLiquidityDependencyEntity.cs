@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerLiquidityDependencyEntityVocabulary()
         {
-            VocabularyName = "LedgerLiquidityDependencyEntity";
+            VocabularyName = "Ledger Liquidity Dependency Entity";
             KeyPrefix = "commonDataModel.ledgerliquiditydependencyentity";
             KeySeparator = ".";
             Grouping = "/LedgerLiquidityDependencyEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PostingType = group.Add(new VocabularyKey(nameof(PostingType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransactionOrBudget = group.Add(new VocabularyKey(nameof(TransactionOrBudget), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Percent = group.Add(new VocabularyKey(nameof(Percent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ChartOfAccountsName { get; private set; }
         public VocabularyKey FromMainAccountId { get; private set; }
         public VocabularyKey ToMainAccountId { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PostingType { get; private set; }
         public VocabularyKey TransactionOrBudget { get; private set; }
         public VocabularyKey Percent { get; private set; }
-
-
     }
 }

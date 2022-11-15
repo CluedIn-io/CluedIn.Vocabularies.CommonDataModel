@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetReservationAgreementLineEntity_PSNVocabulary()
         {
-            VocabularyName = "BudgetReservationAgreementLineEntity_PSN";
+            VocabularyName = "Budget Reservation Agreement Line Entity _PSN";
             KeyPrefix = "commonDataModel.budgetreservationagreementlineentity_psn";
             KeySeparator = ".";
             Grouping = "/BudgetReservationAgreementLineEntity_PSN";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BudgetReservationLineRecId = group.Add(new VocabularyKey(nameof(BudgetReservationLineRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BuyingLegalEntityRecId = group.Add(new VocabularyKey(nameof(BuyingLegalEntityRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BuyingLegalEntityId = group.Add(new VocabularyKey(nameof(BuyingLegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BudgetReservationDocumentNumber { get; private set; }
         public VocabularyKey BudgetReservationLineNumber { get; private set; }
         public VocabularyKey AgreementLineNumber { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey BudgetReservationLineRecId { get; private set; }
         public VocabularyKey BuyingLegalEntityRecId { get; private set; }
         public VocabularyKey BuyingLegalEntityId { get; private set; }
-
-
     }
 }

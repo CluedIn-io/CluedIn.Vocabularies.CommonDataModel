@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationHubTypeEntityVocabulary()
         {
-            VocabularyName = "TMSTransportationHubTypeEntity";
+            VocabularyName = "TMS Transportation Hub Type Entity";
             KeyPrefix = "commonDataModel.tmstransportationhubtypeentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationHubTypeEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 TypeId = group.Add(new VocabularyKey(nameof(TypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TypeName = group.Add(new VocabularyKey(nameof(TypeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TypeId { get; private set; }
         public VocabularyKey TypeName { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RDeferralsCountingJournalEntityVocabulary()
         {
-            VocabularyName = "RDeferralsCountingJournalEntity";
+            VocabularyName = "R Deferrals Counting Journal Entity";
             KeyPrefix = "commonDataModel.rdeferralscountingjournalentity";
             KeySeparator = ".";
             Grouping = "/RDeferralsCountingJournalEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OfficialSession = group.Add(new VocabularyKey(nameof(OfficialSession), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ResolutionDate = group.Add(new VocabularyKey(nameof(ResolutionDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ResolutionNumber = group.Add(new VocabularyKey(nameof(ResolutionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Closed { get; private set; }
         public VocabularyKey CountingStartDate { get; private set; }
         public VocabularyKey CountingEndDate { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OfficialSession { get; private set; }
         public VocabularyKey ResolutionDate { get; private set; }
         public VocabularyKey ResolutionNumber { get; private set; }
-
-
     }
 }

@@ -6,90 +6,86 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MarketingFormVocabulary()
         {
-            VocabularyName = "MarketingForm";
+            VocabularyName = "Marketing Form";
             KeyPrefix = "commonDataModel.marketingform";
             KeySeparator = ".";
             Grouping = "/MarketingForm";
 
             AddGroup("MarketingForm Details", group =>
             {
-                info = group.Add(new VocabularyKey(nameof(info), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                allowPrefill = group.Add(new VocabularyKey(nameof(allowPrefill), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                alwaysGenerateLeads = group.Add(new VocabularyKey(nameof(alwaysGenerateLeads), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                capturing = group.Add(new VocabularyKey(nameof(capturing), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                capturingData = group.Add(new VocabularyKey(nameof(capturingData), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                capturingScanTime = group.Add(new VocabularyKey(nameof(capturingScanTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                capturingConfigured = group.Add(new VocabularyKey(nameof(capturingConfigured), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                entityupdatebehavioronsubmit = group.Add(new VocabularyKey(nameof(entityupdatebehavioronsubmit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                marketingFormId = group.Add(new VocabularyKey(nameof(marketingFormId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                formControlMapping = group.Add(new VocabularyKey(nameof(formControlMapping), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                formFieldMapping = group.Add(new VocabularyKey(nameof(formFieldMapping), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                formDefinition = group.Add(new VocabularyKey(nameof(formDefinition), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                formToSave = group.Add(new VocabularyKey(nameof(formToSave), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                insightsPlaceholder = group.Add(new VocabularyKey(nameof(insightsPlaceholder), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                validForPageType = group.Add(new VocabularyKey(nameof(validForPageType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                purpose = group.Add(new VocabularyKey(nameof(purpose), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                visualStyle = group.Add(new VocabularyKey(nameof(visualStyle), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                externalHostedFormInstructions = group.Add(new VocabularyKey(nameof(externalHostedFormInstructions), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                organizationwhitelistdomain = group.Add(new VocabularyKey(nameof(organizationwhitelistdomain), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdName = group.Add(new VocabularyKey(nameof(ownerIdName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdType = group.Add(new VocabularyKey(nameof(ownerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdYomiName = group.Add(new VocabularyKey(nameof(ownerIdYomiName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                marketingProvided = group.Add(new VocabularyKey(nameof(marketingProvided), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                errorMessage = group.Add(new VocabularyKey(nameof(errorMessage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                redirectURL = group.Add(new VocabularyKey(nameof(redirectURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                limitExceededMessage = group.Add(new VocabularyKey(nameof(limitExceededMessage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                confirmationMessage = group.Add(new VocabularyKey(nameof(confirmationMessage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                successImageURL = group.Add(new VocabularyKey(nameof(successImageURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                errorImageURL = group.Add(new VocabularyKey(nameof(errorImageURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                keepsuccessfulsubmissions = group.Add(new VocabularyKey(nameof(keepsuccessfulsubmissions), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                enableDoubleOptIn = group.Add(new VocabularyKey(nameof(enableDoubleOptIn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                doubleoptinthankyouformat = group.Add(new VocabularyKey(nameof(doubleoptinthankyouformat), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                doubleoptinthankyouurl = group.Add(new VocabularyKey(nameof(doubleoptinthankyouurl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                Info = group.Add(new VocabularyKey(nameof(Info), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AllowPrefill = group.Add(new VocabularyKey(nameof(AllowPrefill), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AlwaysGenerateLeads = group.Add(new VocabularyKey(nameof(AlwaysGenerateLeads), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Capturing = group.Add(new VocabularyKey(nameof(Capturing), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CapturingData = group.Add(new VocabularyKey(nameof(CapturingData), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CapturingScanTime = group.Add(new VocabularyKey(nameof(CapturingScanTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CapturingConfigured = group.Add(new VocabularyKey(nameof(CapturingConfigured), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Entityupdatebehavioronsubmit = group.Add(new VocabularyKey(nameof(Entityupdatebehavioronsubmit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MarketingFormId = group.Add(new VocabularyKey(nameof(MarketingFormId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FormControlMapping = group.Add(new VocabularyKey(nameof(FormControlMapping), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FormFieldMapping = group.Add(new VocabularyKey(nameof(FormFieldMapping), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FormDefinition = group.Add(new VocabularyKey(nameof(FormDefinition), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FormToSave = group.Add(new VocabularyKey(nameof(FormToSave), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InsightsPlaceholder = group.Add(new VocabularyKey(nameof(InsightsPlaceholder), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ValidForPageType = group.Add(new VocabularyKey(nameof(ValidForPageType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Purpose = group.Add(new VocabularyKey(nameof(Purpose), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                VisualStyle = group.Add(new VocabularyKey(nameof(VisualStyle), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExternalHostedFormInstructions = group.Add(new VocabularyKey(nameof(ExternalHostedFormInstructions), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Organizationwhitelistdomain = group.Add(new VocabularyKey(nameof(Organizationwhitelistdomain), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdName = group.Add(new VocabularyKey(nameof(OwnerIdName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdType = group.Add(new VocabularyKey(nameof(OwnerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdYomiName = group.Add(new VocabularyKey(nameof(OwnerIdYomiName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MarketingProvided = group.Add(new VocabularyKey(nameof(MarketingProvided), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ErrorMessage = group.Add(new VocabularyKey(nameof(ErrorMessage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RedirectURL = group.Add(new VocabularyKey(nameof(RedirectURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LimitExceededMessage = group.Add(new VocabularyKey(nameof(LimitExceededMessage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ConfirmationMessage = group.Add(new VocabularyKey(nameof(ConfirmationMessage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SuccessImageURL = group.Add(new VocabularyKey(nameof(SuccessImageURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ErrorImageURL = group.Add(new VocabularyKey(nameof(ErrorImageURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Keepsuccessfulsubmissions = group.Add(new VocabularyKey(nameof(Keepsuccessfulsubmissions), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EnableDoubleOptIn = group.Add(new VocabularyKey(nameof(EnableDoubleOptIn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Doubleoptinthankyouformat = group.Add(new VocabularyKey(nameof(Doubleoptinthankyouformat), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Doubleoptinthankyouurl = group.Add(new VocabularyKey(nameof(Doubleoptinthankyouurl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey info { get; private set; }
-        public VocabularyKey allowPrefill { get; private set; }
-        public VocabularyKey alwaysGenerateLeads { get; private set; }
-        public VocabularyKey capturing { get; private set; }
-        public VocabularyKey capturingData { get; private set; }
-        public VocabularyKey capturingScanTime { get; private set; }
-        public VocabularyKey capturingConfigured { get; private set; }
-        public VocabularyKey entityupdatebehavioronsubmit { get; private set; }
-        public VocabularyKey marketingFormId { get; private set; }
-        public VocabularyKey formControlMapping { get; private set; }
-        public VocabularyKey formFieldMapping { get; private set; }
-        public VocabularyKey formDefinition { get; private set; }
-        public VocabularyKey formToSave { get; private set; }
-        public VocabularyKey insightsPlaceholder { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey validForPageType { get; private set; }
-        public VocabularyKey purpose { get; private set; }
-        public VocabularyKey visualStyle { get; private set; }
-        public VocabularyKey externalHostedFormInstructions { get; private set; }
-        public VocabularyKey organizationwhitelistdomain { get; private set; }
-        public VocabularyKey ownerIdName { get; private set; }
-        public VocabularyKey ownerIdType { get; private set; }
-        public VocabularyKey ownerIdYomiName { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-        public VocabularyKey marketingProvided { get; private set; }
-        public VocabularyKey errorMessage { get; private set; }
-        public VocabularyKey redirectURL { get; private set; }
-        public VocabularyKey limitExceededMessage { get; private set; }
-        public VocabularyKey confirmationMessage { get; private set; }
-        public VocabularyKey successImageURL { get; private set; }
-        public VocabularyKey errorImageURL { get; private set; }
-        public VocabularyKey keepsuccessfulsubmissions { get; private set; }
-        public VocabularyKey enableDoubleOptIn { get; private set; }
-        public VocabularyKey doubleoptinthankyouformat { get; private set; }
-        public VocabularyKey doubleoptinthankyouurl { get; private set; }
-
-
+        public VocabularyKey Info { get; private set; }
+        public VocabularyKey AllowPrefill { get; private set; }
+        public VocabularyKey AlwaysGenerateLeads { get; private set; }
+        public VocabularyKey Capturing { get; private set; }
+        public VocabularyKey CapturingData { get; private set; }
+        public VocabularyKey CapturingScanTime { get; private set; }
+        public VocabularyKey CapturingConfigured { get; private set; }
+        public VocabularyKey Entityupdatebehavioronsubmit { get; private set; }
+        public VocabularyKey MarketingFormId { get; private set; }
+        public VocabularyKey FormControlMapping { get; private set; }
+        public VocabularyKey FormFieldMapping { get; private set; }
+        public VocabularyKey FormDefinition { get; private set; }
+        public VocabularyKey FormToSave { get; private set; }
+        public VocabularyKey InsightsPlaceholder { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey ValidForPageType { get; private set; }
+        public VocabularyKey Purpose { get; private set; }
+        public VocabularyKey VisualStyle { get; private set; }
+        public VocabularyKey ExternalHostedFormInstructions { get; private set; }
+        public VocabularyKey Organizationwhitelistdomain { get; private set; }
+        public VocabularyKey OwnerIdName { get; private set; }
+        public VocabularyKey OwnerIdType { get; private set; }
+        public VocabularyKey OwnerIdYomiName { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey MarketingProvided { get; private set; }
+        public VocabularyKey ErrorMessage { get; private set; }
+        public VocabularyKey RedirectURL { get; private set; }
+        public VocabularyKey LimitExceededMessage { get; private set; }
+        public VocabularyKey ConfirmationMessage { get; private set; }
+        public VocabularyKey SuccessImageURL { get; private set; }
+        public VocabularyKey ErrorImageURL { get; private set; }
+        public VocabularyKey Keepsuccessfulsubmissions { get; private set; }
+        public VocabularyKey EnableDoubleOptIn { get; private set; }
+        public VocabularyKey Doubleoptinthankyouformat { get; private set; }
+        public VocabularyKey Doubleoptinthankyouurl { get; private set; }
     }
 }

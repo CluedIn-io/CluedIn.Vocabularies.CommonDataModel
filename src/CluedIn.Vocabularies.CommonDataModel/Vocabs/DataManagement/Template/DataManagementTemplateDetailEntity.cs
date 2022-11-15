@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DataManagementTemplateDetailEntityVocabulary()
         {
-            VocabularyName = "DataManagementTemplateDetailEntity";
+            VocabularyName = "Data Management Template Detail Entity";
             KeyPrefix = "commonDataModel.datamanagementtemplatedetailentity";
             KeySeparator = ".";
             Grouping = "/DataManagementTemplateDetailEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SequenceInLevel = group.Add(new VocabularyKey(nameof(SequenceInLevel), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FailLevelOnError = group.Add(new VocabularyKey(nameof(FailLevelOnError), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FailExecutionUnitOnError = group.Add(new VocabularyKey(nameof(FailExecutionUnitOnError), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TemplateId { get; private set; }
         public VocabularyKey EntityName { get; private set; }
         public VocabularyKey ValidationStatus { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SequenceInLevel { get; private set; }
         public VocabularyKey FailLevelOnError { get; private set; }
         public VocabularyKey FailExecutionUnitOnError { get; private set; }
-
-
     }
 }

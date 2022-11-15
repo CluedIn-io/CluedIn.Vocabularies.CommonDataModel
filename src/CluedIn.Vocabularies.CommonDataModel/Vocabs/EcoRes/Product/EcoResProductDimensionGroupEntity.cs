@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResProductDimensionGroupEntityVocabulary()
         {
-            VocabularyName = "EcoResProductDimensionGroupEntity";
+            VocabularyName = "Eco Res Product Dimension Group Entity";
             KeyPrefix = "commonDataModel.ecoresproductdimensiongroupentity";
             KeySeparator = ".";
             Grouping = "/EcoResProductDimensionGroupEntity";
@@ -37,10 +37,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductVersionDisplayOrder = group.Add(new VocabularyKey(nameof(ProductVersionDisplayOrder), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductVariantNomenclatureName = group.Add(new VocabularyKey(nameof(ProductVariantNomenclatureName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductVariantNomenclatureRecId = group.Add(new VocabularyKey(nameof(ProductVariantNomenclatureRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey GroupName { get; private set; }
         public VocabularyKey GroupDescription { get; private set; }
         public VocabularyKey IsProductConfigurationActive { get; private set; }
@@ -65,7 +63,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProductVersionDisplayOrder { get; private set; }
         public VocabularyKey ProductVariantNomenclatureName { get; private set; }
         public VocabularyKey ProductVariantNomenclatureRecId { get; private set; }
-
-
     }
 }

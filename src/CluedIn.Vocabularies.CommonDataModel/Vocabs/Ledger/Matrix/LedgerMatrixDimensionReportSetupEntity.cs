@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerMatrixDimensionReportSetupEntityVocabulary()
         {
-            VocabularyName = "LedgerMatrixDimensionReportSetupEntity";
+            VocabularyName = "Ledger Matrix Dimension Report Setup Entity";
             KeyPrefix = "commonDataModel.ledgermatrixdimensionreportsetupentity";
             KeySeparator = ".";
             Grouping = "/LedgerMatrixDimensionReportSetupEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DimensionAttribute = group.Add(new VocabularyKey(nameof(DimensionAttribute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DimensionName = group.Add(new VocabularyKey(nameof(DimensionName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DimensionValue = group.Add(new VocabularyKey(nameof(DimensionValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Format { get; private set; }
         public VocabularyKey DimensionMatrix { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey DimensionAttribute { get; private set; }
         public VocabularyKey DimensionName { get; private set; }
         public VocabularyKey DimensionValue { get; private set; }
-
-
     }
 }

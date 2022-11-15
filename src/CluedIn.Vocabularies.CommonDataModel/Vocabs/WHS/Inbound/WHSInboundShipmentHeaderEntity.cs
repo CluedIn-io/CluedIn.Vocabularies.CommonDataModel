@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSInboundShipmentHeaderEntityVocabulary()
         {
-            VocabularyName = "WHSInboundShipmentHeaderEntity";
+            VocabularyName = "WHS Inbound Shipment Header Entity";
             KeyPrefix = "commonDataModel.whsinboundshipmentheaderentity";
             KeySeparator = ".";
             Grouping = "/WHSInboundShipmentHeaderEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 VendorAddressCityInKana = group.Add(new VocabularyKey(nameof(VendorAddressCityInKana), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorAddressZipCode = group.Add(new VocabularyKey(nameof(VendorAddressZipCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InboundLoadId = group.Add(new VocabularyKey(nameof(InboundLoadId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DeliveryTermsCode { get; private set; }
         public VocabularyKey ShipmentId { get; private set; }
         public VocabularyKey VendorShipmentId { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey VendorAddressCityInKana { get; private set; }
         public VocabularyKey VendorAddressZipCode { get; private set; }
         public VocabularyKey InboundLoadId { get; private set; }
-
-
     }
 }

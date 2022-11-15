@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PSAVendPWPTxtEntityVocabulary()
         {
-            VocabularyName = "PSAVendPWPTxtEntity";
+            VocabularyName = "PSA Vend PWP Txt Entity";
             KeyPrefix = "commonDataModel.psavendpwptxtentity";
             KeySeparator = ".";
             Grouping = "/PSAVendPWPTxtEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PayWhenPaidContractLanguage = group.Add(new VocabularyKey(nameof(PayWhenPaidContractLanguage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorRetentionContractLanguage = group.Add(new VocabularyKey(nameof(VendorRetentionContractLanguage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorGroup = group.Add(new VocabularyKey(nameof(VendorGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountCode { get; private set; }
         public VocabularyKey VendorAccount { get; private set; }
         public VocabularyKey PayWhenPaidContractLanguage { get; private set; }
         public VocabularyKey VendorRetentionContractLanguage { get; private set; }
         public VocabularyKey VendorGroup { get; private set; }
-
-
     }
 }

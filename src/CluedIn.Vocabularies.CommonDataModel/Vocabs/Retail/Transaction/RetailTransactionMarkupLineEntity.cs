@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailTransactionMarkupLineEntityVocabulary()
         {
-            VocabularyName = "RetailTransactionMarkupLineEntity";
+            VocabularyName = "Retail Transaction Markup Line Entity";
             KeyPrefix = "commonDataModel.retailtransactionmarkuplineentity";
             KeySeparator = ".";
             Grouping = "/RetailTransactionMarkupLineEntity";
@@ -44,10 +44,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsOverriddenLine = group.Add(new VocabularyKey(nameof(IsOverriddenLine), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxExemptPriceInclusiveOriginalPrice = group.Add(new VocabularyKey(nameof(TaxExemptPriceInclusiveOriginalPrice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxExemptPriceInclusiveReductionAmount = group.Add(new VocabularyKey(nameof(TaxExemptPriceInclusiveReductionAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CalculatedAmount { get; private set; }
         public VocabularyKey Channel { get; private set; }
         public VocabularyKey CurrencyCode { get; private set; }
@@ -79,7 +77,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsOverriddenLine { get; private set; }
         public VocabularyKey TaxExemptPriceInclusiveOriginalPrice { get; private set; }
         public VocabularyKey TaxExemptPriceInclusiveReductionAmount { get; private set; }
-
-
     }
 }

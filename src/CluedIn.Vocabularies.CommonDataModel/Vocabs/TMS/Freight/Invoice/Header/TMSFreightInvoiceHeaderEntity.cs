@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSFreightInvoiceHeaderEntityVocabulary()
         {
-            VocabularyName = "TMSFreightInvoiceHeaderEntity";
+            VocabularyName = "TMS Freight Invoice Header Entity";
             KeyPrefix = "commonDataModel.tmsfreightinvoiceheaderentity";
             KeySeparator = ".";
             Grouping = "/TMSFreightInvoiceHeaderEntity";
@@ -58,10 +58,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DefaultVoyageNumber = group.Add(new VocabularyKey(nameof(DefaultVoyageNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TotalFreightWeight = group.Add(new VocabularyKey(nameof(TotalFreightWeight), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FreightWeightUnitId = group.Add(new VocabularyKey(nameof(FreightWeightUnitId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ShippingCarrierVendorAccountNumber { get; private set; }
         public VocabularyKey DestinationCountryRegionId { get; private set; }
         public VocabularyKey IsInvoiceAutomaticallyMatched { get; private set; }
@@ -107,7 +105,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DefaultVoyageNumber { get; private set; }
         public VocabularyKey TotalFreightWeight { get; private set; }
         public VocabularyKey FreightWeightUnitId { get; private set; }
-
-
     }
 }

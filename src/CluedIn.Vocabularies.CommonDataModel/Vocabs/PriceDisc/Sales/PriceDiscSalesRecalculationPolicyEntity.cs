@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PriceDiscSalesRecalculationPolicyEntityVocabulary()
         {
-            VocabularyName = "PriceDiscSalesRecalculationPolicyEntity";
+            VocabularyName = "Price Disc Sales Recalculation Policy Entity";
             KeyPrefix = "commonDataModel.pricediscsalesrecalculationpolicyentity";
             KeySeparator = ".";
             Grouping = "/PriceDiscSalesRecalculationPolicyEntity";
@@ -14,12 +14,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             AddGroup("PriceDiscSalesRecalculationPolicyEntity Details", group =>
             {
                 TradeAgreementSourceType = group.Add(new VocabularyKey(nameof(TradeAgreementSourceType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TradeAgreementSourceType { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProdBatchOrderCoProductEntityVocabulary()
         {
-            VocabularyName = "ProdBatchOrderCoProductEntity";
+            VocabularyName = "Prod Batch Order Co Product Entity";
             KeyPrefix = "commonDataModel.prodbatchordercoproductentity";
             KeySeparator = ".";
             Grouping = "/ProdBatchOrderCoProductEntity";
@@ -65,10 +65,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductStyleId = group.Add(new VocabularyKey(nameof(ProductStyleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductVersionId = group.Add(new VocabularyKey(nameof(ProductVersionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ItemBatchNumber = group.Add(new VocabularyKey(nameof(ItemBatchNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BatchOrderRemainderStatus { get; private set; }
         public VocabularyKey EstimatedDate { get; private set; }
         public VocabularyKey CoProductQuantity { get; private set; }
@@ -121,7 +119,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProductStyleId { get; private set; }
         public VocabularyKey ProductVersionId { get; private set; }
         public VocabularyKey ItemBatchNumber { get; private set; }
-
-
     }
 }

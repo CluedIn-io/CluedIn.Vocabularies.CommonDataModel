@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FiscalOrganizationEntityVocabulary()
         {
-            VocabularyName = "FiscalOrganizationEntity";
+            VocabularyName = "Fiscal Organization Entity";
             KeyPrefix = "commonDataModel.fiscalorganizationentity";
             KeySeparator = ".";
             Grouping = "/FiscalOrganizationEntity";
@@ -33,10 +33,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SCPParticipation = group.Add(new VocabularyKey(nameof(SCPParticipation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesTaxCOFINSExpenseDisplayValue = group.Add(new VocabularyKey(nameof(SalesTaxCOFINSExpenseDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesTaxPISExpenseDisplayValue = group.Add(new VocabularyKey(nameof(SalesTaxPISExpenseDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TypeOfActivity { get; private set; }
         public VocabularyKey TypeOfAssessmentContribution { get; private set; }
         public VocabularyKey BookingAndAssessmentCriteria { get; private set; }
@@ -57,7 +55,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SCPParticipation { get; private set; }
         public VocabularyKey SalesTaxCOFINSExpenseDisplayValue { get; private set; }
         public VocabularyKey SalesTaxPISExpenseDisplayValue { get; private set; }
-
-
     }
 }

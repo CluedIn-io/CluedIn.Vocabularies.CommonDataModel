@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FiscalPeriodDateEntityVocabulary()
         {
-            VocabularyName = "FiscalPeriodDateEntity";
+            VocabularyName = "Fiscal Period Date Entity";
             KeyPrefix = "commonDataModel.fiscalperioddateentity";
             KeySeparator = ".";
             Grouping = "/FiscalPeriodDateEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PeriodOffset = group.Add(new VocabularyKey(nameof(PeriodOffset), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 QuarterOffset = group.Add(new VocabularyKey(nameof(QuarterOffset), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 YearOffset = group.Add(new VocabularyKey(nameof(YearOffset), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CalendarId { get; private set; }
         public VocabularyKey CalendarRecId { get; private set; }
         public VocabularyKey GregorianDate { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PeriodOffset { get; private set; }
         public VocabularyKey QuarterOffset { get; private set; }
         public VocabularyKey YearOffset { get; private set; }
-
-
     }
 }

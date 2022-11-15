@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSContainerTypeV2EntityVocabulary()
         {
-            VocabularyName = "WHSContainerTypeV2Entity";
+            VocabularyName = "WHS Container Type V2 Entity";
             KeyPrefix = "commonDataModel.whscontainertypev2entity";
             KeySeparator = ".";
             Grouping = "/WHSContainerTypeV2Entity";
@@ -31,10 +31,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SecondContainerAttributeValue = group.Add(new VocabularyKey(nameof(SecondContainerAttributeValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ThirdContainerAttributeValue = group.Add(new VocabularyKey(nameof(ThirdContainerAttributeValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FourthContainerAttributeValue = group.Add(new VocabularyKey(nameof(FourthContainerAttributeValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TypeId { get; private set; }
         public VocabularyKey TypeDescription { get; private set; }
         public VocabularyKey MaximumContainerizationHeight { get; private set; }
@@ -53,7 +51,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SecondContainerAttributeValue { get; private set; }
         public VocabularyKey ThirdContainerAttributeValue { get; private set; }
         public VocabularyKey FourthContainerAttributeValue { get; private set; }
-
-
     }
 }

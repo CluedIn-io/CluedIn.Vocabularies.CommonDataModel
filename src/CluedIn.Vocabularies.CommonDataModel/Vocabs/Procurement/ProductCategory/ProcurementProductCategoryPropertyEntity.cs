@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProcurementProductCategoryPropertyEntityVocabulary()
         {
-            VocabularyName = "ProcurementProductCategoryPropertyEntity";
+            VocabularyName = "Procurement Product Category Property Entity";
             KeyPrefix = "commonDataModel.procurementproductcategorypropertyentity";
             KeySeparator = ".";
             Grouping = "/ProcurementProductCategoryPropertyEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsInheritingParentProductCategoryProductAttributes = group.Add(new VocabularyKey(nameof(IsInheritingParentProductCategoryProductAttributes), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsInheritingParentProductCategoryVendorEvaluatiionCriterionGroups = group.Add(new VocabularyKey(nameof(IsInheritingParentProductCategoryVendorEvaluatiionCriterionGroups), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsInheritingParentProductCategoryQuestionnaires = group.Add(new VocabularyKey(nameof(IsInheritingParentProductCategoryQuestionnaires), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductCategoryHierarchyName { get; private set; }
         public VocabularyKey ProductCategoryName { get; private set; }
         public VocabularyKey IsInheritingParentProductCategoryVendors { get; private set; }
         public VocabularyKey IsInheritingParentProductCategoryProductAttributes { get; private set; }
         public VocabularyKey IsInheritingParentProductCategoryVendorEvaluatiionCriterionGroups { get; private set; }
         public VocabularyKey IsInheritingParentProductCategoryQuestionnaires { get; private set; }
-
-
     }
 }

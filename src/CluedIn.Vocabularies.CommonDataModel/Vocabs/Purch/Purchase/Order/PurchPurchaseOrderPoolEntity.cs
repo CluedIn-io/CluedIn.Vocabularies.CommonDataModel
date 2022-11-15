@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPurchaseOrderPoolEntityVocabulary()
         {
-            VocabularyName = "PurchPurchaseOrderPoolEntity";
+            VocabularyName = "Purch Purchase Order Pool Entity";
             KeyPrefix = "commonDataModel.purchpurchaseorderpoolentity";
             KeySeparator = ".";
             Grouping = "/PurchPurchaseOrderPoolEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 PoolName = group.Add(new VocabularyKey(nameof(PoolName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PoolId = group.Add(new VocabularyKey(nameof(PoolId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PoolName { get; private set; }
         public VocabularyKey PoolId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PdsCommodityCostBasisTypeEntityVocabulary()
         {
-            VocabularyName = "PdsCommodityCostBasisTypeEntity";
+            VocabularyName = "Pds Commodity Cost Basis Type Entity";
             KeyPrefix = "commonDataModel.pdscommoditycostbasistypeentity";
             KeySeparator = ".";
             Grouping = "/PdsCommodityCostBasisTypeEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 TypeId = group.Add(new VocabularyKey(nameof(TypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TypeDescription = group.Add(new VocabularyKey(nameof(TypeDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TypeId { get; private set; }
         public VocabularyKey TypeDescription { get; private set; }
-
-
     }
 }

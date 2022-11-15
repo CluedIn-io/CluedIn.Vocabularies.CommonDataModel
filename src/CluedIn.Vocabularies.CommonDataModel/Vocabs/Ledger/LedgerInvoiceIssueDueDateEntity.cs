@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerInvoiceIssueDueDateEntityVocabulary()
         {
-            VocabularyName = "LedgerInvoiceIssueDueDateEntity";
+            VocabularyName = "Ledger Invoice Issue Due Date Entity";
             KeyPrefix = "commonDataModel.ledgerinvoiceissueduedateentity";
             KeySeparator = ".";
             Grouping = "/LedgerInvoiceIssueDueDateEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DateIntervalCode = group.Add(new VocabularyKey(nameof(DateIntervalCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StartDate = group.Add(new VocabularyKey(nameof(StartDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Company = group.Add(new VocabularyKey(nameof(Company), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CountryRegionType { get; private set; }
         public VocabularyKey DateIntervalCode { get; private set; }
         public VocabularyKey StartDate { get; private set; }
         public VocabularyKey Company { get; private set; }
-
-
     }
 }

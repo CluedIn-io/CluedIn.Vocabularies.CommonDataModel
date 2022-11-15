@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JournalizingTransactionPostingDefinitionBankEntityVocabulary()
         {
-            VocabularyName = "JournalizingTransactionPostingDefinitionBankEntity";
+            VocabularyName = "Journalizing Transaction Posting Definition Bank Entity";
             KeyPrefix = "commonDataModel.journalizingtransactionpostingdefinitionbankentity";
             KeySeparator = ".";
             Grouping = "/JournalizingTransactionPostingDefinitionBankEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MethodOfPaymentTableAll = group.Add(new VocabularyKey(nameof(MethodOfPaymentTableAll), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MethodOfPayment = group.Add(new VocabularyKey(nameof(MethodOfPayment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PostingDefinitionId = group.Add(new VocabularyKey(nameof(PostingDefinitionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BankCodeTableGroupAll { get; private set; }
         public VocabularyKey BankRelationGroup { get; private set; }
         public VocabularyKey BankRelationTable { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey MethodOfPaymentTableAll { get; private set; }
         public VocabularyKey MethodOfPayment { get; private set; }
         public VocabularyKey PostingDefinitionId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ElectronicPaymentBankFolderEntityVocabulary()
         {
-            VocabularyName = "ElectronicPaymentBankFolderEntity";
+            VocabularyName = "Electronic Payment Bank Folder Entity";
             KeyPrefix = "commonDataModel.electronicpaymentbankfolderentity";
             KeySeparator = ".";
             Grouping = "/ElectronicPaymentBankFolderEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BankFolder = group.Add(new VocabularyKey(nameof(BankFolder), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BankFolderCode = group.Add(new VocabularyKey(nameof(BankFolderCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LayoutGroupId { get; private set; }
         public VocabularyKey BankFolder { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey BankFolderCode { get; private set; }
-
-
     }
 }

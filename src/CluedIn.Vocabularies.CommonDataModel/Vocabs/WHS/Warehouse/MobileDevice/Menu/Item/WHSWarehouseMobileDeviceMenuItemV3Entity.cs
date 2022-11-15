@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseMobileDeviceMenuItemV3EntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseMobileDeviceMenuItemV3Entity";
+            VocabularyName = "WHS Warehouse Mobile Device Menu Item V3 Entity";
             KeyPrefix = "commonDataModel.whswarehousemobiledevicemenuitemv3entity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseMobileDeviceMenuItemV3Entity";
@@ -79,10 +79,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WillInboundProcessesUseExistingCatchWeightTag = group.Add(new VocabularyKey(nameof(WillInboundProcessesUseExistingCatchWeightTag), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReceivingSummaryPageDisplayRule = group.Add(new VocabularyKey(nameof(ReceivingSummaryPageDisplayRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsFastValidationEnabled = group.Add(new VocabularyKey(nameof(IsFastValidationEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey MenuItemName { get; private set; }
         public VocabularyKey Title { get; private set; }
         public VocabularyKey MenuItemMode { get; private set; }
@@ -149,7 +147,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WillInboundProcessesUseExistingCatchWeightTag { get; private set; }
         public VocabularyKey ReceivingSummaryPageDisplayRule { get; private set; }
         public VocabularyKey IsFastValidationEnabled { get; private set; }
-
-
     }
 }

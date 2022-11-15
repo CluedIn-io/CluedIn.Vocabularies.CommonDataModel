@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventWarehouseInventoryStatusOnHandV2EntityVocabulary()
         {
-            VocabularyName = "InventWarehouseInventoryStatusOnHandV2Entity";
+            VocabularyName = "Invent Warehouse Inventory Status On Hand V2 Entity";
             KeyPrefix = "commonDataModel.inventwarehouseinventorystatusonhandv2entity";
             KeySeparator = ".";
             Grouping = "/InventWarehouseInventoryStatusOnHandV2Entity";
@@ -37,10 +37,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OnOrderQuantity = group.Add(new VocabularyKey(nameof(OnOrderQuantity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TotalAvailableQuantity = group.Add(new VocabularyKey(nameof(TotalAvailableQuantity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AreWarehouseManagementProcessesUsed = group.Add(new VocabularyKey(nameof(AreWarehouseManagementProcessesUsed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ItemNumber { get; private set; }
         public VocabularyKey ProductName { get; private set; }
         public VocabularyKey ProductColorId { get; private set; }
@@ -65,7 +63,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OnOrderQuantity { get; private set; }
         public VocabularyKey TotalAvailableQuantity { get; private set; }
         public VocabularyKey AreWarehouseManagementProcessesUsed { get; private set; }
-
-
     }
 }

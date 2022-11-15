@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerEliminationRuleEntityVocabulary()
         {
-            VocabularyName = "LedgerEliminationRuleEntity";
+            VocabularyName = "Ledger Elimination Rule Entity";
             KeyPrefix = "commonDataModel.ledgereliminationruleentity";
             KeySeparator = ".";
             Grouping = "/LedgerEliminationRuleEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RuleId = group.Add(new VocabularyKey(nameof(RuleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 JournalName = group.Add(new VocabularyKey(nameof(JournalName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SourceCompany = group.Add(new VocabularyKey(nameof(SourceCompany), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Active { get; private set; }
         public VocabularyKey DateLastRun { get; private set; }
         public VocabularyKey Description { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RuleId { get; private set; }
         public VocabularyKey JournalName { get; private set; }
         public VocabularyKey SourceCompany { get; private set; }
-
-
     }
 }

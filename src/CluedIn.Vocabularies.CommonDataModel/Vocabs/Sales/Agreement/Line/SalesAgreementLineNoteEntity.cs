@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesAgreementLineNoteEntityVocabulary()
         {
-            VocabularyName = "SalesAgreementLineNoteEntity";
+            VocabularyName = "Sales Agreement Line Note Entity";
             KeyPrefix = "commonDataModel.salesagreementlinenoteentity";
             KeySeparator = ".";
             Grouping = "/SalesAgreementLineNoteEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AccessRestriction = group.Add(new VocabularyKey(nameof(AccessRestriction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AttachingUserId = group.Add(new VocabularyKey(nameof(AttachingUserId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AttachedDateTime = group.Add(new VocabularyKey(nameof(AttachedDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SalesAgreementLegalEntityId { get; private set; }
         public VocabularyKey SalesAgreementId { get; private set; }
         public VocabularyKey LineNumber { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AccessRestriction { get; private set; }
         public VocabularyKey AttachingUserId { get; private set; }
         public VocabularyKey AttachedDateTime { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSCrossDockingTemplateSupplySourceEntityVocabulary()
         {
-            VocabularyName = "WHSCrossDockingTemplateSupplySourceEntity";
+            VocabularyName = "WHS Cross Docking Template Supply Source Entity";
             KeyPrefix = "commonDataModel.whscrossdockingtemplatesupplysourceentity";
             KeySeparator = ".";
             Grouping = "/WHSCrossDockingTemplateSupplySourceEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SupplySource = group.Add(new VocabularyKey(nameof(SupplySource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SupplyQuery = group.Add(new VocabularyKey(nameof(SupplyQuery), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SequenceNumber = group.Add(new VocabularyKey(nameof(SequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CrossDockingTemplateId { get; private set; }
         public VocabularyKey SupplySource { get; private set; }
         public VocabularyKey SupplyQuery { get; private set; }
         public VocabularyKey SequenceNumber { get; private set; }
-
-
     }
 }

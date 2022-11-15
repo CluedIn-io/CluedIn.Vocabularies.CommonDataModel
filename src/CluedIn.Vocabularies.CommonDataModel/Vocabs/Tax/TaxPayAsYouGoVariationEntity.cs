@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxPayAsYouGoVariationEntityVocabulary()
         {
-            VocabularyName = "TaxPayAsYouGoVariationEntity";
+            VocabularyName = "Tax Pay As You Go Variation Entity";
             KeyPrefix = "commonDataModel.taxpayasyougovariationentity";
             KeySeparator = ".";
             Grouping = "/TaxPayAsYouGoVariationEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReasonCode = group.Add(new VocabularyKey(nameof(ReasonCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey ReasonCode { get; private set; }
-
-
     }
 }

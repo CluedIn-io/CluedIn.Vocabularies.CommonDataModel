@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjCDSContractLineMilestoneImportEntityVocabulary()
         {
-            VocabularyName = "ProjCDSContractLineMilestoneImportEntity";
+            VocabularyName = "Proj CDS Contract Line Milestone Import Entity";
             KeyPrefix = "commonDataModel.projcdscontractlinemilestoneimportentity";
             KeySeparator = ".";
             Grouping = "/ProjCDSContractLineMilestoneImportEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CurrencyId = group.Add(new VocabularyKey(nameof(CurrencyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Amount = group.Add(new VocabularyKey(nameof(Amount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TransactionId { get; private set; }
         public VocabularyKey ContractLineRef { get; private set; }
         public VocabularyKey InvoiceDate { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey CurrencyId { get; private set; }
         public VocabularyKey Amount { get; private set; }
-
-
     }
 }

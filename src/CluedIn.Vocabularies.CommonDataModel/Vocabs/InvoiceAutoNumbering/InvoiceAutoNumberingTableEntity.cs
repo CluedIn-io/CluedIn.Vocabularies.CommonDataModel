@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InvoiceAutoNumberingTableEntityVocabulary()
         {
-            VocabularyName = "InvoiceAutoNumberingTableEntity";
+            VocabularyName = "Invoice Auto Numbering Table Entity";
             KeyPrefix = "commonDataModel.invoiceautonumberingtableentity";
             KeySeparator = ".";
             Grouping = "/InvoiceAutoNumberingTableEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 NumberSequenceCode = group.Add(new VocabularyKey(nameof(NumberSequenceCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Module = group.Add(new VocabularyKey(nameof(Module), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Continue = group.Add(new VocabularyKey(nameof(Continue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Type { get; private set; }
         public VocabularyKey Retail { get; private set; }
         public VocabularyKey AccountCode { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey NumberSequenceCode { get; private set; }
         public VocabularyKey Module { get; private set; }
         public VocabularyKey Continue { get; private set; }
-
-
     }
 }

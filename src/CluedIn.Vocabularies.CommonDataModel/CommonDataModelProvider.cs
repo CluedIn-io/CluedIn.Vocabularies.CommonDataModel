@@ -15,7 +15,7 @@ namespace CluedIn.Provider.CommonDataModel
     public class CommonDataModelProvider : IProvider, IProviderMetadata, IExtendedProviderMetadata
     {
         private static IProviderMetadata _providerMetadata;
-        private static IProviderMetadata metadata
+        private static IProviderMetadata Metadata
         {
             get
             {
@@ -42,29 +42,29 @@ namespace CluedIn.Provider.CommonDataModel
 
         public bool ScheduleCrawlJobs => false;
 
-        public string Name => metadata.Name;
+        public string Name => Metadata.Name;
 
-        public string Type => metadata.Type;
+        public string Type => Metadata.Type;
 
-        public bool SupportsWebHooks => metadata.SupportsWebHooks;
+        public bool SupportsWebHooks => Metadata.SupportsWebHooks;
 
-        public bool RequiresAppInstall => metadata.RequiresAppInstall;
+        public bool RequiresAppInstall => Metadata.RequiresAppInstall;
 
-        public string AppInstallUrl => metadata.AppInstallUrl;
+        public string AppInstallUrl => Metadata.AppInstallUrl;
 
-        public bool SupportsConfiguration => metadata.SupportsConfiguration;
+        public bool SupportsConfiguration => Metadata.SupportsConfiguration;
 
-        public bool SupportsAutomaticWebhookCreation => metadata.SupportsAutomaticWebhookCreation;
+        public bool SupportsAutomaticWebhookCreation => Metadata.SupportsAutomaticWebhookCreation;
 
-        public string ReAuthEndpoint => metadata.ReAuthEndpoint;
+        public string ReAuthEndpoint => Metadata.ReAuthEndpoint;
 
-        public string ComponentName => metadata.ComponentName;
+        public string ComponentName => Metadata.ComponentName;
 
-        public ComponentEmailDetails ComponentEmailDetails => metadata.ComponentEmailDetails;
+        public ComponentEmailDetails ComponentEmailDetails => Metadata.ComponentEmailDetails;
 
-        public IEnumerable<string> AuthTypes => metadata.AuthTypes;
+        public IEnumerable<string> AuthTypes => Metadata.AuthTypes;
 
-        public Guid Id => metadata.Id;
+        public Guid Id => Metadata.Id;
 
         public string Icon => "Resources.cluedin.png";
 

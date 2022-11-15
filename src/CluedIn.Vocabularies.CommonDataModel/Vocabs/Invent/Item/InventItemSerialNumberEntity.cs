@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventItemSerialNumberEntityVocabulary()
         {
-            VocabularyName = "InventItemSerialNumberEntity";
+            VocabularyName = "Invent Item Serial Number Entity";
             KeyPrefix = "commonDataModel.inventitemserialnumberentity";
             KeySeparator = ".";
             Grouping = "/InventItemSerialNumberEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SerialNumber = group.Add(new VocabularyKey(nameof(SerialNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ItemNumber = group.Add(new VocabularyKey(nameof(ItemNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ManufacturingDate = group.Add(new VocabularyKey(nameof(ManufacturingDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey SerialNumber { get; private set; }
         public VocabularyKey ItemNumber { get; private set; }
         public VocabularyKey ManufacturingDate { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CommissionCalculationEntityVocabulary()
         {
-            VocabularyName = "CommissionCalculationEntity";
+            VocabularyName = "Commission Calculation Entity";
             KeyPrefix = "commonDataModel.commissioncalculationentity";
             KeySeparator = ".";
             Grouping = "/CommissionCalculationEntity";
@@ -33,10 +33,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 UpperThreshold_IT = group.Add(new VocabularyKey(nameof(UpperThreshold_IT), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UseThresholds_IT = group.Add(new VocabularyKey(nameof(UseThresholds_IT), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LowerThreshold_IT = group.Add(new VocabularyKey(nameof(LowerThreshold_IT), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ItemCode { get; private set; }
         public VocabularyKey ItemRelation { get; private set; }
         public VocabularyKey ItemNumber { get; private set; }
@@ -57,7 +55,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey UpperThreshold_IT { get; private set; }
         public VocabularyKey UseThresholds_IT { get; private set; }
         public VocabularyKey LowerThreshold_IT { get; private set; }
-
-
     }
 }

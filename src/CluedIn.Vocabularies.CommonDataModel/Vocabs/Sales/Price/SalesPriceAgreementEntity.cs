@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesPriceAgreementEntityVocabulary()
         {
-            VocabularyName = "SalesPriceAgreementEntity";
+            VocabularyName = "Sales Price Agreement Entity";
             KeyPrefix = "commonDataModel.salespriceagreemententity";
             KeySeparator = ".";
             Grouping = "/SalesPriceAgreementEntity";
@@ -44,10 +44,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CustomerAccountNumber = group.Add(new VocabularyKey(nameof(CustomerAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PriceCustomerGroupCode = group.Add(new VocabularyKey(nameof(PriceCustomerGroupCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ItemNumber = group.Add(new VocabularyKey(nameof(ItemNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountCode { get; private set; }
         public VocabularyKey AccountRelation { get; private set; }
         public VocabularyKey InventDimId { get; private set; }
@@ -79,7 +77,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CustomerAccountNumber { get; private set; }
         public VocabularyKey PriceCustomerGroupCode { get; private set; }
         public VocabularyKey ItemNumber { get; private set; }
-
-
     }
 }

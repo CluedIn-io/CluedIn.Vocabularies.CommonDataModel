@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankCodaTransactionGroupEntityVocabulary()
         {
-            VocabularyName = "BankCodaTransactionGroupEntity";
+            VocabularyName = "Bank Coda Transaction Group Entity";
             KeyPrefix = "commonDataModel.bankcodatransactiongroupentity";
             KeySeparator = ".";
             Grouping = "/BankCodaTransactionGroupEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TransactionDescription = group.Add(new VocabularyKey(nameof(TransactionDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransactionCategory = group.Add(new VocabularyKey(nameof(TransactionCategory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CategoryDescription = group.Add(new VocabularyKey(nameof(CategoryDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey Code { get; private set; }
         public VocabularyKey Transaction { get; private set; }
         public VocabularyKey TransactionDescription { get; private set; }
         public VocabularyKey TransactionCategory { get; private set; }
         public VocabularyKey CategoryDescription { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SystemSegregationOfDutiesConflictEntityVocabulary()
         {
-            VocabularyName = "SystemSegregationOfDutiesConflictEntity";
+            VocabularyName = "System Segregation Of Duties Conflict Entity";
             KeyPrefix = "commonDataModel.systemsegregationofdutiesconflictentity";
             KeySeparator = ".";
             Grouping = "/SystemSegregationOfDutiesConflictEntity";
@@ -33,10 +33,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AssignmentMode = group.Add(new VocabularyKey(nameof(AssignmentMode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReasonForOverride = group.Add(new VocabularyKey(nameof(ReasonForOverride), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Resolution = group.Add(new VocabularyKey(nameof(Resolution), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SegregationOfDutiesRule { get; private set; }
         public VocabularyKey SegregationOfDutiesRuleValidFrom { get; private set; }
         public VocabularyKey SegregationOfDutiesRuleValidTo { get; private set; }
@@ -57,7 +55,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AssignmentMode { get; private set; }
         public VocabularyKey ReasonForOverride { get; private set; }
         public VocabularyKey Resolution { get; private set; }
-
-
     }
 }

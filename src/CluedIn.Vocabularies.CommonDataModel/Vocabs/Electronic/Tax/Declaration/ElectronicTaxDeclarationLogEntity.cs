@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ElectronicTaxDeclarationLogEntityVocabulary()
         {
-            VocabularyName = "ElectronicTaxDeclarationLogEntity";
+            VocabularyName = "Electronic Tax Declaration Log Entity";
             KeyPrefix = "commonDataModel.electronictaxdeclarationlogentity";
             KeySeparator = ".";
             Grouping = "/ElectronicTaxDeclarationLogEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PeriodValue = group.Add(new VocabularyKey(nameof(PeriodValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PeriodYear = group.Add(new VocabularyKey(nameof(PeriodYear), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Company = group.Add(new VocabularyKey(nameof(Company), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CorrectedDeclaration { get; private set; }
         public VocabularyKey ExecutionDate { get; private set; }
         public VocabularyKey DocumentsSubmittedSeparately { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PeriodValue { get; private set; }
         public VocabularyKey PeriodYear { get; private set; }
         public VocabularyKey Company { get; private set; }
-
-
     }
 }

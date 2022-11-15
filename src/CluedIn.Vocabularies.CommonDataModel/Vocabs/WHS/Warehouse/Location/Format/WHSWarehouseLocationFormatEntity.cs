@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseLocationFormatEntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseLocationFormatEntity";
+            VocabularyName = "WHS Warehouse Location Format Entity";
             KeyPrefix = "commonDataModel.whswarehouselocationformatentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseLocationFormatEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 LocationFormatId = group.Add(new VocabularyKey(nameof(LocationFormatId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LocationFormatName = group.Add(new VocabularyKey(nameof(LocationFormatName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LocationFormatId { get; private set; }
         public VocabularyKey LocationFormatName { get; private set; }
-
-
     }
 }

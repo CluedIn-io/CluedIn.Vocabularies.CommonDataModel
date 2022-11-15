@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReqDemPlanAggregatedDemandPerAllocationKeyEntityVocabulary()
         {
-            VocabularyName = "ReqDemPlanAggregatedDemandPerAllocationKeyEntity";
+            VocabularyName = "Req Dem Plan Aggregated Demand Per Allocation Key Entity";
             KeyPrefix = "commonDataModel.reqdemplanaggregateddemandperallocationkeyentity";
             KeySeparator = ".";
             Grouping = "/ReqDemPlanAggregatedDemandPerAllocationKeyEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DemandQuantity = group.Add(new VocabularyKey(nameof(DemandQuantity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DemandQuantityConfidenceIntervalLowerBound = group.Add(new VocabularyKey(nameof(DemandQuantityConfidenceIntervalLowerBound), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DemandQuantityConfidenceIntervalUpperBound = group.Add(new VocabularyKey(nameof(DemandQuantityConfidenceIntervalUpperBound), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DemandCategory { get; private set; }
         public VocabularyKey DeliveringSiteId { get; private set; }
         public VocabularyKey ProductAllocationKeyId { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DemandQuantity { get; private set; }
         public VocabularyKey DemandQuantityConfidenceIntervalLowerBound { get; private set; }
         public VocabularyKey DemandQuantityConfidenceIntervalUpperBound { get; private set; }
-
-
     }
 }

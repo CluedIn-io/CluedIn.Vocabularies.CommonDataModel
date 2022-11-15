@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmPositionHierarchyTypeEntityVocabulary()
         {
-            VocabularyName = "HcmPositionHierarchyTypeEntity";
+            VocabularyName = "Hcm Position Hierarchy Type Entity";
             KeyPrefix = "commonDataModel.hcmpositionhierarchytypeentity";
             KeySeparator = ".";
             Grouping = "/HcmPositionHierarchyTypeEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 HierarchyType = group.Add(new VocabularyKey(nameof(HierarchyType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsImmutable = group.Add(new VocabularyKey(nameof(IsImmutable), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey HierarchyType { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey IsImmutable { get; private set; }
-
-
     }
 }

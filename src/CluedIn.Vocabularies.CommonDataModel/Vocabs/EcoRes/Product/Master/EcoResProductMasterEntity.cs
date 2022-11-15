@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResProductMasterEntityVocabulary()
         {
-            VocabularyName = "EcoResProductMasterEntity";
+            VocabularyName = "Eco Res Product Master Entity";
             KeyPrefix = "commonDataModel.ecoresproductmasterentity";
             KeySeparator = ".";
             Grouping = "/EcoResProductMasterEntity";
@@ -34,10 +34,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 STCCCode = group.Add(new VocabularyKey(nameof(STCCCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 HarmonizedSystemCode = group.Add(new VocabularyKey(nameof(HarmonizedSystemCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NMFCCode = group.Add(new VocabularyKey(nameof(NMFCCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductType { get; private set; }
         public VocabularyKey ProductNumber { get; private set; }
         public VocabularyKey ProductName { get; private set; }
@@ -59,7 +57,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey STCCCode { get; private set; }
         public VocabularyKey HarmonizedSystemCode { get; private set; }
         public VocabularyKey NMFCCode { get; private set; }
-
-
     }
 }

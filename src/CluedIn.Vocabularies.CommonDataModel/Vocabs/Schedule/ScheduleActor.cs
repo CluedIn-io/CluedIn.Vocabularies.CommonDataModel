@@ -6,26 +6,22 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ScheduleActorVocabulary()
         {
-            VocabularyName = "ScheduleActor";
+            VocabularyName = "Schedule Actor";
             KeyPrefix = "commonDataModel.scheduleactor";
             KeySeparator = ".";
             Grouping = "/ScheduleActor";
 
             AddGroup("ScheduleActor Details", group =>
             {
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                scheduleActorId = group.Add(new VocabularyKey(nameof(scheduleActorId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ScheduleActorId = group.Add(new VocabularyKey(nameof(ScheduleActorId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey scheduleActorId { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey ScheduleActorId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

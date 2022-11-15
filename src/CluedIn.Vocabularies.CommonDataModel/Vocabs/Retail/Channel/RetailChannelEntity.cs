@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailChannelEntityVocabulary()
         {
-            VocabularyName = "RetailChannelEntity";
+            VocabularyName = "Retail Channel Entity";
             KeyPrefix = "commonDataModel.retailchannelentity";
             KeySeparator = ".";
             Grouping = "/RetailChannelEntity";
@@ -42,47 +42,47 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MCRPriceOverrideRetailInfocodeId = group.Add(new VocabularyKey(nameof(MCRPriceOverrideRetailInfocodeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MCRReasonCodeRetailInfocodeId = group.Add(new VocabularyKey(nameof(MCRReasonCodeRetailInfocodeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OnlineCatalogName = group.Add(new VocabularyKey(nameof(OnlineCatalogName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                closingMethod = group.Add(new VocabularyKey(nameof(closingMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                createLabelsForZeroPrice = group.Add(new VocabularyKey(nameof(createLabelsForZeroPrice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                cultureName = group.Add(new VocabularyKey(nameof(cultureName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ClosingMethod = group.Add(new VocabularyKey(nameof(ClosingMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreateLabelsForZeroPrice = group.Add(new VocabularyKey(nameof(CreateLabelsForZeroPrice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CultureName = group.Add(new VocabularyKey(nameof(CultureName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DatabaseName = group.Add(new VocabularyKey(nameof(DatabaseName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EFTStoreNumber = group.Add(new VocabularyKey(nameof(EFTStoreNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                functionalityProfile = group.Add(new VocabularyKey(nameof(functionalityProfile), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                generatesItemLabels = group.Add(new VocabularyKey(nameof(generatesItemLabels), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                generatesShelfLabels = group.Add(new VocabularyKey(nameof(generatesShelfLabels), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                hideTrainingMode = group.Add(new VocabularyKey(nameof(hideTrainingMode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FunctionalityProfile = group.Add(new VocabularyKey(nameof(FunctionalityProfile), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                GeneratesItemLabels = group.Add(new VocabularyKey(nameof(GeneratesItemLabels), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                GeneratesShelfLabels = group.Add(new VocabularyKey(nameof(GeneratesShelfLabels), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                HideTrainingMode = group.Add(new VocabularyKey(nameof(HideTrainingMode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InventLocationIdForCustomerOrder = group.Add(new VocabularyKey(nameof(InventLocationIdForCustomerOrder), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                inventoryLookup = group.Add(new VocabularyKey(nameof(inventoryLookup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                itemIdOnReceipt = group.Add(new VocabularyKey(nameof(itemIdOnReceipt), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                maximumPostingDifference = group.Add(new VocabularyKey(nameof(maximumPostingDifference), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                maximumTextLengthOnReceipt = group.Add(new VocabularyKey(nameof(maximumTextLengthOnReceipt), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                maxRoundingAmount = group.Add(new VocabularyKey(nameof(maxRoundingAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                maxRoundingTaxAmount = group.Add(new VocabularyKey(nameof(maxRoundingTaxAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                maxShiftDifferenceAmount = group.Add(new VocabularyKey(nameof(maxShiftDifferenceAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                maxTransactionDifferenceAmount = group.Add(new VocabularyKey(nameof(maxTransactionDifferenceAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                numberOfTopOrBottomLines = group.Add(new VocabularyKey(nameof(numberOfTopOrBottomLines), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InventoryLookup = group.Add(new VocabularyKey(nameof(InventoryLookup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ItemIdOnReceipt = group.Add(new VocabularyKey(nameof(ItemIdOnReceipt), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MaximumPostingDifference = group.Add(new VocabularyKey(nameof(MaximumPostingDifference), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MaximumTextLengthOnReceipt = group.Add(new VocabularyKey(nameof(MaximumTextLengthOnReceipt), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MaxRoundingAmount = group.Add(new VocabularyKey(nameof(MaxRoundingAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MaxRoundingTaxAmount = group.Add(new VocabularyKey(nameof(MaxRoundingTaxAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MaxShiftDifferenceAmount = group.Add(new VocabularyKey(nameof(MaxShiftDifferenceAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MaxTransactionDifferenceAmount = group.Add(new VocabularyKey(nameof(MaxTransactionDifferenceAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                NumberOfTopOrBottomLines = group.Add(new VocabularyKey(nameof(NumberOfTopOrBottomLines), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OfflineProfile = group.Add(new VocabularyKey(nameof(OfflineProfile), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                oneStatementPerDay = group.Add(new VocabularyKey(nameof(oneStatementPerDay), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                openFrom = group.Add(new VocabularyKey(nameof(openFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                openTo = group.Add(new VocabularyKey(nameof(openTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                phone = group.Add(new VocabularyKey(nameof(phone), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                poItemFilter = group.Add(new VocabularyKey(nameof(poItemFilter), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                removeAddTender = group.Add(new VocabularyKey(nameof(removeAddTender), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OneStatementPerDay = group.Add(new VocabularyKey(nameof(OneStatementPerDay), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OpenFrom = group.Add(new VocabularyKey(nameof(OpenFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OpenTo = group.Add(new VocabularyKey(nameof(OpenTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Phone = group.Add(new VocabularyKey(nameof(Phone), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PoItemFilter = group.Add(new VocabularyKey(nameof(PoItemFilter), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RemoveAddTender = group.Add(new VocabularyKey(nameof(RemoveAddTender), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RetailReqPlanIdSched = group.Add(new VocabularyKey(nameof(RetailReqPlanIdSched), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReturnTaxGroup_W = group.Add(new VocabularyKey(nameof(ReturnTaxGroup_W), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RoundingAccountLedgerDimension = group.Add(new VocabularyKey(nameof(RoundingAccountLedgerDimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                roundingTaxAccount = group.Add(new VocabularyKey(nameof(roundingTaxAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                separateStmtPerStaffTerminal = group.Add(new VocabularyKey(nameof(separateStmtPerStaffTerminal), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                serviceChargePct = group.Add(new VocabularyKey(nameof(serviceChargePct), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                serviceChargePrompt = group.Add(new VocabularyKey(nameof(serviceChargePrompt), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RoundingTaxAccount = group.Add(new VocabularyKey(nameof(RoundingTaxAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SeparateStmtPerStaffTerminal = group.Add(new VocabularyKey(nameof(SeparateStmtPerStaffTerminal), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ServiceChargePct = group.Add(new VocabularyKey(nameof(ServiceChargePct), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ServiceChargePrompt = group.Add(new VocabularyKey(nameof(ServiceChargePrompt), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SQLServerName = group.Add(new VocabularyKey(nameof(SQLServerName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statementMethod = group.Add(new VocabularyKey(nameof(statementMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stmtCalcBatchEndTime = group.Add(new VocabularyKey(nameof(stmtCalcBatchEndTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stmtPostAsBusinessDay = group.Add(new VocabularyKey(nameof(stmtPostAsBusinessDay), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatementMethod = group.Add(new VocabularyKey(nameof(StatementMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StmtCalcBatchEndTime = group.Add(new VocabularyKey(nameof(StmtCalcBatchEndTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StmtPostAsBusinessDay = group.Add(new VocabularyKey(nameof(StmtPostAsBusinessDay), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StoreNumber = group.Add(new VocabularyKey(nameof(StoreNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxIdentificationNumber = group.Add(new VocabularyKey(nameof(TaxIdentificationNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxOverrideGroup = group.Add(new VocabularyKey(nameof(TaxOverrideGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                tenderDeclarationCalculation = group.Add(new VocabularyKey(nameof(tenderDeclarationCalculation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TenderDeclarationCalculation = group.Add(new VocabularyKey(nameof(TenderDeclarationCalculation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UseCustomerBasedTax = group.Add(new VocabularyKey(nameof(UseCustomerBasedTax), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UseDefaultCustAccount = group.Add(new VocabularyKey(nameof(UseDefaultCustAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UseDestinationBasedTax = group.Add(new VocabularyKey(nameof(UseDestinationBasedTax), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
@@ -100,10 +100,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 UseCustomerBasedTaxExemption = group.Add(new VocabularyKey(nameof(UseCustomerBasedTaxExemption), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RetailReturnPolicyChannel = group.Add(new VocabularyKey(nameof(RetailReturnPolicyChannel), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CalcExemptTaxesForPriceInclusive = group.Add(new VocabularyKey(nameof(CalcExemptTaxesForPriceInclusive), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RetailChannelId { get; private set; }
         public VocabularyKey ChannelTimeZone { get; private set; }
         public VocabularyKey ChannelTimeZoneInfoId { get; private set; }
@@ -133,47 +131,47 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey MCRPriceOverrideRetailInfocodeId { get; private set; }
         public VocabularyKey MCRReasonCodeRetailInfocodeId { get; private set; }
         public VocabularyKey OnlineCatalogName { get; private set; }
-        public VocabularyKey closingMethod { get; private set; }
-        public VocabularyKey createLabelsForZeroPrice { get; private set; }
-        public VocabularyKey cultureName { get; private set; }
+        public VocabularyKey ClosingMethod { get; private set; }
+        public VocabularyKey CreateLabelsForZeroPrice { get; private set; }
+        public VocabularyKey CultureName { get; private set; }
         public VocabularyKey DatabaseName { get; private set; }
         public VocabularyKey EFTStoreNumber { get; private set; }
-        public VocabularyKey functionalityProfile { get; private set; }
-        public VocabularyKey generatesItemLabels { get; private set; }
-        public VocabularyKey generatesShelfLabels { get; private set; }
-        public VocabularyKey hideTrainingMode { get; private set; }
+        public VocabularyKey FunctionalityProfile { get; private set; }
+        public VocabularyKey GeneratesItemLabels { get; private set; }
+        public VocabularyKey GeneratesShelfLabels { get; private set; }
+        public VocabularyKey HideTrainingMode { get; private set; }
         public VocabularyKey InventLocationIdForCustomerOrder { get; private set; }
-        public VocabularyKey inventoryLookup { get; private set; }
-        public VocabularyKey itemIdOnReceipt { get; private set; }
-        public VocabularyKey maximumPostingDifference { get; private set; }
-        public VocabularyKey maximumTextLengthOnReceipt { get; private set; }
-        public VocabularyKey maxRoundingAmount { get; private set; }
-        public VocabularyKey maxRoundingTaxAmount { get; private set; }
-        public VocabularyKey maxShiftDifferenceAmount { get; private set; }
-        public VocabularyKey maxTransactionDifferenceAmount { get; private set; }
-        public VocabularyKey numberOfTopOrBottomLines { get; private set; }
+        public VocabularyKey InventoryLookup { get; private set; }
+        public VocabularyKey ItemIdOnReceipt { get; private set; }
+        public VocabularyKey MaximumPostingDifference { get; private set; }
+        public VocabularyKey MaximumTextLengthOnReceipt { get; private set; }
+        public VocabularyKey MaxRoundingAmount { get; private set; }
+        public VocabularyKey MaxRoundingTaxAmount { get; private set; }
+        public VocabularyKey MaxShiftDifferenceAmount { get; private set; }
+        public VocabularyKey MaxTransactionDifferenceAmount { get; private set; }
+        public VocabularyKey NumberOfTopOrBottomLines { get; private set; }
         public VocabularyKey OfflineProfile { get; private set; }
-        public VocabularyKey oneStatementPerDay { get; private set; }
-        public VocabularyKey openFrom { get; private set; }
-        public VocabularyKey openTo { get; private set; }
-        public VocabularyKey phone { get; private set; }
-        public VocabularyKey poItemFilter { get; private set; }
-        public VocabularyKey removeAddTender { get; private set; }
+        public VocabularyKey OneStatementPerDay { get; private set; }
+        public VocabularyKey OpenFrom { get; private set; }
+        public VocabularyKey OpenTo { get; private set; }
+        public VocabularyKey Phone { get; private set; }
+        public VocabularyKey PoItemFilter { get; private set; }
+        public VocabularyKey RemoveAddTender { get; private set; }
         public VocabularyKey RetailReqPlanIdSched { get; private set; }
         public VocabularyKey ReturnTaxGroup_W { get; private set; }
         public VocabularyKey RoundingAccountLedgerDimension { get; private set; }
-        public VocabularyKey roundingTaxAccount { get; private set; }
-        public VocabularyKey separateStmtPerStaffTerminal { get; private set; }
-        public VocabularyKey serviceChargePct { get; private set; }
-        public VocabularyKey serviceChargePrompt { get; private set; }
+        public VocabularyKey RoundingTaxAccount { get; private set; }
+        public VocabularyKey SeparateStmtPerStaffTerminal { get; private set; }
+        public VocabularyKey ServiceChargePct { get; private set; }
+        public VocabularyKey ServiceChargePrompt { get; private set; }
         public VocabularyKey SQLServerName { get; private set; }
-        public VocabularyKey statementMethod { get; private set; }
-        public VocabularyKey stmtCalcBatchEndTime { get; private set; }
-        public VocabularyKey stmtPostAsBusinessDay { get; private set; }
+        public VocabularyKey StatementMethod { get; private set; }
+        public VocabularyKey StmtCalcBatchEndTime { get; private set; }
+        public VocabularyKey StmtPostAsBusinessDay { get; private set; }
         public VocabularyKey StoreNumber { get; private set; }
         public VocabularyKey TaxIdentificationNumber { get; private set; }
         public VocabularyKey TaxOverrideGroup { get; private set; }
-        public VocabularyKey tenderDeclarationCalculation { get; private set; }
+        public VocabularyKey TenderDeclarationCalculation { get; private set; }
         public VocabularyKey UseCustomerBasedTax { get; private set; }
         public VocabularyKey UseDefaultCustAccount { get; private set; }
         public VocabularyKey UseDestinationBasedTax { get; private set; }
@@ -191,7 +189,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey UseCustomerBasedTaxExemption { get; private set; }
         public VocabularyKey RetailReturnPolicyChannel { get; private set; }
         public VocabularyKey CalcExemptTaxesForPriceInclusive { get; private set; }
-
-
     }
 }

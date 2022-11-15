@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailSharedParameterEntityVocabulary()
         {
-            VocabularyName = "RetailSharedParameterEntity";
+            VocabularyName = "Retail Shared Parameter Entity";
             KeyPrefix = "commonDataModel.retailsharedparameterentity";
             KeySeparator = ".";
             Grouping = "/RetailSharedParameterEntity";
@@ -69,10 +69,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ValidateCustomerToRedeemLoyalty = group.Add(new VocabularyKey(nameof(ValidateCustomerToRedeemLoyalty), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EnableAdvancedExternalGiftCard = group.Add(new VocabularyKey(nameof(EnableAdvancedExternalGiftCard), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EnableKitApprovalBatchFeature = group.Add(new VocabularyKey(nameof(EnableKitApprovalBatchFeature), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AllowTerminalAssociationFromDevice { get; private set; }
         public VocabularyKey CatalogDefaultAttributeGroup { get; private set; }
         public VocabularyKey CatalogAttributeBulkEditMaxRows { get; private set; }
@@ -129,7 +127,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ValidateCustomerToRedeemLoyalty { get; private set; }
         public VocabularyKey EnableAdvancedExternalGiftCard { get; private set; }
         public VocabularyKey EnableKitApprovalBatchFeature { get; private set; }
-
-
     }
 }

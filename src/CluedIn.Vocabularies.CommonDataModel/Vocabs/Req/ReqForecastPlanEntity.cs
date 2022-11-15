@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReqForecastPlanEntityVocabulary()
         {
-            VocabularyName = "ReqForecastPlanEntity";
+            VocabularyName = "Req Forecast Plan Entity";
             KeyPrefix = "commonDataModel.reqforecastplanentity";
             KeySeparator = ".";
             Grouping = "/ReqForecastPlanEntity";
@@ -30,10 +30,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CapacitySchedulingTimeFenceDays = group.Add(new VocabularyKey(nameof(CapacitySchedulingTimeFenceDays), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CoverageTimeFenceDays = group.Add(new VocabularyKey(nameof(CoverageTimeFenceDays), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BOMOrFormulaExplosionTimeFenceDays = group.Add(new VocabularyKey(nameof(BOMOrFormulaExplosionTimeFenceDays), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ForecastPlanId { get; private set; }
         public VocabularyKey ForecastPlanDescription { get; private set; }
         public VocabularyKey ForecastModelId { get; private set; }
@@ -51,7 +49,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CapacitySchedulingTimeFenceDays { get; private set; }
         public VocabularyKey CoverageTimeFenceDays { get; private set; }
         public VocabularyKey BOMOrFormulaExplosionTimeFenceDays { get; private set; }
-
-
     }
 }

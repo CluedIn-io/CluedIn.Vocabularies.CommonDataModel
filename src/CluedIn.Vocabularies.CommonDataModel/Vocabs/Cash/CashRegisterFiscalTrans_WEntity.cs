@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CashRegisterFiscalTrans_WEntityVocabulary()
         {
-            VocabularyName = "CashRegisterFiscalTrans_WEntity";
+            VocabularyName = "Cash Register Fiscal Trans _W Entity";
             KeyPrefix = "commonDataModel.cashregisterfiscaltrans_wentity";
             KeySeparator = ".";
             Grouping = "/CashRegisterFiscalTrans_WEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TransId = group.Add(new VocabularyKey(nameof(TransId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Voucher = group.Add(new VocabularyKey(nameof(Voucher), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Status = group.Add(new VocabularyKey(nameof(Status), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsOffline { get; private set; }
         public VocabularyKey TransDate { get; private set; }
         public VocabularyKey TransDateTime { get; private set; }
         public VocabularyKey TransId { get; private set; }
         public VocabularyKey Voucher { get; private set; }
         public VocabularyKey Status { get; private set; }
-
-
     }
 }

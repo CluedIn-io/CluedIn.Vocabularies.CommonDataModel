@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RDeferralsBookTableEntityVocabulary()
         {
-            VocabularyName = "RDeferralsBookTableEntity";
+            VocabularyName = "R Deferrals Book Table Entity";
             KeyPrefix = "commonDataModel.rdeferralsbooktableentity";
             KeySeparator = ".";
             Grouping = "/RDeferralsBookTableEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PostingLayer = group.Add(new VocabularyKey(nameof(PostingLayer), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ModelNumber = group.Add(new VocabularyKey(nameof(ModelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PostingLayer { get; private set; }
         public VocabularyKey ModelNumber { get; private set; }
         public VocabularyKey Name { get; private set; }
-
-
     }
 }

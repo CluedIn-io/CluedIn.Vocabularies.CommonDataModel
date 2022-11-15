@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesTradeAllowanceAgreementPeriodEntityVocabulary()
         {
-            VocabularyName = "SalesTradeAllowanceAgreementPeriodEntity";
+            VocabularyName = "Sales Trade Allowance Agreement Period Entity";
             KeyPrefix = "commonDataModel.salestradeallowanceagreementperiodentity";
             KeySeparator = ".";
             Grouping = "/SalesTradeAllowanceAgreementPeriodEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FromRequestedShipDate = group.Add(new VocabularyKey(nameof(FromRequestedShipDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ToRequestedReceiptDate = group.Add(new VocabularyKey(nameof(ToRequestedReceiptDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FromRequestedReceiptDate = group.Add(new VocabularyKey(nameof(FromRequestedReceiptDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ToOrderDate { get; private set; }
         public VocabularyKey FromOrderDate { get; private set; }
         public VocabularyKey ToLumpSumPayoutDate { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FromRequestedShipDate { get; private set; }
         public VocabularyKey ToRequestedReceiptDate { get; private set; }
         public VocabularyKey FromRequestedReceiptDate { get; private set; }
-
-
     }
 }

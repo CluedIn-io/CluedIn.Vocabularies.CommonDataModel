@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailReturnPolicyLineEntityVocabulary()
         {
-            VocabularyName = "RetailReturnPolicyLineEntity";
+            VocabularyName = "Retail Return Policy Line Entity";
             KeyPrefix = "commonDataModel.retailreturnpolicylineentity";
             KeySeparator = ".";
             Grouping = "/RetailReturnPolicyLineEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OperatingUnitNumber = group.Add(new VocabularyKey(nameof(OperatingUnitNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RetailStoreTable = group.Add(new VocabularyKey(nameof(RetailStoreTable), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineNumber = group.Add(new VocabularyKey(nameof(LineNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BlockItem { get; private set; }
         public VocabularyKey Warehouse { get; private set; }
         public VocabularyKey Policy { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OperatingUnitNumber { get; private set; }
         public VocabularyKey RetailStoreTable { get; private set; }
         public VocabularyKey LineNumber { get; private set; }
-
-
     }
 }

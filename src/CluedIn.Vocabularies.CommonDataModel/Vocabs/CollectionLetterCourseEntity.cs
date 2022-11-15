@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CollectionLetterCourseEntityVocabulary()
         {
-            VocabularyName = "CollectionLetterCourseEntity";
+            VocabularyName = "Collection Letter Course Entity";
             KeyPrefix = "commonDataModel.collectionlettercourseentity";
             KeySeparator = ".";
             Grouping = "/CollectionLetterCourseEntity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 NumberOfDaysBETWLetters = group.Add(new VocabularyKey(nameof(NumberOfDaysBETWLetters), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BlockCustomer = group.Add(new VocabularyKey(nameof(BlockCustomer), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Notes = group.Add(new VocabularyKey(nameof(Notes), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CollectionLetterSequence { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey TermsOfPayment { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey NumberOfDaysBETWLetters { get; private set; }
         public VocabularyKey BlockCustomer { get; private set; }
         public VocabularyKey Notes { get; private set; }
-
-
     }
 }

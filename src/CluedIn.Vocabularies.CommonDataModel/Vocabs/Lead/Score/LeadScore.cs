@@ -6,36 +6,32 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LeadScoreVocabulary()
         {
-            VocabularyName = "LeadScore";
+            VocabularyName = "Lead Score";
             KeyPrefix = "commonDataModel.leadscore";
             KeySeparator = ".";
             Grouping = "/LeadScore";
 
             AddGroup("LeadScore Details", group =>
             {
-                grade = group.Add(new VocabularyKey(nameof(grade), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                leadscoreV2Id = group.Add(new VocabularyKey(nameof(leadscoreV2Id), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                modelVersion = group.Add(new VocabularyKey(nameof(modelVersion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                score = group.Add(new VocabularyKey(nameof(score), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                scoreStatus = group.Add(new VocabularyKey(nameof(scoreStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                lastScoreTimestamp = group.Add(new VocabularyKey(nameof(lastScoreTimestamp), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                Grade = group.Add(new VocabularyKey(nameof(Grade), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LeadscoreV2Id = group.Add(new VocabularyKey(nameof(LeadscoreV2Id), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModelVersion = group.Add(new VocabularyKey(nameof(ModelVersion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Score = group.Add(new VocabularyKey(nameof(Score), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ScoreStatus = group.Add(new VocabularyKey(nameof(ScoreStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LastScoreTimestamp = group.Add(new VocabularyKey(nameof(LastScoreTimestamp), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey grade { get; private set; }
-        public VocabularyKey leadscoreV2Id { get; private set; }
-        public VocabularyKey modelVersion { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey score { get; private set; }
-        public VocabularyKey scoreStatus { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-        public VocabularyKey lastScoreTimestamp { get; private set; }
-
-
+        public VocabularyKey Grade { get; private set; }
+        public VocabularyKey LeadscoreV2Id { get; private set; }
+        public VocabularyKey ModelVersion { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey Score { get; private set; }
+        public VocabularyKey ScoreStatus { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey LastScoreTimestamp { get; private set; }
     }
 }

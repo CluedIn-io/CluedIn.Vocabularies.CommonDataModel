@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CFMPaymentRequestTypeEntityVocabulary()
         {
-            VocabularyName = "CFMPaymentRequestTypeEntity";
+            VocabularyName = "CFM Payment Request Type Entity";
             KeyPrefix = "commonDataModel.cfmpaymentrequesttypeentity";
             KeySeparator = ".";
             Grouping = "/CFMPaymentRequestTypeEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PaymentRequestType = group.Add(new VocabularyKey(nameof(PaymentRequestType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PriorityCode = group.Add(new VocabularyKey(nameof(PriorityCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Workflow = group.Add(new VocabularyKey(nameof(Workflow), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey Direction { get; private set; }
         public VocabularyKey PaymentPriority { get; private set; }
         public VocabularyKey PaymentRequestType { get; private set; }
         public VocabularyKey PriorityCode { get; private set; }
         public VocabularyKey Workflow { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetPackingSlipEntityVocabulary()
         {
-            VocabularyName = "AssetPackingSlipEntity";
+            VocabularyName = "Asset Packing Slip Entity";
             KeyPrefix = "commonDataModel.assetpackingslipentity";
             KeySeparator = ".";
             Grouping = "/AssetPackingSlipEntity";
@@ -40,10 +40,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 UnloadAddress = group.Add(new VocabularyKey(nameof(UnloadAddress), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FixedAssetNumber = group.Add(new VocabularyKey(nameof(FixedAssetNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PackingSlip { get; private set; }
         public VocabularyKey CreateTime { get; private set; }
         public VocabularyKey CreateDate { get; private set; }
@@ -71,7 +69,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey UnloadAddress { get; private set; }
         public VocabularyKey FixedAssetNumber { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

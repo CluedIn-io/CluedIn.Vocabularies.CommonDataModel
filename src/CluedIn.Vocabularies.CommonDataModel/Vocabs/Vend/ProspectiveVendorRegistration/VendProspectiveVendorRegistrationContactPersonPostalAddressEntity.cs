@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendProspectiveVendorRegistrationContactPersonPostalAddressEntityVocabulary()
         {
-            VocabularyName = "VendProspectiveVendorRegistrationContactPersonPostalAddressEntity";
+            VocabularyName = "Vend Prospective Vendor Registration Contact Person Postal Address Entity";
             KeyPrefix = "commonDataModel.vendprospectivevendorregistrationcontactpersonpostaladdressentity";
             KeySeparator = ".";
             Grouping = "/VendProspectiveVendorRegistrationContactPersonPostalAddressEntity";
@@ -45,10 +45,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 VendorRegistrationId = group.Add(new VocabularyKey(nameof(VendorRegistrationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AddressCityInKana = group.Add(new VocabularyKey(nameof(AddressCityInKana), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AddressStreetInKana = group.Add(new VocabularyKey(nameof(AddressStreetInKana), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ContactPersonEmailAddress { get; private set; }
         public VocabularyKey AddressDescription { get; private set; }
         public VocabularyKey AddressLocationId { get; private set; }
@@ -81,7 +79,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey VendorRegistrationId { get; private set; }
         public VocabularyKey AddressCityInKana { get; private set; }
         public VocabularyKey AddressStreetInKana { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerCovLiquidityTransactionCurrencyEntityVocabulary()
         {
-            VocabularyName = "LedgerCovLiquidityTransactionCurrencyEntity";
+            VocabularyName = "Ledger Cov Liquidity Transaction Currency Entity";
             KeyPrefix = "commonDataModel.ledgercovliquiditytransactioncurrencyentity";
             KeySeparator = ".";
             Grouping = "/LedgerCovLiquidityTransactionCurrencyEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BalanceAmount = group.Add(new VocabularyKey(nameof(BalanceAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Amount = group.Add(new VocabularyKey(nameof(Amount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BankAccount = group.Add(new VocabularyKey(nameof(BankAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TransDate { get; private set; }
         public VocabularyKey CurrencyCode { get; private set; }
         public VocabularyKey BalanceAmount { get; private set; }
         public VocabularyKey Amount { get; private set; }
         public VocabularyKey BankAccount { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxVatReportCategoryEntityVocabulary()
         {
-            VocabularyName = "TaxVatReportCategoryEntity";
+            VocabularyName = "Tax Vat Report Category Entity";
             KeyPrefix = "commonDataModel.taxvatreportcategoryentity";
             KeySeparator = ".";
             Grouping = "/TaxVatReportCategoryEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 CategoryCodeID = group.Add(new VocabularyKey(nameof(CategoryCodeID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CategoryCodeID { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

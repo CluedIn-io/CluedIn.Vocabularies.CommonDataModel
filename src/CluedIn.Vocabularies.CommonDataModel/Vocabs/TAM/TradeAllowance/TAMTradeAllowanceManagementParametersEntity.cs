@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TAMTradeAllowanceManagementParametersEntityVocabulary()
         {
-            VocabularyName = "TAMTradeAllowanceManagementParametersEntity";
+            VocabularyName = "TAM Trade Allowance Management Parameters Entity";
             KeyPrefix = "commonDataModel.tamtradeallowancemanagementparametersentity";
             KeySeparator = ".";
             Grouping = "/TAMTradeAllowanceManagementParametersEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DefaultSalesRebateProgramTypeId = group.Add(new VocabularyKey(nameof(DefaultSalesRebateProgramTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LumpSumExpenseMainAccountIdDisplayValue = group.Add(new VocabularyKey(nameof(LumpSumExpenseMainAccountIdDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LumpSumProcurementCategoryName = group.Add(new VocabularyKey(nameof(LumpSumProcurementCategoryName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DeductionLedgerJournalName { get; private set; }
         public VocabularyKey DefaultCustomerHierarchyName { get; private set; }
         public VocabularyKey OneTimePromotionTradeAllowanceTemplateId { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DefaultSalesRebateProgramTypeId { get; private set; }
         public VocabularyKey LumpSumExpenseMainAccountIdDisplayValue { get; private set; }
         public VocabularyKey LumpSumProcurementCategoryName { get; private set; }
-
-
     }
 }

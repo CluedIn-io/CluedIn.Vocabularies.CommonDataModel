@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustDirectDebitMandateEntityVocabulary()
         {
-            VocabularyName = "CustDirectDebitMandateEntity";
+            VocabularyName = "Cust Direct Debit Mandate Entity";
             KeyPrefix = "commonDataModel.custdirectdebitmandateentity";
             KeySeparator = ".";
             Grouping = "/CustDirectDebitMandateEntity";
@@ -33,10 +33,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsPrivate = group.Add(new VocabularyKey(nameof(IsPrivate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PrivateForParty = group.Add(new VocabularyKey(nameof(PrivateForParty), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CreditorBankAccount = group.Add(new VocabularyKey(nameof(CreditorBankAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CustomerAccount { get; private set; }
         public VocabularyKey MandateId { get; private set; }
         public VocabularyKey CustomerBankAccount { get; private set; }
@@ -57,7 +55,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsPrivate { get; private set; }
         public VocabularyKey PrivateForParty { get; private set; }
         public VocabularyKey CreditorBankAccount { get; private set; }
-
-
     }
 }

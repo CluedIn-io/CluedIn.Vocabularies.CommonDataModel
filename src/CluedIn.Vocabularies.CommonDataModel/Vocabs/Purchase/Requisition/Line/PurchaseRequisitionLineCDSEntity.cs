@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchaseRequisitionLineCDSEntityVocabulary()
         {
-            VocabularyName = "PurchaseRequisitionLineCDSEntity";
+            VocabularyName = "Purchase Requisition Line CDS Entity";
             KeyPrefix = "commonDataModel.purchaserequisitionlinecdsentity";
             KeySeparator = ".";
             Grouping = "/PurchaseRequisitionLineCDSEntity";
@@ -96,10 +96,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 VendorAccountNumber = group.Add(new VocabularyKey(nameof(VendorAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProcurementProductCategoryHierarchyName = group.Add(new VocabularyKey(nameof(ProcurementProductCategoryHierarchyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReceivingOperatingUnitPartyNumber = group.Add(new VocabularyKey(nameof(ReceivingOperatingUnitPartyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductNumber { get; private set; }
         public VocabularyKey AccountingDate { get; private set; }
         public VocabularyKey AccountingDistributionTemplateName { get; private set; }
@@ -183,7 +181,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey VendorAccountNumber { get; private set; }
         public VocabularyKey ProcurementProductCategoryHierarchyName { get; private set; }
         public VocabularyKey ReceivingOperatingUnitPartyNumber { get; private set; }
-
-
     }
 }

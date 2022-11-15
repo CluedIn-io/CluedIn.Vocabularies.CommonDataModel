@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProcurementProductCategoryVendorEvaluationCriterionGroupAssignmentEntityVocabulary()
         {
-            VocabularyName = "ProcurementProductCategoryVendorEvaluationCriterionGroupAssignmentEntity";
+            VocabularyName = "Procurement Product Category Vendor Evaluation Criterion Group Assignment Entity";
             KeyPrefix = "commonDataModel.procurementproductcategoryvendorevaluationcriteriongroupassignmententity";
             KeySeparator = ".";
             Grouping = "/ProcurementProductCategoryVendorEvaluationCriterionGroupAssignmentEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductCategoryHierarchyName = group.Add(new VocabularyKey(nameof(ProductCategoryHierarchyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductCategoryName = group.Add(new VocabularyKey(nameof(ProductCategoryName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorEvaluationCriterionGroupName = group.Add(new VocabularyKey(nameof(VendorEvaluationCriterionGroupName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductCategoryHierarchyName { get; private set; }
         public VocabularyKey ProductCategoryName { get; private set; }
         public VocabularyKey VendorEvaluationCriterionGroupName { get; private set; }
-
-
     }
 }

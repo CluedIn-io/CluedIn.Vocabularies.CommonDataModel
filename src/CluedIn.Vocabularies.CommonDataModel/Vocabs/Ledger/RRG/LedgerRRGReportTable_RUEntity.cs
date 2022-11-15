@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerRRGReportTable_RUEntityVocabulary()
         {
-            VocabularyName = "LedgerRRGReportTable_RUEntity";
+            VocabularyName = "Ledger RRG Report Table _RU Entity";
             KeyPrefix = "commonDataModel.ledgerrrgreporttable_ruentity";
             KeySeparator = ".";
             Grouping = "/LedgerRRGReportTable_RUEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TypeByCorrect = group.Add(new VocabularyKey(nameof(TypeByCorrect), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LedgerRRGETemplateId = group.Add(new VocabularyKey(nameof(LedgerRRGETemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DimensionHierarchyHashKey = group.Add(new VocabularyKey(nameof(DimensionHierarchyHashKey), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CurrencyForCalc { get; private set; }
         public VocabularyKey DataType { get; private set; }
         public VocabularyKey Description { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TypeByCorrect { get; private set; }
         public VocabularyKey LedgerRRGETemplateId { get; private set; }
         public VocabularyKey DimensionHierarchyHashKey { get; private set; }
-
-
     }
 }

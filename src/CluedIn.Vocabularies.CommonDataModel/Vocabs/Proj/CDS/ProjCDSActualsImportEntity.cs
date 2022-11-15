@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjCDSActualsImportEntityVocabulary()
         {
-            VocabularyName = "ProjCDSActualsImportEntity";
+            VocabularyName = "Proj CDS Actuals Import Entity";
             KeyPrefix = "commonDataModel.projcdsactualsimportentity";
             KeySeparator = ".";
             Grouping = "/ProjCDSActualsImportEntity";
@@ -53,10 +53,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Voucher = group.Add(new VocabularyKey(nameof(Voucher), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProjectDataAreaId = group.Add(new VocabularyKey(nameof(ProjectDataAreaId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsDuplicate = group.Add(new VocabularyKey(nameof(IsDuplicate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountingDate { get; private set; }
         public VocabularyKey ActualId { get; private set; }
         public VocabularyKey ActualsImportId { get; private set; }
@@ -97,7 +95,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Voucher { get; private set; }
         public VocabularyKey ProjectDataAreaId { get; private set; }
         public VocabularyKey IsDuplicate { get; private set; }
-
-
     }
 }

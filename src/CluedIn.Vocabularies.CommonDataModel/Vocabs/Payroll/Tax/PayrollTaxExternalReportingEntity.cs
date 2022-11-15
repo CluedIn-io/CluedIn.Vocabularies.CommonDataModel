@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollTaxExternalReportingEntityVocabulary()
         {
-            VocabularyName = "PayrollTaxExternalReportingEntity";
+            VocabularyName = "Payroll Tax External Reporting Entity";
             KeyPrefix = "commonDataModel.payrolltaxexternalreportingentity";
             KeySeparator = ".";
             Grouping = "/PayrollTaxExternalReportingEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 W2Box20Other = group.Add(new VocabularyKey(nameof(W2Box20Other), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 W2BoxLabel = group.Add(new VocabularyKey(nameof(W2BoxLabel), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 W2BoxNumber = group.Add(new VocabularyKey(nameof(W2BoxNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TaxCodeId { get; private set; }
         public VocabularyKey TaxCodeCountryRegionId { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey W2Box20Other { get; private set; }
         public VocabularyKey W2BoxLabel { get; private set; }
         public VocabularyKey W2BoxNumber { get; private set; }
-
-
     }
 }

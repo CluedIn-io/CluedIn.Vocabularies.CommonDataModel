@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DirPartyBaseEntityVocabulary()
         {
-            VocabularyName = "DirPartyBaseEntity";
+            VocabularyName = "Dir Party Base Entity";
             KeyPrefix = "commonDataModel.dirpartybaseentity";
             KeySeparator = ".";
             Grouping = "/DirPartyBaseEntity";
@@ -112,10 +112,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DirPartyLocationRecId = group.Add(new VocabularyKey(nameof(DirPartyLocationRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RemoveElectronicAddressesOnDelete = group.Add(new VocabularyKey(nameof(RemoveElectronicAddressesOnDelete), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DirPersonNameRecId = group.Add(new VocabularyKey(nameof(DirPersonNameRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PartyNumber { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey PartyType { get; private set; }
@@ -215,7 +213,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DirPartyLocationRecId { get; private set; }
         public VocabularyKey RemoveElectronicAddressesOnDelete { get; private set; }
         public VocabularyKey DirPersonNameRecId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerFiscalCloseLedgerOptionsEntityVocabulary()
         {
-            VocabularyName = "LedgerFiscalCloseLedgerOptionsEntity";
+            VocabularyName = "Ledger Fiscal Close Ledger Options Entity";
             KeyPrefix = "commonDataModel.ledgerfiscalcloseledgeroptionsentity";
             KeySeparator = ".";
             Grouping = "/LedgerFiscalCloseLedgerOptionsEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProfitLossDefaultDimensionDisplayValue = group.Add(new VocabularyKey(nameof(ProfitLossDefaultDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LegalEntity = group.Add(new VocabularyKey(nameof(LegalEntity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProfitLossCloseDimensionDisplayValue = group.Add(new VocabularyKey(nameof(ProfitLossCloseDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LedgerFiscalCloseGroup { get; private set; }
         public VocabularyKey Ledger { get; private set; }
         public VocabularyKey RetainedEarningsMainAccount { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProfitLossDefaultDimensionDisplayValue { get; private set; }
         public VocabularyKey LegalEntity { get; private set; }
         public VocabularyKey ProfitLossCloseDimensionDisplayValue { get; private set; }
-
-
     }
 }

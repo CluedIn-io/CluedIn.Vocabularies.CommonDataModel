@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmTotalCompStatementSectionEarningEntityVocabulary()
         {
-            VocabularyName = "HcmTotalCompStatementSectionEarningEntity";
+            VocabularyName = "Hcm Total Comp Statement Section Earning Entity";
             KeyPrefix = "commonDataModel.hcmtotalcompstatementsectionearningentity";
             KeySeparator = ".";
             Grouping = "/HcmTotalCompStatementSectionEarningEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 NullableEarningCodeId = group.Add(new VocabularyKey(nameof(NullableEarningCodeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EarningCodeGroupId = group.Add(new VocabularyKey(nameof(EarningCodeGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NullableEarningCodeGroupId = group.Add(new VocabularyKey(nameof(NullableEarningCodeGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey EarningCode { get; private set; }
         public VocabularyKey EarningCodeOrGroupType { get; private set; }
         public VocabularyKey EarningCodeGroup { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey NullableEarningCodeId { get; private set; }
         public VocabularyKey EarningCodeGroupId { get; private set; }
         public VocabularyKey NullableEarningCodeGroupId { get; private set; }
-
-
     }
 }

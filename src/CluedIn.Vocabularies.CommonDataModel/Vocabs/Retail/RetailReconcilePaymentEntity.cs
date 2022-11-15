@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailReconcilePaymentEntityVocabulary()
         {
-            VocabularyName = "RetailReconcilePaymentEntity";
+            VocabularyName = "Retail Reconcile Payment Entity";
             KeyPrefix = "commonDataModel.retailreconcilepaymententity";
             KeySeparator = ".";
             Grouping = "/RetailReconcilePaymentEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CommentNote = group.Add(new VocabularyKey(nameof(CommentNote), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CommentTime = group.Add(new VocabularyKey(nameof(CommentTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PaymentTransLineNumber = group.Add(new VocabularyKey(nameof(PaymentTransLineNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TransactionId { get; private set; }
         public VocabularyKey ReconcileStatus { get; private set; }
         public VocabularyKey CommentUser { get; private set; }
         public VocabularyKey CommentNote { get; private set; }
         public VocabularyKey CommentTime { get; private set; }
         public VocabularyKey PaymentTransLineNumber { get; private set; }
-
-
     }
 }

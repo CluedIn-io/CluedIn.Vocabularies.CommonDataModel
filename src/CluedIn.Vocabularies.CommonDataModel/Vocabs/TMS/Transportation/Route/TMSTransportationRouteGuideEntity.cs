@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationRouteGuideEntityVocabulary()
         {
-            VocabularyName = "TMSTransportationRouteGuideEntity";
+            VocabularyName = "TMS Transportation Route Guide Entity";
             KeyPrefix = "commonDataModel.tmstransportationrouteguideentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationRouteGuideEntity";
@@ -51,10 +51,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MinimumLoadVolumeCriterion = group.Add(new VocabularyKey(nameof(MinimumLoadVolumeCriterion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MaximumWeightCriterion = group.Add(new VocabularyKey(nameof(MaximumWeightCriterion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MinimumWeightCriterion = group.Add(new VocabularyKey(nameof(MinimumWeightCriterion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey OriginAddressCountryRegionIdCriterion { get; private set; }
         public VocabularyKey OriginTransportationHubIdCriterion { get; private set; }
         public VocabularyKey OriginTransportationZoneMasterCodeCriterion { get; private set; }
@@ -93,7 +91,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey MinimumLoadVolumeCriterion { get; private set; }
         public VocabularyKey MaximumWeightCriterion { get; private set; }
         public VocabularyKey MinimumWeightCriterion { get; private set; }
-
-
     }
 }

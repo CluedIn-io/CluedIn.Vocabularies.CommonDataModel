@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SMAServiceRepairConditionEntityVocabulary()
         {
-            VocabularyName = "SMAServiceRepairConditionEntity";
+            VocabularyName = "SMA Service Repair Condition Entity";
             KeyPrefix = "commonDataModel.smaservicerepairconditionentity";
             KeySeparator = ".";
             Grouping = "/SMAServiceRepairConditionEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 ConditionId = group.Add(new VocabularyKey(nameof(ConditionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ConditionDescription = group.Add(new VocabularyKey(nameof(ConditionDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ConditionId { get; private set; }
         public VocabularyKey ConditionDescription { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetCodeEntityVocabulary()
         {
-            VocabularyName = "BudgetCodeEntity";
+            VocabularyName = "Budget Code Entity";
             KeyPrefix = "commonDataModel.budgetcodeentity";
             KeySeparator = ".";
             Grouping = "/BudgetCodeEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsDefaultCode = group.Add(new VocabularyKey(nameof(IsDefaultCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReasonCode = group.Add(new VocabularyKey(nameof(ReasonCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkflowId = group.Add(new VocabularyKey(nameof(WorkflowId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BudgetCode { get; private set; }
         public VocabularyKey BudgetType { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey IsDefaultCode { get; private set; }
         public VocabularyKey ReasonCode { get; private set; }
         public VocabularyKey WorkflowId { get; private set; }
-
-
     }
 }

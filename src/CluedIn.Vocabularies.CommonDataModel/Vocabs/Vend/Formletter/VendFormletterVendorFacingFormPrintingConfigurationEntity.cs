@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendFormletterVendorFacingFormPrintingConfigurationEntityVocabulary()
         {
-            VocabularyName = "VendFormletterVendorFacingFormPrintingConfigurationEntity";
+            VocabularyName = "Vend Formletter Vendor Facing Form Printing Configuration Entity";
             KeyPrefix = "commonDataModel.vendformlettervendorfacingformprintingconfigurationentity";
             KeySeparator = ".";
             Grouping = "/VendFormletterVendorFacingFormPrintingConfigurationEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductDimensionsDisplaySeparator = group.Add(new VocabularyKey(nameof(ProductDimensionsDisplaySeparator), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsDisplayedProductDescriptionIncludingProductName = group.Add(new VocabularyKey(nameof(IsDisplayedProductDescriptionIncludingProductName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductNumberDisplayRule = group.Add(new VocabularyKey(nameof(ProductNumberDisplayRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AreEuroAmountsDisplayed { get; private set; }
         public VocabularyKey TotalAmountDisplayRule { get; private set; }
         public VocabularyKey SalesTaxDisplayRule { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProductDimensionsDisplaySeparator { get; private set; }
         public VocabularyKey IsDisplayedProductDescriptionIncludingProductName { get; private set; }
         public VocabularyKey ProductNumberDisplayRule { get; private set; }
-
-
     }
 }

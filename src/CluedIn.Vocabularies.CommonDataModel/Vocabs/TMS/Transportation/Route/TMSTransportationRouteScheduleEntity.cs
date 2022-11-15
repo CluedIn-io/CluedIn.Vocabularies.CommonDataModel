@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationRouteScheduleEntityVocabulary()
         {
-            VocabularyName = "TMSTransportationRouteScheduleEntity";
+            VocabularyName = "TMS Transportation Route Schedule Entity";
             KeyPrefix = "commonDataModel.tmstransportationroutescheduleentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationRouteScheduleEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LoadTemplateId = group.Add(new VocabularyKey(nameof(LoadTemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransportationRoutePlanId = group.Add(new VocabularyKey(nameof(TransportationRoutePlanId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReferenceTableId = group.Add(new VocabularyKey(nameof(ReferenceTableId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsRouteRecurrenceActive { get; private set; }
         public VocabularyKey EffectiveStartDateTime { get; private set; }
         public VocabularyKey WillRouteGenerationScheduleOnFriday { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LoadTemplateId { get; private set; }
         public VocabularyKey TransportationRoutePlanId { get; private set; }
         public VocabularyKey ReferenceTableId { get; private set; }
-
-
     }
 }

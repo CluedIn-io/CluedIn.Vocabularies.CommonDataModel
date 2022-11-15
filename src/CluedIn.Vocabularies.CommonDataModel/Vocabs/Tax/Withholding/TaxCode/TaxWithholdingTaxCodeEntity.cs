@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxWithholdingTaxCodeEntityVocabulary()
         {
-            VocabularyName = "TaxWithholdingTaxCodeEntity";
+            VocabularyName = "Tax Withholding Tax Code Entity";
             KeyPrefix = "commonDataModel.taxwithholdingtaxcodeentity";
             KeySeparator = ".";
             Grouping = "/TaxWithholdingTaxCodeEntity";
@@ -39,10 +39,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WithholdingTaxComponent = group.Add(new VocabularyKey(nameof(WithholdingTaxComponent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WithholdingComponentGroup = group.Add(new VocabularyKey(nameof(WithholdingComponentGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SettlementPeriod = group.Add(new VocabularyKey(nameof(SettlementPeriod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CurrencyCodeID { get; private set; }
         public VocabularyKey MainAccountId { get; private set; }
         public VocabularyKey WithholdingTaxBase { get; private set; }
@@ -69,7 +67,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WithholdingTaxComponent { get; private set; }
         public VocabularyKey WithholdingComponentGroup { get; private set; }
         public VocabularyKey SettlementPeriod { get; private set; }
-
-
     }
 }

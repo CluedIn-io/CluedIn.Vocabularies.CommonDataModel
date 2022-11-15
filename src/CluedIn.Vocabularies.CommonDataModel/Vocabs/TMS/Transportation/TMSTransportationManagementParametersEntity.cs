@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationManagementParametersEntityVocabulary()
         {
-            VocabularyName = "TMSTransportationManagementParametersEntity";
+            VocabularyName = "TMS Transportation Management Parameters Entity";
             KeyPrefix = "commonDataModel.tmstransportationmanagementparametersentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationManagementParametersEntity";
@@ -40,10 +40,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsMasterBillOfLadingCreatedForMultipleShipmentLoads = group.Add(new VocabularyKey(nameof(IsMasterBillOfLadingCreatedForMultipleShipmentLoads), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillLoadPlanningSeparatelyPostTransferOrderShipmentConfirmations = group.Add(new VocabularyKey(nameof(WillLoadPlanningSeparatelyPostTransferOrderShipmentConfirmations), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BillOfLadingThirdPartyShippingCarrierLogisticsLocationRolePurpose = group.Add(new VocabularyKey(nameof(BillOfLadingThirdPartyShippingCarrierLogisticsLocationRolePurpose), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WillPurchaseOrderEntryAutomaticallyCreateLoad { get; private set; }
         public VocabularyKey WillSalesOrderEntryAutomaticallyCreateLoad { get; private set; }
         public VocabularyKey WillTransferOrderEntryAutomaticallyCreateLoad { get; private set; }
@@ -71,7 +69,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsMasterBillOfLadingCreatedForMultipleShipmentLoads { get; private set; }
         public VocabularyKey WillLoadPlanningSeparatelyPostTransferOrderShipmentConfirmations { get; private set; }
         public VocabularyKey BillOfLadingThirdPartyShippingCarrierLogisticsLocationRolePurpose { get; private set; }
-
-
     }
 }

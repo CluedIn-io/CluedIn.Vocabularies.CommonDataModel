@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailStoreTenderTypeEntityVocabulary()
         {
-            VocabularyName = "RetailStoreTenderTypeEntity";
+            VocabularyName = "Retail Store Tender Type Entity";
             KeyPrefix = "commonDataModel.retailstoretendertypeentity";
             KeySeparator = ".";
             Grouping = "/RetailStoreTenderTypeEntity";
@@ -85,10 +85,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TenderFlowLedgerDimension = group.Add(new VocabularyKey(nameof(TenderFlowLedgerDimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TenderFlowLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(TenderFlowLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GiftCardCashOutThreshold = group.Add(new VocabularyKey(nameof(GiftCardCashOutThreshold), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RetailChannelId { get; private set; }
         public VocabularyKey PaymentMethodNumber { get; private set; }
         public VocabularyKey ChangeTenderId { get; private set; }
@@ -161,7 +159,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TenderFlowLedgerDimension { get; private set; }
         public VocabularyKey TenderFlowLedgerDimensionDisplayValue { get; private set; }
         public VocabularyKey GiftCardCashOutThreshold { get; private set; }
-
-
     }
 }

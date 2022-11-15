@@ -6,92 +6,88 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LandingPagesVocabulary()
         {
-            VocabularyName = "LandingPages";
+            VocabularyName = "Landing Pages";
             KeyPrefix = "commonDataModel.landingpages";
             KeySeparator = ".";
             Grouping = "/LandingPages";
 
             AddGroup("LandingPages Details", group =>
             {
-                createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                createdOnBehalfBy = group.Add(new VocabularyKey(nameof(createdOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                importSequenceNumber = group.Add(new VocabularyKey(nameof(importSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                modifiedOn = group.Add(new VocabularyKey(nameof(modifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                modifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(modifiedOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                contactcampaignattribute = group.Add(new VocabularyKey(nameof(contactcampaignattribute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                contactEmailAttribute = group.Add(new VocabularyKey(nameof(contactEmailAttribute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                contactmarketingformattribute = group.Add(new VocabularyKey(nameof(contactmarketingformattribute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                contactmarketingpageattribute = group.Add(new VocabularyKey(nameof(contactmarketingpageattribute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                @default = group.Add(new VocabularyKey(nameof(@default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                keepsuccessfulsubmissions = group.Add(new VocabularyKey(nameof(keepsuccessfulsubmissions), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                entityupdatebehavioronsubmit = group.Add(new VocabularyKey(nameof(entityupdatebehavioronsubmit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                allowsubmissiononlyforms = group.Add(new VocabularyKey(nameof(allowsubmissiononlyforms), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                insertPrivacyBanner = group.Add(new VocabularyKey(nameof(insertPrivacyBanner), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                leadCampaignAttribute = group.Add(new VocabularyKey(nameof(leadCampaignAttribute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                leadContactAttribute = group.Add(new VocabularyKey(nameof(leadContactAttribute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                leadEmailAttribute = group.Add(new VocabularyKey(nameof(leadEmailAttribute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                leadmarketingformattribute = group.Add(new VocabularyKey(nameof(leadmarketingformattribute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                leadmarketingpageattribute = group.Add(new VocabularyKey(nameof(leadmarketingpageattribute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                marketingpageconfigurationId = group.Add(new VocabularyKey(nameof(marketingpageconfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                privacyBannerText = group.Add(new VocabularyKey(nameof(privacyBannerText), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                privacyPolicyLinkText = group.Add(new VocabularyKey(nameof(privacyPolicyLinkText), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                privacyPolicyLinkURL = group.Add(new VocabularyKey(nameof(privacyPolicyLinkURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                overriddenCreatedOn = group.Add(new VocabularyKey(nameof(overriddenCreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                timeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(timeZoneRuleVersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOnBehalfBy = group.Add(new VocabularyKey(nameof(CreatedOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(ModifiedOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Contactcampaignattribute = group.Add(new VocabularyKey(nameof(Contactcampaignattribute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ContactEmailAttribute = group.Add(new VocabularyKey(nameof(ContactEmailAttribute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Contactmarketingformattribute = group.Add(new VocabularyKey(nameof(Contactmarketingformattribute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Contactmarketingpageattribute = group.Add(new VocabularyKey(nameof(Contactmarketingpageattribute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                @Default = group.Add(new VocabularyKey(nameof(@Default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Keepsuccessfulsubmissions = group.Add(new VocabularyKey(nameof(Keepsuccessfulsubmissions), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Entityupdatebehavioronsubmit = group.Add(new VocabularyKey(nameof(Entityupdatebehavioronsubmit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Allowsubmissiononlyforms = group.Add(new VocabularyKey(nameof(Allowsubmissiononlyforms), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InsertPrivacyBanner = group.Add(new VocabularyKey(nameof(InsertPrivacyBanner), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LeadCampaignAttribute = group.Add(new VocabularyKey(nameof(LeadCampaignAttribute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LeadContactAttribute = group.Add(new VocabularyKey(nameof(LeadContactAttribute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LeadEmailAttribute = group.Add(new VocabularyKey(nameof(LeadEmailAttribute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Leadmarketingformattribute = group.Add(new VocabularyKey(nameof(Leadmarketingformattribute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Leadmarketingpageattribute = group.Add(new VocabularyKey(nameof(Leadmarketingpageattribute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MarketingpageconfigurationId = group.Add(new VocabularyKey(nameof(MarketingpageconfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PrivacyBannerText = group.Add(new VocabularyKey(nameof(PrivacyBannerText), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PrivacyPolicyLinkText = group.Add(new VocabularyKey(nameof(PrivacyPolicyLinkText), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PrivacyPolicyLinkURL = group.Add(new VocabularyKey(nameof(PrivacyPolicyLinkURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                websitefilterPlaceholder = group.Add(new VocabularyKey(nameof(websitefilterPlaceholder), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                websiteid = group.Add(new VocabularyKey(nameof(websiteid), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                websitelanguageid = group.Add(new VocabularyKey(nameof(websitelanguageid), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                parentwebpageid = group.Add(new VocabularyKey(nameof(parentwebpageid), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                portalintegrationtype = group.Add(new VocabularyKey(nameof(portalintegrationtype), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                portalInstallationStatus = group.Add(new VocabularyKey(nameof(portalInstallationStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                organizationtypeLastrefresh = group.Add(new VocabularyKey(nameof(organizationtypeLastrefresh), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                organizationType = group.Add(new VocabularyKey(nameof(organizationType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                WebsitefilterPlaceholder = group.Add(new VocabularyKey(nameof(WebsitefilterPlaceholder), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Websiteid = group.Add(new VocabularyKey(nameof(Websiteid), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Websitelanguageid = group.Add(new VocabularyKey(nameof(Websitelanguageid), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Parentwebpageid = group.Add(new VocabularyKey(nameof(Parentwebpageid), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Portalintegrationtype = group.Add(new VocabularyKey(nameof(Portalintegrationtype), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PortalInstallationStatus = group.Add(new VocabularyKey(nameof(PortalInstallationStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OrganizationtypeLastrefresh = group.Add(new VocabularyKey(nameof(OrganizationtypeLastrefresh), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OrganizationType = group.Add(new VocabularyKey(nameof(OrganizationType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey createdOn { get; private set; }
-        public VocabularyKey createdOnBehalfBy { get; private set; }
-        public VocabularyKey importSequenceNumber { get; private set; }
-        public VocabularyKey modifiedOn { get; private set; }
-        public VocabularyKey modifiedOnBehalfBy { get; private set; }
-        public VocabularyKey contactcampaignattribute { get; private set; }
-        public VocabularyKey contactEmailAttribute { get; private set; }
-        public VocabularyKey contactmarketingformattribute { get; private set; }
-        public VocabularyKey contactmarketingpageattribute { get; private set; }
-        public VocabularyKey @default { get; private set; }
-        public VocabularyKey keepsuccessfulsubmissions { get; private set; }
-        public VocabularyKey entityupdatebehavioronsubmit { get; private set; }
-        public VocabularyKey allowsubmissiononlyforms { get; private set; }
-        public VocabularyKey insertPrivacyBanner { get; private set; }
-        public VocabularyKey leadCampaignAttribute { get; private set; }
-        public VocabularyKey leadContactAttribute { get; private set; }
-        public VocabularyKey leadEmailAttribute { get; private set; }
-        public VocabularyKey leadmarketingformattribute { get; private set; }
-        public VocabularyKey leadmarketingpageattribute { get; private set; }
-        public VocabularyKey marketingpageconfigurationId { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey privacyBannerText { get; private set; }
-        public VocabularyKey privacyPolicyLinkText { get; private set; }
-        public VocabularyKey privacyPolicyLinkURL { get; private set; }
-        public VocabularyKey overriddenCreatedOn { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-        public VocabularyKey timeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey CreatedOnBehalfBy { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey ModifiedOnBehalfBy { get; private set; }
+        public VocabularyKey Contactcampaignattribute { get; private set; }
+        public VocabularyKey ContactEmailAttribute { get; private set; }
+        public VocabularyKey Contactmarketingformattribute { get; private set; }
+        public VocabularyKey Contactmarketingpageattribute { get; private set; }
+        public VocabularyKey @Default { get; private set; }
+        public VocabularyKey Keepsuccessfulsubmissions { get; private set; }
+        public VocabularyKey Entityupdatebehavioronsubmit { get; private set; }
+        public VocabularyKey Allowsubmissiononlyforms { get; private set; }
+        public VocabularyKey InsertPrivacyBanner { get; private set; }
+        public VocabularyKey LeadCampaignAttribute { get; private set; }
+        public VocabularyKey LeadContactAttribute { get; private set; }
+        public VocabularyKey LeadEmailAttribute { get; private set; }
+        public VocabularyKey Leadmarketingformattribute { get; private set; }
+        public VocabularyKey Leadmarketingpageattribute { get; private set; }
+        public VocabularyKey MarketingpageconfigurationId { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey PrivacyBannerText { get; private set; }
+        public VocabularyKey PrivacyPolicyLinkText { get; private set; }
+        public VocabularyKey PrivacyPolicyLinkURL { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey websitefilterPlaceholder { get; private set; }
-        public VocabularyKey websiteid { get; private set; }
-        public VocabularyKey websitelanguageid { get; private set; }
-        public VocabularyKey parentwebpageid { get; private set; }
-        public VocabularyKey portalintegrationtype { get; private set; }
-        public VocabularyKey portalInstallationStatus { get; private set; }
-        public VocabularyKey organizationtypeLastrefresh { get; private set; }
-        public VocabularyKey organizationType { get; private set; }
-
-
+        public VocabularyKey WebsitefilterPlaceholder { get; private set; }
+        public VocabularyKey Websiteid { get; private set; }
+        public VocabularyKey Websitelanguageid { get; private set; }
+        public VocabularyKey Parentwebpageid { get; private set; }
+        public VocabularyKey Portalintegrationtype { get; private set; }
+        public VocabularyKey PortalInstallationStatus { get; private set; }
+        public VocabularyKey OrganizationtypeLastrefresh { get; private set; }
+        public VocabularyKey OrganizationType { get; private set; }
     }
 }

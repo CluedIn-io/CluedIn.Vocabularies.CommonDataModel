@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public OMDepartmentEntityVocabulary()
         {
-            VocabularyName = "OMDepartmentEntity";
+            VocabularyName = "OM Department Entity";
             KeyPrefix = "commonDataModel.omdepartmententity";
             KeySeparator = ".";
             Grouping = "/OMDepartmentEntity";
@@ -65,10 +65,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PrimaryContactLinkedInIsPrivate = group.Add(new VocabularyKey(nameof(PrimaryContactLinkedInIsPrivate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PrimaryContactLinkedInDescription = group.Add(new VocabularyKey(nameof(PrimaryContactLinkedInDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PrimaryContactLinkedIn = group.Add(new VocabularyKey(nameof(PrimaryContactLinkedIn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PartyType { get; private set; }
         public VocabularyKey KnownAs { get; private set; }
         public VocabularyKey Language { get; private set; }
@@ -121,7 +119,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PrimaryContactLinkedInIsPrivate { get; private set; }
         public VocabularyKey PrimaryContactLinkedInDescription { get; private set; }
         public VocabularyKey PrimaryContactLinkedIn { get; private set; }
-
-
     }
 }

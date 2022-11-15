@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FiasRoomEntityVocabulary()
         {
-            VocabularyName = "FiasRoomEntity";
+            VocabularyName = "Fias Room Entity";
             KeyPrefix = "commonDataModel.fiasroomentity";
             KeySeparator = ".";
             Grouping = "/FiasRoomEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PostalCode = group.Add(new VocabularyKey(nameof(PostalCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StartDate = group.Add(new VocabularyKey(nameof(StartDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EndDate = group.Add(new VocabularyKey(nameof(EndDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RoomId { get; private set; }
         public VocabularyKey RoomGuid { get; private set; }
         public VocabularyKey RegionCode { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PostalCode { get; private set; }
         public VocabularyKey StartDate { get; private set; }
         public VocabularyKey EndDate { get; private set; }
-
-
     }
 }

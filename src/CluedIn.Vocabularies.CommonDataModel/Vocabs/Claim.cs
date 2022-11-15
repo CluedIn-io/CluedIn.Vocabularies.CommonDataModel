@@ -13,47 +13,43 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Claim Details", group =>
             {
-                billablePeriodEnd = group.Add(new VocabularyKey(nameof(billablePeriodEnd), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                billablePeriodStart = group.Add(new VocabularyKey(nameof(billablePeriodStart), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                claimAccident = group.Add(new VocabularyKey(nameof(claimAccident), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                claimAccidentDate = group.Add(new VocabularyKey(nameof(claimAccidentDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                claimId = group.Add(new VocabularyKey(nameof(claimId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                employmentImpactEnd = group.Add(new VocabularyKey(nameof(employmentImpactEnd), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                employmentImpactStart = group.Add(new VocabularyKey(nameof(employmentImpactStart), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                fundsReserve = group.Add(new VocabularyKey(nameof(fundsReserve), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                hospitalizationEnd = group.Add(new VocabularyKey(nameof(hospitalizationEnd), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                hospitalizationStart = group.Add(new VocabularyKey(nameof(hospitalizationStart), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                payeeResourceType = group.Add(new VocabularyKey(nameof(payeeResourceType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                relatedReference = group.Add(new VocabularyKey(nameof(relatedReference), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                relatedRelationship = group.Add(new VocabularyKey(nameof(relatedRelationship), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                subType = group.Add(new VocabularyKey(nameof(subType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                use = group.Add(new VocabularyKey(nameof(use), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                BillablePeriodEnd = group.Add(new VocabularyKey(nameof(BillablePeriodEnd), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BillablePeriodStart = group.Add(new VocabularyKey(nameof(BillablePeriodStart), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ClaimAccident = group.Add(new VocabularyKey(nameof(ClaimAccident), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ClaimAccidentDate = group.Add(new VocabularyKey(nameof(ClaimAccidentDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ClaimId = group.Add(new VocabularyKey(nameof(ClaimId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EmploymentImpactEnd = group.Add(new VocabularyKey(nameof(EmploymentImpactEnd), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EmploymentImpactStart = group.Add(new VocabularyKey(nameof(EmploymentImpactStart), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FundsReserve = group.Add(new VocabularyKey(nameof(FundsReserve), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                HospitalizationEnd = group.Add(new VocabularyKey(nameof(HospitalizationEnd), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                HospitalizationStart = group.Add(new VocabularyKey(nameof(HospitalizationStart), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PayeeResourceType = group.Add(new VocabularyKey(nameof(PayeeResourceType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RelatedReference = group.Add(new VocabularyKey(nameof(RelatedReference), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RelatedRelationship = group.Add(new VocabularyKey(nameof(RelatedRelationship), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SubType = group.Add(new VocabularyKey(nameof(SubType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Use = group.Add(new VocabularyKey(nameof(Use), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey billablePeriodEnd { get; private set; }
-        public VocabularyKey billablePeriodStart { get; private set; }
-        public VocabularyKey claimAccident { get; private set; }
-        public VocabularyKey claimAccidentDate { get; private set; }
-        public VocabularyKey claimId { get; private set; }
-        public VocabularyKey employmentImpactEnd { get; private set; }
-        public VocabularyKey employmentImpactStart { get; private set; }
-        public VocabularyKey fundsReserve { get; private set; }
-        public VocabularyKey hospitalizationEnd { get; private set; }
-        public VocabularyKey hospitalizationStart { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey payeeResourceType { get; private set; }
-        public VocabularyKey relatedReference { get; private set; }
-        public VocabularyKey relatedRelationship { get; private set; }
-        public VocabularyKey subType { get; private set; }
-        public VocabularyKey use { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey BillablePeriodEnd { get; private set; }
+        public VocabularyKey BillablePeriodStart { get; private set; }
+        public VocabularyKey ClaimAccident { get; private set; }
+        public VocabularyKey ClaimAccidentDate { get; private set; }
+        public VocabularyKey ClaimId { get; private set; }
+        public VocabularyKey EmploymentImpactEnd { get; private set; }
+        public VocabularyKey EmploymentImpactStart { get; private set; }
+        public VocabularyKey FundsReserve { get; private set; }
+        public VocabularyKey HospitalizationEnd { get; private set; }
+        public VocabularyKey HospitalizationStart { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey PayeeResourceType { get; private set; }
+        public VocabularyKey RelatedReference { get; private set; }
+        public VocabularyKey RelatedRelationship { get; private set; }
+        public VocabularyKey SubType { get; private set; }
+        public VocabularyKey Use { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

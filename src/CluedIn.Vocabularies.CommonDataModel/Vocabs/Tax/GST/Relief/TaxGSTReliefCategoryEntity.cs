@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxGSTReliefCategoryEntityVocabulary()
         {
-            VocabularyName = "TaxGSTReliefCategoryEntity";
+            VocabularyName = "Tax GST Relief Category Entity";
             KeyPrefix = "commonDataModel.taxgstreliefcategoryentity";
             KeySeparator = ".";
             Grouping = "/TaxGSTReliefCategoryEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ReliefCategoryId = group.Add(new VocabularyKey(nameof(ReliefCategoryId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReliefItemNumber = group.Add(new VocabularyKey(nameof(ReliefItemNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReliefSchedule = group.Add(new VocabularyKey(nameof(ReliefSchedule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ReliefCategoryEntityKey { get; private set; }
         public VocabularyKey ReliefCategoryId { get; private set; }
         public VocabularyKey ReliefItemNumber { get; private set; }
         public VocabularyKey ReliefSchedule { get; private set; }
-
-
     }
 }

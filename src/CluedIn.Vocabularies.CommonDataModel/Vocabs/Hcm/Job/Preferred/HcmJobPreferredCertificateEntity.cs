@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmJobPreferredCertificateEntityVocabulary()
         {
-            VocabularyName = "HcmJobPreferredCertificateEntity";
+            VocabularyName = "Hcm Job Preferred Certificate Entity";
             KeyPrefix = "commonDataModel.hcmjobpreferredcertificateentity";
             KeySeparator = ".";
             Grouping = "/HcmJobPreferredCertificateEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Importance = group.Add(new VocabularyKey(nameof(Importance), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Job = group.Add(new VocabularyKey(nameof(Job), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 JobId = group.Add(new VocabularyKey(nameof(JobId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CertificateType { get; private set; }
         public VocabularyKey CertificateTypeId { get; private set; }
         public VocabularyKey Importance { get; private set; }
         public VocabularyKey Job { get; private set; }
         public VocabularyKey JobId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerSalesTaxExchangeRateTypeCurrencyEntityVocabulary()
         {
-            VocabularyName = "LedgerSalesTaxExchangeRateTypeCurrencyEntity";
+            VocabularyName = "Ledger Sales Tax Exchange Rate Type Currency Entity";
             KeyPrefix = "commonDataModel.ledgersalestaxexchangeratetypecurrencyentity";
             KeySeparator = ".";
             Grouping = "/LedgerSalesTaxExchangeRateTypeCurrencyEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TransactionType = group.Add(new VocabularyKey(nameof(TransactionType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Ledger = group.Add(new VocabularyKey(nameof(Ledger), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExchangeRateType = group.Add(new VocabularyKey(nameof(ExchangeRateType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Currency { get; private set; }
         public VocabularyKey ExchangeRateTypeRecId { get; private set; }
         public VocabularyKey LedgerRecId { get; private set; }
         public VocabularyKey TransactionType { get; private set; }
         public VocabularyKey Ledger { get; private set; }
         public VocabularyKey ExchangeRateType { get; private set; }
-
-
     }
 }

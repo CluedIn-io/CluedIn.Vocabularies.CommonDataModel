@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseWorkExceptionEntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseWorkExceptionEntity";
+            VocabularyName = "WHS Warehouse Work Exception Entity";
             KeyPrefix = "commonDataModel.whswarehouseworkexceptionentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseWorkExceptionEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ExceptionCode = group.Add(new VocabularyKey(nameof(ExceptionCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExceptionDescription = group.Add(new VocabularyKey(nameof(ExceptionDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WaveLabelReprint = group.Add(new VocabularyKey(nameof(WaveLabelReprint), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WillExceptionAdjustInventory { get; private set; }
         public VocabularyKey WillExceptionCreateCycleCounting { get; private set; }
         public VocabularyKey WillExceptionDecrementShipmentOrLoad { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ExceptionCode { get; private set; }
         public VocabularyKey ExceptionDescription { get; private set; }
         public VocabularyKey WaveLabelReprint { get; private set; }
-
-
     }
 }

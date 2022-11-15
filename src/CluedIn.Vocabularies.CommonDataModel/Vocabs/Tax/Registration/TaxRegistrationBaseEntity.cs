@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxRegistrationBaseEntityVocabulary()
         {
-            VocabularyName = "TaxRegistrationBaseEntity";
+            VocabularyName = "Tax Registration Base Entity";
             KeyPrefix = "commonDataModel.taxregistrationbaseentity";
             KeySeparator = ".";
             Grouping = "/TaxRegistrationBaseEntity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Section = group.Add(new VocabularyKey(nameof(Section), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BranchNumber = group.Add(new VocabularyKey(nameof(BranchNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxNatureOfAddress = group.Add(new VocabularyKey(nameof(TaxNatureOfAddress), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TaxRegstrationType { get; private set; }
         public VocabularyKey CountryRegionId { get; private set; }
         public VocabularyKey LocationId { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Section { get; private set; }
         public VocabularyKey BranchNumber { get; private set; }
         public VocabularyKey TaxNatureOfAddress { get; private set; }
-
-
     }
 }

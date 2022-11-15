@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetPlanStageRuleEntityVocabulary()
         {
-            VocabularyName = "BudgetPlanStageRuleEntity";
+            VocabularyName = "Budget Plan Stage Rule Entity";
             KeyPrefix = "commonDataModel.budgetplanstageruleentity";
             KeySeparator = ".";
             Grouping = "/BudgetPlanStageRuleEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Stage = group.Add(new VocabularyKey(nameof(Stage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Workflow = group.Add(new VocabularyKey(nameof(Workflow), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Layout = group.Add(new VocabularyKey(nameof(Layout), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BudgetPlanningProcess { get; private set; }
         public VocabularyKey BudgetPlanningWorkflowStage { get; private set; }
         public VocabularyKey CanAddBudgetPlanLines { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Stage { get; private set; }
         public VocabularyKey Workflow { get; private set; }
         public VocabularyKey Layout { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjProjectLinePropertyEntityVocabulary()
         {
-            VocabularyName = "ProjProjectLinePropertyEntity";
+            VocabularyName = "Proj Project Line Property Entity";
             KeyPrefix = "commonDataModel.projprojectlinepropertyentity";
             KeySeparator = ".";
             Grouping = "/ProjProjectLinePropertyEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 EnableAccrueRevenue = group.Add(new VocabularyKey(nameof(EnableAccrueRevenue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EnabledCapitalizeCost = group.Add(new VocabularyKey(nameof(EnabledCapitalizeCost), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsChargeable = group.Add(new VocabularyKey(nameof(IsChargeable), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CostPercentage { get; private set; }
         public VocabularyKey AddToEfficientHours { get; private set; }
         public VocabularyKey LinePropertyId { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey EnableAccrueRevenue { get; private set; }
         public VocabularyKey EnabledCapitalizeCost { get; private set; }
         public VocabularyKey IsChargeable { get; private set; }
-
-
     }
 }

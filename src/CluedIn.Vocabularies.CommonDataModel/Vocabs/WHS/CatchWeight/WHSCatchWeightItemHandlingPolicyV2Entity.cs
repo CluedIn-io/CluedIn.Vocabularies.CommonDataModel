@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSCatchWeightItemHandlingPolicyV2EntityVocabulary()
         {
-            VocabularyName = "WHSCatchWeightItemHandlingPolicyV2Entity";
+            VocabularyName = "WHS Catch Weight Item Handling Policy V2 Entity";
             KeyPrefix = "commonDataModel.whscatchweightitemhandlingpolicyv2entity";
             KeySeparator = ".";
             Grouping = "/WHSCatchWeightItemHandlingPolicyV2Entity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CountingWeightCapturingMethod = group.Add(new VocabularyKey(nameof(CountingWeightCapturingMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WarehouseTransferWeightCapturingMethod = group.Add(new VocabularyKey(nameof(WarehouseTransferWeightCapturingMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CatchWeightTagDimensionTrackingMethod = group.Add(new VocabularyKey(nameof(CatchWeightTagDimensionTrackingMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PolicyName { get; private set; }
         public VocabularyKey PolicyDescription { get; private set; }
         public VocabularyKey InboundCatchWeightTagCapturingMethod { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CountingWeightCapturingMethod { get; private set; }
         public VocabularyKey WarehouseTransferWeightCapturingMethod { get; private set; }
         public VocabularyKey CatchWeightTagDimensionTrackingMethod { get; private set; }
-
-
     }
 }

@@ -6,30 +6,26 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MarketingDataImportVocabulary()
         {
-            VocabularyName = "MarketingDataImport";
+            VocabularyName = "Marketing Data Import";
             KeyPrefix = "commonDataModel.marketingdataimport";
             KeySeparator = ".";
             Grouping = "/MarketingDataImport";
 
             AddGroup("MarketingDataImport Details", group =>
             {
-                dataversion = group.Add(new VocabularyKey(nameof(dataversion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                importcompleted = group.Add(new VocabularyKey(nameof(importcompleted), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                marketingdataimportId = group.Add(new VocabularyKey(nameof(marketingdataimportId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                newName = group.Add(new VocabularyKey(nameof(newName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                Dataversion = group.Add(new VocabularyKey(nameof(Dataversion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Importcompleted = group.Add(new VocabularyKey(nameof(Importcompleted), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MarketingdataimportId = group.Add(new VocabularyKey(nameof(MarketingdataimportId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                NewName = group.Add(new VocabularyKey(nameof(NewName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey dataversion { get; private set; }
-        public VocabularyKey importcompleted { get; private set; }
-        public VocabularyKey marketingdataimportId { get; private set; }
-        public VocabularyKey newName { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey Dataversion { get; private set; }
+        public VocabularyKey Importcompleted { get; private set; }
+        public VocabularyKey MarketingdataimportId { get; private set; }
+        public VocabularyKey NewName { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjValEmplProjSetupEntityVocabulary()
         {
-            VocabularyName = "ProjValEmplProjSetupEntity";
+            VocabularyName = "Proj Val Empl Proj Setup Entity";
             KeyPrefix = "commonDataModel.projvalemplprojsetupentity";
             KeySeparator = ".";
             Grouping = "/ProjValEmplProjSetupEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ResourceId = group.Add(new VocabularyKey(nameof(ResourceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GroupId = group.Add(new VocabularyKey(nameof(GroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ResourceLegalEntity = group.Add(new VocabularyKey(nameof(ResourceLegalEntity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Projid { get; private set; }
         public VocabularyKey Resource { get; private set; }
         public VocabularyKey ResourceLegalEntityDataArea { get; private set; }
         public VocabularyKey ResourceId { get; private set; }
         public VocabularyKey GroupId { get; private set; }
         public VocabularyKey ResourceLegalEntity { get; private set; }
-
-
     }
 }

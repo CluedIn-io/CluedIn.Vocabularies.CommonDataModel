@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RouteOperationPropertiesV2EntityVocabulary()
         {
-            VocabularyName = "RouteOperationPropertiesV2Entity";
+            VocabularyName = "Route Operation Properties V2 Entity";
             KeyPrefix = "commonDataModel.routeoperationpropertiesv2entity";
             KeySeparator = ".";
             Grouping = "/RouteOperationPropertiesV2Entity";
@@ -42,10 +42,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ItemCode = group.Add(new VocabularyKey(nameof(ItemCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ItemRelation = group.Add(new VocabularyKey(nameof(ItemRelation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WrkCtrActivityRequirementSetRecId = group.Add(new VocabularyKey(nameof(WrkCtrActivityRequirementSetRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SetupCostCategoryId { get; private set; }
         public VocabularyKey QuantityCostCategoryId { get; private set; }
         public VocabularyKey ProcessCostCategoryId { get; private set; }
@@ -75,7 +73,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ItemCode { get; private set; }
         public VocabularyKey ItemRelation { get; private set; }
         public VocabularyKey WrkCtrActivityRequirementSetRecId { get; private set; }
-
-
     }
 }

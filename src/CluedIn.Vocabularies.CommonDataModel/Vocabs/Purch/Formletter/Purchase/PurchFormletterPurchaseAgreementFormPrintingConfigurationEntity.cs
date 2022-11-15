@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchFormletterPurchaseAgreementFormPrintingConfigurationEntityVocabulary()
         {
-            VocabularyName = "PurchFormletterPurchaseAgreementFormPrintingConfigurationEntity";
+            VocabularyName = "Purch Formletter Purchase Agreement Form Printing Configuration Entity";
             KeyPrefix = "commonDataModel.purchformletterpurchaseagreementformprintingconfigurationentity";
             KeySeparator = ".";
             Grouping = "/PurchFormletterPurchaseAgreementFormPrintingConfigurationEntity";
@@ -31,10 +31,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsPaymentTermsDisplayed = group.Add(new VocabularyKey(nameof(IsPaymentTermsDisplayed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsAgreementClassificationDisplayed = group.Add(new VocabularyKey(nameof(IsAgreementClassificationDisplayed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsContractReferenceDisplayed = group.Add(new VocabularyKey(nameof(IsContractReferenceDisplayed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsProductColorIdDisplayed { get; private set; }
         public VocabularyKey IsProductConfigurationIdDisplayed { get; private set; }
         public VocabularyKey IsProductSizeIdDisplayed { get; private set; }
@@ -53,7 +51,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsPaymentTermsDisplayed { get; private set; }
         public VocabularyKey IsAgreementClassificationDisplayed { get; private set; }
         public VocabularyKey IsContractReferenceDisplayed { get; private set; }
-
-
     }
 }

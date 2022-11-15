@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WarrantiedRelationSalesLineEntityVocabulary()
         {
-            VocabularyName = "WarrantiedRelationSalesLineEntity";
+            VocabularyName = "Warrantied Relation Sales Line Entity";
             KeyPrefix = "commonDataModel.warrantiedrelationsaleslineentity";
             KeySeparator = ".";
             Grouping = "/WarrantiedRelationSalesLineEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WarrantySalesLineNumber = group.Add(new VocabularyKey(nameof(WarrantySalesLineNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WarrantyInventoryLotId = group.Add(new VocabularyKey(nameof(WarrantyInventoryLotId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Relation = group.Add(new VocabularyKey(nameof(Relation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CustomerAccount { get; private set; }
         public VocabularyKey WarrantiedOrderType { get; private set; }
         public VocabularyKey WarrantiedSalesId { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WarrantySalesLineNumber { get; private set; }
         public VocabularyKey WarrantyInventoryLotId { get; private set; }
         public VocabularyKey Relation { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollTaxCodeDetailEntityVocabulary()
         {
-            VocabularyName = "PayrollTaxCodeDetailEntity";
+            VocabularyName = "Payroll Tax Code Detail Entity";
             KeyPrefix = "commonDataModel.payrolltaxcodedetailentity";
             KeySeparator = ".";
             Grouping = "/PayrollTaxCodeDetailEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LegalEntityId = group.Add(new VocabularyKey(nameof(LegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxCodeId = group.Add(new VocabularyKey(nameof(TaxCodeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxCodeCountryRegionId = group.Add(new VocabularyKey(nameof(TaxCodeCountryRegionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountNumber { get; private set; }
         public VocabularyKey Rate { get; private set; }
         public VocabularyKey ReportDescription { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LegalEntityId { get; private set; }
         public VocabularyKey TaxCodeId { get; private set; }
         public VocabularyKey TaxCodeCountryRegionId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxRegistrationTypeEntityVocabulary()
         {
-            VocabularyName = "TaxRegistrationTypeEntity";
+            VocabularyName = "Tax Registration Type Entity";
             KeyPrefix = "commonDataModel.taxregistrationtypeentity";
             KeySeparator = ".";
             Grouping = "/TaxRegistrationTypeEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PartyTypeRestriction = group.Add(new VocabularyKey(nameof(PartyTypeRestriction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RegistrationAuthority = group.Add(new VocabularyKey(nameof(RegistrationAuthority), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxRegistrationType = group.Add(new VocabularyKey(nameof(TaxRegistrationType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RegistrationType { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey CountryRegionId { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PartyTypeRestriction { get; private set; }
         public VocabularyKey RegistrationAuthority { get; private set; }
         public VocabularyKey TaxRegistrationType { get; private set; }
-
-
     }
 }

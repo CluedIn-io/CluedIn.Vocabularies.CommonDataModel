@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DirPartyCDSEntityVocabulary()
         {
-            VocabularyName = "DirPartyCDSEntity";
+            VocabularyName = "Dir Party CDS Entity";
             KeyPrefix = "commonDataModel.dirpartycdsentity";
             KeySeparator = ".";
             Grouping = "/DirPartyCDSEntity";
@@ -47,10 +47,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PersonBirthMonth = group.Add(new VocabularyKey(nameof(PersonBirthMonth), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PersonBirthYear = group.Add(new VocabularyKey(nameof(PersonBirthYear), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DirPersonNameRecId = group.Add(new VocabularyKey(nameof(DirPersonNameRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PartyNumber { get; private set; }
         public VocabularyKey PartyType { get; private set; }
         public VocabularyKey NameAlias { get; private set; }
@@ -85,7 +83,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PersonBirthMonth { get; private set; }
         public VocabularyKey PersonBirthYear { get; private set; }
         public VocabularyKey DirPersonNameRecId { get; private set; }
-
-
     }
 }

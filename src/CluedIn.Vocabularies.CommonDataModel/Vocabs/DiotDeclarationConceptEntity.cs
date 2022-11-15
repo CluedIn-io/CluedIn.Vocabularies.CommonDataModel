@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DiotDeclarationConceptEntityVocabulary()
         {
-            VocabularyName = "DiotDeclarationConceptEntity";
+            VocabularyName = "Diot Declaration Concept Entity";
             KeyPrefix = "commonDataModel.diotdeclarationconceptentity";
             KeySeparator = ".";
             Grouping = "/DiotDeclarationConceptEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Nondeductibleamount = group.Add(new VocabularyKey(nameof(Nondeductibleamount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxCode = group.Add(new VocabularyKey(nameof(TaxCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxName = group.Add(new VocabularyKey(nameof(TaxName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ConceptId { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey OrderNumber { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Nondeductibleamount { get; private set; }
         public VocabularyKey TaxCode { get; private set; }
         public VocabularyKey TaxName { get; private set; }
-
-
     }
 }

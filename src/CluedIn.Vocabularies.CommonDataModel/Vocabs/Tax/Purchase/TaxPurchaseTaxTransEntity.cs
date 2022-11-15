@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxPurchaseTaxTransEntityVocabulary()
         {
-            VocabularyName = "TaxPurchaseTaxTransEntity";
+            VocabularyName = "Tax Purchase Tax Trans Entity";
             KeyPrefix = "commonDataModel.taxpurchasetaxtransentity";
             KeySeparator = ".";
             Grouping = "/TaxPurchaseTaxTransEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Percent = group.Add(new VocabularyKey(nameof(Percent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransID = group.Add(new VocabularyKey(nameof(TransID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxPurchaseTaxTransRecId = group.Add(new VocabularyKey(nameof(TaxPurchaseTaxTransRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Base { get; private set; }
         public VocabularyKey ReportingDate { get; private set; }
         public VocabularyKey ReportingVoucher { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Percent { get; private set; }
         public VocabularyKey TransID { get; private set; }
         public VocabularyKey TaxPurchaseTaxTransRecId { get; private set; }
-
-
     }
 }

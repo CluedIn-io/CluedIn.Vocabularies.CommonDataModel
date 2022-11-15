@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RDeferralsProfileEntityVocabulary()
         {
-            VocabularyName = "RDeferralsProfileEntity";
+            VocabularyName = "R Deferrals Profile Entity";
             KeyPrefix = "commonDataModel.rdeferralsprofileentity";
             KeySeparator = ".";
             Grouping = "/RDeferralsProfileEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CalculationType = group.Add(new VocabularyKey(nameof(CalculationType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RoundOffOperation = group.Add(new VocabularyKey(nameof(RoundOffOperation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CalculationPeriod { get; private set; }
         public VocabularyKey WritingOffPeriod { get; private set; }
         public VocabularyKey WritingOffMethod { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CalculationType { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey RoundOffOperation { get; private set; }
-
-
     }
 }

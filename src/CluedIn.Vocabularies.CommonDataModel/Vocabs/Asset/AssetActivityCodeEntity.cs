@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetActivityCodeEntityVocabulary()
         {
-            VocabularyName = "AssetActivityCodeEntity";
+            VocabularyName = "Asset Activity Code Entity";
             KeyPrefix = "commonDataModel.assetactivitycodeentity";
             KeySeparator = ".";
             Grouping = "/AssetActivityCodeEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 ActivityCode = group.Add(new VocabularyKey(nameof(ActivityCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ActivityCode { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

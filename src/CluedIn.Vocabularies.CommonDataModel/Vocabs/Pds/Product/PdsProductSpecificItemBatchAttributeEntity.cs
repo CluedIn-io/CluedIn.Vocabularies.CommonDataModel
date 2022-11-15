@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PdsProductSpecificItemBatchAttributeEntityVocabulary()
         {
-            VocabularyName = "PdsProductSpecificItemBatchAttributeEntity";
+            VocabularyName = "Pds Product Specific Item Batch Attribute Entity";
             KeyPrefix = "commonDataModel.pdsproductspecificitembatchattributeentity";
             KeySeparator = ".";
             Grouping = "/PdsProductSpecificItemBatchAttributeEntity";
@@ -35,10 +35,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OptimalDecimal = group.Add(new VocabularyKey(nameof(OptimalDecimal), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ToleranceFailingAction = group.Add(new VocabularyKey(nameof(ToleranceFailingAction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsPotencyAttribute = group.Add(new VocabularyKey(nameof(IsPotencyAttribute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ItemNumber { get; private set; }
         public VocabularyKey BatchAttributeCode { get; private set; }
         public VocabularyKey BatchAttributeRelation { get; private set; }
@@ -61,7 +59,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OptimalDecimal { get; private set; }
         public VocabularyKey ToleranceFailingAction { get; private set; }
         public VocabularyKey IsPotencyAttribute { get; private set; }
-
-
     }
 }

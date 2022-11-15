@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollBenefitDetailEntityVocabulary()
         {
-            VocabularyName = "PayrollBenefitDetailEntity";
+            VocabularyName = "Payroll Benefit Detail Entity";
             KeyPrefix = "commonDataModel.payrollbenefitdetailentity";
             KeySeparator = ".";
             Grouping = "/PayrollBenefitDetailEntity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ContributionCalculationFrequencyId = group.Add(new VocabularyKey(nameof(ContributionCalculationFrequencyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ContributionCalculationRateId = group.Add(new VocabularyKey(nameof(ContributionCalculationRateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DeductionCalculationFrequencyId = group.Add(new VocabularyKey(nameof(DeductionCalculationFrequencyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Benefit { get; private set; }
         public VocabularyKey ContributionCalculationFrequency { get; private set; }
         public VocabularyKey ContributionCalculationRate { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ContributionCalculationFrequencyId { get; private set; }
         public VocabularyKey ContributionCalculationRateId { get; private set; }
         public VocabularyKey DeductionCalculationFrequencyId { get; private set; }
-
-
     }
 }

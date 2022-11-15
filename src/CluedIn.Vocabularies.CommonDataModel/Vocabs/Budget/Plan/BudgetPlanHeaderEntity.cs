@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetPlanHeaderEntityVocabulary()
         {
-            VocabularyName = "BudgetPlanHeaderEntity";
+            VocabularyName = "Budget Plan Header Entity";
             KeyPrefix = "commonDataModel.budgetplanheaderentity";
             KeySeparator = ".";
             Grouping = "/BudgetPlanHeaderEntity";
@@ -39,10 +39,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BudgetingOrganizationName = group.Add(new VocabularyKey(nameof(BudgetingOrganizationName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InUseBy = group.Add(new VocabularyKey(nameof(InUseBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NeedsUpdate = group.Add(new VocabularyKey(nameof(NeedsUpdate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BudgetingOrganization { get; private set; }
         public VocabularyKey BudgetPlanningProcess { get; private set; }
         public VocabularyKey BudgetPlanningStage { get; private set; }
@@ -69,7 +67,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey BudgetingOrganizationName { get; private set; }
         public VocabularyKey InUseBy { get; private set; }
         public VocabularyKey NeedsUpdate { get; private set; }
-
-
     }
 }

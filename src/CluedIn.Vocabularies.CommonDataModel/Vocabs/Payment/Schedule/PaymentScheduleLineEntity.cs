@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PaymentScheduleLineEntityVocabulary()
         {
-            VocabularyName = "PaymentScheduleLineEntity";
+            VocabularyName = "Payment Schedule Line Entity";
             KeyPrefix = "commonDataModel.paymentschedulelineentity";
             KeySeparator = ".";
             Grouping = "/PaymentScheduleLineEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PercentOrAmount = group.Add(new VocabularyKey(nameof(PercentOrAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PeriodsAfterDueDate = group.Add(new VocabularyKey(nameof(PeriodsAfterDueDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PercentOrAmountValue = group.Add(new VocabularyKey(nameof(PercentOrAmountValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LineNumber { get; private set; }
         public VocabularyKey IsShippingLine { get; private set; }
         public VocabularyKey PaymentScheduleName { get; private set; }
         public VocabularyKey PercentOrAmount { get; private set; }
         public VocabularyKey PeriodsAfterDueDate { get; private set; }
         public VocabularyKey PercentOrAmountValue { get; private set; }
-
-
     }
 }

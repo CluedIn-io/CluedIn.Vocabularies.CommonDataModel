@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchDemandConsolidationInternalCatalogItemCategoryVendorEntityVocabulary()
         {
-            VocabularyName = "PurchDemandConsolidationInternalCatalogItemCategoryVendorEntity";
+            VocabularyName = "Purch Demand Consolidation Internal Catalog Item Category Vendor Entity";
             KeyPrefix = "commonDataModel.purchdemandconsolidationinternalcatalogitemcategoryvendorentity";
             KeySeparator = ".";
             Grouping = "/PurchDemandConsolidationInternalCatalogItemCategoryVendorEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PurchasingPolicyName = group.Add(new VocabularyKey(nameof(PurchasingPolicyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PurchaseOrderCreationAndDemandConsolidationPolicyRuleValidFrom = group.Add(new VocabularyKey(nameof(PurchaseOrderCreationAndDemandConsolidationPolicyRuleValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProcurementProductCategoryHierarchyName = group.Add(new VocabularyKey(nameof(ProcurementProductCategoryHierarchyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey VendorAccountNumber { get; private set; }
         public VocabularyKey VendorLegalEntityId { get; private set; }
         public VocabularyKey ProcurementProductCategoryName { get; private set; }
         public VocabularyKey PurchasingPolicyName { get; private set; }
         public VocabularyKey PurchaseOrderCreationAndDemandConsolidationPolicyRuleValidFrom { get; private set; }
         public VocabularyKey ProcurementProductCategoryHierarchyName { get; private set; }
-
-
     }
 }

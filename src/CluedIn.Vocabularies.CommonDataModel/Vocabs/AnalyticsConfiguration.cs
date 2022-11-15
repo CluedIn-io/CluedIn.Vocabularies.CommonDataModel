@@ -6,40 +6,36 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AnalyticsConfigurationVocabulary()
         {
-            VocabularyName = "AnalyticsConfiguration";
+            VocabularyName = "Analytics Configuration";
             KeyPrefix = "commonDataModel.analyticsconfiguration";
             KeySeparator = ".";
             Grouping = "/AnalyticsConfiguration";
 
             AddGroup("AnalyticsConfiguration Details", group =>
             {
-                cdsaconnectorconfigurationId = group.Add(new VocabularyKey(nameof(cdsaconnectorconfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                exporttoblobstoragesastoken = group.Add(new VocabularyKey(nameof(exporttoblobstoragesastoken), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                exporttoblobstorageurl = group.Add(new VocabularyKey(nameof(exporttoblobstorageurl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                exportFromDate = group.Add(new VocabularyKey(nameof(exportFromDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                lastExport = group.Add(new VocabularyKey(nameof(lastExport), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                sastokenexpirationdatetime = group.Add(new VocabularyKey(nameof(sastokenexpirationdatetime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                isDefault = group.Add(new VocabularyKey(nameof(isDefault), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                serviceStatus = group.Add(new VocabularyKey(nameof(serviceStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                CdsaconnectorconfigurationId = group.Add(new VocabularyKey(nameof(CdsaconnectorconfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Exporttoblobstoragesastoken = group.Add(new VocabularyKey(nameof(Exporttoblobstoragesastoken), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Exporttoblobstorageurl = group.Add(new VocabularyKey(nameof(Exporttoblobstorageurl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExportFromDate = group.Add(new VocabularyKey(nameof(ExportFromDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LastExport = group.Add(new VocabularyKey(nameof(LastExport), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Sastokenexpirationdatetime = group.Add(new VocabularyKey(nameof(Sastokenexpirationdatetime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsDefault = group.Add(new VocabularyKey(nameof(IsDefault), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ServiceStatus = group.Add(new VocabularyKey(nameof(ServiceStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey cdsaconnectorconfigurationId { get; private set; }
-        public VocabularyKey exporttoblobstoragesastoken { get; private set; }
-        public VocabularyKey exporttoblobstorageurl { get; private set; }
-        public VocabularyKey exportFromDate { get; private set; }
-        public VocabularyKey lastExport { get; private set; }
-        public VocabularyKey sastokenexpirationdatetime { get; private set; }
-        public VocabularyKey isDefault { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey serviceStatus { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey CdsaconnectorconfigurationId { get; private set; }
+        public VocabularyKey Exporttoblobstoragesastoken { get; private set; }
+        public VocabularyKey Exporttoblobstorageurl { get; private set; }
+        public VocabularyKey ExportFromDate { get; private set; }
+        public VocabularyKey LastExport { get; private set; }
+        public VocabularyKey Sastokenexpirationdatetime { get; private set; }
+        public VocabularyKey IsDefault { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey ServiceStatus { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

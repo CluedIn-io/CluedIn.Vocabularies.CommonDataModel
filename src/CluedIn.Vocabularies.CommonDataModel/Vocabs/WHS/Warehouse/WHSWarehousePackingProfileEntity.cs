@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehousePackingProfileEntityVocabulary()
         {
-            VocabularyName = "WHSWarehousePackingProfileEntity";
+            VocabularyName = "WHS Warehouse Packing Profile Entity";
             KeyPrefix = "commonDataModel.whswarehousepackingprofileentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehousePackingProfileEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PackingProfileDescription = group.Add(new VocabularyKey(nameof(PackingProfileDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ContainerIdAssigmentMode = group.Add(new VocabularyKey(nameof(ContainerIdAssigmentMode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PackingProfileId = group.Add(new VocabularyKey(nameof(PackingProfileId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WillContainerClosingCreateNewContainer { get; private set; }
         public VocabularyKey ContainerClosingProfileId { get; private set; }
         public VocabularyKey ContainerTypeId { get; private set; }
         public VocabularyKey PackingProfileDescription { get; private set; }
         public VocabularyKey ContainerIdAssigmentMode { get; private set; }
         public VocabularyKey PackingProfileId { get; private set; }
-
-
     }
 }

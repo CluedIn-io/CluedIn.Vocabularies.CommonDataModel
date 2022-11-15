@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CashRegisterFiscalTransCode_WEntityVocabulary()
         {
-            VocabularyName = "CashRegisterFiscalTransCode_WEntity";
+            VocabularyName = "Cash Register Fiscal Trans Code _W Entity";
             KeyPrefix = "commonDataModel.cashregisterfiscaltranscode_wentity";
             KeySeparator = ".";
             Grouping = "/CashRegisterFiscalTransCode_WEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Value = group.Add(new VocabularyKey(nameof(Value), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransactionDate = group.Add(new VocabularyKey(nameof(TransactionDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Voucher = group.Add(new VocabularyKey(nameof(Voucher), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Label { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey Value { get; private set; }
         public VocabularyKey TransactionDate { get; private set; }
         public VocabularyKey Voucher { get; private set; }
-
-
     }
 }

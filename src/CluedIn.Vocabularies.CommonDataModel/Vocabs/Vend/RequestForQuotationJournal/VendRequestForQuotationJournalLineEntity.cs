@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendRequestForQuotationJournalLineEntityVocabulary()
         {
-            VocabularyName = "VendRequestForQuotationJournalLineEntity";
+            VocabularyName = "Vend Request For Quotation Journal Line Entity";
             KeyPrefix = "commonDataModel.vendrequestforquotationjournallineentity";
             KeySeparator = ".";
             Grouping = "/VendRequestForQuotationJournalLineEntity";
@@ -63,10 +63,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductStyleId = group.Add(new VocabularyKey(nameof(ProductStyleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductVersionId = group.Add(new VocabularyKey(nameof(ProductVersionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorAccountNumber = group.Add(new VocabularyKey(nameof(VendorAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AssetValueModelId { get; private set; }
         public VocabularyKey FixedAssetNumber { get; private set; }
         public VocabularyKey FixedAssetTransactionType { get; private set; }
@@ -117,7 +115,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProductStyleId { get; private set; }
         public VocabularyKey ProductVersionId { get; private set; }
         public VocabularyKey VendorAccountNumber { get; private set; }
-
-
     }
 }

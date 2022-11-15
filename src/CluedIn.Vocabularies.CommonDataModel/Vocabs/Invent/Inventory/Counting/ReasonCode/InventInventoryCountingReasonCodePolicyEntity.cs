@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventInventoryCountingReasonCodePolicyEntityVocabulary()
         {
-            VocabularyName = "InventInventoryCountingReasonCodePolicyEntity";
+            VocabularyName = "Invent Inventory Counting Reason Code Policy Entity";
             KeyPrefix = "commonDataModel.inventinventorycountingreasoncodepolicyentity";
             KeySeparator = ".";
             Grouping = "/InventInventoryCountingReasonCodePolicyEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InventCountingReasonCodeType = group.Add(new VocabularyKey(nameof(InventCountingReasonCodeType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Name { get; private set; }
         public VocabularyKey InventCountingReasonCodeType { get; private set; }
-
-
     }
 }

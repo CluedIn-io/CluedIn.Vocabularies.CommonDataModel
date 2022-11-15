@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CatProcurementCatalogCategoryEntityVocabulary()
         {
-            VocabularyName = "CatProcurementCatalogCategoryEntity";
+            VocabularyName = "Cat Procurement Catalog Category Entity";
             KeyPrefix = "commonDataModel.catprocurementcatalogcategoryentity";
             KeySeparator = ".";
             Grouping = "/CatProcurementCatalogCategoryEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CategoryName = group.Add(new VocabularyKey(nameof(CategoryName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsDisabled = group.Add(new VocabularyKey(nameof(IsDisabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProcurementSiteUpdateType = group.Add(new VocabularyKey(nameof(ProcurementSiteUpdateType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProcurementCatalogName { get; private set; }
         public VocabularyKey CategoryName { get; private set; }
         public VocabularyKey IsDisabled { get; private set; }
         public VocabularyKey ProcurementSiteUpdateType { get; private set; }
-
-
     }
 }

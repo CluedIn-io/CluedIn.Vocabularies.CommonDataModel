@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RTax25RegisterProfitEntityVocabulary()
         {
-            VocabularyName = "RTax25RegisterProfitEntity";
+            VocabularyName = "R Tax 25 Register Profit Entity";
             KeyPrefix = "commonDataModel.rtax25registerprofitentity";
             KeySeparator = ".";
             Grouping = "/RTax25RegisterProfitEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RegisterId = group.Add(new VocabularyKey(nameof(RegisterId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RTax25ProfitTable = group.Add(new VocabularyKey(nameof(RTax25ProfitTable), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExpenseCode = group.Add(new VocabularyKey(nameof(ExpenseCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Condition { get; private set; }
         public VocabularyKey PaymentCondition { get; private set; }
         public VocabularyKey ProductionAsset { get; private set; }
         public VocabularyKey RegisterId { get; private set; }
         public VocabularyKey RTax25ProfitTable { get; private set; }
         public VocabularyKey ExpenseCode { get; private set; }
-
-
     }
 }

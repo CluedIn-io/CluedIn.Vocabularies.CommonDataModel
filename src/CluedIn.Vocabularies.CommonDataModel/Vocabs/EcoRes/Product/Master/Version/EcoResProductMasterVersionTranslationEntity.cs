@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResProductMasterVersionTranslationEntityVocabulary()
         {
-            VocabularyName = "EcoResProductMasterVersionTranslationEntity";
+            VocabularyName = "Eco Res Product Master Version Translation Entity";
             KeyPrefix = "commonDataModel.ecoresproductmasterversiontranslationentity";
             KeySeparator = ".";
             Grouping = "/EcoResProductMasterVersionTranslationEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LanguageId = group.Add(new VocabularyKey(nameof(LanguageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TranslatedVersionName = group.Add(new VocabularyKey(nameof(TranslatedVersionName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TranslatedVersionDescription = group.Add(new VocabularyKey(nameof(TranslatedVersionDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DimensionTableId { get; private set; }
         public VocabularyKey ProductMasterNumber { get; private set; }
         public VocabularyKey ProductMasterVersionId { get; private set; }
         public VocabularyKey LanguageId { get; private set; }
         public VocabularyKey TranslatedVersionName { get; private set; }
         public VocabularyKey TranslatedVersionDescription { get; private set; }
-
-
     }
 }

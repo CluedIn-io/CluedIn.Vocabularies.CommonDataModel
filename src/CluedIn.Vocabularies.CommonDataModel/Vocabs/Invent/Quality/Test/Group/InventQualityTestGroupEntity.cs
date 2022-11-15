@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventQualityTestGroupEntityVocabulary()
         {
-            VocabularyName = "InventQualityTestGroupEntity";
+            VocabularyName = "Invent Quality Test Group Entity";
             KeyPrefix = "commonDataModel.inventqualitytestgroupentity";
             KeySeparator = ".";
             Grouping = "/InventQualityTestGroupEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsDestructiveTest = group.Add(new VocabularyKey(nameof(IsDestructiveTest), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 QualityTestGroupId = group.Add(new VocabularyKey(nameof(QualityTestGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsInventoryStatusDefaultedWithTestMeasurement = group.Add(new VocabularyKey(nameof(IsInventoryStatusDefaultedWithTestMeasurement), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AcceptableQualityLevelPercentage { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey FailedQualityOrderInventoryStatusId { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsDestructiveTest { get; private set; }
         public VocabularyKey QualityTestGroupId { get; private set; }
         public VocabularyKey IsInventoryStatusDefaultedWithTestMeasurement { get; private set; }
-
-
     }
 }

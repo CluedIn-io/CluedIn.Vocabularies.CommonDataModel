@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailCustomerSearchFieldTranslationEntityVocabulary()
         {
-            VocabularyName = "RetailCustomerSearchFieldTranslationEntity";
+            VocabularyName = "Retail Customer Search Field Translation Entity";
             KeyPrefix = "commonDataModel.retailcustomersearchfieldtranslationentity";
             KeySeparator = ".";
             Grouping = "/RetailCustomerSearchFieldTranslationEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LanguageId = group.Add(new VocabularyKey(nameof(LanguageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RetailCustomerSearchFieldEnumLabel = group.Add(new VocabularyKey(nameof(RetailCustomerSearchFieldEnumLabel), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RetailCustomerSearchField { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey LanguageId { get; private set; }
         public VocabularyKey RetailCustomerSearchFieldEnumLabel { get; private set; }
-
-
     }
 }

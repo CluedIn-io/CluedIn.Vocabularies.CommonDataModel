@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FiscalBooksParametersPerStateEntityVocabulary()
         {
-            VocabularyName = "FiscalBooksParametersPerStateEntity";
+            VocabularyName = "Fiscal Books Parameters Per State Entity";
             KeyPrefix = "commonDataModel.fiscalbooksparametersperstateentity";
             KeySeparator = ".";
             Grouping = "/FiscalBooksParametersPerStateEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ObservationCode = group.Add(new VocabularyKey(nameof(ObservationCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FiscalDocumentAdjustmentCodeFixedAsset = group.Add(new VocabularyKey(nameof(FiscalDocumentAdjustmentCodeFixedAsset), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GeneralAdjustmentCodeFixedAsset = group.Add(new VocabularyKey(nameof(GeneralAdjustmentCodeFixedAsset), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CIAPCalculateInstallmentForOutgoing { get; private set; }
         public VocabularyKey ByFiscalDocument { get; private set; }
         public VocabularyKey ICMSObservationCode { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ObservationCode { get; private set; }
         public VocabularyKey FiscalDocumentAdjustmentCodeFixedAsset { get; private set; }
         public VocabularyKey GeneralAdjustmentCodeFixedAsset { get; private set; }
-
-
     }
 }

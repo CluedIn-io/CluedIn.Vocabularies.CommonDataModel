@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSLateShipReasonEntityVocabulary()
         {
-            VocabularyName = "TMSLateShipReasonEntity";
+            VocabularyName = "TMS Late Ship Reason Entity";
             KeyPrefix = "commonDataModel.tmslateshipreasonentity";
             KeySeparator = ".";
             Grouping = "/TMSLateShipReasonEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 ReasonCode = group.Add(new VocabularyKey(nameof(ReasonCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReasonDescription = group.Add(new VocabularyKey(nameof(ReasonDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ReasonCode { get; private set; }
         public VocabularyKey ReasonDescription { get; private set; }
-
-
     }
 }

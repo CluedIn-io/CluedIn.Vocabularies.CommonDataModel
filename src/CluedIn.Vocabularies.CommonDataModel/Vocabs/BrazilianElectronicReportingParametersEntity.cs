@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BrazilianElectronicReportingParametersEntityVocabulary()
         {
-            VocabularyName = "BrazilianElectronicReportingParametersEntity";
+            VocabularyName = "Brazilian Electronic Reporting Parameters Entity";
             KeyPrefix = "commonDataModel.brazilianelectronicreportingparametersentity";
             KeySeparator = ".";
             Grouping = "/BrazilianElectronicReportingParametersEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ModelMappingName = group.Add(new VocabularyKey(nameof(ModelMappingName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SolutionName = group.Add(new VocabularyKey(nameof(SolutionName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorUrl = group.Add(new VocabularyKey(nameof(VendorUrl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ReportType { get; private set; }
         public VocabularyKey ERModelMappingTable { get; private set; }
         public VocabularyKey ModelMappingName { get; private set; }
         public VocabularyKey SolutionName { get; private set; }
         public VocabularyKey VendorUrl { get; private set; }
-
-
     }
 }

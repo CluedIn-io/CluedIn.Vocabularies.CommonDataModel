@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationRoutePlanEntityVocabulary()
         {
-            VocabularyName = "TMSTransportationRoutePlanEntity";
+            VocabularyName = "TMS Transportation Route Plan Entity";
             KeyPrefix = "commonDataModel.tmstransportationrouteplanentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationRoutePlanEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 PlanId = group.Add(new VocabularyKey(nameof(PlanId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PlanName = group.Add(new VocabularyKey(nameof(PlanName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PlanId { get; private set; }
         public VocabularyKey PlanName { get; private set; }
-
-
     }
 }

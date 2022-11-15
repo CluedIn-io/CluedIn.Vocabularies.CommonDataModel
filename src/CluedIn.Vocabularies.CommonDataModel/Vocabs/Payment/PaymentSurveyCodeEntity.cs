@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PaymentSurveyCodeEntityVocabulary()
         {
-            VocabularyName = "PaymentSurveyCodeEntity";
+            VocabularyName = "Payment Survey Code Entity";
             KeyPrefix = "commonDataModel.paymentsurveycodeentity";
             KeySeparator = ".";
             Grouping = "/PaymentSurveyCodeEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Company = group.Add(new VocabularyKey(nameof(Company), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CentralBankPurposeCode = group.Add(new VocabularyKey(nameof(CentralBankPurposeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CountryRegionSummary { get; private set; }
         public VocabularyKey SurveyCode { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey Company { get; private set; }
         public VocabularyKey CentralBankPurposeCode { get; private set; }
-
-
     }
 }

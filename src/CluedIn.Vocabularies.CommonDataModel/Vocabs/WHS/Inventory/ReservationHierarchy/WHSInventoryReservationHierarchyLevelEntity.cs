@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSInventoryReservationHierarchyLevelEntityVocabulary()
         {
-            VocabularyName = "WHSInventoryReservationHierarchyLevelEntity";
+            VocabularyName = "WHS Inventory Reservation Hierarchy Level Entity";
             KeyPrefix = "commonDataModel.whsinventoryreservationhierarchylevelentity";
             KeySeparator = ".";
             Grouping = "/WHSInventoryReservationHierarchyLevelEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 InventoryReservationHierarchyLevel = group.Add(new VocabularyKey(nameof(InventoryReservationHierarchyLevel), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InventoryReservationHierarchyName = group.Add(new VocabularyKey(nameof(InventoryReservationHierarchyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DemandOrderReservationPolicy = group.Add(new VocabularyKey(nameof(DemandOrderReservationPolicy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InventoryDimensionFieldId { get; private set; }
         public VocabularyKey InventoryDimensionFieldName { get; private set; }
         public VocabularyKey InventoryReservationHierarchyRefRecId { get; private set; }
         public VocabularyKey InventoryReservationHierarchyLevel { get; private set; }
         public VocabularyKey InventoryReservationHierarchyName { get; private set; }
         public VocabularyKey DemandOrderReservationPolicy { get; private set; }
-
-
     }
 }

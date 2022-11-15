@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSShippingCarrierNumberSequenceEntityVocabulary()
         {
-            VocabularyName = "TMSShippingCarrierNumberSequenceEntity";
+            VocabularyName = "TMS Shipping Carrier Number Sequence Entity";
             KeyPrefix = "commonDataModel.tmsshippingcarriernumbersequenceentity";
             KeySeparator = ".";
             Grouping = "/TMSShippingCarrierNumberSequenceEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SequenceLength = group.Add(new VocabularyKey(nameof(SequenceLength), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BeginningSequenceNumber = group.Add(new VocabularyKey(nameof(BeginningSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SequenceThreshold = group.Add(new VocabularyKey(nameof(SequenceThreshold), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TransportationGenericEngineCheckDigitCode { get; private set; }
         public VocabularyKey EndingSequenceNumber { get; private set; }
         public VocabularyKey SequenceName { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SequenceLength { get; private set; }
         public VocabularyKey BeginningSequenceNumber { get; private set; }
         public VocabularyKey SequenceThreshold { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationTenderHistoryEntityVocabulary()
         {
-            VocabularyName = "TMSTransportationTenderHistoryEntity";
+            VocabularyName = "TMS Transportation Tender History Entity";
             KeyPrefix = "commonDataModel.tmstransportationtenderhistoryentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationTenderHistoryEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TransportationTenderHistoryEntryNumber = group.Add(new VocabularyKey(nameof(TransportationTenderHistoryEntryNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ShippingCarrierId = group.Add(new VocabularyKey(nameof(ShippingCarrierId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ShippingCarrierVendorAccountNumber = group.Add(new VocabularyKey(nameof(ShippingCarrierVendorAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ConfirmedPickupDateTime { get; private set; }
         public VocabularyKey ConfirmedRate { get; private set; }
         public VocabularyKey TransportationEquipmentCode { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TransportationTenderHistoryEntryNumber { get; private set; }
         public VocabularyKey ShippingCarrierId { get; private set; }
         public VocabularyKey ShippingCarrierVendorAccountNumber { get; private set; }
-
-
     }
 }

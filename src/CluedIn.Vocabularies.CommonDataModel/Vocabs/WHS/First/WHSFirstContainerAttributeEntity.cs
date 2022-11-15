@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSFirstContainerAttributeEntityVocabulary()
         {
-            VocabularyName = "WHSFirstContainerAttributeEntity";
+            VocabularyName = "WHS First Container Attribute Entity";
             KeyPrefix = "commonDataModel.whsfirstcontainerattributeentity";
             KeySeparator = ".";
             Grouping = "/WHSFirstContainerAttributeEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 AttributeValue = group.Add(new VocabularyKey(nameof(AttributeValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AttributeDescription = group.Add(new VocabularyKey(nameof(AttributeDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AttributeValue { get; private set; }
         public VocabularyKey AttributeDescription { get; private set; }
-
-
     }
 }

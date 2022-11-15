@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public NaturalResourcesTaxGroupEntityVocabulary()
         {
-            VocabularyName = "NaturalResourcesTaxGroupEntity";
+            VocabularyName = "Natural Resources Tax Group Entity";
             KeyPrefix = "commonDataModel.NaturalResourcesTaxGroupEntity";
             KeySeparator = ".";
             Grouping = "/NaturalResourcesTaxGroupEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TaxGroupOnNaturalResources = group.Add(new VocabularyKey(nameof(TaxGroupOnNaturalResources), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxCode = group.Add(new VocabularyKey(nameof(TaxCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TaxGroupOnNaturalResources { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey TaxCode { get; private set; }
-
-
     }
 }

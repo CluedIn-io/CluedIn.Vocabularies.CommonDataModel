@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetDepreciationRateScheduleEntityVocabulary()
         {
-            VocabularyName = "AssetDepreciationRateScheduleEntity";
+            VocabularyName = "Asset Depreciation Rate Schedule Entity";
             KeyPrefix = "commonDataModel.assetdepreciationratescheduleentity";
             KeySeparator = ".";
             Grouping = "/AssetDepreciationRateScheduleEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 NDB200GuaranteedDepRate = group.Add(new VocabularyKey(nameof(NDB200GuaranteedDepRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NDB200RevisedDepRate = group.Add(new VocabularyKey(nameof(NDB200RevisedDepRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ElectronicDepRate = group.Add(new VocabularyKey(nameof(ElectronicDepRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Name { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey UsefulLife { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey NDB200GuaranteedDepRate { get; private set; }
         public VocabularyKey NDB200RevisedDepRate { get; private set; }
         public VocabularyKey ElectronicDepRate { get; private set; }
-
-
     }
 }

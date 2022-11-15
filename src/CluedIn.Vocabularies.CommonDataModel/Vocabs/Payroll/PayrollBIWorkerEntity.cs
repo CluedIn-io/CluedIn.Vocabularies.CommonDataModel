@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollBIWorkerEntityVocabulary()
         {
-            VocabularyName = "PayrollBIWorkerEntity";
+            VocabularyName = "Payroll BI Worker Entity";
             KeyPrefix = "commonDataModel.payrollbiworkerentity";
             KeySeparator = ".";
             Grouping = "/PayrollBIWorkerEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 PersonnelNumber = group.Add(new VocabularyKey(nameof(PersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsUsingDirectDeposit = group.Add(new VocabularyKey(nameof(IsUsingDirectDeposit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PersonnelNumber { get; private set; }
         public VocabularyKey IsUsingDirectDeposit { get; private set; }
-
-
     }
 }

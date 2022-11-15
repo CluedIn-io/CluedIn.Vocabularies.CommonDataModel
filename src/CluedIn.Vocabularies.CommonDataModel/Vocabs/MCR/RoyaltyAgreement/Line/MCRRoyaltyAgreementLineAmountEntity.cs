@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRRoyaltyAgreementLineAmountEntityVocabulary()
         {
-            VocabularyName = "MCRRoyaltyAgreementLineAmountEntity";
+            VocabularyName = "MCR Royalty Agreement Line Amount Entity";
             KeyPrefix = "commonDataModel.mcrroyaltyagreementlineamountentity";
             KeySeparator = ".";
             Grouping = "/MCRRoyaltyAgreementLineAmountEntity";
@@ -31,10 +31,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FixedRoyaltyAmount = group.Add(new VocabularyKey(nameof(FixedRoyaltyAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RoyaltyPercentage = group.Add(new VocabularyKey(nameof(RoyaltyPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorAccountNumber = group.Add(new VocabularyKey(nameof(VendorAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RoyaltyAgreementId { get; private set; }
         public VocabularyKey RoyaltyAgreementLineId { get; private set; }
         public VocabularyKey LineNumber { get; private set; }
@@ -53,7 +51,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FixedRoyaltyAmount { get; private set; }
         public VocabularyKey RoyaltyPercentage { get; private set; }
         public VocabularyKey VendorAccountNumber { get; private set; }
-
-
     }
 }

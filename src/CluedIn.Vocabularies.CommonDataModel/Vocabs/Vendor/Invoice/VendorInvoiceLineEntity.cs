@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendorInvoiceLineEntityVocabulary()
         {
-            VocabularyName = "VendorInvoiceLineEntity";
+            VocabularyName = "Vendor Invoice Line Entity";
             KeyPrefix = "commonDataModel.vendorinvoicelineentity";
             KeySeparator = ".";
             Grouping = "/VendorInvoiceLineEntity";
@@ -114,10 +114,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BudgetReservationDocumentNumber = group.Add(new VocabularyKey(nameof(BudgetReservationDocumentNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InvoiceTransactionDate = group.Add(new VocabularyKey(nameof(InvoiceTransactionDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductFlavor = group.Add(new VocabularyKey(nameof(ProductFlavor), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey VendorAccount { get; private set; }
         public VocabularyKey TemplateId { get; private set; }
         public VocabularyKey AdvanceApplicationReference { get; private set; }
@@ -219,7 +217,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey BudgetReservationDocumentNumber { get; private set; }
         public VocabularyKey InvoiceTransactionDate { get; private set; }
         public VocabularyKey ProductFlavor { get; private set; }
-
-
     }
 }

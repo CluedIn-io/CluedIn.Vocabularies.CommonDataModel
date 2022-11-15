@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SMAServiceOrderStageEntityVocabulary()
         {
-            VocabularyName = "SMAServiceOrderStageEntity";
+            VocabularyName = "SMA Service Order Stage Entity";
             KeyPrefix = "commonDataModel.smaserviceorderstageentity";
             KeySeparator = ".";
             Grouping = "/SMAServiceOrderStageEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsStageStoppingServiceOrderTimeRecording = group.Add(new VocabularyKey(nameof(IsStageStoppingServiceOrderTimeRecording), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StageDescription = group.Add(new VocabularyKey(nameof(StageDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsStageRequiringServiceOrderReasonCodeEntry = group.Add(new VocabularyKey(nameof(IsStageRequiringServiceOrderReasonCodeEntry), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey StageId { get; private set; }
         public VocabularyKey ParentServiceOrderStageId { get; private set; }
         public VocabularyKey DefaultServiceOrderActivityPhaseCode { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsStageStoppingServiceOrderTimeRecording { get; private set; }
         public VocabularyKey StageDescription { get; private set; }
         public VocabularyKey IsStageRequiringServiceOrderReasonCodeEntry { get; private set; }
-
-
     }
 }

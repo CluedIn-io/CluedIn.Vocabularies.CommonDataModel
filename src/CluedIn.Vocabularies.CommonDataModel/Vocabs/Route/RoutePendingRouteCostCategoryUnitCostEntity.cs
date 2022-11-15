@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RoutePendingRouteCostCategoryUnitCostEntityVocabulary()
         {
-            VocabularyName = "RoutePendingRouteCostCategoryUnitCostEntity";
+            VocabularyName = "Route Pending Route Cost Category Unit Cost Entity";
             KeyPrefix = "commonDataModel.routependingroutecostcategoryunitcostentity";
             KeySeparator = ".";
             Grouping = "/RoutePendingRouteCostCategoryUnitCostEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductionSiteId = group.Add(new VocabularyKey(nameof(ProductionSiteId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UnitCost = group.Add(new VocabularyKey(nameof(UnitCost), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CostingVersionId = group.Add(new VocabularyKey(nameof(CostingVersionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RouteCostCategoryId { get; private set; }
         public VocabularyKey EffectiveDate { get; private set; }
         public VocabularyKey ProductionSiteId { get; private set; }
         public VocabularyKey UnitCost { get; private set; }
         public VocabularyKey CostingVersionId { get; private set; }
-
-
     }
 }

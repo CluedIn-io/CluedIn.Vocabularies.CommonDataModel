@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BOMBillOfMaterialsHeaderEntityVocabulary()
         {
-            VocabularyName = "BOMBillOfMaterialsHeaderEntity";
+            VocabularyName = "BOM Bill Of Materials Header Entity";
             KeyPrefix = "commonDataModel.bombillofmaterialsheaderentity";
             KeySeparator = ".";
             Grouping = "/BOMBillOfMaterialsHeaderEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ApproverPersonnelNumber = group.Add(new VocabularyKey(nameof(ApproverPersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EngChgProductItemRecId = group.Add(new VocabularyKey(nameof(EngChgProductItemRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EngChgEngineeringBomReference = group.Add(new VocabularyKey(nameof(EngChgEngineeringBomReference), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsApproved { get; private set; }
         public VocabularyKey ApproverId { get; private set; }
         public VocabularyKey BOMId { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ApproverPersonnelNumber { get; private set; }
         public VocabularyKey EngChgProductItemRecId { get; private set; }
         public VocabularyKey EngChgEngineeringBomReference { get; private set; }
-
-
     }
 }

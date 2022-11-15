@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CityHolidayEntityVocabulary()
         {
-            VocabularyName = "CityHolidayEntity";
+            VocabularyName = "City Holiday Entity";
             KeyPrefix = "commonDataModel.cityholidayentity";
             KeySeparator = ".";
             Grouping = "/CityHolidayEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CityName = group.Add(new VocabularyKey(nameof(CityName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 HolidayDate = group.Add(new VocabularyKey(nameof(HolidayDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey City { get; private set; }
         public VocabularyKey CountryRegionId { get; private set; }
         public VocabularyKey StateId { get; private set; }
         public VocabularyKey CityName { get; private set; }
         public VocabularyKey HolidayDate { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

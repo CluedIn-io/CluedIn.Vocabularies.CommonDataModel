@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PmfItemSpecificFormulaHeaderV2EntityVocabulary()
         {
-            VocabularyName = "PmfItemSpecificFormulaHeaderV2Entity";
+            VocabularyName = "Pmf Item Specific Formula Header V2 Entity";
             KeyPrefix = "commonDataModel.pmfitemspecificformulaheaderv2entity";
             KeySeparator = ".";
             Grouping = "/PmfItemSpecificFormulaHeaderV2Entity";
@@ -42,10 +42,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FromQuantity = group.Add(new VocabularyKey(nameof(FromQuantity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidFromDate = group.Add(new VocabularyKey(nameof(ValidFromDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FromCatchWeightQuantity = group.Add(new VocabularyKey(nameof(FromCatchWeightQuantity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsApproved { get; private set; }
         public VocabularyKey IsActive { get; private set; }
         public VocabularyKey ApproverId { get; private set; }
@@ -75,7 +73,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FromQuantity { get; private set; }
         public VocabularyKey ValidFromDate { get; private set; }
         public VocabularyKey FromCatchWeightQuantity { get; private set; }
-
-
     }
 }

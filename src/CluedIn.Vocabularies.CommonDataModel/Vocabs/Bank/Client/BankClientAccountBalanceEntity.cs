@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankClientAccountBalanceEntityVocabulary()
         {
-            VocabularyName = "BankClientAccountBalanceEntity";
+            VocabularyName = "Bank Client Account Balance Entity";
             KeyPrefix = "commonDataModel.bankclientaccountbalanceentity";
             KeySeparator = ".";
             Grouping = "/BankClientAccountBalanceEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RecordType = group.Add(new VocabularyKey(nameof(RecordType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FromDate = group.Add(new VocabularyKey(nameof(FromDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ToDate = group.Add(new VocabularyKey(nameof(ToDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BankAccount { get; private set; }
         public VocabularyKey Amount { get; private set; }
         public VocabularyKey RecordType { get; private set; }
         public VocabularyKey FromDate { get; private set; }
         public VocabularyKey ToDate { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetProvisionTypeEntityVocabulary()
         {
-            VocabularyName = "AssetProvisionTypeEntity";
+            VocabularyName = "Asset Provision Type Entity";
             KeyPrefix = "commonDataModel.assetprovisiontypeentity";
             KeySeparator = ".";
             Grouping = "/AssetProvisionTypeEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LengthOfOwnership = group.Add(new VocabularyKey(nameof(LengthOfOwnership), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TypeId = group.Add(new VocabularyKey(nameof(TypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Months = group.Add(new VocabularyKey(nameof(Months), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey LengthOfOwnership { get; private set; }
         public VocabularyKey TypeId { get; private set; }
         public VocabularyKey Months { get; private set; }
-
-
     }
 }

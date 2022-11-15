@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailExternalIdToCustomerMapEntityVocabulary()
         {
-            VocabularyName = "RetailExternalIdToCustomerMapEntity";
+            VocabularyName = "Retail External Id To Customer Map Entity";
             KeyPrefix = "commonDataModel.retailexternalidtocustomermapentity";
             KeySeparator = ".";
             Grouping = "/RetailExternalIdToCustomerMapEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProviderId = group.Add(new VocabularyKey(nameof(ProviderId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CustomerAccountNumber = group.Add(new VocabularyKey(nameof(CustomerAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsActivated = group.Add(new VocabularyKey(nameof(IsActivated), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ExternalIdentityId { get; private set; }
         public new VocabularyKey ProviderId { get; private set; }
         public VocabularyKey CustomerAccountNumber { get; private set; }
         public VocabularyKey IsActivated { get; private set; }
-
-
     }
 }

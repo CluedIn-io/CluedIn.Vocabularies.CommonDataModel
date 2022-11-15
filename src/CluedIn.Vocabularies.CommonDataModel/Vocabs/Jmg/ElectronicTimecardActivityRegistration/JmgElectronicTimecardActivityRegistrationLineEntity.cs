@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgElectronicTimecardActivityRegistrationLineEntityVocabulary()
         {
-            VocabularyName = "JmgElectronicTimecardActivityRegistrationLineEntity";
+            VocabularyName = "Jmg Electronic Timecard Activity Registration Line Entity";
             KeyPrefix = "commonDataModel.jmgelectronictimecardactivityregistrationlineentity";
             KeySeparator = ".";
             Grouping = "/JmgElectronicTimecardActivityRegistrationLineEntity";
@@ -34,10 +34,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProjectId = group.Add(new VocabularyKey(nameof(ProjectId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AbsenceCodeId = group.Add(new VocabularyKey(nameof(AbsenceCodeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IndirectActivityCategoryId = group.Add(new VocabularyKey(nameof(IndirectActivityCategoryId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsWorkInProgress { get; private set; }
         public VocabularyKey IsJobFinished { get; private set; }
         public VocabularyKey TimeAndAttendanceJobId { get; private set; }
@@ -59,7 +57,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProjectId { get; private set; }
         public VocabularyKey AbsenceCodeId { get; private set; }
         public VocabularyKey IndirectActivityCategoryId { get; private set; }
-
-
     }
 }

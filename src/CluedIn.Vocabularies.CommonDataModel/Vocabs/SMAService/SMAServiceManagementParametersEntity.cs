@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SMAServiceManagementParametersEntityVocabulary()
         {
-            VocabularyName = "SMAServiceManagementParametersEntity";
+            VocabularyName = "SMA Service Management Parameters Entity";
             KeyPrefix = "commonDataModel.smaservicemanagementparametersentity";
             KeySeparator = ".";
             Grouping = "/SMAServiceManagementParametersEntity";
@@ -30,10 +30,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 GeneratedServiceOrderActivityCategory = group.Add(new VocabularyKey(nameof(GeneratedServiceOrderActivityCategory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultServiceOrderActivityTypeId = group.Add(new VocabularyKey(nameof(DefaultServiceOrderActivityTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultServiceOrderActivityPurpose = group.Add(new VocabularyKey(nameof(DefaultServiceOrderActivityPurpose), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DefaultServiceAgreementActivityTypeId { get; private set; }
         public VocabularyKey DefaultServiceAgreementGroupId { get; private set; }
         public VocabularyKey DefaultServiceAgreementProjectGroupId { get; private set; }
@@ -51,7 +49,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey GeneratedServiceOrderActivityCategory { get; private set; }
         public VocabularyKey DefaultServiceOrderActivityTypeId { get; private set; }
         public VocabularyKey DefaultServiceOrderActivityPurpose { get; private set; }
-
-
     }
 }

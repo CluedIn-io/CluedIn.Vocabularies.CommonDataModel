@@ -6,84 +6,80 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FIDirectDebitVocabulary()
         {
-            VocabularyName = "FIDirectDebit";
+            VocabularyName = "FI Direct Debit";
             KeyPrefix = "commonDataModel.fidirectdebit";
             KeySeparator = ".";
             Grouping = "/FIDirectDebit";
 
             AddGroup("FIDirectDebit Details", group =>
             {
-                fi_DirectDebitId = group.Add(new VocabularyKey(nameof(fi_DirectDebitId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                modifiedOn = group.Add(new VocabularyKey(nameof(modifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statecode = group.Add(new VocabularyKey(nameof(statecode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statuscode = group.Add(new VocabularyKey(nameof(statuscode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                importSequenceNumber = group.Add(new VocabularyKey(nameof(importSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                overriddenCreatedOn = group.Add(new VocabularyKey(nameof(overriddenCreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                timeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(timeZoneRuleVersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Fi_DirectDebitId = group.Add(new VocabularyKey(nameof(Fi_DirectDebitId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Statecode = group.Add(new VocabularyKey(nameof(Statecode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Statuscode = group.Add(new VocabularyKey(nameof(Statuscode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                creditoridentifier = group.Add(new VocabularyKey(nameof(creditoridentifier), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                creditorname = group.Add(new VocabularyKey(nameof(creditorname), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                debtoraccount = group.Add(new VocabularyKey(nameof(debtoraccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                financialinstrumenttype = group.Add(new VocabularyKey(nameof(financialinstrumenttype), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                integrationKey = group.Add(new VocabularyKey(nameof(integrationKey), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                lastitemamount = group.Add(new VocabularyKey(nameof(lastitemamount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                lastitemamount_Base = group.Add(new VocabularyKey(nameof(lastitemamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                lastitemamount_default = group.Add(new VocabularyKey(nameof(lastitemamount_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                lastitemdate = group.Add(new VocabularyKey(nameof(lastitemdate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                lastitemstatus = group.Add(new VocabularyKey(nameof(lastitemstatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                lastitemstatusreason = group.Add(new VocabularyKey(nameof(lastitemstatusreason), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                mandateenddate = group.Add(new VocabularyKey(nameof(mandateenddate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                mandateid = group.Add(new VocabularyKey(nameof(mandateid), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                mandatelimit = group.Add(new VocabularyKey(nameof(mandatelimit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                mandatelimit_Base = group.Add(new VocabularyKey(nameof(mandatelimit_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                mandatelimit_default = group.Add(new VocabularyKey(nameof(mandatelimit_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                mandatestartdate = group.Add(new VocabularyKey(nameof(mandatestartdate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                nextitemamount = group.Add(new VocabularyKey(nameof(nextitemamount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                nextitemamount_Base = group.Add(new VocabularyKey(nameof(nextitemamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                nextitemamount_default = group.Add(new VocabularyKey(nameof(nextitemamount_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                nextitemdate = group.Add(new VocabularyKey(nameof(nextitemdate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                orderenddate = group.Add(new VocabularyKey(nameof(orderenddate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                standingOrderAmount = group.Add(new VocabularyKey(nameof(standingOrderAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Creditoridentifier = group.Add(new VocabularyKey(nameof(Creditoridentifier), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Creditorname = group.Add(new VocabularyKey(nameof(Creditorname), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Debtoraccount = group.Add(new VocabularyKey(nameof(Debtoraccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Financialinstrumenttype = group.Add(new VocabularyKey(nameof(Financialinstrumenttype), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IntegrationKey = group.Add(new VocabularyKey(nameof(IntegrationKey), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Lastitemamount = group.Add(new VocabularyKey(nameof(Lastitemamount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Lastitemamount_Base = group.Add(new VocabularyKey(nameof(Lastitemamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Lastitemamount_default = group.Add(new VocabularyKey(nameof(Lastitemamount_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Lastitemdate = group.Add(new VocabularyKey(nameof(Lastitemdate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Lastitemstatus = group.Add(new VocabularyKey(nameof(Lastitemstatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Lastitemstatusreason = group.Add(new VocabularyKey(nameof(Lastitemstatusreason), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Mandateenddate = group.Add(new VocabularyKey(nameof(Mandateenddate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Mandateid = group.Add(new VocabularyKey(nameof(Mandateid), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Mandatelimit = group.Add(new VocabularyKey(nameof(Mandatelimit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Mandatelimit_Base = group.Add(new VocabularyKey(nameof(Mandatelimit_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Mandatelimit_default = group.Add(new VocabularyKey(nameof(Mandatelimit_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Mandatestartdate = group.Add(new VocabularyKey(nameof(Mandatestartdate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Nextitemamount = group.Add(new VocabularyKey(nameof(Nextitemamount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Nextitemamount_Base = group.Add(new VocabularyKey(nameof(Nextitemamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Nextitemamount_default = group.Add(new VocabularyKey(nameof(Nextitemamount_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Nextitemdate = group.Add(new VocabularyKey(nameof(Nextitemdate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Orderenddate = group.Add(new VocabularyKey(nameof(Orderenddate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StandingOrderAmount = group.Add(new VocabularyKey(nameof(StandingOrderAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey fi_DirectDebitId { get; private set; }
-        public VocabularyKey createdOn { get; private set; }
-        public VocabularyKey modifiedOn { get; private set; }
-        public VocabularyKey statecode { get; private set; }
-        public VocabularyKey statuscode { get; private set; }
-        public VocabularyKey importSequenceNumber { get; private set; }
-        public VocabularyKey overriddenCreatedOn { get; private set; }
-        public VocabularyKey timeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey Fi_DirectDebitId { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Statecode { get; private set; }
+        public VocabularyKey Statuscode { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey creditoridentifier { get; private set; }
-        public VocabularyKey creditorname { get; private set; }
-        public VocabularyKey debtoraccount { get; private set; }
-        public VocabularyKey financialinstrumenttype { get; private set; }
-        public VocabularyKey integrationKey { get; private set; }
-        public VocabularyKey lastitemamount { get; private set; }
-        public VocabularyKey lastitemamount_Base { get; private set; }
-        public VocabularyKey lastitemamount_default { get; private set; }
-        public VocabularyKey lastitemdate { get; private set; }
-        public VocabularyKey lastitemstatus { get; private set; }
-        public VocabularyKey lastitemstatusreason { get; private set; }
-        public VocabularyKey mandateenddate { get; private set; }
-        public VocabularyKey mandateid { get; private set; }
-        public VocabularyKey mandatelimit { get; private set; }
-        public VocabularyKey mandatelimit_Base { get; private set; }
-        public VocabularyKey mandatelimit_default { get; private set; }
-        public VocabularyKey mandatestartdate { get; private set; }
-        public VocabularyKey nextitemamount { get; private set; }
-        public VocabularyKey nextitemamount_Base { get; private set; }
-        public VocabularyKey nextitemamount_default { get; private set; }
-        public VocabularyKey nextitemdate { get; private set; }
-        public VocabularyKey orderenddate { get; private set; }
-        public VocabularyKey standingOrderAmount { get; private set; }
-
-
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey Creditoridentifier { get; private set; }
+        public VocabularyKey Creditorname { get; private set; }
+        public VocabularyKey Debtoraccount { get; private set; }
+        public VocabularyKey Financialinstrumenttype { get; private set; }
+        public VocabularyKey IntegrationKey { get; private set; }
+        public VocabularyKey Lastitemamount { get; private set; }
+        public VocabularyKey Lastitemamount_Base { get; private set; }
+        public VocabularyKey Lastitemamount_default { get; private set; }
+        public VocabularyKey Lastitemdate { get; private set; }
+        public VocabularyKey Lastitemstatus { get; private set; }
+        public VocabularyKey Lastitemstatusreason { get; private set; }
+        public VocabularyKey Mandateenddate { get; private set; }
+        public VocabularyKey Mandateid { get; private set; }
+        public VocabularyKey Mandatelimit { get; private set; }
+        public VocabularyKey Mandatelimit_Base { get; private set; }
+        public VocabularyKey Mandatelimit_default { get; private set; }
+        public VocabularyKey Mandatestartdate { get; private set; }
+        public VocabularyKey Nextitemamount { get; private set; }
+        public VocabularyKey Nextitemamount_Base { get; private set; }
+        public VocabularyKey Nextitemamount_default { get; private set; }
+        public VocabularyKey Nextitemdate { get; private set; }
+        public VocabularyKey Orderenddate { get; private set; }
+        public VocabularyKey StandingOrderAmount { get; private set; }
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerFundTypeEntityVocabulary()
         {
-            VocabularyName = "LedgerFundTypeEntity";
+            VocabularyName = "Ledger Fund Type Entity";
             KeyPrefix = "commonDataModel.ledgerfundtypeentity";
             KeySeparator = ".";
             Grouping = "/LedgerFundTypeEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FundType = group.Add(new VocabularyKey(nameof(FundType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey FundType { get; private set; }
-
-
     }
 }

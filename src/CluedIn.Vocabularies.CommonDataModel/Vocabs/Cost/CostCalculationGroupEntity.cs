@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CostCalculationGroupEntityVocabulary()
         {
-            VocabularyName = "CostCalculationGroupEntity";
+            VocabularyName = "Cost Calculation Group Entity";
             KeyPrefix = "commonDataModel.costcalculationgroupentity";
             KeySeparator = ".";
             Grouping = "/CostCalculationGroupEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WillCostCalulationIssueZeroCostPriceWarning = group.Add(new VocabularyKey(nameof(WillCostCalulationIssueZeroCostPriceWarning), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ShowWarningIfCostPriceCalculationOlderThanDays = group.Add(new VocabularyKey(nameof(ShowWarningIfCostPriceCalculationOlderThanDays), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ShowWarningIfContributionMarginPercentageLowerThan = group.Add(new VocabularyKey(nameof(ShowWarningIfContributionMarginPercentageLowerThan), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey GroupId { get; private set; }
         public VocabularyKey GroupName { get; private set; }
         public VocabularyKey UnitCostCalculationMethod { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WillCostCalulationIssueZeroCostPriceWarning { get; private set; }
         public VocabularyKey ShowWarningIfCostPriceCalculationOlderThanDays { get; private set; }
         public VocabularyKey ShowWarningIfContributionMarginPercentageLowerThan { get; private set; }
-
-
     }
 }

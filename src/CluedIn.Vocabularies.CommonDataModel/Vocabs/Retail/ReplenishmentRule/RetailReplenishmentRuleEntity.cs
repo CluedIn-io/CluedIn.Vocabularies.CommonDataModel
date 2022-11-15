@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailReplenishmentRuleEntityVocabulary()
         {
-            VocabularyName = "RetailReplenishmentRuleEntity";
+            VocabularyName = "Retail Replenishment Rule Entity";
             KeyPrefix = "commonDataModel.retailreplenishmentruleentity";
             KeySeparator = ".";
             Grouping = "/RetailReplenishmentRuleEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReplenishmentRule = group.Add(new VocabularyKey(nameof(ReplenishmentRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey ReplenishmentRule { get; private set; }
-
-
     }
 }

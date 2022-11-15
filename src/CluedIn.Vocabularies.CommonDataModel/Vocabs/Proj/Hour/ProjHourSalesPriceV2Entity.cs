@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjHourSalesPriceV2EntityVocabulary()
         {
-            VocabularyName = "ProjHourSalesPriceV2Entity";
+            VocabularyName = "Proj Hour Sales Price V2 Entity";
             KeyPrefix = "commonDataModel.projhoursalespricev2entity";
             KeySeparator = ".";
             Grouping = "/ProjHourSalesPriceV2Entity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ResourceId = group.Add(new VocabularyKey(nameof(ResourceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ResourceCategoryId = group.Add(new VocabularyKey(nameof(ResourceCategoryId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ResourceCompanyId = group.Add(new VocabularyKey(nameof(ResourceCompanyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CategoryId { get; private set; }
         public VocabularyKey CurrencyId { get; private set; }
         public VocabularyKey ProjectId { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ResourceId { get; private set; }
         public VocabularyKey ResourceCategoryId { get; private set; }
         public VocabularyKey ResourceCompanyId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BatchJobEntityVocabulary()
         {
-            VocabularyName = "BatchJobEntity";
+            VocabularyName = "Batch Job Entity";
             KeyPrefix = "commonDataModel.batchjobentity";
             KeySeparator = ".";
             Grouping = "/BatchJobEntity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 StartTime = group.Add(new VocabularyKey(nameof(StartTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BatchJobRecId = group.Add(new VocabularyKey(nameof(BatchJobRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExecutingBy = group.Add(new VocabularyKey(nameof(ExecutingBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CanceledBy { get; private set; }
         public VocabularyKey JobDescription { get; private set; }
         public VocabularyKey CompanyAccounts { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey StartTime { get; private set; }
         public VocabularyKey BatchJobRecId { get; private set; }
         public VocabularyKey ExecutingBy { get; private set; }
-
-
     }
 }

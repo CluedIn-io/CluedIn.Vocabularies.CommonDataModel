@@ -6,56 +6,52 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MarketingFormSubmissionVocabulary()
         {
-            VocabularyName = "MarketingFormSubmission";
+            VocabularyName = "Marketing Form Submission";
             KeyPrefix = "commonDataModel.marketingformsubmission";
             KeySeparator = ".";
             Grouping = "/MarketingFormSubmission";
 
             AddGroup("MarketingFormSubmission Details", group =>
             {
-                customerjourneyidValue = group.Add(new VocabularyKey(nameof(customerjourneyidValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                failuredescription = group.Add(new VocabularyKey(nameof(failuredescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                failuretechnicaldetails = group.Add(new VocabularyKey(nameof(failuretechnicaldetails), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                formName = group.Add(new VocabularyKey(nameof(formName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                contactMatchingResult = group.Add(new VocabularyKey(nameof(contactMatchingResult), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                websiteidValue = group.Add(new VocabularyKey(nameof(websiteidValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                marketingemailidValue = group.Add(new VocabularyKey(nameof(marketingemailidValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                marketingformidValue = group.Add(new VocabularyKey(nameof(marketingformidValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                marketingFormSubmissionId = group.Add(new VocabularyKey(nameof(marketingFormSubmissionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                marketingpageidValue = group.Add(new VocabularyKey(nameof(marketingpageidValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                originalContactidValue = group.Add(new VocabularyKey(nameof(originalContactidValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                timestampSubmission = group.Add(new VocabularyKey(nameof(timestampSubmission), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                sessionidValue = group.Add(new VocabularyKey(nameof(sessionidValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                visitoridValue = group.Add(new VocabularyKey(nameof(visitoridValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                pageurl = group.Add(new VocabularyKey(nameof(pageurl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                submittedValues = group.Add(new VocabularyKey(nameof(submittedValues), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                processingStep = group.Add(new VocabularyKey(nameof(processingStep), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                CustomerjourneyidValue = group.Add(new VocabularyKey(nameof(CustomerjourneyidValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Failuredescription = group.Add(new VocabularyKey(nameof(Failuredescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Failuretechnicaldetails = group.Add(new VocabularyKey(nameof(Failuretechnicaldetails), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FormName = group.Add(new VocabularyKey(nameof(FormName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ContactMatchingResult = group.Add(new VocabularyKey(nameof(ContactMatchingResult), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WebsiteidValue = group.Add(new VocabularyKey(nameof(WebsiteidValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MarketingemailidValue = group.Add(new VocabularyKey(nameof(MarketingemailidValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MarketingformidValue = group.Add(new VocabularyKey(nameof(MarketingformidValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MarketingFormSubmissionId = group.Add(new VocabularyKey(nameof(MarketingFormSubmissionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MarketingpageidValue = group.Add(new VocabularyKey(nameof(MarketingpageidValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OriginalContactidValue = group.Add(new VocabularyKey(nameof(OriginalContactidValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TimestampSubmission = group.Add(new VocabularyKey(nameof(TimestampSubmission), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SessionidValue = group.Add(new VocabularyKey(nameof(SessionidValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                VisitoridValue = group.Add(new VocabularyKey(nameof(VisitoridValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Pageurl = group.Add(new VocabularyKey(nameof(Pageurl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SubmittedValues = group.Add(new VocabularyKey(nameof(SubmittedValues), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProcessingStep = group.Add(new VocabularyKey(nameof(ProcessingStep), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey customerjourneyidValue { get; private set; }
-        public VocabularyKey failuredescription { get; private set; }
-        public VocabularyKey failuretechnicaldetails { get; private set; }
-        public VocabularyKey formName { get; private set; }
-        public VocabularyKey contactMatchingResult { get; private set; }
-        public VocabularyKey websiteidValue { get; private set; }
-        public VocabularyKey marketingemailidValue { get; private set; }
-        public VocabularyKey marketingformidValue { get; private set; }
-        public VocabularyKey marketingFormSubmissionId { get; private set; }
-        public VocabularyKey marketingpageidValue { get; private set; }
-        public VocabularyKey originalContactidValue { get; private set; }
-        public VocabularyKey timestampSubmission { get; private set; }
-        public VocabularyKey sessionidValue { get; private set; }
-        public VocabularyKey visitoridValue { get; private set; }
-        public VocabularyKey pageurl { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-        public VocabularyKey submittedValues { get; private set; }
-        public VocabularyKey processingStep { get; private set; }
-
-
+        public VocabularyKey CustomerjourneyidValue { get; private set; }
+        public VocabularyKey Failuredescription { get; private set; }
+        public VocabularyKey Failuretechnicaldetails { get; private set; }
+        public VocabularyKey FormName { get; private set; }
+        public VocabularyKey ContactMatchingResult { get; private set; }
+        public VocabularyKey WebsiteidValue { get; private set; }
+        public VocabularyKey MarketingemailidValue { get; private set; }
+        public VocabularyKey MarketingformidValue { get; private set; }
+        public VocabularyKey MarketingFormSubmissionId { get; private set; }
+        public VocabularyKey MarketingpageidValue { get; private set; }
+        public VocabularyKey OriginalContactidValue { get; private set; }
+        public VocabularyKey TimestampSubmission { get; private set; }
+        public VocabularyKey SessionidValue { get; private set; }
+        public VocabularyKey VisitoridValue { get; private set; }
+        public VocabularyKey Pageurl { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey SubmittedValues { get; private set; }
+        public VocabularyKey ProcessingStep { get; private set; }
     }
 }

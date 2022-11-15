@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DMFDefinitionGroupTemplateHeaderEntityVocabulary()
         {
-            VocabularyName = "DMFDefinitionGroupTemplateHeaderEntity";
+            VocabularyName = "DMF Definition Group Template Header Entity";
             KeyPrefix = "commonDataModel.dmfdefinitiongrouptemplateheaderentity";
             KeySeparator = ".";
             Grouping = "/DMFDefinitionGroupTemplateHeaderEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Status = group.Add(new VocabularyKey(nameof(Status), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidatedDateTime = group.Add(new VocabularyKey(nameof(ValidatedDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TemplateId { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey Status { get; private set; }
         public VocabularyKey ValidatedDateTime { get; private set; }
-
-
     }
 }

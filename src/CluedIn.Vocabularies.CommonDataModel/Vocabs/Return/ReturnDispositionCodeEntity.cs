@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReturnDispositionCodeEntityVocabulary()
         {
-            VocabularyName = "ReturnDispositionCodeEntity";
+            VocabularyName = "Return Disposition Code Entity";
             KeyPrefix = "commonDataModel.returndispositioncodeentity";
             KeySeparator = ".";
             Grouping = "/ReturnDispositionCodeEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DispositionDescription = group.Add(new VocabularyKey(nameof(DispositionDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DispositionAction = group.Add(new VocabularyKey(nameof(DispositionAction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DispositionCode = group.Add(new VocabularyKey(nameof(DispositionCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DispositionDescription { get; private set; }
         public VocabularyKey DispositionAction { get; private set; }
         public VocabularyKey DispositionCode { get; private set; }
-
-
     }
 }

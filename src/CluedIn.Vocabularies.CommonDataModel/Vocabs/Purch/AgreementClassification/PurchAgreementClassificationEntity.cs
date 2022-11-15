@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchAgreementClassificationEntityVocabulary()
         {
-            VocabularyName = "PurchAgreementClassificationEntity";
+            VocabularyName = "Purch Agreement Classification Entity";
             KeyPrefix = "commonDataModel.purchagreementclassificationentity";
             KeySeparator = ".";
             Grouping = "/PurchAgreementClassificationEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PrimaryResponsibleWorkerRecId = group.Add(new VocabularyKey(nameof(PrimaryResponsibleWorkerRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SecondaryResponsibleWorkerRecId = group.Add(new VocabularyKey(nameof(SecondaryResponsibleWorkerRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MatchingPolicy = group.Add(new VocabularyKey(nameof(MatchingPolicy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ArePurchaseAgreementActitivitesEnabled { get; private set; }
         public VocabularyKey ArePurchaseAgreementCertificationsEnabled { get; private set; }
         public VocabularyKey ClassificationDescription { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PrimaryResponsibleWorkerRecId { get; private set; }
         public VocabularyKey SecondaryResponsibleWorkerRecId { get; private set; }
         public VocabularyKey MatchingPolicy { get; private set; }
-
-
     }
 }

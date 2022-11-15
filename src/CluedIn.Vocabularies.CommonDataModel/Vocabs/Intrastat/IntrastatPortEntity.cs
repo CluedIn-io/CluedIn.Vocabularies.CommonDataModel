@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public IntrastatPortEntityVocabulary()
         {
-            VocabularyName = "IntrastatPortEntity";
+            VocabularyName = "Intrastat Port Entity";
             KeyPrefix = "commonDataModel.intrastatportentity";
             KeySeparator = ".";
             Grouping = "/IntrastatPortEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DescribePort = group.Add(new VocabularyKey(nameof(DescribePort), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CountryRegionId = group.Add(new VocabularyKey(nameof(CountryRegionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PortState = group.Add(new VocabularyKey(nameof(PortState), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PortId { get; private set; }
         public VocabularyKey DescribePort { get; private set; }
         public VocabularyKey CountryRegionId { get; private set; }
         public VocabularyKey PortState { get; private set; }
-
-
     }
 }

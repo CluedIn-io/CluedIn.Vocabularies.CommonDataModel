@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSOutboundLoadHeaderEntityVocabulary()
         {
-            VocabularyName = "WHSOutboundLoadHeaderEntity";
+            VocabularyName = "WHS Outbound Load Header Entity";
             KeyPrefix = "commonDataModel.whsoutboundloadheaderentity";
             KeySeparator = ".";
             Grouping = "/WHSOutboundLoadHeaderEntity";
@@ -42,10 +42,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LoadId = group.Add(new VocabularyKey(nameof(LoadId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ShippingCarrierVendorAccountNumber = group.Add(new VocabularyKey(nameof(ShippingCarrierVendorAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsLoadSplitShipConfirmAllowed = group.Add(new VocabularyKey(nameof(IsLoadSplitShipConfirmAllowed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ShippingCarrierCode { get; private set; }
         public VocabularyKey ActualGrossWeight { get; private set; }
         public VocabularyKey ActualNetWeight { get; private set; }
@@ -75,7 +73,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LoadId { get; private set; }
         public VocabularyKey ShippingCarrierVendorAccountNumber { get; private set; }
         public VocabularyKey IsLoadSplitShipConfirmAllowed { get; private set; }
-
-
     }
 }

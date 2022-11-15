@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailLoyaltySchemeEntityVocabulary()
         {
-            VocabularyName = "RetailLoyaltySchemeEntity";
+            VocabularyName = "Retail Loyalty Scheme Entity";
             KeyPrefix = "commonDataModel.retailloyaltyschemeentity";
             KeySeparator = ".";
             Grouping = "/RetailLoyaltySchemeEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LoyaltySchemeId = group.Add(new VocabularyKey(nameof(LoyaltySchemeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LoyaltyName = group.Add(new VocabularyKey(nameof(LoyaltyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Affiliation { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey LoyaltySchemeId { get; private set; }
         public VocabularyKey LoyaltyName { get; private set; }
-
-
     }
 }

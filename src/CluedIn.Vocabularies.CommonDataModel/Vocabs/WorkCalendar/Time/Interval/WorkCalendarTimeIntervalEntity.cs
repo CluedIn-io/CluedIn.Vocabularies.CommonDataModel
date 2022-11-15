@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WorkCalendarTimeIntervalEntityVocabulary()
         {
-            VocabularyName = "WorkCalendarTimeIntervalEntity";
+            VocabularyName = "Work Calendar Time Interval Entity";
             KeyPrefix = "commonDataModel.workcalendartimeintervalentity";
             KeySeparator = ".";
             Grouping = "/WorkCalendarTimeIntervalEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 EfficiencyPercentage = group.Add(new VocabularyKey(nameof(EfficiencyPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkingTimeSchedulingPropertyId = group.Add(new VocabularyKey(nameof(WorkingTimeSchedulingPropertyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PayrollEarningCode = group.Add(new VocabularyKey(nameof(PayrollEarningCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WorkCalendarId { get; private set; }
         public VocabularyKey WorkCalendarDate { get; private set; }
         public VocabularyKey StartTime { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey EfficiencyPercentage { get; private set; }
         public VocabularyKey WorkingTimeSchedulingPropertyId { get; private set; }
         public VocabularyKey PayrollEarningCode { get; private set; }
-
-
     }
 }

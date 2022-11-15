@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesExternallyMaintainedCustomerSalesInvoiceHeaderEntityVocabulary()
         {
-            VocabularyName = "SalesExternallyMaintainedCustomerSalesInvoiceHeaderEntity";
+            VocabularyName = "Sales Externally Maintained Customer Sales Invoice Header Entity";
             KeyPrefix = "commonDataModel.salesexternallymaintainedcustomersalesinvoiceheaderentity";
             KeySeparator = ".";
             Grouping = "/SalesExternallyMaintainedCustomerSalesInvoiceHeaderEntity";
@@ -39,10 +39,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 InvoiceHeaderTaxAmount = group.Add(new VocabularyKey(nameof(InvoiceHeaderTaxAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesOrderOriginType = group.Add(new VocabularyKey(nameof(SalesOrderOriginType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LedgerVoucher = group.Add(new VocabularyKey(nameof(LedgerVoucher), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ContactPersonId { get; private set; }
         public VocabularyKey CurrencyCode { get; private set; }
         public VocabularyKey CustomersOrderReference { get; private set; }
@@ -69,7 +67,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey InvoiceHeaderTaxAmount { get; private set; }
         public VocabularyKey SalesOrderOriginType { get; private set; }
         public VocabularyKey LedgerVoucher { get; private set; }
-
-
     }
 }

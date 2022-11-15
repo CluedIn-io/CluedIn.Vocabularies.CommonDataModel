@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TAMTradeAllowanceAgreementFundEntityVocabulary()
         {
-            VocabularyName = "TAMTradeAllowanceAgreementFundEntity";
+            VocabularyName = "TAM Trade Allowance Agreement Fund Entity";
             KeyPrefix = "commonDataModel.tamtradeallowanceagreementfundentity";
             KeySeparator = ".";
             Grouping = "/TAMTradeAllowanceAgreementFundEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CostAllocationPercentage = group.Add(new VocabularyKey(nameof(CostAllocationPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TradeAllowanceAgreementId = group.Add(new VocabularyKey(nameof(TradeAllowanceAgreementId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CustomerAccountNumber = group.Add(new VocabularyKey(nameof(CustomerAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PromotionFundId { get; private set; }
         public VocabularyKey CostAllocationPercentage { get; private set; }
         public VocabularyKey TradeAllowanceAgreementId { get; private set; }
         public VocabularyKey CustomerAccountNumber { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxCustomsShippingBillNumberEntityVocabulary()
         {
-            VocabularyName = "TaxCustomsShippingBillNumberEntity";
+            VocabularyName = "Tax Customs Shipping Bill Number Entity";
             KeyPrefix = "commonDataModel.taxcustomsshippingbillnumberentity";
             KeySeparator = ".";
             Grouping = "/TaxCustomsShippingBillNumberEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Date = group.Add(new VocabularyKey(nameof(Date), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ShippingBill = group.Add(new VocabularyKey(nameof(ShippingBill), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Closed { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey Date { get; private set; }
         public VocabularyKey ShippingBill { get; private set; }
-
-
     }
 }

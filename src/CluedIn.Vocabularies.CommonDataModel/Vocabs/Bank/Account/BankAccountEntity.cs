@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankAccountEntityVocabulary()
         {
-            VocabularyName = "BankAccountEntity";
+            VocabularyName = "Bank Account Entity";
             KeyPrefix = "commonDataModel.bankaccountentity";
             KeySeparator = ".";
             Grouping = "/BankAccountEntity";
@@ -108,10 +108,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PostingProfileBillsRemitDiscount_IT = group.Add(new VocabularyKey(nameof(PostingProfileBillsRemitDiscount_IT), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PostingProfileRemitNotes_IT = group.Add(new VocabularyKey(nameof(PostingProfileRemitNotes_IT), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 QRIBAN = group.Add(new VocabularyKey(nameof(QRIBAN), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey NonSufficientFundsJournalName { get; private set; }
         public VocabularyKey BankAccountId { get; private set; }
         public VocabularyKey KanaName { get; private set; }
@@ -207,7 +205,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PostingProfileBillsRemitDiscount_IT { get; private set; }
         public VocabularyKey PostingProfileRemitNotes_IT { get; private set; }
         public VocabularyKey QRIBAN { get; private set; }
-
-
     }
 }

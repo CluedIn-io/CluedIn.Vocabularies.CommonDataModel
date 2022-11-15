@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailTransactionServiceProfileEntityVocabulary()
         {
-            VocabularyName = "RetailTransactionServiceProfileEntity";
+            VocabularyName = "Retail Transaction Service Profile Entity";
             KeyPrefix = "commonDataModel.retailtransactionserviceprofileentity";
             KeySeparator = ".";
             Grouping = "/RetailTransactionServiceProfileEntity";
@@ -36,10 +36,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IssuedTokenType = group.Add(new VocabularyKey(nameof(IssuedTokenType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AudienceUrn = group.Add(new VocabularyKey(nameof(AudienceUrn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AosUrl = group.Add(new VocabularyKey(nameof(AosUrl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CentralTableServer { get; private set; }
         public VocabularyKey CentralTableServerPort { get; private set; }
         public VocabularyKey Language { get; private set; }
@@ -63,7 +61,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IssuedTokenType { get; private set; }
         public VocabularyKey AudienceUrn { get; private set; }
         public VocabularyKey AosUrl { get; private set; }
-
-
     }
 }

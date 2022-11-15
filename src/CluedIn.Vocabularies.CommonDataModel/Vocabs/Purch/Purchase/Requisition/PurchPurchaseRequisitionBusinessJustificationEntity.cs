@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPurchaseRequisitionBusinessJustificationEntityVocabulary()
         {
-            VocabularyName = "PurchPurchaseRequisitionBusinessJustificationEntity";
+            VocabularyName = "Purch Purchase Requisition Business Justification Entity";
             KeyPrefix = "commonDataModel.purchpurchaserequisitionbusinessjustificationentity";
             KeySeparator = ".";
             Grouping = "/PurchPurchaseRequisitionBusinessJustificationEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 PurchaseRequisitionBusinessJustificationCode = group.Add(new VocabularyKey(nameof(PurchaseRequisitionBusinessJustificationCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 JustificationDescription = group.Add(new VocabularyKey(nameof(JustificationDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PurchaseRequisitionBusinessJustificationCode { get; private set; }
         public VocabularyKey JustificationDescription { get; private set; }
-
-
     }
 }

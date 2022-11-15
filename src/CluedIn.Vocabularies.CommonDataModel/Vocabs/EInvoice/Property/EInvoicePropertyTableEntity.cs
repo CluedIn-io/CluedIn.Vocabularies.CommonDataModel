@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EInvoicePropertyTableEntityVocabulary()
         {
-            VocabularyName = "EInvoicePropertyTableEntity";
+            VocabularyName = "E Invoice Property Table Entity";
             KeyPrefix = "commonDataModel.einvoicepropertytableentity";
             KeySeparator = ".";
             Grouping = "/EInvoicePropertyTableEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TableName = group.Add(new VocabularyKey(nameof(TableName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TableFieldName = group.Add(new VocabularyKey(nameof(TableFieldName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TableFieldValue = group.Add(new VocabularyKey(nameof(TableFieldValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RefRecId { get; private set; }
         public VocabularyKey RefTableId { get; private set; }
         public VocabularyKey Value { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TableName { get; private set; }
         public VocabularyKey TableFieldName { get; private set; }
         public VocabularyKey TableFieldValue { get; private set; }
-
-
     }
 }

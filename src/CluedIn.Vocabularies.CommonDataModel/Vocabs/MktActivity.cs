@@ -6,60 +6,56 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MktActivityVocabulary()
         {
-            VocabularyName = "MktActivity";
+            VocabularyName = "Mkt Activity";
             KeyPrefix = "commonDataModel.mktactivity";
             KeySeparator = ".";
             Grouping = "/MktActivity";
 
             AddGroup("MktActivity Details", group =>
             {
-                actionStatus = group.Add(new VocabularyKey(nameof(actionStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                activityadditionalparams = group.Add(new VocabularyKey(nameof(activityadditionalparams), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                activityToken = group.Add(new VocabularyKey(nameof(activityToken), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                actualDurationMinutes = group.Add(new VocabularyKey(nameof(actualDurationMinutes), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                actualEnd = group.Add(new VocabularyKey(nameof(actualEnd), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                actualStart = group.Add(new VocabularyKey(nameof(actualStart), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                description = group.Add(new VocabularyKey(nameof(description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                durationmillisecond = group.Add(new VocabularyKey(nameof(durationmillisecond), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                errorMessage = group.Add(new VocabularyKey(nameof(errorMessage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                exchangeRate = group.Add(new VocabularyKey(nameof(exchangeRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                isBilled = group.Add(new VocabularyKey(nameof(isBilled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ismapiprivate = group.Add(new VocabularyKey(nameof(ismapiprivate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                isRegularActivity = group.Add(new VocabularyKey(nameof(isRegularActivity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                isworkflowcreated = group.Add(new VocabularyKey(nameof(isworkflowcreated), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                mktactivityId = group.Add(new VocabularyKey(nameof(mktactivityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdName = group.Add(new VocabularyKey(nameof(ownerIdName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdType = group.Add(new VocabularyKey(nameof(ownerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdYomiName = group.Add(new VocabularyKey(nameof(ownerIdYomiName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                ActionStatus = group.Add(new VocabularyKey(nameof(ActionStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Activityadditionalparams = group.Add(new VocabularyKey(nameof(Activityadditionalparams), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ActivityToken = group.Add(new VocabularyKey(nameof(ActivityToken), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ActualDurationMinutes = group.Add(new VocabularyKey(nameof(ActualDurationMinutes), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ActualEnd = group.Add(new VocabularyKey(nameof(ActualEnd), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ActualStart = group.Add(new VocabularyKey(nameof(ActualStart), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Durationmillisecond = group.Add(new VocabularyKey(nameof(Durationmillisecond), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ErrorMessage = group.Add(new VocabularyKey(nameof(ErrorMessage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsBilled = group.Add(new VocabularyKey(nameof(IsBilled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Ismapiprivate = group.Add(new VocabularyKey(nameof(Ismapiprivate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsRegularActivity = group.Add(new VocabularyKey(nameof(IsRegularActivity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Isworkflowcreated = group.Add(new VocabularyKey(nameof(Isworkflowcreated), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MktactivityId = group.Add(new VocabularyKey(nameof(MktactivityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdName = group.Add(new VocabularyKey(nameof(OwnerIdName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdType = group.Add(new VocabularyKey(nameof(OwnerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdYomiName = group.Add(new VocabularyKey(nameof(OwnerIdYomiName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey actionStatus { get; private set; }
-        public VocabularyKey activityadditionalparams { get; private set; }
-        public VocabularyKey activityToken { get; private set; }
-        public VocabularyKey actualDurationMinutes { get; private set; }
-        public VocabularyKey actualEnd { get; private set; }
-        public VocabularyKey actualStart { get; private set; }
-        public VocabularyKey description { get; private set; }
-        public VocabularyKey durationmillisecond { get; private set; }
-        public VocabularyKey errorMessage { get; private set; }
-        public VocabularyKey exchangeRate { get; private set; }
-        public VocabularyKey isBilled { get; private set; }
-        public VocabularyKey ismapiprivate { get; private set; }
-        public VocabularyKey isRegularActivity { get; private set; }
-        public VocabularyKey isworkflowcreated { get; private set; }
-        public VocabularyKey mktactivityId { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey ownerIdName { get; private set; }
-        public VocabularyKey ownerIdType { get; private set; }
-        public VocabularyKey ownerIdYomiName { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey ActionStatus { get; private set; }
+        public VocabularyKey Activityadditionalparams { get; private set; }
+        public VocabularyKey ActivityToken { get; private set; }
+        public VocabularyKey ActualDurationMinutes { get; private set; }
+        public VocabularyKey ActualEnd { get; private set; }
+        public VocabularyKey ActualStart { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey Durationmillisecond { get; private set; }
+        public VocabularyKey ErrorMessage { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey IsBilled { get; private set; }
+        public VocabularyKey Ismapiprivate { get; private set; }
+        public VocabularyKey IsRegularActivity { get; private set; }
+        public VocabularyKey Isworkflowcreated { get; private set; }
+        public VocabularyKey MktactivityId { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OwnerIdName { get; private set; }
+        public VocabularyKey OwnerIdType { get; private set; }
+        public VocabularyKey OwnerIdYomiName { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

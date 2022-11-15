@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPurchaseOrderConfirmationHeaderEntityVocabulary()
         {
-            VocabularyName = "PurchPurchaseOrderConfirmationHeaderEntity";
+            VocabularyName = "Purch Purchase Order Confirmation Header Entity";
             KeyPrefix = "commonDataModel.purchpurchaseorderconfirmationheaderentity";
             KeySeparator = ".";
             Grouping = "/PurchPurchaseOrderConfirmationHeaderEntity";
@@ -114,10 +114,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TotalTaxAmount = group.Add(new VocabularyKey(nameof(TotalTaxAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TotalNetVolume = group.Add(new VocabularyKey(nameof(TotalNetVolume), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TotalNetWeight = group.Add(new VocabularyKey(nameof(TotalNetWeight), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PurchaseOrderStatus { get; private set; }
         public VocabularyKey BankDocumentType { get; private set; }
         public VocabularyKey CashDiscountPercentage { get; private set; }
@@ -219,7 +217,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TotalTaxAmount { get; private set; }
         public VocabularyKey TotalNetVolume { get; private set; }
         public VocabularyKey TotalNetWeight { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerFinancialReasonEntityVocabulary()
         {
-            VocabularyName = "LedgerFinancialReasonEntity";
+            VocabularyName = "Ledger Financial Reason Entity";
             KeyPrefix = "commonDataModel.ledgerfinancialreasonentity";
             KeySeparator = ".";
             Grouping = "/LedgerFinancialReasonEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ReasonCode = group.Add(new VocabularyKey(nameof(ReasonCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ForVendorTransactionType = group.Add(new VocabularyKey(nameof(ForVendorTransactionType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ForRAssetTransactionType = group.Add(new VocabularyKey(nameof(ForRAssetTransactionType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ForAssetTransactionType { get; private set; }
         public VocabularyKey ForBankTransactionType { get; private set; }
         public VocabularyKey CancellationReason { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ReasonCode { get; private set; }
         public VocabularyKey ForVendorTransactionType { get; private set; }
         public VocabularyKey ForRAssetTransactionType { get; private set; }
-
-
     }
 }

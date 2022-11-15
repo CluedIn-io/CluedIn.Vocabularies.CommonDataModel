@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SysPolicyInternalOrganizationAssignmentEntityVocabulary()
         {
-            VocabularyName = "SysPolicyInternalOrganizationAssignmentEntity";
+            VocabularyName = "Sys Policy Internal Organization Assignment Entity";
             KeyPrefix = "commonDataModel.syspolicyinternalorganizationassignmententity";
             KeySeparator = ".";
             Grouping = "/SysPolicyInternalOrganizationAssignmentEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OrganizationHierarchyName = group.Add(new VocabularyKey(nameof(OrganizationHierarchyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LegalEntityId = group.Add(new VocabularyKey(nameof(LegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OperatingUnitNumber = group.Add(new VocabularyKey(nameof(OperatingUnitNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey ValidTo { get; private set; }
         public VocabularyKey PolicyName { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OrganizationHierarchyName { get; private set; }
         public VocabularyKey LegalEntityId { get; private set; }
         public VocabularyKey OperatingUnitNumber { get; private set; }
-
-
     }
 }

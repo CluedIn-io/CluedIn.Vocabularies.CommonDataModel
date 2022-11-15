@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesPriceSmartRoundingVersionRuleEntityVocabulary()
         {
-            VocabularyName = "SalesPriceSmartRoundingVersionRuleEntity";
+            VocabularyName = "Sales Price Smart Rounding Version Rule Entity";
             KeyPrefix = "commonDataModel.salespricesmartroundingversionruleentity";
             KeySeparator = ".";
             Grouping = "/SalesPriceSmartRoundingVersionRuleEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FromUnitPrice = group.Add(new VocabularyKey(nameof(FromUnitPrice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ToUnitPrice = group.Add(new VocabularyKey(nameof(ToUnitPrice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RoundingVersionRecId = group.Add(new VocabularyKey(nameof(RoundingVersionRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SalesPriceSmartRoundingVersionId { get; private set; }
         public VocabularyKey RoundingSyntax { get; private set; }
         public VocabularyKey RoundingDownLimitPoint { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FromUnitPrice { get; private set; }
         public VocabularyKey ToUnitPrice { get; private set; }
         public VocabularyKey RoundingVersionRecId { get; private set; }
-
-
     }
 }

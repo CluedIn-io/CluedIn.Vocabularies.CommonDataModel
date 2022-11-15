@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailTransactionEntityVocabulary()
         {
-            VocabularyName = "RetailTransactionEntity";
+            VocabularyName = "Retail Transaction Entity";
             KeyPrefix = "commonDataModel.retailtransactionentity";
             KeySeparator = ".";
             Grouping = "/RetailTransactionEntity";
@@ -79,7 +79,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 GiftCardHistoryDetails = group.Add(new VocabularyKey(nameof(GiftCardHistoryDetails), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GiftCardIssueAmount = group.Add(new VocabularyKey(nameof(GiftCardIssueAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GiftCardIdMasked = group.Add(new VocabularyKey(nameof(GiftCardIdMasked), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                businessDate = group.Add(new VocabularyKey(nameof(businessDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BusinessDate = group.Add(new VocabularyKey(nameof(BusinessDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsTaxIncludedInPrice = group.Add(new VocabularyKey(nameof(IsTaxIncludedInPrice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RetailTransactionAggregationFieldList = group.Add(new VocabularyKey(nameof(RetailTransactionAggregationFieldList), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransactionOrderType = group.Add(new VocabularyKey(nameof(TransactionOrderType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
@@ -90,10 +90,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsTaxExemptedForPriceInclusive = group.Add(new VocabularyKey(nameof(IsTaxExemptedForPriceInclusive), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BatchTerminalId = group.Add(new VocabularyKey(nameof(BatchTerminalId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CreatedOnPosTerminal = group.Add(new VocabularyKey(nameof(CreatedOnPosTerminal), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BatchID { get; private set; }
         public VocabularyKey Terminal { get; private set; }
         public VocabularyKey AmountPostedToAccount { get; private set; }
@@ -160,7 +158,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey GiftCardHistoryDetails { get; private set; }
         public VocabularyKey GiftCardIssueAmount { get; private set; }
         public VocabularyKey GiftCardIdMasked { get; private set; }
-        public VocabularyKey businessDate { get; private set; }
+        public VocabularyKey BusinessDate { get; private set; }
         public VocabularyKey IsTaxIncludedInPrice { get; private set; }
         public VocabularyKey RetailTransactionAggregationFieldList { get; private set; }
         public VocabularyKey TransactionOrderType { get; private set; }
@@ -171,7 +169,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsTaxExemptedForPriceInclusive { get; private set; }
         public VocabularyKey BatchTerminalId { get; private set; }
         public VocabularyKey CreatedOnPosTerminal { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollTaxGroupEntityVocabulary()
         {
-            VocabularyName = "PayrollTaxGroupEntity";
+            VocabularyName = "Payroll Tax Group Entity";
             KeyPrefix = "commonDataModel.payrolltaxgroupentity";
             KeySeparator = ".";
             Grouping = "/PayrollTaxGroupEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 GroupId = group.Add(new VocabularyKey(nameof(GroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsEnabledForPostingDefinition = group.Add(new VocabularyKey(nameof(IsEnabledForPostingDefinition), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsImmutable = group.Add(new VocabularyKey(nameof(IsImmutable), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey GroupId { get; private set; }
         public VocabularyKey IsEnabledForPostingDefinition { get; private set; }
         public VocabularyKey IsImmutable { get; private set; }
-
-
     }
 }

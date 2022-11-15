@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailChannelCategoryAttributeEntityVocabulary()
         {
-            VocabularyName = "RetailChannelCategoryAttributeEntity";
+            VocabularyName = "Retail Channel Category Attribute Entity";
             KeyPrefix = "commonDataModel.retailchannelcategoryattributeentity";
             KeySeparator = ".";
             Grouping = "/RetailChannelCategoryAttributeEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductCategoryName = group.Add(new VocabularyKey(nameof(ProductCategoryName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AttributeName = group.Add(new VocabularyKey(nameof(AttributeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AttributeTypeName = group.Add(new VocabularyKey(nameof(AttributeTypeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RetailChannelId { get; private set; }
         public VocabularyKey ProductCategoryHierarchyName { get; private set; }
         public VocabularyKey ProductCategoryName { get; private set; }
         public VocabularyKey AttributeName { get; private set; }
         public VocabularyKey AttributeTypeName { get; private set; }
-
-
     }
 }

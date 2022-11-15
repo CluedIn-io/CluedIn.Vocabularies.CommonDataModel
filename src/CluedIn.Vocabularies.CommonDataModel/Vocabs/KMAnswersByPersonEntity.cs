@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public KMAnswersByPersonEntityVocabulary()
         {
-            VocabularyName = "KMAnswersByPersonEntity";
+            VocabularyName = "KM Answers By Person Entity";
             KeyPrefix = "commonDataModel.kmanswersbypersonentity";
             KeySeparator = ".";
             Grouping = "/KMAnswersByPersonEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AnswerText = group.Add(new VocabularyKey(nameof(AnswerText), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Comment = group.Add(new VocabularyKey(nameof(Comment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AnswerId = group.Add(new VocabularyKey(nameof(AnswerId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PartyNumber { get; private set; }
         public VocabularyKey CollectionId { get; private set; }
         public VocabularyKey Status { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AnswerText { get; private set; }
         public VocabularyKey Comment { get; private set; }
         public VocabularyKey AnswerId { get; private set; }
-
-
     }
 }

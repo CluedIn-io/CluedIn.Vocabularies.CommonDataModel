@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailChannelAttributeValueEntityVocabulary()
         {
-            VocabularyName = "RetailChannelAttributeValueEntity";
+            VocabularyName = "Retail Channel Attribute Value Entity";
             KeyPrefix = "commonDataModel.retailchannelattributevalueentity";
             KeySeparator = ".";
             Grouping = "/RetailChannelAttributeValueEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DecimalValue = group.Add(new VocabularyKey(nameof(DecimalValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IntegerValue = group.Add(new VocabularyKey(nameof(IntegerValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BooleanValue = group.Add(new VocabularyKey(nameof(BooleanValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RetailChannelId { get; private set; }
         public VocabularyKey AttributeGroupName { get; private set; }
         public VocabularyKey AttributeName { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DecimalValue { get; private set; }
         public VocabularyKey IntegerValue { get; private set; }
         public VocabularyKey BooleanValue { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailDiscountEntityVocabulary()
         {
-            VocabularyName = "RetailDiscountEntity";
+            VocabularyName = "Retail Discount Entity";
             KeyPrefix = "commonDataModel.retaildiscountentity";
             KeySeparator = ".";
             Grouping = "/RetailDiscountEntity";
@@ -44,10 +44,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OfferQuantityLimit = group.Add(new VocabularyKey(nameof(OfferQuantityLimit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PrintDescriptionOnFiscalReceipt = group.Add(new VocabularyKey(nameof(PrintDescriptionOnFiscalReceipt), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PricingPriorityNumber = group.Add(new VocabularyKey(nameof(PricingPriorityNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ConcurrencyMode { get; private set; }
         public VocabularyKey CurrencyCode { get; private set; }
         public VocabularyKey DateValidationType { get; private set; }
@@ -79,7 +77,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OfferQuantityLimit { get; private set; }
         public VocabularyKey PrintDescriptionOnFiscalReceipt { get; private set; }
         public VocabularyKey PricingPriorityNumber { get; private set; }
-
-
     }
 }

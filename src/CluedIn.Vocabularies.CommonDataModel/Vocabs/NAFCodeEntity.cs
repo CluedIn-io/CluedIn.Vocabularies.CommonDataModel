@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public NAFCodeEntityVocabulary()
         {
-            VocabularyName = "NAFCodeEntity";
+            VocabularyName = "NAF Code Entity";
             KeyPrefix = "commonDataModel.nafcodeentity";
             KeySeparator = ".";
             Grouping = "/NAFCodeEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 NAFCode = group.Add(new VocabularyKey(nameof(NAFCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey NAFCode { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

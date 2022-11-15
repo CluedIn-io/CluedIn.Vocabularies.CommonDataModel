@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventQualityTestGroupTestAssignmentEntityVocabulary()
         {
-            VocabularyName = "InventQualityTestGroupTestAssignmentEntity";
+            VocabularyName = "Invent Quality Test Group Test Assignment Entity";
             KeyPrefix = "commonDataModel.inventqualitytestgrouptestassignmententity";
             KeySeparator = ".";
             Grouping = "/InventQualityTestGroupTestAssignmentEntity";
@@ -33,10 +33,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ExpirationDateTime = group.Add(new VocabularyKey(nameof(ExpirationDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 QualitativeTestVariableId = group.Add(new VocabularyKey(nameof(QualitativeTestVariableId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultQualitativeTestMeasurementOutcome = group.Add(new VocabularyKey(nameof(DefaultQualitativeTestMeasurementOutcome), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AcceptableQualityLevelPercentage { get; private set; }
         public VocabularyKey FailureAction { get; private set; }
         public VocabularyKey IsCertificateOfAnalysisReportIncludingTestMeasurement { get; private set; }
@@ -57,7 +55,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ExpirationDateTime { get; private set; }
         public VocabularyKey QualitativeTestVariableId { get; private set; }
         public VocabularyKey DefaultQualitativeTestMeasurementOutcome { get; private set; }
-
-
     }
 }

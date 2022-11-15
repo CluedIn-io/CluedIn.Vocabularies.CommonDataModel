@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SMAServiceAgreementGroupEntityVocabulary()
         {
-            VocabularyName = "SMAServiceAgreementGroupEntity";
+            VocabularyName = "SMA Service Agreement Group Entity";
             KeyPrefix = "commonDataModel.smaserviceagreementgroupentity";
             KeySeparator = ".";
             Grouping = "/SMAServiceAgreementGroupEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 GroupId = group.Add(new VocabularyKey(nameof(GroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GroupDescription = group.Add(new VocabularyKey(nameof(GroupDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ServiceLevelAgreementId = group.Add(new VocabularyKey(nameof(ServiceLevelAgreementId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey GroupId { get; private set; }
         public VocabularyKey GroupDescription { get; private set; }
         public VocabularyKey ServiceLevelAgreementId { get; private set; }
-
-
     }
 }

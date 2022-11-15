@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WrkCtrOperationsResourceCapacityReservationEntityVocabulary()
         {
-            VocabularyName = "WrkCtrOperationsResourceCapacityReservationEntity";
+            VocabularyName = "Wrk Ctr Operations Resource Capacity Reservation Entity";
             KeyPrefix = "commonDataModel.wrkctroperationsresourcecapacityreservationentity";
             KeySeparator = ".";
             Grouping = "/WrkCtrOperationsResourceCapacityReservationEntity";
@@ -36,10 +36,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RequirementPlanId = group.Add(new VocabularyKey(nameof(RequirementPlanId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReserveHours = group.Add(new VocabularyKey(nameof(ReserveHours), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OperationsResourceId = group.Add(new VocabularyKey(nameof(OperationsResourceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ScheduledEndTime { get; private set; }
         public VocabularyKey ProductionOrderRouteJobId { get; private set; }
         public VocabularyKey IsReservationLocked { get; private set; }
@@ -63,7 +61,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RequirementPlanId { get; private set; }
         public VocabularyKey ReserveHours { get; private set; }
         public VocabularyKey OperationsResourceId { get; private set; }
-
-
     }
 }

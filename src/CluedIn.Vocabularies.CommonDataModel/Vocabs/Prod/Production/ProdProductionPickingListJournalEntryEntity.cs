@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProdProductionPickingListJournalEntryEntityVocabulary()
         {
-            VocabularyName = "ProdProductionPickingListJournalEntryEntity";
+            VocabularyName = "Prod Production Picking List Journal Entry Entity";
             KeyPrefix = "commonDataModel.prodproductionpickinglistjournalentryentity";
             KeySeparator = ".";
             Grouping = "/ProdProductionPickingListJournalEntryEntity";
@@ -60,10 +60,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 InventoryStatusId = group.Add(new VocabularyKey(nameof(InventoryStatusId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductStyleId = group.Add(new VocabularyKey(nameof(ProductStyleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LicensePlateNumber = group.Add(new VocabularyKey(nameof(LicensePlateNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ConsumptionBOMQuantity { get; private set; }
         public VocabularyKey ProposalBOMQuantity { get; private set; }
         public VocabularyKey ScrapBOMQuantity { get; private set; }
@@ -111,7 +109,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey InventoryStatusId { get; private set; }
         public VocabularyKey ProductStyleId { get; private set; }
         public VocabularyKey LicensePlateNumber { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CredManParametersEntityVocabulary()
         {
-            VocabularyName = "CredManParametersEntity";
+            VocabularyName = "Cred Man Parameters Entity";
             KeyPrefix = "commonDataModel.credmanparametersentity";
             KeySeparator = ".";
             Grouping = "/CredManParametersEntity";
@@ -47,10 +47,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MarginCategoryHierarchyName = group.Add(new VocabularyKey(nameof(MarginCategoryHierarchyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CreditLimitExchRateTypeName = group.Add(new VocabularyKey(nameof(CreditLimitExchRateTypeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CreditLimitAllowManualEditing = group.Add(new VocabularyKey(nameof(CreditLimitAllowManualEditing), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AllowBlankCreditLimitExpiryDate { get; private set; }
         public VocabularyKey AllowConfirmation { get; private set; }
         public VocabularyKey AllowEditSalesOrder { get; private set; }
@@ -85,7 +83,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey MarginCategoryHierarchyName { get; private set; }
         public VocabularyKey CreditLimitExchRateTypeName { get; private set; }
         public VocabularyKey CreditLimitAllowManualEditing { get; private set; }
-
-
     }
 }

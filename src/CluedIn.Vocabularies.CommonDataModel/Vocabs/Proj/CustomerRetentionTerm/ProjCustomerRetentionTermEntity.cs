@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjCustomerRetentionTermEntityVocabulary()
         {
-            VocabularyName = "ProjCustomerRetentionTermEntity";
+            VocabularyName = "Proj Customer Retention Term Entity";
             KeyPrefix = "commonDataModel.projcustomerretentiontermentity";
             KeySeparator = ".";
             Grouping = "/ProjCustomerRetentionTermEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProjectID = group.Add(new VocabularyKey(nameof(ProjectID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RetentionTerm = group.Add(new VocabularyKey(nameof(RetentionTerm), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EffectiveDate = group.Add(new VocabularyKey(nameof(EffectiveDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BillingRule { get; private set; }
         public VocabularyKey ProjectContractID { get; private set; }
         public VocabularyKey CustomerAccount { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProjectID { get; private set; }
         public VocabularyKey RetentionTerm { get; private set; }
         public VocabularyKey EffectiveDate { get; private set; }
-
-
     }
 }

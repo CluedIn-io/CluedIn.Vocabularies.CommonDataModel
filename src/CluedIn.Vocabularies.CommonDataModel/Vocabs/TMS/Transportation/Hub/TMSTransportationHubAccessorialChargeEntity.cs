@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationHubAccessorialChargeEntityVocabulary()
         {
-            VocabularyName = "TMSTransportationHubAccessorialChargeEntity";
+            VocabularyName = "TMS Transportation Hub Accessorial Charge Entity";
             KeyPrefix = "commonDataModel.tmstransportationhubaccessorialchargeentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationHubAccessorialChargeEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ChargeId = group.Add(new VocabularyKey(nameof(ChargeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransportationHubId = group.Add(new VocabularyKey(nameof(TransportationHubId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 HubPosition = group.Add(new VocabularyKey(nameof(HubPosition), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccessorialChargeMasterCode { get; private set; }
         public VocabularyKey TransportationBillingGroupId { get; private set; }
         public VocabularyKey ExternalChargeCode { get; private set; }
         public VocabularyKey ChargeId { get; private set; }
         public VocabularyKey TransportationHubId { get; private set; }
         public VocabularyKey HubPosition { get; private set; }
-
-
     }
 }

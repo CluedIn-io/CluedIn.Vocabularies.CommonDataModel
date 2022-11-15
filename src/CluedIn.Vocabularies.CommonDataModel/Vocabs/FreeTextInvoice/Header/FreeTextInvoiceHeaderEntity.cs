@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FreeTextInvoiceHeaderEntityVocabulary()
         {
-            VocabularyName = "FreeTextInvoiceHeaderEntity";
+            VocabularyName = "Free Text Invoice Header Entity";
             KeyPrefix = "commonDataModel.freetextinvoiceheaderentity";
             KeySeparator = ".";
             Grouping = "/FreeTextInvoiceHeaderEntity";
@@ -41,7 +41,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 InvoiceAccount = group.Add(new VocabularyKey(nameof(InvoiceAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LanguageId = group.Add(new VocabularyKey(nameof(LanguageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InvoiceName = group.Add(new VocabularyKey(nameof(InvoiceName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                numberSequenceGroup = group.Add(new VocabularyKey(nameof(numberSequenceGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                NumberSequenceGroup = group.Add(new VocabularyKey(nameof(NumberSequenceGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsOneTimeCustomer = group.Add(new VocabularyKey(nameof(IsOneTimeCustomer), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TermsOfPayment = group.Add(new VocabularyKey(nameof(TermsOfPayment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PaymentSchedule = group.Add(new VocabularyKey(nameof(PaymentSchedule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
@@ -94,10 +94,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 InvoiceOriginCode = group.Add(new VocabularyKey(nameof(InvoiceOriginCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultDimension = group.Add(new VocabularyKey(nameof(DefaultDimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultDimensionDisplayValue = group.Add(new VocabularyKey(nameof(DefaultDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InvoiceIdentifier { get; private set; }
         public VocabularyKey FreeTextNumber { get; private set; }
         public VocabularyKey CustomerAccount { get; private set; }
@@ -126,7 +124,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey InvoiceAccount { get; private set; }
         public VocabularyKey LanguageId { get; private set; }
         public VocabularyKey InvoiceName { get; private set; }
-        public VocabularyKey numberSequenceGroup { get; private set; }
+        public VocabularyKey NumberSequenceGroup { get; private set; }
         public VocabularyKey IsOneTimeCustomer { get; private set; }
         public VocabularyKey TermsOfPayment { get; private set; }
         public VocabularyKey PaymentSchedule { get; private set; }
@@ -179,7 +177,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey InvoiceOriginCode { get; private set; }
         public VocabularyKey DefaultDimension { get; private set; }
         public VocabularyKey DefaultDimensionDisplayValue { get; private set; }
-
-
     }
 }

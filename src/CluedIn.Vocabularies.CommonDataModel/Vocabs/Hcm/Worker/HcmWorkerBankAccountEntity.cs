@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmWorkerBankAccountEntityVocabulary()
         {
-            VocabularyName = "HcmWorkerBankAccountEntity";
+            VocabularyName = "Hcm Worker Bank Account Entity";
             KeyPrefix = "commonDataModel.hcmworkerbankaccountentity";
             KeySeparator = ".";
             Grouping = "/HcmWorkerBankAccountEntity";
@@ -51,10 +51,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BranchName = group.Add(new VocabularyKey(nameof(BranchName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AccountHolder = group.Add(new VocabularyKey(nameof(AccountHolder), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BankLocationCode = group.Add(new VocabularyKey(nameof(BankLocationCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountIdentification { get; private set; }
         public VocabularyKey BankAccountNumber { get; private set; }
         public VocabularyKey BankAccountType { get; private set; }
@@ -93,7 +91,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey BranchName { get; private set; }
         public VocabularyKey AccountHolder { get; private set; }
         public VocabularyKey BankLocationCode { get; private set; }
-
-
     }
 }

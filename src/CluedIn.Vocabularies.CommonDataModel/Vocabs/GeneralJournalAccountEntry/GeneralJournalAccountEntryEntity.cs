@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public GeneralJournalAccountEntryEntityVocabulary()
         {
-            VocabularyName = "GeneralJournalAccountEntryEntity";
+            VocabularyName = "General Journal Account Entry Entity";
             KeyPrefix = "commonDataModel.generaljournalaccountentryentity";
             KeySeparator = ".";
             Grouping = "/GeneralJournalAccountEntryEntity";
@@ -38,10 +38,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 GeneralJournalAccountEntryRecId = group.Add(new VocabularyKey(nameof(GeneralJournalAccountEntryRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AccountDisplayValue = group.Add(new VocabularyKey(nameof(AccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Account = group.Add(new VocabularyKey(nameof(Account), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey JournalNumber { get; private set; }
         public VocabularyKey Voucher { get; private set; }
         public VocabularyKey AccountingDate { get; private set; }
@@ -67,7 +65,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey GeneralJournalAccountEntryRecId { get; private set; }
         public VocabularyKey AccountDisplayValue { get; private set; }
         public VocabularyKey Account { get; private set; }
-
-
     }
 }

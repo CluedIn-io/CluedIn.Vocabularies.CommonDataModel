@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventProductComplianceParametersEntityVocabulary()
         {
-            VocabularyName = "InventProductComplianceParametersEntity";
+            VocabularyName = "Invent Product Compliance Parameters Entity";
             KeyPrefix = "commonDataModel.inventproductcomplianceparametersentity";
             KeySeparator = ".";
             Grouping = "/InventProductComplianceParametersEntity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WillSalesProcessesCreateExpiryAdvicePeriodProductSafetyDataSheetAlerts = group.Add(new VocabularyKey(nameof(WillSalesProcessesCreateExpiryAdvicePeriodProductSafetyDataSheetAlerts), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillPurchaseProcessesCreateExpiredProductSafetyDataSheetAlerts = group.Add(new VocabularyKey(nameof(WillPurchaseProcessesCreateExpiredProductSafetyDataSheetAlerts), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillPurchaseProcessesCreateExpiryAdvicePeriodProductSafetyDataSheetAlerts = group.Add(new VocabularyKey(nameof(WillPurchaseProcessesCreateExpiryAdvicePeriodProductSafetyDataSheetAlerts), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductComplianceAdministratorUserId { get; private set; }
         public VocabularyKey DefaultProductDataSheetValidityDays { get; private set; }
         public VocabularyKey DefaultExpiryAdviceDays { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WillSalesProcessesCreateExpiryAdvicePeriodProductSafetyDataSheetAlerts { get; private set; }
         public VocabularyKey WillPurchaseProcessesCreateExpiredProductSafetyDataSheetAlerts { get; private set; }
         public VocabularyKey WillPurchaseProcessesCreateExpiryAdvicePeriodProductSafetyDataSheetAlerts { get; private set; }
-
-
     }
 }

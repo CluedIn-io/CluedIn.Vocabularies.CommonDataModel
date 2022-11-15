@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FBCFOPCreditBaseSourceEntityVocabulary()
         {
-            VocabularyName = "FBCFOPCreditBaseSourceEntity";
+            VocabularyName = "FBCFOP Credit Base Source Entity";
             KeyPrefix = "commonDataModel.fbcfopcreditbasesourceentity";
             KeySeparator = ".";
             Grouping = "/FBCFOPCreditBaseSourceEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ValidFromDate = group.Add(new VocabularyKey(nameof(ValidFromDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidToDate = group.Add(new VocabularyKey(nameof(ValidToDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CreditBaseSource = group.Add(new VocabularyKey(nameof(CreditBaseSource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CFOP { get; private set; }
         public VocabularyKey CFOPDescription { get; private set; }
         public VocabularyKey ValidFromDate { get; private set; }
         public VocabularyKey ValidToDate { get; private set; }
         public VocabularyKey CreditBaseSource { get; private set; }
-
-
     }
 }

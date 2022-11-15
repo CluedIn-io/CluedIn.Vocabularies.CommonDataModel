@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailAssortmentEntityVocabulary()
         {
-            VocabularyName = "RetailAssortmentEntity";
+            VocabularyName = "Retail Assortment Entity";
             KeyPrefix = "commonDataModel.retailassortmententity";
             KeySeparator = ".";
             Grouping = "/RetailAssortmentEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Status = group.Add(new VocabularyKey(nameof(Status), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidFrom = group.Add(new VocabularyKey(nameof(ValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidTo = group.Add(new VocabularyKey(nameof(ValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AssortmentID { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey PublishedDateTime { get; private set; }
         public VocabularyKey Status { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey ValidTo { get; private set; }
-
-
     }
 }

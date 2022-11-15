@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerRRGTransType_RUEntityVocabulary()
         {
-            VocabularyName = "LedgerRRGTransType_RUEntity";
+            VocabularyName = "Ledger RRG Trans Type _RU Entity";
             KeyPrefix = "commonDataModel.ledgerrrgtranstype_ruentity";
             KeySeparator = ".";
             Grouping = "/LedgerRRGTransType_RUEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RefLineId = group.Add(new VocabularyKey(nameof(RefLineId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransTypeRecId = group.Add(new VocabularyKey(nameof(TransTypeRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransTypeTableId = group.Add(new VocabularyKey(nameof(TransTypeTableId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TransType { get; private set; }
         public VocabularyKey RefTableName { get; private set; }
         public VocabularyKey RefLineId { get; private set; }
         public VocabularyKey TransTypeRecId { get; private set; }
         public VocabularyKey TransTypeTableId { get; private set; }
-
-
     }
 }

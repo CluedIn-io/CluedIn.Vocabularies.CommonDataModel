@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PaymentScheduleEntityVocabulary()
         {
-            VocabularyName = "PaymentScheduleEntity";
+            VocabularyName = "Payment Schedule Entity";
             KeyPrefix = "commonDataModel.paymentscheduleentity";
             KeySeparator = ".";
             Grouping = "/PaymentScheduleEntity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsFlexibleInstallmentPlan = group.Add(new VocabularyKey(nameof(IsFlexibleInstallmentPlan), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InstallmentMaximumOrderAmount = group.Add(new VocabularyKey(nameof(InstallmentMaximumOrderAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InstallmentMinimumOrderAmount = group.Add(new VocabularyKey(nameof(InstallmentMinimumOrderAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FixedPaymentAmount { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey MinimumPaymentAmount { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsFlexibleInstallmentPlan { get; private set; }
         public VocabularyKey InstallmentMaximumOrderAmount { get; private set; }
         public VocabularyKey InstallmentMinimumOrderAmount { get; private set; }
-
-
     }
 }

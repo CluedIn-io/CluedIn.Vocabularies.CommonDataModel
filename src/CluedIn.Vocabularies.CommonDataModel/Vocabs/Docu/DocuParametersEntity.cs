@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DocuParametersEntityVocabulary()
         {
-            VocabularyName = "DocuParametersEntity";
+            VocabularyName = "Docu Parameters Entity";
             KeyPrefix = "commonDataModel.docuparametersentity";
             KeySeparator = ".";
             Grouping = "/DocuParametersEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SubmitToWorkflow = group.Add(new VocabularyKey(nameof(SubmitToWorkflow), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WebAppsServerURL = group.Add(new VocabularyKey(nameof(WebAppsServerURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultSharePointServer = group.Add(new VocabularyKey(nameof(DefaultSharePointServer), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ActiveTable { get; private set; }
         public VocabularyKey Key { get; private set; }
         public VocabularyKey MaxFileSizeInFileSystem { get; private set; }
         public VocabularyKey SubmitToWorkflow { get; private set; }
         public VocabularyKey WebAppsServerURL { get; private set; }
         public VocabularyKey DefaultSharePointServer { get; private set; }
-
-
     }
 }

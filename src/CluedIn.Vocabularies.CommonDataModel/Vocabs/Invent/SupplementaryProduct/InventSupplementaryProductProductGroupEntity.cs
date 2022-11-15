@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventSupplementaryProductProductGroupEntityVocabulary()
         {
-            VocabularyName = "InventSupplementaryProductProductGroupEntity";
+            VocabularyName = "Invent Supplementary Product Product Group Entity";
             KeyPrefix = "commonDataModel.inventsupplementaryproductproductgroupentity";
             KeySeparator = ".";
             Grouping = "/InventSupplementaryProductProductGroupEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 GroupId = group.Add(new VocabularyKey(nameof(GroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GroupName = group.Add(new VocabularyKey(nameof(GroupName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey GroupId { get; private set; }
         public VocabularyKey GroupName { get; private set; }
-
-
     }
 }

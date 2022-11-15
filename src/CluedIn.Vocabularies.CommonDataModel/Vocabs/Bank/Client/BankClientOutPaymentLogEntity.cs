@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankClientOutPaymentLogEntityVocabulary()
         {
-            VocabularyName = "BankClientOutPaymentLogEntity";
+            VocabularyName = "Bank Client Out Payment Log Entity";
             KeyPrefix = "commonDataModel.bankclientoutpaymentlogentity";
             KeySeparator = ".";
             Grouping = "/BankClientOutPaymentLogEntity";
@@ -30,10 +30,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BankCurrencyTransfer = group.Add(new VocabularyKey(nameof(BankCurrencyTransfer), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PaymentOrderNumber = group.Add(new VocabularyKey(nameof(PaymentOrderNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PaymentOrderDate = group.Add(new VocabularyKey(nameof(PaymentOrderDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AmountInTransactionCurrency { get; private set; }
         public VocabularyKey BankAccount { get; private set; }
         public VocabularyKey Currency { get; private set; }
@@ -51,7 +49,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey BankCurrencyTransfer { get; private set; }
         public VocabularyKey PaymentOrderNumber { get; private set; }
         public VocabularyKey PaymentOrderDate { get; private set; }
-
-
     }
 }

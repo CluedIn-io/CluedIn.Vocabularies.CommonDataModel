@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ChargeOverrideHistoryEntityVocabulary()
         {
-            VocabularyName = "ChargeOverrideHistoryEntity";
+            VocabularyName = "Charge Override History Entity";
             KeyPrefix = "commonDataModel.chargeoverridehistoryentity";
             KeySeparator = ".";
             Grouping = "/ChargeOverrideHistoryEntity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OriginalValue = group.Add(new VocabularyKey(nameof(OriginalValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OverriddenFieldNumber = group.Add(new VocabularyKey(nameof(OverriddenFieldNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OverriddenValue = group.Add(new VocabularyKey(nameof(OverriddenValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ChargeCode { get; private set; }
         public VocabularyKey OriginalAmount { get; private set; }
         public VocabularyKey OverrideAmount { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OriginalValue { get; private set; }
         public VocabularyKey OverriddenFieldNumber { get; private set; }
         public VocabularyKey OverriddenValue { get; private set; }
-
-
     }
 }

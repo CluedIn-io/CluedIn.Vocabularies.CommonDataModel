@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSFreightReconciliationReasonCodeEntityVocabulary()
         {
-            VocabularyName = "TMSFreightReconciliationReasonCodeEntity";
+            VocabularyName = "TMS Freight Reconciliation Reason Code Entity";
             KeyPrefix = "commonDataModel.tmsfreightreconciliationreasoncodeentity";
             KeySeparator = ".";
             Grouping = "/TMSFreightReconciliationReasonCodeEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsChargeDebitLedgerAccountOveridden = group.Add(new VocabularyKey(nameof(IsChargeDebitLedgerAccountOveridden), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsVendorPayingFreight = group.Add(new VocabularyKey(nameof(IsVendorPayingFreight), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DebitLedgerAccountDisplayValue = group.Add(new VocabularyKey(nameof(DebitLedgerAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ReasonDescription { get; private set; }
         public VocabularyKey ReasonCode { get; private set; }
         public VocabularyKey CreditMainAccountId { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsChargeDebitLedgerAccountOveridden { get; private set; }
         public VocabularyKey IsVendorPayingFreight { get; private set; }
         public VocabularyKey DebitLedgerAccountDisplayValue { get; private set; }
-
-
     }
 }

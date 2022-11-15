@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CredManBlockExclusionRuleEntityVocabulary()
         {
-            VocabularyName = "CredManBlockExclusionRuleEntity";
+            VocabularyName = "Cred Man Block Exclusion Rule Entity";
             KeyPrefix = "commonDataModel.credmanblockexclusionruleentity";
             KeySeparator = ".";
             Grouping = "/CredManBlockExclusionRuleEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RuleType = group.Add(new VocabularyKey(nameof(RuleType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReleaseSalesOrder = group.Add(new VocabularyKey(nameof(ReleaseSalesOrder), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RuleId = group.Add(new VocabularyKey(nameof(RuleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CreditLimitThreshold { get; private set; }
         public VocabularyKey CustRelation { get; private set; }
         public VocabularyKey GraceValue { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RuleType { get; private set; }
         public VocabularyKey ReleaseSalesOrder { get; private set; }
         public VocabularyKey RuleId { get; private set; }
-
-
     }
 }

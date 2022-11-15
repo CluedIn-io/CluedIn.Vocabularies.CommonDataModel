@@ -13,35 +13,31 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Lead Details", group =>
             {
-                leadSourceCode = group.Add(new VocabularyKey(nameof(leadSourceCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                companySize = group.Add(new VocabularyKey(nameof(companySize), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                degree = group.Add(new VocabularyKey(nameof(degree), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                fieldOfStudy = group.Add(new VocabularyKey(nameof(fieldOfStudy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                graduationDate = group.Add(new VocabularyKey(nameof(graduationDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                industry = group.Add(new VocabularyKey(nameof(industry), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                jobFunction = group.Add(new VocabularyKey(nameof(jobFunction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                latestsubmissiondate = group.Add(new VocabularyKey(nameof(latestsubmissiondate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                linkedinsubmissioncount = group.Add(new VocabularyKey(nameof(linkedinsubmissioncount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                school = group.Add(new VocabularyKey(nameof(school), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                seniority = group.Add(new VocabularyKey(nameof(seniority), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                startDate = group.Add(new VocabularyKey(nameof(startDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                LeadSourceCode = group.Add(new VocabularyKey(nameof(LeadSourceCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CompanySize = group.Add(new VocabularyKey(nameof(CompanySize), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Degree = group.Add(new VocabularyKey(nameof(Degree), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FieldOfStudy = group.Add(new VocabularyKey(nameof(FieldOfStudy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                GraduationDate = group.Add(new VocabularyKey(nameof(GraduationDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Industry = group.Add(new VocabularyKey(nameof(Industry), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                JobFunction = group.Add(new VocabularyKey(nameof(JobFunction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Latestsubmissiondate = group.Add(new VocabularyKey(nameof(Latestsubmissiondate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Linkedinsubmissioncount = group.Add(new VocabularyKey(nameof(Linkedinsubmissioncount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                School = group.Add(new VocabularyKey(nameof(School), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Seniority = group.Add(new VocabularyKey(nameof(Seniority), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StartDate = group.Add(new VocabularyKey(nameof(StartDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey leadSourceCode { get; private set; }
-        public VocabularyKey companySize { get; private set; }
-        public VocabularyKey degree { get; private set; }
-        public VocabularyKey fieldOfStudy { get; private set; }
-        public VocabularyKey graduationDate { get; private set; }
-        public VocabularyKey industry { get; private set; }
-        public VocabularyKey jobFunction { get; private set; }
-        public VocabularyKey latestsubmissiondate { get; private set; }
-        public VocabularyKey linkedinsubmissioncount { get; private set; }
-        public VocabularyKey school { get; private set; }
-        public VocabularyKey seniority { get; private set; }
-        public VocabularyKey startDate { get; private set; }
-
-
+        public VocabularyKey LeadSourceCode { get; private set; }
+        public VocabularyKey CompanySize { get; private set; }
+        public VocabularyKey Degree { get; private set; }
+        public VocabularyKey FieldOfStudy { get; private set; }
+        public VocabularyKey GraduationDate { get; private set; }
+        public VocabularyKey Industry { get; private set; }
+        public VocabularyKey JobFunction { get; private set; }
+        public VocabularyKey Latestsubmissiondate { get; private set; }
+        public VocabularyKey Linkedinsubmissioncount { get; private set; }
+        public VocabularyKey School { get; private set; }
+        public VocabularyKey Seniority { get; private set; }
+        public VocabularyKey StartDate { get; private set; }
     }
 }

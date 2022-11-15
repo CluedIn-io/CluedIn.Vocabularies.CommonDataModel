@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgJobCardTerminalGridConfigurationEntityVocabulary()
         {
-            VocabularyName = "JmgJobCardTerminalGridConfigurationEntity";
+            VocabularyName = "Jmg Job Card Terminal Grid Configuration Entity";
             KeyPrefix = "commonDataModel.jmgjobcardterminalgridconfigurationentity";
             KeySeparator = ".";
             Grouping = "/JmgJobCardTerminalGridConfigurationEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 GridConfigurationDescription = group.Add(new VocabularyKey(nameof(GridConfigurationDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GridConfigurationId = group.Add(new VocabularyKey(nameof(GridConfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey GridConfigurationDescription { get; private set; }
         public VocabularyKey GridConfigurationId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetPropertyGroupEntityVocabulary()
         {
-            VocabularyName = "AssetPropertyGroupEntity";
+            VocabularyName = "Asset Property Group Entity";
             KeyPrefix = "commonDataModel.assetpropertygroupentity";
             KeySeparator = ".";
             Grouping = "/AssetPropertyGroupEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 AssetPropertyGroupId = group.Add(new VocabularyKey(nameof(AssetPropertyGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AssetPropertyGroupId { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

@@ -6,20 +6,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ApplicationDocumentVocabulary()
         {
-            VocabularyName = "ApplicationDocument";
+            VocabularyName = "Application Document";
             KeyPrefix = "commonDataModel.applicationdocument";
             KeySeparator = ".";
             Grouping = "/ApplicationDocument";
 
             AddGroup("ApplicationDocument Details", group =>
             {
-                applicationDocumentId = group.Add(new VocabularyKey(nameof(applicationDocumentId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                ApplicationDocumentId = group.Add(new VocabularyKey(nameof(ApplicationDocumentId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey applicationDocumentId { get; private set; }
-
-
+        public VocabularyKey ApplicationDocumentId { get; private set; }
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WorkflowWorkItemQueueEntityVocabulary()
         {
-            VocabularyName = "WorkflowWorkItemQueueEntity";
+            VocabularyName = "Workflow Work Item Queue Entity";
             KeyPrefix = "commonDataModel.workflowworkitemqueueentity";
             KeySeparator = ".";
             Grouping = "/WorkflowWorkItemQueueEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Status = group.Add(new VocabularyKey(nameof(Status), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkItemType = group.Add(new VocabularyKey(nameof(WorkItemType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkItemTypeFriendlyName = group.Add(new VocabularyKey(nameof(WorkItemTypeFriendlyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey Status { get; private set; }
         public VocabularyKey WorkItemType { get; private set; }
         public VocabularyKey WorkItemTypeFriendlyName { get; private set; }
-
-
     }
 }

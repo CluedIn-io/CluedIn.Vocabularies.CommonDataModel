@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WorkflowElementLinkEntityVocabulary()
         {
-            VocabularyName = "WorkflowElementLinkEntity";
+            VocabularyName = "Workflow Element Link Entity";
             KeyPrefix = "commonDataModel.workflowelementlinkentity";
             KeySeparator = ".";
             Grouping = "/WorkflowElementLinkEntity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OutcomeRecId = group.Add(new VocabularyKey(nameof(OutcomeRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SourceSubworkflowElementId = group.Add(new VocabularyKey(nameof(SourceSubworkflowElementId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TargetSubworkflowElementId = group.Add(new VocabularyKey(nameof(TargetSubworkflowElementId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Level { get; private set; }
         public VocabularyKey Sequence { get; private set; }
         public VocabularyKey SourceType { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OutcomeRecId { get; private set; }
         public VocabularyKey SourceSubworkflowElementId { get; private set; }
         public VocabularyKey TargetSubworkflowElementId { get; private set; }
-
-
     }
 }

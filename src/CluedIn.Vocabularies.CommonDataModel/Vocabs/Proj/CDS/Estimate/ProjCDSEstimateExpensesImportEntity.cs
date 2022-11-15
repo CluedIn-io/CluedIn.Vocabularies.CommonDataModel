@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjCDSEstimateExpensesImportEntityVocabulary()
         {
-            VocabularyName = "ProjCDSEstimateExpensesImportEntity";
+            VocabularyName = "Proj CDS Estimate Expenses Import Entity";
             KeyPrefix = "commonDataModel.projcdsestimateexpensesimportentity";
             KeySeparator = ".";
             Grouping = "/ProjCDSEstimateExpensesImportEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BillingType = group.Add(new VocabularyKey(nameof(BillingType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransactionCategory = group.Add(new VocabularyKey(nameof(TransactionCategory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EstimateLineId = group.Add(new VocabularyKey(nameof(EstimateLineId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TaskId { get; private set; }
         public VocabularyKey ProjectId { get; private set; }
         public VocabularyKey ExchangeRate { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey BillingType { get; private set; }
         public VocabularyKey TransactionCategory { get; private set; }
         public VocabularyKey EstimateLineId { get; private set; }
-
-
     }
 }

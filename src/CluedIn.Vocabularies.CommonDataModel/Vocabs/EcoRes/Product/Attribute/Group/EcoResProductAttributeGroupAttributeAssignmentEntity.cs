@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResProductAttributeGroupAttributeAssignmentEntityVocabulary()
         {
-            VocabularyName = "EcoResProductAttributeGroupAttributeAssignmentEntity";
+            VocabularyName = "Eco Res Product Attribute Group Attribute Assignment Entity";
             KeyPrefix = "commonDataModel.ecoresproductattributegroupattributeassignmententity";
             KeySeparator = ".";
             Grouping = "/EcoResProductAttributeGroupAttributeAssignmentEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IntegerValue = group.Add(new VocabularyKey(nameof(IntegerValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TextValue = group.Add(new VocabularyKey(nameof(TextValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductAttributeRetailDisplayOrder = group.Add(new VocabularyKey(nameof(ProductAttributeRetailDisplayOrder), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductAttributeGroupName { get; private set; }
         public VocabularyKey ProductAttributeName { get; private set; }
         public VocabularyKey ProductAttributeTypeName { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IntegerValue { get; private set; }
         public VocabularyKey TextValue { get; private set; }
         public VocabularyKey ProductAttributeRetailDisplayOrder { get; private set; }
-
-
     }
 }

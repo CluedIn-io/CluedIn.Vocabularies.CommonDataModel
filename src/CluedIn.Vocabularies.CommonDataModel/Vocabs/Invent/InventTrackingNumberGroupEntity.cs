@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventTrackingNumberGroupEntityVocabulary()
         {
-            VocabularyName = "InventTrackingNumberGroupEntity";
+            VocabularyName = "Invent Tracking Number Group Entity";
             KeyPrefix = "commonDataModel.inventtrackingnumbergroupentity";
             KeySeparator = ".";
             Grouping = "/InventTrackingNumberGroupEntity";
@@ -32,10 +32,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 NumberSequenceCode = group.Add(new VocabularyKey(nameof(NumberSequenceCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NumberSequenceTable_NumberSequenceScope = group.Add(new VocabularyKey(nameof(NumberSequenceTable_NumberSequenceScope), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NumberSequenceScopeDataArea = group.Add(new VocabularyKey(nameof(NumberSequenceScopeDataArea), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsExpectedDateIncluded { get; private set; }
         public VocabularyKey IsLotIdIncluded { get; private set; }
         public VocabularyKey IsNumberSequenceNumberIncluded { get; private set; }
@@ -55,7 +53,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey NumberSequenceCode { get; private set; }
         public VocabularyKey NumberSequenceTable_NumberSequenceScope { get; private set; }
         public VocabularyKey NumberSequenceScopeDataArea { get; private set; }
-
-
     }
 }

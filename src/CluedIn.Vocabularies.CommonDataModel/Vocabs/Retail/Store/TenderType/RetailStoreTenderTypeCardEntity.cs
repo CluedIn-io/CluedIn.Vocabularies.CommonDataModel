@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailStoreTenderTypeCardEntityVocabulary()
         {
-            VocabularyName = "RetailStoreTenderTypeCardEntity";
+            VocabularyName = "Retail Store Tender Type Card Entity";
             KeyPrefix = "commonDataModel.retailstoretendertypecardentity";
             KeySeparator = ".";
             Grouping = "/RetailStoreTenderTypeCardEntity";
@@ -48,10 +48,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OMOperatingUnitID = group.Add(new VocabularyKey(nameof(OMOperatingUnitID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsExpirationDateRequired = group.Add(new VocabularyKey(nameof(IsExpirationDateRequired), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsPinRequired = group.Add(new VocabularyKey(nameof(IsPinRequired), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountType { get; private set; }
         public VocabularyKey AllowManualInput { get; private set; }
         public VocabularyKey BrokerId { get; private set; }
@@ -87,7 +85,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OMOperatingUnitID { get; private set; }
         public VocabularyKey IsExpirationDateRequired { get; private set; }
         public VocabularyKey IsPinRequired { get; private set; }
-
-
     }
 }

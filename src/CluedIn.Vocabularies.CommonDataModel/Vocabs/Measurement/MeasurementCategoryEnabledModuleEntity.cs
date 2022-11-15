@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MeasurementCategoryEnabledModuleEntityVocabulary()
         {
-            VocabularyName = "MeasurementCategoryEnabledModuleEntity";
+            VocabularyName = "Measurement Category Enabled Module Entity";
             KeyPrefix = "commonDataModel.measurementcategoryenabledmoduleentity";
             KeySeparator = ".";
             Grouping = "/MeasurementCategoryEnabledModuleEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CompanyId = group.Add(new VocabularyKey(nameof(CompanyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CategoryId = group.Add(new VocabularyKey(nameof(CategoryId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Category = group.Add(new VocabularyKey(nameof(Category), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Module { get; private set; }
         public VocabularyKey CompanyId { get; private set; }
         public VocabularyKey CategoryId { get; private set; }
         public VocabularyKey Category { get; private set; }
-
-
     }
 }

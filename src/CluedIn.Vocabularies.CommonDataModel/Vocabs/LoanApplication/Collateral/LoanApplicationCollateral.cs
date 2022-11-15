@@ -6,54 +6,50 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LoanApplicationCollateralVocabulary()
         {
-            VocabularyName = "LoanApplicationCollateral";
+            VocabularyName = "Loan Application Collateral";
             KeyPrefix = "commonDataModel.loanapplicationcollateral";
             KeySeparator = ".";
             Grouping = "/LoanApplicationCollateral";
 
             AddGroup("LoanApplicationCollateral Details", group =>
             {
-                loanApplicationCollateralId = group.Add(new VocabularyKey(nameof(loanApplicationCollateralId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                modifiedOn = group.Add(new VocabularyKey(nameof(modifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statecode = group.Add(new VocabularyKey(nameof(statecode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statuscode = group.Add(new VocabularyKey(nameof(statuscode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                importSequenceNumber = group.Add(new VocabularyKey(nameof(importSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                overriddenCreatedOn = group.Add(new VocabularyKey(nameof(overriddenCreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                timeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(timeZoneRuleVersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LoanApplicationCollateralId = group.Add(new VocabularyKey(nameof(LoanApplicationCollateralId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Statecode = group.Add(new VocabularyKey(nameof(Statecode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Statuscode = group.Add(new VocabularyKey(nameof(Statuscode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                amountExisitingLiens = group.Add(new VocabularyKey(nameof(amountExisitingLiens), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                amountexisitingliens_Base = group.Add(new VocabularyKey(nameof(amountexisitingliens_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                isLegalCheckSuccessful = group.Add(new VocabularyKey(nameof(isLegalCheckSuccessful), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                legalCheckCompletionDate = group.Add(new VocabularyKey(nameof(legalCheckCompletionDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                legalDescription = group.Add(new VocabularyKey(nameof(legalDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                lientype = group.Add(new VocabularyKey(nameof(lientype), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                purchaseDate = group.Add(new VocabularyKey(nameof(purchaseDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                usageType = group.Add(new VocabularyKey(nameof(usageType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AmountExisitingLiens = group.Add(new VocabularyKey(nameof(AmountExisitingLiens), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Amountexisitingliens_Base = group.Add(new VocabularyKey(nameof(Amountexisitingliens_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsLegalCheckSuccessful = group.Add(new VocabularyKey(nameof(IsLegalCheckSuccessful), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LegalCheckCompletionDate = group.Add(new VocabularyKey(nameof(LegalCheckCompletionDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LegalDescription = group.Add(new VocabularyKey(nameof(LegalDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Lientype = group.Add(new VocabularyKey(nameof(Lientype), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PurchaseDate = group.Add(new VocabularyKey(nameof(PurchaseDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                UsageType = group.Add(new VocabularyKey(nameof(UsageType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey loanApplicationCollateralId { get; private set; }
-        public VocabularyKey createdOn { get; private set; }
-        public VocabularyKey modifiedOn { get; private set; }
-        public VocabularyKey statecode { get; private set; }
-        public VocabularyKey statuscode { get; private set; }
-        public VocabularyKey importSequenceNumber { get; private set; }
-        public VocabularyKey overriddenCreatedOn { get; private set; }
-        public VocabularyKey timeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey LoanApplicationCollateralId { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Statecode { get; private set; }
+        public VocabularyKey Statuscode { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey amountExisitingLiens { get; private set; }
-        public VocabularyKey amountexisitingliens_Base { get; private set; }
-        public VocabularyKey isLegalCheckSuccessful { get; private set; }
-        public VocabularyKey legalCheckCompletionDate { get; private set; }
-        public VocabularyKey legalDescription { get; private set; }
-        public VocabularyKey lientype { get; private set; }
-        public VocabularyKey purchaseDate { get; private set; }
-        public VocabularyKey usageType { get; private set; }
-
-
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey AmountExisitingLiens { get; private set; }
+        public VocabularyKey Amountexisitingliens_Base { get; private set; }
+        public VocabularyKey IsLegalCheckSuccessful { get; private set; }
+        public VocabularyKey LegalCheckCompletionDate { get; private set; }
+        public VocabularyKey LegalDescription { get; private set; }
+        public VocabularyKey Lientype { get; private set; }
+        public VocabularyKey PurchaseDate { get; private set; }
+        public VocabularyKey UsageType { get; private set; }
     }
 }

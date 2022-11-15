@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchFormletterWarehouseReceiptListFormPrintingConfigurationEntityVocabulary()
         {
-            VocabularyName = "PurchFormletterWarehouseReceiptListFormPrintingConfigurationEntity";
+            VocabularyName = "Purch Formletter Warehouse Receipt List Form Printing Configuration Entity";
             KeyPrefix = "commonDataModel.purchformletterwarehousereceiptlistformprintingconfigurationentity";
             KeySeparator = ".";
             Grouping = "/PurchFormletterWarehouseReceiptListFormPrintingConfigurationEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsReceivingWarehouseIdDisplayed = group.Add(new VocabularyKey(nameof(IsReceivingWarehouseIdDisplayed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsReceivingWarehouseLocationIdDisplayed = group.Add(new VocabularyKey(nameof(IsReceivingWarehouseLocationIdDisplayed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InventDimReceiptsList = group.Add(new VocabularyKey(nameof(InventDimReceiptsList), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsInventoryStatusIdDisplayed { get; private set; }
         public VocabularyKey IsItemBatchNumberDisplayed { get; private set; }
         public VocabularyKey IsItemSerialNumberDisplayed { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsReceivingWarehouseIdDisplayed { get; private set; }
         public VocabularyKey IsReceivingWarehouseLocationIdDisplayed { get; private set; }
         public VocabularyKey InventDimReceiptsList { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSShipConsolidationPolicyFieldEntityVocabulary()
         {
-            VocabularyName = "WHSShipConsolidationPolicyFieldEntity";
+            VocabularyName = "WHS Ship Consolidation Policy Field Entity";
             KeyPrefix = "commonDataModel.whsshipconsolidationpolicyfieldentity";
             KeySeparator = ".";
             Grouping = "/WHSShipConsolidationPolicyFieldEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SourceFieldName = group.Add(new VocabularyKey(nameof(SourceFieldName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SourceTableName = group.Add(new VocabularyKey(nameof(SourceTableName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ShipConsolidationPolicyType = group.Add(new VocabularyKey(nameof(ShipConsolidationPolicyType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ShipConsolidationPolicyName { get; private set; }
         public VocabularyKey SourceFieldName { get; private set; }
         public VocabularyKey SourceTableName { get; private set; }
         public VocabularyKey ShipConsolidationPolicyType { get; private set; }
-
-
     }
 }

@@ -6,32 +6,28 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AttendeePassVocabulary()
         {
-            VocabularyName = "AttendeePass";
+            VocabularyName = "Attendee Pass";
             KeyPrefix = "commonDataModel.attendeepass";
             KeySeparator = ".";
             Grouping = "/AttendeePass";
 
             AddGroup("AttendeePass Details", group =>
             {
-                exchangeRate = group.Add(new VocabularyKey(nameof(exchangeRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                attendeePassId = group.Add(new VocabularyKey(nameof(attendeePassId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                passPrice = group.Add(new VocabularyKey(nameof(passPrice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                passPriceBase = group.Add(new VocabularyKey(nameof(passPriceBase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AttendeePassId = group.Add(new VocabularyKey(nameof(AttendeePassId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PassPrice = group.Add(new VocabularyKey(nameof(PassPrice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PassPriceBase = group.Add(new VocabularyKey(nameof(PassPriceBase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey exchangeRate { get; private set; }
-        public VocabularyKey attendeePassId { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey passPrice { get; private set; }
-        public VocabularyKey passPriceBase { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey AttendeePassId { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey PassPrice { get; private set; }
+        public VocabularyKey PassPriceBase { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

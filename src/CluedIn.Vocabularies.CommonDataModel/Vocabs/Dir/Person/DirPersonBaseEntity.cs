@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DirPersonBaseEntityVocabulary()
         {
-            VocabularyName = "DirPersonBaseEntity";
+            VocabularyName = "Dir Person Base Entity";
             KeyPrefix = "commonDataModel.dirpersonbaseentity";
             KeySeparator = ".";
             Grouping = "/DirPersonBaseEntity";
@@ -93,10 +93,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PartyType = group.Add(new VocabularyKey(nameof(PartyType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ElectronicLocationId = group.Add(new VocabularyKey(nameof(ElectronicLocationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PartyRecordId = group.Add(new VocabularyKey(nameof(PartyRecordId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PartyNumber { get; private set; }
         public VocabularyKey FirstName { get; private set; }
         public VocabularyKey MiddleName { get; private set; }
@@ -177,7 +175,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PartyType { get; private set; }
         public VocabularyKey ElectronicLocationId { get; private set; }
         public VocabularyKey PartyRecordId { get; private set; }
-
-
     }
 }

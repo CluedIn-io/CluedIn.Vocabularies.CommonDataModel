@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchRequestForQuotationReplyScoringCriterionEntityVocabulary()
         {
-            VocabularyName = "PurchRequestForQuotationReplyScoringCriterionEntity";
+            VocabularyName = "Purch Request For Quotation Reply Scoring Criterion Entity";
             KeyPrefix = "commonDataModel.purchrequestforquotationreplyscoringcriterionentity";
             KeySeparator = ".";
             Grouping = "/PurchRequestForQuotationReplyScoringCriterionEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 VendorScoringStatusComment = group.Add(new VocabularyKey(nameof(VendorScoringStatusComment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CriterionId = group.Add(new VocabularyKey(nameof(CriterionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorAccountNumber = group.Add(new VocabularyKey(nameof(VendorAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RFQNumber { get; private set; }
         public VocabularyKey CriterionScore { get; private set; }
         public VocabularyKey CriterionName { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey VendorScoringStatusComment { get; private set; }
         public VocabularyKey CriterionId { get; private set; }
         public VocabularyKey VendorAccountNumber { get; private set; }
-
-
     }
 }

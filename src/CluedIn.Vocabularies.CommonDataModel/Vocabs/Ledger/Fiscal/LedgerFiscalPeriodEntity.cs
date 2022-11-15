@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerFiscalPeriodEntityVocabulary()
         {
-            VocabularyName = "LedgerFiscalPeriodEntity";
+            VocabularyName = "Ledger Fiscal Period Entity";
             KeyPrefix = "commonDataModel.ledgerfiscalperiodentity";
             KeySeparator = ".";
             Grouping = "/LedgerFiscalPeriodEntity";
@@ -54,10 +54,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RetailAccessLevel = group.Add(new VocabularyKey(nameof(RetailAccessLevel), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RetailUserGroupInfo = group.Add(new VocabularyKey(nameof(RetailUserGroupInfo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LegalEntityId = group.Add(new VocabularyKey(nameof(LegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FiscalCalendarPeriodRecId { get; private set; }
         public VocabularyKey LedgerRecId { get; private set; }
         public VocabularyKey PeriodStatus { get; private set; }
@@ -99,7 +97,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RetailAccessLevel { get; private set; }
         public VocabularyKey RetailUserGroupInfo { get; private set; }
         public VocabularyKey LegalEntityId { get; private set; }
-
-
     }
 }

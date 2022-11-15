@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventStandardCostVarianceLedgerPostingDefinitionEntityVocabulary()
         {
-            VocabularyName = "InventStandardCostVarianceLedgerPostingDefinitionEntity";
+            VocabularyName = "Invent Standard Cost Variance Ledger Posting Definition Entity";
             KeyPrefix = "commonDataModel.inventstandardcostvarianceledgerpostingdefinitionentity";
             KeySeparator = ".";
             Grouping = "/InventStandardCostVarianceLedgerPostingDefinitionEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SiteCode = group.Add(new VocabularyKey(nameof(SiteCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SiteRelation = group.Add(new VocabularyKey(nameof(SiteRelation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CostingSiteId = group.Add(new VocabularyKey(nameof(CostingSiteId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InventoryAccountType { get; private set; }
         public VocabularyKey MainAccountIdDisplayValue { get; private set; }
         public VocabularyKey ItemNumber { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SiteCode { get; private set; }
         public VocabularyKey SiteRelation { get; private set; }
         public VocabularyKey CostingSiteId { get; private set; }
-
-
     }
 }

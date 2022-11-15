@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailTransactionIncomeExpenseLineEntityVocabulary()
         {
-            VocabularyName = "RetailTransactionIncomeExpenseLineEntity";
+            VocabularyName = "Retail Transaction Income Expense Line Entity";
             KeyPrefix = "commonDataModel.retailtransactionincomeexpenselineentity";
             KeySeparator = ".";
             Grouping = "/RetailTransactionIncomeExpenseLineEntity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RetailChannelTableOMOperatingUnitID = group.Add(new VocabularyKey(nameof(RetailChannelTableOMOperatingUnitID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OperatingUnitNumber = group.Add(new VocabularyKey(nameof(OperatingUnitNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StoreNumber = group.Add(new VocabularyKey(nameof(StoreNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountType { get; private set; }
         public VocabularyKey Amount { get; private set; }
         public VocabularyKey Channel { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RetailChannelTableOMOperatingUnitID { get; private set; }
         public VocabularyKey OperatingUnitNumber { get; private set; }
         public VocabularyKey StoreNumber { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationRateBreakValueEntityVocabulary()
         {
-            VocabularyName = "TMSTransportationRateBreakValueEntity";
+            VocabularyName = "TMS Transportation Rate Break Value Entity";
             KeyPrefix = "commonDataModel.tmstransportationratebreakvalueentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationRateBreakValueEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BreakRealValue = group.Add(new VocabularyKey(nameof(BreakRealValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BreakStringValue = group.Add(new VocabularyKey(nameof(BreakStringValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BreakValue = group.Add(new VocabularyKey(nameof(BreakValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TransportationRateBreakMasterCode { get; private set; }
         public VocabularyKey BreakIntegerValue { get; private set; }
         public VocabularyKey BreakRealValue { get; private set; }
         public VocabularyKey BreakStringValue { get; private set; }
         public VocabularyKey BreakValue { get; private set; }
-
-
     }
 }

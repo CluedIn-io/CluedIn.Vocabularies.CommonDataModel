@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationRateBaseDetailEntityVocabulary()
         {
-            VocabularyName = "TMSTransportationRateBaseDetailEntity";
+            VocabularyName = "TMS Transportation Rate Base Detail Entity";
             KeyPrefix = "commonDataModel.tmstransportationratebasedetailentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationRateBaseDetailEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ShippingCarrierMinimumChargeRate = group.Add(new VocabularyKey(nameof(ShippingCarrierMinimumChargeRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ShippingCarrierBreakDefaultRate = group.Add(new VocabularyKey(nameof(ShippingCarrierBreakDefaultRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransportationRateBaseCode = group.Add(new VocabularyKey(nameof(TransportationRateBaseCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FirstField { get; private set; }
         public VocabularyKey SecondField { get; private set; }
         public VocabularyKey ThirdField { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ShippingCarrierMinimumChargeRate { get; private set; }
         public VocabularyKey ShippingCarrierBreakDefaultRate { get; private set; }
         public VocabularyKey TransportationRateBaseCode { get; private set; }
-
-
     }
 }

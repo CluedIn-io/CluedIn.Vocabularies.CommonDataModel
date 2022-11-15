@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPurchaseRequisitionRequestForQuotationControlPolicyRuleEntityVocabulary()
         {
-            VocabularyName = "PurchPurchaseRequisitionRequestForQuotationControlPolicyRuleEntity";
+            VocabularyName = "Purch Purchase Requisition Request For Quotation Control Policy Rule Entity";
             KeyPrefix = "commonDataModel.purchpurchaserequisitionrequestforquotationcontrolpolicyruleentity";
             KeySeparator = ".";
             Grouping = "/PurchPurchaseRequisitionRequestForQuotationControlPolicyRuleEntity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 InformalRFQRequirementRule = group.Add(new VocabularyKey(nameof(InformalRFQRequirementRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InformalRFQThresholdAmount = group.Add(new VocabularyKey(nameof(InformalRFQThresholdAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InformalRFQThresholdAmountCurrencyCode = group.Add(new VocabularyKey(nameof(InformalRFQThresholdAmountCurrencyCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Policy { get; private set; }
         public VocabularyKey PolicyRuleType { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey InformalRFQRequirementRule { get; private set; }
         public VocabularyKey InformalRFQThresholdAmount { get; private set; }
         public VocabularyKey InformalRFQThresholdAmountCurrencyCode { get; private set; }
-
-
     }
 }

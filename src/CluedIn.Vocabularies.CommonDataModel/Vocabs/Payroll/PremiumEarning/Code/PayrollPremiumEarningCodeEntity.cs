@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollPremiumEarningCodeEntityVocabulary()
         {
-            VocabularyName = "PayrollPremiumEarningCodeEntity";
+            VocabularyName = "Payroll Premium Earning Code Entity";
             KeyPrefix = "commonDataModel.payrollpremiumearningcodeentity";
             KeySeparator = ".";
             Grouping = "/PayrollPremiumEarningCodeEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PolicyRuleTypeId = group.Add(new VocabularyKey(nameof(PolicyRuleTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PolicyType = group.Add(new VocabularyKey(nameof(PolicyType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PolicyTypeId = group.Add(new VocabularyKey(nameof(PolicyTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CalculationFrequency { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey EarningCode { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PolicyRuleTypeId { get; private set; }
         public VocabularyKey PolicyType { get; private set; }
         public VocabularyKey PolicyTypeId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WorkflowStepEntityVocabulary()
         {
-            VocabularyName = "WorkflowStepEntity";
+            VocabularyName = "Workflow Step Entity";
             KeyPrefix = "commonDataModel.workflowstepentity";
             KeySeparator = ".";
             Grouping = "/WorkflowStepEntity";
@@ -70,10 +70,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 EscalationAction = group.Add(new VocabularyKey(nameof(EscalationAction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EscalationType = group.Add(new VocabularyKey(nameof(EscalationType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EscalationPathAction = group.Add(new VocabularyKey(nameof(EscalationPathAction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CompletionPolicy { get; private set; }
         public VocabularyKey CompletionPolicyPercentage { get; private set; }
         public VocabularyKey ElementId { get; private set; }
@@ -131,7 +129,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey EscalationAction { get; private set; }
         public VocabularyKey EscalationType { get; private set; }
         public VocabularyKey EscalationPathAction { get; private set; }
-
-
     }
 }

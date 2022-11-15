@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustInterestCodeWithRangeEntityVocabulary()
         {
-            VocabularyName = "CustInterestCodeWithRangeEntity";
+            VocabularyName = "Cust Interest Code With Range Entity";
             KeyPrefix = "commonDataModel.custinterestcodewithrangeentity";
             KeySeparator = ".";
             Grouping = "/CustInterestCodeWithRangeEntity";
@@ -39,10 +39,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FeeTaxItemGroup = group.Add(new VocabularyKey(nameof(FeeTaxItemGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RangeFromValue = group.Add(new VocabularyKey(nameof(RangeFromValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RangeInterestPct = group.Add(new VocabularyKey(nameof(RangeInterestPct), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InterestType { get; private set; }
         public VocabularyKey InterestCode { get; private set; }
         public VocabularyKey Description { get; private set; }
@@ -69,7 +67,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FeeTaxItemGroup { get; private set; }
         public VocabularyKey RangeFromValue { get; private set; }
         public VocabularyKey RangeInterestPct { get; private set; }
-
-
     }
 }

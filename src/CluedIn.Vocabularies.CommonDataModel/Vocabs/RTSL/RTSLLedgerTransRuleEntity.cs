@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RTSLLedgerTransRuleEntityVocabulary()
         {
-            VocabularyName = "RTSLLedgerTransRuleEntity";
+            VocabularyName = "RTSL Ledger Trans Rule Entity";
             KeyPrefix = "commonDataModel.rtslledgertransruleentity";
             KeySeparator = ".";
             Grouping = "/RTSLLedgerTransRuleEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MainAccount = group.Add(new VocabularyKey(nameof(MainAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OffsetAccount = group.Add(new VocabularyKey(nameof(OffsetAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ToAccount = group.Add(new VocabularyKey(nameof(ToAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Crediting { get; private set; }
         public VocabularyKey CurrencyRuleGroupId { get; private set; }
         public VocabularyKey DimensionRuleGroupId { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey MainAccount { get; private set; }
         public VocabularyKey OffsetAccount { get; private set; }
         public VocabularyKey ToAccount { get; private set; }
-
-
     }
 }

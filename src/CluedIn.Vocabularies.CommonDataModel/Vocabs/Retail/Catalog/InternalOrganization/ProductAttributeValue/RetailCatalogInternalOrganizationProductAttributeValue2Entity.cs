@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailCatalogInternalOrganizationProductAttributeValue2EntityVocabulary()
         {
-            VocabularyName = "RetailCatalogInternalOrganizationProductAttributeValue2Entity";
+            VocabularyName = "Retail Catalog Internal Organization Product Attribute Value 2 Entity";
             KeyPrefix = "commonDataModel.retailcataloginternalorganizationproductattributevalue2entity";
             KeySeparator = ".";
             Grouping = "/RetailCatalogInternalOrganizationProductAttributeValue2Entity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IntegerValue = group.Add(new VocabularyKey(nameof(IntegerValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IntegerUnitOfMeasureSymbol = group.Add(new VocabularyKey(nameof(IntegerUnitOfMeasureSymbol), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BooleanValue = group.Add(new VocabularyKey(nameof(BooleanValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CatalogNumber { get; private set; }
         public VocabularyKey InternalOrganizationPartyNumber { get; private set; }
         public VocabularyKey DisplayProductNumber { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IntegerValue { get; private set; }
         public VocabularyKey IntegerUnitOfMeasureSymbol { get; private set; }
         public VocabularyKey BooleanValue { get; private set; }
-
-
     }
 }

@@ -6,32 +6,28 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AppointmentEMRParticipantVocabulary()
         {
-            VocabularyName = "AppointmentEMRParticipant";
+            VocabularyName = "Appointment EMR Participant";
             KeyPrefix = "commonDataModel.appointmentemrparticipant";
             KeySeparator = ".";
             Grouping = "/AppointmentEMRParticipant";
 
             AddGroup("AppointmentEMRParticipant Details", group =>
             {
-                appointmentEMRParticipantId = group.Add(new VocabularyKey(nameof(appointmentEMRParticipantId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                participantActorType = group.Add(new VocabularyKey(nameof(participantActorType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                participationStatus = group.Add(new VocabularyKey(nameof(participationStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                required = group.Add(new VocabularyKey(nameof(required), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                AppointmentEMRParticipantId = group.Add(new VocabularyKey(nameof(AppointmentEMRParticipantId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ParticipantActorType = group.Add(new VocabularyKey(nameof(ParticipantActorType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ParticipationStatus = group.Add(new VocabularyKey(nameof(ParticipationStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Required = group.Add(new VocabularyKey(nameof(Required), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey appointmentEMRParticipantId { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey participantActorType { get; private set; }
-        public VocabularyKey participationStatus { get; private set; }
-        public VocabularyKey required { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey AppointmentEMRParticipantId { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey ParticipantActorType { get; private set; }
+        public VocabularyKey ParticipationStatus { get; private set; }
+        public VocabularyKey Required { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

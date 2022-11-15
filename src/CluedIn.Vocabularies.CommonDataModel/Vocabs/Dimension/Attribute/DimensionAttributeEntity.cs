@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DimensionAttributeEntityVocabulary()
         {
-            VocabularyName = "DimensionAttributeEntity";
+            VocabularyName = "Dimension Attribute Entity";
             KeyPrefix = "commonDataModel.dimensionattributeentity";
             KeySeparator = ".";
             Grouping = "/DimensionAttributeEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 GiveDerivedDimensionsPrecedence = group.Add(new VocabularyKey(nameof(GiveDerivedDimensionsPrecedence), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BalancingDimension_PSN = group.Add(new VocabularyKey(nameof(BalancingDimension_PSN), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsBalancing_PSN = group.Add(new VocabularyKey(nameof(IsBalancing_PSN), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DimensionName { get; private set; }
         public VocabularyKey ReportColumnName { get; private set; }
         public VocabularyKey ViewName { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey GiveDerivedDimensionsPrecedence { get; private set; }
         public VocabularyKey BalancingDimension_PSN { get; private set; }
         public VocabularyKey IsBalancing_PSN { get; private set; }
-
-
     }
 }

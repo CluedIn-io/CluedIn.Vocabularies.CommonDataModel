@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProductionJournalNameEntityVocabulary()
         {
-            VocabularyName = "ProductionJournalNameEntity";
+            VocabularyName = "Production Journal Name Entity";
             KeyPrefix = "commonDataModel.productionjournalnameentity";
             KeySeparator = ".";
             Grouping = "/ProductionJournalNameEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DefaultVoucherNumberSequenceCode = group.Add(new VocabularyKey(nameof(DefaultVoucherNumberSequenceCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultVoucherNumberSequenceRecId = group.Add(new VocabularyKey(nameof(DefaultVoucherNumberSequenceRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultVoucherNumberSequenceDataArea = group.Add(new VocabularyKey(nameof(DefaultVoucherNumberSequenceDataArea), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey VoucherSeqRecId { get; private set; }
         public VocabularyKey JournalNameId { get; private set; }
         public VocabularyKey JournalType { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DefaultVoucherNumberSequenceCode { get; private set; }
         public VocabularyKey DefaultVoucherNumberSequenceRecId { get; private set; }
         public VocabularyKey DefaultVoucherNumberSequenceDataArea { get; private set; }
-
-
     }
 }

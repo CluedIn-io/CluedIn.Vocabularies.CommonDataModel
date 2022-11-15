@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public NaturalResourcesTaxReportSetupEntityVocabulary()
         {
-            VocabularyName = "NaturalResourcesTaxReportSetupEntity";
+            VocabularyName = "Natural Resources Tax Report Setup Entity";
             KeyPrefix = "commonDataModel.naturalresourcestaxreportsetupentity";
             KeySeparator = ".";
             Grouping = "/NaturalResourcesTaxReportSetupEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SequenceNumber = group.Add(new VocabularyKey(nameof(SequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxCode = group.Add(new VocabularyKey(nameof(TaxCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TotalLineCode = group.Add(new VocabularyKey(nameof(TotalLineCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey FormNumber { get; private set; }
         public VocabularyKey LineCode { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SequenceNumber { get; private set; }
         public VocabularyKey TaxCode { get; private set; }
         public VocabularyKey TotalLineCode { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public UnitOfMeasureEntityVocabulary()
         {
-            VocabularyName = "UnitOfMeasureEntity";
+            VocabularyName = "Unit Of Measure Entity";
             KeyPrefix = "commonDataModel.unitofmeasureentity";
             KeySeparator = ".";
             Grouping = "/UnitOfMeasureEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BaseUnitClass = group.Add(new VocabularyKey(nameof(BaseUnitClass), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SystemUnitClass = group.Add(new VocabularyKey(nameof(SystemUnitClass), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NationalCode = group.Add(new VocabularyKey(nameof(NationalCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DecimalPrecision { get; private set; }
         public VocabularyKey UnitSymbol { get; private set; }
         public VocabularyKey SystemOfUnits { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey BaseUnitClass { get; private set; }
         public VocabularyKey SystemUnitClass { get; private set; }
         public VocabularyKey NationalCode { get; private set; }
-
-
     }
 }

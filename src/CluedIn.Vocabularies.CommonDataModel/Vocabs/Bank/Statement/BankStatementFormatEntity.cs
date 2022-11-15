@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankStatementFormatEntityVocabulary()
         {
-            VocabularyName = "BankStatementFormatEntity";
+            VocabularyName = "Bank Statement Format Entity";
             KeyPrefix = "commonDataModel.bankstatementformatentity";
             KeySeparator = ".";
             Grouping = "/BankStatementFormatEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DMFDefinitionGroupName = group.Add(new VocabularyKey(nameof(DMFDefinitionGroupName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UseGERConfiguration = group.Add(new VocabularyKey(nameof(UseGERConfiguration), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ERModelMappingTable = group.Add(new VocabularyKey(nameof(ERModelMappingTable), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FileType { get; private set; }
         public VocabularyKey FromatId { get; private set; }
         public VocabularyKey XMLFile { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DMFDefinitionGroupName { get; private set; }
         public VocabularyKey UseGERConfiguration { get; private set; }
         public VocabularyKey ERModelMappingTable { get; private set; }
-
-
     }
 }

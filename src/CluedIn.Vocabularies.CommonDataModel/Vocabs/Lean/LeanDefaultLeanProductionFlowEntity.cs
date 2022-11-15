@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LeanDefaultLeanProductionFlowEntityVocabulary()
         {
-            VocabularyName = "LeanDefaultLeanProductionFlowEntity";
+            VocabularyName = "Lean Default Lean Production Flow Entity";
             KeyPrefix = "commonDataModel.leandefaultleanproductionflowentity";
             KeySeparator = ".";
             Grouping = "/LeanDefaultLeanProductionFlowEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ItemNumber = group.Add(new VocabularyKey(nameof(ItemNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OperationalSiteId = group.Add(new VocabularyKey(nameof(OperationalSiteId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LeanProductionFlowName = group.Add(new VocabularyKey(nameof(LeanProductionFlowName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LeanProductionFlowReference_PlanReference { get; private set; }
         public VocabularyKey LeanProductionFlowReference { get; private set; }
         public VocabularyKey ItemNumber { get; private set; }
         public VocabularyKey OperationalSiteId { get; private set; }
         public VocabularyKey LeanProductionFlowName { get; private set; }
-
-
     }
 }

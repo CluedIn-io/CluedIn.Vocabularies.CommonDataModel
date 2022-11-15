@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TransportationDocumentEntityVocabulary()
         {
-            VocabularyName = "TransportationDocumentEntity";
+            VocabularyName = "Transportation Document Entity";
             KeyPrefix = "commonDataModel.transportationdocumententity";
             KeySeparator = ".";
             Grouping = "/TransportationDocumentEntity";
@@ -71,10 +71,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DriverName = group.Add(new VocabularyKey(nameof(DriverName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DriverPersonnelNumber = group.Add(new VocabularyKey(nameof(DriverPersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VehicleModel = group.Add(new VocabularyKey(nameof(VehicleModel), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Carrier { get; private set; }
         public VocabularyKey CarrierType { get; private set; }
         public VocabularyKey DocumentDateTime { get; private set; }
@@ -133,7 +131,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DriverName { get; private set; }
         public VocabularyKey DriverPersonnelNumber { get; private set; }
         public VocabularyKey VehicleModel { get; private set; }
-
-
     }
 }

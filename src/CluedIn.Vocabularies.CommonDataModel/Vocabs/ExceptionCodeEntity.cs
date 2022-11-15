@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ExceptionCodeEntityVocabulary()
         {
-            VocabularyName = "ExceptionCodeEntity";
+            VocabularyName = "Exception Code Entity";
             KeyPrefix = "commonDataModel.exceptioncodeentity";
             KeySeparator = ".";
             Grouping = "/ExceptionCodeEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FiscalClassificationId = group.Add(new VocabularyKey(nameof(FiscalClassificationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FiscalClassificationCode = group.Add(new VocabularyKey(nameof(FiscalClassificationCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ApproximateTaxRateForImportedProducts { get; private set; }
         public VocabularyKey ApproximateTaxRateForNationalProducts { get; private set; }
         public VocabularyKey ExceptionCode { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey FiscalClassificationId { get; private set; }
         public VocabularyKey FiscalClassificationCode { get; private set; }
-
-
     }
 }

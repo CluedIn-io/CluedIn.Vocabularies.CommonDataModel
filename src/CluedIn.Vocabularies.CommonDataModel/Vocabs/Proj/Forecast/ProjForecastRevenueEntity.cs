@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjForecastRevenueEntityVocabulary()
         {
-            VocabularyName = "ProjForecastRevenueEntity";
+            VocabularyName = "Proj Forecast Revenue Entity";
             KeyPrefix = "commonDataModel.projforecastrevenueentity";
             KeySeparator = ".";
             Grouping = "/ProjForecastRevenueEntity";
@@ -45,10 +45,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FundingSourceID = group.Add(new VocabularyKey(nameof(FundingSourceID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ResourceCategory = group.Add(new VocabularyKey(nameof(ResourceCategory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ResourceCategoryId = group.Add(new VocabularyKey(nameof(ResourceCategoryId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Active { get; private set; }
         public VocabularyKey ActivityNumber { get; private set; }
         public VocabularyKey Method { get; private set; }
@@ -81,7 +79,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FundingSourceID { get; private set; }
         public VocabularyKey ResourceCategory { get; private set; }
         public VocabularyKey ResourceCategoryId { get; private set; }
-
-
     }
 }

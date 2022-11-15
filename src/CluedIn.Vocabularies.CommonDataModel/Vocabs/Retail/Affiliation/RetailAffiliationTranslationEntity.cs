@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailAffiliationTranslationEntityVocabulary()
         {
-            VocabularyName = "RetailAffiliationTranslationEntity";
+            VocabularyName = "Retail Affiliation Translation Entity";
             KeyPrefix = "commonDataModel.retailaffiliationtranslationentity";
             KeySeparator = ".";
             Grouping = "/RetailAffiliationTranslationEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LanguageId = group.Add(new VocabularyKey(nameof(LanguageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AffiliationName = group.Add(new VocabularyKey(nameof(AffiliationName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Affiliation { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey LanguageId { get; private set; }
         public VocabularyKey AffiliationName { get; private set; }
-
-
     }
 }

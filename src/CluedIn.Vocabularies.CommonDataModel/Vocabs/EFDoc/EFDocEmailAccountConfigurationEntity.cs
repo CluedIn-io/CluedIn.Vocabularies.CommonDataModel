@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EFDocEmailAccountConfigurationEntityVocabulary()
         {
-            VocabularyName = "EFDocEmailAccountConfigurationEntity";
+            VocabularyName = "EF Doc Email Account Configuration Entity";
             KeyPrefix = "commonDataModel.efdocemailaccountconfigurationentity";
             KeySeparator = ".";
             Grouping = "/EFDocEmailAccountConfigurationEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Port = group.Add(new VocabularyKey(nameof(Port), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UseSsl = group.Add(new VocabularyKey(nameof(UseSsl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Username = group.Add(new VocabularyKey(nameof(Username), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ServerAddress { get; private set; }
         public VocabularyKey Port { get; private set; }
         public VocabularyKey UseSsl { get; private set; }
         public VocabularyKey Username { get; private set; }
-
-
     }
 }

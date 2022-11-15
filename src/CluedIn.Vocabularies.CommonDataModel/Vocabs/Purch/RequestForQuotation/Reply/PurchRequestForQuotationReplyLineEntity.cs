@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchRequestForQuotationReplyLineEntityVocabulary()
         {
-            VocabularyName = "PurchRequestForQuotationReplyLineEntity";
+            VocabularyName = "Purch Request For Quotation Reply Line Entity";
             KeyPrefix = "commonDataModel.purchrequestforquotationreplylineentity";
             KeySeparator = ".";
             Grouping = "/PurchRequestForQuotationReplyLineEntity";
@@ -107,10 +107,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProcurementLeadTimeDays = group.Add(new VocabularyKey(nameof(ProcurementLeadTimeDays), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorAccountNumber = group.Add(new VocabularyKey(nameof(VendorAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsDeliveryAddressOrderSpecific = group.Add(new VocabularyKey(nameof(IsDeliveryAddressOrderSpecific), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProjectSalesCurrencyCode { get; private set; }
         public VocabularyKey ProjectActivityNumber { get; private set; }
         public VocabularyKey ResultingPurchaseAgreementId { get; private set; }
@@ -205,7 +203,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProcurementLeadTimeDays { get; private set; }
         public VocabularyKey VendorAccountNumber { get; private set; }
         public VocabularyKey IsDeliveryAddressOrderSpecific { get; private set; }
-
-
     }
 }

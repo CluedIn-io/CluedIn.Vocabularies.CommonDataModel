@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendorPaymentFormatEntityVocabulary()
         {
-            VocabularyName = "VendorPaymentFormatEntity";
+            VocabularyName = "Vendor Payment Format Entity";
             KeyPrefix = "commonDataModel.vendorpaymentformatentity";
             KeySeparator = ".";
             Grouping = "/VendorPaymentFormatEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ClassId = group.Add(new VocabularyKey(nameof(ClassId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ClassName = group.Add(new VocabularyKey(nameof(ClassName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Type { get; private set; }
         public VocabularyKey ClassId { get; private set; }
         public VocabularyKey ClassName { get; private set; }
         public VocabularyKey Name { get; private set; }
-
-
     }
 }

@@ -2,16 +2,16 @@ using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 {
-    public class smmActivitiesForCDSCasesEntityVocabulary : SimpleVocabulary
+    public class SmmActivitiesForCDSCasesEntityVocabulary : SimpleVocabulary
     {
-        public smmActivitiesForCDSCasesEntityVocabulary()
+        public SmmActivitiesForCDSCasesEntityVocabulary()
         {
-            VocabularyName = "smmActivitiesForCDSCasesEntity";
+            VocabularyName = "Smm Activities For CDS Cases Entity";
             KeyPrefix = "commonDataModel.smmactivitiesforcdscasesentity";
             KeySeparator = ".";
-            Grouping = "/smmActivitiesForCDSCasesEntity";
+            Grouping = "/SmmActivitiesForCDSCasesEntity";
 
-            AddGroup("smmActivitiesForCDSCasesEntity Details", group =>
+            AddGroup("SmmActivitiesForCDSCasesEntity Details", group =>
             {
                 ActivityNumber = group.Add(new VocabularyKey(nameof(ActivityNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ActivityStatus = group.Add(new VocabularyKey(nameof(ActivityStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
@@ -59,10 +59,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Template = group.Add(new VocabularyKey(nameof(Template), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TotalWork = group.Add(new VocabularyKey(nameof(TotalWork), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TypeId = group.Add(new VocabularyKey(nameof(TypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ActivityNumber { get; private set; }
         public VocabularyKey ActivityStatus { get; private set; }
         public VocabularyKey ActualWork { get; private set; }
@@ -109,7 +107,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Template { get; private set; }
         public VocabularyKey TotalWork { get; private set; }
         public VocabularyKey TypeId { get; private set; }
-
-
     }
 }

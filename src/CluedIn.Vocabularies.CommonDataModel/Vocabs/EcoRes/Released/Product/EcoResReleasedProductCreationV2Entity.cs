@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResReleasedProductCreationV2EntityVocabulary()
         {
-            VocabularyName = "EcoResReleasedProductCreationV2Entity";
+            VocabularyName = "Eco Res Released Product Creation V2 Entity";
             KeyPrefix = "commonDataModel.ecoresreleasedproductcreationv2entity";
             KeySeparator = ".";
             Grouping = "/EcoResReleasedProductCreationV2Entity";
@@ -43,10 +43,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WarrantablePriceRangeBaseType = group.Add(new VocabularyKey(nameof(WarrantablePriceRangeBaseType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LowerWarrantablePriceRangeLimit = group.Add(new VocabularyKey(nameof(LowerWarrantablePriceRangeLimit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UpperWarrantablePriceRangeLimit = group.Add(new VocabularyKey(nameof(UpperWarrantablePriceRangeLimit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ItemNumber { get; private set; }
         public VocabularyKey ProductType { get; private set; }
         public VocabularyKey ProductSubType { get; private set; }
@@ -77,7 +75,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WarrantablePriceRangeBaseType { get; private set; }
         public VocabularyKey LowerWarrantablePriceRangeLimit { get; private set; }
         public VocabularyKey UpperWarrantablePriceRangeLimit { get; private set; }
-
-
     }
 }

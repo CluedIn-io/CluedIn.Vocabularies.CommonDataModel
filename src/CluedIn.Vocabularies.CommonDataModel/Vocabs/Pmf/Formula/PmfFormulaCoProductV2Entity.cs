@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PmfFormulaCoProductV2EntityVocabulary()
         {
-            VocabularyName = "PmfFormulaCoProductV2Entity";
+            VocabularyName = "Pmf Formula Co Product V2 Entity";
             KeyPrefix = "commonDataModel.pmfformulacoproductv2entity";
             KeySeparator = ".";
             Grouping = "/PmfFormulaCoProductV2Entity";
@@ -42,10 +42,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CoProductFormulaId = group.Add(new VocabularyKey(nameof(CoProductFormulaId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CostAllocationMethod = group.Add(new VocabularyKey(nameof(CostAllocationMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CostAllocationPercentage = group.Add(new VocabularyKey(nameof(CostAllocationPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FormulaId { get; private set; }
         public VocabularyKey Quantity { get; private set; }
         public VocabularyKey QuantityDenominator { get; private set; }
@@ -75,7 +73,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CoProductFormulaId { get; private set; }
         public VocabularyKey CostAllocationMethod { get; private set; }
         public VocabularyKey CostAllocationPercentage { get; private set; }
-
-
     }
 }

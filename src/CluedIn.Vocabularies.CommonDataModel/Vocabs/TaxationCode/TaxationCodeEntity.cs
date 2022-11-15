@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxationCodeEntityVocabulary()
         {
-            VocabularyName = "TaxationCodeEntity";
+            VocabularyName = "Taxation Code Entity";
             KeyPrefix = "commonDataModel.taxationcodeentity";
             KeySeparator = ".";
             Grouping = "/TaxationCodeEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TaxationCode = group.Add(new VocabularyKey(nameof(TaxationCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxType = group.Add(new VocabularyKey(nameof(TaxType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ToDate = group.Add(new VocabularyKey(nameof(ToDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SpedCode { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey FiscalValue { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TaxationCode { get; private set; }
         public VocabularyKey TaxType { get; private set; }
         public VocabularyKey ToDate { get; private set; }
-
-
     }
 }

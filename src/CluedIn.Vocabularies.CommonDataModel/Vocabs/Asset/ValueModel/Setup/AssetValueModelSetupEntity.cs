@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetValueModelSetupEntityVocabulary()
         {
-            VocabularyName = "AssetValueModelSetupEntity";
+            VocabularyName = "Asset Value Model Setup Entity";
             KeyPrefix = "commonDataModel.assetvaluemodelsetupentity";
             KeySeparator = ".";
             Grouping = "/AssetValueModelSetupEntity";
@@ -38,10 +38,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsDepreciationRequiredInDisposal = group.Add(new VocabularyKey(nameof(IsDepreciationRequiredInDisposal), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExpectedScrapPercentage = group.Add(new VocabularyKey(nameof(ExpectedScrapPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RoundOffDepreciationReportingCurrency = group.Add(new VocabularyKey(nameof(RoundOffDepreciationReportingCurrency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AllowNegativeNetBookValue { get; private set; }
         public VocabularyKey AllowNetBookValueHigherThanAcquisitionCosts { get; private set; }
         public VocabularyKey AlternativeDepreciationProfileId { get; private set; }
@@ -67,7 +65,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsDepreciationRequiredInDisposal { get; private set; }
         public VocabularyKey ExpectedScrapPercentage { get; private set; }
         public VocabularyKey RoundOffDepreciationReportingCurrency { get; private set; }
-
-
     }
 }

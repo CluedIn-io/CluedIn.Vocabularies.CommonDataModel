@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetAllocationRuleLineEntityVocabulary()
         {
-            VocabularyName = "AssetAllocationRuleLineEntity";
+            VocabularyName = "Asset Allocation Rule Line Entity";
             KeyPrefix = "commonDataModel.assetallocationrulelineentity";
             KeySeparator = ".";
             Grouping = "/AssetAllocationRuleLineEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Percentage = group.Add(new VocabularyKey(nameof(Percentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OffsetMainAccount = group.Add(new VocabularyKey(nameof(OffsetMainAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OffsetMainAccountDisplayValue = group.Add(new VocabularyKey(nameof(OffsetMainAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AllocationRule { get; private set; }
         public VocabularyKey LineId { get; private set; }
         public VocabularyKey RuleId { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Percentage { get; private set; }
         public VocabularyKey OffsetMainAccount { get; private set; }
         public VocabularyKey OffsetMainAccountDisplayValue { get; private set; }
-
-
     }
 }

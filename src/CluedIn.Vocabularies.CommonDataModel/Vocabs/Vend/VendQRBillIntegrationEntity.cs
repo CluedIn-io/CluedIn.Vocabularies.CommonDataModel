@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendQRBillIntegrationEntityVocabulary()
         {
-            VocabularyName = "VendQRBillIntegrationEntity";
+            VocabularyName = "Vend QR Bill Integration Entity";
             KeyPrefix = "commonDataModel.vendqrbillintegrationentity";
             KeySeparator = ".";
             Grouping = "/VendQRBillIntegrationEntity";
@@ -43,10 +43,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TaxGroup = group.Add(new VocabularyKey(nameof(TaxGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxItemGroup = group.Add(new VocabularyKey(nameof(TaxItemGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorBankAccount = group.Add(new VocabularyKey(nameof(VendorBankAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey VendorAccount { get; private set; }
         public VocabularyKey AmountInTransactionCurrency { get; private set; }
         public VocabularyKey Currency { get; private set; }
@@ -77,7 +75,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TaxGroup { get; private set; }
         public VocabularyKey TaxItemGroup { get; private set; }
         public VocabularyKey VendorBankAccount { get; private set; }
-
-
     }
 }

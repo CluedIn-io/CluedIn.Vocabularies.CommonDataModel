@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventTransferOrderHeaderEntityVocabulary()
         {
-            VocabularyName = "InventTransferOrderHeaderEntity";
+            VocabularyName = "Invent Transfer Order Header Entity";
             KeyPrefix = "commonDataModel.inventtransferorderheaderentity";
             KeySeparator = ".";
             Grouping = "/InventTransferOrderHeaderEntity";
@@ -95,10 +95,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ShippingCarrierServiceGroupId = group.Add(new VocabularyKey(nameof(ShippingCarrierServiceGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ShippingCarrierServiceId = group.Add(new VocabularyKey(nameof(ShippingCarrierServiceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransportationModeId = group.Add(new VocabularyKey(nameof(TransportationModeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ATPDelayedDemandOffsetDays { get; private set; }
         public VocabularyKey ATPDelayedSupplyOffsetDays { get; private set; }
         public VocabularyKey ATPBackwardDemandTimeFenceDays { get; private set; }
@@ -181,7 +179,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ShippingCarrierServiceGroupId { get; private set; }
         public VocabularyKey ShippingCarrierServiceId { get; private set; }
         public VocabularyKey TransportationModeId { get; private set; }
-
-
     }
 }

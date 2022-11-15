@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public IntrastatTransactionCodeEntityVocabulary()
         {
-            VocabularyName = "IntrastatTransactionCodeEntity";
+            VocabularyName = "Intrastat Transaction Code Entity";
             KeyPrefix = "commonDataModel.intrastattransactioncodeentity";
             KeySeparator = ".";
             Grouping = "/IntrastatTransactionCodeEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 StatisticalAmountCalcMethod = group.Add(new VocabularyKey(nameof(StatisticalAmountCalcMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StatisticalAmount = group.Add(new VocabularyKey(nameof(StatisticalAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IndirectTrade = group.Add(new VocabularyKey(nameof(IndirectTrade), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TransactionCode { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey TransferOrderAmountValueType { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey StatisticalAmountCalcMethod { get; private set; }
         public VocabularyKey StatisticalAmount { get; private set; }
         public VocabularyKey IndirectTrade { get; private set; }
-
-
     }
 }

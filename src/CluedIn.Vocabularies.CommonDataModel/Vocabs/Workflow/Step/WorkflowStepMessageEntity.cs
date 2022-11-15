@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WorkflowStepMessageEntityVocabulary()
         {
-            VocabularyName = "WorkflowStepMessageEntity";
+            VocabularyName = "Workflow Step Message Entity";
             KeyPrefix = "commonDataModel.workflowstepmessageentity";
             KeySeparator = ".";
             Grouping = "/WorkflowStepMessageEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Text = group.Add(new VocabularyKey(nameof(Text), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StepId = group.Add(new VocabularyKey(nameof(StepId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LanguageId { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey Text { get; private set; }
         public VocabularyKey StepId { get; private set; }
-
-
     }
 }

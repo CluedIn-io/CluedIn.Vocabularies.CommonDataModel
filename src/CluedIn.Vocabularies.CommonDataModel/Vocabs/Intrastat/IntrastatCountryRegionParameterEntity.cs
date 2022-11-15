@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public IntrastatCountryRegionParameterEntityVocabulary()
         {
-            VocabularyName = "IntrastatCountryRegionParameterEntity";
+            VocabularyName = "Intrastat Country Region Parameter Entity";
             KeyPrefix = "commonDataModel.intrastatcountryregionparameterentity";
             KeySeparator = ".";
             Grouping = "/IntrastatCountryRegionParameterEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IntrastatCode = group.Add(new VocabularyKey(nameof(IntrastatCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BlackListedCountry = group.Add(new VocabularyKey(nameof(BlackListedCountry), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CountryThreeDigitCode = group.Add(new VocabularyKey(nameof(CountryThreeDigitCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CountryRegionId { get; private set; }
         public VocabularyKey CountryRegionType { get; private set; }
         public VocabularyKey Currency { get; private set; }
         public VocabularyKey IntrastatCode { get; private set; }
         public VocabularyKey BlackListedCountry { get; private set; }
         public VocabularyKey CountryThreeDigitCode { get; private set; }
-
-
     }
 }

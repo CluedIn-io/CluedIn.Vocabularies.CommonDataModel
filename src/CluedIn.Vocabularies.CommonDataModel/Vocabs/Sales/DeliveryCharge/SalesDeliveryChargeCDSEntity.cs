@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesDeliveryChargeCDSEntityVocabulary()
         {
-            VocabularyName = "SalesDeliveryChargeCDSEntity";
+            VocabularyName = "Sales Delivery Charge CDS Entity";
             KeyPrefix = "commonDataModel.salesdeliverychargecdsentity";
             KeySeparator = ".";
             Grouping = "/SalesDeliveryChargeCDSEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WillSalesInvoicingProrateChargeAmounts = group.Add(new VocabularyKey(nameof(WillSalesInvoicingProrateChargeAmounts), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LedgerName = group.Add(new VocabularyKey(nameof(LedgerName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ChartOfAccountsName = group.Add(new VocabularyKey(nameof(ChartOfAccountsName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ChargeClassification { get; private set; }
         public VocabularyKey ChargeCode { get; private set; }
         public VocabularyKey ChargeDescription { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WillSalesInvoicingProrateChargeAmounts { get; private set; }
         public VocabularyKey LedgerName { get; private set; }
         public VocabularyKey ChartOfAccountsName { get; private set; }
-
-
     }
 }

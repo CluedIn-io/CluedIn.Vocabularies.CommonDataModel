@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRBrokerDifferentialReasonCodeEntityVocabulary()
         {
-            VocabularyName = "MCRBrokerDifferentialReasonCodeEntity";
+            VocabularyName = "MCR Broker Differential Reason Code Entity";
             KeyPrefix = "commonDataModel.mcrbrokerdifferentialreasoncodeentity";
             KeySeparator = ".";
             Grouping = "/MCRBrokerDifferentialReasonCodeEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ReasonCode = group.Add(new VocabularyKey(nameof(ReasonCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WriteOffMainAccountId = group.Add(new VocabularyKey(nameof(WriteOffMainAccountId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WriteOffMainAccountIdDisplayValue = group.Add(new VocabularyKey(nameof(WriteOffMainAccountIdDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ReasonDescription { get; private set; }
         public VocabularyKey ReasonCode { get; private set; }
         public VocabularyKey WriteOffMainAccountId { get; private set; }
         public VocabularyKey WriteOffMainAccountIdDisplayValue { get; private set; }
-
-
     }
 }

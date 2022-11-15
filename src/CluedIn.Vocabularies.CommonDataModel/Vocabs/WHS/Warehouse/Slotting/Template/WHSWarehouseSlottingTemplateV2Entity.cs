@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseSlottingTemplateV2EntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseSlottingTemplateV2Entity";
+            VocabularyName = "WHS Warehouse Slotting Template V2 Entity";
             KeyPrefix = "commonDataModel.whswarehouseslottingtemplatev2entity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseSlottingTemplateV2Entity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TemplateId = group.Add(new VocabularyKey(nameof(TemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillCreatedReplenishmentWorkAllowUsingUnreservedQuantities = group.Add(new VocabularyKey(nameof(WillCreatedReplenishmentWorkAllowUsingUnreservedQuantities), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TemplateQuery = group.Add(new VocabularyKey(nameof(TemplateQuery), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WarehouseId { get; private set; }
         public VocabularyKey TemplateDescription { get; private set; }
         public VocabularyKey SlottingStrategy { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TemplateId { get; private set; }
         public VocabularyKey WillCreatedReplenishmentWorkAllowUsingUnreservedQuantities { get; private set; }
         public VocabularyKey TemplateQuery { get; private set; }
-
-
     }
 }

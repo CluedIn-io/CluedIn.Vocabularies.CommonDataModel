@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventInventoryProfileRelationEntityVocabulary()
         {
-            VocabularyName = "InventInventoryProfileRelationEntity";
+            VocabularyName = "Invent Inventory Profile Relation Entity";
             KeyPrefix = "commonDataModel.inventinventoryprofilerelationentity";
             KeySeparator = ".";
             Grouping = "/InventInventoryProfileRelationEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 InventoryProfileId = group.Add(new VocabularyKey(nameof(InventoryProfileId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CompatibleInventoryProfileId = group.Add(new VocabularyKey(nameof(CompatibleInventoryProfileId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MatchingPriority = group.Add(new VocabularyKey(nameof(MatchingPriority), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InventoryProfileId { get; private set; }
         public VocabularyKey CompatibleInventoryProfileId { get; private set; }
         public VocabularyKey MatchingPriority { get; private set; }
-
-
     }
 }

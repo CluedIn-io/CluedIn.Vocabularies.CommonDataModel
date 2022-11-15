@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RTax25StdSeqEntityVocabulary()
         {
-            VocabularyName = "RTax25StdSeqEntity";
+            VocabularyName = "R Tax 25 Std Seq Entity";
             KeyPrefix = "commonDataModel.rtax25stdseqentity";
             KeySeparator = ".";
             Grouping = "/RTax25StdSeqEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AppliedModule = group.Add(new VocabularyKey(nameof(AppliedModule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Sequence = group.Add(new VocabularyKey(nameof(Sequence), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ChannelReference { get; private set; }
         public VocabularyKey Channel { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey AppliedModule { get; private set; }
         public VocabularyKey Sequence { get; private set; }
-
-
     }
 }

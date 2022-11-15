@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerRRGCellTable_RUEntityVocabulary()
         {
-            VocabularyName = "LedgerRRGCellTable_RUEntity";
+            VocabularyName = "Ledger RRG Cell Table _RU Entity";
             KeyPrefix = "commonDataModel.ledgerrrgcelltable_ruentity";
             KeySeparator = ".";
             Grouping = "/LedgerRRGCellTable_RUEntity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TypeByCorrect = group.Add(new VocabularyKey(nameof(TypeByCorrect), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RepCode = group.Add(new VocabularyKey(nameof(RepCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineId = group.Add(new VocabularyKey(nameof(LineId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Alignment { get; private set; }
         public VocabularyKey CellCode { get; private set; }
         public VocabularyKey DataType { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TypeByCorrect { get; private set; }
         public VocabularyKey RepCode { get; private set; }
         public VocabularyKey LineId { get; private set; }
-
-
     }
 }

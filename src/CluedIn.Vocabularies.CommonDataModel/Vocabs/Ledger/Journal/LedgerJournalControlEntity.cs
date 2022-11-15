@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerJournalControlEntityVocabulary()
         {
-            VocabularyName = "LedgerJournalControlEntity";
+            VocabularyName = "Ledger Journal Control Entity";
             KeyPrefix = "commonDataModel.ledgerjournalcontrolentity";
             KeySeparator = ".";
             Grouping = "/LedgerJournalControlEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FromValue = group.Add(new VocabularyKey(nameof(FromValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ToValue = group.Add(new VocabularyKey(nameof(ToValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Segment = group.Add(new VocabularyKey(nameof(Segment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountType { get; private set; }
         public VocabularyKey JournalLegalEntity { get; private set; }
         public VocabularyKey JournalName { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FromValue { get; private set; }
         public VocabularyKey ToValue { get; private set; }
         public VocabularyKey Segment { get; private set; }
-
-
     }
 }

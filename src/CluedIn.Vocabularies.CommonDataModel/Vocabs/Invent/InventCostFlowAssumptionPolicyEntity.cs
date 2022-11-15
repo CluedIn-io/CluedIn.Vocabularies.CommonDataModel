@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventCostFlowAssumptionPolicyEntityVocabulary()
         {
-            VocabularyName = "InventCostFlowAssumptionPolicyEntity";
+            VocabularyName = "Invent Cost Flow Assumption Policy Entity";
             KeyPrefix = "commonDataModel.inventcostflowassumptionpolicyentity";
             KeySeparator = ".";
             Grouping = "/InventCostFlowAssumptionPolicyEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsFinancialInventoryPosted = group.Add(new VocabularyKey(nameof(IsFinancialInventoryPosted), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillSalesDeliveryProcessPostDeferredRevenue = group.Add(new VocabularyKey(nameof(WillSalesDeliveryProcessPostDeferredRevenue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillProductReceiptProcessingAccrueLiability = group.Add(new VocabularyKey(nameof(WillProductReceiptProcessingAccrueLiability), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PolicyId { get; private set; }
         public VocabularyKey PolicyName { get; private set; }
         public VocabularyKey IsStockedProduct { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsFinancialInventoryPosted { get; private set; }
         public VocabularyKey WillSalesDeliveryProcessPostDeferredRevenue { get; private set; }
         public VocabularyKey WillProductReceiptProcessingAccrueLiability { get; private set; }
-
-
     }
 }

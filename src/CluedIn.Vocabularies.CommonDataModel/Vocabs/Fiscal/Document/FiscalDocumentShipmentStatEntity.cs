@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FiscalDocumentShipmentStatEntityVocabulary()
         {
-            VocabularyName = "FiscalDocumentShipmentStatEntity";
+            VocabularyName = "Fiscal Document Shipment Stat Entity";
             KeyPrefix = "commonDataModel.fiscaldocumentshipmentstatentity";
             KeySeparator = ".";
             Grouping = "/FiscalDocumentShipmentStatEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 NetWeight = group.Add(new VocabularyKey(nameof(NetWeight), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VolumeQuantity = group.Add(new VocabularyKey(nameof(VolumeQuantity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VolumeType = group.Add(new VocabularyKey(nameof(VolumeType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FiscalDocument { get; private set; }
         public VocabularyKey FiscalDocumentDirection { get; private set; }
         public VocabularyKey FiscalDocumentFiscalEstablishmentId { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey NetWeight { get; private set; }
         public VocabularyKey VolumeQuantity { get; private set; }
         public VocabularyKey VolumeType { get; private set; }
-
-
     }
 }

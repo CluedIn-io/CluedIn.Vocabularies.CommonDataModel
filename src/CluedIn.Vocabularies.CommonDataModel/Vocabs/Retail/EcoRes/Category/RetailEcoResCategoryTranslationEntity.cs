@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailEcoResCategoryTranslationEntityVocabulary()
         {
-            VocabularyName = "RetailEcoResCategoryTranslationEntity";
+            VocabularyName = "Retail Eco Res Category Translation Entity";
             KeyPrefix = "commonDataModel.retailecorescategorytranslationentity";
             KeySeparator = ".";
             Grouping = "/RetailEcoResCategoryTranslationEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 EcoResCategory_CategoryHierarchy = group.Add(new VocabularyKey(nameof(EcoResCategory_CategoryHierarchy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EcoResCategory_Name = group.Add(new VocabularyKey(nameof(EcoResCategory_Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EcoResCategoryHierarchy_Name = group.Add(new VocabularyKey(nameof(EcoResCategoryHierarchy_Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Category { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey FriendlyName { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey EcoResCategory_CategoryHierarchy { get; private set; }
         public VocabularyKey EcoResCategory_Name { get; private set; }
         public VocabularyKey EcoResCategoryHierarchy_Name { get; private set; }
-
-
     }
 }

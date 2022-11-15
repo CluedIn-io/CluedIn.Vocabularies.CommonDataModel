@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailSalesTaxOverrideEntityVocabulary()
         {
-            VocabularyName = "RetailSalesTaxOverrideEntity";
+            VocabularyName = "Retail Sales Tax Override Entity";
             KeyPrefix = "commonDataModel.retailsalestaxoverrideentity";
             KeySeparator = ".";
             Grouping = "/RetailSalesTaxOverrideEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OverrideTo = group.Add(new VocabularyKey(nameof(OverrideTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OverrideType = group.Add(new VocabularyKey(nameof(OverrideType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Status = group.Add(new VocabularyKey(nameof(Status), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SourceTaxGroup { get; private set; }
         public VocabularyKey SourceItemTaxGroup { get; private set; }
         public VocabularyKey AdditionalDescription { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OverrideTo { get; private set; }
         public VocabularyKey OverrideType { get; private set; }
         public VocabularyKey Status { get; private set; }
-
-
     }
 }

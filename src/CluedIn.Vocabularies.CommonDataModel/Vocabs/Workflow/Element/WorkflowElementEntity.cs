@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WorkflowElementEntityVocabulary()
         {
-            VocabularyName = "WorkflowElementEntity";
+            VocabularyName = "Workflow Element Entity";
             KeyPrefix = "commonDataModel.workflowelemententity";
             KeySeparator = ".";
             Grouping = "/WorkflowElementEntity";
@@ -69,10 +69,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MaximumRuntimeYearlyDayOfWeek = group.Add(new VocabularyKey(nameof(MaximumRuntimeYearlyDayOfWeek), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MaximumRuntimeYearlyMonthInYear = group.Add(new VocabularyKey(nameof(MaximumRuntimeYearlyMonthInYear), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MaximumRuntimeYearlyWeekInMonth = group.Add(new VocabularyKey(nameof(MaximumRuntimeYearlyWeekInMonth), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ConditionId { get; private set; }
         public VocabularyKey AutoCompleteAction { get; private set; }
         public VocabularyKey AutoCompleteConditionId { get; private set; }
@@ -129,7 +127,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey MaximumRuntimeYearlyDayOfWeek { get; private set; }
         public VocabularyKey MaximumRuntimeYearlyMonthInYear { get; private set; }
         public VocabularyKey MaximumRuntimeYearlyWeekInMonth { get; private set; }
-
-
     }
 }

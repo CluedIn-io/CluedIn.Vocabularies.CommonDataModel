@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EFDocReturnCodeEntityVocabulary()
         {
-            VocabularyName = "EFDocReturnCodeEntity";
+            VocabularyName = "EF Doc Return Code Entity";
             KeyPrefix = "commonDataModel.efdocreturncodeentity";
             KeySeparator = ".";
             Grouping = "/EFDocReturnCodeEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MessageType = group.Add(new VocabularyKey(nameof(MessageType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReturnCode = group.Add(new VocabularyKey(nameof(ReturnCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FiscalDocumentStatus = group.Add(new VocabularyKey(nameof(FiscalDocumentStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey MessageType { get; private set; }
         public VocabularyKey ReturnCode { get; private set; }
         public VocabularyKey FiscalDocumentStatus { get; private set; }
-
-
     }
 }

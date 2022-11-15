@@ -6,52 +6,48 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EventMainBusinessProcessFlowVocabulary()
         {
-            VocabularyName = "EventMainBusinessProcessFlow";
+            VocabularyName = "Event Main Business Process Flow";
             KeyPrefix = "commonDataModel.eventmainbusinessprocessflow";
             KeySeparator = ".";
             Grouping = "/EventMainBusinessProcessFlow";
 
             AddGroup("EventMainBusinessProcessFlow Details", group =>
             {
-                activeStageId = group.Add(new VocabularyKey(nameof(activeStageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                activeStageStartedOn = group.Add(new VocabularyKey(nameof(activeStageStartedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                bpfDuration = group.Add(new VocabularyKey(nameof(bpfDuration), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                bpfName = group.Add(new VocabularyKey(nameof(bpfName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                businessProcessFlowInstanceId = group.Add(new VocabularyKey(nameof(businessProcessFlowInstanceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                completedOn = group.Add(new VocabularyKey(nameof(completedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                createdOnBehalfBy = group.Add(new VocabularyKey(nameof(createdOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                importSequenceNumber = group.Add(new VocabularyKey(nameof(importSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                modifiedOn = group.Add(new VocabularyKey(nameof(modifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                modifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(modifiedOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                overriddenCreatedOn = group.Add(new VocabularyKey(nameof(overriddenCreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                timeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(timeZoneRuleVersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                traversedPath = group.Add(new VocabularyKey(nameof(traversedPath), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ActiveStageId = group.Add(new VocabularyKey(nameof(ActiveStageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ActiveStageStartedOn = group.Add(new VocabularyKey(nameof(ActiveStageStartedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BpfDuration = group.Add(new VocabularyKey(nameof(BpfDuration), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BpfName = group.Add(new VocabularyKey(nameof(BpfName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BusinessProcessFlowInstanceId = group.Add(new VocabularyKey(nameof(BusinessProcessFlowInstanceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CompletedOn = group.Add(new VocabularyKey(nameof(CompletedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOnBehalfBy = group.Add(new VocabularyKey(nameof(CreatedOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(ModifiedOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
-        public VocabularyKey activeStageId { get; private set; }
-        public VocabularyKey activeStageStartedOn { get; private set; }
-        public VocabularyKey bpfDuration { get; private set; }
-        public VocabularyKey bpfName { get; private set; }
-        public VocabularyKey businessProcessFlowInstanceId { get; private set; }
-        public VocabularyKey completedOn { get; private set; }
-        public VocabularyKey createdOn { get; private set; }
-        public VocabularyKey createdOnBehalfBy { get; private set; }
-        public VocabularyKey importSequenceNumber { get; private set; }
-        public VocabularyKey modifiedOn { get; private set; }
-        public VocabularyKey modifiedOnBehalfBy { get; private set; }
-        public VocabularyKey overriddenCreatedOn { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-        public VocabularyKey timeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey traversedPath { get; private set; }
+        public VocabularyKey ActiveStageId { get; private set; }
+        public VocabularyKey ActiveStageStartedOn { get; private set; }
+        public VocabularyKey BpfDuration { get; private set; }
+        public VocabularyKey BpfName { get; private set; }
+        public VocabularyKey BusinessProcessFlowInstanceId { get; private set; }
+        public VocabularyKey CompletedOn { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey CreatedOnBehalfBy { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey ModifiedOnBehalfBy { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-
-
     }
 }

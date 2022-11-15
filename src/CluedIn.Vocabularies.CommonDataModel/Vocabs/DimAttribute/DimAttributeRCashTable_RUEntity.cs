@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DimAttributeRCashTable_RUEntityVocabulary()
         {
-            VocabularyName = "DimAttributeRCashTable_RUEntity";
+            VocabularyName = "Dim Attribute R Cash Table _RU Entity";
             KeyPrefix = "commonDataModel.dimattributercashtable_ruentity";
             KeySeparator = ".";
             Grouping = "/DimAttributeRCashTable_RUEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 Value = group.Add(new VocabularyKey(nameof(Value), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Value { get; private set; }
         public VocabularyKey Name { get; private set; }
-
-
     }
 }

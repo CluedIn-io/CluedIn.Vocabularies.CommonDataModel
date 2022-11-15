@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventByProductTableEntityVocabulary()
         {
-            VocabularyName = "InventByProductTableEntity";
+            VocabularyName = "Invent By Product Table Entity";
             KeyPrefix = "commonDataModel.inventbyproducttableentity";
             KeySeparator = ".";
             Grouping = "/InventByProductTableEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ItemIdByProd = group.Add(new VocabularyKey(nameof(ItemIdByProd), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MainProduct = group.Add(new VocabularyKey(nameof(MainProduct), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Percentage = group.Add(new VocabularyKey(nameof(Percentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CostingRule { get; private set; }
         public VocabularyKey DimensionNumberByProd { get; private set; }
         public VocabularyKey DimensionNumberMain { get; private set; }
         public VocabularyKey ItemIdByProd { get; private set; }
         public VocabularyKey MainProduct { get; private set; }
         public VocabularyKey Percentage { get; private set; }
-
-
     }
 }

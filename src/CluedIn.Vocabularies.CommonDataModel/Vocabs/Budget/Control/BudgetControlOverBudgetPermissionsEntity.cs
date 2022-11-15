@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetControlOverBudgetPermissionsEntityVocabulary()
         {
-            VocabularyName = "BudgetControlOverBudgetPermissionsEntity";
+            VocabularyName = "Budget Control Over Budget Permissions Entity";
             KeyPrefix = "commonDataModel.budgetcontroloverbudgetpermissionsentity";
             KeySeparator = ".";
             Grouping = "/BudgetControlOverBudgetPermissionsEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 UserGroupName = group.Add(new VocabularyKey(nameof(UserGroupName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OverBudgetOption = group.Add(new VocabularyKey(nameof(OverBudgetOption), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BudgetControlConfiguration = group.Add(new VocabularyKey(nameof(BudgetControlConfiguration), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LegalEntityId { get; private set; }
         public VocabularyKey Status { get; private set; }
         public VocabularyKey InUseBy { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey UserGroupName { get; private set; }
         public VocabularyKey OverBudgetOption { get; private set; }
         public VocabularyKey BudgetControlConfiguration { get; private set; }
-
-
     }
 }

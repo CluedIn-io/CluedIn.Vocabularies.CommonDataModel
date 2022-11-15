@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BarcodeSetupEntityVocabulary()
         {
-            VocabularyName = "BarcodeSetupEntity";
+            VocabularyName = "Barcode Setup Entity";
             KeyPrefix = "commonDataModel.barcodesetupentity";
             KeySeparator = ".";
             Grouping = "/BarcodeSetupEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FontSize = group.Add(new VocabularyKey(nameof(FontSize), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MaximumBarcodeLength = group.Add(new VocabularyKey(nameof(MaximumBarcodeLength), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MinimumBarcodeLength = group.Add(new VocabularyKey(nameof(MinimumBarcodeLength), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BarcodeDescription { get; private set; }
         public VocabularyKey BarcodeMaskId { get; private set; }
         public VocabularyKey BarcodeSetupId { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FontSize { get; private set; }
         public VocabularyKey MaximumBarcodeLength { get; private set; }
         public VocabularyKey MinimumBarcodeLength { get; private set; }
-
-
     }
 }

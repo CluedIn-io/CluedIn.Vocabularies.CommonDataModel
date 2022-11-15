@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DeliveryDestinationEntityVocabulary()
         {
-            VocabularyName = "DeliveryDestinationEntity";
+            VocabularyName = "Delivery Destination Entity";
             KeyPrefix = "commonDataModel.deliverydestinationentity";
             KeySeparator = ".";
             Grouping = "/DeliveryDestinationEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 DestinationDescription = group.Add(new VocabularyKey(nameof(DestinationDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DestinationCode = group.Add(new VocabularyKey(nameof(DestinationCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DestinationDescription { get; private set; }
         public VocabularyKey DestinationCode { get; private set; }
-
-
     }
 }

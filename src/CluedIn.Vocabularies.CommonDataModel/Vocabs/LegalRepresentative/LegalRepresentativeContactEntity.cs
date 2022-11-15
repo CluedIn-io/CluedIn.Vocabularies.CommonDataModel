@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LegalRepresentativeContactEntityVocabulary()
         {
-            VocabularyName = "LegalRepresentativeContactEntity";
+            VocabularyName = "Legal Representative Contact Entity";
             KeyPrefix = "commonDataModel.legalrepresentativecontactentity";
             KeySeparator = ".";
             Grouping = "/LegalRepresentativeContactEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsMobilePhone = group.Add(new VocabularyKey(nameof(IsMobilePhone), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsInstantMessage = group.Add(new VocabularyKey(nameof(IsInstantMessage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsPrivate = group.Add(new VocabularyKey(nameof(IsPrivate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FiscalOrganizationRootFiscalEstablishmentDataArea { get; private set; }
         public VocabularyKey FiscalOrganizationRootFiscalEstablishment { get; private set; }
         public VocabularyKey LegalRepresentativeCPF { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsMobilePhone { get; private set; }
         public VocabularyKey IsInstantMessage { get; private set; }
         public VocabularyKey IsPrivate { get; private set; }
-
-
     }
 }

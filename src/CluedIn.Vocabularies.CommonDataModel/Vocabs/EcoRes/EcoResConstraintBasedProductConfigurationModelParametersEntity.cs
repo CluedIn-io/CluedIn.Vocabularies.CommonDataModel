@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResConstraintBasedProductConfigurationModelParametersEntityVocabulary()
         {
-            VocabularyName = "EcoResConstraintBasedProductConfigurationModelParametersEntity";
+            VocabularyName = "Eco Res Constraint Based Product Configuration Model Parameters Entity";
             KeyPrefix = "commonDataModel.ecoresconstraintbasedproductconfigurationmodelparametersentity";
             KeySeparator = ".";
             Grouping = "/EcoResConstraintBasedProductConfigurationModelParametersEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WillOrderLineHavePriceBreakdownAttached = group.Add(new VocabularyKey(nameof(WillOrderLineHavePriceBreakdownAttached), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OrderLinePriceBreakdownDocumentAttachmentTypeCode = group.Add(new VocabularyKey(nameof(OrderLinePriceBreakdownDocumentAttachmentTypeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OrderLinePriceBreakdownDocumentAttachmentTypeLegalEntityId = group.Add(new VocabularyKey(nameof(OrderLinePriceBreakdownDocumentAttachmentTypeLegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SingletonKey { get; private set; }
         public VocabularyKey DefaultProductConfigurationId { get; private set; }
         public VocabularyKey DefaultProductConfigurationPriceModelCurrencyCode { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WillOrderLineHavePriceBreakdownAttached { get; private set; }
         public VocabularyKey OrderLinePriceBreakdownDocumentAttachmentTypeCode { get; private set; }
         public VocabularyKey OrderLinePriceBreakdownDocumentAttachmentTypeLegalEntityId { get; private set; }
-
-
     }
 }

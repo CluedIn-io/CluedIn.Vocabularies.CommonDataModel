@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HMIMLabelEntityVocabulary()
         {
-            VocabularyName = "HMIMLabelEntity";
+            VocabularyName = "HMIM Label Entity";
             KeyPrefix = "commonDataModel.hmimlabelentity";
             KeySeparator = ".";
             Grouping = "/HMIMLabelEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 LabelCode = group.Add(new VocabularyKey(nameof(LabelCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LabelCode { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PaymentCalendarRuleEntityVocabulary()
         {
-            VocabularyName = "PaymentCalendarRuleEntity";
+            VocabularyName = "Payment Calendar Rule Entity";
             KeyPrefix = "commonDataModel.paymentcalendarruleentity";
             KeySeparator = ".";
             Grouping = "/PaymentCalendarRuleEntity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SpecificVendorPaymentMethod = group.Add(new VocabularyKey(nameof(SpecificVendorPaymentMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SpecificCustomerPaymentMethod = group.Add(new VocabularyKey(nameof(SpecificCustomerPaymentMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SpecificPaymentTerms = group.Add(new VocabularyKey(nameof(SpecificPaymentTerms), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Name { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey InstanceRelationType { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SpecificVendorPaymentMethod { get; private set; }
         public VocabularyKey SpecificCustomerPaymentMethod { get; private set; }
         public VocabularyKey SpecificPaymentTerms { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPurchaseOrderCreationAndDemandConsolidationPolicyRuleEntityVocabulary()
         {
-            VocabularyName = "PurchPurchaseOrderCreationAndDemandConsolidationPolicyRuleEntity";
+            VocabularyName = "Purch Purchase Order Creation And Demand Consolidation Policy Rule Entity";
             KeyPrefix = "commonDataModel.purchpurchaseordercreationanddemandconsolidationpolicyruleentity";
             KeySeparator = ".";
             Grouping = "/PurchPurchaseOrderCreationAndDemandConsolidationPolicyRuleEntity";
@@ -43,10 +43,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DemandConsolidationInternalCatalogItemExceptionRule = group.Add(new VocabularyKey(nameof(DemandConsolidationInternalCatalogItemExceptionRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DemandConsolidationNonCatalogItemExceptionRule = group.Add(new VocabularyKey(nameof(DemandConsolidationNonCatalogItemExceptionRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DemandConsolidationRule = group.Add(new VocabularyKey(nameof(DemandConsolidationRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Policy { get; private set; }
         public VocabularyKey PolicyRuleType { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
@@ -77,7 +75,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DemandConsolidationInternalCatalogItemExceptionRule { get; private set; }
         public VocabularyKey DemandConsolidationNonCatalogItemExceptionRule { get; private set; }
         public VocabularyKey DemandConsolidationRule { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSValidWarehouseWorkClassPutLocationTypeEntityVocabulary()
         {
-            VocabularyName = "WHSValidWarehouseWorkClassPutLocationTypeEntity";
+            VocabularyName = "WHS Valid Warehouse Work Class Put Location Type Entity";
             KeyPrefix = "commonDataModel.whsvalidwarehouseworkclassputlocationtypeentity";
             KeySeparator = ".";
             Grouping = "/WHSValidWarehouseWorkClassPutLocationTypeEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 WarehouseWorkClassId = group.Add(new VocabularyKey(nameof(WarehouseWorkClassId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WarehouseLocationTypeId = group.Add(new VocabularyKey(nameof(WarehouseLocationTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WarehouseWorkClassId { get; private set; }
         public VocabularyKey WarehouseLocationTypeId { get; private set; }
-
-
     }
 }

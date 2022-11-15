@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WorkflowElementActionEntityVocabulary()
         {
-            VocabularyName = "WorkflowElementActionEntity";
+            VocabularyName = "Workflow Element Action Entity";
             KeyPrefix = "commonDataModel.workflowelementactionentity";
             KeySeparator = ".";
             Grouping = "/WorkflowElementActionEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsOutcome = group.Add(new VocabularyKey(nameof(IsOutcome), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ElementId = group.Add(new VocabularyKey(nameof(ElementId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Enabled { get; private set; }
         public VocabularyKey IsOutcome { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey ElementId { get; private set; }
-
-
     }
 }

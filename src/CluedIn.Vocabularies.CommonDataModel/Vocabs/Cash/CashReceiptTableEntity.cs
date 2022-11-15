@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CashReceiptTableEntityVocabulary()
         {
-            VocabularyName = "CashReceiptTableEntity";
+            VocabularyName = "Cash Receipt Table Entity";
             KeyPrefix = "commonDataModel.cashreceipttableentity";
             KeySeparator = ".";
             Grouping = "/CashReceiptTableEntity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WorkerPersonnelNumber = group.Add(new VocabularyKey(nameof(WorkerPersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkerName = group.Add(new VocabularyKey(nameof(WorkerName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Worker = group.Add(new VocabularyKey(nameof(Worker), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AcquisitionDate { get; private set; }
         public VocabularyKey BatchNumber { get; private set; }
         public VocabularyKey ClosingDate { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WorkerPersonnelNumber { get; private set; }
         public VocabularyKey WorkerName { get; private set; }
         public VocabularyKey Worker { get; private set; }
-
-
     }
 }

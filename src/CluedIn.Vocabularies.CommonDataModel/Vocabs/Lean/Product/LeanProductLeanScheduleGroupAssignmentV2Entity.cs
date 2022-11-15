@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LeanProductLeanScheduleGroupAssignmentV2EntityVocabulary()
         {
-            VocabularyName = "LeanProductLeanScheduleGroupAssignmentV2Entity";
+            VocabularyName = "Lean Product Lean Schedule Group Assignment V2 Entity";
             KeyPrefix = "commonDataModel.leanproductleanschedulegroupassignmentv2entity";
             KeySeparator = ".";
             Grouping = "/LeanProductLeanScheduleGroupAssignmentV2Entity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductStyleId = group.Add(new VocabularyKey(nameof(ProductStyleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductVersionId = group.Add(new VocabularyKey(nameof(ProductVersionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ThroughputRatio = group.Add(new VocabularyKey(nameof(ThroughputRatio), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LeanScheduleGroup { get; private set; }
         public VocabularyKey LeanScheduleGroupId { get; private set; }
         public VocabularyKey WorkCellOperationsResourceGroup { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProductStyleId { get; private set; }
         public VocabularyKey ProductVersionId { get; private set; }
         public VocabularyKey ThroughputRatio { get; private set; }
-
-
     }
 }

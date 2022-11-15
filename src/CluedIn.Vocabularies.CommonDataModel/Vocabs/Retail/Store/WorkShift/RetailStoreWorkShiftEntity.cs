@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailStoreWorkShiftEntityVocabulary()
         {
-            VocabularyName = "RetailStoreWorkShiftEntity";
+            VocabularyName = "Retail Store Work Shift Entity";
             KeyPrefix = "commonDataModel.retailstoreworkshiftentity";
             KeySeparator = ".";
             Grouping = "/RetailStoreWorkShiftEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 StatementId = group.Add(new VocabularyKey(nameof(StatementId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkShiftStatus = group.Add(new VocabularyKey(nameof(WorkShiftStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StoreNumber = group.Add(new VocabularyKey(nameof(StoreNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey EndingDate { get; private set; }
         public VocabularyKey EndingTime { get; private set; }
         public VocabularyKey ReplicationCounter { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey StatementId { get; private set; }
         public VocabularyKey WorkShiftStatus { get; private set; }
         public VocabularyKey StoreNumber { get; private set; }
-
-
     }
 }

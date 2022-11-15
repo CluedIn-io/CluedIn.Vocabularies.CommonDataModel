@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PdsProductSafetyDataSheetValidityEntityVocabulary()
         {
-            VocabularyName = "PdsProductSafetyDataSheetValidityEntity";
+            VocabularyName = "Pds Product Safety Data Sheet Validity Entity";
             KeyPrefix = "commonDataModel.pdsproductsafetydatasheetvalidityentity";
             KeySeparator = ".";
             Grouping = "/PdsProductSafetyDataSheetValidityEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ExpirationDays = group.Add(new VocabularyKey(nameof(ExpirationDays), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidityDays = group.Add(new VocabularyKey(nameof(ValidityDays), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsMinorRevisionEnforced = group.Add(new VocabularyKey(nameof(IsMinorRevisionEnforced), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ApplicableCountryRegionId { get; private set; }
         public VocabularyKey ExpirationDays { get; private set; }
         public VocabularyKey ValidityDays { get; private set; }
         public VocabularyKey IsMinorRevisionEnforced { get; private set; }
-
-
     }
 }

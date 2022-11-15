@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSShippingCarrierServiceEntityVocabulary()
         {
-            VocabularyName = "TMSShippingCarrierServiceEntity";
+            VocabularyName = "TMS Shipping Carrier Service Entity";
             KeyPrefix = "commonDataModel.tmsshippingcarrierserviceentity";
             KeySeparator = ".";
             Grouping = "/TMSShippingCarrierServiceEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TransportationBillingGroupId = group.Add(new VocabularyKey(nameof(TransportationBillingGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransportationMethodId = group.Add(new VocabularyKey(nameof(TransportationMethodId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LoadVolumeFactor = group.Add(new VocabularyKey(nameof(LoadVolumeFactor), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DeliveryModeCode { get; private set; }
         public VocabularyKey PhysicalLoadTemplateId { get; private set; }
         public VocabularyKey ShippingCarrierId { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TransportationBillingGroupId { get; private set; }
         public VocabularyKey TransportationMethodId { get; private set; }
         public VocabularyKey LoadVolumeFactor { get; private set; }
-
-
     }
 }

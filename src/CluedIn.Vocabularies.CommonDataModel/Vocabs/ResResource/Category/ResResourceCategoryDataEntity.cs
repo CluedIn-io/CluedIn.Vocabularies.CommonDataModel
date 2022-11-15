@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ResResourceCategoryDataEntityVocabulary()
         {
-            VocabularyName = "ResResourceCategoryDataEntity";
+            VocabularyName = "Res Resource Category Data Entity";
             KeyPrefix = "commonDataModel.resresourcecategorydataentity";
             KeySeparator = ".";
             Grouping = "/ResResourceCategoryDataEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultResourceCategory = group.Add(new VocabularyKey(nameof(DefaultResourceCategory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsCategoryDisabled = group.Add(new VocabularyKey(nameof(IsCategoryDisabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RoleId { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey DefaultResourceCategory { get; private set; }
         public VocabularyKey IsCategoryDisabled { get; private set; }
-
-
     }
 }

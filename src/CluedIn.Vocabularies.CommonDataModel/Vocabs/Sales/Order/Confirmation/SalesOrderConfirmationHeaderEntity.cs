@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesOrderConfirmationHeaderEntityVocabulary()
         {
-            VocabularyName = "SalesOrderConfirmationHeaderEntity";
+            VocabularyName = "Sales Order Confirmation Header Entity";
             KeyPrefix = "commonDataModel.salesorderconfirmationheaderentity";
             KeySeparator = ".";
             Grouping = "/SalesOrderConfirmationHeaderEntity";
@@ -74,10 +74,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DeliveryAddressTimeZone = group.Add(new VocabularyKey(nameof(DeliveryAddressTimeZone), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OrderTakerPersonnelNumber = group.Add(new VocabularyKey(nameof(OrderTakerPersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultDimensionDisplayValue = group.Add(new VocabularyKey(nameof(DefaultDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey OrderingCustomerAccountNumber { get; private set; }
         public VocabularyKey CashDiscountCode { get; private set; }
         public VocabularyKey CashDiscountPercentage { get; private set; }
@@ -139,7 +137,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DeliveryAddressTimeZone { get; private set; }
         public VocabularyKey OrderTakerPersonnelNumber { get; private set; }
         public VocabularyKey DefaultDimensionDisplayValue { get; private set; }
-
-
     }
 }

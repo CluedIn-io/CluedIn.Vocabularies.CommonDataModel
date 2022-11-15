@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetUndepreciatedBalanceScheduleEntityVocabulary()
         {
-            VocabularyName = "AssetUndepreciatedBalanceScheduleEntity";
+            VocabularyName = "Asset Undepreciated Balance Schedule Entity";
             KeyPrefix = "commonDataModel.assetundepreciatedbalancescheduleentity";
             KeySeparator = ".";
             Grouping = "/AssetUndepreciatedBalanceScheduleEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LowerLimitRate = group.Add(new VocabularyKey(nameof(LowerLimitRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UpperLimitRate = group.Add(new VocabularyKey(nameof(UpperLimitRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 YearsPassed = group.Add(new VocabularyKey(nameof(YearsPassed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ScheduleDescription { get; private set; }
         public VocabularyKey FromMethod { get; private set; }
         public VocabularyKey ToMethod { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LowerLimitRate { get; private set; }
         public VocabularyKey UpperLimitRate { get; private set; }
         public VocabularyKey YearsPassed { get; private set; }
-
-
     }
 }

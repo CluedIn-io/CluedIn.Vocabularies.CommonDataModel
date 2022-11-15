@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustCustomerDetailV2EntityVocabulary()
         {
-            VocabularyName = "CustCustomerDetailV2Entity";
+            VocabularyName = "Cust Customer Detail V2 Entity";
             KeyPrefix = "commonDataModel.custcustomerdetailv2entity";
             KeySeparator = ".";
             Grouping = "/CustCustomerDetailV2Entity";
@@ -160,10 +160,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FulfillmentPolicy = group.Add(new VocabularyKey(nameof(FulfillmentPolicy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsAllowCreateIndirectOrderLines = group.Add(new VocabularyKey(nameof(IsAllowCreateIndirectOrderLines), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CollectionLetterCode = group.Add(new VocabularyKey(nameof(CollectionLetterCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CustomerAccount { get; private set; }
         public VocabularyKey IsOneTimeCustomer { get; private set; }
         public VocabularyKey StatisticsGroupId { get; private set; }
@@ -311,7 +309,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FulfillmentPolicy { get; private set; }
         public VocabularyKey IsAllowCreateIndirectOrderLines { get; private set; }
         public VocabularyKey CollectionLetterCode { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxOnNaturalResourcesEntityVocabulary()
         {
-            VocabularyName = "TaxOnNaturalResourcesEntity";
+            VocabularyName = "Tax On Natural Resources Entity";
             KeyPrefix = "commonDataModel.taxonnaturalresourcesentity";
             KeySeparator = ".";
             Grouping = "/TaxOnNaturalResourcesEntity";
@@ -39,10 +39,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Number = group.Add(new VocabularyKey(nameof(Number), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReferenceTableID = group.Add(new VocabularyKey(nameof(ReferenceTableID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransRecIdReference = group.Add(new VocabularyKey(nameof(TransRecIdReference), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BOMLine { get; private set; }
         public VocabularyKey DimensionNumber { get; private set; }
         public VocabularyKey InventTransId { get; private set; }
@@ -69,7 +67,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Number { get; private set; }
         public VocabularyKey ReferenceTableID { get; private set; }
         public VocabularyKey TransRecIdReference { get; private set; }
-
-
     }
 }

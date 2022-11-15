@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendVendorInvoiceDeclarationEntityVocabulary()
         {
-            VocabularyName = "VendVendorInvoiceDeclarationEntity";
+            VocabularyName = "Vend Vendor Invoice Declaration Entity";
             KeyPrefix = "commonDataModel.vendvendorinvoicedeclarationentity";
             KeySeparator = ".";
             Grouping = "/VendVendorInvoiceDeclarationEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 InvoiceDeclarationId = group.Add(new VocabularyKey(nameof(InvoiceDeclarationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RecordType = group.Add(new VocabularyKey(nameof(RecordType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReportingCode = group.Add(new VocabularyKey(nameof(ReportingCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey InvoiceDeclarationId { get; private set; }
         public VocabularyKey RecordType { get; private set; }
         public VocabularyKey ReportingCode { get; private set; }
-
-
     }
 }

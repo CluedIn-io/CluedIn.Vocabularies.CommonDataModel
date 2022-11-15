@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LineOfBusinessEntityVocabulary()
         {
-            VocabularyName = "LineOfBusinessEntity";
+            VocabularyName = "Line Of Business Entity";
             KeyPrefix = "commonDataModel.lineofbusinessentity";
             KeySeparator = ".";
             Grouping = "/LineOfBusinessEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineOfBusiness = group.Add(new VocabularyKey(nameof(LineOfBusiness), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey LineOfBusiness { get; private set; }
-
-
     }
 }

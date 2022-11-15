@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSShippingCarrierCustomerAccountCriterionEntityVocabulary()
         {
-            VocabularyName = "TMSShippingCarrierCustomerAccountCriterionEntity";
+            VocabularyName = "TMS Shipping Carrier Customer Account Criterion Entity";
             KeyPrefix = "commonDataModel.tmsshippingcarriercustomeraccountcriterionentity";
             KeySeparator = ".";
             Grouping = "/TMSShippingCarrierCustomerAccountCriterionEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ShippingSiteId = group.Add(new VocabularyKey(nameof(ShippingSiteId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ShippingWarehouseId = group.Add(new VocabularyKey(nameof(ShippingWarehouseId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ShippingCarrierCustomerAccountNumber = group.Add(new VocabularyKey(nameof(ShippingCarrierCustomerAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ShippingCarrierServiceId { get; private set; }
         public VocabularyKey ShippingCarrierId { get; private set; }
         public VocabularyKey ShippingSiteId { get; private set; }
         public VocabularyKey ShippingWarehouseId { get; private set; }
         public VocabularyKey ShippingCarrierCustomerAccountNumber { get; private set; }
-
-
     }
 }

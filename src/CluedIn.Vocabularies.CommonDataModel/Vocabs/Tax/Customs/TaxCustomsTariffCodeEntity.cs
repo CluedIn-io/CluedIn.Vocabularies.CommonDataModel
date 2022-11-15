@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxCustomsTariffCodeEntityVocabulary()
         {
-            VocabularyName = "TaxCustomsTariffCodeEntity";
+            VocabularyName = "Tax Customs Tariff Code Entity";
             KeyPrefix = "commonDataModel.taxcustomstariffcodeentity";
             KeySeparator = ".";
             Grouping = "/TaxCustomsTariffCodeEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Direction = group.Add(new VocabularyKey(nameof(Direction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TariffCode = group.Add(new VocabularyKey(nameof(TariffCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Direction { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey TariffCode { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvPolicyRuleEntityVocabulary()
         {
-            VocabularyName = "TrvPolicyRuleEntity";
+            VocabularyName = "Trv Policy Rule Entity";
             KeyPrefix = "commonDataModel.trvpolicyruleentity";
             KeySeparator = ".";
             Grouping = "/TrvPolicyRuleEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Action = group.Add(new VocabularyKey(nameof(Action), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExpressionTableRecId = group.Add(new VocabularyKey(nameof(ExpressionTableRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExpressionId = group.Add(new VocabularyKey(nameof(ExpressionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RelationTypeField { get; private set; }
         public VocabularyKey IncludeParentRule { get; private set; }
         public VocabularyKey Policy { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Action { get; private set; }
         public VocabularyKey ExpressionTableRecId { get; private set; }
         public VocabularyKey ExpressionId { get; private set; }
-
-
     }
 }

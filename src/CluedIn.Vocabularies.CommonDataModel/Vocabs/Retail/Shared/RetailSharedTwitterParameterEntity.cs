@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailSharedTwitterParameterEntityVocabulary()
         {
-            VocabularyName = "RetailSharedTwitterParameterEntity";
+            VocabularyName = "Retail Shared Twitter Parameter Entity";
             KeyPrefix = "commonDataModel.retailsharedtwitterparameterentity";
             KeySeparator = ".";
             Grouping = "/RetailSharedTwitterParameterEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ConsumerKey = group.Add(new VocabularyKey(nameof(ConsumerKey), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ConsumerSecret = group.Add(new VocabularyKey(nameof(ConsumerSecret), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Key = group.Add(new VocabularyKey(nameof(Key), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ConsumerKey { get; private set; }
         public VocabularyKey ConsumerSecret { get; private set; }
         public VocabularyKey Key { get; private set; }
-
-
     }
 }

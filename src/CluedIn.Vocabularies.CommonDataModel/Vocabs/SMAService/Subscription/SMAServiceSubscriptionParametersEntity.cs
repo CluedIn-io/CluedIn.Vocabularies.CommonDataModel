@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SMAServiceSubscriptionParametersEntityVocabulary()
         {
-            VocabularyName = "SMAServiceSubscriptionParametersEntity";
+            VocabularyName = "SMA Service Subscription Parameters Entity";
             KeyPrefix = "commonDataModel.smaservicesubscriptionparametersentity";
             KeySeparator = ".";
             Grouping = "/SMAServiceSubscriptionParametersEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AreAccruedPeriodsDeleted = group.Add(new VocabularyKey(nameof(AreAccruedPeriodsDeleted), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CreditingAccrualReversingMethod = group.Add(new VocabularyKey(nameof(CreditingAccrualReversingMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AccrualRoundingOffPeriod = group.Add(new VocabularyKey(nameof(AccrualRoundingOffPeriod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WillInvoiceProcessingUpdateProjectDate { get; private set; }
         public VocabularyKey WillAccruedRevenueCalculationUseCalendarDays { get; private set; }
         public VocabularyKey AreAccruedPeriodsDeleted { get; private set; }
         public VocabularyKey CreditingAccrualReversingMethod { get; private set; }
         public VocabularyKey AccrualRoundingOffPeriod { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailInternalOrganizationAttributeGroupEntityVocabulary()
         {
-            VocabularyName = "RetailInternalOrganizationAttributeGroupEntity";
+            VocabularyName = "Retail Internal Organization Attribute Group Entity";
             KeyPrefix = "commonDataModel.retailinternalorganizationattributegroupentity";
             KeySeparator = ".";
             Grouping = "/RetailInternalOrganizationAttributeGroupEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AttributeGroupName = group.Add(new VocabularyKey(nameof(AttributeGroupName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PartyNumber = group.Add(new VocabularyKey(nameof(PartyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AttributeGroupDisplayOrder = group.Add(new VocabularyKey(nameof(AttributeGroupDisplayOrder), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AttributeGroupName { get; private set; }
         public VocabularyKey PartyNumber { get; private set; }
         public VocabularyKey AttributeGroupDisplayOrder { get; private set; }
-
-
     }
 }

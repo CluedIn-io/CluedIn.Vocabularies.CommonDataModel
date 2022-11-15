@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgTimeAndAttendanceApprovalGroupEntityVocabulary()
         {
-            VocabularyName = "JmgTimeAndAttendanceApprovalGroupEntity";
+            VocabularyName = "Jmg Time And Attendance Approval Group Entity";
             KeyPrefix = "commonDataModel.jmgtimeandattendanceapprovalgroupentity";
             KeySeparator = ".";
             Grouping = "/JmgTimeAndAttendanceApprovalGroupEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 ApprovalGroupId = group.Add(new VocabularyKey(nameof(ApprovalGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ApprovalGroupId { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

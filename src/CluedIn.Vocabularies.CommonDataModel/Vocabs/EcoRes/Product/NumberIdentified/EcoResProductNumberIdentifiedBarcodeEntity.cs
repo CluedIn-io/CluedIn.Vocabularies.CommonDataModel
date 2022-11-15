@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResProductNumberIdentifiedBarcodeEntityVocabulary()
         {
-            VocabularyName = "EcoResProductNumberIdentifiedBarcodeEntity";
+            VocabularyName = "Eco Res Product Number Identified Barcode Entity";
             KeyPrefix = "commonDataModel.ecoresproductnumberidentifiedbarcodeentity";
             KeySeparator = ".";
             Grouping = "/EcoResProductNumberIdentifiedBarcodeEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsDefaultScannedBarcode = group.Add(new VocabularyKey(nameof(IsDefaultScannedBarcode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsDefaultPrintedBarcode = group.Add(new VocabularyKey(nameof(IsDefaultPrintedBarcode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsDefaultDisplayedBarcode = group.Add(new VocabularyKey(nameof(IsDefaultDisplayedBarcode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductNumber { get; private set; }
         public VocabularyKey ProductQuantity { get; private set; }
         public VocabularyKey ProductQuantityUnitSymbol { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsDefaultScannedBarcode { get; private set; }
         public VocabularyKey IsDefaultPrintedBarcode { get; private set; }
         public VocabularyKey IsDefaultDisplayedBarcode { get; private set; }
-
-
     }
 }

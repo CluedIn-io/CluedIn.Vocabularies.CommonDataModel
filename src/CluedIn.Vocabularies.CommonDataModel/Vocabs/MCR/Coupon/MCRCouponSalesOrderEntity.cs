@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRCouponSalesOrderEntityVocabulary()
         {
-            VocabularyName = "MCRCouponSalesOrderEntity";
+            VocabularyName = "MCR Coupon Sales Order Entity";
             KeyPrefix = "commonDataModel.mcrcouponsalesorderentity";
             KeySeparator = ".";
             Grouping = "/MCRCouponSalesOrderEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsLiabilityDeducted = group.Add(new VocabularyKey(nameof(IsLiabilityDeducted), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsReissue = group.Add(new VocabularyKey(nameof(IsReissue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesId = group.Add(new VocabularyKey(nameof(SalesId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CustomerAccount { get; private set; }
         public VocabularyKey CouponId { get; private set; }
         public VocabularyKey IsLiabilityDeducted { get; private set; }
         public VocabularyKey IsReissue { get; private set; }
         public VocabularyKey SalesId { get; private set; }
-
-
     }
 }

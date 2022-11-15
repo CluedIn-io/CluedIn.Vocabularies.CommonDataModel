@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPublishedRequestForQuotationAmendmentEntityVocabulary()
         {
-            VocabularyName = "PurchPublishedRequestForQuotationAmendmentEntity";
+            VocabularyName = "Purch Published Request For Quotation Amendment Entity";
             KeyPrefix = "commonDataModel.purchpublishedrequestforquotationamendmententity";
             KeySeparator = ".";
             Grouping = "/PurchPublishedRequestForQuotationAmendmentEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AmendmentName = group.Add(new VocabularyKey(nameof(AmendmentName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AmendmentDescription = group.Add(new VocabularyKey(nameof(AmendmentDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AmendmentRequesterName = group.Add(new VocabularyKey(nameof(AmendmentRequesterName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AmendmentNumber { get; private set; }
         public VocabularyKey AmendmentRecId { get; private set; }
         public VocabularyKey RFQCaseNumber { get; private set; }
         public VocabularyKey AmendmentName { get; private set; }
         public VocabularyKey AmendmentDescription { get; private set; }
         public VocabularyKey AmendmentRequesterName { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxReport347ValidationEntityVocabulary()
         {
-            VocabularyName = "TaxReport347ValidationEntity";
+            VocabularyName = "Tax Report 347 Validation Entity";
             KeyPrefix = "commonDataModel.taxreport347validationentity";
             KeySeparator = ".";
             Grouping = "/TaxReport347ValidationEntity";
@@ -14,12 +14,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             AddGroup("TaxReport347ValidationEntity Details", group =>
             {
                 SalesTaxGroup = group.Add(new VocabularyKey(nameof(SalesTaxGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SalesTaxGroup { get; private set; }
-
-
     }
 }

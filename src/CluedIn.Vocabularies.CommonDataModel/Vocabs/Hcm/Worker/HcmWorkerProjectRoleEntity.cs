@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmWorkerProjectRoleEntityVocabulary()
         {
-            VocabularyName = "HcmWorkerProjectRoleEntity";
+            VocabularyName = "Hcm Worker Project Role Entity";
             KeyPrefix = "commonDataModel.hcmworkerprojectroleentity";
             KeySeparator = ".";
             Grouping = "/HcmWorkerProjectRoleEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Role = group.Add(new VocabularyKey(nameof(Role), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StartDate = group.Add(new VocabularyKey(nameof(StartDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PersonnelNumber = group.Add(new VocabularyKey(nameof(PersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DataArea { get; private set; }
         public VocabularyKey EndDate { get; private set; }
         public VocabularyKey ProjectId { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Role { get; private set; }
         public VocabularyKey StartDate { get; private set; }
         public VocabularyKey PersonnelNumber { get; private set; }
-
-
     }
 }

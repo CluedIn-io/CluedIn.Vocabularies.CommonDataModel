@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public UnitOfMeasureTranslationEntityVocabulary()
         {
-            VocabularyName = "UnitOfMeasureTranslationEntity";
+            VocabularyName = "Unit Of Measure Translation Entity";
             KeyPrefix = "commonDataModel.unitofmeasuretranslationentity";
             KeySeparator = ".";
             Grouping = "/UnitOfMeasureTranslationEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 UnitSymbol = group.Add(new VocabularyKey(nameof(UnitSymbol), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LanguageId = group.Add(new VocabularyKey(nameof(LanguageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TranslatedDescription = group.Add(new VocabularyKey(nameof(TranslatedDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey UnitSymbol { get; private set; }
         public VocabularyKey LanguageId { get; private set; }
         public VocabularyKey TranslatedDescription { get; private set; }
-
-
     }
 }

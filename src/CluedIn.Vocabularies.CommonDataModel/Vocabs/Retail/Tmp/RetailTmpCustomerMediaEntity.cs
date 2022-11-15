@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailTmpCustomerMediaEntityVocabulary()
         {
-            VocabularyName = "RetailTmpCustomerMediaEntity";
+            VocabularyName = "Retail Tmp Customer Media Entity";
             KeyPrefix = "commonDataModel.retailtmpcustomermediaentity";
             KeySeparator = ".";
             Grouping = "/RetailTmpCustomerMediaEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CompanyCode = group.Add(new VocabularyKey(nameof(CompanyCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AssociationStatus = group.Add(new VocabularyKey(nameof(AssociationStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Customer { get; private set; }
         public VocabularyKey CustomerName { get; private set; }
         public VocabularyKey FileName { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Description { get; private set; }
         public VocabularyKey CompanyCode { get; private set; }
         public VocabularyKey AssociationStatus { get; private set; }
-
-
     }
 }

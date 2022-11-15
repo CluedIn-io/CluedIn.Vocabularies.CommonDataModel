@@ -2,26 +2,22 @@ using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 {
-    public class smmQuotationDocumentIntroductionEntityVocabulary : SimpleVocabulary
+    public class SmmQuotationDocumentIntroductionEntityVocabulary : SimpleVocabulary
     {
-        public smmQuotationDocumentIntroductionEntityVocabulary()
+        public SmmQuotationDocumentIntroductionEntityVocabulary()
         {
-            VocabularyName = "smmQuotationDocumentIntroductionEntity";
+            VocabularyName = "Smm Quotation Document Introduction Entity";
             KeyPrefix = "commonDataModel.smmquotationdocumentintroductionentity";
             KeySeparator = ".";
-            Grouping = "/smmQuotationDocumentIntroductionEntity";
+            Grouping = "/SmmQuotationDocumentIntroductionEntity";
 
-            AddGroup("smmQuotationDocumentIntroductionEntity Details", group =>
+            AddGroup("SmmQuotationDocumentIntroductionEntity Details", group =>
             {
                 IntroductionName = group.Add(new VocabularyKey(nameof(IntroductionName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IntroductoryParagraph = group.Add(new VocabularyKey(nameof(IntroductoryParagraph), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IntroductionName { get; private set; }
         public VocabularyKey IntroductoryParagraph { get; private set; }
-
-
     }
 }

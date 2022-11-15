@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxGSTMinorCodeEntityVocabulary()
         {
-            VocabularyName = "TaxGSTMinorCodeEntity";
+            VocabularyName = "Tax GST Minor Code Entity";
             KeyPrefix = "commonDataModel.taxgstminorcodeentity";
             KeySeparator = ".";
             Grouping = "/TaxGSTMinorCodeEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MinorCode = group.Add(new VocabularyKey(nameof(MinorCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxComponent = group.Add(new VocabularyKey(nameof(TaxComponent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey MinorCode { get; private set; }
         public VocabularyKey TaxComponent { get; private set; }
-
-
     }
 }

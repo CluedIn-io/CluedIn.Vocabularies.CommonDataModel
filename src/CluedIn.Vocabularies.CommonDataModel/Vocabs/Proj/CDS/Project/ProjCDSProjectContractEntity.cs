@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjCDSProjectContractEntityVocabulary()
         {
-            VocabularyName = "ProjCDSProjectContractEntity";
+            VocabularyName = "Proj CDS Project Contract Entity";
             KeyPrefix = "commonDataModel.projcdsprojectcontractentity";
             KeySeparator = ".";
             Grouping = "/ProjCDSProjectContractEntity";
@@ -33,10 +33,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AddressCountryRegionId = group.Add(new VocabularyKey(nameof(AddressCountryRegionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InvoiceLocation = group.Add(new VocabularyKey(nameof(InvoiceLocation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PartyNumber = group.Add(new VocabularyKey(nameof(PartyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProjectContractID { get; private set; }
         public VocabularyKey CustomerAccount { get; private set; }
         public VocabularyKey Name { get; private set; }
@@ -57,7 +55,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AddressCountryRegionId { get; private set; }
         public VocabularyKey InvoiceLocation { get; private set; }
         public VocabularyKey PartyNumber { get; private set; }
-
-
     }
 }

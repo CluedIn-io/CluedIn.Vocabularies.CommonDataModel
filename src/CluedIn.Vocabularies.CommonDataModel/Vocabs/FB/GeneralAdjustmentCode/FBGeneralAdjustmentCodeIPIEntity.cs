@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FBGeneralAdjustmentCodeIPIEntityVocabulary()
         {
-            VocabularyName = "FBGeneralAdjustmentCodeIPIEntity";
+            VocabularyName = "FB General Adjustment Code IPI Entity";
             KeyPrefix = "commonDataModel.fbgeneraladjustmentcodeipientity";
             KeySeparator = ".";
             Grouping = "/FBGeneralAdjustmentCodeIPIEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ValidToDate = group.Add(new VocabularyKey(nameof(ValidToDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OtherDebit = group.Add(new VocabularyKey(nameof(OtherDebit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReceitaCode = group.Add(new VocabularyKey(nameof(ReceitaCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AdjustmentCode { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey IsReversal { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ValidToDate { get; private set; }
         public VocabularyKey OtherDebit { get; private set; }
         public VocabularyKey ReceitaCode { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesInvoiceLineV2EntityVocabulary()
         {
-            VocabularyName = "SalesInvoiceLineV2Entity";
+            VocabularyName = "Sales Invoice Line V2 Entity";
             KeyPrefix = "commonDataModel.salesinvoicelinev2entity";
             KeySeparator = ".";
             Grouping = "/SalesInvoiceLineV2Entity";
@@ -41,10 +41,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LedgerVoucher = group.Add(new VocabularyKey(nameof(LedgerVoucher), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesProductCategoryName = group.Add(new VocabularyKey(nameof(SalesProductCategoryName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesProductCategoryHierarchyName = group.Add(new VocabularyKey(nameof(SalesProductCategoryHierarchyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InvoicedQuantity { get; private set; }
         public VocabularyKey SalesPrice { get; private set; }
         public VocabularyKey ProductDescription { get; private set; }
@@ -73,7 +71,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LedgerVoucher { get; private set; }
         public VocabularyKey SalesProductCategoryName { get; private set; }
         public VocabularyKey SalesProductCategoryHierarchyName { get; private set; }
-
-
     }
 }

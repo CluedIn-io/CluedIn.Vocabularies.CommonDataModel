@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LeanScheduleGroupEntityVocabulary()
         {
-            VocabularyName = "LeanScheduleGroupEntity";
+            VocabularyName = "Lean Schedule Group Entity";
             KeyPrefix = "commonDataModel.leanschedulegroupentity";
             KeySeparator = ".";
             Grouping = "/LeanScheduleGroupEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WorkCellOperationsResourceGroup = group.Add(new VocabularyKey(nameof(WorkCellOperationsResourceGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NullableWorkCellOperationsResourceGroupId = group.Add(new VocabularyKey(nameof(NullableWorkCellOperationsResourceGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkCellOperationsResourceGroupId = group.Add(new VocabularyKey(nameof(WorkCellOperationsResourceGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ScheduleColor { get; private set; }
         public VocabularyKey ScheduleIntegerRGBColor { get; private set; }
         public VocabularyKey GroupId { get; private set; }
         public VocabularyKey WorkCellOperationsResourceGroup { get; private set; }
         public VocabularyKey NullableWorkCellOperationsResourceGroupId { get; private set; }
         public VocabularyKey WorkCellOperationsResourceGroupId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BLWIParameterEntityVocabulary()
         {
-            VocabularyName = "BLWIParameterEntity";
+            VocabularyName = "BLWI Parameter Entity";
             KeyPrefix = "commonDataModel.blwiparameterentity";
             KeySeparator = ".";
             Grouping = "/BLWIParameterEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Fax = group.Add(new VocabularyKey(nameof(Fax), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Phone = group.Add(new VocabularyKey(nameof(Phone), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NBBMail = group.Add(new VocabularyKey(nameof(NBBMail), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ID { get; private set; }
         public VocabularyKey Company { get; private set; }
         public VocabularyKey Name { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Fax { get; private set; }
         public VocabularyKey Phone { get; private set; }
         public VocabularyKey NBBMail { get; private set; }
-
-
     }
 }

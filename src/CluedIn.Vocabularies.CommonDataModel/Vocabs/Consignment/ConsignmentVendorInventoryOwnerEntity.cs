@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ConsignmentVendorInventoryOwnerEntityVocabulary()
         {
-            VocabularyName = "ConsignmentVendorInventoryOwnerEntity";
+            VocabularyName = "Consignment Vendor Inventory Owner Entity";
             KeyPrefix = "commonDataModel.consignmentvendorinventoryownerentity";
             KeySeparator = ".";
             Grouping = "/ConsignmentVendorInventoryOwnerEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 InventoryOwnerId = group.Add(new VocabularyKey(nameof(InventoryOwnerId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorAccountNumber = group.Add(new VocabularyKey(nameof(VendorAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InventoryOwnerId { get; private set; }
         public VocabularyKey VendorAccountNumber { get; private set; }
-
-
     }
 }

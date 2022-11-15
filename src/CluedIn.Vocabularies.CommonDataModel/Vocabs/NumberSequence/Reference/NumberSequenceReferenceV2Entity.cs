@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public NumberSequenceReferenceV2EntityVocabulary()
         {
-            VocabularyName = "NumberSequenceReferenceV2Entity";
+            VocabularyName = "Number Sequence Reference V2 Entity";
             KeyPrefix = "commonDataModel.numbersequencereferencev2entity";
             KeySeparator = ".";
             Grouping = "/NumberSequenceReferenceV2Entity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DataTypeName = group.Add(new VocabularyKey(nameof(DataTypeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ScopeValue = group.Add(new VocabularyKey(nameof(ScopeValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ScopeType = group.Add(new VocabularyKey(nameof(ScopeType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ReuseNumbers { get; private set; }
         public VocabularyKey NumberSequenceDatatype { get; private set; }
         public VocabularyKey NumberSequenceCodeRecId { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DataTypeName { get; private set; }
         public VocabularyKey ScopeValue { get; private set; }
         public VocabularyKey ScopeType { get; private set; }
-
-
     }
 }

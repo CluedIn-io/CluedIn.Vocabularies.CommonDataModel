@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxItalianSalesTaxBookEntityVocabulary()
         {
-            VocabularyName = "TaxItalianSalesTaxBookEntity";
+            VocabularyName = "Tax Italian Sales Tax Book Entity";
             KeyPrefix = "commonDataModel.taxitaliansalestaxbookentity";
             KeySeparator = ".";
             Grouping = "/TaxItalianSalesTaxBookEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SalesTaxBook = group.Add(new VocabularyKey(nameof(SalesTaxBook), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesTaxBookType = group.Add(new VocabularyKey(nameof(SalesTaxBookType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SettlementPeriod = group.Add(new VocabularyKey(nameof(SettlementPeriod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ATECOFINCode { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey PrintSummaryAndPayment { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SalesTaxBook { get; private set; }
         public VocabularyKey SalesTaxBookType { get; private set; }
         public VocabularyKey SettlementPeriod { get; private set; }
-
-
     }
 }

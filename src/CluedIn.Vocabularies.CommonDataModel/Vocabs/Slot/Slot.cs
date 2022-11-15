@@ -13,31 +13,27 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Slot Details", group =>
             {
-                appointmentTypeNew = group.Add(new VocabularyKey(nameof(appointmentTypeNew), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                comment = group.Add(new VocabularyKey(nameof(comment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                end = group.Add(new VocabularyKey(nameof(end), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                overbooked = group.Add(new VocabularyKey(nameof(overbooked), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                slotId = group.Add(new VocabularyKey(nameof(slotId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                start = group.Add(new VocabularyKey(nameof(start), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                status = group.Add(new VocabularyKey(nameof(status), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                AppointmentTypeNew = group.Add(new VocabularyKey(nameof(AppointmentTypeNew), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Comment = group.Add(new VocabularyKey(nameof(Comment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                End = group.Add(new VocabularyKey(nameof(End), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Overbooked = group.Add(new VocabularyKey(nameof(Overbooked), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SlotId = group.Add(new VocabularyKey(nameof(SlotId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Start = group.Add(new VocabularyKey(nameof(Start), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Status = group.Add(new VocabularyKey(nameof(Status), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey appointmentTypeNew { get; private set; }
-        public VocabularyKey comment { get; private set; }
-        public VocabularyKey end { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey overbooked { get; private set; }
-        public VocabularyKey slotId { get; private set; }
-        public VocabularyKey start { get; private set; }
-        public VocabularyKey status { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey AppointmentTypeNew { get; private set; }
+        public VocabularyKey Comment { get; private set; }
+        public VocabularyKey End { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey Overbooked { get; private set; }
+        public VocabularyKey SlotId { get; private set; }
+        public VocabularyKey Start { get; private set; }
+        public VocabularyKey Status { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

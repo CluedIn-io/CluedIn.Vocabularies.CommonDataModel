@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PmfFormulaVersionV2EntityVocabulary()
         {
-            VocabularyName = "PmfFormulaVersionV2Entity";
+            VocabularyName = "Pmf Formula Version V2 Entity";
             KeyPrefix = "commonDataModel.pmfformulaversionv2entity";
             KeySeparator = ".";
             Grouping = "/PmfFormulaVersionV2Entity";
@@ -40,10 +40,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WillCostCalculationIncludeVersion = group.Add(new VocabularyKey(nameof(WillCostCalculationIncludeVersion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsTotalCostAllocationUsed = group.Add(new VocabularyKey(nameof(IsTotalCostAllocationUsed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 YieldPercentage = group.Add(new VocabularyKey(nameof(YieldPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsActive { get; private set; }
         public VocabularyKey IsApproved { get; private set; }
         public VocabularyKey ApproverId { get; private set; }
@@ -71,7 +69,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WillCostCalculationIncludeVersion { get; private set; }
         public VocabularyKey IsTotalCostAllocationUsed { get; private set; }
         public VocabularyKey YieldPercentage { get; private set; }
-
-
     }
 }

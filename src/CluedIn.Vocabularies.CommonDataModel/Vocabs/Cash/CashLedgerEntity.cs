@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CashLedgerEntityVocabulary()
         {
-            VocabularyName = "CashLedgerEntity";
+            VocabularyName = "Cash Ledger Entity";
             KeyPrefix = "commonDataModel.cashledgerentity";
             KeySeparator = ".";
             Grouping = "/CashLedgerEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Cash = group.Add(new VocabularyKey(nameof(Cash), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MainAccountId = group.Add(new VocabularyKey(nameof(MainAccountId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MainAccountIdDisplayValue = group.Add(new VocabularyKey(nameof(MainAccountIdDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey CashPosting { get; private set; }
         public VocabularyKey ValidFor { get; private set; }
         public VocabularyKey Cash { get; private set; }
         public VocabularyKey MainAccountId { get; private set; }
         public VocabularyKey MainAccountIdDisplayValue { get; private set; }
-
-
     }
 }

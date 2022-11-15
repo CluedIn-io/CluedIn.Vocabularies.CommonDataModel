@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailLoyaltyRewardPointEntityVocabulary()
         {
-            VocabularyName = "RetailLoyaltyRewardPointEntity";
+            VocabularyName = "Retail Loyalty Reward Point Entity";
             KeyPrefix = "commonDataModel.retailloyaltyrewardpointentity";
             KeySeparator = ".";
             Grouping = "/RetailLoyaltyRewardPointEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 VestingTimeUnit = group.Add(new VocabularyKey(nameof(VestingTimeUnit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VestingTimeValue = group.Add(new VocabularyKey(nameof(VestingTimeValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MaximumLoyaltyRewardPoints = group.Add(new VocabularyKey(nameof(MaximumLoyaltyRewardPoints), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ExpirationTimeUnit { get; private set; }
         public VocabularyKey ExpirationTimeValue { get; private set; }
         public VocabularyKey Redeemable { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey VestingTimeUnit { get; private set; }
         public VocabularyKey VestingTimeValue { get; private set; }
         public VocabularyKey MaximumLoyaltyRewardPoints { get; private set; }
-
-
     }
 }

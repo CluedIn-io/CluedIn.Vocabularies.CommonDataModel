@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FiscalDocumentInstallmentEntityVocabulary()
         {
-            VocabularyName = "FiscalDocumentInstallmentEntity";
+            VocabularyName = "Fiscal Document Installment Entity";
             KeyPrefix = "commonDataModel.fiscaldocumentinstallmententity";
             KeySeparator = ".";
             Grouping = "/FiscalDocumentInstallmentEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FiscalDocumentThirdPartyCNPJorCPF = group.Add(new VocabularyKey(nameof(FiscalDocumentThirdPartyCNPJorCPF), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FiscalDocumentVoucher = group.Add(new VocabularyKey(nameof(FiscalDocumentVoucher), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InstallmentNumber = group.Add(new VocabularyKey(nameof(InstallmentNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Amount { get; private set; }
         public VocabularyKey DueDate { get; private set; }
         public VocabularyKey FiscalDocument { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FiscalDocumentThirdPartyCNPJorCPF { get; private set; }
         public VocabularyKey FiscalDocumentVoucher { get; private set; }
         public VocabularyKey InstallmentNumber { get; private set; }
-
-
     }
 }

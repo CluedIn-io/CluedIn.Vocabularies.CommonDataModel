@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TSTimesheetTableEntityVocabulary()
         {
-            VocabularyName = "TSTimesheetTableEntity";
+            VocabularyName = "TS Timesheet Table Entity";
             KeyPrefix = "commonDataModel.tstimesheettableentity";
             KeySeparator = ".";
             Grouping = "/TSTimesheetTableEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PersonnelNumber = group.Add(new VocabularyKey(nameof(PersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LegalEntity = group.Add(new VocabularyKey(nameof(LegalEntity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ApprovalStatus { get; private set; }
         public VocabularyKey IsWorkflowToBeResubmitted { get; private set; }
         public VocabularyKey StartDate { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PersonnelNumber { get; private set; }
         public VocabularyKey LegalEntity { get; private set; }
         public VocabularyKey Name { get; private set; }
-
-
     }
 }

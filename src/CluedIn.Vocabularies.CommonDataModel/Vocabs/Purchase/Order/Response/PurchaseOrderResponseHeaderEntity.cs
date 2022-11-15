@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchaseOrderResponseHeaderEntityVocabulary()
         {
-            VocabularyName = "PurchaseOrderResponseHeaderEntity";
+            VocabularyName = "Purchase Order Response Header Entity";
             KeyPrefix = "commonDataModel.purchaseorderresponseheaderentity";
             KeySeparator = ".";
             Grouping = "/PurchaseOrderResponseHeaderEntity";
@@ -57,10 +57,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DeliveryAddressZipCode = group.Add(new VocabularyKey(nameof(DeliveryAddressZipCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PurchaseOrderDocumentReference = group.Add(new VocabularyKey(nameof(PurchaseOrderDocumentReference), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RespondingPersonPartyNumber = group.Add(new VocabularyKey(nameof(RespondingPersonPartyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PurchaseOrderResponseLastModificationDateTime { get; private set; }
         public VocabularyKey RespondingDateTime { get; private set; }
         public VocabularyKey ResponseStatus { get; private set; }
@@ -105,7 +103,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DeliveryAddressZipCode { get; private set; }
         public VocabularyKey PurchaseOrderDocumentReference { get; private set; }
         public VocabularyKey RespondingPersonPartyNumber { get; private set; }
-
-
     }
 }

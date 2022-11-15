@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesFormletterPackingSlipFormPrintingConfigurationEntityVocabulary()
         {
-            VocabularyName = "SalesFormletterPackingSlipFormPrintingConfigurationEntity";
+            VocabularyName = "Sales Formletter Packing Slip Form Printing Configuration Entity";
             KeyPrefix = "commonDataModel.salesformletterpackingslipformprintingconfigurationentity";
             KeySeparator = ".";
             Grouping = "/SalesFormletterPackingSlipFormPrintingConfigurationEntity";
@@ -33,10 +33,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsFirstShippingLineDisplayedOnly = group.Add(new VocabularyKey(nameof(IsFirstShippingLineDisplayedOnly), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsDisplayedPackingSlipArchived = group.Add(new VocabularyKey(nameof(IsDisplayedPackingSlipArchived), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BackorderTrackingDisplayRule = group.Add(new VocabularyKey(nameof(BackorderTrackingDisplayRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsInventoryStatusIdDisplayed { get; private set; }
         public VocabularyKey IsItemBatchNumberDisplayed { get; private set; }
         public VocabularyKey IsItemSerialNumberDisplayed { get; private set; }
@@ -57,7 +55,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsFirstShippingLineDisplayedOnly { get; private set; }
         public VocabularyKey IsDisplayedPackingSlipArchived { get; private set; }
         public VocabularyKey BackorderTrackingDisplayRule { get; private set; }
-
-
     }
 }

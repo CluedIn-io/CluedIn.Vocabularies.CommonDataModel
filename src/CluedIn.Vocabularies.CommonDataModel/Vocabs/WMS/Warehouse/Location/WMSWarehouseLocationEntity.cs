@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WMSWarehouseLocationEntityVocabulary()
         {
-            VocabularyName = "WMSWarehouseLocationEntity";
+            VocabularyName = "WMS Warehouse Location Entity";
             KeyPrefix = "commonDataModel.wmswarehouselocationentity";
             KeySeparator = ".";
             Grouping = "/WMSWarehouseLocationEntity";
@@ -57,10 +57,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsLocationActivityDateTimeMaintained = group.Add(new VocabularyKey(nameof(IsLocationActivityDateTimeMaintained), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsLocationStatusMaintained = group.Add(new VocabularyKey(nameof(IsLocationStatusMaintained), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsDefaultQualityMaintenanceWarehouseLocation = group.Add(new VocabularyKey(nameof(IsDefaultQualityMaintenanceWarehouseLocation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BinId { get; private set; }
         public VocabularyKey CheckDigits { get; private set; }
         public VocabularyKey DestinationWarehouseLocationId { get; private set; }
@@ -105,7 +103,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsLocationActivityDateTimeMaintained { get; private set; }
         public VocabularyKey IsLocationStatusMaintained { get; private set; }
         public VocabularyKey IsDefaultQualityMaintenanceWarehouseLocation { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSFreightBillTypeAssignmentEntityVocabulary()
         {
-            VocabularyName = "TMSFreightBillTypeAssignmentEntity";
+            VocabularyName = "TMS Freight Bill Type Assignment Entity";
             KeyPrefix = "commonDataModel.tmsfreightbilltypeassignmententity";
             KeySeparator = ".";
             Grouping = "/TMSFreightBillTypeAssignmentEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WarehouseId = group.Add(new VocabularyKey(nameof(WarehouseId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OperationalSiteId = group.Add(new VocabularyKey(nameof(OperationalSiteId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransportationModeCode = group.Add(new VocabularyKey(nameof(TransportationModeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ShippingCarrierId { get; private set; }
         public VocabularyKey ProductMovementDirectionRule { get; private set; }
         public VocabularyKey FreightBillTypeId { get; private set; }
         public VocabularyKey WarehouseId { get; private set; }
         public VocabularyKey OperationalSiteId { get; private set; }
         public VocabularyKey TransportationModeCode { get; private set; }
-
-
     }
 }

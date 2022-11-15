@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CostSheetNodeEntityVocabulary()
         {
-            VocabularyName = "CostSheetNodeEntity";
+            VocabularyName = "Cost Sheet Node Entity";
             KeyPrefix = "commonDataModel.costsheetnodeentity";
             KeySeparator = ".";
             Grouping = "/CostSheetNodeEntity";
@@ -39,10 +39,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AbsorptionBasisNodeName = group.Add(new VocabularyKey(nameof(AbsorptionBasisNodeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SurchargeNodeAbsorptionBasisSubtype = group.Add(new VocabularyKey(nameof(SurchargeNodeAbsorptionBasisSubtype), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RateNodeAbsorptionBasisSubtype = group.Add(new VocabularyKey(nameof(RateNodeAbsorptionBasisSubtype), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsCalculationFactorSpecifiedPerItem { get; private set; }
         public VocabularyKey RateNodeSubtype { get; private set; }
         public VocabularyKey SurchargeNodeSubtype { get; private set; }
@@ -69,7 +67,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AbsorptionBasisNodeName { get; private set; }
         public VocabularyKey SurchargeNodeAbsorptionBasisSubtype { get; private set; }
         public VocabularyKey RateNodeAbsorptionBasisSubtype { get; private set; }
-
-
     }
 }

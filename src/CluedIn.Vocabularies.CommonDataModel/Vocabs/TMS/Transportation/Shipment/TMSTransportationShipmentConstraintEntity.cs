@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationShipmentConstraintEntityVocabulary()
         {
-            VocabularyName = "TMSTransportationShipmentConstraintEntity";
+            VocabularyName = "TMS Transportation Shipment Constraint Entity";
             KeyPrefix = "commonDataModel.tmstransportationshipmentconstraintentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationShipmentConstraintEntity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OrderingVendorAccountNumber = group.Add(new VocabularyKey(nameof(OrderingVendorAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MaximumWeightKilograms = group.Add(new VocabularyKey(nameof(MaximumWeightKilograms), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MinimumWeightKilograms = group.Add(new VocabularyKey(nameof(MinimumWeightKilograms), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ConstraintActionMode { get; private set; }
         public VocabularyKey ShippingCarrierId { get; private set; }
         public VocabularyKey ShippingCarrierServiceId { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OrderingVendorAccountNumber { get; private set; }
         public VocabularyKey MaximumWeightKilograms { get; private set; }
         public VocabularyKey MinimumWeightKilograms { get; private set; }
-
-
     }
 }

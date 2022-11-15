@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailInfocodeCategorySpecificEntityVocabulary()
         {
-            VocabularyName = "RetailInfocodeCategorySpecificEntity";
+            VocabularyName = "Retail Infocode Category Specific Entity";
             KeyPrefix = "commonDataModel.retailinfocodecategoryspecificentity";
             KeySeparator = ".";
             Grouping = "/RetailInfocodeCategorySpecificEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 InputRequired = group.Add(new VocabularyKey(nameof(InputRequired), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WhenRequired = group.Add(new VocabularyKey(nameof(WhenRequired), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Sequence = group.Add(new VocabularyKey(nameof(Sequence), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductCategoryHierarchyName { get; private set; }
         public VocabularyKey CategoryName { get; private set; }
         public VocabularyKey InfoCodeNumber { get; private set; }
         public VocabularyKey InputRequired { get; private set; }
         public VocabularyKey WhenRequired { get; private set; }
         public VocabularyKey Sequence { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CurrencyRevaluationAccountV2EntityVocabulary()
         {
-            VocabularyName = "CurrencyRevaluationAccountV2Entity";
+            VocabularyName = "Currency Revaluation Account V2 Entity";
             KeyPrefix = "commonDataModel.currencyrevaluationaccountv2entity";
             KeySeparator = ".";
             Grouping = "/CurrencyRevaluationAccountV2Entity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ExchAdjTaxableType = group.Add(new VocabularyKey(nameof(ExchAdjTaxableType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RealizedTaxMainAccountId = group.Add(new VocabularyKey(nameof(RealizedTaxMainAccountId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RealizedTaxMainAccountIdDisplayValue = group.Add(new VocabularyKey(nameof(RealizedTaxMainAccountIdDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Posting { get; private set; }
         public VocabularyKey CurrencyCode { get; private set; }
         public VocabularyKey LegalEntity { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ExchAdjTaxableType { get; private set; }
         public VocabularyKey RealizedTaxMainAccountId { get; private set; }
         public VocabularyKey RealizedTaxMainAccountIdDisplayValue { get; private set; }
-
-
     }
 }

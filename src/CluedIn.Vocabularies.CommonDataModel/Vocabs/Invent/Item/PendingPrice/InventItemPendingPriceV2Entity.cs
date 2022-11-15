@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventItemPendingPriceV2EntityVocabulary()
         {
-            VocabularyName = "InventItemPendingPriceV2Entity";
+            VocabularyName = "Invent Item Pending Price V2 Entity";
             KeyPrefix = "commonDataModel.inventitempendingpricev2entity";
             KeySeparator = ".";
             Grouping = "/InventItemPendingPriceV2Entity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductSizeId = group.Add(new VocabularyKey(nameof(ProductSizeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductStyleId = group.Add(new VocabularyKey(nameof(ProductStyleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductVersionId = group.Add(new VocabularyKey(nameof(ProductVersionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FromDate { get; private set; }
         public VocabularyKey ItemNumber { get; private set; }
         public VocabularyKey FixedPriceCharges { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProductSizeId { get; private set; }
         public VocabularyKey ProductStyleId { get; private set; }
         public VocabularyKey ProductVersionId { get; private set; }
-
-
     }
 }

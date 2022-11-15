@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailReplenishmentRuleLineV2EntityVocabulary()
         {
-            VocabularyName = "RetailReplenishmentRuleLineV2Entity";
+            VocabularyName = "Retail Replenishment Rule Line V2 Entity";
             KeyPrefix = "commonDataModel.retailreplenishmentrulelinev2entity";
             KeySeparator = ".";
             Grouping = "/RetailReplenishmentRuleLineV2Entity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Percent = group.Add(new VocabularyKey(nameof(Percent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultWeight = group.Add(new VocabularyKey(nameof(DefaultWeight), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultPercent = group.Add(new VocabularyKey(nameof(DefaultPercent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ReplenishmentRule { get; private set; }
         public VocabularyKey Type { get; private set; }
         public VocabularyKey RelationId { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Percent { get; private set; }
         public VocabularyKey DefaultWeight { get; private set; }
         public VocabularyKey DefaultPercent { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventItemPriceComparisonStorageEntityVocabulary()
         {
-            VocabularyName = "InventItemPriceComparisonStorageEntity";
+            VocabularyName = "Invent Item Price Comparison Storage Entity";
             KeyPrefix = "commonDataModel.inventitempricecomparisonstorageentity";
             KeySeparator = ".";
             Grouping = "/InventItemPriceComparisonStorageEntity";
@@ -50,10 +50,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CompareToUnitPrice = group.Add(new VocabularyKey(nameof(CompareToUnitPrice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NetChangeUnitPrice = group.Add(new VocabularyKey(nameof(NetChangeUnitPrice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NetChangeOnhandValue = group.Add(new VocabularyKey(nameof(NetChangeOnhandValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ExecutionName { get; private set; }
         public VocabularyKey ExecutionTime { get; private set; }
         public VocabularyKey ItemNumber { get; private set; }
@@ -91,7 +89,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CompareToUnitPrice { get; private set; }
         public VocabularyKey NetChangeUnitPrice { get; private set; }
         public VocabularyKey NetChangeOnhandValue { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RTax25DebtPeriodEntityVocabulary()
         {
-            VocabularyName = "RTax25DebtPeriodEntity";
+            VocabularyName = "R Tax 25 Debt Period Entity";
             KeyPrefix = "commonDataModel.rtax25debtperiodentity";
             KeySeparator = ".";
             Grouping = "/RTax25DebtPeriodEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RegisterField = group.Add(new VocabularyKey(nameof(RegisterField), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Percent = group.Add(new VocabularyKey(nameof(Percent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PeriodDebtType { get; private set; }
         public VocabularyKey From { get; private set; }
         public VocabularyKey By { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Description { get; private set; }
         public VocabularyKey RegisterField { get; private set; }
         public VocabularyKey Percent { get; private set; }
-
-
     }
 }

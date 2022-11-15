@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PaymentTermEntityVocabulary()
         {
-            VocabularyName = "PaymentTermEntity";
+            VocabularyName = "Payment Term Entity";
             KeyPrefix = "commonDataModel.paymenttermentity";
             KeySeparator = ".";
             Grouping = "/PaymentTermEntity";
@@ -32,10 +32,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 VendorDueDateUpdatePolicy = group.Add(new VocabularyKey(nameof(VendorDueDateUpdatePolicy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CashPaymentMainAccountIdDisplayValue = group.Add(new VocabularyKey(nameof(CashPaymentMainAccountIdDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PostOffsettingAR = group.Add(new VocabularyKey(nameof(PostOffsettingAR), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AdditionalMonthsForCutoffDate { get; private set; }
         public VocabularyKey IsCashPayment { get; private set; }
         public VocabularyKey CashPaymentMainAccountId { get; private set; }
@@ -55,7 +53,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey VendorDueDateUpdatePolicy { get; private set; }
         public VocabularyKey CashPaymentMainAccountIdDisplayValue { get; private set; }
         public VocabularyKey PostOffsettingAR { get; private set; }
-
-
     }
 }

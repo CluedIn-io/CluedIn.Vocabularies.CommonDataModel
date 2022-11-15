@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public OMTeamTypeEntityVocabulary()
         {
-            VocabularyName = "OMTeamTypeEntity";
+            VocabularyName = "OM Team Type Entity";
             KeyPrefix = "commonDataModel.omteamtypeentity";
             KeySeparator = ".";
             Grouping = "/OMTeamTypeEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsSystemCriterion = group.Add(new VocabularyKey(nameof(IsSystemCriterion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RequiresAXUser = group.Add(new VocabularyKey(nameof(RequiresAXUser), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AllowContact { get; private set; }
         public VocabularyKey AllowContractor { get; private set; }
         public VocabularyKey AllowCustomer { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsSystemCriterion { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey RequiresAXUser { get; private set; }
-
-
     }
 }

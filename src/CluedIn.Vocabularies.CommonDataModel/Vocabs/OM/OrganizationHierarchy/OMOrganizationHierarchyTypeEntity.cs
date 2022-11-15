@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public OMOrganizationHierarchyTypeEntityVocabulary()
         {
-            VocabularyName = "OMOrganizationHierarchyTypeEntity";
+            VocabularyName = "OM Organization Hierarchy Type Entity";
             KeyPrefix = "commonDataModel.omorganizationhierarchytypeentity";
             KeySeparator = ".";
             Grouping = "/OMOrganizationHierarchyTypeEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RelationshipTypeID = group.Add(new VocabularyKey(nameof(RelationshipTypeID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Name { get; private set; }
         public VocabularyKey RelationshipTypeID { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventNonConformanceChargeTypeEntityVocabulary()
         {
-            VocabularyName = "InventNonConformanceChargeTypeEntity";
+            VocabularyName = "Invent Non Conformance Charge Type Entity";
             KeyPrefix = "commonDataModel.inventnonconformancechargetypeentity";
             KeySeparator = ".";
             Grouping = "/InventNonConformanceChargeTypeEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 TypeCode = group.Add(new VocabularyKey(nameof(TypeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TypeDescription = group.Add(new VocabularyKey(nameof(TypeDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TypeCode { get; private set; }
         public VocabularyKey TypeDescription { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TAMTradeAllowanceAgreementMerchandisingEventLumpSumEntityVocabulary()
         {
-            VocabularyName = "TAMTradeAllowanceAgreementMerchandisingEventLumpSumEntity";
+            VocabularyName = "TAM Trade Allowance Agreement Merchandising Event Lump Sum Entity";
             KeyPrefix = "commonDataModel.tamtradeallowanceagreementmerchandisingeventlumpsumentity";
             KeySeparator = ".";
             Grouping = "/TAMTradeAllowanceAgreementMerchandisingEventLumpSumEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CustomerAccountNumber = group.Add(new VocabularyKey(nameof(CustomerAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TradeAllowanceAgreementId = group.Add(new VocabularyKey(nameof(TradeAllowanceAgreementId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TradeAllowanceAgreementMerchandisingEventId = group.Add(new VocabularyKey(nameof(TradeAllowanceAgreementMerchandisingEventId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SuggestedLumpSumAmount { get; private set; }
         public VocabularyKey LumpSumDetails { get; private set; }
         public VocabularyKey ClaimPaymentMethod { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CustomerAccountNumber { get; private set; }
         public VocabularyKey TradeAllowanceAgreementId { get; private set; }
         public VocabularyKey TradeAllowanceAgreementMerchandisingEventId { get; private set; }
-
-
     }
 }

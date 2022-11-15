@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchProductApprovedVendorEntityVocabulary()
         {
-            VocabularyName = "PurchProductApprovedVendorEntity";
+            VocabularyName = "Purch Product Approved Vendor Entity";
             KeyPrefix = "commonDataModel.purchproductapprovedvendorentity";
             KeySeparator = ".";
             Grouping = "/PurchProductApprovedVendorEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ApprovedVendorAccountNumber = group.Add(new VocabularyKey(nameof(ApprovedVendorAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EffectiveDate = group.Add(new VocabularyKey(nameof(EffectiveDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExpirationDate = group.Add(new VocabularyKey(nameof(ExpirationDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ItemNumber { get; private set; }
         public VocabularyKey ApprovedVendorAccountNumber { get; private set; }
         public VocabularyKey EffectiveDate { get; private set; }
         public VocabularyKey ExpirationDate { get; private set; }
-
-
     }
 }

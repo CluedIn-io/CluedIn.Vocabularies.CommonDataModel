@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResCategoryTaxInformationAssignmentEntityVocabulary()
         {
-            VocabularyName = "EcoResCategoryTaxInformationAssignmentEntity";
+            VocabularyName = "Eco Res Category Tax Information Assignment Entity";
             KeyPrefix = "commonDataModel.ecorescategorytaxinformationassignmententity";
             KeySeparator = ".";
             Grouping = "/EcoResCategoryTaxInformationAssignmentEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 HSNCode = group.Add(new VocabularyKey(nameof(HSNCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ServiceAccountingCode = group.Add(new VocabularyKey(nameof(ServiceAccountingCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxRateTypeName = group.Add(new VocabularyKey(nameof(TaxRateTypeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Exempt { get; private set; }
         public VocabularyKey NonGST { get; private set; }
         public VocabularyKey CategoryName { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey HSNCode { get; private set; }
         public VocabularyKey ServiceAccountingCode { get; private set; }
         public VocabularyKey TaxRateTypeName { get; private set; }
-
-
     }
 }

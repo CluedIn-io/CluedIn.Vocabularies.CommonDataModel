@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResProductCategoryHierarchyRoleEntityVocabulary()
         {
-            VocabularyName = "EcoResProductCategoryHierarchyRoleEntity";
+            VocabularyName = "Eco Res Product Category Hierarchy Role Entity";
             KeyPrefix = "commonDataModel.ecoresproductcategoryhierarchyroleentity";
             KeySeparator = ".";
             Grouping = "/EcoResProductCategoryHierarchyRoleEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 HierarchyRole = group.Add(new VocabularyKey(nameof(HierarchyRole), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductCategoryHierarchyName = group.Add(new VocabularyKey(nameof(ProductCategoryHierarchyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey HierarchyRole { get; private set; }
         public VocabularyKey ProductCategoryHierarchyName { get; private set; }
-
-
     }
 }

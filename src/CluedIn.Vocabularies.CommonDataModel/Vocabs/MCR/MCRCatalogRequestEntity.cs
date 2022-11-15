@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRCatalogRequestEntityVocabulary()
         {
-            VocabularyName = "MCRCatalogRequestEntity";
+            VocabularyName = "MCR Catalog Request Entity";
             KeyPrefix = "commonDataModel.mcrcatalogrequestentity";
             KeySeparator = ".";
             Grouping = "/MCRCatalogRequestEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RequestStatus = group.Add(new VocabularyKey(nameof(RequestStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BusinessRelationAccount = group.Add(new VocabularyKey(nameof(BusinessRelationAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CatalogRequestNumber = group.Add(new VocabularyKey(nameof(CatalogRequestNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CatalogDescription { get; private set; }
         public VocabularyKey CustomerAccount { get; private set; }
         public VocabularyKey LogId { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RequestStatus { get; private set; }
         public VocabularyKey BusinessRelationAccount { get; private set; }
         public VocabularyKey CatalogRequestNumber { get; private set; }
-
-
     }
 }

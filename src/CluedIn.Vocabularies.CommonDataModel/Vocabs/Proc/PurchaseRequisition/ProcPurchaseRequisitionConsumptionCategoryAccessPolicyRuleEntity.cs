@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProcPurchaseRequisitionConsumptionCategoryAccessPolicyRuleEntityVocabulary()
         {
-            VocabularyName = "ProcPurchaseRequisitionConsumptionCategoryAccessPolicyRuleEntity";
+            VocabularyName = "Proc Purchase Requisition Consumption Category Access Policy Rule Entity";
             KeyPrefix = "commonDataModel.procpurchaserequisitionconsumptioncategoryaccesspolicyruleentity";
             KeySeparator = ".";
             Grouping = "/ProcPurchaseRequisitionConsumptionCategoryAccessPolicyRuleEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 InstanceRelationType = group.Add(new VocabularyKey(nameof(InstanceRelationType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PolicyRuleName = group.Add(new VocabularyKey(nameof(PolicyRuleName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PurchasingPolicyName = group.Add(new VocabularyKey(nameof(PurchasingPolicyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey ValidTo { get; private set; }
         public VocabularyKey IsParentRuleIncluded { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey InstanceRelationType { get; private set; }
         public VocabularyKey PolicyRuleName { get; private set; }
         public VocabularyKey PurchasingPolicyName { get; private set; }
-
-
     }
 }

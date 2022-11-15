@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public NumberSequenceTableEntityVocabulary()
         {
-            VocabularyName = "NumberSequenceTableEntity";
+            VocabularyName = "Number Sequence Table Entity";
             KeyPrefix = "commonDataModel.numbersequencetableentity";
             KeySeparator = ".";
             Grouping = "/NumberSequenceTableEntity";
@@ -41,10 +41,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ScopeValue = group.Add(new VocabularyKey(nameof(ScopeValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ScopeType = group.Add(new VocabularyKey(nameof(ScopeType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AnnotatedFormat = group.Add(new VocabularyKey(nameof(AnnotatedFormat), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ToALowerNumber { get; private set; }
         public VocabularyKey ToAHigherNumber { get; private set; }
         public VocabularyKey Stopped { get; private set; }
@@ -73,7 +71,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ScopeValue { get; private set; }
         public VocabularyKey ScopeType { get; private set; }
         public VocabularyKey AnnotatedFormat { get; private set; }
-
-
     }
 }

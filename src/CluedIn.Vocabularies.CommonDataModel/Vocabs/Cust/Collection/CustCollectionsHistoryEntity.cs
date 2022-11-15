@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustCollectionsHistoryEntityVocabulary()
         {
-            VocabularyName = "CustCollectionsHistoryEntity";
+            VocabularyName = "Cust Collections History Entity";
             KeyPrefix = "commonDataModel.custcollectionshistoryentity";
             KeySeparator = ".";
             Grouping = "/CustCollectionsHistoryEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Reason = group.Add(new VocabularyKey(nameof(Reason), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReasonComment = group.Add(new VocabularyKey(nameof(ReasonComment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CustDisputeHistoryCreatedDateTime = group.Add(new VocabularyKey(nameof(CustDisputeHistoryCreatedDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CustomerAccountNumber { get; private set; }
         public VocabularyKey AmountCur { get; private set; }
         public VocabularyKey CustTrans { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Reason { get; private set; }
         public VocabularyKey ReasonComment { get; private set; }
         public VocabularyKey CustDisputeHistoryCreatedDateTime { get; private set; }
-
-
     }
 }

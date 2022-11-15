@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TAMTradeAllowanceAgreementHeaderEntityVocabulary()
         {
-            VocabularyName = "TAMTradeAllowanceAgreementHeaderEntity";
+            VocabularyName = "TAM Trade Allowance Agreement Header Entity";
             KeyPrefix = "commonDataModel.tamtradeallowanceagreementheaderentity";
             KeySeparator = ".";
             Grouping = "/TAMTradeAllowanceAgreementHeaderEntity";
@@ -37,10 +37,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WorkflowApprovalStatus = group.Add(new VocabularyKey(nameof(WorkflowApprovalStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OwningWorkerPersonnelNumber = group.Add(new VocabularyKey(nameof(OwningWorkerPersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CustomerAccountNumber = group.Add(new VocabularyKey(nameof(CustomerAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BaseQuantity { get; private set; }
         public VocabularyKey AgreementCurrencyCode { get; private set; }
         public VocabularyKey PromotionLiftPercentage { get; private set; }
@@ -65,7 +63,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WorkflowApprovalStatus { get; private set; }
         public VocabularyKey OwningWorkerPersonnelNumber { get; private set; }
         public VocabularyKey CustomerAccountNumber { get; private set; }
-
-
     }
 }

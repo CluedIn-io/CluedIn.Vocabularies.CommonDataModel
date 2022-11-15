@@ -6,40 +6,36 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LeadScoreModelVocabulary()
         {
-            VocabularyName = "LeadScoreModel";
+            VocabularyName = "Lead Score Model";
             KeyPrefix = "commonDataModel.leadscoremodel";
             KeySeparator = ".";
             Grouping = "/LeadScoreModel";
 
             AddGroup("LeadScoreModel Details", group =>
             {
-                description = group.Add(new VocabularyKey(nameof(description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                insightsPlaceholder = group.Add(new VocabularyKey(nameof(insightsPlaceholder), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                leadscoremodelId = group.Add(new VocabularyKey(nameof(leadscoremodelId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                modelDefinition = group.Add(new VocabularyKey(nameof(modelDefinition), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdName = group.Add(new VocabularyKey(nameof(ownerIdName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdType = group.Add(new VocabularyKey(nameof(ownerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdYomiName = group.Add(new VocabularyKey(nameof(ownerIdYomiName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                entityTarget = group.Add(new VocabularyKey(nameof(entityTarget), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InsightsPlaceholder = group.Add(new VocabularyKey(nameof(InsightsPlaceholder), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LeadscoremodelId = group.Add(new VocabularyKey(nameof(LeadscoremodelId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModelDefinition = group.Add(new VocabularyKey(nameof(ModelDefinition), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdName = group.Add(new VocabularyKey(nameof(OwnerIdName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdType = group.Add(new VocabularyKey(nameof(OwnerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdYomiName = group.Add(new VocabularyKey(nameof(OwnerIdYomiName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EntityTarget = group.Add(new VocabularyKey(nameof(EntityTarget), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey description { get; private set; }
-        public VocabularyKey insightsPlaceholder { get; private set; }
-        public VocabularyKey leadscoremodelId { get; private set; }
-        public VocabularyKey modelDefinition { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey ownerIdName { get; private set; }
-        public VocabularyKey ownerIdType { get; private set; }
-        public VocabularyKey ownerIdYomiName { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-        public VocabularyKey entityTarget { get; private set; }
-
-
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey InsightsPlaceholder { get; private set; }
+        public VocabularyKey LeadscoremodelId { get; private set; }
+        public VocabularyKey ModelDefinition { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OwnerIdName { get; private set; }
+        public VocabularyKey OwnerIdType { get; private set; }
+        public VocabularyKey OwnerIdYomiName { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey EntityTarget { get; private set; }
     }
 }

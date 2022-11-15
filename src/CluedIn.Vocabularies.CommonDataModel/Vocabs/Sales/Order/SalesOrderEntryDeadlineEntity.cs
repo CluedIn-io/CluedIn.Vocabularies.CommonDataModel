@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesOrderEntryDeadlineEntityVocabulary()
         {
-            VocabularyName = "SalesOrderEntryDeadlineEntity";
+            VocabularyName = "Sales Order Entry Deadline Entity";
             KeyPrefix = "commonDataModel.salesorderentrydeadlineentity";
             KeySeparator = ".";
             Grouping = "/SalesOrderEntryDeadlineEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LatestOrderEntryTimeFriday = group.Add(new VocabularyKey(nameof(LatestOrderEntryTimeFriday), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LatestOrderEntryTimeSaturday = group.Add(new VocabularyKey(nameof(LatestOrderEntryTimeSaturday), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LatestOrderEntryTimeSunday = group.Add(new VocabularyKey(nameof(LatestOrderEntryTimeSunday), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DeadlineGroupCode { get; private set; }
         public VocabularyKey SalesOrderEntryDeadlineGroupId { get; private set; }
         public VocabularyKey SiteCode { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LatestOrderEntryTimeFriday { get; private set; }
         public VocabularyKey LatestOrderEntryTimeSaturday { get; private set; }
         public VocabularyKey LatestOrderEntryTimeSunday { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailCrossDockEntityVocabulary()
         {
-            VocabularyName = "RetailCrossDockEntity";
+            VocabularyName = "Retail Cross Dock Entity";
             KeyPrefix = "commonDataModel.retailcrossdockentity";
             KeySeparator = ".";
             Grouping = "/RetailCrossDockEntity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ReplenishmentHierarchyValidTo = group.Add(new VocabularyKey(nameof(ReplenishmentHierarchyValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReplenishmentHierarchyTypeName = group.Add(new VocabularyKey(nameof(ReplenishmentHierarchyTypeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReplenishmentOrganizationPartyNumber = group.Add(new VocabularyKey(nameof(ReplenishmentOrganizationPartyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CrossDockId { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey DistributionType { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ReplenishmentHierarchyValidTo { get; private set; }
         public VocabularyKey ReplenishmentHierarchyTypeName { get; private set; }
         public VocabularyKey ReplenishmentOrganizationPartyNumber { get; private set; }
-
-
     }
 }

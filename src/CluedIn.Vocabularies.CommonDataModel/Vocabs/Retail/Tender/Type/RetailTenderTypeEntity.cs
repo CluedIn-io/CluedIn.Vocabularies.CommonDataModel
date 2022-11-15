@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailTenderTypeEntityVocabulary()
         {
-            VocabularyName = "RetailTenderTypeEntity";
+            VocabularyName = "Retail Tender Type Entity";
             KeyPrefix = "commonDataModel.retailtendertypeentity";
             KeySeparator = ".";
             Grouping = "/RetailTenderTypeEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DefaultFunction = group.Add(new VocabularyKey(nameof(DefaultFunction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PaymentMethodNumber = group.Add(new VocabularyKey(nameof(PaymentMethodNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DefaultFunction { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey PaymentMethodNumber { get; private set; }
-
-
     }
 }

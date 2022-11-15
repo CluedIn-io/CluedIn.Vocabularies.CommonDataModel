@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWaveLabelTemplateV2EntityVocabulary()
         {
-            VocabularyName = "WHSWaveLabelTemplateV2Entity";
+            VocabularyName = "WHS Wave Label Template V2 Entity";
             KeyPrefix = "commonDataModel.whswavelabeltemplatev2entity";
             KeySeparator = ".";
             Grouping = "/WHSWaveLabelTemplateV2Entity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WaveStepCode = group.Add(new VocabularyKey(nameof(WaveStepCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WarehouseId = group.Add(new VocabularyKey(nameof(WarehouseId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WaveLabelTypeId = group.Add(new VocabularyKey(nameof(WaveLabelTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TemplateDescription { get; private set; }
         public VocabularyKey TemplateName { get; private set; }
         public VocabularyKey WorkQuery { get; private set; }
         public VocabularyKey WaveStepCode { get; private set; }
         public VocabularyKey WarehouseId { get; private set; }
         public VocabularyKey WaveLabelTypeId { get; private set; }
-
-
     }
 }

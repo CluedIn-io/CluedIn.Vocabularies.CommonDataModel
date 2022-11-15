@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxInfoManagementOnCustomerEntityVocabulary()
         {
-            VocabularyName = "TaxInfoManagementOnCustomerEntity";
+            VocabularyName = "Tax Info Management On Customer Entity";
             KeyPrefix = "commonDataModel.taxinfomanagementoncustomerentity";
             KeySeparator = ".";
             Grouping = "/TaxInfoManagementOnCustomerEntity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TaxIdentificationNumber = group.Add(new VocabularyKey(nameof(TaxIdentificationNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxAccountNumber = group.Add(new VocabularyKey(nameof(TaxAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RegistrationType = group.Add(new VocabularyKey(nameof(RegistrationType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CustomerId { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey IsPrimary { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TaxIdentificationNumber { get; private set; }
         public VocabularyKey TaxAccountNumber { get; private set; }
         public VocabularyKey RegistrationType { get; private set; }
-
-
     }
 }

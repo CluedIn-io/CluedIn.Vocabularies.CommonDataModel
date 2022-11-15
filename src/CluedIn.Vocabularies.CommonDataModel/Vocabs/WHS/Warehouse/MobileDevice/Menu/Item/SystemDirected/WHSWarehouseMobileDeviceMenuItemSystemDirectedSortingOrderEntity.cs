@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseMobileDeviceMenuItemSystemDirectedSortingOrderEntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseMobileDeviceMenuItemSystemDirectedSortingOrderEntity";
+            VocabularyName = "WHS Warehouse Mobile Device Menu Item System Directed Sorting Order Entity";
             KeyPrefix = "commonDataModel.whswarehousemobiledevicemenuitemsystemdirectedsortingorderentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseMobileDeviceMenuItemSystemDirectedSortingOrderEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SequenceNumber = group.Add(new VocabularyKey(nameof(SequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SortingFieldName = group.Add(new VocabularyKey(nameof(SortingFieldName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SortingOrder = group.Add(new VocabularyKey(nameof(SortingOrder), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WarehouseMobileDeviceMenuItemId { get; private set; }
         public VocabularyKey SequenceNumber { get; private set; }
         public VocabularyKey SortingFieldName { get; private set; }
         public VocabularyKey SortingOrder { get; private set; }
-
-
     }
 }

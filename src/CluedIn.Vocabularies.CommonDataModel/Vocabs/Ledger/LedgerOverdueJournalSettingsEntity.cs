@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerOverdueJournalSettingsEntityVocabulary()
         {
-            VocabularyName = "LedgerOverdueJournalSettingsEntity";
+            VocabularyName = "Ledger Overdue Journal Settings Entity";
             KeyPrefix = "commonDataModel.ledgeroverduejournalsettingsentity";
             KeySeparator = ".";
             Grouping = "/LedgerOverdueJournalSettingsEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PaymTermDays = group.Add(new VocabularyKey(nameof(PaymTermDays), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsValidateEnabled = group.Add(new VocabularyKey(nameof(IsValidateEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineId = group.Add(new VocabularyKey(nameof(LineId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CalculationType { get; private set; }
         public VocabularyKey Condition { get; private set; }
         public VocabularyKey JournalType { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PaymTermDays { get; private set; }
         public VocabularyKey IsValidateEnabled { get; private set; }
         public VocabularyKey LineId { get; private set; }
-
-
     }
 }

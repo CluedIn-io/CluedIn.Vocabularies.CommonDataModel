@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjectParameterEntityVocabulary()
         {
-            VocabularyName = "ProjectParameterEntity";
+            VocabularyName = "Project Parameter Entity";
             KeyPrefix = "commonDataModel.projectparameterentity";
             KeySeparator = ".";
             Grouping = "/ProjectParameterEntity";
@@ -223,10 +223,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TimeServiceVisibilityLineProperty = group.Add(new VocabularyKey(nameof(TimeServiceVisibilityLineProperty), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TimeServiceVisibilitySalesTaxGroup = group.Add(new VocabularyKey(nameof(TimeServiceVisibilitySalesTaxGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AllowSalesOrdersForMultipleFundingSources = group.Add(new VocabularyKey(nameof(AllowSalesOrdersForMultipleFundingSources), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ItemLumpSumAllocationKey { get; private set; }
         public VocabularyKey TermsOfPaymentForHours { get; private set; }
         public VocabularyKey ActualCostAfterEstimateDate { get; private set; }
@@ -437,7 +435,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TimeServiceVisibilityLineProperty { get; private set; }
         public VocabularyKey TimeServiceVisibilitySalesTaxGroup { get; private set; }
         public VocabularyKey AllowSalesOrdersForMultipleFundingSources { get; private set; }
-
-
     }
 }

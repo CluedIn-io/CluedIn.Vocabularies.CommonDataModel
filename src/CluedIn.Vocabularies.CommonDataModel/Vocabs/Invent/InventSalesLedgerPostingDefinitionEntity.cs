@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventSalesLedgerPostingDefinitionEntityVocabulary()
         {
-            VocabularyName = "InventSalesLedgerPostingDefinitionEntity";
+            VocabularyName = "Invent Sales Ledger Posting Definition Entity";
             KeyPrefix = "commonDataModel.inventsalesledgerpostingdefinitionentity";
             KeySeparator = ".";
             Grouping = "/InventSalesLedgerPostingDefinitionEntity";
@@ -35,10 +35,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SiteRelation = group.Add(new VocabularyKey(nameof(SiteRelation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesSiteId = group.Add(new VocabularyKey(nameof(SalesSiteId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CategoryRecordId = group.Add(new VocabularyKey(nameof(CategoryRecordId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InventoryAccountType { get; private set; }
         public VocabularyKey MainAccountIdDisplayValue { get; private set; }
         public VocabularyKey ItemNumber { get; private set; }
@@ -61,7 +59,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SiteRelation { get; private set; }
         public VocabularyKey SalesSiteId { get; private set; }
         public VocabularyKey CategoryRecordId { get; private set; }
-
-
     }
 }

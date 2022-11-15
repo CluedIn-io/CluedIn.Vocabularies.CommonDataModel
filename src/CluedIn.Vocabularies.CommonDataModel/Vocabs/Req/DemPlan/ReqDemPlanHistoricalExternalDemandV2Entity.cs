@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReqDemPlanHistoricalExternalDemandV2EntityVocabulary()
         {
-            VocabularyName = "ReqDemPlanHistoricalExternalDemandV2Entity";
+            VocabularyName = "Req Dem Plan Historical External Demand V2 Entity";
             KeyPrefix = "commonDataModel.reqdemplanhistoricalexternaldemandv2entity";
             KeySeparator = ".";
             Grouping = "/ReqDemPlanHistoricalExternalDemandV2Entity";
@@ -32,10 +32,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DataSourceRecId = group.Add(new VocabularyKey(nameof(DataSourceRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DataSourceDescription = group.Add(new VocabularyKey(nameof(DataSourceDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DataSourceType = group.Add(new VocabularyKey(nameof(DataSourceType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CustomerAddressCountryRegionId { get; private set; }
         public VocabularyKey CustomerAddressStateId { get; private set; }
         public VocabularyKey CustomerGroupId { get; private set; }
@@ -55,7 +53,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DataSourceRecId { get; private set; }
         public VocabularyKey DataSourceDescription { get; private set; }
         public VocabularyKey DataSourceType { get; private set; }
-
-
     }
 }

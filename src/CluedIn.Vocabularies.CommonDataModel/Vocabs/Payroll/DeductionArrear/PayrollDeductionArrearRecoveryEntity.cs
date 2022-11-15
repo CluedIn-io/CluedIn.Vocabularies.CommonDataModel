@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollDeductionArrearRecoveryEntityVocabulary()
         {
-            VocabularyName = "PayrollDeductionArrearRecoveryEntity";
+            VocabularyName = "Payroll Deduction Arrear Recovery Entity";
             KeyPrefix = "commonDataModel.payrolldeductionarrearrecoveryentity";
             KeySeparator = ".";
             Grouping = "/PayrollDeductionArrearRecoveryEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RecoveryCreatedBy = group.Add(new VocabularyKey(nameof(RecoveryCreatedBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RecoveryCreatedDateTime = group.Add(new VocabularyKey(nameof(RecoveryCreatedDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BenefitId = group.Add(new VocabularyKey(nameof(BenefitId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PayStatementNumber { get; private set; }
         public VocabularyKey AmountInTransactionCurrency { get; private set; }
         public VocabularyKey ArrearsTransaction { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RecoveryCreatedBy { get; private set; }
         public VocabularyKey RecoveryCreatedDateTime { get; private set; }
         public VocabularyKey BenefitId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DocuTypeEntityVocabulary()
         {
-            VocabularyName = "DocuTypeEntity";
+            VocabularyName = "Docu Type Entity";
             KeyPrefix = "commonDataModel.docutypeentity";
             KeySeparator = ".";
             Grouping = "/DocuTypeEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Site = group.Add(new VocabularyKey(nameof(Site), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ActionClassId = group.Add(new VocabularyKey(nameof(ActionClassId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FolderPath = group.Add(new VocabularyKey(nameof(FolderPath), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ActionClassName { get; private set; }
         public VocabularyKey DocuStructureType { get; private set; }
         public VocabularyKey FilePlace { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Site { get; private set; }
         public VocabularyKey ActionClassId { get; private set; }
         public VocabularyKey FolderPath { get; private set; }
-
-
     }
 }

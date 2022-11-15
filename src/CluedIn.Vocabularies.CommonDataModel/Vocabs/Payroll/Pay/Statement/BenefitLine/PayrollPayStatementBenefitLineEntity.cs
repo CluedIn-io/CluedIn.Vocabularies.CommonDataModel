@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollPayStatementBenefitLineEntityVocabulary()
         {
-            VocabularyName = "PayrollPayStatementBenefitLineEntity";
+            VocabularyName = "Payroll Pay Statement Benefit Line Entity";
             KeyPrefix = "commonDataModel.payrollpaystatementbenefitlineentity";
             KeySeparator = ".";
             Grouping = "/PayrollPayStatementBenefitLineEntity";
@@ -41,10 +41,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ReversedPayStatementNumber = group.Add(new VocabularyKey(nameof(ReversedPayStatementNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReversedPayStatement = group.Add(new VocabularyKey(nameof(ReversedPayStatement), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReversedPayStatementLineNum = group.Add(new VocabularyKey(nameof(ReversedPayStatementLineNum), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AmountInTransactionCurrency { get; private set; }
         public VocabularyKey AccountingDate { get; private set; }
         public VocabularyKey TemplateId { get; private set; }
@@ -73,7 +71,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ReversedPayStatementNumber { get; private set; }
         public VocabularyKey ReversedPayStatement { get; private set; }
         public VocabularyKey ReversedPayStatementLineNum { get; private set; }
-
-
     }
 }

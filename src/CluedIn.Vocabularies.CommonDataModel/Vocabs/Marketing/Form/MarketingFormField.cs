@@ -6,62 +6,58 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MarketingFormFieldVocabulary()
         {
-            VocabularyName = "MarketingFormField";
+            VocabularyName = "Marketing Form Field";
             KeyPrefix = "commonDataModel.marketingformfield";
             KeySeparator = ".";
             Grouping = "/MarketingFormField";
 
             AddGroup("MarketingFormField Details", group =>
             {
-                contactMapping = group.Add(new VocabularyKey(nameof(contactMapping), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                defaultformlabel = group.Add(new VocabularyKey(nameof(defaultformlabel), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                defaultformplaceholder = group.Add(new VocabularyKey(nameof(defaultformplaceholder), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                marketingFormFieldId = group.Add(new VocabularyKey(nameof(marketingFormFieldId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                marketingformfieldtype = group.Add(new VocabularyKey(nameof(marketingformfieldtype), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                format = group.Add(new VocabularyKey(nameof(format), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                leadMapping = group.Add(new VocabularyKey(nameof(leadMapping), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                renderas = group.Add(new VocabularyKey(nameof(renderas), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdName = group.Add(new VocabularyKey(nameof(ownerIdName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdType = group.Add(new VocabularyKey(nameof(ownerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdYomiName = group.Add(new VocabularyKey(nameof(ownerIdYomiName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                marketingProvided = group.Add(new VocabularyKey(nameof(marketingProvided), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                contactmappingTarget = group.Add(new VocabularyKey(nameof(contactmappingTarget), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                leadmappingTarget = group.Add(new VocabularyKey(nameof(leadmappingTarget), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                lookupTarget = group.Add(new VocabularyKey(nameof(lookupTarget), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                prototypeAttribute = group.Add(new VocabularyKey(nameof(prototypeAttribute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                prototypeEntity = group.Add(new VocabularyKey(nameof(prototypeEntity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                prototypeTarget = group.Add(new VocabularyKey(nameof(prototypeTarget), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                publicVisibility = group.Add(new VocabularyKey(nameof(publicVisibility), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                ContactMapping = group.Add(new VocabularyKey(nameof(ContactMapping), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Defaultformlabel = group.Add(new VocabularyKey(nameof(Defaultformlabel), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Defaultformplaceholder = group.Add(new VocabularyKey(nameof(Defaultformplaceholder), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MarketingFormFieldId = group.Add(new VocabularyKey(nameof(MarketingFormFieldId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Marketingformfieldtype = group.Add(new VocabularyKey(nameof(Marketingformfieldtype), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Format = group.Add(new VocabularyKey(nameof(Format), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LeadMapping = group.Add(new VocabularyKey(nameof(LeadMapping), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Renderas = group.Add(new VocabularyKey(nameof(Renderas), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdName = group.Add(new VocabularyKey(nameof(OwnerIdName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdType = group.Add(new VocabularyKey(nameof(OwnerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdYomiName = group.Add(new VocabularyKey(nameof(OwnerIdYomiName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MarketingProvided = group.Add(new VocabularyKey(nameof(MarketingProvided), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ContactmappingTarget = group.Add(new VocabularyKey(nameof(ContactmappingTarget), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LeadmappingTarget = group.Add(new VocabularyKey(nameof(LeadmappingTarget), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LookupTarget = group.Add(new VocabularyKey(nameof(LookupTarget), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PrototypeAttribute = group.Add(new VocabularyKey(nameof(PrototypeAttribute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PrototypeEntity = group.Add(new VocabularyKey(nameof(PrototypeEntity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PrototypeTarget = group.Add(new VocabularyKey(nameof(PrototypeTarget), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PublicVisibility = group.Add(new VocabularyKey(nameof(PublicVisibility), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey contactMapping { get; private set; }
-        public VocabularyKey defaultformlabel { get; private set; }
-        public VocabularyKey defaultformplaceholder { get; private set; }
-        public VocabularyKey marketingFormFieldId { get; private set; }
-        public VocabularyKey marketingformfieldtype { get; private set; }
-        public VocabularyKey format { get; private set; }
-        public VocabularyKey leadMapping { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey renderas { get; private set; }
-        public VocabularyKey ownerIdName { get; private set; }
-        public VocabularyKey ownerIdType { get; private set; }
-        public VocabularyKey ownerIdYomiName { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-        public VocabularyKey marketingProvided { get; private set; }
-        public VocabularyKey contactmappingTarget { get; private set; }
-        public VocabularyKey leadmappingTarget { get; private set; }
-        public VocabularyKey lookupTarget { get; private set; }
-        public VocabularyKey prototypeAttribute { get; private set; }
-        public VocabularyKey prototypeEntity { get; private set; }
-        public VocabularyKey prototypeTarget { get; private set; }
-        public VocabularyKey publicVisibility { get; private set; }
-
-
+        public VocabularyKey ContactMapping { get; private set; }
+        public VocabularyKey Defaultformlabel { get; private set; }
+        public VocabularyKey Defaultformplaceholder { get; private set; }
+        public VocabularyKey MarketingFormFieldId { get; private set; }
+        public VocabularyKey Marketingformfieldtype { get; private set; }
+        public VocabularyKey Format { get; private set; }
+        public VocabularyKey LeadMapping { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey Renderas { get; private set; }
+        public VocabularyKey OwnerIdName { get; private set; }
+        public VocabularyKey OwnerIdType { get; private set; }
+        public VocabularyKey OwnerIdYomiName { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey MarketingProvided { get; private set; }
+        public VocabularyKey ContactmappingTarget { get; private set; }
+        public VocabularyKey LeadmappingTarget { get; private set; }
+        public VocabularyKey LookupTarget { get; private set; }
+        public VocabularyKey PrototypeAttribute { get; private set; }
+        public VocabularyKey PrototypeEntity { get; private set; }
+        public VocabularyKey PrototypeTarget { get; private set; }
+        public VocabularyKey PublicVisibility { get; private set; }
     }
 }

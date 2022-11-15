@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerAccrualSchemesEntityVocabulary()
         {
-            VocabularyName = "LedgerAccrualSchemesEntity";
+            VocabularyName = "Ledger Accrual Schemes Entity";
             KeyPrefix = "commonDataModel.ledgeraccrualschemesentity";
             KeySeparator = ".";
             Grouping = "/LedgerAccrualSchemesEntity";
@@ -46,10 +46,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 NumberSequenceTable = group.Add(new VocabularyKey(nameof(NumberSequenceTable), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CalendarPeriodFrequency = group.Add(new VocabularyKey(nameof(CalendarPeriodFrequency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FiscalPeriodFrequency = group.Add(new VocabularyKey(nameof(FiscalPeriodFrequency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccrualIdentification { get; private set; }
         public VocabularyKey AccrualSchemeDescription { get; private set; }
         public VocabularyKey DebitLedgerDimensionDisplayValue { get; private set; }
@@ -83,7 +81,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey NumberSequenceTable { get; private set; }
         public VocabularyKey CalendarPeriodFrequency { get; private set; }
         public VocabularyKey FiscalPeriodFrequency { get; private set; }
-
-
     }
 }

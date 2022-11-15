@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResProductCategoryAssignmentEntityVocabulary()
         {
-            VocabularyName = "EcoResProductCategoryAssignmentEntity";
+            VocabularyName = "Eco Res Product Category Assignment Entity";
             KeyPrefix = "commonDataModel.ecoresproductcategoryassignmententity";
             KeySeparator = ".";
             Grouping = "/EcoResProductCategoryAssignmentEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductCategoryRecId = group.Add(new VocabularyKey(nameof(ProductCategoryRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductCategoryHierarchyRecId = group.Add(new VocabularyKey(nameof(ProductCategoryHierarchyRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductRecId = group.Add(new VocabularyKey(nameof(ProductRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductNumber { get; private set; }
         public VocabularyKey ProductCategoryHierarchyName { get; private set; }
         public VocabularyKey ProductCategoryName { get; private set; }
         public VocabularyKey ProductCategoryRecId { get; private set; }
         public VocabularyKey ProductCategoryHierarchyRecId { get; private set; }
         public VocabularyKey ProductRecId { get; private set; }
-
-
     }
 }

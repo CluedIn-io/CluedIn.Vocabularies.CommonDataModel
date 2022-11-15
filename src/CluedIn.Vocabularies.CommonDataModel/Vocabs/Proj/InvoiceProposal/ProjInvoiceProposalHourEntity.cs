@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjInvoiceProposalHourEntityVocabulary()
         {
-            VocabularyName = "ProjInvoiceProposalHourEntity";
+            VocabularyName = "Proj Invoice Proposal Hour Entity";
             KeyPrefix = "commonDataModel.projinvoiceproposalhourentity";
             KeySeparator = ".";
             Grouping = "/ProjInvoiceProposalHourEntity";
@@ -30,10 +30,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LineAmount = group.Add(new VocabularyKey(nameof(LineAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineNumber = group.Add(new VocabularyKey(nameof(LineNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IncludedTaxPercentage = group.Add(new VocabularyKey(nameof(IncludedTaxPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InvoiceProposalId { get; private set; }
         public VocabularyKey SalesTaxGroup { get; private set; }
         public VocabularyKey ItemSalesTaxGroup { get; private set; }
@@ -51,7 +49,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LineAmount { get; private set; }
         public VocabularyKey LineNumber { get; private set; }
         public VocabularyKey IncludedTaxPercentage { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public OMOperatingUnitEntityVocabulary()
         {
-            VocabularyName = "OMOperatingUnitEntity";
+            VocabularyName = "OM Operating Unit Entity";
             KeyPrefix = "commonDataModel.omoperatingunitentity";
             KeySeparator = ".";
             Grouping = "/OMOperatingUnitEntity";
@@ -76,10 +76,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ManagerPersonnelNumber = group.Add(new VocabularyKey(nameof(ManagerPersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ManagerName = group.Add(new VocabularyKey(nameof(ManagerName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 HcmWorker = group.Add(new VocabularyKey(nameof(HcmWorker), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Name { get; private set; }
         public VocabularyKey NameAlias { get; private set; }
         public VocabularyKey PartyNumber { get; private set; }
@@ -143,7 +141,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ManagerPersonnelNumber { get; private set; }
         public VocabularyKey ManagerName { get; private set; }
         public VocabularyKey HcmWorker { get; private set; }
-
-
     }
 }

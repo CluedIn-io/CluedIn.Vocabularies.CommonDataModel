@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvReceiptEntityVocabulary()
         {
-            VocabularyName = "TrvReceiptEntity";
+            VocabularyName = "Trv Receipt Entity";
             KeyPrefix = "commonDataModel.trvreceiptentity";
             KeySeparator = ".";
             Grouping = "/TrvReceiptEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Resource = group.Add(new VocabularyKey(nameof(Resource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ActualCompanyId = group.Add(new VocabularyKey(nameof(ActualCompanyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsCreditCardExpense = group.Add(new VocabularyKey(nameof(IsCreditCardExpense), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LegalEntityId { get; private set; }
         public VocabularyKey DocumentId { get; private set; }
         public VocabularyKey Name { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Resource { get; private set; }
         public VocabularyKey ActualCompanyId { get; private set; }
         public VocabularyKey IsCreditCardExpense { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AuditTrailEntityVocabulary()
         {
-            VocabularyName = "AuditTrailEntity";
+            VocabularyName = "Audit Trail Entity";
             KeyPrefix = "commonDataModel.audittrailentity";
             KeySeparator = ".";
             Grouping = "/AuditTrailEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CreatedByUser = group.Add(new VocabularyKey(nameof(CreatedByUser), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CreatedTransactionDateTime = group.Add(new VocabularyKey(nameof(CreatedTransactionDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TransactionId { get; private set; }
         public VocabularyKey TransactionType { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey CreatedByUser { get; private set; }
         public VocabularyKey CreatedTransactionDateTime { get; private set; }
-
-
     }
 }

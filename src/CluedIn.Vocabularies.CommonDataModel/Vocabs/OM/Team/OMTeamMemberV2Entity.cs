@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public OMTeamMemberV2EntityVocabulary()
         {
-            VocabularyName = "OMTeamMemberV2Entity";
+            VocabularyName = "OM Team Member V2 Entity";
             KeyPrefix = "commonDataModel.omteammemberv2entity";
             KeySeparator = ".";
             Grouping = "/OMTeamMemberV2Entity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TeamMemberName = group.Add(new VocabularyKey(nameof(TeamMemberName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TeamMemberPartyNumber = group.Add(new VocabularyKey(nameof(TeamMemberPartyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsTeamLead = group.Add(new VocabularyKey(nameof(IsTeamLead), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ChildParty { get; private set; }
         public VocabularyKey ParentParty { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TeamMemberName { get; private set; }
         public VocabularyKey TeamMemberPartyNumber { get; private set; }
         public VocabularyKey IsTeamLead { get; private set; }
-
-
     }
 }

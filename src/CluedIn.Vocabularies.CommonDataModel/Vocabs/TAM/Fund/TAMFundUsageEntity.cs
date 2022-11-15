@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TAMFundUsageEntityVocabulary()
         {
-            VocabularyName = "TAMFundUsageEntity";
+            VocabularyName = "TAM Fund Usage Entity";
             KeyPrefix = "commonDataModel.tamfundusageentity";
             KeySeparator = ".";
             Grouping = "/TAMFundUsageEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 UsageCode = group.Add(new VocabularyKey(nameof(UsageCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UsageDescription = group.Add(new VocabularyKey(nameof(UsageDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey UsageCode { get; private set; }
         public VocabularyKey UsageDescription { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollBenefitPlanDefaultDimensionEntityVocabulary()
         {
-            VocabularyName = "PayrollBenefitPlanDefaultDimensionEntity";
+            VocabularyName = "Payroll Benefit Plan Default Dimension Entity";
             KeyPrefix = "commonDataModel.payrollbenefitplandefaultdimensionentity";
             KeySeparator = ".";
             Grouping = "/PayrollBenefitPlanDefaultDimensionEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LegalEntityId = group.Add(new VocabularyKey(nameof(LegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BenefitPlanId = group.Add(new VocabularyKey(nameof(BenefitPlanId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultFinancialDimensionsDisplayValue = group.Add(new VocabularyKey(nameof(DefaultFinancialDimensionsDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Plan { get; private set; }
         public VocabularyKey Company { get; private set; }
         public VocabularyKey Category { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LegalEntityId { get; private set; }
         public VocabularyKey BenefitPlanId { get; private set; }
         public VocabularyKey DefaultFinancialDimensionsDisplayValue { get; private set; }
-
-
     }
 }

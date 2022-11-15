@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPurchaseAgreementConfirmationHeaderEntityVocabulary()
         {
-            VocabularyName = "PurchPurchaseAgreementConfirmationHeaderEntity";
+            VocabularyName = "Purch Purchase Agreement Confirmation Header Entity";
             KeyPrefix = "commonDataModel.purchpurchaseagreementconfirmationheaderentity";
             KeySeparator = ".";
             Grouping = "/PurchPurchaseAgreementConfirmationHeaderEntity";
@@ -82,10 +82,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ConfirmationNumber = group.Add(new VocabularyKey(nameof(ConfirmationNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PurchaseAgreementConfirmationNumber = group.Add(new VocabularyKey(nameof(PurchaseAgreementConfirmationNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ConfirmationCreationDateTime = group.Add(new VocabularyKey(nameof(ConfirmationCreationDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BuyingLegalEntityRecId { get; private set; }
         public VocabularyKey BuyingLegalEntityId { get; private set; }
         public VocabularyKey PurchaseAgreementId { get; private set; }
@@ -155,7 +153,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ConfirmationNumber { get; private set; }
         public VocabularyKey PurchaseAgreementConfirmationNumber { get; private set; }
         public VocabularyKey ConfirmationCreationDateTime { get; private set; }
-
-
     }
 }

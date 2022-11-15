@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetRetirementObligationEntityVocabulary()
         {
-            VocabularyName = "AssetRetirementObligationEntity";
+            VocabularyName = "Asset Retirement Obligation Entity";
             KeyPrefix = "commonDataModel.assetretirementobligationentity";
             KeySeparator = ".";
             Grouping = "/AssetRetirementObligationEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DocumentDate = group.Add(new VocabularyKey(nameof(DocumentDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PostingFrequency = group.Add(new VocabularyKey(nameof(PostingFrequency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AssetNumber { get; private set; }
         public VocabularyKey Book { get; private set; }
         public VocabularyKey ServiceLife { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DocumentDate { get; private set; }
         public VocabularyKey PostingFrequency { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

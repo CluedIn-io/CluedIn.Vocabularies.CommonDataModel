@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventInventoryAgingReportStorageEntityVocabulary()
         {
-            VocabularyName = "InventInventoryAgingReportStorageEntity";
+            VocabularyName = "Invent Inventory Aging Report Storage Entity";
             KeyPrefix = "commonDataModel.inventinventoryagingreportstorageentity";
             KeySeparator = ".";
             Grouping = "/InventInventoryAgingReportStorageEntity";
@@ -49,10 +49,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AgingPeriod4Amount = group.Add(new VocabularyKey(nameof(AgingPeriod4Amount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AgingPeriod5Quantity = group.Add(new VocabularyKey(nameof(AgingPeriod5Quantity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AgingPeriod5Amount = group.Add(new VocabularyKey(nameof(AgingPeriod5Amount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ExecutionTime { get; private set; }
         public VocabularyKey ExecutionName { get; private set; }
         public VocabularyKey ProductGroupId { get; private set; }
@@ -89,7 +87,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AgingPeriod4Amount { get; private set; }
         public VocabularyKey AgingPeriod5Quantity { get; private set; }
         public VocabularyKey AgingPeriod5Amount { get; private set; }
-
-
     }
 }

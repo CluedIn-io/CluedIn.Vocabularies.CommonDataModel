@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetAllowTransferRuleEntityVocabulary()
         {
-            VocabularyName = "BudgetAllowTransferRuleEntity";
+            VocabularyName = "Budget Allow Transfer Rule Entity";
             KeyPrefix = "commonDataModel.budgetallowtransferruleentity";
             KeySeparator = ".";
             Grouping = "/BudgetAllowTransferRuleEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DimensionAttributeId = group.Add(new VocabularyKey(nameof(DimensionAttributeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Criterion = group.Add(new VocabularyKey(nameof(Criterion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RuleMemberId = group.Add(new VocabularyKey(nameof(RuleMemberId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LegalEntityId { get; private set; }
         public VocabularyKey BudgetTransferRule { get; private set; }
         public VocabularyKey Description { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DimensionAttributeId { get; private set; }
         public VocabularyKey Criterion { get; private set; }
         public VocabularyKey RuleMemberId { get; private set; }
-
-
     }
 }

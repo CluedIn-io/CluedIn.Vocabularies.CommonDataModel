@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HMIMRegulationEntityVocabulary()
         {
-            VocabularyName = "HMIMRegulationEntity";
+            VocabularyName = "HMIM Regulation Entity";
             KeyPrefix = "commonDataModel.hmimregulationentity";
             KeySeparator = ".";
             Grouping = "/HMIMRegulationEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PrintField = group.Add(new VocabularyKey(nameof(PrintField), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PrintWithPrevious = group.Add(new VocabularyKey(nameof(PrintWithPrevious), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PrintCode = group.Add(new VocabularyKey(nameof(PrintCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RegCode { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey PrintAfter { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PrintField { get; private set; }
         public VocabularyKey PrintWithPrevious { get; private set; }
         public VocabularyKey PrintCode { get; private set; }
-
-
     }
 }

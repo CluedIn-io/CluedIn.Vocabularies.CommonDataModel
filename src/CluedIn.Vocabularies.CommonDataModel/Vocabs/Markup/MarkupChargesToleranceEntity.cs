@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MarkupChargesToleranceEntityVocabulary()
         {
-            VocabularyName = "MarkupChargesToleranceEntity";
+            VocabularyName = "Markup Charges Tolerance Entity";
             KeyPrefix = "commonDataModel.markupchargestoleranceentity";
             KeySeparator = ".";
             Grouping = "/MarkupChargesToleranceEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IntrastatInvoiceValue = group.Add(new VocabularyKey(nameof(IntrastatInvoiceValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IntrastatStatisticalValue = group.Add(new VocabularyKey(nameof(IntrastatStatisticalValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsLetterofCreditEnabled = group.Add(new VocabularyKey(nameof(IsLetterofCreditEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ChargesCode { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey ModuleType { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IntrastatInvoiceValue { get; private set; }
         public VocabularyKey IntrastatStatisticalValue { get; private set; }
         public VocabularyKey IsLetterofCreditEnabled { get; private set; }
-
-
     }
 }

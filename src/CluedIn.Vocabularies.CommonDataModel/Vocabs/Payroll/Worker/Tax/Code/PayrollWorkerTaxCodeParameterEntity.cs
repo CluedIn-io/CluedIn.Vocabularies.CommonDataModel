@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollWorkerTaxCodeParameterEntityVocabulary()
         {
-            VocabularyName = "PayrollWorkerTaxCodeParameterEntity";
+            VocabularyName = "Payroll Worker Tax Code Parameter Entity";
             KeyPrefix = "commonDataModel.payrollworkertaxcodeparameterentity";
             KeySeparator = ".";
             Grouping = "/PayrollWorkerTaxCodeParameterEntity";
@@ -31,10 +31,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TaxCode_Worker_Code = group.Add(new VocabularyKey(nameof(TaxCode_Worker_Code), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxCode_Worker_CountryRegionId = group.Add(new VocabularyKey(nameof(TaxCode_Worker_CountryRegionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkerId = group.Add(new VocabularyKey(nameof(WorkerId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LegalEntity { get; private set; }
         public VocabularyKey TaxCodeParameter { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
@@ -53,7 +51,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TaxCode_Worker_Code { get; private set; }
         public VocabularyKey TaxCode_Worker_CountryRegionId { get; private set; }
         public VocabularyKey WorkerId { get; private set; }
-
-
     }
 }

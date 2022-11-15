@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LogisticsAddressStreetEntityVocabulary()
         {
-            VocabularyName = "LogisticsAddressStreetEntity";
+            VocabularyName = "Logistics Address Street Entity";
             KeyPrefix = "commonDataModel.logisticsaddressstreetentity";
             KeySeparator = ".";
             Grouping = "/LogisticsAddressStreetEntity";
@@ -31,10 +31,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Properties_FK_ZipCode = group.Add(new VocabularyKey(nameof(Properties_FK_ZipCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AddressTypeTable_RU_AddrTypeCode = group.Add(new VocabularyKey(nameof(AddressTypeTable_RU_AddrTypeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ZipCode_FK_ZipCode = group.Add(new VocabularyKey(nameof(ZipCode_FK_ZipCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey City { get; private set; }
         public VocabularyKey CountryRegion { get; private set; }
         public VocabularyKey County { get; private set; }
@@ -53,7 +51,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Properties_FK_ZipCode { get; private set; }
         public VocabularyKey AddressTypeTable_RU_AddrTypeCode { get; private set; }
         public VocabularyKey ZipCode_FK_ZipCode { get; private set; }
-
-
     }
 }

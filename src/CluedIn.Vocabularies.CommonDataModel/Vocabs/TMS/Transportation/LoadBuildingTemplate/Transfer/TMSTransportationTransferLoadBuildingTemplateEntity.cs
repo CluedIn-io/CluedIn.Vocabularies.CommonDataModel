@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationTransferLoadBuildingTemplateEntityVocabulary()
         {
-            VocabularyName = "TMSTransportationTransferLoadBuildingTemplateEntity";
+            VocabularyName = "TMS Transportation Transfer Load Building Template Entity";
             KeyPrefix = "commonDataModel.tmstransportationtransferloadbuildingtemplateentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationTransferLoadBuildingTemplateEntity";
@@ -32,10 +32,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OriginWarehouseId = group.Add(new VocabularyKey(nameof(OriginWarehouseId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransferOrderFilterQuery = group.Add(new VocabularyKey(nameof(TransferOrderFilterQuery), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransportationLoadBuildingStrategyName = group.Add(new VocabularyKey(nameof(TransportationLoadBuildingStrategyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TemplateDescription { get; private set; }
         public VocabularyKey DestinationCountryRegionId { get; private set; }
         public VocabularyKey DestinationFromZipCode { get; private set; }
@@ -55,7 +53,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OriginWarehouseId { get; private set; }
         public VocabularyKey TransferOrderFilterQuery { get; private set; }
         public VocabularyKey TransportationLoadBuildingStrategyName { get; private set; }
-
-
     }
 }

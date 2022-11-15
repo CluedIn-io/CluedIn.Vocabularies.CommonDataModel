@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProcurementProductCategoryVendorAssignmentEntityVocabulary()
         {
-            VocabularyName = "ProcurementProductCategoryVendorAssignmentEntity";
+            VocabularyName = "Procurement Product Category Vendor Assignment Entity";
             KeyPrefix = "commonDataModel.procurementproductcategoryvendorassignmententity";
             KeySeparator = ".";
             Grouping = "/ProcurementProductCategoryVendorAssignmentEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 VendorStatus = group.Add(new VocabularyKey(nameof(VendorStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidFrom = group.Add(new VocabularyKey(nameof(ValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidTo = group.Add(new VocabularyKey(nameof(ValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductCategoryHierarchyName { get; private set; }
         public VocabularyKey ProductCategoryName { get; private set; }
         public VocabularyKey VendorLegalEntityId { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey VendorStatus { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey ValidTo { get; private set; }
-
-
     }
 }

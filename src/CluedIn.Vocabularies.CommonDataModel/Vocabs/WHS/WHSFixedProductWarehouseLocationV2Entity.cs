@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSFixedProductWarehouseLocationV2EntityVocabulary()
         {
-            VocabularyName = "WHSFixedProductWarehouseLocationV2Entity";
+            VocabularyName = "WHS Fixed Product Warehouse Location V2 Entity";
             KeyPrefix = "commonDataModel.whsfixedproductwarehouselocationv2entity";
             KeySeparator = ".";
             Grouping = "/WHSFixedProductWarehouseLocationV2Entity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 InternalVersionId = group.Add(new VocabularyKey(nameof(InternalVersionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WarehouseId = group.Add(new VocabularyKey(nameof(WarehouseId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WarehouseLocationId = group.Add(new VocabularyKey(nameof(WarehouseLocationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ItemNumber { get; private set; }
         public VocabularyKey ProductConfigurationId { get; private set; }
         public VocabularyKey ProductSizeId { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey InternalVersionId { get; private set; }
         public VocabularyKey WarehouseId { get; private set; }
         public VocabularyKey WarehouseLocationId { get; private set; }
-
-
     }
 }

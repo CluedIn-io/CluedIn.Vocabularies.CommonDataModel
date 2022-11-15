@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DMFEntityExecutionParametersEntityVocabulary()
         {
-            VocabularyName = "DMFEntityExecutionParametersEntity";
+            VocabularyName = "DMF Entity Execution Parameters Entity";
             KeyPrefix = "commonDataModel.dmfentityexecutionparametersentity";
             KeySeparator = ".";
             Grouping = "/DMFEntityExecutionParametersEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 EntityName = group.Add(new VocabularyKey(nameof(EntityName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ImportThresholdRecordCount = group.Add(new VocabularyKey(nameof(ImportThresholdRecordCount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NumberOfImportTasks = group.Add(new VocabularyKey(nameof(NumberOfImportTasks), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey EntityName { get; private set; }
         public VocabularyKey ImportThresholdRecordCount { get; private set; }
         public VocabularyKey NumberOfImportTasks { get; private set; }
-
-
     }
 }

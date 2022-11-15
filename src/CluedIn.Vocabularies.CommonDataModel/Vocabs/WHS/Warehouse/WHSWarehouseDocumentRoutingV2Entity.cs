@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseDocumentRoutingV2EntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseDocumentRoutingV2Entity";
+            VocabularyName = "WHS Warehouse Document Routing V2 Entity";
             KeyPrefix = "commonDataModel.whswarehousedocumentroutingv2entity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseDocumentRoutingV2Entity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WorkOrderType = group.Add(new VocabularyKey(nameof(WorkOrderType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FromWarehouseZoneId = group.Add(new VocabularyKey(nameof(FromWarehouseZoneId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ToWarehouseZoneId = group.Add(new VocabularyKey(nameof(ToWarehouseZoneId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ShippingCarrierId { get; private set; }
         public VocabularyKey WarehouseId { get; private set; }
         public VocabularyKey DocumentRoutingName { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WorkOrderType { get; private set; }
         public VocabularyKey FromWarehouseZoneId { get; private set; }
         public VocabularyKey ToWarehouseZoneId { get; private set; }
-
-
     }
 }

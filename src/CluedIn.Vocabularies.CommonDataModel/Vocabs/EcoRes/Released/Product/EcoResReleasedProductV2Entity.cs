@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResReleasedProductV2EntityVocabulary()
         {
-            VocabularyName = "EcoResReleasedProductV2Entity";
+            VocabularyName = "Eco Res Released Product V2 Entity";
             KeyPrefix = "commonDataModel.ecoresreleasedproductv2entity";
             KeySeparator = ".";
             Grouping = "/EcoResReleasedProductV2Entity";
@@ -257,10 +257,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RevRecMedianPriceMaximumTolerance = group.Add(new VocabularyKey(nameof(RevRecMedianPriceMaximumTolerance), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RevRecMedianPriceMinimumTolerance = group.Add(new VocabularyKey(nameof(RevRecMedianPriceMinimumTolerance), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RevRecRevenueRecognitionEnabled = group.Add(new VocabularyKey(nameof(RevRecRevenueRecognitionEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductType { get; private set; }
         public VocabularyKey ProductSubType { get; private set; }
         public VocabularyKey ServiceType { get; private set; }
@@ -505,7 +503,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RevRecMedianPriceMaximumTolerance { get; private set; }
         public VocabularyKey RevRecMedianPriceMinimumTolerance { get; private set; }
         public VocabularyKey RevRecRevenueRecognitionEnabled { get; private set; }
-
-
     }
 }

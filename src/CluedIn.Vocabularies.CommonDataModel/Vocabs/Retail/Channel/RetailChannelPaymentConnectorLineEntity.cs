@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailChannelPaymentConnectorLineEntityVocabulary()
         {
-            VocabularyName = "RetailChannelPaymentConnectorLineEntity";
+            VocabularyName = "Retail Channel Payment Connector Line Entity";
             KeyPrefix = "commonDataModel.retailchannelpaymentconnectorlineentity";
             KeySeparator = ".";
             Grouping = "/RetailChannelPaymentConnectorLineEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PaymentConnectorName = group.Add(new VocabularyKey(nameof(PaymentConnectorName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PaymentConnectorProperties = group.Add(new VocabularyKey(nameof(PaymentConnectorProperties), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OperatingUnitNumber = group.Add(new VocabularyKey(nameof(OperatingUnitNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey OnlineChannel { get; private set; }
         public VocabularyKey PaymentConnectorName { get; private set; }
         public VocabularyKey PaymentConnectorProperties { get; private set; }
         public VocabularyKey OperatingUnitNumber { get; private set; }
-
-
     }
 }

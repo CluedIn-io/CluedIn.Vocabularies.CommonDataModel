@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResAttributeGroupEntityVocabulary()
         {
-            VocabularyName = "EcoResAttributeGroupEntity";
+            VocabularyName = "Eco Res Attribute Group Entity";
             KeyPrefix = "commonDataModel.ecoresattributegroupentity";
             KeySeparator = ".";
             Grouping = "/EcoResAttributeGroupEntity";
@@ -14,12 +14,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             AddGroup("EcoResAttributeGroupEntity Details", group =>
             {
                 GroupName = group.Add(new VocabularyKey(nameof(GroupName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey GroupName { get; private set; }
-
-
     }
 }

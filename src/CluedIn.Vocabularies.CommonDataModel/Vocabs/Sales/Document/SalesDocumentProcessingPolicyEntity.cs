@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesDocumentProcessingPolicyEntityVocabulary()
         {
-            VocabularyName = "SalesDocumentProcessingPolicyEntity";
+            VocabularyName = "Sales Document Processing Policy Entity";
             KeyPrefix = "commonDataModel.salesdocumentprocessingpolicyentity";
             KeySeparator = ".";
             Grouping = "/SalesDocumentProcessingPolicyEntity";
@@ -41,10 +41,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ExchangeRateDateRule = group.Add(new VocabularyKey(nameof(ExchangeRateDateRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IndependentDeliveryNoteNumbering = group.Add(new VocabularyKey(nameof(IndependentDeliveryNoteNumbering), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsPickingListWarehouseSpecific = group.Add(new VocabularyKey(nameof(IsPickingListWarehouseSpecific), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BillOfLadingGenerationRule { get; private set; }
         public VocabularyKey CreditNoteDateControlRule { get; private set; }
         public VocabularyKey CreditNoteDocumentDateControlRule { get; private set; }
@@ -73,7 +71,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ExchangeRateDateRule { get; private set; }
         public VocabularyKey IndependentDeliveryNoteNumbering { get; private set; }
         public VocabularyKey IsPickingListWarehouseSpecific { get; private set; }
-
-
     }
 }

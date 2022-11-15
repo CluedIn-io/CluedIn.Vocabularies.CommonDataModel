@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailCatalogProductCategoryEntityVocabulary()
         {
-            VocabularyName = "RetailCatalogProductCategoryEntity";
+            VocabularyName = "Retail Catalog Product Category Entity";
             KeyPrefix = "commonDataModel.retailcatalogproductcategoryentity";
             KeySeparator = ".";
             Grouping = "/RetailCatalogProductCategoryEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CatalogProduct = group.Add(new VocabularyKey(nameof(CatalogProduct), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Category = group.Add(new VocabularyKey(nameof(Category), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CategoryHierarchy = group.Add(new VocabularyKey(nameof(CategoryHierarchy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CatalogNumber { get; private set; }
         public VocabularyKey DisplayProductNumber { get; private set; }
         public VocabularyKey CategoryName { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CatalogProduct { get; private set; }
         public VocabularyKey Category { get; private set; }
         public VocabularyKey CategoryHierarchy { get; private set; }
-
-
     }
 }

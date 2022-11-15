@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ACOCostCenterTypeEntityVocabulary()
         {
-            VocabularyName = "ACOCostCenterTypeEntity";
+            VocabularyName = "ACO Cost Center Type Entity";
             KeyPrefix = "commonDataModel.acocostcentertypeentity";
             KeySeparator = ".";
             Grouping = "/ACOCostCenterTypeEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Value = group.Add(new VocabularyKey(nameof(Value), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EntityInstance = group.Add(new VocabularyKey(nameof(EntityInstance), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Key = group.Add(new VocabularyKey(nameof(Key), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CostType { get; private set; }
         public VocabularyKey DimensionAttributeValue { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey Value { get; private set; }
         public VocabularyKey EntityInstance { get; private set; }
         public VocabularyKey Key { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AgingPeriodDefinitionEntityVocabulary()
         {
-            VocabularyName = "AgingPeriodDefinitionEntity";
+            VocabularyName = "Aging Period Definition Entity";
             KeyPrefix = "commonDataModel.agingperioddefinitionentity";
             KeySeparator = ".";
             Grouping = "/AgingPeriodDefinitionEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Unit = group.Add(new VocabularyKey(nameof(Unit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Interval = group.Add(new VocabularyKey(nameof(Interval), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AgingIndicator = group.Add(new VocabularyKey(nameof(AgingIndicator), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AgingPeriodDefinition { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey PrintDirection { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Unit { get; private set; }
         public VocabularyKey Interval { get; private set; }
         public VocabularyKey AgingIndicator { get; private set; }
-
-
     }
 }

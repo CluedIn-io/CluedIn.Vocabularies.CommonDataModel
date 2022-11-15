@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankAccountTrapEntityVocabulary()
         {
-            VocabularyName = "BankAccountTrapEntity";
+            VocabularyName = "Bank Account Trap Entity";
             KeyPrefix = "commonDataModel.bankaccounttrapentity";
             KeySeparator = ".";
             Grouping = "/BankAccountTrapEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 BankAccountNumber = group.Add(new VocabularyKey(nameof(BankAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BankAccountNumber { get; private set; }
         public VocabularyKey Name { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationStatusMasterEntityVocabulary()
         {
-            VocabularyName = "TMSTransportationStatusMasterEntity";
+            VocabularyName = "TMS Transportation Status Master Entity";
             KeyPrefix = "commonDataModel.tmstransportationstatusmasterentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationStatusMasterEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TransportationType = group.Add(new VocabularyKey(nameof(TransportationType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MasterName = group.Add(new VocabularyKey(nameof(MasterName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MasterCode = group.Add(new VocabularyKey(nameof(MasterCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey MasterDescription { get; private set; }
         public VocabularyKey TransportationType { get; private set; }
         public VocabularyKey MasterName { get; private set; }
         public VocabularyKey MasterCode { get; private set; }
-
-
     }
 }

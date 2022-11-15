@@ -6,46 +6,42 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DefaultSettingsVocabulary()
         {
-            VocabularyName = "DefaultSettings";
+            VocabularyName = "Default Settings";
             KeyPrefix = "commonDataModel.defaultsettings";
             KeySeparator = ".";
             Grouping = "/DefaultSettings";
 
             AddGroup("DefaultSettings Details", group =>
             {
-                @default = group.Add(new VocabularyKey(nameof(@default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                defaultmarketingsettingId = group.Add(new VocabularyKey(nameof(defaultmarketingsettingId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                thankyoupagesource = group.Add(new VocabularyKey(nameof(thankyoupagesource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                defaultmarketingthankyouurldoi = group.Add(new VocabularyKey(nameof(defaultmarketingthankyouurldoi), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                defaultmarketingthankyouurl = group.Add(new VocabularyKey(nameof(defaultmarketingthankyouurl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                defaultTimeZone = group.Add(new VocabularyKey(nameof(defaultTimeZone), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                enableDoubleOptIn = group.Add(new VocabularyKey(nameof(enableDoubleOptIn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                enableLitmusIntegration = group.Add(new VocabularyKey(nameof(enableLitmusIntegration), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                bypassEmailDeduplication = group.Add(new VocabularyKey(nameof(bypassEmailDeduplication), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                defaultemailfromemail = group.Add(new VocabularyKey(nameof(defaultemailfromemail), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                defaultemailfromName = group.Add(new VocabularyKey(nameof(defaultemailfromName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                @Default = group.Add(new VocabularyKey(nameof(@Default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DefaultmarketingsettingId = group.Add(new VocabularyKey(nameof(DefaultmarketingsettingId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Thankyoupagesource = group.Add(new VocabularyKey(nameof(Thankyoupagesource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Defaultmarketingthankyouurldoi = group.Add(new VocabularyKey(nameof(Defaultmarketingthankyouurldoi), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Defaultmarketingthankyouurl = group.Add(new VocabularyKey(nameof(Defaultmarketingthankyouurl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DefaultTimeZone = group.Add(new VocabularyKey(nameof(DefaultTimeZone), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EnableDoubleOptIn = group.Add(new VocabularyKey(nameof(EnableDoubleOptIn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EnableLitmusIntegration = group.Add(new VocabularyKey(nameof(EnableLitmusIntegration), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BypassEmailDeduplication = group.Add(new VocabularyKey(nameof(BypassEmailDeduplication), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Defaultemailfromemail = group.Add(new VocabularyKey(nameof(Defaultemailfromemail), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DefaultemailfromName = group.Add(new VocabularyKey(nameof(DefaultemailfromName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey @default { get; private set; }
-        public VocabularyKey defaultmarketingsettingId { get; private set; }
-        public VocabularyKey thankyoupagesource { get; private set; }
-        public VocabularyKey defaultmarketingthankyouurldoi { get; private set; }
-        public VocabularyKey defaultmarketingthankyouurl { get; private set; }
-        public VocabularyKey defaultTimeZone { get; private set; }
-        public VocabularyKey enableDoubleOptIn { get; private set; }
-        public VocabularyKey enableLitmusIntegration { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey bypassEmailDeduplication { get; private set; }
-        public VocabularyKey defaultemailfromemail { get; private set; }
-        public VocabularyKey defaultemailfromName { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey @Default { get; private set; }
+        public VocabularyKey DefaultmarketingsettingId { get; private set; }
+        public VocabularyKey Thankyoupagesource { get; private set; }
+        public VocabularyKey Defaultmarketingthankyouurldoi { get; private set; }
+        public VocabularyKey Defaultmarketingthankyouurl { get; private set; }
+        public VocabularyKey DefaultTimeZone { get; private set; }
+        public VocabularyKey EnableDoubleOptIn { get; private set; }
+        public VocabularyKey EnableLitmusIntegration { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey BypassEmailDeduplication { get; private set; }
+        public VocabularyKey Defaultemailfromemail { get; private set; }
+        public VocabularyKey DefaultemailfromName { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

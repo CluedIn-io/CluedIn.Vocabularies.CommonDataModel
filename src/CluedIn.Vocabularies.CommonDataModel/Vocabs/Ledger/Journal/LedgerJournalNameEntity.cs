@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerJournalNameEntityVocabulary()
         {
-            VocabularyName = "LedgerJournalNameEntity";
+            VocabularyName = "Ledger Journal Name Entity";
             KeyPrefix = "commonDataModel.ledgerjournalnameentity";
             KeySeparator = ".";
             Grouping = "/LedgerJournalNameEntity";
@@ -49,10 +49,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DefaultFinancialDimensionDisplayValue = group.Add(new VocabularyKey(nameof(DefaultFinancialDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OffsetAccountDisplayValue = group.Add(new VocabularyKey(nameof(OffsetAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RequiresSimulationValidation_IT = group.Add(new VocabularyKey(nameof(RequiresSimulationValidation_IT), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsApprovalActive { get; private set; }
         public VocabularyKey ApprovalUserGroup { get; private set; }
         public VocabularyKey PrivateForUserGroup { get; private set; }
@@ -89,7 +87,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DefaultFinancialDimensionDisplayValue { get; private set; }
         public VocabularyKey OffsetAccountDisplayValue { get; private set; }
         public VocabularyKey RequiresSimulationValidation_IT { get; private set; }
-
-
     }
 }

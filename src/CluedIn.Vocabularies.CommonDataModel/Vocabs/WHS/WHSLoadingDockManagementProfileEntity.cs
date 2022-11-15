@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSLoadingDockManagementProfileEntityVocabulary()
         {
-            VocabularyName = "WHSLoadingDockManagementProfileEntity";
+            VocabularyName = "WHS Loading Dock Management Profile Entity";
             KeyPrefix = "commonDataModel.whsloadingdockmanagementprofileentity";
             KeySeparator = ".";
             Grouping = "/WHSLoadingDockManagementProfileEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProfileDescription = group.Add(new VocabularyKey(nameof(ProfileDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DockLocationUniqueDocumentIndentificationType = group.Add(new VocabularyKey(nameof(DockLocationUniqueDocumentIndentificationType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProfileId = group.Add(new VocabularyKey(nameof(ProfileId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WillWaveAllocateToEmptyDockLocationsOnly { get; private set; }
         public VocabularyKey ProfileDescription { get; private set; }
         public VocabularyKey DockLocationUniqueDocumentIndentificationType { get; private set; }
         public VocabularyKey ProfileId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchaseOrderResponseLineEntityVocabulary()
         {
-            VocabularyName = "PurchaseOrderResponseLineEntity";
+            VocabularyName = "Purchase Order Response Line Entity";
             KeyPrefix = "commonDataModel.purchaseorderresponselineentity";
             KeySeparator = ".";
             Grouping = "/PurchaseOrderResponseLineEntity";
@@ -67,10 +67,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ResponseLineProcessingState = group.Add(new VocabularyKey(nameof(ResponseLineProcessingState), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineAcceptanceStatus = group.Add(new VocabularyKey(nameof(LineAcceptanceStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineCreationSequenceNumber = group.Add(new VocabularyKey(nameof(LineCreationSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PurchaseOrderResponseLastModificationDateTime { get; private set; }
         public VocabularyKey PurchaseOrderNumber { get; private set; }
         public VocabularyKey ExternalItemNumber { get; private set; }
@@ -125,7 +123,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ResponseLineProcessingState { get; private set; }
         public VocabularyKey LineAcceptanceStatus { get; private set; }
         public VocabularyKey LineCreationSequenceNumber { get; private set; }
-
-
     }
 }

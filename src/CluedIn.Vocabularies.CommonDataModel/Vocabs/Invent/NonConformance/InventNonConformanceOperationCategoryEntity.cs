@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventNonConformanceOperationCategoryEntityVocabulary()
         {
-            VocabularyName = "InventNonConformanceOperationCategoryEntity";
+            VocabularyName = "Invent Non Conformance Operation Category Entity";
             KeyPrefix = "commonDataModel.inventnonconformanceoperationcategoryentity";
             KeySeparator = ".";
             Grouping = "/InventNonConformanceOperationCategoryEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CategoryCode = group.Add(new VocabularyKey(nameof(CategoryCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AssociatedOperationType = group.Add(new VocabularyKey(nameof(AssociatedOperationType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CategoryDescription = group.Add(new VocabularyKey(nameof(CategoryDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CategoryCode { get; private set; }
         public VocabularyKey AssociatedOperationType { get; private set; }
         public VocabularyKey CategoryDescription { get; private set; }
-
-
     }
 }

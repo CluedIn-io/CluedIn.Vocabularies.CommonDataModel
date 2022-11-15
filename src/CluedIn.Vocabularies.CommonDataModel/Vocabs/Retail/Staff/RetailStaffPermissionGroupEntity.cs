@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailStaffPermissionGroupEntityVocabulary()
         {
-            VocabularyName = "RetailStaffPermissionGroupEntity";
+            VocabularyName = "Retail Staff Permission Group Entity";
             KeyPrefix = "commonDataModel.retailstaffpermissiongroupentity";
             KeySeparator = ".";
             Grouping = "/RetailStaffPermissionGroupEntity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MaxTotalDiscountPercent = group.Add(new VocabularyKey(nameof(MaxTotalDiscountPercent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PermissionGroupName = group.Add(new VocabularyKey(nameof(PermissionGroupName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PermissionGroupId = group.Add(new VocabularyKey(nameof(PermissionGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsAllowChangeNoVoid { get; private set; }
         public VocabularyKey IsAllowFloatingTenderDeclaration { get; private set; }
         public VocabularyKey IsAllowOpenDrawerOnly { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey MaxTotalDiscountPercent { get; private set; }
         public VocabularyKey PermissionGroupName { get; private set; }
         public VocabularyKey PermissionGroupId { get; private set; }
-
-
     }
 }

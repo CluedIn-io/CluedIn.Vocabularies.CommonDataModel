@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BranchEntityVocabulary()
         {
-            VocabularyName = "BranchEntity";
+            VocabularyName = "Branch Entity";
             KeyPrefix = "commonDataModel.branchentity";
             KeySeparator = ".";
             Grouping = "/BranchEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AlcoholRegulationAuthority = group.Add(new VocabularyKey(nameof(AlcoholRegulationAuthority), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SeparateDivisionID = group.Add(new VocabularyKey(nameof(SeparateDivisionID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Independent = group.Add(new VocabularyKey(nameof(Independent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey VendorAccount { get; private set; }
         public VocabularyKey AlcoholRegulationAuthority { get; private set; }
         public VocabularyKey SeparateDivisionID { get; private set; }
         public VocabularyKey Independent { get; private set; }
-
-
     }
 }

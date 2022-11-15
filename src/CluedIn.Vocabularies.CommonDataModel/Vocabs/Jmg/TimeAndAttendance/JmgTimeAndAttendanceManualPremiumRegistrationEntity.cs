@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgTimeAndAttendanceManualPremiumRegistrationEntityVocabulary()
         {
-            VocabularyName = "JmgTimeAndAttendanceManualPremiumRegistrationEntity";
+            VocabularyName = "Jmg Time And Attendance Manual Premium Registration Entity";
             KeyPrefix = "commonDataModel.jmgtimeandattendancemanualpremiumregistrationentity";
             KeySeparator = ".";
             Grouping = "/JmgTimeAndAttendanceManualPremiumRegistrationEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ActivityRegistrationTransactionId = group.Add(new VocabularyKey(nameof(ActivityRegistrationTransactionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ManualPremiumRegistrationEntryNumber = group.Add(new VocabularyKey(nameof(ManualPremiumRegistrationEntryNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkerPersonnelNumber = group.Add(new VocabularyKey(nameof(WorkerPersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TimeProfileDate { get; private set; }
         public VocabularyKey TimeAndAttendanceManualPremiumId { get; private set; }
         public VocabularyKey UnitPrice { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ActivityRegistrationTransactionId { get; private set; }
         public VocabularyKey ManualPremiumRegistrationEntryNumber { get; private set; }
         public VocabularyKey WorkerPersonnelNumber { get; private set; }
-
-
     }
 }

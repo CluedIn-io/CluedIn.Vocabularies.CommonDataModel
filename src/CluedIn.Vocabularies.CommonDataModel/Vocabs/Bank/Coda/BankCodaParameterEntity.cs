@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankCodaParameterEntityVocabulary()
         {
-            VocabularyName = "BankCodaParameterEntity";
+            VocabularyName = "Bank Coda Parameter Entity";
             KeyPrefix = "commonDataModel.bankcodaparameterentity";
             KeySeparator = ".";
             Grouping = "/BankCodaParameterEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CostAccountDisplayValue = group.Add(new VocabularyKey(nameof(CostAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RevenueAccountDisplayValue = group.Add(new VocabularyKey(nameof(RevenueAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CodaDeviation = group.Add(new VocabularyKey(nameof(CodaDeviation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PrefixNewBankAccounts { get; private set; }
         public VocabularyKey IsAutoCreateNewBankAccounts { get; private set; }
         public VocabularyKey AccountNumber { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CostAccountDisplayValue { get; private set; }
         public VocabularyKey RevenueAccountDisplayValue { get; private set; }
         public VocabularyKey CodaDeviation { get; private set; }
-
-
     }
 }

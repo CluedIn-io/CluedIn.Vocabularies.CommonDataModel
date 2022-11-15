@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JournalizingTransactionPostingDefinitionGeneralLedgerEntityVocabulary()
         {
-            VocabularyName = "JournalizingTransactionPostingDefinitionGeneralLedgerEntity";
+            VocabularyName = "Journalizing Transaction Posting Definition General Ledger Entity";
             KeyPrefix = "commonDataModel.journalizingtransactionpostingdefinitiongeneralledgerentity";
             KeySeparator = ".";
             Grouping = "/JournalizingTransactionPostingDefinitionGeneralLedgerEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PostingDefinition = group.Add(new VocabularyKey(nameof(PostingDefinition), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LedgerTransactionType = group.Add(new VocabularyKey(nameof(LedgerTransactionType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PostingDefinitionId = group.Add(new VocabularyKey(nameof(PostingDefinitionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FundClass { get; private set; }
         public VocabularyKey PostingDefinition { get; private set; }
         public VocabularyKey LedgerTransactionType { get; private set; }
         public VocabularyKey PostingDefinitionId { get; private set; }
-
-
     }
 }

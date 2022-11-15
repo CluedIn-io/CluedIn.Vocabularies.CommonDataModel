@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailInventTableEntityVocabulary()
         {
-            VocabularyName = "RetailInventTableEntity";
+            VocabularyName = "Retail Invent Table Entity";
             KeyPrefix = "commonDataModel.retailinventtableentity";
             KeySeparator = ".";
             Grouping = "/RetailInventTableEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ItemId = group.Add(new VocabularyKey(nameof(ItemId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Product = group.Add(new VocabularyKey(nameof(Product), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EcoResProduct_DisplayProductNumber = group.Add(new VocabularyKey(nameof(EcoResProduct_DisplayProductNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ItemId { get; private set; }
         public VocabularyKey Product { get; private set; }
         public VocabularyKey EcoResProduct_DisplayProductNumber { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventInventoryProfileCustomerVendorLedgerEntityVocabulary()
         {
-            VocabularyName = "InventInventoryProfileCustomerVendorLedgerEntity";
+            VocabularyName = "Invent Inventory Profile Customer Vendor Ledger Entity";
             KeyPrefix = "commonDataModel.inventinventoryprofilecustomervendorledgerentity";
             KeySeparator = ".";
             Grouping = "/InventInventoryProfileCustomerVendorLedgerEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 InventoryProfileId = group.Add(new VocabularyKey(nameof(InventoryProfileId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CustomerPostingProfile = group.Add(new VocabularyKey(nameof(CustomerPostingProfile), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorPostingProfile = group.Add(new VocabularyKey(nameof(VendorPostingProfile), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InventoryProfileRelation { get; private set; }
         public VocabularyKey KindOfActivity { get; private set; }
         public VocabularyKey InventoryProfileId { get; private set; }
         public VocabularyKey CustomerPostingProfile { get; private set; }
         public VocabularyKey VendorPostingProfile { get; private set; }
-
-
     }
 }

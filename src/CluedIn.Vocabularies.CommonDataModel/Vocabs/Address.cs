@@ -13,113 +13,109 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Address Details", group =>
             {
-                parentId = group.Add(new VocabularyKey(nameof(parentId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                parentIdTypeCode = group.Add(new VocabularyKey(nameof(parentIdTypeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                customerAddressId = group.Add(new VocabularyKey(nameof(customerAddressId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                addressNumber = group.Add(new VocabularyKey(nameof(addressNumber), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
-                objectTypeCode = group.Add(new VocabularyKey(nameof(objectTypeCode), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
-                objectTypeCode_display = group.Add(new VocabularyKey(nameof(objectTypeCode_display), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                addressTypeCode = group.Add(new VocabularyKey(nameof(addressTypeCode), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
-                addressTypeCode_display = group.Add(new VocabularyKey(nameof(addressTypeCode_display), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                primaryContactName = group.Add(new VocabularyKey(nameof(primaryContactName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                line1 = group.Add(new VocabularyKey(nameof(line1), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                line2 = group.Add(new VocabularyKey(nameof(line2), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                line3 = group.Add(new VocabularyKey(nameof(line3), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                city = group.Add(new VocabularyKey(nameof(city), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateOrProvince = group.Add(new VocabularyKey(nameof(stateOrProvince), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                county = group.Add(new VocabularyKey(nameof(county), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                country = group.Add(new VocabularyKey(nameof(country), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                postOfficeBox = group.Add(new VocabularyKey(nameof(postOfficeBox), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                postalCode = group.Add(new VocabularyKey(nameof(postalCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ParentId = group.Add(new VocabularyKey(nameof(ParentId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                ParentIdTypeCode = group.Add(new VocabularyKey(nameof(ParentIdTypeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CustomerAddressId = group.Add(new VocabularyKey(nameof(CustomerAddressId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                AddressNumber = group.Add(new VocabularyKey(nameof(AddressNumber), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                ObjectTypeCode = group.Add(new VocabularyKey(nameof(ObjectTypeCode), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                ObjectTypeCode_display = group.Add(new VocabularyKey(nameof(ObjectTypeCode_display), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AddressTypeCode = group.Add(new VocabularyKey(nameof(AddressTypeCode), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                AddressTypeCode_display = group.Add(new VocabularyKey(nameof(AddressTypeCode_display), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PrimaryContactName = group.Add(new VocabularyKey(nameof(PrimaryContactName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Line1 = group.Add(new VocabularyKey(nameof(Line1), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Line2 = group.Add(new VocabularyKey(nameof(Line2), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Line3 = group.Add(new VocabularyKey(nameof(Line3), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                City = group.Add(new VocabularyKey(nameof(City), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateOrProvince = group.Add(new VocabularyKey(nameof(StateOrProvince), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                County = group.Add(new VocabularyKey(nameof(County), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Country = group.Add(new VocabularyKey(nameof(Country), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PostOfficeBox = group.Add(new VocabularyKey(nameof(PostOfficeBox), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PostalCode = group.Add(new VocabularyKey(nameof(PostalCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UTCOffset = group.Add(new VocabularyKey(nameof(UTCOffset), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                freightTermsCode = group.Add(new VocabularyKey(nameof(freightTermsCode), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
-                freightTermsCode_display = group.Add(new VocabularyKey(nameof(freightTermsCode_display), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FreightTermsCode = group.Add(new VocabularyKey(nameof(FreightTermsCode), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                FreightTermsCode_display = group.Add(new VocabularyKey(nameof(FreightTermsCode_display), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UPSZone = group.Add(new VocabularyKey(nameof(UPSZone), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                latitude = group.Add(new VocabularyKey(nameof(latitude), VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
-                telephone1 = group.Add(new VocabularyKey(nameof(telephone1), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                longitude = group.Add(new VocabularyKey(nameof(longitude), VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
-                shippingMethodCode = group.Add(new VocabularyKey(nameof(shippingMethodCode), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
-                shippingMethodCode_display = group.Add(new VocabularyKey(nameof(shippingMethodCode_display), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                telephone2 = group.Add(new VocabularyKey(nameof(telephone2), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                telephone3 = group.Add(new VocabularyKey(nameof(telephone3), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                fax = group.Add(new VocabularyKey(nameof(fax), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                versionNumber = group.Add(new VocabularyKey(nameof(versionNumber), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
-                createdBy = group.Add(new VocabularyKey(nameof(createdBy), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
-                modifiedBy = group.Add(new VocabularyKey(nameof(modifiedBy), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                modifiedOn = group.Add(new VocabularyKey(nameof(modifiedOn), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
-                owningBusinessUnit = group.Add(new VocabularyKey(nameof(owningBusinessUnit), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                owningUser = group.Add(new VocabularyKey(nameof(owningUser), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                timeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(timeZoneRuleVersionNumber), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
-                overriddenCreatedOn = group.Add(new VocabularyKey(nameof(overriddenCreatedOn), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
+                Latitude = group.Add(new VocabularyKey(nameof(Latitude), VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                Telephone1 = group.Add(new VocabularyKey(nameof(Telephone1), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Longitude = group.Add(new VocabularyKey(nameof(Longitude), VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                ShippingMethodCode = group.Add(new VocabularyKey(nameof(ShippingMethodCode), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                ShippingMethodCode_display = group.Add(new VocabularyKey(nameof(ShippingMethodCode_display), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Telephone2 = group.Add(new VocabularyKey(nameof(Telephone2), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Telephone3 = group.Add(new VocabularyKey(nameof(Telephone3), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Fax = group.Add(new VocabularyKey(nameof(Fax), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                CreatedBy = group.Add(new VocabularyKey(nameof(CreatedBy), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
+                ModifiedBy = group.Add(new VocabularyKey(nameof(ModifiedBy), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
+                OwningBusinessUnit = group.Add(new VocabularyKey(nameof(OwningBusinessUnit), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                OwningUser = group.Add(new VocabularyKey(nameof(OwningUser), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
                 UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
-                importSequenceNumber = group.Add(new VocabularyKey(nameof(importSequenceNumber), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
-                ownerId = group.Add(new VocabularyKey(nameof(ownerId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                ownerIdType = group.Add(new VocabularyKey(nameof(ownerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                createdOnBehalfBy = group.Add(new VocabularyKey(nameof(createdOnBehalfBy), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                modifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(modifiedOnBehalfBy), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                transactionCurrencyId = group.Add(new VocabularyKey(nameof(transactionCurrencyId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                exchangeRate = group.Add(new VocabularyKey(nameof(exchangeRate), VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
-                composite = group.Add(new VocabularyKey(nameof(composite), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                endDate = group.Add(new VocabularyKey(nameof(endDate), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
-                startDate = group.Add(new VocabularyKey(nameof(startDate), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
-
+                ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                OwnerId = group.Add(new VocabularyKey(nameof(OwnerId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                OwnerIdType = group.Add(new VocabularyKey(nameof(OwnerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOnBehalfBy = group.Add(new VocabularyKey(nameof(CreatedOnBehalfBy), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                ModifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(ModifiedOnBehalfBy), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                TransactionCurrencyId = group.Add(new VocabularyKey(nameof(TransactionCurrencyId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                Composite = group.Add(new VocabularyKey(nameof(Composite), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EndDate = group.Add(new VocabularyKey(nameof(EndDate), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
+                StartDate = group.Add(new VocabularyKey(nameof(StartDate), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey parentId { get; private set; }
-        public VocabularyKey parentIdTypeCode { get; private set; }
-        public VocabularyKey customerAddressId { get; private set; }
-        public VocabularyKey addressNumber { get; private set; }
-        public VocabularyKey objectTypeCode { get; private set; }
-        public VocabularyKey objectTypeCode_display { get; private set; }
-        public VocabularyKey addressTypeCode { get; private set; }
-        public VocabularyKey addressTypeCode_display { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey primaryContactName { get; private set; }
-        public VocabularyKey line1 { get; private set; }
-        public VocabularyKey line2 { get; private set; }
-        public VocabularyKey line3 { get; private set; }
-        public VocabularyKey city { get; private set; }
-        public VocabularyKey stateOrProvince { get; private set; }
-        public VocabularyKey county { get; private set; }
-        public VocabularyKey country { get; private set; }
-        public VocabularyKey postOfficeBox { get; private set; }
-        public VocabularyKey postalCode { get; private set; }
+        public VocabularyKey ParentId { get; private set; }
+        public VocabularyKey ParentIdTypeCode { get; private set; }
+        public VocabularyKey CustomerAddressId { get; private set; }
+        public VocabularyKey AddressNumber { get; private set; }
+        public VocabularyKey ObjectTypeCode { get; private set; }
+        public VocabularyKey ObjectTypeCode_display { get; private set; }
+        public VocabularyKey AddressTypeCode { get; private set; }
+        public VocabularyKey AddressTypeCode_display { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey PrimaryContactName { get; private set; }
+        public VocabularyKey Line1 { get; private set; }
+        public VocabularyKey Line2 { get; private set; }
+        public VocabularyKey Line3 { get; private set; }
+        public VocabularyKey City { get; private set; }
+        public VocabularyKey StateOrProvince { get; private set; }
+        public VocabularyKey County { get; private set; }
+        public VocabularyKey Country { get; private set; }
+        public VocabularyKey PostOfficeBox { get; private set; }
+        public VocabularyKey PostalCode { get; private set; }
         public VocabularyKey UTCOffset { get; private set; }
-        public VocabularyKey freightTermsCode { get; private set; }
-        public VocabularyKey freightTermsCode_display { get; private set; }
+        public VocabularyKey FreightTermsCode { get; private set; }
+        public VocabularyKey FreightTermsCode_display { get; private set; }
         public VocabularyKey UPSZone { get; private set; }
-        public VocabularyKey latitude { get; private set; }
-        public VocabularyKey telephone1 { get; private set; }
-        public VocabularyKey longitude { get; private set; }
-        public VocabularyKey shippingMethodCode { get; private set; }
-        public VocabularyKey shippingMethodCode_display { get; private set; }
-        public VocabularyKey telephone2 { get; private set; }
-        public VocabularyKey telephone3 { get; private set; }
-        public VocabularyKey fax { get; private set; }
-        public VocabularyKey versionNumber { get; private set; }
-        public VocabularyKey createdBy { get; private set; }
-        public VocabularyKey createdOn { get; private set; }
-        public VocabularyKey modifiedBy { get; private set; }
-        public VocabularyKey modifiedOn { get; private set; }
-        public VocabularyKey owningBusinessUnit { get; private set; }
-        public VocabularyKey owningUser { get; private set; }
-        public VocabularyKey timeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey overriddenCreatedOn { get; private set; }
+        public VocabularyKey Latitude { get; private set; }
+        public VocabularyKey Telephone1 { get; private set; }
+        public VocabularyKey Longitude { get; private set; }
+        public VocabularyKey ShippingMethodCode { get; private set; }
+        public VocabularyKey ShippingMethodCode_display { get; private set; }
+        public VocabularyKey Telephone2 { get; private set; }
+        public VocabularyKey Telephone3 { get; private set; }
+        public VocabularyKey Fax { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
+        public VocabularyKey CreatedBy { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey ModifiedBy { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey OwningBusinessUnit { get; private set; }
+        public VocabularyKey OwningUser { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey importSequenceNumber { get; private set; }
-        public VocabularyKey ownerId { get; private set; }
-        public VocabularyKey ownerIdType { get; private set; }
-        public VocabularyKey createdOnBehalfBy { get; private set; }
-        public VocabularyKey modifiedOnBehalfBy { get; private set; }
-        public VocabularyKey transactionCurrencyId { get; private set; }
-        public VocabularyKey exchangeRate { get; private set; }
-        public VocabularyKey composite { get; private set; }
-        public VocabularyKey endDate { get; private set; }
-        public VocabularyKey startDate { get; private set; }
-
-
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey OwnerId { get; private set; }
+        public VocabularyKey OwnerIdType { get; private set; }
+        public VocabularyKey CreatedOnBehalfBy { get; private set; }
+        public VocabularyKey ModifiedOnBehalfBy { get; private set; }
+        public VocabularyKey TransactionCurrencyId { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey Composite { get; private set; }
+        public VocabularyKey EndDate { get; private set; }
+        public VocabularyKey StartDate { get; private set; }
     }
 }

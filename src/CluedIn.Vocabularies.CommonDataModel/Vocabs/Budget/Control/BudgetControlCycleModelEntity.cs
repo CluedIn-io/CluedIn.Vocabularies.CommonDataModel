@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetControlCycleModelEntityVocabulary()
         {
-            VocabularyName = "BudgetControlCycleModelEntity";
+            VocabularyName = "Budget Control Cycle Model Entity";
             KeyPrefix = "commonDataModel.budgetcontrolcyclemodelentity";
             KeySeparator = ".";
             Grouping = "/BudgetControlCycleModelEntity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BudgetModelType = group.Add(new VocabularyKey(nameof(BudgetModelType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BudgetModelSubModelId = group.Add(new VocabularyKey(nameof(BudgetModelSubModelId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BudgetModelDataAreaId = group.Add(new VocabularyKey(nameof(BudgetModelDataAreaId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BudgetModelId { get; private set; }
         public VocabularyKey BudgetControlConfiguration { get; private set; }
         public VocabularyKey BudgetCycle { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey BudgetModelType { get; private set; }
         public VocabularyKey BudgetModelSubModelId { get; private set; }
         public VocabularyKey BudgetModelDataAreaId { get; private set; }
-
-
     }
 }

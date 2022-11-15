@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSLocatedWarehouseSlottingDemandV2EntityVocabulary()
         {
-            VocabularyName = "WHSLocatedWarehouseSlottingDemandV2Entity";
+            VocabularyName = "WHS Located Warehouse Slotting Demand V2 Entity";
             KeyPrefix = "commonDataModel.whslocatedwarehouseslottingdemandv2entity";
             KeySeparator = ".";
             Grouping = "/WHSLocatedWarehouseSlottingDemandV2Entity";
@@ -34,10 +34,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ItemSerialNumber = group.Add(new VocabularyKey(nameof(ItemSerialNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DemandSiteId = group.Add(new VocabularyKey(nameof(DemandSiteId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InventoryStatus = group.Add(new VocabularyKey(nameof(InventoryStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WillDemandCreateLetUpWork { get; private set; }
         public VocabularyKey WillDemandUseOverflowLocation { get; private set; }
         public VocabularyKey SlotTemplateLine { get; private set; }
@@ -59,7 +57,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ItemSerialNumber { get; private set; }
         public VocabularyKey DemandSiteId { get; private set; }
         public VocabularyKey InventoryStatus { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxGroupRetailTaxFilterEntityVocabulary()
         {
-            VocabularyName = "TaxGroupRetailTaxFilterEntity";
+            VocabularyName = "Tax Group Retail Tax Filter Entity";
             KeyPrefix = "commonDataModel.taxgroupretailtaxfilterentity";
             KeySeparator = ".";
             Grouping = "/TaxGroupRetailTaxFilterEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CityId = group.Add(new VocabularyKey(nameof(CityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DistrictId = group.Add(new VocabularyKey(nameof(DistrictId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ZipCodeId = group.Add(new VocabularyKey(nameof(ZipCodeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TaxGroupId { get; private set; }
         public VocabularyKey City { get; private set; }
         public VocabularyKey CountryRegion { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CityId { get; private set; }
         public VocabularyKey DistrictId { get; private set; }
         public VocabularyKey ZipCodeId { get; private set; }
-
-
     }
 }

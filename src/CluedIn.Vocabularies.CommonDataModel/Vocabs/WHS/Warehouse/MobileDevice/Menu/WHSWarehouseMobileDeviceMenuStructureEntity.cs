@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseMobileDeviceMenuStructureEntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseMobileDeviceMenuStructureEntity";
+            VocabularyName = "WHS Warehouse Mobile Device Menu Structure Entity";
             KeyPrefix = "commonDataModel.whswarehousemobiledevicemenustructureentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseMobileDeviceMenuStructureEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WarehouseMobileDeviceMenuName = group.Add(new VocabularyKey(nameof(WarehouseMobileDeviceMenuName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WarehouseMobileDeviceMenuItemName = group.Add(new VocabularyKey(nameof(WarehouseMobileDeviceMenuItemName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SequenceNumber = group.Add(new VocabularyKey(nameof(SequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ParentWarehouseMobileDeviceMenuName { get; private set; }
         public VocabularyKey WarehouseMobileDeviceMenuName { get; private set; }
         public VocabularyKey WarehouseMobileDeviceMenuItemName { get; private set; }
         public VocabularyKey SequenceNumber { get; private set; }
-
-
     }
 }

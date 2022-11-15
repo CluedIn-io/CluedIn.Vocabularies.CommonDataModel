@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesOrderHeaderV2EntityVocabulary()
         {
-            VocabularyName = "SalesOrderHeaderV2Entity";
+            VocabularyName = "Sales Order Header V2 Entity";
             KeyPrefix = "commonDataModel.salesorderheaderv2entity";
             KeySeparator = ".";
             Grouping = "/SalesOrderHeaderV2Entity";
@@ -186,10 +186,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RevRecLatestReverseJournal = group.Add(new VocabularyKey(nameof(RevRecLatestReverseJournal), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RevRecMultipleSOReallocation = group.Add(new VocabularyKey(nameof(RevRecMultipleSOReallocation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RevRecReallocationId = group.Add(new VocabularyKey(nameof(RevRecReallocationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SalesOrderNumber { get; private set; }
         public VocabularyKey SalesOrderStatus { get; private set; }
         public VocabularyKey OrderingCustomerAccountNumber { get; private set; }
@@ -363,7 +361,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RevRecLatestReverseJournal { get; private set; }
         public VocabularyKey RevRecMultipleSOReallocation { get; private set; }
         public VocabularyKey RevRecReallocationId { get; private set; }
-
-
     }
 }

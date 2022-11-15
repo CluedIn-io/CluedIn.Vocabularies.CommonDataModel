@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjProjectContractLineEntityVocabulary()
         {
-            VocabularyName = "ProjProjectContractLineEntity";
+            VocabularyName = "Proj Project Contract Line Entity";
             KeyPrefix = "commonDataModel.projprojectcontractlineentity";
             KeySeparator = ".";
             Grouping = "/ProjProjectContractLineEntity";
@@ -46,10 +46,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LineSequenceNumber = group.Add(new VocabularyKey(nameof(LineSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProjInvoiceProjId = group.Add(new VocabularyKey(nameof(ProjInvoiceProjId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineProjectId = group.Add(new VocabularyKey(nameof(LineProjectId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ChangeOrderNumber { get; private set; }
         public VocabularyKey ContractLineId { get; private set; }
         public VocabularyKey DefaultLedgerDimension { get; private set; }
@@ -83,7 +81,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LineSequenceNumber { get; private set; }
         public VocabularyKey ProjInvoiceProjId { get; private set; }
         public VocabularyKey LineProjectId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerAllocationBasisRuleEntityVocabulary()
         {
-            VocabularyName = "LedgerAllocationBasisRuleEntity";
+            VocabularyName = "Ledger Allocation Basis Rule Entity";
             KeyPrefix = "commonDataModel.ledgerallocationbasisruleentity";
             KeySeparator = ".";
             Grouping = "/LedgerAllocationBasisRuleEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExpirationDate = group.Add(new VocabularyKey(nameof(ExpirationDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EffectiveDate = group.Add(new VocabularyKey(nameof(EffectiveDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsActive { get; private set; }
         public VocabularyKey BasisId { get; private set; }
         public VocabularyKey DateInterval { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey ExpirationDate { get; private set; }
         public VocabularyKey EffectiveDate { get; private set; }
-
-
     }
 }

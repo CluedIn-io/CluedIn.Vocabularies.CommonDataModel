@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendVendorCollaborationUserRequestEntityVocabulary()
         {
-            VocabularyName = "VendVendorCollaborationUserRequestEntity";
+            VocabularyName = "Vend Vendor Collaboration User Request Entity";
             KeyPrefix = "commonDataModel.vendvendorcollaborationuserrequestentity";
             KeySeparator = ".";
             Grouping = "/VendVendorCollaborationUserRequestEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 UsersLanguageId = group.Add(new VocabularyKey(nameof(UsersLanguageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BusinessJustification = group.Add(new VocabularyKey(nameof(BusinessJustification), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UserEmail = group.Add(new VocabularyKey(nameof(UserEmail), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RequestAction { get; private set; }
         public VocabularyKey RequestId { get; private set; }
         public VocabularyKey RequestStatus { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey UsersLanguageId { get; private set; }
         public VocabularyKey BusinessJustification { get; private set; }
         public VocabularyKey UserEmail { get; private set; }
-
-
     }
 }

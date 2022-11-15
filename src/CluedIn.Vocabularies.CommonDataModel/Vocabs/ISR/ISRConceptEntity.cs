@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ISRConceptEntityVocabulary()
         {
-            VocabularyName = "ISRConceptEntity";
+            VocabularyName = "ISR Concept Entity";
             KeyPrefix = "commonDataModel.isrconceptentity";
             KeySeparator = ".";
             Grouping = "/ISRConceptEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LedgerChartOfAccounts = group.Add(new VocabularyKey(nameof(LedgerChartOfAccounts), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MainAccountId = group.Add(new VocabularyKey(nameof(MainAccountId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ChartOfAccountsName = group.Add(new VocabularyKey(nameof(ChartOfAccountsName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DebitCreditIndicator { get; private set; }
         public VocabularyKey Concept { get; private set; }
         public VocabularyKey MainAccount { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LedgerChartOfAccounts { get; private set; }
         public VocabularyKey MainAccountId { get; private set; }
         public VocabularyKey ChartOfAccountsName { get; private set; }
-
-
     }
 }

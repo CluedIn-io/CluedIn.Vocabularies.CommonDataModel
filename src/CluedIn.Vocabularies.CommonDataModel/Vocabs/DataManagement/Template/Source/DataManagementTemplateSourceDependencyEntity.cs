@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DataManagementTemplateSourceDependencyEntityVocabulary()
         {
-            VocabularyName = "DataManagementTemplateSourceDependencyEntity";
+            VocabularyName = "Data Management Template Source Dependency Entity";
             KeyPrefix = "commonDataModel.datamanagementtemplatesourcedependencyentity";
             KeySeparator = ".";
             Grouping = "/DataManagementTemplateSourceDependencyEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FriendlyName = group.Add(new VocabularyKey(nameof(FriendlyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidationRequired = group.Add(new VocabularyKey(nameof(ValidationRequired), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TemplateId { get; private set; }
         public VocabularyKey SourceEntity { get; private set; }
         public VocabularyKey DependentOnEntity { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Description { get; private set; }
         public VocabularyKey FriendlyName { get; private set; }
         public VocabularyKey ValidationRequired { get; private set; }
-
-
     }
 }

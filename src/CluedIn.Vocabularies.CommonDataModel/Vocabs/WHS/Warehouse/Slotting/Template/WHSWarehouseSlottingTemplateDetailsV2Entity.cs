@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseSlottingTemplateDetailsV2EntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseSlottingTemplateDetailsV2Entity";
+            VocabularyName = "WHS Warehouse Slotting Template Details V2 Entity";
             KeyPrefix = "commonDataModel.whswarehouseslottingtemplatedetailsv2entity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseSlottingTemplateDetailsV2Entity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WarehouseSlottingTemplateId = group.Add(new VocabularyKey(nameof(WarehouseSlottingTemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OverflowWarehouseId = group.Add(new VocabularyKey(nameof(OverflowWarehouseId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OverflowWarehouseLocationId = group.Add(new VocabularyKey(nameof(OverflowWarehouseLocationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SlotCriteriaAssignmentRule { get; private set; }
         public VocabularyKey IsLetUpWorkCreationAllowed { get; private set; }
         public VocabularyKey DetailsDescription { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WarehouseSlottingTemplateId { get; private set; }
         public VocabularyKey OverflowWarehouseId { get; private set; }
         public VocabularyKey OverflowWarehouseLocationId { get; private set; }
-
-
     }
 }

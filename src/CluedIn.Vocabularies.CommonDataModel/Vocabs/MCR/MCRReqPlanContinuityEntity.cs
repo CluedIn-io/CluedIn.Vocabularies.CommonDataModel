@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRReqPlanContinuityEntityVocabulary()
         {
-            VocabularyName = "MCRReqPlanContinuityEntity";
+            VocabularyName = "MCR Req Plan Continuity Entity";
             KeyPrefix = "commonDataModel.mcrreqplancontinuityentity";
             KeySeparator = ".";
             Grouping = "/MCRReqPlanContinuityEntity";
@@ -55,10 +55,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RequiredLogCompanyInfoPartyNumber = group.Add(new VocabularyKey(nameof(RequiredLogCompanyInfoPartyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RequiredLogCompanyInfoDataArea = group.Add(new VocabularyKey(nameof(RequiredLogCompanyInfoDataArea), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RequiredLogOMOperatingUnitPartyNumber = group.Add(new VocabularyKey(nameof(RequiredLogOMOperatingUnitPartyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IssueMargin { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey OrderingMargin { get; private set; }
@@ -101,7 +99,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RequiredLogCompanyInfoPartyNumber { get; private set; }
         public VocabularyKey RequiredLogCompanyInfoDataArea { get; private set; }
         public VocabularyKey RequiredLogOMOperatingUnitPartyNumber { get; private set; }
-
-
     }
 }

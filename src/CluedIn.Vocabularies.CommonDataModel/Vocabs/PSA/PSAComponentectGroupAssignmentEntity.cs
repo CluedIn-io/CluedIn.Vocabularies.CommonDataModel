@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PSAComponentectGroupAssignmentEntityVocabulary()
         {
-            VocabularyName = "PSAComponentectGroupAssignmentEntity";
+            VocabularyName = "PSA Componentect Group Assignment Entity";
             KeyPrefix = "commonDataModel.psacomponentectgroupassignmententity";
             KeySeparator = ".";
             Grouping = "/PSAComponentectGroupAssignmentEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Resource = group.Add(new VocabularyKey(nameof(Resource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EffectiveFrom = group.Add(new VocabularyKey(nameof(EffectiveFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ResourcePersonnelNumber = group.Add(new VocabularyKey(nameof(ResourcePersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Category { get; private set; }
         public VocabularyKey CustomerAccount { get; private set; }
         public VocabularyKey IndirectCostComponentGroup { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Resource { get; private set; }
         public VocabularyKey EffectiveFrom { get; private set; }
         public VocabularyKey ResourcePersonnelNumber { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPublishedRequestForQuotationLineEntityVocabulary()
         {
-            VocabularyName = "PurchPublishedRequestForQuotationLineEntity";
+            VocabularyName = "Purch Published Request For Quotation Line Entity";
             KeyPrefix = "commonDataModel.purchpublishedrequestforquotationlineentity";
             KeySeparator = ".";
             Grouping = "/PurchPublishedRequestForQuotationLineEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RFQDeliveryDate = group.Add(new VocabularyKey(nameof(RFQDeliveryDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PurchaseQuantity = group.Add(new VocabularyKey(nameof(PurchaseQuantity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PurchaseUnitSymbol = group.Add(new VocabularyKey(nameof(PurchaseUnitSymbol), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PublishedRFQCaseNumber { get; private set; }
         public VocabularyKey RFQCaseRecId { get; private set; }
         public VocabularyKey RFQCaseTableRecId { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RFQDeliveryDate { get; private set; }
         public VocabularyKey PurchaseQuantity { get; private set; }
         public VocabularyKey PurchaseUnitSymbol { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPurchaseRequisitionReplenishmentControlPolicyRuleEntityVocabulary()
         {
-            VocabularyName = "PurchPurchaseRequisitionReplenishmentControlPolicyRuleEntity";
+            VocabularyName = "Purch Purchase Requisition Replenishment Control Policy Rule Entity";
             KeyPrefix = "commonDataModel.purchpurchaserequisitionreplenishmentcontrolpolicyruleentity";
             KeySeparator = ".";
             Grouping = "/PurchPurchaseRequisitionReplenishmentControlPolicyRuleEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RequisitionReplenishControlRule = group.Add(new VocabularyKey(nameof(RequisitionReplenishControlRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RequisitionReplenishControlSubmsnParam = group.Add(new VocabularyKey(nameof(RequisitionReplenishControlSubmsnParam), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkflowFieldName = group.Add(new VocabularyKey(nameof(WorkflowFieldName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Policy { get; private set; }
         public VocabularyKey PolicyRuleType { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RequisitionReplenishControlRule { get; private set; }
         public VocabularyKey RequisitionReplenishControlSubmsnParam { get; private set; }
         public VocabularyKey WorkflowFieldName { get; private set; }
-
-
     }
 }

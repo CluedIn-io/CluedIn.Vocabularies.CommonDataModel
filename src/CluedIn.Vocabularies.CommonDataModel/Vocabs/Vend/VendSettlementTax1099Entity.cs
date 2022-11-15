@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendSettlementTax1099EntityVocabulary()
         {
-            VocabularyName = "VendSettlementTax1099Entity";
+            VocabularyName = "Vend Settlement Tax 1099 Entity";
             KeyPrefix = "commonDataModel.vendsettlementtax1099entity";
             KeySeparator = ".";
             Grouping = "/VendSettlementTax1099Entity";
@@ -33,10 +33,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Tax1099BoxId = group.Add(new VocabularyKey(nameof(Tax1099BoxId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Tax1099Type = group.Add(new VocabularyKey(nameof(Tax1099Type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RecordId = group.Add(new VocabularyKey(nameof(RecordId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey VendorAccount { get; private set; }
         public VocabularyKey TransDate { get; private set; }
         public VocabularyKey SettledFederal1099 { get; private set; }
@@ -57,7 +55,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Tax1099BoxId { get; private set; }
         public VocabularyKey Tax1099Type { get; private set; }
         public VocabularyKey RecordId { get; private set; }
-
-
     }
 }

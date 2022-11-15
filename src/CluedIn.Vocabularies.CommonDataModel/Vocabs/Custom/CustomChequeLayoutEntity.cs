@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustomChequeLayoutEntityVocabulary()
         {
-            VocabularyName = "CustomChequeLayoutEntity";
+            VocabularyName = "Custom Cheque Layout Entity";
             KeyPrefix = "commonDataModel.customchequelayoutentity";
             KeySeparator = ".";
             Grouping = "/CustomChequeLayoutEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LayoutId = group.Add(new VocabularyKey(nameof(LayoutId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReportName = group.Add(new VocabularyKey(nameof(ReportName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LayoutId { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey ReportName { get; private set; }
-
-
     }
 }

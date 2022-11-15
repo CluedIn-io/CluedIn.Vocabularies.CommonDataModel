@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FiscalDocumentLineEntityVocabulary()
         {
-            VocabularyName = "FiscalDocumentLineEntity";
+            VocabularyName = "Fiscal Document Line Entity";
             KeyPrefix = "commonDataModel.fiscaldocumentlineentity";
             KeySeparator = ".";
             Grouping = "/FiscalDocumentLineEntity";
@@ -47,10 +47,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TaxationOrigin = group.Add(new VocabularyKey(nameof(TaxationOrigin), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Unit = group.Add(new VocabularyKey(nameof(Unit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UnitPrice = group.Add(new VocabularyKey(nameof(UnitPrice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountingAmount { get; private set; }
         public VocabularyKey Addition { get; private set; }
         public VocabularyKey Amount { get; private set; }
@@ -85,7 +83,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TaxationOrigin { get; private set; }
         public VocabularyKey Unit { get; private set; }
         public VocabularyKey UnitPrice { get; private set; }
-
-
     }
 }

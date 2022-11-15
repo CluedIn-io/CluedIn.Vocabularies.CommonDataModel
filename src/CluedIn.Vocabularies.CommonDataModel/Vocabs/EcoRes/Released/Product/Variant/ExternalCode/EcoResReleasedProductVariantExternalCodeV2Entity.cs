@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResReleasedProductVariantExternalCodeV2EntityVocabulary()
         {
-            VocabularyName = "EcoResReleasedProductVariantExternalCodeV2Entity";
+            VocabularyName = "Eco Res Released Product Variant External Code V2 Entity";
             KeyPrefix = "commonDataModel.ecoresreleasedproductvariantexternalcodev2entity";
             KeySeparator = ".";
             Grouping = "/EcoResReleasedProductVariantExternalCodeV2Entity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ExternalCode = group.Add(new VocabularyKey(nameof(ExternalCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExtCodeRelationTableId = group.Add(new VocabularyKey(nameof(ExtCodeRelationTableId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExtCodeTableTableId = group.Add(new VocabularyKey(nameof(ExtCodeTableTableId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ReleasedProductVariantExternalCodeClassId { get; private set; }
         public VocabularyKey ItemNumber { get; private set; }
         public VocabularyKey ProductColorId { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ExternalCode { get; private set; }
         public VocabularyKey ExtCodeRelationTableId { get; private set; }
         public VocabularyKey ExtCodeTableTableId { get; private set; }
-
-
     }
 }

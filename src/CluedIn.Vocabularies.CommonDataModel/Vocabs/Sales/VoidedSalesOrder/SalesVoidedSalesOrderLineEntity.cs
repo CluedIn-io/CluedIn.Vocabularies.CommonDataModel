@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesVoidedSalesOrderLineEntityVocabulary()
         {
-            VocabularyName = "SalesVoidedSalesOrderLineEntity";
+            VocabularyName = "Sales Voided Sales Order Line Entity";
             KeyPrefix = "commonDataModel.salesvoidedsalesorderlineentity";
             KeySeparator = ".";
             Grouping = "/SalesVoidedSalesOrderLineEntity";
@@ -34,10 +34,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 InventoryLotId = group.Add(new VocabularyKey(nameof(InventoryLotId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InvoiceCustomerAccountNumber = group.Add(new VocabularyKey(nameof(InvoiceCustomerAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OrderingCustomerAccountNumber = group.Add(new VocabularyKey(nameof(OrderingCustomerAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProjectActivityNumber { get; private set; }
         public VocabularyKey ItemNumber { get; private set; }
         public VocabularyKey LineAmount { get; private set; }
@@ -59,7 +57,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey InventoryLotId { get; private set; }
         public VocabularyKey InvoiceCustomerAccountNumber { get; private set; }
         public VocabularyKey OrderingCustomerAccountNumber { get; private set; }
-
-
     }
 }

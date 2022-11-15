@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailInfocodeEntityVocabulary()
         {
-            VocabularyName = "RetailInfocodeEntity";
+            VocabularyName = "Retail Infocode Entity";
             KeyPrefix = "commonDataModel.retailinfocodeentity";
             KeySeparator = ".";
             Grouping = "/RetailInfocodeEntity";
@@ -33,10 +33,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Activity = group.Add(new VocabularyKey(nameof(Activity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsMultiLineText = group.Add(new VocabularyKey(nameof(IsMultiLineText), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PrintDescriptionOnReceipt = group.Add(new VocabularyKey(nameof(PrintDescriptionOnReceipt), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InfocodeNumber { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey InputRequired { get; private set; }
@@ -57,7 +55,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Activity { get; private set; }
         public VocabularyKey IsMultiLineText { get; private set; }
         public VocabularyKey PrintDescriptionOnReceipt { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxZakatLedgerItemCodeEntityVocabulary()
         {
-            VocabularyName = "TaxZakatLedgerItemCodeEntity";
+            VocabularyName = "Tax Zakat Ledger Item Code Entity";
             KeyPrefix = "commonDataModel.taxzakatledgeritemcodeentity";
             KeySeparator = ".";
             Grouping = "/TaxZakatLedgerItemCodeEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsCost = group.Add(new VocabularyKey(nameof(IsCost), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsBalance = group.Add(new VocabularyKey(nameof(IsBalance), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsProfitLoss = group.Add(new VocabularyKey(nameof(IsProfitLoss), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ItemCode { get; private set; }
         public VocabularyKey ItemType { get; private set; }
         public VocabularyKey Description { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsCost { get; private set; }
         public VocabularyKey IsBalance { get; private set; }
         public VocabularyKey IsProfitLoss { get; private set; }
-
-
     }
 }

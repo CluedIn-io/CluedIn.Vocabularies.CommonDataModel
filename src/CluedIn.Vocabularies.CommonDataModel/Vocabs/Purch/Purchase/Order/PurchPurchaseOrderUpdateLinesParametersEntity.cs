@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPurchaseOrderUpdateLinesParametersEntityVocabulary()
         {
-            VocabularyName = "PurchPurchaseOrderUpdateLinesParametersEntity";
+            VocabularyName = "Purch Purchase Order Update Lines Parameters Entity";
             KeyPrefix = "commonDataModel.purchpurchaseorderupdatelinesparametersentity";
             KeySeparator = ".";
             Grouping = "/PurchPurchaseOrderUpdateLinesParametersEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PurchaseOrderHeaderFieldName = group.Add(new VocabularyKey(nameof(PurchaseOrderHeaderFieldName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PurchaseOrderLineUpdateRule = group.Add(new VocabularyKey(nameof(PurchaseOrderLineUpdateRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FieldId = group.Add(new VocabularyKey(nameof(FieldId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PurchaseOrderHeaderFieldName { get; private set; }
         public VocabularyKey PurchaseOrderLineUpdateRule { get; private set; }
         public VocabularyKey FieldId { get; private set; }
-
-
     }
 }

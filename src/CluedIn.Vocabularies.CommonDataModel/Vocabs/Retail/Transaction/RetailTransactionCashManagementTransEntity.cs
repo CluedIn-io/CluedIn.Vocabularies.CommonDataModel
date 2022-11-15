@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailTransactionCashManagementTransEntityVocabulary()
         {
-            VocabularyName = "RetailTransactionCashManagementTransEntity";
+            VocabularyName = "Retail Transaction Cash Management Trans Entity";
             KeyPrefix = "commonDataModel.retailtransactioncashmanagementtransentity";
             KeySeparator = ".";
             Grouping = "/RetailTransactionCashManagementTransEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ToShiftId = group.Add(new VocabularyKey(nameof(ToShiftId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OperatingUnitNumber = group.Add(new VocabularyKey(nameof(OperatingUnitNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RetailChannelTableOMOperatingUnitID = group.Add(new VocabularyKey(nameof(RetailChannelTableOMOperatingUnitID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Channel { get; private set; }
         public VocabularyKey Terminal { get; private set; }
         public VocabularyKey TransactionNumber { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ToShiftId { get; private set; }
         public VocabularyKey OperatingUnitNumber { get; private set; }
         public VocabularyKey RetailChannelTableOMOperatingUnitID { get; private set; }
-
-
     }
 }

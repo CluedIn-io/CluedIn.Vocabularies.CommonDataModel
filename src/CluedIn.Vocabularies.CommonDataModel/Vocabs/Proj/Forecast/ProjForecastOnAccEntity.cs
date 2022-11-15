@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjForecastOnAccEntityVocabulary()
         {
-            VocabularyName = "ProjForecastOnAccEntity";
+            VocabularyName = "Proj Forecast On Acc Entity";
             KeyPrefix = "commonDataModel.projforecastonaccentity";
             KeySeparator = ".";
             Grouping = "/ProjForecastOnAccEntity";
@@ -31,10 +31,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProjectContractID = group.Add(new VocabularyKey(nameof(ProjectContractID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FundingSourceID = group.Add(new VocabularyKey(nameof(FundingSourceID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultDimensionDisplayValue = group.Add(new VocabularyKey(nameof(DefaultDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SalesCurrency { get; private set; }
         public VocabularyKey DefaultDimension { get; private set; }
         public VocabularyKey EliminationDate { get; private set; }
@@ -53,7 +51,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProjectContractID { get; private set; }
         public VocabularyKey FundingSourceID { get; private set; }
         public VocabularyKey DefaultDimensionDisplayValue { get; private set; }
-
-
     }
 }

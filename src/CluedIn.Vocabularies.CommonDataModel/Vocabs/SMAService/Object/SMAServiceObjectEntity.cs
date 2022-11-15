@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SMAServiceObjectEntityVocabulary()
         {
-            VocabularyName = "SMAServiceObjectEntity";
+            VocabularyName = "SMA Service Object Entity";
             KeyPrefix = "commonDataModel.smaserviceobjectentity";
             KeySeparator = ".";
             Grouping = "/SMAServiceObjectEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductConfigurationId = group.Add(new VocabularyKey(nameof(ProductConfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ItemBatchNumber = group.Add(new VocabularyKey(nameof(ItemBatchNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ItemSerialNumber = group.Add(new VocabularyKey(nameof(ItemSerialNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ObjectDescription { get; private set; }
         public VocabularyKey ItemNumber { get; private set; }
         public VocabularyKey ServiceObjectGroupId { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProductConfigurationId { get; private set; }
         public VocabularyKey ItemBatchNumber { get; private set; }
         public VocabularyKey ItemSerialNumber { get; private set; }
-
-
     }
 }

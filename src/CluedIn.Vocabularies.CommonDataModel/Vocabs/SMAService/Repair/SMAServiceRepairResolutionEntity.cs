@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SMAServiceRepairResolutionEntityVocabulary()
         {
-            VocabularyName = "SMAServiceRepairResolutionEntity";
+            VocabularyName = "SMA Service Repair Resolution Entity";
             KeyPrefix = "commonDataModel.smaservicerepairresolutionentity";
             KeySeparator = ".";
             Grouping = "/SMAServiceRepairResolutionEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 ResolutionDescription = group.Add(new VocabularyKey(nameof(ResolutionDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ResolutionId = group.Add(new VocabularyKey(nameof(ResolutionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ResolutionDescription { get; private set; }
         public VocabularyKey ResolutionId { get; private set; }
-
-
     }
 }

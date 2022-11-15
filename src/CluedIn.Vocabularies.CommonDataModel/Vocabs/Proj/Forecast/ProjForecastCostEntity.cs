@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjForecastCostEntityVocabulary()
         {
-            VocabularyName = "ProjForecastCostEntity";
+            VocabularyName = "Proj Forecast Cost Entity";
             KeyPrefix = "commonDataModel.projforecastcostentity";
             KeySeparator = ".";
             Grouping = "/ProjForecastCostEntity";
@@ -48,10 +48,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ResourceCategoryId = group.Add(new VocabularyKey(nameof(ResourceCategoryId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Quantity = group.Add(new VocabularyKey(nameof(Quantity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ResourceCategory = group.Add(new VocabularyKey(nameof(ResourceCategory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Active { get; private set; }
         public VocabularyKey ActivityNumber { get; private set; }
         public VocabularyKey Method { get; private set; }
@@ -87,7 +85,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ResourceCategoryId { get; private set; }
         public VocabularyKey Quantity { get; private set; }
         public VocabularyKey ResourceCategory { get; private set; }
-
-
     }
 }

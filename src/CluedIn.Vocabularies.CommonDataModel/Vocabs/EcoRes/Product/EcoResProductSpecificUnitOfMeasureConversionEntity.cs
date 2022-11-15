@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResProductSpecificUnitOfMeasureConversionEntityVocabulary()
         {
-            VocabularyName = "EcoResProductSpecificUnitOfMeasureConversionEntity";
+            VocabularyName = "Eco Res Product Specific Unit Of Measure Conversion Entity";
             KeyPrefix = "commonDataModel.ecoresproductspecificunitofmeasureconversionentity";
             KeySeparator = ".";
             Grouping = "/EcoResProductSpecificUnitOfMeasureConversionEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductNumber = group.Add(new VocabularyKey(nameof(ProductNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FromUnitSymbol = group.Add(new VocabularyKey(nameof(FromUnitSymbol), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ToUnitSymbol = group.Add(new VocabularyKey(nameof(ToUnitSymbol), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Denominator { get; private set; }
         public VocabularyKey Factor { get; private set; }
         public VocabularyKey FromUnitOfMeasureRecId { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProductNumber { get; private set; }
         public VocabularyKey FromUnitSymbol { get; private set; }
         public VocabularyKey ToUnitSymbol { get; private set; }
-
-
     }
 }

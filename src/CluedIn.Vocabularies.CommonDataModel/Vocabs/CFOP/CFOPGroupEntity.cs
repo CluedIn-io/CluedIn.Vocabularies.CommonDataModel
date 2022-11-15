@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CFOPGroupEntityVocabulary()
         {
-            VocabularyName = "CFOPGroupEntity";
+            VocabularyName = "CFOP Group Entity";
             KeyPrefix = "commonDataModel.cfopgroupentity";
             KeySeparator = ".";
             Grouping = "/CFOPGroupEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 GroupId = group.Add(new VocabularyKey(nameof(GroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey GroupId { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

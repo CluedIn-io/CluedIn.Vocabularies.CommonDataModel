@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseReplenishmentRequestTypeEntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseReplenishmentRequestTypeEntity";
+            VocabularyName = "WHS Warehouse Replenishment Request Type Entity";
             KeyPrefix = "commonDataModel.whswarehousereplenishmentrequesttypeentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseReplenishmentRequestTypeEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 TypeDescription = group.Add(new VocabularyKey(nameof(TypeDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TypeId = group.Add(new VocabularyKey(nameof(TypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TypeDescription { get; private set; }
         public VocabularyKey TypeId { get; private set; }
-
-
     }
 }

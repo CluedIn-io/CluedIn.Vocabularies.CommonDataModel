@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesOpenSalesPriceJournalLineCDSEntityVocabulary()
         {
-            VocabularyName = "SalesOpenSalesPriceJournalLineCDSEntity";
+            VocabularyName = "Sales Open Sales Price Journal Line CDS Entity";
             KeyPrefix = "commonDataModel.salesopensalespricejournallinecdsentity";
             KeySeparator = ".";
             Grouping = "/SalesOpenSalesPriceJournalLineCDSEntity";
@@ -41,10 +41,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TradeAgreementJournalNumber = group.Add(new VocabularyKey(nameof(TradeAgreementJournalNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillDeliveryDateControlDisregardLeadTime = group.Add(new VocabularyKey(nameof(WillDeliveryDateControlDisregardLeadTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillSearchContinue = group.Add(new VocabularyKey(nameof(WillSearchContinue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductNumber { get; private set; }
         public VocabularyKey AttributeBasedPricingId { get; private set; }
         public VocabularyKey CustomerAccountNumber { get; private set; }
@@ -73,7 +71,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TradeAgreementJournalNumber { get; private set; }
         public VocabularyKey WillDeliveryDateControlDisregardLeadTime { get; private set; }
         public VocabularyKey WillSearchContinue { get; private set; }
-
-
     }
 }

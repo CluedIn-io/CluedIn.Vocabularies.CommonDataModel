@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PaymentCalendarExceptionEntityVocabulary()
         {
-            VocabularyName = "PaymentCalendarExceptionEntity";
+            VocabularyName = "Payment Calendar Exception Entity";
             KeyPrefix = "commonDataModel.paymentcalendarexceptionentity";
             KeySeparator = ".";
             Grouping = "/PaymentCalendarExceptionEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExceptionDate = group.Add(new VocabularyKey(nameof(ExceptionDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExceptionType = group.Add(new VocabularyKey(nameof(ExceptionType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PaymentCalendar { get; private set; }
         public VocabularyKey PaymentCalendarName { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey ExceptionDate { get; private set; }
         public VocabularyKey ExceptionType { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WorkCalendarTimeTemplateEntityVocabulary()
         {
-            VocabularyName = "WorkCalendarTimeTemplateEntity";
+            VocabularyName = "Work Calendar Time Template Entity";
             KeyPrefix = "commonDataModel.workcalendartimetemplateentity";
             KeySeparator = ".";
             Grouping = "/WorkCalendarTimeTemplateEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsPickingUpClosedFriday = group.Add(new VocabularyKey(nameof(IsPickingUpClosedFriday), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsPickingUpClosedSaturday = group.Add(new VocabularyKey(nameof(IsPickingUpClosedSaturday), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsPickingUpClosedSunday = group.Add(new VocabularyKey(nameof(IsPickingUpClosedSunday), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TemplateId { get; private set; }
         public VocabularyKey TemplateName { get; private set; }
         public VocabularyKey IsPickingUpClosedMonday { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsPickingUpClosedFriday { get; private set; }
         public VocabularyKey IsPickingUpClosedSaturday { get; private set; }
         public VocabularyKey IsPickingUpClosedSunday { get; private set; }
-
-
     }
 }

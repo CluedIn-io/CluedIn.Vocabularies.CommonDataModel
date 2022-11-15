@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseWorkClassEntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseWorkClassEntity";
+            VocabularyName = "WHS Warehouse Work Class Entity";
             KeyPrefix = "commonDataModel.whswarehouseworkclassentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseWorkClassEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ClassId = group.Add(new VocabularyKey(nameof(ClassId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ClassDescription = group.Add(new VocabularyKey(nameof(ClassDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkOrderType = group.Add(new VocabularyKey(nameof(WorkOrderType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ClassId { get; private set; }
         public VocabularyKey ClassDescription { get; private set; }
         public VocabularyKey WorkOrderType { get; private set; }
-
-
     }
 }

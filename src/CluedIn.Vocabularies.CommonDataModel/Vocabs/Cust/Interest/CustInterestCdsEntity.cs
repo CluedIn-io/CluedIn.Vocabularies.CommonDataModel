@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustInterestCdsEntityVocabulary()
         {
-            VocabularyName = "CustInterestCdsEntity";
+            VocabularyName = "Cust Interest Cds Entity";
             KeyPrefix = "commonDataModel.custinterestcdsentity";
             KeySeparator = ".";
             Grouping = "/CustInterestCdsEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 InterestType = group.Add(new VocabularyKey(nameof(InterestType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InterestCode = group.Add(new VocabularyKey(nameof(InterestCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Txt = group.Add(new VocabularyKey(nameof(Txt), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InterestType { get; private set; }
         public VocabularyKey InterestCode { get; private set; }
         public VocabularyKey Txt { get; private set; }
-
-
     }
 }

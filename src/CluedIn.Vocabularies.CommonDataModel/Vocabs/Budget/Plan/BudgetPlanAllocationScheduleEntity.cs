@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetPlanAllocationScheduleEntityVocabulary()
         {
-            VocabularyName = "BudgetPlanAllocationScheduleEntity";
+            VocabularyName = "Budget Plan Allocation Schedule Entity";
             KeyPrefix = "commonDataModel.budgetplanallocationscheduleentity";
             KeySeparator = ".";
             Grouping = "/BudgetPlanAllocationScheduleEntity";
@@ -32,10 +32,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Ledger = group.Add(new VocabularyKey(nameof(Ledger), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SourceScenario = group.Add(new VocabularyKey(nameof(SourceScenario), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AppendLines = group.Add(new VocabularyKey(nameof(AppendLines), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AllocationMethod { get; private set; }
         public VocabularyKey AllocationTerm { get; private set; }
         public VocabularyKey BasisPlanScenario { get; private set; }
@@ -55,7 +53,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Ledger { get; private set; }
         public VocabularyKey SourceScenario { get; private set; }
         public VocabularyKey AppendLines { get; private set; }
-
-
     }
 }

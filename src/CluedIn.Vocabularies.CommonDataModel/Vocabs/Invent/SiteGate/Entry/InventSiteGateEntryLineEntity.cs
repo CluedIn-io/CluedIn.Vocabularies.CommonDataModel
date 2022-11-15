@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventSiteGateEntryLineEntityVocabulary()
         {
-            VocabularyName = "InventSiteGateEntryLineEntity";
+            VocabularyName = "Invent Site Gate Entry Line Entity";
             KeyPrefix = "commonDataModel.inventsitegateentrylineentity";
             KeySeparator = ".";
             Grouping = "/InventSiteGateEntryLineEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 GateEntry = group.Add(new VocabularyKey(nameof(GateEntry), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ChallanDate = group.Add(new VocabularyKey(nameof(ChallanDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ChallanNumber = group.Add(new VocabularyKey(nameof(ChallanNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ChallanQty { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey InventoryUnit { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey GateEntry { get; private set; }
         public VocabularyKey ChallanDate { get; private set; }
         public VocabularyKey ChallanNumber { get; private set; }
-
-
     }
 }

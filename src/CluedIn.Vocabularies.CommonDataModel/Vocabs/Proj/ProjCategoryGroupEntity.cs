@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjCategoryGroupEntityVocabulary()
         {
-            VocabularyName = "ProjCategoryGroupEntity";
+            VocabularyName = "Proj Category Group Entity";
             KeyPrefix = "commonDataModel.projcategorygroupentity";
             KeySeparator = ".";
             Grouping = "/ProjCategoryGroupEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CategoryGroupId = group.Add(new VocabularyKey(nameof(CategoryGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CategoryType = group.Add(new VocabularyKey(nameof(CategoryType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CategoryGroupId { get; private set; }
         public VocabularyKey CategoryType { get; private set; }
         public VocabularyKey Name { get; private set; }
-
-
     }
 }

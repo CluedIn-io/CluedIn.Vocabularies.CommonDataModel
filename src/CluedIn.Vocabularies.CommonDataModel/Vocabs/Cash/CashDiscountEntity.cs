@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CashDiscountEntityVocabulary()
         {
-            VocabularyName = "CashDiscountEntity";
+            VocabularyName = "Cash Discount Entity";
             KeyPrefix = "commonDataModel.cashdiscountentity";
             KeySeparator = ".";
             Grouping = "/CashDiscountEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MainAccountIdForCustomerDiscountsDisplayValue = group.Add(new VocabularyKey(nameof(MainAccountIdForCustomerDiscountsDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MainAccountIdForVendorDiscountsDisplayValue = group.Add(new VocabularyKey(nameof(MainAccountIdForVendorDiscountsDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DescriptionQRBill = group.Add(new VocabularyKey(nameof(DescriptionQRBill), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CashDiscountCode { get; private set; }
         public VocabularyKey NextCashDiscountCode { get; private set; }
         public VocabularyKey Description { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey MainAccountIdForCustomerDiscountsDisplayValue { get; private set; }
         public VocabularyKey MainAccountIdForVendorDiscountsDisplayValue { get; private set; }
         public VocabularyKey DescriptionQRBill { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetTransReportingCurrencyAmountsEntityVocabulary()
         {
-            VocabularyName = "AssetTransReportingCurrencyAmountsEntity";
+            VocabularyName = "Asset Trans Reporting Currency Amounts Entity";
             KeyPrefix = "commonDataModel.assettransreportingcurrencyamountsentity";
             KeySeparator = ".";
             Grouping = "/AssetTransReportingCurrencyAmountsEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ReportingCurrencyExchRate = group.Add(new VocabularyKey(nameof(ReportingCurrencyExchRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AmountReportingCurrency = group.Add(new VocabularyKey(nameof(AmountReportingCurrency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AssetTrans = group.Add(new VocabularyKey(nameof(AssetTrans), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BookId { get; private set; }
         public VocabularyKey AssetId { get; private set; }
         public VocabularyKey TransType { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ReportingCurrencyExchRate { get; private set; }
         public VocabularyKey AmountReportingCurrency { get; private set; }
         public VocabularyKey AssetTrans { get; private set; }
-
-
     }
 }

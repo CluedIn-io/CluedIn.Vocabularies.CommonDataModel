@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CredManCashDiscRankEntityVocabulary()
         {
-            VocabularyName = "CredManCashDiscRankEntity";
+            VocabularyName = "Cred Man Cash Disc Rank Entity";
             KeyPrefix = "commonDataModel.credmancashdiscrankentity";
             KeySeparator = ".";
             Grouping = "/CredManCashDiscRankEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 CashDiscCode = group.Add(new VocabularyKey(nameof(CashDiscCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CashDiscRanking = group.Add(new VocabularyKey(nameof(CashDiscRanking), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CashDiscCode { get; private set; }
         public VocabularyKey CashDiscRanking { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgTimeAndAttendanceParametersEntityVocabulary()
         {
-            VocabularyName = "JmgTimeAndAttendanceParametersEntity";
+            VocabularyName = "Jmg Time And Attendance Parameters Entity";
             KeyPrefix = "commonDataModel.jmgtimeandattendanceparametersentity";
             KeySeparator = ".";
             Grouping = "/JmgTimeAndAttendanceParametersEntity";
@@ -55,10 +55,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AreAbsenceRegistrationsTransferredToHRM = group.Add(new VocabularyKey(nameof(AreAbsenceRegistrationsTransferredToHRM), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsBadgeIdUsedAsIdentification = group.Add(new VocabularyKey(nameof(IsBadgeIdUsedAsIdentification), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsPasswordIdentificationRequired = group.Add(new VocabularyKey(nameof(IsPasswordIdentificationRequired), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AutomaticAbsenceRegistrationAbsenceCodeJobId { get; private set; }
         public VocabularyKey WillReachingMaximumWorkingMinutesAutomaticallyRegisterClockOut { get; private set; }
         public VocabularyKey BarcodeSetupId { get; private set; }
@@ -101,7 +99,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AreAbsenceRegistrationsTransferredToHRM { get; private set; }
         public VocabularyKey IsBadgeIdUsedAsIdentification { get; private set; }
         public VocabularyKey IsPasswordIdentificationRequired { get; private set; }
-
-
     }
 }

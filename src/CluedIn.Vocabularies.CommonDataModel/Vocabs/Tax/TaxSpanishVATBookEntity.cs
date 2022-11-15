@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxSpanishVATBookEntityVocabulary()
         {
-            VocabularyName = "TaxSpanishVATBookEntity";
+            VocabularyName = "Tax Spanish VAT Book Entity";
             KeyPrefix = "commonDataModel.taxspanishvatbookentity";
             KeySeparator = ".";
             Grouping = "/TaxSpanishVATBookEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsNonDeductibleVAT = group.Add(new VocabularyKey(nameof(IsNonDeductibleVAT), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsReverseCharge = group.Add(new VocabularyKey(nameof(IsReverseCharge), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NumberSequenceScope = group.Add(new VocabularyKey(nameof(NumberSequenceScope), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey NumberSequenceTable { get; private set; }
         public VocabularyKey VATBook { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsNonDeductibleVAT { get; private set; }
         public VocabularyKey IsReverseCharge { get; private set; }
         public VocabularyKey NumberSequenceScope { get; private set; }
-
-
     }
 }

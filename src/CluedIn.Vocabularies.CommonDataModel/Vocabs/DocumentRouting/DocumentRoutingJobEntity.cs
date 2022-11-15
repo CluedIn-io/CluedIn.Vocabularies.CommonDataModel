@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DocumentRoutingJobEntityVocabulary()
         {
-            VocabularyName = "DocumentRoutingJobEntity";
+            VocabularyName = "Document Routing Job Entity";
             KeyPrefix = "commonDataModel.documentroutingjobentity";
             KeySeparator = ".";
             Grouping = "/DocumentRoutingJobEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 EndProcessTime = group.Add(new VocabularyKey(nameof(EndProcessTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CompanyId = group.Add(new VocabularyKey(nameof(CompanyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PrinterId = group.Add(new VocabularyKey(nameof(PrinterId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey JobId { get; private set; }
         public VocabularyKey ActivityId { get; private set; }
         public VocabularyKey PrinterName { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey EndProcessTime { get; private set; }
         public VocabularyKey CompanyId { get; private set; }
         public VocabularyKey PrinterId { get; private set; }
-
-
     }
 }

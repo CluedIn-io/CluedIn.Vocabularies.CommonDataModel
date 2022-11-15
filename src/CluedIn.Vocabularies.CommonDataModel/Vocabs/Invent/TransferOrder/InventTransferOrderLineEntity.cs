@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventTransferOrderLineEntityVocabulary()
         {
-            VocabularyName = "InventTransferOrderLineEntity";
+            VocabularyName = "Invent Transfer Order Line Entity";
             KeyPrefix = "commonDataModel.inventtransferorderlineentity";
             KeySeparator = ".";
             Grouping = "/InventTransferOrderLineEntity";
@@ -94,10 +94,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 UnitPrice = group.Add(new VocabularyKey(nameof(UnitPrice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VATPriceType = group.Add(new VocabularyKey(nameof(VATPriceType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VATRetentionCode = group.Add(new VocabularyKey(nameof(VATRetentionCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IntrastatCostAmount { get; private set; }
         public VocabularyKey ATPDelayedDemandOffsetDays { get; private set; }
         public VocabularyKey ATPDelayedSupplyOffsetDays { get; private set; }
@@ -179,7 +177,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey UnitPrice { get; private set; }
         public VocabularyKey VATPriceType { get; private set; }
         public VocabularyKey VATRetentionCode { get; private set; }
-
-
     }
 }

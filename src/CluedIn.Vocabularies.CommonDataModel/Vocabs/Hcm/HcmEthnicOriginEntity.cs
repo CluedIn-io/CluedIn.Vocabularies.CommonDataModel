@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmEthnicOriginEntityVocabulary()
         {
-            VocabularyName = "HcmEthnicOriginEntity";
+            VocabularyName = "Hcm Ethnic Origin Entity";
             KeyPrefix = "commonDataModel.hcmethnicoriginentity";
             KeySeparator = ".";
             Grouping = "/HcmEthnicOriginEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EthnicOriginId = group.Add(new VocabularyKey(nameof(EthnicOriginId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey EthnicOriginId { get; private set; }
-
-
     }
 }

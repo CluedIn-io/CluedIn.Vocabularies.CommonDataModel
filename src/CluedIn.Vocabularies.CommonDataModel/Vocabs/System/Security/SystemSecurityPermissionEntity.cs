@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SystemSecurityPermissionEntityVocabulary()
         {
-            VocabularyName = "SystemSecurityPermissionEntity";
+            VocabularyName = "System Security Permission Entity";
             KeyPrefix = "commonDataModel.systemsecuritypermissionentity";
             KeySeparator = ".";
             Grouping = "/SystemSecurityPermissionEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DeleteAccess = group.Add(new VocabularyKey(nameof(DeleteAccess), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InvokeAccess = group.Add(new VocabularyKey(nameof(InvokeAccess), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CorrectAccess = group.Add(new VocabularyKey(nameof(CorrectAccess), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SecurityRoleIdentifier { get; private set; }
         public VocabularyKey SecurityRoleName { get; private set; }
         public VocabularyKey UserLicenseType { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DeleteAccess { get; private set; }
         public VocabularyKey InvokeAccess { get; private set; }
         public VocabularyKey CorrectAccess { get; private set; }
-
-
     }
 }

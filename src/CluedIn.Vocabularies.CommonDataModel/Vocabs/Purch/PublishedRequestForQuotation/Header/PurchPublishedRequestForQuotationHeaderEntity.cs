@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPublishedRequestForQuotationHeaderEntityVocabulary()
         {
-            VocabularyName = "PurchPublishedRequestForQuotationHeaderEntity";
+            VocabularyName = "Purch Published Request For Quotation Header Entity";
             KeyPrefix = "commonDataModel.purchpublishedrequestforquotationheaderentity";
             KeySeparator = ".";
             Grouping = "/PurchPublishedRequestForQuotationHeaderEntity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RFQExpirationDateTime = group.Add(new VocabularyKey(nameof(RFQExpirationDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RFQCancellationDateTime = group.Add(new VocabularyKey(nameof(RFQCancellationDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RFQCancellationReasonDescription = group.Add(new VocabularyKey(nameof(RFQCancellationReasonDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RFQCaseNumber { get; private set; }
         public VocabularyKey RFQCaseRecId { get; private set; }
         public VocabularyKey RFQCaseTitle { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RFQExpirationDateTime { get; private set; }
         public VocabularyKey RFQCancellationDateTime { get; private set; }
         public VocabularyKey RFQCancellationReasonDescription { get; private set; }
-
-
     }
 }

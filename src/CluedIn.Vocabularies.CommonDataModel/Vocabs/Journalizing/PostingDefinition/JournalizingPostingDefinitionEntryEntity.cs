@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JournalizingPostingDefinitionEntryEntityVocabulary()
         {
-            VocabularyName = "JournalizingPostingDefinitionEntryEntity";
+            VocabularyName = "Journalizing Posting Definition Entry Entity";
             KeyPrefix = "commonDataModel.journalizingpostingdefinitionentryentity";
             KeySeparator = ".";
             Grouping = "/JournalizingPostingDefinitionEntryEntity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 GeneratedEntryLedgerAccountAccountStructure = group.Add(new VocabularyKey(nameof(GeneratedEntryLedgerAccountAccountStructure), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PostingDefinitionId = group.Add(new VocabularyKey(nameof(PostingDefinitionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidFrom = group.Add(new VocabularyKey(nameof(ValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey GeneratedEntryAccountStructure { get; private set; }
         public VocabularyKey JournalizingDefinitionMatch { get; private set; }
         public VocabularyKey GeneratedEntriesDebitCredit { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey GeneratedEntryLedgerAccountAccountStructure { get; private set; }
         public VocabularyKey PostingDefinitionId { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
-
-
     }
 }

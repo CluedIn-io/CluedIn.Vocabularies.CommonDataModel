@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseLocationDirectiveCodeEntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseLocationDirectiveCodeEntity";
+            VocabularyName = "WHS Warehouse Location Directive Code Entity";
             KeyPrefix = "commonDataModel.whswarehouselocationdirectivecodeentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseLocationDirectiveCodeEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 DirectiveCodeId = group.Add(new VocabularyKey(nameof(DirectiveCodeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DirectiveCodeDescription = group.Add(new VocabularyKey(nameof(DirectiveCodeDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DirectiveCodeId { get; private set; }
         public VocabularyKey DirectiveCodeDescription { get; private set; }
-
-
     }
 }

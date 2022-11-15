@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvPolicyViolationJustificationEntityVocabulary()
         {
-            VocabularyName = "TrvPolicyViolationJustificationEntity";
+            VocabularyName = "Trv Policy Violation Justification Entity";
             KeyPrefix = "commonDataModel.trvpolicyviolationjustificationentity";
             KeySeparator = ".";
             Grouping = "/TrvPolicyViolationJustificationEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ViolatingRecord = group.Add(new VocabularyKey(nameof(ViolatingRecord), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ViolatingRecordId = group.Add(new VocabularyKey(nameof(ViolatingRecordId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ViolationJustificationType = group.Add(new VocabularyKey(nameof(ViolationJustificationType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey JustificationId { get; private set; }
         public VocabularyKey Action { get; private set; }
         public VocabularyKey JustificationText { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ViolatingRecord { get; private set; }
         public VocabularyKey ViolatingRecordId { get; private set; }
         public VocabularyKey ViolationJustificationType { get; private set; }
-
-
     }
 }

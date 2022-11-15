@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxAuthorityEntityVocabulary()
         {
-            VocabularyName = "TaxAuthorityEntity";
+            VocabularyName = "Tax Authority Entity";
             KeyPrefix = "commonDataModel.taxauthorityentity";
             KeySeparator = ".";
             Grouping = "/TaxAuthorityEntity";
@@ -48,10 +48,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ValidFrom = group.Add(new VocabularyKey(nameof(ValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidTo = group.Add(new VocabularyKey(nameof(ValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Agency = group.Add(new VocabularyKey(nameof(Agency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TaxAuthorityCode { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey TaxAuthorityIdentification { get; private set; }
@@ -87,7 +85,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey ValidTo { get; private set; }
         public VocabularyKey Agency { get; private set; }
-
-
     }
 }

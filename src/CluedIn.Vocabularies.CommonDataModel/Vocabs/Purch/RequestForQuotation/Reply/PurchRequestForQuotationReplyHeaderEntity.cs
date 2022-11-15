@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchRequestForQuotationReplyHeaderEntityVocabulary()
         {
-            VocabularyName = "PurchRequestForQuotationReplyHeaderEntity";
+            VocabularyName = "Purch Request For Quotation Reply Header Entity";
             KeyPrefix = "commonDataModel.purchrequestforquotationreplyheaderentity";
             KeySeparator = ".";
             Grouping = "/PurchRequestForQuotationReplyHeaderEntity";
@@ -102,10 +102,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DeliveryAddressTimeZone = group.Add(new VocabularyKey(nameof(DeliveryAddressTimeZone), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultDimension = group.Add(new VocabularyKey(nameof(DefaultDimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsDeliveryAddressOrderSpecific = group.Add(new VocabularyKey(nameof(IsDeliveryAddressOrderSpecific), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ResultingPurchaseAgreementId { get; private set; }
         public VocabularyKey RFQBidType { get; private set; }
         public VocabularyKey VendorCashDiscountCode { get; private set; }
@@ -195,7 +193,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DeliveryAddressTimeZone { get; private set; }
         public VocabularyKey DefaultDimension { get; private set; }
         public VocabularyKey IsDeliveryAddressOrderSpecific { get; private set; }
-
-
     }
 }

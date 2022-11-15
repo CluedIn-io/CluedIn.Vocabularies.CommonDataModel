@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustInterestCodeWithFeeEntityVocabulary()
         {
-            VocabularyName = "CustInterestCodeWithFeeEntity";
+            VocabularyName = "Cust Interest Code With Fee Entity";
             KeyPrefix = "commonDataModel.custinterestcodewithfeeentity";
             KeySeparator = ".";
             Grouping = "/CustInterestCodeWithFeeEntity";
@@ -37,10 +37,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FeeLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(FeeLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Fee = group.Add(new VocabularyKey(nameof(Fee), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FeeTaxItemGroup = group.Add(new VocabularyKey(nameof(FeeTaxItemGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InterestCode { get; private set; }
         public VocabularyKey InterestType { get; private set; }
         public VocabularyKey Description { get; private set; }
@@ -65,7 +63,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FeeLedgerDimensionDisplayValue { get; private set; }
         public VocabularyKey Fee { get; private set; }
         public VocabularyKey FeeTaxItemGroup { get; private set; }
-
-
     }
 }

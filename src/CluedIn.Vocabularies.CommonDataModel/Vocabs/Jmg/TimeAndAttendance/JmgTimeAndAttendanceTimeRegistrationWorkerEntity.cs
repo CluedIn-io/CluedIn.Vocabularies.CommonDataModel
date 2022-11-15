@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgTimeAndAttendanceTimeRegistrationWorkerEntityVocabulary()
         {
-            VocabularyName = "JmgTimeAndAttendanceTimeRegistrationWorkerEntity";
+            VocabularyName = "Jmg Time And Attendance Time Registration Worker Entity";
             KeyPrefix = "commonDataModel.jmgtimeandattendancetimeregistrationworkerentity";
             KeySeparator = ".";
             Grouping = "/JmgTimeAndAttendanceTimeRegistrationWorkerEntity";
@@ -34,10 +34,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WorkerActivationDate = group.Add(new VocabularyKey(nameof(WorkerActivationDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkerBadgeId = group.Add(new VocabularyKey(nameof(WorkerBadgeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkerBadgeVersion = group.Add(new VocabularyKey(nameof(WorkerBadgeVersion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ApproverPersonnelNumber { get; private set; }
         public VocabularyKey CanBundleNewJobs { get; private set; }
         public VocabularyKey CanUseElectronicTimecard { get; private set; }
@@ -59,7 +57,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WorkerActivationDate { get; private set; }
         public VocabularyKey WorkerBadgeId { get; private set; }
         public VocabularyKey WorkerBadgeVersion { get; private set; }
-
-
     }
 }

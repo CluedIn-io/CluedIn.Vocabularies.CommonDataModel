@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjJournalTransEntityVocabulary()
         {
-            VocabularyName = "ProjJournalTransEntity";
+            VocabularyName = "Proj Journal Trans Entity";
             KeyPrefix = "commonDataModel.projjournaltransentity";
             KeySeparator = ".";
             Grouping = "/ProjJournalTransEntity";
@@ -47,10 +47,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ResourceCompanyId = group.Add(new VocabularyKey(nameof(ResourceCompanyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ResourceCategoryId = group.Add(new VocabularyKey(nameof(ResourceCategoryId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CurrencyId = group.Add(new VocabularyKey(nameof(CurrencyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ActivityNumber { get; private set; }
         public VocabularyKey Category { get; private set; }
         public VocabularyKey CostPrice { get; private set; }
@@ -85,7 +83,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ResourceCompanyId { get; private set; }
         public VocabularyKey ResourceCategoryId { get; private set; }
         public VocabularyKey CurrencyId { get; private set; }
-
-
     }
 }

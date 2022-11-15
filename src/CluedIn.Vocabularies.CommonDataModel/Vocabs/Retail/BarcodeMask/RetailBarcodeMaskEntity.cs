@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailBarcodeMaskEntityVocabulary()
         {
-            VocabularyName = "RetailBarcodeMaskEntity";
+            VocabularyName = "Retail Barcode Mask Entity";
             KeyPrefix = "commonDataModel.retailbarcodemaskentity";
             KeySeparator = ".";
             Grouping = "/RetailBarcodeMaskEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Prefix = group.Add(new VocabularyKey(nameof(Prefix), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Symbology = group.Add(new VocabularyKey(nameof(Symbology), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Type = group.Add(new VocabularyKey(nameof(Type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey Mask { get; private set; }
         public VocabularyKey MaskId { get; private set; }
         public VocabularyKey Prefix { get; private set; }
         public VocabularyKey Symbology { get; private set; }
         public VocabularyKey Type { get; private set; }
-
-
     }
 }

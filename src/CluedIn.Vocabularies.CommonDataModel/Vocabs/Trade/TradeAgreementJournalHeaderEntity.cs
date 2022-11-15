@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TradeAgreementJournalHeaderEntityVocabulary()
         {
-            VocabularyName = "TradeAgreementJournalHeaderEntity";
+            VocabularyName = "Trade Agreement Journal Header Entity";
             KeyPrefix = "commonDataModel.tradeagreementjournalheaderentity";
             KeySeparator = ".";
             Grouping = "/TradeAgreementJournalHeaderEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsCurrentPriceExported = group.Add(new VocabularyKey(nameof(IsCurrentPriceExported), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Posted = group.Add(new VocabularyKey(nameof(Posted), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PostedDate = group.Add(new VocabularyKey(nameof(PostedDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey JournalNumber { get; private set; }
         public VocabularyKey DefaultTradeAgreementType { get; private set; }
         public VocabularyKey TradeAgreementJournalNameId { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsCurrentPriceExported { get; private set; }
         public VocabularyKey Posted { get; private set; }
         public VocabularyKey PostedDate { get; private set; }
-
-
     }
 }

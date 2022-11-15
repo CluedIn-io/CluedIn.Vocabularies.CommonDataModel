@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendPaymentBIUtilizedCashDiscVocabulary()
         {
-            VocabularyName = "VendPaymentBIUtilizedCashDisc";
+            VocabularyName = "Vend Payment BI Utilized Cash Disc";
             KeyPrefix = "commonDataModel.vendpaymentbiutilizedcashdisc";
             KeySeparator = ".";
             Grouping = "/VendPaymentBIUtilizedCashDisc";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 TransRecId = group.Add(new VocabularyKey(nameof(TransRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UtilizedCashDisc = group.Add(new VocabularyKey(nameof(UtilizedCashDisc), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TransRecId { get; private set; }
         public VocabularyKey UtilizedCashDisc { get; private set; }
-
-
     }
 }

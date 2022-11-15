@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailDiscountFiscalTextEntityVocabulary()
         {
-            VocabularyName = "RetailDiscountFiscalTextEntity";
+            VocabularyName = "Retail Discount Fiscal Text Entity";
             KeyPrefix = "commonDataModel.retaildiscountfiscaltextentity";
             KeySeparator = ".";
             Grouping = "/RetailDiscountFiscalTextEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Discount = group.Add(new VocabularyKey(nameof(Discount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TextOnFiscalReceipt = group.Add(new VocabularyKey(nameof(TextOnFiscalReceipt), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ConnectorGroupNumber = group.Add(new VocabularyKey(nameof(ConnectorGroupNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Discount { get; private set; }
         public VocabularyKey TextOnFiscalReceipt { get; private set; }
         public VocabularyKey ConnectorGroupNumber { get; private set; }
-
-
     }
 }

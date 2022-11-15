@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerRRGOffsetAccountInterval_RUEntityVocabulary()
         {
-            VocabularyName = "LedgerRRGOffsetAccountInterval_RUEntity";
+            VocabularyName = "Ledger RRG Offset Account Interval _RU Entity";
             KeyPrefix = "commonDataModel.ledgerrrgoffsetaccountinterval_ruentity";
             KeySeparator = ".";
             Grouping = "/LedgerRRGOffsetAccountInterval_RUEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FromLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(FromLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ToLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(ToLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OperationLineId = group.Add(new VocabularyKey(nameof(OperationLineId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FromLedgerDimensionDisplayValue { get; private set; }
         public VocabularyKey ToLedgerDimensionDisplayValue { get; private set; }
         public VocabularyKey OperationLineId { get; private set; }
-
-
     }
 }

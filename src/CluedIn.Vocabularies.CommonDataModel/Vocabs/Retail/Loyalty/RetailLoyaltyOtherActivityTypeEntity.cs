@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailLoyaltyOtherActivityTypeEntityVocabulary()
         {
-            VocabularyName = "RetailLoyaltyOtherActivityTypeEntity";
+            VocabularyName = "Retail Loyalty Other Activity Type Entity";
             KeyPrefix = "commonDataModel.retailloyaltyotheractivitytypeentity";
             KeySeparator = ".";
             Grouping = "/RetailLoyaltyOtherActivityTypeEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LoyaltyOtherActivityTypeName = group.Add(new VocabularyKey(nameof(LoyaltyOtherActivityTypeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LoyaltyOtherActivityTypeDescription = group.Add(new VocabularyKey(nameof(LoyaltyOtherActivityTypeDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IgnoreVestingPeriod = group.Add(new VocabularyKey(nameof(IgnoreVestingPeriod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LoyaltyOtherActivityTypeId { get; private set; }
         public VocabularyKey LoyaltyOtherActivityTypeName { get; private set; }
         public VocabularyKey LoyaltyOtherActivityTypeDescription { get; private set; }
         public VocabularyKey IgnoreVestingPeriod { get; private set; }
-
-
     }
 }

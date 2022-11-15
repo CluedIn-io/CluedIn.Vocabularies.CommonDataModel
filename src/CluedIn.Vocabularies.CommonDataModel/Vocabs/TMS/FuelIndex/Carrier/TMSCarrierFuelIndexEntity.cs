@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSCarrierFuelIndexEntityVocabulary()
         {
-            VocabularyName = "TMSCarrierFuelIndexEntity";
+            VocabularyName = "TMS Carrier Fuel Index Entity";
             KeyPrefix = "commonDataModel.tmscarrierfuelindexentity";
             KeySeparator = ".";
             Grouping = "/TMSCarrierFuelIndexEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 IndexCode = group.Add(new VocabularyKey(nameof(IndexCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IndexDescription = group.Add(new VocabularyKey(nameof(IndexDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IndexCode { get; private set; }
         public VocabularyKey IndexDescription { get; private set; }
-
-
     }
 }

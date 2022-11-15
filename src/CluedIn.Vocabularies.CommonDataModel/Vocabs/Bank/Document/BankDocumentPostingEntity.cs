@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankDocumentPostingEntityVocabulary()
         {
-            VocabularyName = "BankDocumentPostingEntity";
+            VocabularyName = "Bank Document Posting Entity";
             KeyPrefix = "commonDataModel.bankdocumentpostingentity";
             KeySeparator = ".";
             Grouping = "/BankDocumentPostingEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MarginLedgerAccount = group.Add(new VocabularyKey(nameof(MarginLedgerAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MiscChargesLedgerAccount = group.Add(new VocabularyKey(nameof(MiscChargesLedgerAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SettleLedgerAccount = group.Add(new VocabularyKey(nameof(SettleLedgerAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountCode { get; private set; }
         public VocabularyKey FacilityGroup { get; private set; }
         public VocabularyKey FacilityType { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey MarginLedgerAccount { get; private set; }
         public VocabularyKey MiscChargesLedgerAccount { get; private set; }
         public VocabularyKey SettleLedgerAccount { get; private set; }
-
-
     }
 }

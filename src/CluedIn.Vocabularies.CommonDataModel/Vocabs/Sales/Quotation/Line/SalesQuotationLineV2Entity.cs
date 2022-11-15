@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesQuotationLineV2EntityVocabulary()
         {
-            VocabularyName = "SalesQuotationLineV2Entity";
+            VocabularyName = "Sales Quotation Line V2 Entity";
             KeyPrefix = "commonDataModel.salesquotationlinev2entity";
             KeySeparator = ".";
             Grouping = "/SalesQuotationLineV2Entity";
@@ -99,10 +99,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 InvoiceCustomerAccountNumber = group.Add(new VocabularyKey(nameof(InvoiceCustomerAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProspectId = group.Add(new VocabularyKey(nameof(ProspectId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ShippingWarehouseLocationId = group.Add(new VocabularyKey(nameof(ShippingWarehouseLocationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SalesQuotationNumber { get; private set; }
         public VocabularyKey InventoryLotId { get; private set; }
         public VocabularyKey SalesQuotationStatus { get; private set; }
@@ -189,7 +187,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey InvoiceCustomerAccountNumber { get; private set; }
         public VocabularyKey ProspectId { get; private set; }
         public VocabularyKey ShippingWarehouseLocationId { get; private set; }
-
-
     }
 }

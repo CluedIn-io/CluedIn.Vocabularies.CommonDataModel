@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRRoyaltyAgreementHeaderEntityVocabulary()
         {
-            VocabularyName = "MCRRoyaltyAgreementHeaderEntity";
+            VocabularyName = "MCR Royalty Agreement Header Entity";
             KeyPrefix = "commonDataModel.mcrroyaltyagreementheaderentity";
             KeySeparator = ".";
             Grouping = "/MCRRoyaltyAgreementHeaderEntity";
@@ -38,10 +38,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsValidated = group.Add(new VocabularyKey(nameof(IsValidated), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidatedBy = group.Add(new VocabularyKey(nameof(ValidatedBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidatingWorkerPersonnelNumber = group.Add(new VocabularyKey(nameof(ValidatingWorkerPersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RoyaltyAgreementId { get; private set; }
         public VocabularyKey IsApprovalRequired { get; private set; }
         public VocabularyKey DefaultCalculationSearchDateType { get; private set; }
@@ -67,7 +65,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsValidated { get; private set; }
         public VocabularyKey ValidatedBy { get; private set; }
         public VocabularyKey ValidatingWorkerPersonnelNumber { get; private set; }
-
-
     }
 }

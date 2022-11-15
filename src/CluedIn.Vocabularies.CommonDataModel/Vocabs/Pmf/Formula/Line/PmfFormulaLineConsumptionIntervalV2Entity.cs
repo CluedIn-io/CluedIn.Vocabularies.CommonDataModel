@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PmfFormulaLineConsumptionIntervalV2EntityVocabulary()
         {
-            VocabularyName = "PmfFormulaLineConsumptionIntervalV2Entity";
+            VocabularyName = "Pmf Formula Line Consumption Interval V2 Entity";
             KeyPrefix = "commonDataModel.pmfformulalineconsumptionintervalv2entity";
             KeySeparator = ".";
             Grouping = "/PmfFormulaLineConsumptionIntervalV2Entity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LineNumber = group.Add(new VocabularyKey(nameof(LineNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineRecordId = group.Add(new VocabularyKey(nameof(LineRecordId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineCreationSequenceNumber = group.Add(new VocabularyKey(nameof(LineCreationSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ConsumptionQuantity { get; private set; }
         public VocabularyKey FromQuantity { get; private set; }
         public VocabularyKey CatchWeightConsumptionQuantity { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LineNumber { get; private set; }
         public VocabularyKey LineRecordId { get; private set; }
         public VocabularyKey LineCreationSequenceNumber { get; private set; }
-
-
     }
 }

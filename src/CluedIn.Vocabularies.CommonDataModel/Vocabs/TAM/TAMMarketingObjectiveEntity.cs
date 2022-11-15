@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TAMMarketingObjectiveEntityVocabulary()
         {
-            VocabularyName = "TAMMarketingObjectiveEntity";
+            VocabularyName = "TAM Marketing Objective Entity";
             KeyPrefix = "commonDataModel.tammarketingobjectiveentity";
             KeySeparator = ".";
             Grouping = "/TAMMarketingObjectiveEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 ObjectiveCode = group.Add(new VocabularyKey(nameof(ObjectiveCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ObjectiveDescription = group.Add(new VocabularyKey(nameof(ObjectiveDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ObjectiveCode { get; private set; }
         public VocabularyKey ObjectiveDescription { get; private set; }
-
-
     }
 }

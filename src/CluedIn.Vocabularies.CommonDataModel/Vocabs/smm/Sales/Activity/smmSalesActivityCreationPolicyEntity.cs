@@ -2,16 +2,16 @@ using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 {
-    public class smmSalesActivityCreationPolicyEntityVocabulary : SimpleVocabulary
+    public class SmmSalesActivityCreationPolicyEntityVocabulary : SimpleVocabulary
     {
-        public smmSalesActivityCreationPolicyEntityVocabulary()
+        public SmmSalesActivityCreationPolicyEntityVocabulary()
         {
-            VocabularyName = "smmSalesActivityCreationPolicyEntity";
+            VocabularyName = "Smm Sales Activity Creation Policy Entity";
             KeyPrefix = "commonDataModel.smmsalesactivitycreationpolicyentity";
             KeySeparator = ".";
-            Grouping = "/smmSalesActivityCreationPolicyEntity";
+            Grouping = "/SmmSalesActivityCreationPolicyEntity";
 
-            AddGroup("smmSalesActivityCreationPolicyEntity Details", group =>
+            AddGroup("SmmSalesActivityCreationPolicyEntity Details", group =>
             {
                 WillBatchProcessingCreateActivities = group.Add(new VocabularyKey(nameof(WillBatchProcessingCreateActivities), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultQuotationActivityCategory = group.Add(new VocabularyKey(nameof(DefaultQuotationActivityCategory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
@@ -54,10 +54,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DefaultSalesCatalogSentActivityPurposeId = group.Add(new VocabularyKey(nameof(DefaultSalesCatalogSentActivityPurposeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultSalesCatalogSentActivityTypeId = group.Add(new VocabularyKey(nameof(DefaultSalesCatalogSentActivityTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesCatalogSentActivityCreationRule = group.Add(new VocabularyKey(nameof(SalesCatalogSentActivityCreationRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WillBatchProcessingCreateActivities { get; private set; }
         public VocabularyKey DefaultQuotationActivityCategory { get; private set; }
         public VocabularyKey DefaultQuotationActivityPhaseId { get; private set; }
@@ -99,7 +97,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DefaultSalesCatalogSentActivityPurposeId { get; private set; }
         public VocabularyKey DefaultSalesCatalogSentActivityTypeId { get; private set; }
         public VocabularyKey SalesCatalogSentActivityCreationRule { get; private set; }
-
-
     }
 }

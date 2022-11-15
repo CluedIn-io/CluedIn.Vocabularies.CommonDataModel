@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmBITerminatedWorkerEntityVocabulary()
         {
-            VocabularyName = "HcmBITerminatedWorkerEntity";
+            VocabularyName = "Hcm BI Terminated Worker Entity";
             KeyPrefix = "commonDataModel.hcmbiterminatedworkerentity";
             KeySeparator = ".";
             Grouping = "/HcmBITerminatedWorkerEntity";
@@ -36,10 +36,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PersonDetailsValidFrom = group.Add(new VocabularyKey(nameof(PersonDetailsValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EmploymentDetailValidFrom = group.Add(new VocabularyKey(nameof(EmploymentDetailValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EmploymentDetailValidTo = group.Add(new VocabularyKey(nameof(EmploymentDetailValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Age { get; private set; }
         public VocabularyKey Benefit { get; private set; }
         public VocabularyKey Company { get; private set; }
@@ -63,7 +61,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PersonDetailsValidFrom { get; private set; }
         public VocabularyKey EmploymentDetailValidFrom { get; private set; }
         public VocabularyKey EmploymentDetailValidTo { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetValueModelShiftDepreciationEntityVocabulary()
         {
-            VocabularyName = "AssetValueModelShiftDepreciationEntity";
+            VocabularyName = "Asset Value Model Shift Depreciation Entity";
             KeyPrefix = "commonDataModel.assetvaluemodelshiftdepreciationentity";
             KeySeparator = ".";
             Grouping = "/AssetValueModelShiftDepreciationEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TypeOfIndustry = group.Add(new VocabularyKey(nameof(TypeOfIndustry), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TypeOfShift = group.Add(new VocabularyKey(nameof(TypeOfShift), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ShiftPercentage = group.Add(new VocabularyKey(nameof(ShiftPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FixedAssetNumber { get; private set; }
         public VocabularyKey ValueModel { get; private set; }
         public VocabularyKey FromDate { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TypeOfIndustry { get; private set; }
         public VocabularyKey TypeOfShift { get; private set; }
         public VocabularyKey ShiftPercentage { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetControlMessageLevelEntityVocabulary()
         {
-            VocabularyName = "BudgetControlMessageLevelEntity";
+            VocabularyName = "Budget Control Message Level Entity";
             KeyPrefix = "commonDataModel.budgetcontrolmessagelevelentity";
             KeySeparator = ".";
             Grouping = "/BudgetControlMessageLevelEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 UserGroupId = group.Add(new VocabularyKey(nameof(UserGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UserGroupName = group.Add(new VocabularyKey(nameof(UserGroupName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Selected = group.Add(new VocabularyKey(nameof(Selected), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LegalEntityId { get; private set; }
         public VocabularyKey Status { get; private set; }
         public VocabularyKey InUseBy { get; private set; }
         public VocabularyKey UserGroupId { get; private set; }
         public VocabularyKey UserGroupName { get; private set; }
         public VocabularyKey Selected { get; private set; }
-
-
     }
 }

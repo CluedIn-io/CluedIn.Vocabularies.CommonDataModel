@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerJournalAttachmentsEntityVocabulary()
         {
-            VocabularyName = "LedgerJournalAttachmentsEntity";
+            VocabularyName = "Ledger Journal Attachments Entity";
             KeyPrefix = "commonDataModel.ledgerjournalattachmentsentity";
             KeySeparator = ".";
             Grouping = "/LedgerJournalAttachmentsEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FileName = group.Add(new VocabularyKey(nameof(FileName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FileType = group.Add(new VocabularyKey(nameof(FileType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultAttachment = group.Add(new VocabularyKey(nameof(DefaultAttachment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey JournalBatchNumber { get; private set; }
         public VocabularyKey LegalEntityId { get; private set; }
         public VocabularyKey DocumentId { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FileName { get; private set; }
         public VocabularyKey FileType { get; private set; }
         public VocabularyKey DefaultAttachment { get; private set; }
-
-
     }
 }

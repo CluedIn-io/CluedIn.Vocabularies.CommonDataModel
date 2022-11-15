@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SystemSecurityUserRoleOrganizationEntityVocabulary()
         {
-            VocabularyName = "SystemSecurityUserRoleOrganizationEntity";
+            VocabularyName = "System Security User Role Organization Entity";
             KeyPrefix = "commonDataModel.systemsecurityuserroleorganizationentity";
             KeySeparator = ".";
             Grouping = "/SystemSecurityUserRoleOrganizationEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 HierarchyTypeReference = group.Add(new VocabularyKey(nameof(HierarchyTypeReference), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InternalOrganizationReference = group.Add(new VocabularyKey(nameof(InternalOrganizationReference), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SecurityRoleReference = group.Add(new VocabularyKey(nameof(SecurityRoleReference), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey UserId { get; private set; }
         public VocabularyKey SecurityRoleIdentifier { get; private set; }
         public VocabularyKey OrganizationType { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey HierarchyTypeReference { get; private set; }
         public VocabularyKey InternalOrganizationReference { get; private set; }
         public VocabularyKey SecurityRoleReference { get; private set; }
-
-
     }
 }

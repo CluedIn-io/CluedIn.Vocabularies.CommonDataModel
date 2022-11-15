@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BOMBillOfMaterialsVersionV3EntityVocabulary()
         {
-            VocabularyName = "BOMBillOfMaterialsVersionV3Entity";
+            VocabularyName = "BOM Bill Of Materials Version V3 Entity";
             KeyPrefix = "commonDataModel.bombillofmaterialsversionv3entity";
             KeySeparator = ".";
             Grouping = "/BOMBillOfMaterialsVersionV3Entity";
@@ -32,10 +32,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductSizeId = group.Add(new VocabularyKey(nameof(ProductSizeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductStyleId = group.Add(new VocabularyKey(nameof(ProductStyleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductVersionId = group.Add(new VocabularyKey(nameof(ProductVersionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsActive { get; private set; }
         public VocabularyKey IsApproved { get; private set; }
         public VocabularyKey ApproverId { get; private set; }
@@ -55,7 +53,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProductSizeId { get; private set; }
         public VocabularyKey ProductStyleId { get; private set; }
         public VocabularyKey ProductVersionId { get; private set; }
-
-
     }
 }

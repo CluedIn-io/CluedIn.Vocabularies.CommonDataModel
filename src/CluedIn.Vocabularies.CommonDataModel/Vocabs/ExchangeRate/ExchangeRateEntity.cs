@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ExchangeRateEntityVocabulary()
         {
-            VocabularyName = "ExchangeRateEntity";
+            VocabularyName = "Exchange Rate Entity";
             KeyPrefix = "commonDataModel.exchangerateentity";
             KeySeparator = ".";
             Grouping = "/ExchangeRateEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RateTypeDescription = group.Add(new VocabularyKey(nameof(RateTypeDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RateTypeName = group.Add(new VocabularyKey(nameof(RateTypeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Rate = group.Add(new VocabularyKey(nameof(Rate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ExchangeRateForStorage { get; private set; }
         public VocabularyKey ExchangeRateCurrencyPair { get; private set; }
         public VocabularyKey StartDate { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RateTypeDescription { get; private set; }
         public VocabularyKey RateTypeName { get; private set; }
         public VocabularyKey Rate { get; private set; }
-
-
     }
 }

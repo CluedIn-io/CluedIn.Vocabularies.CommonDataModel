@@ -6,60 +6,56 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MarketingPageTemplateVocabulary()
         {
-            VocabularyName = "MarketingPageTemplate";
+            VocabularyName = "Marketing Page Template";
             KeyPrefix = "commonDataModel.marketingpagetemplate";
             KeySeparator = ".";
             Grouping = "/MarketingPageTemplate";
 
             AddGroup("MarketingPageTemplate Details", group =>
             {
-                formToSave = group.Add(new VocabularyKey(nameof(formToSave), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                entityImage = group.Add(new VocabularyKey(nameof(entityImage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                content = group.Add(new VocabularyKey(nameof(content), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                contentType = group.Add(new VocabularyKey(nameof(contentType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                formPageMapping = group.Add(new VocabularyKey(nameof(formPageMapping), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                language = group.Add(new VocabularyKey(nameof(language), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                marketingPageTemplateId = group.Add(new VocabularyKey(nameof(marketingPageTemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                marketingProvided = group.Add(new VocabularyKey(nameof(marketingProvided), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                marketType = group.Add(new VocabularyKey(nameof(marketType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                optimizedFor = group.Add(new VocabularyKey(nameof(optimizedFor), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                purpose = group.Add(new VocabularyKey(nameof(purpose), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                type = group.Add(new VocabularyKey(nameof(type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                visualStyle = group.Add(new VocabularyKey(nameof(visualStyle), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdName = group.Add(new VocabularyKey(nameof(ownerIdName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdType = group.Add(new VocabularyKey(nameof(ownerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdYomiName = group.Add(new VocabularyKey(nameof(ownerIdYomiName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                tag = group.Add(new VocabularyKey(nameof(tag), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                label = group.Add(new VocabularyKey(nameof(label), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                FormToSave = group.Add(new VocabularyKey(nameof(FormToSave), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EntityImage = group.Add(new VocabularyKey(nameof(EntityImage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Content = group.Add(new VocabularyKey(nameof(Content), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ContentType = group.Add(new VocabularyKey(nameof(ContentType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FormPageMapping = group.Add(new VocabularyKey(nameof(FormPageMapping), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Language = group.Add(new VocabularyKey(nameof(Language), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MarketingPageTemplateId = group.Add(new VocabularyKey(nameof(MarketingPageTemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MarketingProvided = group.Add(new VocabularyKey(nameof(MarketingProvided), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MarketType = group.Add(new VocabularyKey(nameof(MarketType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OptimizedFor = group.Add(new VocabularyKey(nameof(OptimizedFor), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Purpose = group.Add(new VocabularyKey(nameof(Purpose), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Type = group.Add(new VocabularyKey(nameof(Type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                VisualStyle = group.Add(new VocabularyKey(nameof(VisualStyle), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdName = group.Add(new VocabularyKey(nameof(OwnerIdName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdType = group.Add(new VocabularyKey(nameof(OwnerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdYomiName = group.Add(new VocabularyKey(nameof(OwnerIdYomiName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Tag = group.Add(new VocabularyKey(nameof(Tag), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Label = group.Add(new VocabularyKey(nameof(Label), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey formToSave { get; private set; }
-        public VocabularyKey entityImage { get; private set; }
-        public VocabularyKey content { get; private set; }
-        public VocabularyKey contentType { get; private set; }
-        public VocabularyKey formPageMapping { get; private set; }
-        public VocabularyKey language { get; private set; }
-        public VocabularyKey marketingPageTemplateId { get; private set; }
-        public VocabularyKey marketingProvided { get; private set; }
-        public VocabularyKey marketType { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey optimizedFor { get; private set; }
-        public VocabularyKey purpose { get; private set; }
-        public VocabularyKey type { get; private set; }
-        public VocabularyKey visualStyle { get; private set; }
-        public VocabularyKey ownerIdName { get; private set; }
-        public VocabularyKey ownerIdType { get; private set; }
-        public VocabularyKey ownerIdYomiName { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-        public VocabularyKey tag { get; private set; }
-        public VocabularyKey label { get; private set; }
-
-
+        public VocabularyKey FormToSave { get; private set; }
+        public VocabularyKey EntityImage { get; private set; }
+        public VocabularyKey Content { get; private set; }
+        public VocabularyKey ContentType { get; private set; }
+        public VocabularyKey FormPageMapping { get; private set; }
+        public VocabularyKey Language { get; private set; }
+        public VocabularyKey MarketingPageTemplateId { get; private set; }
+        public VocabularyKey MarketingProvided { get; private set; }
+        public VocabularyKey MarketType { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OptimizedFor { get; private set; }
+        public VocabularyKey Purpose { get; private set; }
+        public VocabularyKey Type { get; private set; }
+        public VocabularyKey VisualStyle { get; private set; }
+        public VocabularyKey OwnerIdName { get; private set; }
+        public VocabularyKey OwnerIdType { get; private set; }
+        public VocabularyKey OwnerIdYomiName { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey Tag { get; private set; }
+        public VocabularyKey Label { get; private set; }
     }
 }

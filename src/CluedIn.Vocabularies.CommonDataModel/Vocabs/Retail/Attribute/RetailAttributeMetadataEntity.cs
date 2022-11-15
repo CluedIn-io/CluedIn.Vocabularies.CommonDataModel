@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailAttributeMetadataEntityVocabulary()
         {
-            VocabularyName = "RetailAttributeMetadataEntity";
+            VocabularyName = "Retail Attribute Metadata Entity";
             KeyPrefix = "commonDataModel.retailattributemetadataentity";
             KeySeparator = ".";
             Grouping = "/RetailAttributeMetadataEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AttributeName = group.Add(new VocabularyKey(nameof(AttributeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 XmlMetadata = group.Add(new VocabularyKey(nameof(XmlMetadata), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 XmlMetadataVersionNumber = group.Add(new VocabularyKey(nameof(XmlMetadataVersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TypeName { get; private set; }
         public VocabularyKey AttributeName { get; private set; }
         public VocabularyKey XmlMetadata { get; private set; }
         public VocabularyKey XmlMetadataVersionNumber { get; private set; }
-
-
     }
 }

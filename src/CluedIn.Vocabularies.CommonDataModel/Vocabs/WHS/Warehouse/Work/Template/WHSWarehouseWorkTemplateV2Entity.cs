@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseWorkTemplateV2EntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseWorkTemplateV2Entity";
+            VocabularyName = "WHS Warehouse Work Template V2 Entity";
             KeyPrefix = "commonDataModel.whswarehouseworktemplatev2entity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseWorkTemplateV2Entity";
@@ -35,10 +35,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ReplenishmentDependentWorkBlockingPolicy = group.Add(new VocabularyKey(nameof(ReplenishmentDependentWorkBlockingPolicy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LicensePlateLabelBuildConfigurationId = group.Add(new VocabularyKey(nameof(LicensePlateLabelBuildConfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LicensePlateLabelBuildConfiguration = group.Add(new VocabularyKey(nameof(LicensePlateLabelBuildConfiguration), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WorkOrderType { get; private set; }
         public VocabularyKey TemplateSequenceNumber { get; private set; }
         public VocabularyKey TemplateId { get; private set; }
@@ -61,7 +59,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ReplenishmentDependentWorkBlockingPolicy { get; private set; }
         public VocabularyKey LicensePlateLabelBuildConfigurationId { get; private set; }
         public VocabularyKey LicensePlateLabelBuildConfiguration { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CaseDetailBaseEntityVocabulary()
         {
-            VocabularyName = "CaseDetailBaseEntity";
+            VocabularyName = "Case Detail Base Entity";
             KeyPrefix = "commonDataModel.casedetailbaseentity";
             KeySeparator = ".";
             Grouping = "/CaseDetailBaseEntity";
@@ -59,10 +59,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ServiceLevelCompletionDate = group.Add(new VocabularyKey(nameof(ServiceLevelCompletionDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EmailId = group.Add(new VocabularyKey(nameof(EmailId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AnswerId { get; private set; }
         public VocabularyKey BillingProjectId { get; private set; }
         public VocabularyKey CaseCategoryHierarchyDetail { get; private set; }
@@ -109,7 +107,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ServiceLevelCompletionDate { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey EmailId { get; private set; }
-
-
     }
 }

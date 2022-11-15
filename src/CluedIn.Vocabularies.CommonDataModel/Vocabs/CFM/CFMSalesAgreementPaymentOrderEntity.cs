@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CFMSalesAgreementPaymentOrderEntityVocabulary()
         {
-            VocabularyName = "CFMSalesAgreementPaymentOrderEntity";
+            VocabularyName = "CFM Sales Agreement Payment Order Entity";
             KeyPrefix = "commonDataModel.cfmsalesagreementpaymentorderentity";
             KeySeparator = ".";
             Grouping = "/CFMSalesAgreementPaymentOrderEntity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 UCI = group.Add(new VocabularyKey(nameof(UCI), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesAgreement = group.Add(new VocabularyKey(nameof(SalesAgreement), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LegalEntity = group.Add(new VocabularyKey(nameof(LegalEntity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PurposeText { get; private set; }
         public VocabularyKey OriginPayment { get; private set; }
         public VocabularyKey BudgetRevenueCode { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey UCI { get; private set; }
         public VocabularyKey SalesAgreement { get; private set; }
         public VocabularyKey LegalEntity { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendPaymentBIInvoicesDueVocabulary()
         {
-            VocabularyName = "VendPaymentBIInvoicesDue";
+            VocabularyName = "Vend Payment BI Invoices Due";
             KeyPrefix = "commonDataModel.vendpaymentbiinvoicesdue";
             KeySeparator = ".";
             Grouping = "/VendPaymentBIInvoicesDue";
@@ -31,10 +31,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 VendorHoldReason = group.Add(new VocabularyKey(nameof(VendorHoldReason), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReleaseDateComment = group.Add(new VocabularyKey(nameof(ReleaseDateComment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CurrentDate = group.Add(new VocabularyKey(nameof(CurrentDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountNum { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey Invoice { get; private set; }
@@ -53,7 +51,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey VendorHoldReason { get; private set; }
         public VocabularyKey ReleaseDateComment { get; private set; }
         public VocabularyKey CurrentDate { get; private set; }
-
-
     }
 }

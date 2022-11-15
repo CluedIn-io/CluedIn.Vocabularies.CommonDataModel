@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmBIPerformanceEntityVocabulary()
         {
-            VocabularyName = "HcmBIPerformanceEntity";
+            VocabularyName = "Hcm BI Performance Entity";
             KeyPrefix = "commonDataModel.hcmbiperformanceentity";
             KeySeparator = ".";
             Grouping = "/HcmBIPerformanceEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Performance = group.Add(new VocabularyKey(nameof(Performance), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PerformanceRatingValidFrom = group.Add(new VocabularyKey(nameof(PerformanceRatingValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PerformanceRatingValidTo = group.Add(new VocabularyKey(nameof(PerformanceRatingValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Rating { get; private set; }
         public VocabularyKey RatingDescription { get; private set; }
         public VocabularyKey RatingModel { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Performance { get; private set; }
         public VocabularyKey PerformanceRatingValidFrom { get; private set; }
         public VocabularyKey PerformanceRatingValidTo { get; private set; }
-
-
     }
 }

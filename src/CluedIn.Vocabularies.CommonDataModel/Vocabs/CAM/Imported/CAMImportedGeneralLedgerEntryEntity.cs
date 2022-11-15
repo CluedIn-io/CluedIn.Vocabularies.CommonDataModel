@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CAMImportedGeneralLedgerEntryEntityVocabulary()
         {
-            VocabularyName = "CAMImportedGeneralLedgerEntryEntity";
+            VocabularyName = "CAM Imported General Ledger Entry Entity";
             KeyPrefix = "commonDataModel.camimportedgeneralledgerentryentity";
             KeySeparator = ".";
             Grouping = "/CAMImportedGeneralLedgerEntryEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MainAccountName = group.Add(new VocabularyKey(nameof(MainAccountName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DebitCredit = group.Add(new VocabularyKey(nameof(DebitCredit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SourceIdentifier = group.Add(new VocabularyKey(nameof(SourceIdentifier), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Amount { get; private set; }
         public VocabularyKey AccountingDate { get; private set; }
         public VocabularyKey DimensionMemberNames { get; private set; }
         public VocabularyKey MainAccountName { get; private set; }
         public VocabularyKey DebitCredit { get; private set; }
         public VocabularyKey SourceIdentifier { get; private set; }
-
-
     }
 }

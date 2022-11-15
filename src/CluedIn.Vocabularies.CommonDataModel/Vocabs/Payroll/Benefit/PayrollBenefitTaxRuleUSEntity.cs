@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollBenefitTaxRuleUSEntityVocabulary()
         {
-            VocabularyName = "PayrollBenefitTaxRuleUSEntity";
+            VocabularyName = "Payroll Benefit Tax Rule US Entity";
             KeyPrefix = "commonDataModel.payrollbenefittaxruleusentity";
             KeySeparator = ".";
             Grouping = "/PayrollBenefitTaxRuleUSEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TaxGroup = group.Add(new VocabularyKey(nameof(TaxGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BenefitPlanID = group.Add(new VocabularyKey(nameof(BenefitPlanID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxGroupId = group.Add(new VocabularyKey(nameof(TaxGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BenefitPlan { get; private set; }
         public VocabularyKey CustomPretaxMethod { get; private set; }
         public VocabularyKey IsExemptFromFederalIncomeTax { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TaxGroup { get; private set; }
         public VocabularyKey BenefitPlanID { get; private set; }
         public VocabularyKey TaxGroupId { get; private set; }
-
-
     }
 }

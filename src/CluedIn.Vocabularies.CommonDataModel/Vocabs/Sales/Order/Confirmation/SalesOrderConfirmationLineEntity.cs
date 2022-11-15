@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesOrderConfirmationLineEntityVocabulary()
         {
-            VocabularyName = "SalesOrderConfirmationLineEntity";
+            VocabularyName = "Sales Order Confirmation Line Entity";
             KeyPrefix = "commonDataModel.salesorderconfirmationlineentity";
             KeySeparator = ".";
             Grouping = "/SalesOrderConfirmationLineEntity";
@@ -59,10 +59,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OrderingCustomerAccountNumber = group.Add(new VocabularyKey(nameof(OrderingCustomerAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InvoiceCustomerAccountNumber = group.Add(new VocabularyKey(nameof(InvoiceCustomerAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesProductCategoryName = group.Add(new VocabularyKey(nameof(SalesProductCategoryName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ConfirmationDate { get; private set; }
         public VocabularyKey ConfirmationNumber { get; private set; }
         public VocabularyKey ConfirmationDocumentReference { get; private set; }
@@ -109,7 +107,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OrderingCustomerAccountNumber { get; private set; }
         public VocabularyKey InvoiceCustomerAccountNumber { get; private set; }
         public VocabularyKey SalesProductCategoryName { get; private set; }
-
-
     }
 }

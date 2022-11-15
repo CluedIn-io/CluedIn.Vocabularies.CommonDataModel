@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CFOPMatrixEntityVocabulary()
         {
-            VocabularyName = "CFOPMatrixEntity";
+            VocabularyName = "CFOP Matrix Entity";
             KeyPrefix = "commonDataModel.cfopmatrixentity";
             KeySeparator = ".";
             Grouping = "/CFOPMatrixEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TransactionType = group.Add(new VocabularyKey(nameof(TransactionType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OperationType = group.Add(new VocabularyKey(nameof(OperationType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CFOPGroup = group.Add(new VocabularyKey(nameof(CFOPGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CFOPGroupRecId { get; private set; }
         public VocabularyKey CFOPTableRecId { get; private set; }
         public VocabularyKey SalesPurchOperationTypeRecId { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TransactionType { get; private set; }
         public VocabularyKey OperationType { get; private set; }
         public VocabularyKey CFOPGroup { get; private set; }
-
-
     }
 }

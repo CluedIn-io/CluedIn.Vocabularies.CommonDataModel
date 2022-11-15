@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseManagementParametersV2EntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseManagementParametersV2Entity";
+            VocabularyName = "WHS Warehouse Management Parameters V2 Entity";
             KeyPrefix = "commonDataModel.whswarehousemanagementparametersv2entity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseManagementParametersV2Entity";
@@ -79,10 +79,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OutboundSortingLocationTypeId = group.Add(new VocabularyKey(nameof(OutboundSortingLocationTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsPurchaseOrderRegistrationInExternalReviewEnabled = group.Add(new VocabularyKey(nameof(IsPurchaseOrderRegistrationInExternalReviewEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransitWarehouseLicensePlatePolicy = group.Add(new VocabularyKey(nameof(TransitWarehouseLicensePlatePolicy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey GS1CompanyPrefix { get; private set; }
         public VocabularyKey DefaultUserWarehouseLocationProfileId { get; private set; }
         public VocabularyKey DefaultStagingWarehouseLocationTypeId { get; private set; }
@@ -149,7 +147,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OutboundSortingLocationTypeId { get; private set; }
         public VocabularyKey IsPurchaseOrderRegistrationInExternalReviewEnabled { get; private set; }
         public VocabularyKey TransitWarehouseLicensePlatePolicy { get; private set; }
-
-
     }
 }

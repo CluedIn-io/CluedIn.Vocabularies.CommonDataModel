@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CompanyInfoEntityVocabulary()
         {
-            VocabularyName = "CompanyInfoEntity";
+            VocabularyName = "Company Info Entity";
             KeyPrefix = "commonDataModel.companyinfoentity";
             KeySeparator = ".";
             Grouping = "/CompanyInfoEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PartyNumber = group.Add(new VocabularyKey(nameof(PartyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DataArea = group.Add(new VocabularyKey(nameof(DataArea), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey KnownAs { get; private set; }
         public VocabularyKey LanguageId { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey PartyNumber { get; private set; }
         public VocabularyKey DataArea { get; private set; }
-
-
     }
 }

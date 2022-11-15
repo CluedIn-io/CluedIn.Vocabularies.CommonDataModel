@@ -13,21 +13,17 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Communication Details", group =>
             {
-                communicationId = group.Add(new VocabularyKey(nameof(communicationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                display = group.Add(new VocabularyKey(nameof(display), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                preferredCommunication = group.Add(new VocabularyKey(nameof(preferredCommunication), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                CommunicationId = group.Add(new VocabularyKey(nameof(CommunicationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Display = group.Add(new VocabularyKey(nameof(Display), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PreferredCommunication = group.Add(new VocabularyKey(nameof(PreferredCommunication), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey communicationId { get; private set; }
-        public VocabularyKey display { get; private set; }
-        public VocabularyKey preferredCommunication { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey CommunicationId { get; private set; }
+        public VocabularyKey Display { get; private set; }
+        public VocabularyKey PreferredCommunication { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BrazilParametersEntityVocabulary()
         {
-            VocabularyName = "BrazilParametersEntity";
+            VocabularyName = "Brazil Parameters Entity";
             KeyPrefix = "commonDataModel.brazilparametersentity";
             KeySeparator = ".";
             Grouping = "/BrazilParametersEntity";
@@ -58,10 +58,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FinancialDimensionForCostCenter = group.Add(new VocabularyKey(nameof(FinancialDimensionForCostCenter), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FinancialDimensionForFiscalEstablishment = group.Add(new VocabularyKey(nameof(FinancialDimensionForFiscalEstablishment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RetailApproximateTaxValueTextId = group.Add(new VocabularyKey(nameof(RetailApproximateTaxValueTextId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ApproximateTaxesPrintOnlyFinalUser { get; private set; }
         public VocabularyKey ApproximateTaxesSource { get; private set; }
         public VocabularyKey ApproximateTaxesText { get; private set; }
@@ -107,7 +105,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FinancialDimensionForCostCenter { get; private set; }
         public VocabularyKey FinancialDimensionForFiscalEstablishment { get; private set; }
         public VocabularyKey RetailApproximateTaxValueTextId { get; private set; }
-
-
     }
 }

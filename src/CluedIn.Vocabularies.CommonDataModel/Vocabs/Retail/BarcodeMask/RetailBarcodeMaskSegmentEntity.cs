@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailBarcodeMaskSegmentEntityVocabulary()
         {
-            VocabularyName = "RetailBarcodeMaskSegmentEntity";
+            VocabularyName = "Retail Barcode Mask Segment Entity";
             KeyPrefix = "commonDataModel.retailbarcodemasksegmententity";
             KeySeparator = ".";
             Grouping = "/RetailBarcodeMaskSegmentEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MaskId = group.Add(new VocabularyKey(nameof(MaskId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SegmentNumber = group.Add(new VocabularyKey(nameof(SegmentNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CharacterType = group.Add(new VocabularyKey(nameof(CharacterType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Character { get; private set; }
         public VocabularyKey Decimals { get; private set; }
         public VocabularyKey Length { get; private set; }
         public VocabularyKey MaskId { get; private set; }
         public VocabularyKey SegmentNumber { get; private set; }
         public VocabularyKey CharacterType { get; private set; }
-
-
     }
 }

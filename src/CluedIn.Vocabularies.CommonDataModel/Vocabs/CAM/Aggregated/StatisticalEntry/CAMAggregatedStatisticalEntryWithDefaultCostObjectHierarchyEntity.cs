@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CAMAggregatedStatisticalEntryWithDefaultCostObjectHierarchyEntityVocabulary()
         {
-            VocabularyName = "CAMAggregatedStatisticalEntryWithDefaultCostObjectHierarchyEntity";
+            VocabularyName = "CAM Aggregated Statistical Entry With Default Cost Object Hierarchy Entity";
             KeyPrefix = "commonDataModel.camaggregatedstatisticalentrywithdefaultcostobjecthierarchyentity";
             KeySeparator = ".";
             Grouping = "/CAMAggregatedStatisticalEntryWithDefaultCostObjectHierarchyEntity";
@@ -63,10 +63,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 StatisticalDimensionMemberDescription = group.Add(new VocabularyKey(nameof(StatisticalDimensionMemberDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StatisticalDimensionHierarchyName = group.Add(new VocabularyKey(nameof(StatisticalDimensionHierarchyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StatisticalDimensionMemberName = group.Add(new VocabularyKey(nameof(StatisticalDimensionMemberName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Magnitude { get; private set; }
         public VocabularyKey CostObjectDimensionHierarchyLevel1 { get; private set; }
         public VocabularyKey CostObjectDimensionHierarchyLevel2 { get; private set; }
@@ -117,7 +115,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey StatisticalDimensionMemberDescription { get; private set; }
         public VocabularyKey StatisticalDimensionHierarchyName { get; private set; }
         public VocabularyKey StatisticalDimensionMemberName { get; private set; }
-
-
     }
 }

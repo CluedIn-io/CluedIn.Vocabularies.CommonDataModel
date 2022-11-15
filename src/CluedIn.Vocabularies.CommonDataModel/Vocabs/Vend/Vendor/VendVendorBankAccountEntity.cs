@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendVendorBankAccountEntityVocabulary()
         {
-            VocabularyName = "VendVendorBankAccountEntity";
+            VocabularyName = "Vend Vendor Bank Account Entity";
             KeyPrefix = "commonDataModel.vendvendorbankaccountentity";
             KeySeparator = ".";
             Grouping = "/VendVendorBankAccountEntity";
@@ -82,10 +82,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CrossExchRate = group.Add(new VocabularyKey(nameof(CrossExchRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 QRIBAN = group.Add(new VocabularyKey(nameof(QRIBAN), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PaymentSpecificationParameter = group.Add(new VocabularyKey(nameof(PaymentSpecificationParameter), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey VendorBankAccountId { get; private set; }
         public VocabularyKey BankAccountNumber { get; private set; }
         public VocabularyKey BankName { get; private set; }
@@ -155,7 +153,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CrossExchRate { get; private set; }
         public VocabularyKey QRIBAN { get; private set; }
         public VocabularyKey PaymentSpecificationParameter { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PaymentCalendarEntityVocabulary()
         {
-            VocabularyName = "PaymentCalendarEntity";
+            VocabularyName = "Payment Calendar Entity";
             KeyPrefix = "commonDataModel.paymentcalendarentity";
             KeySeparator = ".";
             Grouping = "/PaymentCalendarEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsSundayBusinessDay = group.Add(new VocabularyKey(nameof(IsSundayBusinessDay), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CountryRegion = group.Add(new VocabularyKey(nameof(CountryRegion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CountryRegionId = group.Add(new VocabularyKey(nameof(CountryRegionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Name { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey IsMondayBusinessDay { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsSundayBusinessDay { get; private set; }
         public VocabularyKey CountryRegion { get; private set; }
         public VocabularyKey CountryRegionId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerStatementDefinitionEntityVocabulary()
         {
-            VocabularyName = "LedgerStatementDefinitionEntity";
+            VocabularyName = "Ledger Statement Definition Entity";
             KeyPrefix = "commonDataModel.ledgerstatementdefinitionentity";
             KeySeparator = ".";
             Grouping = "/LedgerStatementDefinitionEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 GroupOfAccounts = group.Add(new VocabularyKey(nameof(GroupOfAccounts), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MainAccount = group.Add(new VocabularyKey(nameof(MainAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineId = group.Add(new VocabularyKey(nameof(LineId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Line { get; private set; }
         public VocabularyKey Mark { get; private set; }
         public VocabularyKey RoundingForm { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey GroupOfAccounts { get; private set; }
         public VocabularyKey MainAccount { get; private set; }
         public VocabularyKey LineId { get; private set; }
-
-
     }
 }

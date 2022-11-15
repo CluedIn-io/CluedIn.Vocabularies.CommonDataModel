@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailGiftCardEntityVocabulary()
         {
-            VocabularyName = "RetailGiftCardEntity";
+            VocabularyName = "Retail Gift Card Entity";
             KeyPrefix = "commonDataModel.retailgiftcardentity";
             KeySeparator = ".";
             Grouping = "/RetailGiftCardEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ReservedByRetailChannel = group.Add(new VocabularyKey(nameof(ReservedByRetailChannel), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReservedByRetailTerminal = group.Add(new VocabularyKey(nameof(ReservedByRetailTerminal), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReservedByTransactionId = group.Add(new VocabularyKey(nameof(ReservedByTransactionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CurrencyCode { get; private set; }
         public VocabularyKey EntryId { get; private set; }
         public VocabularyKey CallCenterGiftCardType { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ReservedByRetailChannel { get; private set; }
         public VocabularyKey ReservedByRetailTerminal { get; private set; }
         public VocabularyKey ReservedByTransactionId { get; private set; }
-
-
     }
 }

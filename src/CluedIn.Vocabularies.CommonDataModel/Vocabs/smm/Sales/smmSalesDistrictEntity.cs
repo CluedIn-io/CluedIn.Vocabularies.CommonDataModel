@@ -2,26 +2,22 @@ using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 {
-    public class smmSalesDistrictEntityVocabulary : SimpleVocabulary
+    public class SmmSalesDistrictEntityVocabulary : SimpleVocabulary
     {
-        public smmSalesDistrictEntityVocabulary()
+        public SmmSalesDistrictEntityVocabulary()
         {
-            VocabularyName = "smmSalesDistrictEntity";
+            VocabularyName = "Smm Sales District Entity";
             KeyPrefix = "commonDataModel.smmsalesdistrictentity";
             KeySeparator = ".";
-            Grouping = "/smmSalesDistrictEntity";
+            Grouping = "/SmmSalesDistrictEntity";
 
-            AddGroup("smmSalesDistrictEntity Details", group =>
+            AddGroup("SmmSalesDistrictEntity Details", group =>
             {
                 DistrictDescription = group.Add(new VocabularyKey(nameof(DistrictDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DistrictId = group.Add(new VocabularyKey(nameof(DistrictId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DistrictDescription { get; private set; }
         public VocabularyKey DistrictId { get; private set; }
-
-
     }
 }

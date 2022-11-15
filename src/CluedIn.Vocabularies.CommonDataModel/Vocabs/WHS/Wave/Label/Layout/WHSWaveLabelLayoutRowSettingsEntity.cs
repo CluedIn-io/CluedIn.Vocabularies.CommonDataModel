@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWaveLabelLayoutRowSettingsEntityVocabulary()
         {
-            VocabularyName = "WHSWaveLabelLayoutRowSettingsEntity";
+            VocabularyName = "WHS Wave Label Layout Row Settings Entity";
             KeyPrefix = "commonDataModel.whswavelabellayoutrowsettingsentity";
             KeySeparator = ".";
             Grouping = "/WHSWaveLabelLayoutRowSettingsEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RowStartPosition = group.Add(new VocabularyKey(nameof(RowStartPosition), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RowTableName = group.Add(new VocabularyKey(nameof(RowTableName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WaveLabelLayoutId = group.Add(new VocabularyKey(nameof(WaveLabelLayoutId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LabelLayout { get; private set; }
         public VocabularyKey RowHeight { get; private set; }
         public VocabularyKey RowId { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RowStartPosition { get; private set; }
         public VocabularyKey RowTableName { get; private set; }
         public VocabularyKey WaveLabelLayoutId { get; private set; }
-
-
     }
 }

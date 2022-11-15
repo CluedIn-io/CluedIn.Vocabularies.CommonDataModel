@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSShipConsolidationPolicyV2EntityVocabulary()
         {
-            VocabularyName = "WHSShipConsolidationPolicyV2Entity";
+            VocabularyName = "WHS Ship Consolidation Policy V2 Entity";
             KeyPrefix = "commonDataModel.whsshipconsolidationpolicyv2entity";
             KeySeparator = ".";
             Grouping = "/WHSShipConsolidationPolicyV2Entity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ShipConsolidationPolicyDesc = group.Add(new VocabularyKey(nameof(ShipConsolidationPolicyDesc), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Valid = group.Add(new VocabularyKey(nameof(Valid), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ConsolidateWithExistingShipments = group.Add(new VocabularyKey(nameof(ConsolidateWithExistingShipments), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ShipConsolidationPolicyName { get; private set; }
         public VocabularyKey ShipConsolidationPolicyType { get; private set; }
         public VocabularyKey ShipConsolidationPolicySeqNum { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ShipConsolidationPolicyDesc { get; private set; }
         public VocabularyKey Valid { get; private set; }
         public VocabularyKey ConsolidateWithExistingShipments { get; private set; }
-
-
     }
 }

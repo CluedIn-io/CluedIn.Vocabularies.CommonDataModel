@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmBICurrentWorkerEntityVocabulary()
         {
-            VocabularyName = "HcmBICurrentWorkerEntity";
+            VocabularyName = "Hcm BI Current Worker Entity";
             KeyPrefix = "commonDataModel.hcmbicurrentworkerentity";
             KeySeparator = ".";
             Grouping = "/HcmBICurrentWorkerEntity";
@@ -60,10 +60,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 JobDetailValidToPrivate = group.Add(new VocabularyKey(nameof(JobDetailValidToPrivate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EmploymentDetailValidToPrivate = group.Add(new VocabularyKey(nameof(EmploymentDetailValidToPrivate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EmploymentDetailValidFromPrivate = group.Add(new VocabularyKey(nameof(EmploymentDetailValidFromPrivate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Company { get; private set; }
         public VocabularyKey Compensation { get; private set; }
         public VocabularyKey Benefit { get; private set; }
@@ -111,7 +109,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey JobDetailValidToPrivate { get; private set; }
         public VocabularyKey EmploymentDetailValidToPrivate { get; private set; }
         public VocabularyKey EmploymentDetailValidFromPrivate { get; private set; }
-
-
     }
 }

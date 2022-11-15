@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EmplPostingEntity_WVocabulary()
         {
-            VocabularyName = "EmplPostingEntity_W";
+            VocabularyName = "Empl Posting Entity _W";
             KeyPrefix = "commonDataModel.emplpostingentity_w";
             KeySeparator = ".";
             Grouping = "/EmplPostingEntity_W";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PostingProfile = group.Add(new VocabularyKey(nameof(PostingProfile), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SettlementByDimension = group.Add(new VocabularyKey(nameof(SettlementByDimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountCode { get; private set; }
         public VocabularyKey DimensionHierarchy { get; private set; }
         public VocabularyKey Num { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PostingProfile { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey SettlementByDimension { get; private set; }
-
-
     }
 }

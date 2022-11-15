@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProdProductionControlParametersEntityVocabulary()
         {
-            VocabularyName = "ProdProductionControlParametersEntity";
+            VocabularyName = "Prod Production Control Parameters Entity";
             KeyPrefix = "commonDataModel.prodproductioncontrolparametersentity";
             KeySeparator = ".";
             Grouping = "/ProdProductionControlParametersEntity";
@@ -132,10 +132,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsRouteApprovalRemovalAllowed = group.Add(new VocabularyKey(nameof(IsRouteApprovalRemovalAllowed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AreRouteVersionValidDatesMandatory = group.Add(new VocabularyKey(nameof(AreRouteVersionValidDatesMandatory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AreRouteNetworksEnabled = group.Add(new VocabularyKey(nameof(AreRouteNetworksEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Key { get; private set; }
         public VocabularyKey ParameterUsageLevel { get; private set; }
         public VocabularyKey WillLastOperationEndingExecuteReportAsFinishedByDefault { get; private set; }
@@ -255,7 +253,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsRouteApprovalRemovalAllowed { get; private set; }
         public VocabularyKey AreRouteVersionValidDatesMandatory { get; private set; }
         public VocabularyKey AreRouteNetworksEnabled { get; private set; }
-
-
     }
 }

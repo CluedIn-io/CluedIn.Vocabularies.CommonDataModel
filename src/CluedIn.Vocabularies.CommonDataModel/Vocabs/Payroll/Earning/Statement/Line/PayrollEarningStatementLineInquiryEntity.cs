@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollEarningStatementLineInquiryEntityVocabulary()
         {
-            VocabularyName = "PayrollEarningStatementLineInquiryEntity";
+            VocabularyName = "Payroll Earning Statement Line Inquiry Entity";
             KeyPrefix = "commonDataModel.payrollearningstatementlineinquiryentity";
             KeySeparator = ".";
             Grouping = "/PayrollEarningStatementLineInquiryEntity";
@@ -37,10 +37,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FringeBenefitType = group.Add(new VocabularyKey(nameof(FringeBenefitType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PremiumCode = group.Add(new VocabularyKey(nameof(PremiumCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GenerationSource = group.Add(new VocabularyKey(nameof(GenerationSource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Worker { get; private set; }
         public VocabularyKey PersonnelNumber { get; private set; }
         public VocabularyKey DocumentNumber { get; private set; }
@@ -65,7 +63,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FringeBenefitType { get; private set; }
         public VocabularyKey PremiumCode { get; private set; }
         public VocabularyKey GenerationSource { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPurchaseOrderCreationNonCatalogItemCategoryEntityVocabulary()
         {
-            VocabularyName = "PurchPurchaseOrderCreationNonCatalogItemCategoryEntity";
+            VocabularyName = "Purch Purchase Order Creation Non Catalog Item Category Entity";
             KeyPrefix = "commonDataModel.purchpurchaseordercreationnoncatalogitemcategoryentity";
             KeySeparator = ".";
             Grouping = "/PurchPurchaseOrderCreationNonCatalogItemCategoryEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProcurementProductCategoryName = group.Add(new VocabularyKey(nameof(ProcurementProductCategoryName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PurchasingPolicyName = group.Add(new VocabularyKey(nameof(PurchasingPolicyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProcurementProductCategoryHierarchyName = group.Add(new VocabularyKey(nameof(ProcurementProductCategoryHierarchyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PurchaseOrderCreationAndDemandConsolidationPolicyRuleValidFrom { get; private set; }
         public VocabularyKey ProcurementProductCategoryName { get; private set; }
         public VocabularyKey PurchasingPolicyName { get; private set; }
         public VocabularyKey ProcurementProductCategoryHierarchyName { get; private set; }
-
-
     }
 }

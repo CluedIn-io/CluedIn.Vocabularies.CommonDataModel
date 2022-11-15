@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PSNCashPositionColumnSetupEntityVocabulary()
         {
-            VocabularyName = "PSNCashPositionColumnSetupEntity";
+            VocabularyName = "PSN Cash Position Column Setup Entity";
             KeyPrefix = "commonDataModel.psncashpositioncolumnsetupentity";
             KeySeparator = ".";
             Grouping = "/PSNCashPositionColumnSetupEntity";
@@ -38,10 +38,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ColumnSevenDebitRange = group.Add(new VocabularyKey(nameof(ColumnSevenDebitRange), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ColumnEightLabel = group.Add(new VocabularyKey(nameof(ColumnEightLabel), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Key = group.Add(new VocabularyKey(nameof(Key), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ColumnOneLabel { get; private set; }
         public VocabularyKey ColumnOneRange { get; private set; }
         public VocabularyKey ColumnTwoLabel { get; private set; }
@@ -67,7 +65,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ColumnSevenDebitRange { get; private set; }
         public VocabularyKey ColumnEightLabel { get; private set; }
         public VocabularyKey Key { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesDocumentSortingOrderEntityVocabulary()
         {
-            VocabularyName = "SalesDocumentSortingOrderEntity";
+            VocabularyName = "Sales Document Sorting Order Entity";
             KeyPrefix = "commonDataModel.salesdocumentsortingorderentity";
             KeySeparator = ".";
             Grouping = "/SalesDocumentSortingOrderEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DocumentName = group.Add(new VocabularyKey(nameof(DocumentName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SubDocumentName = group.Add(new VocabularyKey(nameof(SubDocumentName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Position = group.Add(new VocabularyKey(nameof(Position), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FieldId { get; private set; }
         public VocabularyKey SortingSubTableId { get; private set; }
         public VocabularyKey SortingTableId { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DocumentName { get; private set; }
         public VocabularyKey SubDocumentName { get; private set; }
         public VocabularyKey Position { get; private set; }
-
-
     }
 }

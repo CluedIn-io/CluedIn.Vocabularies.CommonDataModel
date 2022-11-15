@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendInvoicePriceToleranceEntityVocabulary()
         {
-            VocabularyName = "VendInvoicePriceToleranceEntity";
+            VocabularyName = "Vend Invoice Price Tolerance Entity";
             KeyPrefix = "commonDataModel.vendinvoicepricetoleranceentity";
             KeySeparator = ".";
             Grouping = "/VendInvoicePriceToleranceEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AccountRelation = group.Add(new VocabularyKey(nameof(AccountRelation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ItemCode = group.Add(new VocabularyKey(nameof(ItemCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ItemRelation = group.Add(new VocabularyKey(nameof(ItemRelation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PriceToleranceItemNumber { get; private set; }
         public VocabularyKey PriceToleranceItemGroup { get; private set; }
         public VocabularyKey PriceToleranceAccountNumber { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AccountRelation { get; private set; }
         public VocabularyKey ItemCode { get; private set; }
         public VocabularyKey ItemRelation { get; private set; }
-
-
     }
 }

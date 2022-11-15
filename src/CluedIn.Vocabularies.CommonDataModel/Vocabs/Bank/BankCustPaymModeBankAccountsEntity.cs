@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankCustPaymModeBankAccountsEntityVocabulary()
         {
-            VocabularyName = "BankCustPaymModeBankAccountsEntity";
+            VocabularyName = "Bank Cust Paym Mode Bank Accounts Entity";
             KeyPrefix = "commonDataModel.bankcustpaymmodebankaccountsentity";
             KeySeparator = ".";
             Grouping = "/BankCustPaymModeBankAccountsEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LineId = group.Add(new VocabularyKey(nameof(LineId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultDimensionDisplayValue = group.Add(new VocabularyKey(nameof(DefaultDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PaymMode = group.Add(new VocabularyKey(nameof(PaymMode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BankAccountID { get; private set; }
         public VocabularyKey CurrencyCode { get; private set; }
         public VocabularyKey DefaultDimension { get; private set; }
         public VocabularyKey LineId { get; private set; }
         public VocabularyKey DefaultDimensionDisplayValue { get; private set; }
         public VocabularyKey PaymMode { get; private set; }
-
-
     }
 }

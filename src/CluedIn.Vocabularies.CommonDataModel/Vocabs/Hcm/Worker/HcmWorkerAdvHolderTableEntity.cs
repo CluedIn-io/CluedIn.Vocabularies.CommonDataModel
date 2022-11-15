@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmWorkerAdvHolderTableEntityVocabulary()
         {
-            VocabularyName = "HcmWorkerAdvHolderTableEntity";
+            VocabularyName = "Hcm Worker Adv Holder Table Entity";
             KeyPrefix = "commonDataModel.hcmworkeradvholdertableentity";
             KeySeparator = ".";
             Grouping = "/HcmWorkerAdvHolderTableEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LegalEntity = group.Add(new VocabularyKey(nameof(LegalEntity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Worker = group.Add(new VocabularyKey(nameof(Worker), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PartyNumber = group.Add(new VocabularyKey(nameof(PartyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Company { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey ValidTo { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LegalEntity { get; private set; }
         public VocabularyKey Worker { get; private set; }
         public VocabularyKey PartyNumber { get; private set; }
-
-
     }
 }

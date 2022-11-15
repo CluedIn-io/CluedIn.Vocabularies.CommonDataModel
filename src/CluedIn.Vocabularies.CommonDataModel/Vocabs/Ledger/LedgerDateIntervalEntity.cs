@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerDateIntervalEntityVocabulary()
         {
-            VocabularyName = "LedgerDateIntervalEntity";
+            VocabularyName = "Ledger Date Interval Entity";
             KeyPrefix = "commonDataModel.ledgerdateintervalentity";
             KeySeparator = ".";
             Grouping = "/LedgerDateIntervalEntity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 EndPeriodTypeAdjustment = group.Add(new VocabularyKey(nameof(EndPeriodTypeAdjustment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EndFunctionAdjustment = group.Add(new VocabularyKey(nameof(EndFunctionAdjustment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LockedEndDate = group.Add(new VocabularyKey(nameof(LockedEndDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DateIntervalCode { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey StartPeriodType { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey EndPeriodTypeAdjustment { get; private set; }
         public VocabularyKey EndFunctionAdjustment { get; private set; }
         public VocabularyKey LockedEndDate { get; private set; }
-
-
     }
 }

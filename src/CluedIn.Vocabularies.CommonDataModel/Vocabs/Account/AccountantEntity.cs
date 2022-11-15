@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AccountantEntityVocabulary()
         {
-            VocabularyName = "AccountantEntity";
+            VocabularyName = "Accountant Entity";
             KeyPrefix = "commonDataModel.accountantentity";
             KeySeparator = ".";
             Grouping = "/AccountantEntity";
@@ -82,10 +82,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 EmailRole = group.Add(new VocabularyKey(nameof(EmailRole), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PhoneRole = group.Add(new VocabularyKey(nameof(PhoneRole), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PhoneRoleLocationId = group.Add(new VocabularyKey(nameof(PhoneRoleLocationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CNPJ { get; private set; }
         public VocabularyKey CPF { get; private set; }
         public VocabularyKey CRCCountryRegionId { get; private set; }

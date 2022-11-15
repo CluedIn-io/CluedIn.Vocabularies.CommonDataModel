@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LogisticsAddressFormatLinesEntityVocabulary()
         {
-            VocabularyName = "LogisticsAddressFormatLinesEntity";
+            VocabularyName = "Logistics Address Format Lines Entity";
             KeyPrefix = "commonDataModel.logisticsaddressformatlinesentity";
             KeySeparator = ".";
             Grouping = "/LogisticsAddressFormatLinesEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Expand = group.Add(new VocabularyKey(nameof(Expand), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Special = group.Add(new VocabularyKey(nameof(Special), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OrigSeparator = group.Add(new VocabularyKey(nameof(OrigSeparator), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AddressFormat { get; private set; }
         public VocabularyKey LineNumber { get; private set; }
         public VocabularyKey AddressApplicationObject { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Expand { get; private set; }
         public VocabularyKey Special { get; private set; }
         public VocabularyKey OrigSeparator { get; private set; }
-
-
     }
 }

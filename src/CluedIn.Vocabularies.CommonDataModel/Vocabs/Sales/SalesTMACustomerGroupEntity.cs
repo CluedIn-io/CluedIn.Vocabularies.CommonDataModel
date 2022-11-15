@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesTMACustomerGroupEntityVocabulary()
         {
-            VocabularyName = "SalesTMACustomerGroupEntity";
+            VocabularyName = "Sales TMA Customer Group Entity";
             KeyPrefix = "commonDataModel.salestmacustomergroupentity";
             KeySeparator = ".";
             Grouping = "/SalesTMACustomerGroupEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 GroupId = group.Add(new VocabularyKey(nameof(GroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GroupDescription = group.Add(new VocabularyKey(nameof(GroupDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey GroupId { get; private set; }
         public VocabularyKey GroupDescription { get; private set; }
-
-
     }
 }

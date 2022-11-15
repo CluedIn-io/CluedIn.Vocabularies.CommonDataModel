@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MainAccountLegalEntityViewEntityVocabulary()
         {
-            VocabularyName = "MainAccountLegalEntityViewEntity";
+            VocabularyName = "Main Account Legal Entity View Entity";
             KeyPrefix = "commonDataModel.mainaccountlegalentityviewentity";
             KeySeparator = ".";
             Grouping = "/MainAccountLegalEntityViewEntity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LegalEntity = group.Add(new VocabularyKey(nameof(LegalEntity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LegalEntityRecId = group.Add(new VocabularyKey(nameof(LegalEntityRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MainAccountLegalEntityId = group.Add(new VocabularyKey(nameof(MainAccountLegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey MainAccountCategory { get; private set; }
         public VocabularyKey AccountCategoryReference { get; private set; }
         public VocabularyKey ChartOfAccountsRecId { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LegalEntity { get; private set; }
         public VocabularyKey LegalEntityRecId { get; private set; }
         public VocabularyKey MainAccountLegalEntityId { get; private set; }
-
-
     }
 }

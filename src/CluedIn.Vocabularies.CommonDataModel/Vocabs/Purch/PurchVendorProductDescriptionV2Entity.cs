@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchVendorProductDescriptionV2EntityVocabulary()
         {
-            VocabularyName = "PurchVendorProductDescriptionV2Entity";
+            VocabularyName = "Purch Vendor Product Description V2 Entity";
             KeyPrefix = "commonDataModel.purchvendorproductdescriptionv2entity";
             KeySeparator = ".";
             Grouping = "/PurchVendorProductDescriptionV2Entity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CustVendRelation = group.Add(new VocabularyKey(nameof(CustVendRelation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ModuleType = group.Add(new VocabularyKey(nameof(ModuleType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InventDimId = group.Add(new VocabularyKey(nameof(InventDimId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ItemNumber { get; private set; }
         public VocabularyKey ProductColorId { get; private set; }
         public VocabularyKey ProductConfigurationId { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CustVendRelation { get; private set; }
         public VocabularyKey ModuleType { get; private set; }
         public VocabularyKey InventDimId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WorkflowEscalationPathEntityVocabulary()
         {
-            VocabularyName = "WorkflowEscalationPathEntity";
+            VocabularyName = "Workflow Escalation Path Entity";
             KeyPrefix = "commonDataModel.workflowescalationpathentity";
             KeySeparator = ".";
             Grouping = "/WorkflowEscalationPathEntity";
@@ -61,10 +61,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 YearlyDayOfWeek = group.Add(new VocabularyKey(nameof(YearlyDayOfWeek), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 YearlyMonthInYear = group.Add(new VocabularyKey(nameof(YearlyMonthInYear), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 YearlyWeekInMonth = group.Add(new VocabularyKey(nameof(YearlyWeekInMonth), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Level { get; private set; }
         public VocabularyKey StepId { get; private set; }
         public VocabularyKey WorkflowUserValue { get; private set; }
@@ -113,7 +111,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey YearlyDayOfWeek { get; private set; }
         public VocabularyKey YearlyMonthInYear { get; private set; }
         public VocabularyKey YearlyWeekInMonth { get; private set; }
-
-
     }
 }

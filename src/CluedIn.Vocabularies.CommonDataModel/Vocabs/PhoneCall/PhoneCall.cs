@@ -6,18 +6,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PhoneCallVocabulary()
         {
-            VocabularyName = "PhoneCall";
+            VocabularyName = "Phone Call";
             KeyPrefix = "commonDataModel.phonecall";
             KeySeparator = ".";
             Grouping = "/PhoneCall";
 
             AddGroup("PhoneCall Details", group =>
             {
-
             });
         }
-
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProdProductionOrderRouteJobEntityVocabulary()
         {
-            VocabularyName = "ProdProductionOrderRouteJobEntity";
+            VocabularyName = "Prod Production Order Route Job Entity";
             KeyPrefix = "commonDataModel.prodproductionorderroutejobentity";
             KeySeparator = ".";
             Grouping = "/ProdProductionOrderRouteJobEntity";
@@ -40,10 +40,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ScheduledEndDate = group.Add(new VocabularyKey(nameof(ScheduledEndDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OperationsResourceId = group.Add(new VocabularyKey(nameof(OperationsResourceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ScheduledEndTime = group.Add(new VocabularyKey(nameof(ScheduledEndTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CalculatedJobDurationHours { get; private set; }
         public VocabularyKey JobProcessingPercentage { get; private set; }
         public VocabularyKey ScheduledFromDate { get; private set; }
@@ -71,7 +69,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ScheduledEndDate { get; private set; }
         public VocabularyKey OperationsResourceId { get; private set; }
         public VocabularyKey ScheduledEndTime { get; private set; }
-
-
     }
 }

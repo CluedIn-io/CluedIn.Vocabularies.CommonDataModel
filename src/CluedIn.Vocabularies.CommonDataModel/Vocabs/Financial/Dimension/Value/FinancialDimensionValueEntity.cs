@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FinancialDimensionValueEntityVocabulary()
         {
-            VocabularyName = "FinancialDimensionValueEntity";
+            VocabularyName = "Financial Dimension Value Entity";
             KeyPrefix = "commonDataModel.financialdimensionvalueentity";
             KeySeparator = ".";
             Grouping = "/FinancialDimensionValueEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsBalancing_PSN = group.Add(new VocabularyKey(nameof(IsBalancing_PSN), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OwnerRefRecId = group.Add(new VocabularyKey(nameof(OwnerRefRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Owner = group.Add(new VocabularyKey(nameof(Owner), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FinancialDimension { get; private set; }
         public VocabularyKey LegalEntityId { get; private set; }
         public VocabularyKey DimensionValue { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsBalancing_PSN { get; private set; }
         public VocabularyKey OwnerRefRecId { get; private set; }
         public VocabularyKey Owner { get; private set; }
-
-
     }
 }

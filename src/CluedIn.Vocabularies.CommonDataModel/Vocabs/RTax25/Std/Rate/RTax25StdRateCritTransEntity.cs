@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RTax25StdRateCritTransEntityVocabulary()
         {
-            VocabularyName = "RTax25StdRateCritTransEntity";
+            VocabularyName = "R Tax 25 Std Rate Crit Trans Entity";
             KeyPrefix = "commonDataModel.rtax25stdratecrittransentity";
             KeySeparator = ".";
             Grouping = "/RTax25StdRateCritTransEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ForAmount = group.Add(new VocabularyKey(nameof(ForAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Value = group.Add(new VocabularyKey(nameof(Value), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RateTransLineId = group.Add(new VocabularyKey(nameof(RateTransLineId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ForAmount { get; private set; }
         public VocabularyKey Value { get; private set; }
         public VocabularyKey RateTransLineId { get; private set; }
-
-
     }
 }

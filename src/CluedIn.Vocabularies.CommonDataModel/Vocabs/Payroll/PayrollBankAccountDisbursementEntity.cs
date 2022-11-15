@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollBankAccountDisbursementEntityVocabulary()
         {
-            VocabularyName = "PayrollBankAccountDisbursementEntity";
+            VocabularyName = "Payroll Bank Account Disbursement Entity";
             KeyPrefix = "commonDataModel.payrollbankaccountdisbursemententity";
             KeySeparator = ".";
             Grouping = "/PayrollBankAccountDisbursementEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Worker = group.Add(new VocabularyKey(nameof(Worker), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PersonnelNumber = group.Add(new VocabularyKey(nameof(PersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InPrenoteStatus = group.Add(new VocabularyKey(nameof(InPrenoteStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Amount { get; private set; }
         public VocabularyKey Remainder { get; private set; }
         public VocabularyKey LegalEntity { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Worker { get; private set; }
         public VocabularyKey PersonnelNumber { get; private set; }
         public VocabularyKey InPrenoteStatus { get; private set; }
-
-
     }
 }

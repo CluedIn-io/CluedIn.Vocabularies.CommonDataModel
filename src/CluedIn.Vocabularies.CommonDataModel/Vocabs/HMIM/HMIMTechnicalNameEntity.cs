@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HMIMTechnicalNameEntityVocabulary()
         {
-            VocabularyName = "HMIMTechnicalNameEntity";
+            VocabularyName = "HMIM Technical Name Entity";
             KeyPrefix = "commonDataModel.hmimtechnicalnameentity";
             KeySeparator = ".";
             Grouping = "/HMIMTechnicalNameEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 TechnicalNameCode = group.Add(new VocabularyKey(nameof(TechnicalNameCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TechnicalNameCode { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

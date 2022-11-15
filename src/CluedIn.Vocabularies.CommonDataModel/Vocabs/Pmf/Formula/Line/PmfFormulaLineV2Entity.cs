@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PmfFormulaLineV2EntityVocabulary()
         {
-            VocabularyName = "PmfFormulaLineV2Entity";
+            VocabularyName = "Pmf Formula Line V2 Entity";
             KeyPrefix = "commonDataModel.pmfformulalinev2entity";
             KeySeparator = ".";
             Grouping = "/PmfFormulaLineV2Entity";
@@ -59,10 +59,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsScalable = group.Add(new VocabularyKey(nameof(IsScalable), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineFormulaId = group.Add(new VocabularyKey(nameof(LineFormulaId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineCreationSequenceNumber = group.Add(new VocabularyKey(nameof(LineCreationSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ConsumptionType { get; private set; }
         public VocabularyKey FormulaId { get; private set; }
         public VocabularyKey Quantity { get; private set; }
@@ -109,7 +107,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsScalable { get; private set; }
         public VocabularyKey LineFormulaId { get; private set; }
         public VocabularyKey LineCreationSequenceNumber { get; private set; }
-
-
     }
 }

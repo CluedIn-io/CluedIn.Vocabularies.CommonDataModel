@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvStatisticsGroupEntityVocabulary()
         {
-            VocabularyName = "TrvStatisticsGroupEntity";
+            VocabularyName = "Trv Statistics Group Entity";
             KeyPrefix = "commonDataModel.trvstatisticsgroupentity";
             KeySeparator = ".";
             Grouping = "/TrvStatisticsGroupEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StatisticsGroup = group.Add(new VocabularyKey(nameof(StatisticsGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey StatisticsGroup { get; private set; }
-
-
     }
 }

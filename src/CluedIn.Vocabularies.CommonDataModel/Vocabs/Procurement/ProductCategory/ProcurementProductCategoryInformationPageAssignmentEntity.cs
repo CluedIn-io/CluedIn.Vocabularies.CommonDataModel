@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProcurementProductCategoryInformationPageAssignmentEntityVocabulary()
         {
-            VocabularyName = "ProcurementProductCategoryInformationPageAssignmentEntity";
+            VocabularyName = "Procurement Product Category Information Page Assignment Entity";
             KeyPrefix = "commonDataModel.procurementproductcategoryinformationpageassignmententity";
             KeySeparator = ".";
             Grouping = "/ProcurementProductCategoryInformationPageAssignmentEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductCategoryName = group.Add(new VocabularyKey(nameof(ProductCategoryName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductCategoryInformationPageLegalEntityId = group.Add(new VocabularyKey(nameof(ProductCategoryInformationPageLegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductCategoryInformationPageName = group.Add(new VocabularyKey(nameof(ProductCategoryInformationPageName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductCategoryHierarchyName { get; private set; }
         public VocabularyKey ProductCategoryName { get; private set; }
         public VocabularyKey ProductCategoryInformationPageLegalEntityId { get; private set; }
         public VocabularyKey ProductCategoryInformationPageName { get; private set; }
-
-
     }
 }

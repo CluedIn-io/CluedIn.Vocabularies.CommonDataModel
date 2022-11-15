@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRBrokerContractLineEntityVocabulary()
         {
-            VocabularyName = "MCRBrokerContractLineEntity";
+            VocabularyName = "MCR Broker Contract Line Entity";
             KeyPrefix = "commonDataModel.mcrbrokercontractlineentity";
             KeySeparator = ".";
             Grouping = "/MCRBrokerContractLineEntity";
@@ -35,10 +35,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BrokerFeeAmountPerProductUnitSold = group.Add(new VocabularyKey(nameof(BrokerFeeAmountPerProductUnitSold), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BrokerFeeChargeAmount = group.Add(new VocabularyKey(nameof(BrokerFeeChargeAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BrokerFeePercentage = group.Add(new VocabularyKey(nameof(BrokerFeePercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountCode { get; private set; }
         public VocabularyKey AccountRelation { get; private set; }
         public VocabularyKey BrokerFeeBreakValue { get; private set; }
@@ -61,7 +59,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey BrokerFeeAmountPerProductUnitSold { get; private set; }
         public VocabularyKey BrokerFeeChargeAmount { get; private set; }
         public VocabularyKey BrokerFeePercentage { get; private set; }
-
-
     }
 }

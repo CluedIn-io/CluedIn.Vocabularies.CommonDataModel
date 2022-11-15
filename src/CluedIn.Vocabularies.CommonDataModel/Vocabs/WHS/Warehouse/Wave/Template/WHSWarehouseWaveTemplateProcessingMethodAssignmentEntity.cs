@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseWaveTemplateProcessingMethodAssignmentEntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseWaveTemplateProcessingMethodAssignmentEntity";
+            VocabularyName = "WHS Warehouse Wave Template Processing Method Assignment Entity";
             KeyPrefix = "commonDataModel.whswarehousewavetemplateprocessingmethodassignmententity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseWaveTemplateProcessingMethodAssignmentEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MethodSequenceNumber = group.Add(new VocabularyKey(nameof(MethodSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MethodWaveStepCode = group.Add(new VocabularyKey(nameof(MethodWaveStepCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TemplateName = group.Add(new VocabularyKey(nameof(TemplateName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WarehouseWaveProcessingMethodName { get; private set; }
         public VocabularyKey MethodSequenceNumber { get; private set; }
         public VocabularyKey MethodWaveStepCode { get; private set; }
         public VocabularyKey TemplateName { get; private set; }
-
-
     }
 }

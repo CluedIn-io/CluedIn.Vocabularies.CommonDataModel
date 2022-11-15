@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxDocumentEntityVocabulary()
         {
-            VocabularyName = "TaxDocumentEntity";
+            VocabularyName = "Tax Document Entity";
             KeyPrefix = "commonDataModel.taxdocumententity";
             KeySeparator = ".";
             Grouping = "/TaxDocumentEntity";
@@ -34,10 +34,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TaxCreditMemoTransactionAmountInTransactionCurrency = group.Add(new VocabularyKey(nameof(TaxCreditMemoTransactionAmountInTransactionCurrency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxCreditMemoTransactionTaxAmountInCurrency = group.Add(new VocabularyKey(nameof(TaxCreditMemoTransactionTaxAmountInCurrency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CustVendTransTableId = group.Add(new VocabularyKey(nameof(CustVendTransTableId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TaxDocumentNumber { get; private set; }
         public VocabularyKey TaxDocumentDate { get; private set; }
         public VocabularyKey Amount { get; private set; }
@@ -59,7 +57,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TaxCreditMemoTransactionAmountInTransactionCurrency { get; private set; }
         public VocabularyKey TaxCreditMemoTransactionTaxAmountInCurrency { get; private set; }
         public VocabularyKey CustVendTransTableId { get; private set; }
-
-
     }
 }

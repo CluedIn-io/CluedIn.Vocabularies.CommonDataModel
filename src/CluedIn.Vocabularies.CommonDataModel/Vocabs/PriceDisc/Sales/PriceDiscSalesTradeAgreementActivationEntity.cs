@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PriceDiscSalesTradeAgreementActivationEntityVocabulary()
         {
-            VocabularyName = "PriceDiscSalesTradeAgreementActivationEntity";
+            VocabularyName = "Price Disc Sales Trade Agreement Activation Entity";
             KeyPrefix = "commonDataModel.pricediscsalestradeagreementactivationentity";
             KeySeparator = ".";
             Grouping = "/PriceDiscSalesTradeAgreementActivationEntity";
@@ -35,10 +35,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsAllProductsSpecificVendorGroupTotalDiscountCombinationActive = group.Add(new VocabularyKey(nameof(IsAllProductsSpecificVendorGroupTotalDiscountCombinationActive), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsAllProductsAllVendorsTotalDiscountCombinationActive = group.Add(new VocabularyKey(nameof(IsAllProductsAllVendorsTotalDiscountCombinationActive), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsAgreementDiscountActive = group.Add(new VocabularyKey(nameof(IsAgreementDiscountActive), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsSpecificProductSpecificVendorPriceCombinationActive { get; private set; }
         public VocabularyKey IsSpecificProductSpecificVendorGroupPriceCombinationActive { get; private set; }
         public VocabularyKey IsSpecificProductAllVendorsPriceCombinationActive { get; private set; }
@@ -61,7 +59,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsAllProductsSpecificVendorGroupTotalDiscountCombinationActive { get; private set; }
         public VocabularyKey IsAllProductsAllVendorsTotalDiscountCombinationActive { get; private set; }
         public VocabularyKey IsAgreementDiscountActive { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjectEntityVocabulary()
         {
-            VocabularyName = "ProjectEntity";
+            VocabularyName = "Project Entity";
             KeyPrefix = "commonDataModel.projectentity";
             KeySeparator = ".";
             Grouping = "/ProjectEntity";
@@ -101,10 +101,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SortingId1 = group.Add(new VocabularyKey(nameof(SortingId1), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SortingId2 = group.Add(new VocabularyKey(nameof(SortingId2), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SortingId3 = group.Add(new VocabularyKey(nameof(SortingId3), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProjectID { get; private set; }
         public VocabularyKey AlternateProject { get; private set; }
         public VocabularyKey FixedAssetNumber { get; private set; }
@@ -193,7 +191,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SortingId1 { get; private set; }
         public VocabularyKey SortingId2 { get; private set; }
         public VocabularyKey SortingId3 { get; private set; }
-
-
     }
 }

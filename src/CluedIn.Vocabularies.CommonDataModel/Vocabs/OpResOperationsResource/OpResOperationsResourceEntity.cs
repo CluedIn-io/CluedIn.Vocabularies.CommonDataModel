@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public OpResOperationsResourceEntityVocabulary()
         {
-            VocabularyName = "OpResOperationsResourceEntity";
+            VocabularyName = "Op Res Operations Resource Entity";
             KeyPrefix = "commonDataModel.opresoperationsresourceentity";
             KeySeparator = ".";
             Grouping = "/OpResOperationsResourceEntity";
@@ -50,10 +50,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WIPIssueLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(WIPIssueLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WIPValuationLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(WIPValuationLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RouteGroupId = group.Add(new VocabularyKey(nameof(RouteGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BatchCapacity { get; private set; }
         public VocabularyKey BatchTransferQuantity { get; private set; }
         public VocabularyKey Capacity { get; private set; }
@@ -91,7 +89,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WIPIssueLedgerDimensionDisplayValue { get; private set; }
         public VocabularyKey WIPValuationLedgerDimensionDisplayValue { get; private set; }
         public VocabularyKey RouteGroupId { get; private set; }
-
-
     }
 }

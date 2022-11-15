@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendPaymentBIVendTransVocabulary()
         {
-            VocabularyName = "VendPaymentBIVendTrans";
+            VocabularyName = "Vend Payment BI Vend Trans";
             KeyPrefix = "commonDataModel.vendpaymentbivendtrans";
             KeySeparator = ".";
             Grouping = "/VendPaymentBIVendTrans";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LastSettleDate = group.Add(new VocabularyKey(nameof(LastSettleDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AmountCur = group.Add(new VocabularyKey(nameof(AmountCur), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InvoiceReleaseDate = group.Add(new VocabularyKey(nameof(InvoiceReleaseDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountNum { get; private set; }
         public VocabularyKey Company { get; private set; }
         public VocabularyKey Invoice { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LastSettleDate { get; private set; }
         public VocabularyKey AmountCur { get; private set; }
         public VocabularyKey InvoiceReleaseDate { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MainAccountLegalEntityOverrideEntityVocabulary()
         {
-            VocabularyName = "MainAccountLegalEntityOverrideEntity";
+            VocabularyName = "Main Account Legal Entity Override Entity";
             KeyPrefix = "commonDataModel.mainaccountlegalentityoverrideentity";
             KeySeparator = ".";
             Grouping = "/MainAccountLegalEntityOverrideEntity";
@@ -37,10 +37,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsSuspended = group.Add(new VocabularyKey(nameof(IsSuspended), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExchangeAdjustmentRateType = group.Add(new VocabularyKey(nameof(ExchangeAdjustmentRateType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReportingExchangeAdjustmentRateType = group.Add(new VocabularyKey(nameof(ReportingExchangeAdjustmentRateType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey MainAccountId { get; private set; }
         public VocabularyKey ChartOfAccounts { get; private set; }
         public VocabularyKey LegalEntityId { get; private set; }
@@ -65,7 +63,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsSuspended { get; private set; }
         public VocabularyKey ExchangeAdjustmentRateType { get; private set; }
         public VocabularyKey ReportingExchangeAdjustmentRateType { get; private set; }
-
-
     }
 }

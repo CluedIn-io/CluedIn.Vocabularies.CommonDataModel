@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerAllocationRuleEntityVocabulary()
         {
-            VocabularyName = "LedgerAllocationRuleEntity";
+            VocabularyName = "Ledger Allocation Rule Entity";
             KeyPrefix = "commonDataModel.ledgerallocationruleentity";
             KeySeparator = ".";
             Grouping = "/LedgerAllocationRuleEntity";
@@ -35,10 +35,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Rule = group.Add(new VocabularyKey(nameof(Rule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DimensionDisplayValue = group.Add(new VocabularyKey(nameof(DimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OffsetAccountDisplayValue = group.Add(new VocabularyKey(nameof(OffsetAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Active { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey AllocationMethod { get; private set; }
@@ -61,7 +59,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Rule { get; private set; }
         public VocabularyKey DimensionDisplayValue { get; private set; }
         public VocabularyKey OffsetAccountDisplayValue { get; private set; }
-
-
     }
 }

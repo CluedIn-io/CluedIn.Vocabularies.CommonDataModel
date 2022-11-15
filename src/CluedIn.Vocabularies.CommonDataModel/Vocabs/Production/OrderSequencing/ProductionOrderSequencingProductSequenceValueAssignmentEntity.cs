@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProductionOrderSequencingProductSequenceValueAssignmentEntityVocabulary()
         {
-            VocabularyName = "ProductionOrderSequencingProductSequenceValueAssignmentEntity";
+            VocabularyName = "Production Order Sequencing Product Sequence Value Assignment Entity";
             KeyPrefix = "commonDataModel.productionordersequencingproductsequencevalueassignmententity";
             KeySeparator = ".";
             Grouping = "/ProductionOrderSequencingProductSequenceValueAssignmentEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductionOrderSequencingSequenceId = group.Add(new VocabularyKey(nameof(ProductionOrderSequencingSequenceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ItemNumber = group.Add(new VocabularyKey(nameof(ItemNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductGroupId = group.Add(new VocabularyKey(nameof(ProductGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ItemCode { get; private set; }
         public VocabularyKey ItemRelation { get; private set; }
         public VocabularyKey ProductionOrderSequencingSequenceValue { get; private set; }
         public VocabularyKey ProductionOrderSequencingSequenceId { get; private set; }
         public VocabularyKey ItemNumber { get; private set; }
         public VocabularyKey ProductGroupId { get; private set; }
-
-
     }
 }

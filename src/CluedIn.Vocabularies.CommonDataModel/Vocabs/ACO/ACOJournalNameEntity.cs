@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ACOJournalNameEntityVocabulary()
         {
-            VocabularyName = "ACOJournalNameEntity";
+            VocabularyName = "ACO Journal Name Entity";
             KeyPrefix = "commonDataModel.acojournalnameentity";
             KeySeparator = ".";
             Grouping = "/ACOJournalNameEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SelectionBy = group.Add(new VocabularyKey(nameof(SelectionBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CompanyId = group.Add(new VocabularyKey(nameof(CompanyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NumberSequenceCode = group.Add(new VocabularyKey(nameof(NumberSequenceCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey JournalNameId { get; private set; }
         public VocabularyKey JournalType { get; private set; }
         public VocabularyKey Description { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SelectionBy { get; private set; }
         public VocabularyKey CompanyId { get; private set; }
         public VocabularyKey NumberSequenceCode { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendVendorPostalAddressEntityVocabulary()
         {
-            VocabularyName = "VendVendorPostalAddressEntity";
+            VocabularyName = "Vend Vendor Postal Address Entity";
             KeyPrefix = "commonDataModel.vendvendorpostaladdressentity";
             KeySeparator = ".";
             Grouping = "/VendVendorPostalAddressEntity";
@@ -48,10 +48,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsRoleDelivery = group.Add(new VocabularyKey(nameof(IsRoleDelivery), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsRoleHome = group.Add(new VocabularyKey(nameof(IsRoleHome), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsRoleInvoice = group.Add(new VocabularyKey(nameof(IsRoleInvoice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey VendorAccountNumber { get; private set; }
         public VocabularyKey VendorLegalEntityId { get; private set; }
         public VocabularyKey FormattedAddress { get; private set; }
@@ -87,7 +85,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsRoleDelivery { get; private set; }
         public VocabularyKey IsRoleHome { get; private set; }
         public VocabularyKey IsRoleInvoice { get; private set; }
-
-
     }
 }

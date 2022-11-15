@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationHubEntityVocabulary()
         {
-            VocabularyName = "TMSTransportationHubEntity";
+            VocabularyName = "TMS Transportation Hub Entity";
             KeyPrefix = "commonDataModel.tmstransportationhubentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationHubEntity";
@@ -47,10 +47,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AddressValidFrom = group.Add(new VocabularyKey(nameof(AddressValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AddressValidTo = group.Add(new VocabularyKey(nameof(AddressValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AddressTimeZone = group.Add(new VocabularyKey(nameof(AddressTimeZone), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey HubCompanyName { get; private set; }
         public VocabularyKey HubContactName { get; private set; }
         public VocabularyKey HubValidFrom { get; private set; }
@@ -85,7 +83,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AddressValidFrom { get; private set; }
         public VocabularyKey AddressValidTo { get; private set; }
         public VocabularyKey AddressTimeZone { get; private set; }
-
-
     }
 }

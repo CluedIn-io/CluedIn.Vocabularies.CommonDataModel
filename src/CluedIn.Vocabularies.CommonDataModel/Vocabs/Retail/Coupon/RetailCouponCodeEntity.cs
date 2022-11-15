@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailCouponCodeEntityVocabulary()
         {
-            VocabularyName = "RetailCouponCodeEntity";
+            VocabularyName = "Retail Coupon Code Entity";
             KeyPrefix = "commonDataModel.retailcouponcodeentity";
             KeySeparator = ".";
             Grouping = "/RetailCouponCodeEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ValidTo = group.Add(new VocabularyKey(nameof(ValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Status = group.Add(new VocabularyKey(nameof(Status), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Barcode = group.Add(new VocabularyKey(nameof(Barcode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CouponCodeId { get; private set; }
         public VocabularyKey CouponNumber { get; private set; }
         public VocabularyKey CouponCode { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ValidTo { get; private set; }
         public VocabularyKey Status { get; private set; }
         public VocabularyKey Barcode { get; private set; }
-
-
     }
 }

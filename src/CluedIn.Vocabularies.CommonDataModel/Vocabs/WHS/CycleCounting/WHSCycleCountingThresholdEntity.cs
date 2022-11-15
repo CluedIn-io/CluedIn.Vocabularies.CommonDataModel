@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSCycleCountingThresholdEntityVocabulary()
         {
-            VocabularyName = "WHSCycleCountingThresholdEntity";
+            VocabularyName = "WHS Cycle Counting Threshold Entity";
             KeyPrefix = "commonDataModel.whscyclecountingthresholdentity";
             KeySeparator = ".";
             Grouping = "/WHSCycleCountingThresholdEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ThresholdInventoryQuantity = group.Add(new VocabularyKey(nameof(ThresholdInventoryQuantity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ThresholdInventoryQuantityUnitSymbol = group.Add(new VocabularyKey(nameof(ThresholdInventoryQuantityUnitSymbol), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WarehouseWorkPoolId = group.Add(new VocabularyKey(nameof(WarehouseWorkPoolId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ThresholdId { get; private set; }
         public VocabularyKey ThresholdType { get; private set; }
         public VocabularyKey DaysAllowedBetweenCycleCounts { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ThresholdInventoryQuantity { get; private set; }
         public VocabularyKey ThresholdInventoryQuantityUnitSymbol { get; private set; }
         public VocabularyKey WarehouseWorkPoolId { get; private set; }
-
-
     }
 }

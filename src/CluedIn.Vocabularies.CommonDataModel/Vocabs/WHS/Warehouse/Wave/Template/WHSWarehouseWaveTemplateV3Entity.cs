@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseWaveTemplateV3EntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseWaveTemplateV3Entity";
+            VocabularyName = "WHS Warehouse Wave Template V3 Entity";
             KeyPrefix = "commonDataModel.whswarehousewavetemplatev3entity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseWaveTemplateV3Entity";
@@ -34,10 +34,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SecondDefaultWaveAttributeValue = group.Add(new VocabularyKey(nameof(SecondDefaultWaveAttributeValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ThirdDefaultWaveAttributeValue = group.Add(new VocabularyKey(nameof(ThirdDefaultWaveAttributeValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FourthDefaultWaveAttributeValue = group.Add(new VocabularyKey(nameof(FourthDefaultWaveAttributeValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WillReleaseToWarehouseAddShipmentToOpenWave { get; private set; }
         public VocabularyKey WillReleaseToWarehouseAutomaticallyCreateWaves { get; private set; }
         public VocabularyKey WillReleaseToWarehouseAutomaticallyProcessWaves { get; private set; }
@@ -59,7 +57,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SecondDefaultWaveAttributeValue { get; private set; }
         public VocabularyKey ThirdDefaultWaveAttributeValue { get; private set; }
         public VocabularyKey FourthDefaultWaveAttributeValue { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RouteVersionV2EntityVocabulary()
         {
-            VocabularyName = "RouteVersionV2Entity";
+            VocabularyName = "Route Version V2 Entity";
             KeyPrefix = "commonDataModel.routeversionv2entity";
             KeySeparator = ".";
             Grouping = "/RouteVersionV2Entity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ValidFromDate = group.Add(new VocabularyKey(nameof(ValidFromDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidFromQuantity = group.Add(new VocabularyKey(nameof(ValidFromQuantity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidToDate = group.Add(new VocabularyKey(nameof(ValidToDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ApproverPersonnelNumber { get; private set; }
         public VocabularyKey IsActive { get; private set; }
         public VocabularyKey IsApproved { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ValidFromDate { get; private set; }
         public VocabularyKey ValidFromQuantity { get; private set; }
         public VocabularyKey ValidToDate { get; private set; }
-
-
     }
 }

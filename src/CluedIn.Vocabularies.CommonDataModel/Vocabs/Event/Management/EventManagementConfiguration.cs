@@ -6,40 +6,36 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EventManagementConfigurationVocabulary()
         {
-            VocabularyName = "EventManagementConfiguration";
+            VocabularyName = "Event Management Configuration";
             KeyPrefix = "commonDataModel.eventmanagementconfiguration";
             KeySeparator = ".";
             Grouping = "/EventManagementConfiguration";
 
             AddGroup("EventManagementConfiguration Details", group =>
             {
-                authenticationResource = group.Add(new VocabularyKey(nameof(authenticationResource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                authenticationTokenEndpoint = group.Add(new VocabularyKey(nameof(authenticationTokenEndpoint), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                configcachecreatedon = group.Add(new VocabularyKey(nameof(configcachecreatedon), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                configcacheexpirationdate = group.Add(new VocabularyKey(nameof(configcacheexpirationdate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                configcacheexpirationinsec = group.Add(new VocabularyKey(nameof(configcacheexpirationinsec), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                configurationState = group.Add(new VocabularyKey(nameof(configurationState), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                discoveryendpointurl = group.Add(new VocabularyKey(nameof(discoveryendpointurl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                eventManagementConfigurationId = group.Add(new VocabularyKey(nameof(eventManagementConfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                organizationConfig = group.Add(new VocabularyKey(nameof(organizationConfig), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                AuthenticationResource = group.Add(new VocabularyKey(nameof(AuthenticationResource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AuthenticationTokenEndpoint = group.Add(new VocabularyKey(nameof(AuthenticationTokenEndpoint), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Configcachecreatedon = group.Add(new VocabularyKey(nameof(Configcachecreatedon), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Configcacheexpirationdate = group.Add(new VocabularyKey(nameof(Configcacheexpirationdate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Configcacheexpirationinsec = group.Add(new VocabularyKey(nameof(Configcacheexpirationinsec), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ConfigurationState = group.Add(new VocabularyKey(nameof(ConfigurationState), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Discoveryendpointurl = group.Add(new VocabularyKey(nameof(Discoveryendpointurl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EventManagementConfigurationId = group.Add(new VocabularyKey(nameof(EventManagementConfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OrganizationConfig = group.Add(new VocabularyKey(nameof(OrganizationConfig), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey authenticationResource { get; private set; }
-        public VocabularyKey authenticationTokenEndpoint { get; private set; }
-        public VocabularyKey configcachecreatedon { get; private set; }
-        public VocabularyKey configcacheexpirationdate { get; private set; }
-        public VocabularyKey configcacheexpirationinsec { get; private set; }
-        public VocabularyKey configurationState { get; private set; }
-        public VocabularyKey discoveryendpointurl { get; private set; }
-        public VocabularyKey eventManagementConfigurationId { get; private set; }
-        public VocabularyKey organizationConfig { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey AuthenticationResource { get; private set; }
+        public VocabularyKey AuthenticationTokenEndpoint { get; private set; }
+        public VocabularyKey Configcachecreatedon { get; private set; }
+        public VocabularyKey Configcacheexpirationdate { get; private set; }
+        public VocabularyKey Configcacheexpirationinsec { get; private set; }
+        public VocabularyKey ConfigurationState { get; private set; }
+        public VocabularyKey Discoveryendpointurl { get; private set; }
+        public VocabularyKey EventManagementConfigurationId { get; private set; }
+        public VocabularyKey OrganizationConfig { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

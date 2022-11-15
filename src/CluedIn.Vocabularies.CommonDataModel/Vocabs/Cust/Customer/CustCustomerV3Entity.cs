@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustCustomerV3EntityVocabulary()
         {
-            VocabularyName = "CustCustomerV3Entity";
+            VocabularyName = "Cust Customer V3 Entity";
             KeyPrefix = "commonDataModel.custcustomerv3entity";
             KeySeparator = ".";
             Grouping = "/CustCustomerV3Entity";
@@ -315,10 +315,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CredManLastReviewDate = group.Add(new VocabularyKey(nameof(CredManLastReviewDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CredManNextSchedReviewDate = group.Add(new VocabularyKey(nameof(CredManNextSchedReviewDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CredManCustUnlimitedCredit = group.Add(new VocabularyKey(nameof(CredManCustUnlimitedCredit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CustomerAccount { get; private set; }
         public VocabularyKey PartyType { get; private set; }
         public VocabularyKey OrganizationName { get; private set; }
@@ -621,7 +619,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CredManLastReviewDate { get; private set; }
         public VocabularyKey CredManNextSchedReviewDate { get; private set; }
         public VocabularyKey CredManCustUnlimitedCredit { get; private set; }
-
-
     }
 }

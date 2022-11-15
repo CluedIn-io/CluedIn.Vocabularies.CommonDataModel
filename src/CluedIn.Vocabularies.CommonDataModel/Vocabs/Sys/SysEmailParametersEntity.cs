@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SysEmailParametersEntityVocabulary()
         {
-            VocabularyName = "SysEmailParametersEntity";
+            VocabularyName = "Sys Email Parameters Entity";
             KeyPrefix = "commonDataModel.sysemailparametersentity";
             KeySeparator = ".";
             Grouping = "/SysEmailParametersEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SMTPRequireSSL = group.Add(new VocabularyKey(nameof(SMTPRequireSSL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MailerNonInteractive = group.Add(new VocabularyKey(nameof(MailerNonInteractive), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MailerInteractiveEnabled = group.Add(new VocabularyKey(nameof(MailerInteractiveEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ID { get; private set; }
         public VocabularyKey MaximumEmailAttachmentSize { get; private set; }
         public VocabularyKey SMTPUseNTLM { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SMTPRequireSSL { get; private set; }
         public VocabularyKey MailerNonInteractive { get; private set; }
         public VocabularyKey MailerInteractiveEnabled { get; private set; }
-
-
     }
 }

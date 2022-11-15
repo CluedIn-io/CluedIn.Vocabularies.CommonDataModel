@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProdJobCardProductionJournalEntryEntityVocabulary()
         {
-            VocabularyName = "ProdJobCardProductionJournalEntryEntity";
+            VocabularyName = "Prod Job Card Production Journal Entry Entity";
             KeyPrefix = "commonDataModel.prodjobcardproductionjournalentryentity";
             KeySeparator = ".";
             Grouping = "/ProdJobCardProductionJournalEntryEntity";
@@ -62,10 +62,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LicensePlateNumber = group.Add(new VocabularyKey(nameof(LicensePlateNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 JournalType = group.Add(new VocabularyKey(nameof(JournalType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProdInventDimId = group.Add(new VocabularyKey(nameof(ProdInventDimId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey HoursRouteCostCategoryId { get; private set; }
         public VocabularyKey QuantityRouteCostCategoryId { get; private set; }
         public VocabularyKey ErrorCause { get; private set; }
@@ -115,7 +113,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LicensePlateNumber { get; private set; }
         public VocabularyKey JournalType { get; private set; }
         public VocabularyKey ProdInventDimId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustEntryCertificateJournalEntityVocabulary()
         {
-            VocabularyName = "CustEntryCertificateJournalEntity";
+            VocabularyName = "Cust Entry Certificate Journal Entity";
             KeyPrefix = "commonDataModel.custentrycertificatejournalentity";
             KeySeparator = ".";
             Grouping = "/CustEntryCertificateJournalEntity";
@@ -53,10 +53,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DocumentInvoiceId = group.Add(new VocabularyKey(nameof(DocumentInvoiceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DocumentInvoiceDate = group.Add(new VocabularyKey(nameof(DocumentInvoiceDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DocumentInvoiceRecId = group.Add(new VocabularyKey(nameof(DocumentInvoiceRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CustomerAccount { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey EntryCertificate { get; private set; }
@@ -97,7 +95,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DocumentInvoiceId { get; private set; }
         public VocabularyKey DocumentInvoiceDate { get; private set; }
         public VocabularyKey DocumentInvoiceRecId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerBadDebtAccountsEntityVocabulary()
         {
-            VocabularyName = "LedgerBadDebtAccountsEntity";
+            VocabularyName = "Ledger Bad Debt Accounts Entity";
             KeyPrefix = "commonDataModel.ledgerbaddebtaccountsentity";
             KeySeparator = ".";
             Grouping = "/LedgerBadDebtAccountsEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BadDebtMainAccount = group.Add(new VocabularyKey(nameof(BadDebtMainAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CollectedBadDebtMainAccount = group.Add(new VocabularyKey(nameof(CollectedBadDebtMainAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Company = group.Add(new VocabularyKey(nameof(Company), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BadDebtMainAccountDisplayValue { get; private set; }
         public VocabularyKey CollectedBadDebtMainAccountDisplayValue { get; private set; }
         public VocabularyKey BadDebtMainAccount { get; private set; }
         public VocabularyKey CollectedBadDebtMainAccount { get; private set; }
         public VocabularyKey Company { get; private set; }
-
-
     }
 }

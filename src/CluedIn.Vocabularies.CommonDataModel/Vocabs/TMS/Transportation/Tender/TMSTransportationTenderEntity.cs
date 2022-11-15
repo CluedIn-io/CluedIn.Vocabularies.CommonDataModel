@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationTenderEntityVocabulary()
         {
-            VocabularyName = "TMSTransportationTenderEntity";
+            VocabularyName = "TMS Transportation Tender Entity";
             KeyPrefix = "commonDataModel.tmstransportationtenderentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationTenderEntity";
@@ -80,10 +80,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PickupAddressTimeZone = group.Add(new VocabularyKey(nameof(PickupAddressTimeZone), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReferenceLoadId = group.Add(new VocabularyKey(nameof(ReferenceLoadId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReferenceRouteId = group.Add(new VocabularyKey(nameof(ReferenceRouteId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ShippingCarrierId { get; private set; }
         public VocabularyKey ShippingCarrierServiceId { get; private set; }
         public VocabularyKey ShippingCarrierVendorAccountNumber { get; private set; }
@@ -151,7 +149,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PickupAddressTimeZone { get; private set; }
         public VocabularyKey ReferenceLoadId { get; private set; }
         public VocabularyKey ReferenceRouteId { get; private set; }
-
-
     }
 }

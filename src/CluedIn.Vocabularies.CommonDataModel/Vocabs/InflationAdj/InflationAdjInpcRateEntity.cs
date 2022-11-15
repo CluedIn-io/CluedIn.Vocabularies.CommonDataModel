@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InflationAdjInpcRateEntityVocabulary()
         {
-            VocabularyName = "InflationAdjInpcRateEntity";
+            VocabularyName = "Inflation Adj Inpc Rate Entity";
             KeyPrefix = "commonDataModel.inflationadjinpcrateentity";
             KeySeparator = ".";
             Grouping = "/InflationAdjInpcRateEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 InflationRate = group.Add(new VocabularyKey(nameof(InflationRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Month = group.Add(new VocabularyKey(nameof(Month), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Year = group.Add(new VocabularyKey(nameof(Year), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InflationRate { get; private set; }
         public VocabularyKey Month { get; private set; }
         public VocabularyKey Year { get; private set; }
-
-
     }
 }

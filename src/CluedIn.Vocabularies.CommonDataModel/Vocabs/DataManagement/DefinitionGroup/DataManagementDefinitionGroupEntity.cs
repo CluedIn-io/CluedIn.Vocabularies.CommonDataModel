@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DataManagementDefinitionGroupEntityVocabulary()
         {
-            VocabularyName = "DataManagementDefinitionGroupEntity";
+            VocabularyName = "Data Management Definition Group Entity";
             KeyPrefix = "commonDataModel.datamanagementdefinitiongroupentity";
             KeySeparator = ".";
             Grouping = "/DataManagementDefinitionGroupEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProjectCategory = group.Add(new VocabularyKey(nameof(ProjectCategory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GenerateDataPackage = group.Add(new VocabularyKey(nameof(GenerateDataPackage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TruncateEntityData = group.Add(new VocabularyKey(nameof(TruncateEntityData), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Name { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey OperationType { get; private set; }
         public VocabularyKey ProjectCategory { get; private set; }
         public VocabularyKey GenerateDataPackage { get; private set; }
         public VocabularyKey TruncateEntityData { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CostProductionGroupEntityVocabulary()
         {
-            VocabularyName = "CostProductionGroupEntity";
+            VocabularyName = "Cost Production Group Entity";
             KeyPrefix = "commonDataModel.costproductiongroupentity";
             KeySeparator = ".";
             Grouping = "/CostProductionGroupEntity";
@@ -47,10 +47,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RealizedCostOfIndirectCostConsumedMainAccountIdDisplayValue = group.Add(new VocabularyKey(nameof(RealizedCostOfIndirectCostConsumedMainAccountIdDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EstimatedCostOfIndirectCostConsumedMainAccountId = group.Add(new VocabularyKey(nameof(EstimatedCostOfIndirectCostConsumedMainAccountId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EstimatedCostOfIndirectCostConsumedMainAccountIdDisplayValue = group.Add(new VocabularyKey(nameof(EstimatedCostOfIndirectCostConsumedMainAccountIdDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey GroupId { get; private set; }
         public VocabularyKey GroupName { get; private set; }
         public VocabularyKey EstimatedCostOfMaterialsConsumedMainAccountId { get; private set; }
@@ -85,7 +83,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RealizedCostOfIndirectCostConsumedMainAccountIdDisplayValue { get; private set; }
         public VocabularyKey EstimatedCostOfIndirectCostConsumedMainAccountId { get; private set; }
         public VocabularyKey EstimatedCostOfIndirectCostConsumedMainAccountIdDisplayValue { get; private set; }
-
-
     }
 }

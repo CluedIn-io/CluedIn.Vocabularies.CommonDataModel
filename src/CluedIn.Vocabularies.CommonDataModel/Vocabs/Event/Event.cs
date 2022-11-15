@@ -13,265 +13,261 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Event Details", group =>
             {
-                entityImage = group.Add(new VocabularyKey(nameof(entityImage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                exchangeRate = group.Add(new VocabularyKey(nameof(exchangeRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                allowAnonymousRegistrations = group.Add(new VocabularyKey(nameof(allowAnonymousRegistrations), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                allowAttendeesToUnmute = group.Add(new VocabularyKey(nameof(allowAttendeesToUnmute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                allowCustomAgenda = group.Add(new VocabularyKey(nameof(allowCustomAgenda), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                allowMeetingChat = group.Add(new VocabularyKey(nameof(allowMeetingChat), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                allowpstnsserstobypasslobby = group.Add(new VocabularyKey(nameof(allowpstnsserstobypasslobby), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                allowteamsmeetingreactions = group.Add(new VocabularyKey(nameof(allowteamsmeetingreactions), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                attendeeEngagementReport = group.Add(new VocabularyKey(nameof(attendeeEngagementReport), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                attendeeurl = group.Add(new VocabularyKey(nameof(attendeeurl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                autoadmittedusers = group.Add(new VocabularyKey(nameof(autoadmittedusers), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                autorecordingenabled = group.Add(new VocabularyKey(nameof(autorecordingenabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                autoregisterwaitlistitems = group.Add(new VocabularyKey(nameof(autoregisterwaitlistitems), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                baseRecurrentEventID = group.Add(new VocabularyKey(nameof(baseRecurrentEventID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                bookedFlightReservations = group.Add(new VocabularyKey(nameof(bookedFlightReservations), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                bookRooms = group.Add(new VocabularyKey(nameof(bookRooms), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                budgetAllocated = group.Add(new VocabularyKey(nameof(budgetAllocated), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                budgetAllocatedBase = group.Add(new VocabularyKey(nameof(budgetAllocatedBase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                calendarcontent = group.Add(new VocabularyKey(nameof(calendarcontent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                calendarcontentPlaintext = group.Add(new VocabularyKey(nameof(calendarcontentPlaintext), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                cateringRequired = group.Add(new VocabularyKey(nameof(cateringRequired), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                changeMeetingOptions = group.Add(new VocabularyKey(nameof(changeMeetingOptions), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                checkInCount = group.Add(new VocabularyKey(nameof(checkInCount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                confirmedHotelChoices = group.Add(new VocabularyKey(nameof(confirmedHotelChoices), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                countdownInDays = group.Add(new VocabularyKey(nameof(countdownInDays), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                createLeadsForEventRegistrations = group.Add(new VocabularyKey(nameof(createLeadsForEventRegistrations), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                createMarketingCollateral = group.Add(new VocabularyKey(nameof(createMarketingCollateral), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                customEventURL = group.Add(new VocabularyKey(nameof(customEventURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                definePackagesAndPricing = group.Add(new VocabularyKey(nameof(definePackagesAndPricing), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                defineSessions = group.Add(new VocabularyKey(nameof(defineSessions), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                defineTeam = group.Add(new VocabularyKey(nameof(defineTeam), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                description = group.Add(new VocabularyKey(nameof(description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                descriptorSyncStatus = group.Add(new VocabularyKey(nameof(descriptorSyncStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                developMarketingPlan = group.Add(new VocabularyKey(nameof(developMarketingPlan), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                earlyBirdCutOffDate = group.Add(new VocabularyKey(nameof(earlyBirdCutOffDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                enableCAPTCHA = group.Add(new VocabularyKey(nameof(enableCAPTCHA), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                enableMultiAttendeeRegistration = group.Add(new VocabularyKey(nameof(enableMultiAttendeeRegistration), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                entryexitannouncementsenabled = group.Add(new VocabularyKey(nameof(entryexitannouncementsenabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                eventDebriefing = group.Add(new VocabularyKey(nameof(eventDebriefing), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                eventEndDate = group.Add(new VocabularyKey(nameof(eventEndDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                eventFormat = group.Add(new VocabularyKey(nameof(eventFormat), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                eventId = group.Add(new VocabularyKey(nameof(eventId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                eventImageId = group.Add(new VocabularyKey(nameof(eventImageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                eventStartDate = group.Add(new VocabularyKey(nameof(eventStartDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                eventTimeZone = group.Add(new VocabularyKey(nameof(eventTimeZone), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                eventTimeZoneName = group.Add(new VocabularyKey(nameof(eventTimeZoneName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                eventType = group.Add(new VocabularyKey(nameof(eventType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                eventVenueCost = group.Add(new VocabularyKey(nameof(eventVenueCost), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                eventVenueCostBase = group.Add(new VocabularyKey(nameof(eventVenueCostBase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                expectedOutcome = group.Add(new VocabularyKey(nameof(expectedOutcome), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                followUpOnLeads = group.Add(new VocabularyKey(nameof(followUpOnLeads), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                guestLogistics = group.Add(new VocabularyKey(nameof(guestLogistics), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                identifySpeakers = group.Add(new VocabularyKey(nameof(identifySpeakers), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                identifySponsors = group.Add(new VocabularyKey(nameof(identifySponsors), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                isoutofsync = group.Add(new VocabularyKey(nameof(isoutofsync), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                isRecurringEvent = group.Add(new VocabularyKey(nameof(isRecurringEvent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                isTemplate = group.Add(new VocabularyKey(nameof(isTemplate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                language = group.Add(new VocabularyKey(nameof(language), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                lastteamssyncdate = group.Add(new VocabularyKey(nameof(lastteamssyncdate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                makePaymentsDue = group.Add(new VocabularyKey(nameof(makePaymentsDue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                manageRegistrationCount = group.Add(new VocabularyKey(nameof(manageRegistrationCount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                maximumEventCapacity = group.Add(new VocabularyKey(nameof(maximumEventCapacity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                maxNumberOfRegistrations = group.Add(new VocabularyKey(nameof(maxNumberOfRegistrations), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                miscellaneousCosts = group.Add(new VocabularyKey(nameof(miscellaneousCosts), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                miscellaneousCostsBase = group.Add(new VocabularyKey(nameof(miscellaneousCostsBase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                notifyAuthoritiesOfEvent = group.Add(new VocabularyKey(nameof(notifyAuthoritiesOfEvent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                numberofinvitations = group.Add(new VocabularyKey(nameof(numberofinvitations), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                planRegistration = group.Add(new VocabularyKey(nameof(planRegistration), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                presentationManagerURL = group.Add(new VocabularyKey(nameof(presentationManagerURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                previousNumberOfFreeSlots = group.Add(new VocabularyKey(nameof(previousNumberOfFreeSlots), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                primaryGoal = group.Add(new VocabularyKey(nameof(primaryGoal), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                publiceventurl = group.Add(new VocabularyKey(nameof(publiceventurl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                publishStatus = group.Add(new VocabularyKey(nameof(publishStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                qna = group.Add(new VocabularyKey(nameof(qna), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                readableEventID = group.Add(new VocabularyKey(nameof(readableEventID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                recordingforattendees = group.Add(new VocabularyKey(nameof(recordingforattendees), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                recordingforproducersandspeakers = group.Add(new VocabularyKey(nameof(recordingforproducersandspeakers), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                recoveryItems = group.Add(new VocabularyKey(nameof(recoveryItems), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                recurrencePattern = group.Add(new VocabularyKey(nameof(recurrencePattern), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                recurrentEventStatus = group.Add(new VocabularyKey(nameof(recurrentEventStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                registrationCount = group.Add(new VocabularyKey(nameof(registrationCount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                registrationsTarget = group.Add(new VocabularyKey(nameof(registrationsTarget), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                requestSponsorship = group.Add(new VocabularyKey(nameof(requestSponsorship), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                revenueFromSponsorship = group.Add(new VocabularyKey(nameof(revenueFromSponsorship), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                revenueFromSponsorshipBase = group.Add(new VocabularyKey(nameof(revenueFromSponsorshipBase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                scheduleAirportPickups = group.Add(new VocabularyKey(nameof(scheduleAirportPickups), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                scheduleSessions = group.Add(new VocabularyKey(nameof(scheduleSessions), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                selectSpeakers = group.Add(new VocabularyKey(nameof(selectSpeakers), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                selectVendors = group.Add(new VocabularyKey(nameof(selectVendors), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                sendEventInvitation = group.Add(new VocabularyKey(nameof(sendEventInvitation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                sendMarketingMaterial = group.Add(new VocabularyKey(nameof(sendMarketingMaterial), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                sendPreEventReminders = group.Add(new VocabularyKey(nameof(sendPreEventReminders), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                sendThankYouEmails = group.Add(new VocabularyKey(nameof(sendThankYouEmails), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                setregistrationsenddate = group.Add(new VocabularyKey(nameof(setregistrationsenddate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                showautomaticregistrationcheckbox = group.Add(new VocabularyKey(nameof(showautomaticregistrationcheckbox), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                showWaitlist = group.Add(new VocabularyKey(nameof(showWaitlist), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stopwebsiteregistrationson = group.Add(new VocabularyKey(nameof(stopwebsiteregistrationson), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                streamingenabled = group.Add(new VocabularyKey(nameof(streamingenabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                streamingProvider = group.Add(new VocabularyKey(nameof(streamingProvider), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                creationSource = group.Add(new VocabularyKey(nameof(creationSource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                targetRevenue = group.Add(new VocabularyKey(nameof(targetRevenue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                targetRevenueBase = group.Add(new VocabularyKey(nameof(targetRevenueBase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                teamDebriefing = group.Add(new VocabularyKey(nameof(teamDebriefing), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                teamsinvitationhtml = group.Add(new VocabularyKey(nameof(teamsinvitationhtml), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                totalCostOfEventsActivities = group.Add(new VocabularyKey(nameof(totalCostOfEventsActivities), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                totalCostOfEventsActivitiesBase = group.Add(new VocabularyKey(nameof(totalCostOfEventsActivitiesBase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                totalCostOfExternalMembers = group.Add(new VocabularyKey(nameof(totalCostOfExternalMembers), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                totalCostOfExternalMembersBase = group.Add(new VocabularyKey(nameof(totalCostOfExternalMembersBase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                totalRegistrationFee = group.Add(new VocabularyKey(nameof(totalRegistrationFee), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                totalregistrationfeeBase = group.Add(new VocabularyKey(nameof(totalregistrationfeeBase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                totalRevenueFromTheEvent = group.Add(new VocabularyKey(nameof(totalRevenueFromTheEvent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                totalRevenueFromTheEventBase = group.Add(new VocabularyKey(nameof(totalRevenueFromTheEventBase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                waitlistStartingPoint = group.Add(new VocabularyKey(nameof(waitlistStartingPoint), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                waitlistThisEvent = group.Add(new VocabularyKey(nameof(waitlistThisEvent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                webinarID = group.Add(new VocabularyKey(nameof(webinarID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                webinarNotificationSeen = group.Add(new VocabularyKey(nameof(webinarNotificationSeen), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                webinarOperation = group.Add(new VocabularyKey(nameof(webinarOperation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                webinarStatus = group.Add(new VocabularyKey(nameof(webinarStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                webinarStatusReason = group.Add(new VocabularyKey(nameof(webinarStatusReason), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                webinarURL = group.Add(new VocabularyKey(nameof(webinarURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                websitemessage = group.Add(new VocabularyKey(nameof(websitemessage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                processID = group.Add(new VocabularyKey(nameof(processID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stageID = group.Add(new VocabularyKey(nameof(stageID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                traversedPath = group.Add(new VocabularyKey(nameof(traversedPath), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                EntityImage = group.Add(new VocabularyKey(nameof(EntityImage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AllowAnonymousRegistrations = group.Add(new VocabularyKey(nameof(AllowAnonymousRegistrations), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AllowAttendeesToUnmute = group.Add(new VocabularyKey(nameof(AllowAttendeesToUnmute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AllowCustomAgenda = group.Add(new VocabularyKey(nameof(AllowCustomAgenda), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AllowMeetingChat = group.Add(new VocabularyKey(nameof(AllowMeetingChat), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Allowpstnsserstobypasslobby = group.Add(new VocabularyKey(nameof(Allowpstnsserstobypasslobby), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Allowteamsmeetingreactions = group.Add(new VocabularyKey(nameof(Allowteamsmeetingreactions), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AttendeeEngagementReport = group.Add(new VocabularyKey(nameof(AttendeeEngagementReport), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Attendeeurl = group.Add(new VocabularyKey(nameof(Attendeeurl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Autoadmittedusers = group.Add(new VocabularyKey(nameof(Autoadmittedusers), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Autorecordingenabled = group.Add(new VocabularyKey(nameof(Autorecordingenabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Autoregisterwaitlistitems = group.Add(new VocabularyKey(nameof(Autoregisterwaitlistitems), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BaseRecurrentEventID = group.Add(new VocabularyKey(nameof(BaseRecurrentEventID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BookedFlightReservations = group.Add(new VocabularyKey(nameof(BookedFlightReservations), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BookRooms = group.Add(new VocabularyKey(nameof(BookRooms), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BudgetAllocated = group.Add(new VocabularyKey(nameof(BudgetAllocated), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BudgetAllocatedBase = group.Add(new VocabularyKey(nameof(BudgetAllocatedBase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Calendarcontent = group.Add(new VocabularyKey(nameof(Calendarcontent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CalendarcontentPlaintext = group.Add(new VocabularyKey(nameof(CalendarcontentPlaintext), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CateringRequired = group.Add(new VocabularyKey(nameof(CateringRequired), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ChangeMeetingOptions = group.Add(new VocabularyKey(nameof(ChangeMeetingOptions), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CheckInCount = group.Add(new VocabularyKey(nameof(CheckInCount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ConfirmedHotelChoices = group.Add(new VocabularyKey(nameof(ConfirmedHotelChoices), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CountdownInDays = group.Add(new VocabularyKey(nameof(CountdownInDays), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreateLeadsForEventRegistrations = group.Add(new VocabularyKey(nameof(CreateLeadsForEventRegistrations), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreateMarketingCollateral = group.Add(new VocabularyKey(nameof(CreateMarketingCollateral), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CustomEventURL = group.Add(new VocabularyKey(nameof(CustomEventURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DefinePackagesAndPricing = group.Add(new VocabularyKey(nameof(DefinePackagesAndPricing), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DefineSessions = group.Add(new VocabularyKey(nameof(DefineSessions), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DefineTeam = group.Add(new VocabularyKey(nameof(DefineTeam), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DescriptorSyncStatus = group.Add(new VocabularyKey(nameof(DescriptorSyncStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DevelopMarketingPlan = group.Add(new VocabularyKey(nameof(DevelopMarketingPlan), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EarlyBirdCutOffDate = group.Add(new VocabularyKey(nameof(EarlyBirdCutOffDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EnableCAPTCHA = group.Add(new VocabularyKey(nameof(EnableCAPTCHA), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EnableMultiAttendeeRegistration = group.Add(new VocabularyKey(nameof(EnableMultiAttendeeRegistration), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Entryexitannouncementsenabled = group.Add(new VocabularyKey(nameof(Entryexitannouncementsenabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EventDebriefing = group.Add(new VocabularyKey(nameof(EventDebriefing), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EventEndDate = group.Add(new VocabularyKey(nameof(EventEndDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EventFormat = group.Add(new VocabularyKey(nameof(EventFormat), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EventId = group.Add(new VocabularyKey(nameof(EventId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EventImageId = group.Add(new VocabularyKey(nameof(EventImageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EventStartDate = group.Add(new VocabularyKey(nameof(EventStartDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EventTimeZone = group.Add(new VocabularyKey(nameof(EventTimeZone), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EventTimeZoneName = group.Add(new VocabularyKey(nameof(EventTimeZoneName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EventType = group.Add(new VocabularyKey(nameof(EventType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EventVenueCost = group.Add(new VocabularyKey(nameof(EventVenueCost), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EventVenueCostBase = group.Add(new VocabularyKey(nameof(EventVenueCostBase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExpectedOutcome = group.Add(new VocabularyKey(nameof(ExpectedOutcome), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FollowUpOnLeads = group.Add(new VocabularyKey(nameof(FollowUpOnLeads), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                GuestLogistics = group.Add(new VocabularyKey(nameof(GuestLogistics), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IdentifySpeakers = group.Add(new VocabularyKey(nameof(IdentifySpeakers), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IdentifySponsors = group.Add(new VocabularyKey(nameof(IdentifySponsors), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Isoutofsync = group.Add(new VocabularyKey(nameof(Isoutofsync), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsRecurringEvent = group.Add(new VocabularyKey(nameof(IsRecurringEvent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsTemplate = group.Add(new VocabularyKey(nameof(IsTemplate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Language = group.Add(new VocabularyKey(nameof(Language), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Lastteamssyncdate = group.Add(new VocabularyKey(nameof(Lastteamssyncdate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MakePaymentsDue = group.Add(new VocabularyKey(nameof(MakePaymentsDue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ManageRegistrationCount = group.Add(new VocabularyKey(nameof(ManageRegistrationCount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MaximumEventCapacity = group.Add(new VocabularyKey(nameof(MaximumEventCapacity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MaxNumberOfRegistrations = group.Add(new VocabularyKey(nameof(MaxNumberOfRegistrations), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MiscellaneousCosts = group.Add(new VocabularyKey(nameof(MiscellaneousCosts), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MiscellaneousCostsBase = group.Add(new VocabularyKey(nameof(MiscellaneousCostsBase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                NotifyAuthoritiesOfEvent = group.Add(new VocabularyKey(nameof(NotifyAuthoritiesOfEvent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Numberofinvitations = group.Add(new VocabularyKey(nameof(Numberofinvitations), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PlanRegistration = group.Add(new VocabularyKey(nameof(PlanRegistration), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PresentationManagerURL = group.Add(new VocabularyKey(nameof(PresentationManagerURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PreviousNumberOfFreeSlots = group.Add(new VocabularyKey(nameof(PreviousNumberOfFreeSlots), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PrimaryGoal = group.Add(new VocabularyKey(nameof(PrimaryGoal), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Publiceventurl = group.Add(new VocabularyKey(nameof(Publiceventurl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PublishStatus = group.Add(new VocabularyKey(nameof(PublishStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Qna = group.Add(new VocabularyKey(nameof(Qna), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ReadableEventID = group.Add(new VocabularyKey(nameof(ReadableEventID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Recordingforattendees = group.Add(new VocabularyKey(nameof(Recordingforattendees), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Recordingforproducersandspeakers = group.Add(new VocabularyKey(nameof(Recordingforproducersandspeakers), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RecoveryItems = group.Add(new VocabularyKey(nameof(RecoveryItems), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RecurrencePattern = group.Add(new VocabularyKey(nameof(RecurrencePattern), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RecurrentEventStatus = group.Add(new VocabularyKey(nameof(RecurrentEventStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RegistrationCount = group.Add(new VocabularyKey(nameof(RegistrationCount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RegistrationsTarget = group.Add(new VocabularyKey(nameof(RegistrationsTarget), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RequestSponsorship = group.Add(new VocabularyKey(nameof(RequestSponsorship), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RevenueFromSponsorship = group.Add(new VocabularyKey(nameof(RevenueFromSponsorship), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RevenueFromSponsorshipBase = group.Add(new VocabularyKey(nameof(RevenueFromSponsorshipBase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ScheduleAirportPickups = group.Add(new VocabularyKey(nameof(ScheduleAirportPickups), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ScheduleSessions = group.Add(new VocabularyKey(nameof(ScheduleSessions), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SelectSpeakers = group.Add(new VocabularyKey(nameof(SelectSpeakers), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SelectVendors = group.Add(new VocabularyKey(nameof(SelectVendors), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SendEventInvitation = group.Add(new VocabularyKey(nameof(SendEventInvitation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SendMarketingMaterial = group.Add(new VocabularyKey(nameof(SendMarketingMaterial), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SendPreEventReminders = group.Add(new VocabularyKey(nameof(SendPreEventReminders), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SendThankYouEmails = group.Add(new VocabularyKey(nameof(SendThankYouEmails), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Setregistrationsenddate = group.Add(new VocabularyKey(nameof(Setregistrationsenddate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Showautomaticregistrationcheckbox = group.Add(new VocabularyKey(nameof(Showautomaticregistrationcheckbox), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ShowWaitlist = group.Add(new VocabularyKey(nameof(ShowWaitlist), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Stopwebsiteregistrationson = group.Add(new VocabularyKey(nameof(Stopwebsiteregistrationson), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Streamingenabled = group.Add(new VocabularyKey(nameof(Streamingenabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StreamingProvider = group.Add(new VocabularyKey(nameof(StreamingProvider), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreationSource = group.Add(new VocabularyKey(nameof(CreationSource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TargetRevenue = group.Add(new VocabularyKey(nameof(TargetRevenue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TargetRevenueBase = group.Add(new VocabularyKey(nameof(TargetRevenueBase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TeamDebriefing = group.Add(new VocabularyKey(nameof(TeamDebriefing), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Teamsinvitationhtml = group.Add(new VocabularyKey(nameof(Teamsinvitationhtml), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TotalCostOfEventsActivities = group.Add(new VocabularyKey(nameof(TotalCostOfEventsActivities), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TotalCostOfEventsActivitiesBase = group.Add(new VocabularyKey(nameof(TotalCostOfEventsActivitiesBase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TotalCostOfExternalMembers = group.Add(new VocabularyKey(nameof(TotalCostOfExternalMembers), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TotalCostOfExternalMembersBase = group.Add(new VocabularyKey(nameof(TotalCostOfExternalMembersBase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TotalRegistrationFee = group.Add(new VocabularyKey(nameof(TotalRegistrationFee), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TotalregistrationfeeBase = group.Add(new VocabularyKey(nameof(TotalregistrationfeeBase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TotalRevenueFromTheEvent = group.Add(new VocabularyKey(nameof(TotalRevenueFromTheEvent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TotalRevenueFromTheEventBase = group.Add(new VocabularyKey(nameof(TotalRevenueFromTheEventBase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WaitlistStartingPoint = group.Add(new VocabularyKey(nameof(WaitlistStartingPoint), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WaitlistThisEvent = group.Add(new VocabularyKey(nameof(WaitlistThisEvent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WebinarID = group.Add(new VocabularyKey(nameof(WebinarID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WebinarNotificationSeen = group.Add(new VocabularyKey(nameof(WebinarNotificationSeen), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WebinarOperation = group.Add(new VocabularyKey(nameof(WebinarOperation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WebinarStatus = group.Add(new VocabularyKey(nameof(WebinarStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WebinarStatusReason = group.Add(new VocabularyKey(nameof(WebinarStatusReason), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WebinarURL = group.Add(new VocabularyKey(nameof(WebinarURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Websitemessage = group.Add(new VocabularyKey(nameof(Websitemessage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProcessID = group.Add(new VocabularyKey(nameof(ProcessID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StageID = group.Add(new VocabularyKey(nameof(StageID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey entityImage { get; private set; }
-        public VocabularyKey exchangeRate { get; private set; }
-        public VocabularyKey allowAnonymousRegistrations { get; private set; }
-        public VocabularyKey allowAttendeesToUnmute { get; private set; }
-        public VocabularyKey allowCustomAgenda { get; private set; }
-        public VocabularyKey allowMeetingChat { get; private set; }
-        public VocabularyKey allowpstnsserstobypasslobby { get; private set; }
-        public VocabularyKey allowteamsmeetingreactions { get; private set; }
-        public VocabularyKey attendeeEngagementReport { get; private set; }
-        public VocabularyKey attendeeurl { get; private set; }
-        public VocabularyKey autoadmittedusers { get; private set; }
-        public VocabularyKey autorecordingenabled { get; private set; }
-        public VocabularyKey autoregisterwaitlistitems { get; private set; }
-        public VocabularyKey baseRecurrentEventID { get; private set; }
-        public VocabularyKey bookedFlightReservations { get; private set; }
-        public VocabularyKey bookRooms { get; private set; }
-        public VocabularyKey budgetAllocated { get; private set; }
-        public VocabularyKey budgetAllocatedBase { get; private set; }
-        public VocabularyKey calendarcontent { get; private set; }
-        public VocabularyKey calendarcontentPlaintext { get; private set; }
-        public VocabularyKey cateringRequired { get; private set; }
-        public VocabularyKey changeMeetingOptions { get; private set; }
-        public VocabularyKey checkInCount { get; private set; }
-        public VocabularyKey confirmedHotelChoices { get; private set; }
-        public VocabularyKey countdownInDays { get; private set; }
-        public VocabularyKey createLeadsForEventRegistrations { get; private set; }
-        public VocabularyKey createMarketingCollateral { get; private set; }
-        public VocabularyKey customEventURL { get; private set; }
-        public VocabularyKey definePackagesAndPricing { get; private set; }
-        public VocabularyKey defineSessions { get; private set; }
-        public VocabularyKey defineTeam { get; private set; }
-        public VocabularyKey description { get; private set; }
-        public VocabularyKey descriptorSyncStatus { get; private set; }
-        public VocabularyKey developMarketingPlan { get; private set; }
-        public VocabularyKey earlyBirdCutOffDate { get; private set; }
-        public VocabularyKey enableCAPTCHA { get; private set; }
-        public VocabularyKey enableMultiAttendeeRegistration { get; private set; }
-        public VocabularyKey entryexitannouncementsenabled { get; private set; }
-        public VocabularyKey eventDebriefing { get; private set; }
-        public VocabularyKey eventEndDate { get; private set; }
-        public VocabularyKey eventFormat { get; private set; }
-        public VocabularyKey eventId { get; private set; }
-        public VocabularyKey eventImageId { get; private set; }
-        public VocabularyKey eventStartDate { get; private set; }
-        public VocabularyKey eventTimeZone { get; private set; }
-        public VocabularyKey eventTimeZoneName { get; private set; }
-        public VocabularyKey eventType { get; private set; }
-        public VocabularyKey eventVenueCost { get; private set; }
-        public VocabularyKey eventVenueCostBase { get; private set; }
-        public VocabularyKey expectedOutcome { get; private set; }
-        public VocabularyKey followUpOnLeads { get; private set; }
-        public VocabularyKey guestLogistics { get; private set; }
-        public VocabularyKey identifySpeakers { get; private set; }
-        public VocabularyKey identifySponsors { get; private set; }
-        public VocabularyKey isoutofsync { get; private set; }
-        public VocabularyKey isRecurringEvent { get; private set; }
-        public VocabularyKey isTemplate { get; private set; }
-        public VocabularyKey language { get; private set; }
-        public VocabularyKey lastteamssyncdate { get; private set; }
-        public VocabularyKey makePaymentsDue { get; private set; }
-        public VocabularyKey manageRegistrationCount { get; private set; }
-        public VocabularyKey maximumEventCapacity { get; private set; }
-        public VocabularyKey maxNumberOfRegistrations { get; private set; }
-        public VocabularyKey miscellaneousCosts { get; private set; }
-        public VocabularyKey miscellaneousCostsBase { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey notifyAuthoritiesOfEvent { get; private set; }
-        public VocabularyKey numberofinvitations { get; private set; }
-        public VocabularyKey planRegistration { get; private set; }
-        public VocabularyKey presentationManagerURL { get; private set; }
-        public VocabularyKey previousNumberOfFreeSlots { get; private set; }
-        public VocabularyKey primaryGoal { get; private set; }
-        public VocabularyKey publiceventurl { get; private set; }
-        public VocabularyKey publishStatus { get; private set; }
-        public VocabularyKey qna { get; private set; }
-        public VocabularyKey readableEventID { get; private set; }
-        public VocabularyKey recordingforattendees { get; private set; }
-        public VocabularyKey recordingforproducersandspeakers { get; private set; }
-        public VocabularyKey recoveryItems { get; private set; }
-        public VocabularyKey recurrencePattern { get; private set; }
-        public VocabularyKey recurrentEventStatus { get; private set; }
-        public VocabularyKey registrationCount { get; private set; }
-        public VocabularyKey registrationsTarget { get; private set; }
-        public VocabularyKey requestSponsorship { get; private set; }
-        public VocabularyKey revenueFromSponsorship { get; private set; }
-        public VocabularyKey revenueFromSponsorshipBase { get; private set; }
-        public VocabularyKey scheduleAirportPickups { get; private set; }
-        public VocabularyKey scheduleSessions { get; private set; }
-        public VocabularyKey selectSpeakers { get; private set; }
-        public VocabularyKey selectVendors { get; private set; }
-        public VocabularyKey sendEventInvitation { get; private set; }
-        public VocabularyKey sendMarketingMaterial { get; private set; }
-        public VocabularyKey sendPreEventReminders { get; private set; }
-        public VocabularyKey sendThankYouEmails { get; private set; }
-        public VocabularyKey setregistrationsenddate { get; private set; }
-        public VocabularyKey showautomaticregistrationcheckbox { get; private set; }
-        public VocabularyKey showWaitlist { get; private set; }
-        public VocabularyKey stopwebsiteregistrationson { get; private set; }
-        public VocabularyKey streamingenabled { get; private set; }
-        public VocabularyKey streamingProvider { get; private set; }
-        public VocabularyKey creationSource { get; private set; }
-        public VocabularyKey targetRevenue { get; private set; }
-        public VocabularyKey targetRevenueBase { get; private set; }
-        public VocabularyKey teamDebriefing { get; private set; }
-        public VocabularyKey teamsinvitationhtml { get; private set; }
-        public VocabularyKey totalCostOfEventsActivities { get; private set; }
-        public VocabularyKey totalCostOfEventsActivitiesBase { get; private set; }
-        public VocabularyKey totalCostOfExternalMembers { get; private set; }
-        public VocabularyKey totalCostOfExternalMembersBase { get; private set; }
-        public VocabularyKey totalRegistrationFee { get; private set; }
-        public VocabularyKey totalregistrationfeeBase { get; private set; }
-        public VocabularyKey totalRevenueFromTheEvent { get; private set; }
-        public VocabularyKey totalRevenueFromTheEventBase { get; private set; }
-        public VocabularyKey waitlistStartingPoint { get; private set; }
-        public VocabularyKey waitlistThisEvent { get; private set; }
-        public VocabularyKey webinarID { get; private set; }
-        public VocabularyKey webinarNotificationSeen { get; private set; }
-        public VocabularyKey webinarOperation { get; private set; }
-        public VocabularyKey webinarStatus { get; private set; }
-        public VocabularyKey webinarStatusReason { get; private set; }
-        public VocabularyKey webinarURL { get; private set; }
-        public VocabularyKey websitemessage { get; private set; }
-        public VocabularyKey processID { get; private set; }
-        public VocabularyKey stageID { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-        public VocabularyKey traversedPath { get; private set; }
-
-
+        public VocabularyKey EntityImage { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey AllowAnonymousRegistrations { get; private set; }
+        public VocabularyKey AllowAttendeesToUnmute { get; private set; }
+        public VocabularyKey AllowCustomAgenda { get; private set; }
+        public VocabularyKey AllowMeetingChat { get; private set; }
+        public VocabularyKey Allowpstnsserstobypasslobby { get; private set; }
+        public VocabularyKey Allowteamsmeetingreactions { get; private set; }
+        public VocabularyKey AttendeeEngagementReport { get; private set; }
+        public VocabularyKey Attendeeurl { get; private set; }
+        public VocabularyKey Autoadmittedusers { get; private set; }
+        public VocabularyKey Autorecordingenabled { get; private set; }
+        public VocabularyKey Autoregisterwaitlistitems { get; private set; }
+        public VocabularyKey BaseRecurrentEventID { get; private set; }
+        public VocabularyKey BookedFlightReservations { get; private set; }
+        public VocabularyKey BookRooms { get; private set; }
+        public VocabularyKey BudgetAllocated { get; private set; }
+        public VocabularyKey BudgetAllocatedBase { get; private set; }
+        public VocabularyKey Calendarcontent { get; private set; }
+        public VocabularyKey CalendarcontentPlaintext { get; private set; }
+        public VocabularyKey CateringRequired { get; private set; }
+        public VocabularyKey ChangeMeetingOptions { get; private set; }
+        public VocabularyKey CheckInCount { get; private set; }
+        public VocabularyKey ConfirmedHotelChoices { get; private set; }
+        public VocabularyKey CountdownInDays { get; private set; }
+        public VocabularyKey CreateLeadsForEventRegistrations { get; private set; }
+        public VocabularyKey CreateMarketingCollateral { get; private set; }
+        public VocabularyKey CustomEventURL { get; private set; }
+        public VocabularyKey DefinePackagesAndPricing { get; private set; }
+        public VocabularyKey DefineSessions { get; private set; }
+        public VocabularyKey DefineTeam { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey DescriptorSyncStatus { get; private set; }
+        public VocabularyKey DevelopMarketingPlan { get; private set; }
+        public VocabularyKey EarlyBirdCutOffDate { get; private set; }
+        public VocabularyKey EnableCAPTCHA { get; private set; }
+        public VocabularyKey EnableMultiAttendeeRegistration { get; private set; }
+        public VocabularyKey Entryexitannouncementsenabled { get; private set; }
+        public VocabularyKey EventDebriefing { get; private set; }
+        public VocabularyKey EventEndDate { get; private set; }
+        public VocabularyKey EventFormat { get; private set; }
+        public VocabularyKey EventId { get; private set; }
+        public VocabularyKey EventImageId { get; private set; }
+        public VocabularyKey EventStartDate { get; private set; }
+        public VocabularyKey EventTimeZone { get; private set; }
+        public VocabularyKey EventTimeZoneName { get; private set; }
+        public VocabularyKey EventType { get; private set; }
+        public VocabularyKey EventVenueCost { get; private set; }
+        public VocabularyKey EventVenueCostBase { get; private set; }
+        public VocabularyKey ExpectedOutcome { get; private set; }
+        public VocabularyKey FollowUpOnLeads { get; private set; }
+        public VocabularyKey GuestLogistics { get; private set; }
+        public VocabularyKey IdentifySpeakers { get; private set; }
+        public VocabularyKey IdentifySponsors { get; private set; }
+        public VocabularyKey Isoutofsync { get; private set; }
+        public VocabularyKey IsRecurringEvent { get; private set; }
+        public VocabularyKey IsTemplate { get; private set; }
+        public VocabularyKey Language { get; private set; }
+        public VocabularyKey Lastteamssyncdate { get; private set; }
+        public VocabularyKey MakePaymentsDue { get; private set; }
+        public VocabularyKey ManageRegistrationCount { get; private set; }
+        public VocabularyKey MaximumEventCapacity { get; private set; }
+        public VocabularyKey MaxNumberOfRegistrations { get; private set; }
+        public VocabularyKey MiscellaneousCosts { get; private set; }
+        public VocabularyKey MiscellaneousCostsBase { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey NotifyAuthoritiesOfEvent { get; private set; }
+        public VocabularyKey Numberofinvitations { get; private set; }
+        public VocabularyKey PlanRegistration { get; private set; }
+        public VocabularyKey PresentationManagerURL { get; private set; }
+        public VocabularyKey PreviousNumberOfFreeSlots { get; private set; }
+        public VocabularyKey PrimaryGoal { get; private set; }
+        public VocabularyKey Publiceventurl { get; private set; }
+        public VocabularyKey PublishStatus { get; private set; }
+        public VocabularyKey Qna { get; private set; }
+        public VocabularyKey ReadableEventID { get; private set; }
+        public VocabularyKey Recordingforattendees { get; private set; }
+        public VocabularyKey Recordingforproducersandspeakers { get; private set; }
+        public VocabularyKey RecoveryItems { get; private set; }
+        public VocabularyKey RecurrencePattern { get; private set; }
+        public VocabularyKey RecurrentEventStatus { get; private set; }
+        public VocabularyKey RegistrationCount { get; private set; }
+        public VocabularyKey RegistrationsTarget { get; private set; }
+        public VocabularyKey RequestSponsorship { get; private set; }
+        public VocabularyKey RevenueFromSponsorship { get; private set; }
+        public VocabularyKey RevenueFromSponsorshipBase { get; private set; }
+        public VocabularyKey ScheduleAirportPickups { get; private set; }
+        public VocabularyKey ScheduleSessions { get; private set; }
+        public VocabularyKey SelectSpeakers { get; private set; }
+        public VocabularyKey SelectVendors { get; private set; }
+        public VocabularyKey SendEventInvitation { get; private set; }
+        public VocabularyKey SendMarketingMaterial { get; private set; }
+        public VocabularyKey SendPreEventReminders { get; private set; }
+        public VocabularyKey SendThankYouEmails { get; private set; }
+        public VocabularyKey Setregistrationsenddate { get; private set; }
+        public VocabularyKey Showautomaticregistrationcheckbox { get; private set; }
+        public VocabularyKey ShowWaitlist { get; private set; }
+        public VocabularyKey Stopwebsiteregistrationson { get; private set; }
+        public VocabularyKey Streamingenabled { get; private set; }
+        public VocabularyKey StreamingProvider { get; private set; }
+        public VocabularyKey CreationSource { get; private set; }
+        public VocabularyKey TargetRevenue { get; private set; }
+        public VocabularyKey TargetRevenueBase { get; private set; }
+        public VocabularyKey TeamDebriefing { get; private set; }
+        public VocabularyKey Teamsinvitationhtml { get; private set; }
+        public VocabularyKey TotalCostOfEventsActivities { get; private set; }
+        public VocabularyKey TotalCostOfEventsActivitiesBase { get; private set; }
+        public VocabularyKey TotalCostOfExternalMembers { get; private set; }
+        public VocabularyKey TotalCostOfExternalMembersBase { get; private set; }
+        public VocabularyKey TotalRegistrationFee { get; private set; }
+        public VocabularyKey TotalregistrationfeeBase { get; private set; }
+        public VocabularyKey TotalRevenueFromTheEvent { get; private set; }
+        public VocabularyKey TotalRevenueFromTheEventBase { get; private set; }
+        public VocabularyKey WaitlistStartingPoint { get; private set; }
+        public VocabularyKey WaitlistThisEvent { get; private set; }
+        public VocabularyKey WebinarID { get; private set; }
+        public VocabularyKey WebinarNotificationSeen { get; private set; }
+        public VocabularyKey WebinarOperation { get; private set; }
+        public VocabularyKey WebinarStatus { get; private set; }
+        public VocabularyKey WebinarStatusReason { get; private set; }
+        public VocabularyKey WebinarURL { get; private set; }
+        public VocabularyKey Websitemessage { get; private set; }
+        public VocabularyKey ProcessID { get; private set; }
+        public VocabularyKey StageID { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
     }
 }

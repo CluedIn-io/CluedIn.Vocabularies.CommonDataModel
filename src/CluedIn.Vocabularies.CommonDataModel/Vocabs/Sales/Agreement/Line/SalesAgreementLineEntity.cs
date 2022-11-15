@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesAgreementLineEntityVocabulary()
         {
-            VocabularyName = "SalesAgreementLineEntity";
+            VocabularyName = "Sales Agreement Line Entity";
             KeyPrefix = "commonDataModel.salesagreementlineentity";
             KeySeparator = ".";
             Grouping = "/SalesAgreementLineEntity";
@@ -53,10 +53,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WillRebateCalculationExcludeLine = group.Add(new VocabularyKey(nameof(WillRebateCalculationExcludeLine), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AgreementCustomerAccountNumber = group.Add(new VocabularyKey(nameof(AgreementCustomerAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InvoiceCustomerAccountNumber = group.Add(new VocabularyKey(nameof(InvoiceCustomerAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SalesAgreementRecId { get; private set; }
         public VocabularyKey SalesAgreementLegalEntityId { get; private set; }
         public VocabularyKey SalesAgreementId { get; private set; }
@@ -97,7 +95,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WillRebateCalculationExcludeLine { get; private set; }
         public VocabularyKey AgreementCustomerAccountNumber { get; private set; }
         public VocabularyKey InvoiceCustomerAccountNumber { get; private set; }
-
-
     }
 }

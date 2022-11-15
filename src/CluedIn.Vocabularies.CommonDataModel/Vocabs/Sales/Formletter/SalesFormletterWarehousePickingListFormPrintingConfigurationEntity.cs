@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesFormletterWarehousePickingListFormPrintingConfigurationEntityVocabulary()
         {
-            VocabularyName = "SalesFormletterWarehousePickingListFormPrintingConfigurationEntity";
+            VocabularyName = "Sales Formletter Warehouse Picking List Form Printing Configuration Entity";
             KeyPrefix = "commonDataModel.salesformletterwarehousepickinglistformprintingconfigurationentity";
             KeySeparator = ".";
             Grouping = "/SalesFormletterWarehousePickingListFormPrintingConfigurationEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 InventDimPickingList = group.Add(new VocabularyKey(nameof(InventDimPickingList), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DocumentAttachmentDisplayRule = group.Add(new VocabularyKey(nameof(DocumentAttachmentDisplayRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DisplayedDocumentAttachmentTypeCode = group.Add(new VocabularyKey(nameof(DisplayedDocumentAttachmentTypeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsInventoryStatusIdDisplayed { get; private set; }
         public VocabularyKey IsItemBatchNumberDisplayed { get; private set; }
         public VocabularyKey IsItemSerialNumberDisplayed { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey InventDimPickingList { get; private set; }
         public VocabularyKey DocumentAttachmentDisplayRule { get; private set; }
         public VocabularyKey DisplayedDocumentAttachmentTypeCode { get; private set; }
-
-
     }
 }

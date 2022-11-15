@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProdReleaseKindTableEntityVocabulary()
         {
-            VocabularyName = "ProdReleaseKindTableEntity";
+            VocabularyName = "Prod Release Kind Table Entity";
             KeyPrefix = "commonDataModel.prodreleasekindtableentity";
             KeySeparator = ".";
             Grouping = "/ProdReleaseKindTableEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ReleaseKindId = group.Add(new VocabularyKey(nameof(ReleaseKindId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LossAccountDisplayValue = group.Add(new VocabularyKey(nameof(LossAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LossPhysLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(LossPhysLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Scrap { get; private set; }
         public VocabularyKey Warehouse { get; private set; }
         public VocabularyKey DefectiveProduct { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ReleaseKindId { get; private set; }
         public VocabularyKey LossAccountDisplayValue { get; private set; }
         public VocabularyKey LossPhysLedgerDimensionDisplayValue { get; private set; }
-
-
     }
 }

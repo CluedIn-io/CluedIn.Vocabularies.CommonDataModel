@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventItemPriceEntityVocabulary()
         {
-            VocabularyName = "InventItemPriceEntity";
+            VocabularyName = "Invent Item Price Entity";
             KeyPrefix = "commonDataModel.inventitempriceentity";
             KeySeparator = ".";
             Grouping = "/InventItemPriceEntity";
@@ -31,10 +31,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductStyleId = group.Add(new VocabularyKey(nameof(ProductStyleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsActive = group.Add(new VocabularyKey(nameof(IsActive), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PriceCreatedDateTime = group.Add(new VocabularyKey(nameof(PriceCreatedDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CostingVersionId { get; private set; }
         public VocabularyKey ProductUnitSymbol { get; private set; }
         public VocabularyKey PriceQuantity { get; private set; }
@@ -53,7 +51,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProductStyleId { get; private set; }
         public VocabularyKey IsActive { get; private set; }
         public VocabularyKey PriceCreatedDateTime { get; private set; }
-
-
     }
 }

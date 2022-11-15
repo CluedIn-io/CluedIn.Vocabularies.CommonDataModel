@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSDocumentRoutingPrinterEntityVocabulary()
         {
-            VocabularyName = "WHSDocumentRoutingPrinterEntity";
+            VocabularyName = "WHS Document Routing Printer Entity";
             KeyPrefix = "commonDataModel.whsdocumentroutingprinterentity";
             KeySeparator = ".";
             Grouping = "/WHSDocumentRoutingPrinterEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DocumentRoutingWarehouseId = group.Add(new VocabularyKey(nameof(DocumentRoutingWarehouseId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DocumentRoutingSequence = group.Add(new VocabularyKey(nameof(DocumentRoutingSequence), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DocumentRoutingWorkOrderType = group.Add(new VocabularyKey(nameof(DocumentRoutingWorkOrderType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DocumentRouting { get; private set; }
         public VocabularyKey DocumentRoutingPrinterLayoutId { get; private set; }
         public VocabularyKey DocumentRoutingPrinterName { get; private set; }
         public VocabularyKey DocumentRoutingWarehouseId { get; private set; }
         public VocabularyKey DocumentRoutingSequence { get; private set; }
         public VocabularyKey DocumentRoutingWorkOrderType { get; private set; }
-
-
     }
 }

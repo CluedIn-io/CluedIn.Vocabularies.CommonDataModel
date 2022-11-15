@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventDestinationAddressTransportationTimeEntityVocabulary()
         {
-            VocabularyName = "InventDestinationAddressTransportationTimeEntity";
+            VocabularyName = "Invent Destination Address Transportation Time Entity";
             KeyPrefix = "commonDataModel.inventdestinationaddresstransportationtimeentity";
             KeySeparator = ".";
             Grouping = "/InventDestinationAddressTransportationTimeEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DestinationAddressCity = group.Add(new VocabularyKey(nameof(DestinationAddressCity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DestinationAddressZipCode = group.Add(new VocabularyKey(nameof(DestinationAddressZipCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultTransportationDays = group.Add(new VocabularyKey(nameof(DefaultTransportationDays), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey OriginWarehouseId { get; private set; }
         public VocabularyKey DestinationAddressCountryRegionId { get; private set; }
         public VocabularyKey DestinationAddressStateId { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DestinationAddressCity { get; private set; }
         public VocabularyKey DestinationAddressZipCode { get; private set; }
         public VocabularyKey DefaultTransportationDays { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PSNTreasurerFundReportMainAccountsEntityVocabulary()
         {
-            VocabularyName = "PSNTreasurerFundReportMainAccountsEntity";
+            VocabularyName = "PSN Treasurer Fund Report Main Accounts Entity";
             KeyPrefix = "commonDataModel.psntreasurerfundreportmainaccountsentity";
             KeySeparator = ".";
             Grouping = "/PSNTreasurerFundReportMainAccountsEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LedgerChartOfAccountsRecId = group.Add(new VocabularyKey(nameof(LedgerChartOfAccountsRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MainAccountId = group.Add(new VocabularyKey(nameof(MainAccountId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LedgerChartOfAccountsName = group.Add(new VocabularyKey(nameof(LedgerChartOfAccountsName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey MainAccountRecId { get; private set; }
         public VocabularyKey LedgerChartOfAccountsRecId { get; private set; }
         public VocabularyKey MainAccountId { get; private set; }
         public VocabularyKey LedgerChartOfAccountsName { get; private set; }
-
-
     }
 }

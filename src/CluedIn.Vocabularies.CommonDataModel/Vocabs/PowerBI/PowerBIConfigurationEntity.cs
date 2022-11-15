@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PowerBIConfigurationEntityVocabulary()
         {
-            VocabularyName = "PowerBIConfigurationEntity";
+            VocabularyName = "Power BI Configuration Entity";
             KeyPrefix = "commonDataModel.powerbiconfigurationentity";
             KeySeparator = ".";
             Grouping = "/PowerBIConfigurationEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ApplyTileFilter = group.Add(new VocabularyKey(nameof(ApplyTileFilter), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TileFilterTableName = group.Add(new VocabularyKey(nameof(TileFilterTableName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TileFilterColumnName = group.Add(new VocabularyKey(nameof(TileFilterColumnName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsEnabled { get; private set; }
         public VocabularyKey AzureADAuthorityUri { get; private set; }
         public VocabularyKey AzureADPowerBIApiResourceUri { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ApplyTileFilter { get; private set; }
         public VocabularyKey TileFilterTableName { get; private set; }
         public VocabularyKey TileFilterColumnName { get; private set; }
-
-
     }
 }

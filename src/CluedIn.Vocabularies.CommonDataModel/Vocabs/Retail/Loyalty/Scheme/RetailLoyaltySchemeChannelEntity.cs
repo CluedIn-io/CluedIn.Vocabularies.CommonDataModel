@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailLoyaltySchemeChannelEntityVocabulary()
         {
-            VocabularyName = "RetailLoyaltySchemeChannelEntity";
+            VocabularyName = "Retail Loyalty Scheme Channel Entity";
             KeyPrefix = "commonDataModel.retailloyaltyschemechannelentity";
             KeySeparator = ".";
             Grouping = "/RetailLoyaltySchemeChannelEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OMHierarchyTypeName = group.Add(new VocabularyKey(nameof(OMHierarchyTypeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OrganizationPartyNumber = group.Add(new VocabularyKey(nameof(OrganizationPartyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LoyaltySchemeId = group.Add(new VocabularyKey(nameof(LoyaltySchemeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LoyaltyScheme { get; private set; }
         public VocabularyKey OMHierarchyType { get; private set; }
         public VocabularyKey OMInternalOrganization { get; private set; }
         public VocabularyKey OMHierarchyTypeName { get; private set; }
         public VocabularyKey OrganizationPartyNumber { get; private set; }
         public VocabularyKey LoyaltySchemeId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetBookV2EntityVocabulary()
         {
-            VocabularyName = "AssetBookV2Entity";
+            VocabularyName = "Asset Book V2 Entity";
             KeyPrefix = "commonDataModel.assetbookv2entity";
             KeySeparator = ".";
             Grouping = "/AssetBookV2Entity";
@@ -88,10 +88,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AcquisitionPriceReportingCurrency = group.Add(new VocabularyKey(nameof(AcquisitionPriceReportingCurrency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExpectedScrapValueReportingCurrency = group.Add(new VocabularyKey(nameof(ExpectedScrapValueReportingCurrency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ConsumptionUnitDepreciationReportingCurrency = group.Add(new VocabularyKey(nameof(ConsumptionUnitDepreciationReportingCurrency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FixedAssetNumber { get; private set; }
         public VocabularyKey BookId { get; private set; }
         public VocabularyKey FixedAssetGroupId { get; private set; }
@@ -167,7 +165,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AcquisitionPriceReportingCurrency { get; private set; }
         public VocabularyKey ExpectedScrapValueReportingCurrency { get; private set; }
         public VocabularyKey ConsumptionUnitDepreciationReportingCurrency { get; private set; }
-
-
     }
 }

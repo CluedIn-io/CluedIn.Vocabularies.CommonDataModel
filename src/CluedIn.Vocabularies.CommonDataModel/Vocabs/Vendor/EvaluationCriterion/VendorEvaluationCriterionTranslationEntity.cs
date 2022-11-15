@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendorEvaluationCriterionTranslationEntityVocabulary()
         {
-            VocabularyName = "VendorEvaluationCriterionTranslationEntity";
+            VocabularyName = "Vendor Evaluation Criterion Translation Entity";
             KeyPrefix = "commonDataModel.vendorevaluationcriteriontranslationentity";
             KeySeparator = ".";
             Grouping = "/VendorEvaluationCriterionTranslationEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 VendorEvaluationCriterionGroupName = group.Add(new VocabularyKey(nameof(VendorEvaluationCriterionGroupName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LanguageId = group.Add(new VocabularyKey(nameof(LanguageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TranslatedCriterionDescription = group.Add(new VocabularyKey(nameof(TranslatedCriterionDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey VendReviewCriterionRecId { get; private set; }
         public VocabularyKey VendReviewCriterionGroupRecId { get; private set; }
         public VocabularyKey VendorEvaluationCriterionName { get; private set; }
         public VocabularyKey VendorEvaluationCriterionGroupName { get; private set; }
         public VocabularyKey LanguageId { get; private set; }
         public VocabularyKey TranslatedCriterionDescription { get; private set; }
-
-
     }
 }

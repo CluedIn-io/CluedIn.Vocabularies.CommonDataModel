@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DocuEnabledTableEntityVocabulary()
         {
-            VocabularyName = "DocuEnabledTableEntity";
+            VocabularyName = "Docu Enabled Table Entity";
             KeyPrefix = "commonDataModel.docuenabledtableentity";
             KeySeparator = ".";
             Grouping = "/DocuEnabledTableEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AllowEditAlways = group.Add(new VocabularyKey(nameof(AllowEditAlways), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TableEnabledId = group.Add(new VocabularyKey(nameof(TableEnabledId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TableName = group.Add(new VocabularyKey(nameof(TableName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AllowEditAlways { get; private set; }
         public VocabularyKey TableEnabledId { get; private set; }
         public VocabularyKey TableName { get; private set; }
-
-
     }
 }

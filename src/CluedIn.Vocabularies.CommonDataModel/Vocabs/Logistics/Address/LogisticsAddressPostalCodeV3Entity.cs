@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LogisticsAddressPostalCodeV3EntityVocabulary()
         {
-            VocabularyName = "LogisticsAddressPostalCodeV3Entity";
+            VocabularyName = "Logistics Address Postal Code V3 Entity";
             KeyPrefix = "commonDataModel.logisticsaddresspostalcodev3entity";
             KeySeparator = ".";
             Grouping = "/LogisticsAddressPostalCodeV3Entity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 StreetNumberValidity = group.Add(new VocabularyKey(nameof(StreetNumberValidity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TimeZone = group.Add(new VocabularyKey(nameof(TimeZone), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ZipCode = group.Add(new VocabularyKey(nameof(ZipCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey City { get; private set; }
         public VocabularyKey CityId { get; private set; }
         public VocabularyKey CityAlias { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey StreetNumberValidity { get; private set; }
         public VocabularyKey TimeZone { get; private set; }
         public VocabularyKey ZipCode { get; private set; }
-
-
     }
 }

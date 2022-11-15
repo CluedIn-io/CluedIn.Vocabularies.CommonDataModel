@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailTransactionBankedTenderTransEntityVocabulary()
         {
-            VocabularyName = "RetailTransactionBankedTenderTransEntity";
+            VocabularyName = "Retail Transaction Banked Tender Trans Entity";
             KeyPrefix = "commonDataModel.retailtransactionbankedtendertransentity";
             KeySeparator = ".";
             Grouping = "/RetailTransactionBankedTenderTransEntity";
@@ -47,10 +47,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TransactionDate = group.Add(new VocabularyKey(nameof(TransactionDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransactionTime = group.Add(new VocabularyKey(nameof(TransactionTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RetailChannelId = group.Add(new VocabularyKey(nameof(RetailChannelId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AmountCurrency { get; private set; }
         public VocabularyKey AmountCurrencyPOS { get; private set; }
         public VocabularyKey AmountMST { get; private set; }
@@ -85,7 +83,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TransactionDate { get; private set; }
         public VocabularyKey TransactionTime { get; private set; }
         public VocabularyKey RetailChannelId { get; private set; }
-
-
     }
 }

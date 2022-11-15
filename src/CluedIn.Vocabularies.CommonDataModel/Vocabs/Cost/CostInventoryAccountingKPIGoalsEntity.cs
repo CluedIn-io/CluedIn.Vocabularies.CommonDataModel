@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CostInventoryAccountingKPIGoalsEntityVocabulary()
         {
-            VocabularyName = "CostInventoryAccountingKPIGoalsEntity";
+            VocabularyName = "Cost Inventory Accounting KPI Goals Entity";
             KeyPrefix = "commonDataModel.costinventoryaccountingkpigoalsentity";
             KeySeparator = ".";
             Grouping = "/CostInventoryAccountingKPIGoalsEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 AnnualInventoryTurn = group.Add(new VocabularyKey(nameof(AnnualInventoryTurn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InventoryAccuracy = group.Add(new VocabularyKey(nameof(InventoryAccuracy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AnnualInventoryTurn { get; private set; }
         public VocabularyKey InventoryAccuracy { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxIntervatConfigurationEntityVocabulary()
         {
-            VocabularyName = "TaxIntervatConfigurationEntity";
+            VocabularyName = "Tax Intervat Configuration Entity";
             KeyPrefix = "commonDataModel.taxintervatconfigurationentity";
             KeySeparator = ".";
             Grouping = "/TaxIntervatConfigurationEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Language = group.Add(new VocabularyKey(nameof(Language), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Value = group.Add(new VocabularyKey(nameof(Value), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Language { get; private set; }
         public VocabularyKey Value { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

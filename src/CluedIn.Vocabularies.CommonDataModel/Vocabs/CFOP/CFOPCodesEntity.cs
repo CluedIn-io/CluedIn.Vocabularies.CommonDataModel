@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CFOPCodesEntityVocabulary()
         {
-            VocabularyName = "CFOPCodesEntity";
+            VocabularyName = "CFOP Codes Entity";
             KeyPrefix = "commonDataModel.cfopcodesentity";
             KeySeparator = ".";
             Grouping = "/CFOPCodesEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FiscalDocumentSourceTextId = group.Add(new VocabularyKey(nameof(FiscalDocumentSourceTextId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FiscalDocumentSourceText = group.Add(new VocabularyKey(nameof(FiscalDocumentSourceText), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FiscalReferenceLegalText = group.Add(new VocabularyKey(nameof(FiscalReferenceLegalText), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CFOP { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey SearchName { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FiscalDocumentSourceTextId { get; private set; }
         public VocabularyKey FiscalDocumentSourceText { get; private set; }
         public VocabularyKey FiscalReferenceLegalText { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankPostDatedCheckEntityVocabulary()
         {
-            VocabularyName = "BankPostDatedCheckEntity";
+            VocabularyName = "Bank Post Dated Check Entity";
             KeyPrefix = "commonDataModel.bankpostdatedcheckentity";
             KeySeparator = ".";
             Grouping = "/BankPostDatedCheckEntity";
@@ -37,10 +37,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CurrencyCode = group.Add(new VocabularyKey(nameof(CurrencyCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AccountDisplayValue = group.Add(new VocabularyKey(nameof(AccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AccountType = group.Add(new VocabularyKey(nameof(AccountType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BankName { get; private set; }
         public VocabularyKey BankBranch { get; private set; }
         public VocabularyKey CheckNumber { get; private set; }
@@ -65,7 +63,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CurrencyCode { get; private set; }
         public VocabularyKey AccountDisplayValue { get; private set; }
         public VocabularyKey AccountType { get; private set; }
-
-
     }
 }

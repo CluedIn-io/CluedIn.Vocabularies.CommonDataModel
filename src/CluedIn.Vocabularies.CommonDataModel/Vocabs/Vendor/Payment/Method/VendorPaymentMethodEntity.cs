@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendorPaymentMethodEntityVocabulary()
         {
-            VocabularyName = "VendorPaymentMethodEntity";
+            VocabularyName = "Vendor Payment Method Entity";
             KeyPrefix = "commonDataModel.vendorpaymentmethodentity";
             KeySeparator = ".";
             Grouping = "/VendorPaymentMethodEntity";
@@ -72,10 +72,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ChargeBearerValue = group.Add(new VocabularyKey(nameof(ChargeBearerValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DirectDebit = group.Add(new VocabularyKey(nameof(DirectDebit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PostingProfileRemitNotes = group.Add(new VocabularyKey(nameof(PostingProfileRemitNotes), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountType { get; private set; }
         public VocabularyKey AllowPaymentCopies { get; private set; }
         public VocabularyKey BankTransactionType { get; private set; }
@@ -135,7 +133,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ChargeBearerValue { get; private set; }
         public VocabularyKey DirectDebit { get; private set; }
         public VocabularyKey PostingProfileRemitNotes { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResProductMasterColorEntityVocabulary()
         {
-            VocabularyName = "EcoResProductMasterColorEntity";
+            VocabularyName = "Eco Res Product Master Color Entity";
             KeyPrefix = "commonDataModel.ecoresproductmastercolorentity";
             KeySeparator = ".";
             Grouping = "/EcoResProductMasterColorEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductColorId = group.Add(new VocabularyKey(nameof(ProductColorId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReplenishmentWeight = group.Add(new VocabularyKey(nameof(ReplenishmentWeight), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DisplaySequenceNumber = group.Add(new VocabularyKey(nameof(DisplaySequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DimensionTableId { get; private set; }
         public VocabularyKey ProductMasterNumber { get; private set; }
         public VocabularyKey ProductColorId { get; private set; }
         public VocabularyKey ReplenishmentWeight { get; private set; }
         public VocabularyKey DisplaySequenceNumber { get; private set; }
-
-
     }
 }

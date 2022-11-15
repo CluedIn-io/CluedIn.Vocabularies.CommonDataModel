@@ -6,30 +6,26 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CommunicationRequestPayloadVocabulary()
         {
-            VocabularyName = "CommunicationRequestPayload";
+            VocabularyName = "Communication Request Payload";
             KeyPrefix = "commonDataModel.communicationrequestpayload";
             KeySeparator = ".";
             Grouping = "/CommunicationRequestPayload";
 
             AddGroup("CommunicationRequestPayload Details", group =>
             {
-                communicationRequestPayloadId = group.Add(new VocabularyKey(nameof(communicationRequestPayloadId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                payloadContentReference = group.Add(new VocabularyKey(nameof(payloadContentReference), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                payloadContentString = group.Add(new VocabularyKey(nameof(payloadContentString), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                CommunicationRequestPayloadId = group.Add(new VocabularyKey(nameof(CommunicationRequestPayloadId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PayloadContentReference = group.Add(new VocabularyKey(nameof(PayloadContentReference), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PayloadContentString = group.Add(new VocabularyKey(nameof(PayloadContentString), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey communicationRequestPayloadId { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey payloadContentReference { get; private set; }
-        public VocabularyKey payloadContentString { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey CommunicationRequestPayloadId { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey PayloadContentReference { get; private set; }
+        public VocabularyKey PayloadContentString { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

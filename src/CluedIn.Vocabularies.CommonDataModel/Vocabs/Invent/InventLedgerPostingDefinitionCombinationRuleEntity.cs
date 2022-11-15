@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventLedgerPostingDefinitionCombinationRuleEntityVocabulary()
         {
-            VocabularyName = "InventLedgerPostingDefinitionCombinationRuleEntity";
+            VocabularyName = "Invent Ledger Posting Definition Combination Rule Entity";
             KeyPrefix = "commonDataModel.inventledgerpostingdefinitioncombinationruleentity";
             KeySeparator = ".";
             Grouping = "/InventLedgerPostingDefinitionCombinationRuleEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AreProductGroupLedgerPostingDefinitionsActive = group.Add(new VocabularyKey(nameof(AreProductGroupLedgerPostingDefinitionsActive), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AreProductLedgerPostingDefinitionsActive = group.Add(new VocabularyKey(nameof(AreProductLedgerPostingDefinitionsActive), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AreSalesTaxGroupLedgerPostingDefinitionsActive = group.Add(new VocabularyKey(nameof(AreSalesTaxGroupLedgerPostingDefinitionsActive), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AreAllAccountLedgerPostingDefinitionsActive { get; private set; }
         public VocabularyKey AreAccountGroupLedgerPostingDefinitionsActive { get; private set; }
         public VocabularyKey AreAccountLedgerPostingDefinitionsActive { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AreProductGroupLedgerPostingDefinitionsActive { get; private set; }
         public VocabularyKey AreProductLedgerPostingDefinitionsActive { get; private set; }
         public VocabularyKey AreSalesTaxGroupLedgerPostingDefinitionsActive { get; private set; }
-
-
     }
 }

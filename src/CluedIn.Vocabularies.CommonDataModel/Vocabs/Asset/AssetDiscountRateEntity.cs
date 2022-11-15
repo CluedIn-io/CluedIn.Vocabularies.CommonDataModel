@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetDiscountRateEntityVocabulary()
         {
-            VocabularyName = "AssetDiscountRateEntity";
+            VocabularyName = "Asset Discount Rate Entity";
             KeyPrefix = "commonDataModel.assetdiscountrateentity";
             KeySeparator = ".";
             Grouping = "/AssetDiscountRateEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 MarketDiscountRatePercentage = group.Add(new VocabularyKey(nameof(MarketDiscountRatePercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StartDate = group.Add(new VocabularyKey(nameof(StartDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey MarketDiscountRatePercentage { get; private set; }
         public VocabularyKey StartDate { get; private set; }
-
-
     }
 }

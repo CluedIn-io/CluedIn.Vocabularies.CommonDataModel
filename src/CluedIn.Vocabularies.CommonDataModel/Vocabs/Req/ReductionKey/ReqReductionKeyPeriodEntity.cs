@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReqReductionKeyPeriodEntityVocabulary()
         {
-            VocabularyName = "ReqReductionKeyPeriodEntity";
+            VocabularyName = "Req Reduction Key Period Entity";
             KeyPrefix = "commonDataModel.reqreductionkeyperiodentity";
             KeySeparator = ".";
             Grouping = "/ReqReductionKeyPeriodEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TimeUnit = group.Add(new VocabularyKey(nameof(TimeUnit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReductionKeyId = group.Add(new VocabularyKey(nameof(ReductionKeyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReductionPercentage = group.Add(new VocabularyKey(nameof(ReductionPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IncrementalTimeChange { get; private set; }
         public VocabularyKey TimeUnit { get; private set; }
         public VocabularyKey ReductionKeyId { get; private set; }
         public VocabularyKey ReductionPercentage { get; private set; }
-
-
     }
 }

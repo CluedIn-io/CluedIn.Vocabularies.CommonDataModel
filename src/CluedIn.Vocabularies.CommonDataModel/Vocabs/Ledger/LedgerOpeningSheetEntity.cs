@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerOpeningSheetEntityVocabulary()
         {
-            VocabularyName = "LedgerOpeningSheetEntity";
+            VocabularyName = "Ledger Opening Sheet Entity";
             KeyPrefix = "commonDataModel.ledgeropeningsheetentity";
             KeySeparator = ".";
             Grouping = "/LedgerOpeningSheetEntity";
@@ -49,10 +49,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LedgerOpeningTransOffsetAccountMainAccountId = group.Add(new VocabularyKey(nameof(LedgerOpeningTransOffsetAccountMainAccountId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LedgerOpeningTransOffsetAccountChartOfAccountName = group.Add(new VocabularyKey(nameof(LedgerOpeningTransOffsetAccountChartOfAccountName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OffsetAccountDisplayValue = group.Add(new VocabularyKey(nameof(OffsetAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Sheet { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey FromDate { get; private set; }
@@ -89,7 +87,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LedgerOpeningTransOffsetAccountMainAccountId { get; private set; }
         public VocabularyKey LedgerOpeningTransOffsetAccountChartOfAccountName { get; private set; }
         public VocabularyKey OffsetAccountDisplayValue { get; private set; }
-
-
     }
 }

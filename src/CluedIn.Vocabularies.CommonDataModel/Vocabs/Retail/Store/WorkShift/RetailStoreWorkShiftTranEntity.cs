@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailStoreWorkShiftTranEntityVocabulary()
         {
-            VocabularyName = "RetailStoreWorkShiftTranEntity";
+            VocabularyName = "Retail Store Work Shift Tran Entity";
             KeyPrefix = "commonDataModel.retailstoreworkshifttranentity";
             KeySeparator = ".";
             Grouping = "/RetailStoreWorkShiftTranEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Status = group.Add(new VocabularyKey(nameof(Status), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StoreRecId = group.Add(new VocabularyKey(nameof(StoreRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OMOperatingUnitNumber = group.Add(new VocabularyKey(nameof(OMOperatingUnitNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ClosingDate { get; private set; }
         public VocabularyKey ClosingTime { get; private set; }
         public VocabularyKey OpeningDate { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Status { get; private set; }
         public VocabularyKey StoreRecId { get; private set; }
         public VocabularyKey OMOperatingUnitNumber { get; private set; }
-
-
     }
 }

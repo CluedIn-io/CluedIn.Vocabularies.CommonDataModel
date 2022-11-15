@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailCategoryPriceRuleEntityVocabulary()
         {
-            VocabularyName = "RetailCategoryPriceRuleEntity";
+            VocabularyName = "Retail Category Price Rule Entity";
             KeyPrefix = "commonDataModel.retailcategorypriceruleentity";
             KeySeparator = ".";
             Grouping = "/RetailCategoryPriceRuleEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CategoryHierarchyName = group.Add(new VocabularyKey(nameof(CategoryHierarchyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CustomerAccount = group.Add(new VocabularyKey(nameof(CustomerAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CustomerPriceGroupCode = group.Add(new VocabularyKey(nameof(CustomerPriceGroupCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountCode { get; private set; }
         public VocabularyKey AccountRelation { get; private set; }
         public VocabularyKey AmountPercent { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CategoryHierarchyName { get; private set; }
         public VocabularyKey CustomerAccount { get; private set; }
         public VocabularyKey CustomerPriceGroupCode { get; private set; }
-
-
     }
 }

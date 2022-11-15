@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FiscalOrganizationFiscalAuditorEntityVocabulary()
         {
-            VocabularyName = "FiscalOrganizationFiscalAuditorEntity";
+            VocabularyName = "Fiscal Organization Fiscal Auditor Entity";
             KeyPrefix = "commonDataModel.fiscalorganizationfiscalauditorentity";
             KeySeparator = ".";
             Grouping = "/FiscalOrganizationFiscalAuditorEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RootFiscalEstablishmentDataArea = group.Add(new VocabularyKey(nameof(RootFiscalEstablishmentDataArea), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RootFiscalEstablishment = group.Add(new VocabularyKey(nameof(RootFiscalEstablishment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CVMNumber { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey RootFiscalEstablishmentDataArea { get; private set; }
         public VocabularyKey RootFiscalEstablishment { get; private set; }
-
-
     }
 }

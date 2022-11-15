@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailTrialUserVocabulary()
         {
-            VocabularyName = "RetailTrialUser";
+            VocabularyName = "Retail Trial User";
             KeyPrefix = "commonDataModel.retailtrialuser";
             KeySeparator = ".";
             Grouping = "/RetailTrialUser";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Helplanguage = group.Add(new VocabularyKey(nameof(Helplanguage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PersonName = group.Add(new VocabularyKey(nameof(PersonName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultPartition = group.Add(new VocabularyKey(nameof(DefaultPartition), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey UserID { get; private set; }
         public VocabularyKey Alias { get; private set; }
         public VocabularyKey UserName { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Helplanguage { get; private set; }
         public VocabularyKey PersonName { get; private set; }
         public VocabularyKey DefaultPartition { get; private set; }
-
-
     }
 }

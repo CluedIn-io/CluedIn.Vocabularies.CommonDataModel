@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailLoyaltyCardEntityVocabulary()
         {
-            VocabularyName = "RetailLoyaltyCardEntity";
+            VocabularyName = "Retail Loyalty Card Entity";
             KeyPrefix = "commonDataModel.retailloyaltycardentity";
             KeySeparator = ".";
             Grouping = "/RetailLoyaltyCardEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LoyaltyEnrollmentTime = group.Add(new VocabularyKey(nameof(LoyaltyEnrollmentTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LoyaltyEnrollmentDateLocal = group.Add(new VocabularyKey(nameof(LoyaltyEnrollmentDateLocal), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LoyaltyEnrollmentTimeLocal = group.Add(new VocabularyKey(nameof(LoyaltyEnrollmentTimeLocal), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CardNumber { get; private set; }
         public VocabularyKey CardTenderType { get; private set; }
         public VocabularyKey Party { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LoyaltyEnrollmentTime { get; private set; }
         public VocabularyKey LoyaltyEnrollmentDateLocal { get; private set; }
         public VocabularyKey LoyaltyEnrollmentTimeLocal { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public NGPCodeEntityVocabulary()
         {
-            VocabularyName = "NGPCodeEntity";
+            VocabularyName = "NGP Code Entity";
             KeyPrefix = "commonDataModel.ngpcodeentity";
             KeySeparator = ".";
             Grouping = "/NGPCodeEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 NGP = group.Add(new VocabularyKey(nameof(NGP), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey NGP { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

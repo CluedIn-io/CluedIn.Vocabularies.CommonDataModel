@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustAdvancedInvoiceEntityVocabulary()
         {
-            VocabularyName = "CustAdvancedInvoiceEntity";
+            VocabularyName = "Cust Advanced Invoice Entity";
             KeyPrefix = "commonDataModel.custadvancedinvoiceentity";
             KeySeparator = ".";
             Grouping = "/CustAdvancedInvoiceEntity";
@@ -95,10 +95,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RetailStoreId = group.Add(new VocabularyKey(nameof(RetailStoreId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RetailTerminalId = group.Add(new VocabularyKey(nameof(RetailTerminalId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RetailTransactionId = group.Add(new VocabularyKey(nameof(RetailTransactionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CustomerAccount { get; private set; }
         public VocabularyKey InvoiceAccount { get; private set; }
         public VocabularyKey OneTimeCustomer { get; private set; }
@@ -181,7 +179,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RetailStoreId { get; private set; }
         public VocabularyKey RetailTerminalId { get; private set; }
         public VocabularyKey RetailTransactionId { get; private set; }
-
-
     }
 }

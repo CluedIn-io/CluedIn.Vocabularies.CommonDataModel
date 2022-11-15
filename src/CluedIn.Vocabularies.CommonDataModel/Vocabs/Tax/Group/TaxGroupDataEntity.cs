@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxGroupDataEntityVocabulary()
         {
-            VocabularyName = "TaxGroupDataEntity";
+            VocabularyName = "Tax Group Data Entity";
             KeyPrefix = "commonDataModel.taxgroupdataentity";
             KeySeparator = ".";
             Grouping = "/TaxGroupDataEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BrazilianTaxationCode = group.Add(new VocabularyKey(nameof(BrazilianTaxationCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BrazilianTaxationCodeId = group.Add(new VocabularyKey(nameof(BrazilianTaxationCodeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReverseCharge = group.Add(new VocabularyKey(nameof(ReverseCharge), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TaxGroupId { get; private set; }
         public VocabularyKey TaxCodeId { get; private set; }
         public VocabularyKey TaxExemptCodeId { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey BrazilianTaxationCode { get; private set; }
         public VocabularyKey BrazilianTaxationCodeId { get; private set; }
         public VocabularyKey ReverseCharge { get; private set; }
-
-
     }
 }

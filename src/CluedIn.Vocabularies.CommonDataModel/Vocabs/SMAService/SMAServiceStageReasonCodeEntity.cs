@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SMAServiceStageReasonCodeEntityVocabulary()
         {
-            VocabularyName = "SMAServiceStageReasonCodeEntity";
+            VocabularyName = "SMA Service Stage Reason Code Entity";
             KeyPrefix = "commonDataModel.smaservicestagereasoncodeentity";
             KeySeparator = ".";
             Grouping = "/SMAServiceStageReasonCodeEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 ReasonDescription = group.Add(new VocabularyKey(nameof(ReasonDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReasonCode = group.Add(new VocabularyKey(nameof(ReasonCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ReasonDescription { get; private set; }
         public VocabularyKey ReasonCode { get; private set; }
-
-
     }
 }

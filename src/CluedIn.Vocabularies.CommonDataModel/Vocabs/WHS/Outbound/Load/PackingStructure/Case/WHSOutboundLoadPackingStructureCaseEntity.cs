@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSOutboundLoadPackingStructureCaseEntityVocabulary()
         {
-            VocabularyName = "WHSOutboundLoadPackingStructureCaseEntity";
+            VocabularyName = "WHS Outbound Load Packing Structure Case Entity";
             KeyPrefix = "commonDataModel.whsoutboundloadpackingstructurecaseentity";
             KeySeparator = ".";
             Grouping = "/WHSOutboundLoadPackingStructureCaseEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 InventoryUnitSymbol = group.Add(new VocabularyKey(nameof(InventoryUnitSymbol), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DeliveringUnitSymbol = group.Add(new VocabularyKey(nameof(DeliveringUnitSymbol), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OutboundShipmentId = group.Add(new VocabularyKey(nameof(OutboundShipmentId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ContainedItemNumber { get; private set; }
         public VocabularyKey LicensePlateNumber { get; private set; }
         public VocabularyKey ParentPackingStructureLicensePlateNumber { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey InventoryUnitSymbol { get; private set; }
         public VocabularyKey DeliveringUnitSymbol { get; private set; }
         public VocabularyKey OutboundShipmentId { get; private set; }
-
-
     }
 }

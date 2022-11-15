@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResProductLifecycleStateEntityVocabulary()
         {
-            VocabularyName = "EcoResProductLifecycleStateEntity";
+            VocabularyName = "Eco Res Product Lifecycle State Entity";
             KeyPrefix = "commonDataModel.ecoresproductlifecyclestateentity";
             KeySeparator = ".";
             Grouping = "/EcoResProductLifecycleStateEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LifecycleStateDescription = group.Add(new VocabularyKey(nameof(LifecycleStateDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsActiveForPlanning = group.Add(new VocabularyKey(nameof(IsActiveForPlanning), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsDefaultOnProductRelease = group.Add(new VocabularyKey(nameof(IsDefaultOnProductRelease), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LifecycleStateId { get; private set; }
         public VocabularyKey LifecycleStateDescription { get; private set; }
         public VocabularyKey IsActiveForPlanning { get; private set; }
         public VocabularyKey IsDefaultOnProductRelease { get; private set; }
-
-
     }
 }

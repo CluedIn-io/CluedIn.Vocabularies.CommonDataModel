@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendConsInvoiceEntityVocabulary()
         {
-            VocabularyName = "VendConsInvoiceEntity";
+            VocabularyName = "Vend Cons Invoice Entity";
             KeyPrefix = "commonDataModel.vendconsinvoiceentity";
             KeySeparator = ".";
             Grouping = "/VendConsInvoiceEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SalesTax = group.Add(new VocabularyKey(nameof(SalesTax), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorAccount = group.Add(new VocabularyKey(nameof(VendorAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReferenceConsolidationId = group.Add(new VocabularyKey(nameof(ReferenceConsolidationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AdjustmentAmount { get; private set; }
         public VocabularyKey ConsolidationDate { get; private set; }
         public VocabularyKey ConsolidationId { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SalesTax { get; private set; }
         public VocabularyKey VendorAccount { get; private set; }
         public VocabularyKey ReferenceConsolidationId { get; private set; }
-
-
     }
 }

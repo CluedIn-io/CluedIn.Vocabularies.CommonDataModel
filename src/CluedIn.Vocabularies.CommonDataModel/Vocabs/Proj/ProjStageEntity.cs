@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjStageEntityVocabulary()
         {
-            VocabularyName = "ProjStageEntity";
+            VocabularyName = "Proj Stage Entity";
             KeyPrefix = "commonDataModel.projstageentity";
             KeySeparator = ".";
             Grouping = "/ProjStageEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Language = group.Add(new VocabularyKey(nameof(Language), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Status = group.Add(new VocabularyKey(nameof(Status), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Stage = group.Add(new VocabularyKey(nameof(Stage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Language { get; private set; }
         public VocabularyKey Status { get; private set; }
         public VocabularyKey Stage { get; private set; }
-
-
     }
 }

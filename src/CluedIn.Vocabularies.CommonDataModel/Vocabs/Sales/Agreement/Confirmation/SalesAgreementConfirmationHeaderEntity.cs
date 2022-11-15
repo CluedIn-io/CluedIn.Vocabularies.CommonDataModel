@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesAgreementConfirmationHeaderEntityVocabulary()
         {
-            VocabularyName = "SalesAgreementConfirmationHeaderEntity";
+            VocabularyName = "Sales Agreement Confirmation Header Entity";
             KeyPrefix = "commonDataModel.salesagreementconfirmationheaderentity";
             KeySeparator = ".";
             Grouping = "/SalesAgreementConfirmationHeaderEntity";
@@ -83,10 +83,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SalesAgreementConfirmationNumber = group.Add(new VocabularyKey(nameof(SalesAgreementConfirmationNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ConfirmationCreationDateTime = group.Add(new VocabularyKey(nameof(ConfirmationCreationDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReportingCurrencyFixedExchangeRate = group.Add(new VocabularyKey(nameof(ReportingCurrencyFixedExchangeRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SellingLegalEntityRecId { get; private set; }
         public VocabularyKey SellingLegalEntityId { get; private set; }
         public VocabularyKey SalesAgreementId { get; private set; }
@@ -157,7 +155,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SalesAgreementConfirmationNumber { get; private set; }
         public VocabularyKey ConfirmationCreationDateTime { get; private set; }
         public VocabularyKey ReportingCurrencyFixedExchangeRate { get; private set; }
-
-
     }
 }

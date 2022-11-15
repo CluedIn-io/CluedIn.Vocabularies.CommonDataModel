@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProcurementReturnActionEntityVocabulary()
         {
-            VocabularyName = "ProcurementReturnActionEntity";
+            VocabularyName = "Procurement Return Action Entity";
             KeyPrefix = "commonDataModel.procurementreturnactionentity";
             KeySeparator = ".";
             Grouping = "/ProcurementReturnActionEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 ActionId = group.Add(new VocabularyKey(nameof(ActionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ActionDescription = group.Add(new VocabularyKey(nameof(ActionDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ActionId { get; private set; }
         public VocabularyKey ActionDescription { get; private set; }
-
-
     }
 }

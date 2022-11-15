@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailInventItemLabelReportSetupEntityVocabulary()
         {
-            VocabularyName = "RetailInventItemLabelReportSetupEntity";
+            VocabularyName = "Retail Invent Item Label Report Setup Entity";
             KeyPrefix = "commonDataModel.retailinventitemlabelreportsetupentity";
             KeySeparator = ".";
             Grouping = "/RetailInventItemLabelReportSetupEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 ReportName = group.Add(new VocabularyKey(nameof(ReportName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Type = group.Add(new VocabularyKey(nameof(Type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ReportName { get; private set; }
         public VocabularyKey Type { get; private set; }
-
-
     }
 }

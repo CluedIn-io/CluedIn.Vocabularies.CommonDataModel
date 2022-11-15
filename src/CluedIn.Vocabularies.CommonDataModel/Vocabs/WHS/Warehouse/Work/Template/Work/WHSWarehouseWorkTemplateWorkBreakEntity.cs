@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseWorkTemplateWorkBreakEntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseWorkTemplateWorkBreakEntity";
+            VocabularyName = "WHS Warehouse Work Template Work Break Entity";
             KeyPrefix = "commonDataModel.whswarehouseworktemplateworkbreakentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseWorkTemplateWorkBreakEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsFieldBreakingWork = group.Add(new VocabularyKey(nameof(IsFieldBreakingWork), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WarehouseWorkTemplateId = group.Add(new VocabularyKey(nameof(WarehouseWorkTemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WarehouseWorkTemplateWorkOrderType = group.Add(new VocabularyKey(nameof(WarehouseWorkTemplateWorkOrderType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WorkTemplateWorkBreakTableFieldId { get; private set; }
         public VocabularyKey WorkTemplateWorkBreakTableFieldName { get; private set; }
         public VocabularyKey WorkTemplateWorkBreakTableId { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsFieldBreakingWork { get; private set; }
         public VocabularyKey WarehouseWorkTemplateId { get; private set; }
         public VocabularyKey WarehouseWorkTemplateWorkOrderType { get; private set; }
-
-
     }
 }

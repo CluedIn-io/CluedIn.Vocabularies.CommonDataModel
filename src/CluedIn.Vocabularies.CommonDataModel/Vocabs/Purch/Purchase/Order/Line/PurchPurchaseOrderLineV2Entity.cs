@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPurchaseOrderLineV2EntityVocabulary()
         {
-            VocabularyName = "PurchPurchaseOrderLineV2Entity";
+            VocabularyName = "Purch Purchase Order Line V2 Entity";
             KeyPrefix = "commonDataModel.purchpurchaseorderlinev2entity";
             KeySeparator = ".";
             Grouping = "/PurchPurchaseOrderLineV2Entity";
@@ -158,10 +158,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 VendorRetentionTermRuleId = group.Add(new VocabularyKey(nameof(VendorRetentionTermRuleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorRetentionTermRuleDescription = group.Add(new VocabularyKey(nameof(VendorRetentionTermRuleDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InventoryLotId = group.Add(new VocabularyKey(nameof(InventoryLotId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PurchaseOrderLineStatus { get; private set; }
         public VocabularyKey SalesTaxItemGroupCode { get; private set; }
         public VocabularyKey SalesTaxGroupCode { get; private set; }
@@ -307,7 +305,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey VendorRetentionTermRuleId { get; private set; }
         public VocabularyKey VendorRetentionTermRuleDescription { get; private set; }
         public VocabularyKey InventoryLotId { get; private set; }
-
-
     }
 }

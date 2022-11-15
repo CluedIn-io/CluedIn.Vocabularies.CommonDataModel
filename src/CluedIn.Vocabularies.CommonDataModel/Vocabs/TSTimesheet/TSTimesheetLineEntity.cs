@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TSTimesheetLineEntityVocabulary()
         {
-            VocabularyName = "TSTimesheetLineEntity";
+            VocabularyName = "TS Timesheet Line Entity";
             KeyPrefix = "commonDataModel.tstimesheetlineentity";
             KeySeparator = ".";
             Grouping = "/TSTimesheetLineEntity";
@@ -32,10 +32,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Hours = group.Add(new VocabularyKey(nameof(Hours), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InternalComments = group.Add(new VocabularyKey(nameof(InternalComments), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LegalEntity = group.Add(new VocabularyKey(nameof(LegalEntity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Resource { get; private set; }
         public VocabularyKey CategoryId { get; private set; }
         public VocabularyKey Dimension { get; private set; }
@@ -55,7 +53,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Hours { get; private set; }
         public VocabularyKey InternalComments { get; private set; }
         public VocabularyKey LegalEntity { get; private set; }
-
-
     }
 }

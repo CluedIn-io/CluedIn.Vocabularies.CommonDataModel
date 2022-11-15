@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResProductV2EntityVocabulary()
         {
-            VocabularyName = "EcoResProductV2Entity";
+            VocabularyName = "Eco Res Product V2 Entity";
             KeyPrefix = "commonDataModel.ecoresproductv2entity";
             KeySeparator = ".";
             Grouping = "/EcoResProductV2Entity";
@@ -46,10 +46,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WarrantyDurationTimeUnit = group.Add(new VocabularyKey(nameof(WarrantyDurationTimeUnit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EngChgProductTypeName = group.Add(new VocabularyKey(nameof(EngChgProductTypeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EngChgProductOwnerId = group.Add(new VocabularyKey(nameof(EngChgProductOwnerId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductType { get; private set; }
         public VocabularyKey ProductSubType { get; private set; }
         public VocabularyKey ServiceType { get; private set; }
@@ -83,7 +81,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WarrantyDurationTimeUnit { get; private set; }
         public VocabularyKey EngChgProductTypeName { get; private set; }
         public VocabularyKey EngChgProductOwnerId { get; private set; }
-
-
     }
 }

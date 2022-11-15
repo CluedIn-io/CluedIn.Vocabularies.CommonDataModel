@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSFreightBillMatchingAuditToleranceLevelEntityVocabulary()
         {
-            VocabularyName = "TMSFreightBillMatchingAuditToleranceLevelEntity";
+            VocabularyName = "TMS Freight Bill Matching Audit Tolerance Level Entity";
             KeyPrefix = "commonDataModel.tmsfreightbillmatchingaudittolerancelevelentity";
             KeySeparator = ".";
             Grouping = "/TMSFreightBillMatchingAuditToleranceLevelEntity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MinimumAuditTolerancePercentage = group.Add(new VocabularyKey(nameof(MinimumAuditTolerancePercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MaximumAuditToleranceAmount = group.Add(new VocabularyKey(nameof(MaximumAuditToleranceAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MaximumAuditTolerancePercentage = group.Add(new VocabularyKey(nameof(MaximumAuditTolerancePercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey UnderpaymentFreightBillReconcilliationReasonCode { get; private set; }
         public VocabularyKey ToleranceLevelId { get; private set; }
         public VocabularyKey MaximumAuditToleranceUnitType { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey MinimumAuditTolerancePercentage { get; private set; }
         public VocabularyKey MaximumAuditToleranceAmount { get; private set; }
         public VocabularyKey MaximumAuditTolerancePercentage { get; private set; }
-
-
     }
 }

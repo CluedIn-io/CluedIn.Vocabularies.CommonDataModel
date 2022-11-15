@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgWorkOrderDocumentGroupTypeEntityVocabulary()
         {
-            VocabularyName = "JmgWorkOrderDocumentGroupTypeEntity";
+            VocabularyName = "Jmg Work Order Document Group Type Entity";
             KeyPrefix = "commonDataModel.jmgworkorderdocumentgrouptypeentity";
             KeySeparator = ".";
             Grouping = "/JmgWorkOrderDocumentGroupTypeEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DocumentAttachmentTypeCode = group.Add(new VocabularyKey(nameof(DocumentAttachmentTypeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsDocumentReadingRequiredOnce = group.Add(new VocabularyKey(nameof(IsDocumentReadingRequiredOnce), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsDocumentReadingRequired = group.Add(new VocabularyKey(nameof(IsDocumentReadingRequired), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WorkOrderDocumentGroupRecId { get; private set; }
         public VocabularyKey WorkOrderDocumentGroupId { get; private set; }
         public VocabularyKey DocumentAttachmentTypeCode { get; private set; }
         public VocabularyKey IsDocumentReadingRequiredOnce { get; private set; }
         public VocabularyKey IsDocumentReadingRequired { get; private set; }
-
-
     }
 }

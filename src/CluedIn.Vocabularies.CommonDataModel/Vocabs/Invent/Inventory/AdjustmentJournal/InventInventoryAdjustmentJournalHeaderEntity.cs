@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventInventoryAdjustmentJournalHeaderEntityVocabulary()
         {
-            VocabularyName = "InventInventoryAdjustmentJournalHeaderEntity";
+            VocabularyName = "Invent Inventory Adjustment Journal Header Entity";
             KeyPrefix = "commonDataModel.inventinventoryadjustmentjournalheaderentity";
             KeySeparator = ".";
             Grouping = "/InventInventoryAdjustmentJournalHeaderEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 VoucherNumberAllocationRule = group.Add(new VocabularyKey(nameof(VoucherNumberAllocationRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VoucherNumberSequenceRecId = group.Add(new VocabularyKey(nameof(VoucherNumberSequenceRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VoucherNumberSequenceCode = group.Add(new VocabularyKey(nameof(VoucherNumberSequenceCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AreLinesDeletedAfterPosting { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey PostingDetailLevel { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey VoucherNumberAllocationRule { get; private set; }
         public VocabularyKey VoucherNumberSequenceRecId { get; private set; }
         public VocabularyKey VoucherNumberSequenceCode { get; private set; }
-
-
     }
 }

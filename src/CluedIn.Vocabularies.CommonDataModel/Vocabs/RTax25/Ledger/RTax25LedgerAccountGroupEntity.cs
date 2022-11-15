@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RTax25LedgerAccountGroupEntityVocabulary()
         {
-            VocabularyName = "RTax25LedgerAccountGroupEntity";
+            VocabularyName = "R Tax 25 Ledger Account Group Entity";
             KeyPrefix = "commonDataModel.rtax25ledgeraccountgroupentity";
             KeySeparator = ".";
             Grouping = "/RTax25LedgerAccountGroupEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DTLDisplayValue = group.Add(new VocabularyKey(nameof(DTLDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WritingOffDTADisplayValue = group.Add(new VocabularyKey(nameof(WritingOffDTADisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WritingOffDTLDisplayValue = group.Add(new VocabularyKey(nameof(WritingOffDTLDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountForFATaxes { get; private set; }
         public VocabularyKey CTA { get; private set; }
         public VocabularyKey CTL { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DTLDisplayValue { get; private set; }
         public VocabularyKey WritingOffDTADisplayValue { get; private set; }
         public VocabularyKey WritingOffDTLDisplayValue { get; private set; }
-
-
     }
 }

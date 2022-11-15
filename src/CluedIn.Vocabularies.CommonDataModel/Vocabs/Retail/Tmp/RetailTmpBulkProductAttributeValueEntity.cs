@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailTmpBulkProductAttributeValueEntityVocabulary()
         {
-            VocabularyName = "RetailTmpBulkProductAttributeValueEntity";
+            VocabularyName = "Retail Tmp Bulk Product Attribute Value Entity";
             KeyPrefix = "commonDataModel.retailtmpbulkproductattributevalueentity";
             KeySeparator = ".";
             Grouping = "/RetailTmpBulkProductAttributeValueEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RequiredAsLabel = group.Add(new VocabularyKey(nameof(RequiredAsLabel), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DataTypeAsLabel = group.Add(new VocabularyKey(nameof(DataTypeAsLabel), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TmpCatBulkAttrib = group.Add(new VocabularyKey(nameof(TmpCatBulkAttrib), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CatalogName { get; private set; }
         public VocabularyKey CatalogNumber { get; private set; }
         public VocabularyKey AttributeName { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RequiredAsLabel { get; private set; }
         public VocabularyKey DataTypeAsLabel { get; private set; }
         public VocabularyKey TmpCatBulkAttrib { get; private set; }
-
-
     }
 }

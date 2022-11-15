@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustEinvoiceIntegrationTypeEntityVocabulary()
         {
-            VocabularyName = "CustEinvoiceIntegrationTypeEntity";
+            VocabularyName = "Cust Einvoice Integration Type Entity";
             KeyPrefix = "commonDataModel.custeinvoiceintegrationtypeentity";
             KeySeparator = ".";
             Grouping = "/CustEinvoiceIntegrationTypeEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TypeId = group.Add(new VocabularyKey(nameof(TypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Name { get; private set; }
         public VocabularyKey TypeId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FiasSteadEntityVocabulary()
         {
-            VocabularyName = "FiasSteadEntity";
+            VocabularyName = "Fias Stead Entity";
             KeyPrefix = "commonDataModel.fiassteadentity";
             KeySeparator = ".";
             Grouping = "/FiasSteadEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OKATO = group.Add(new VocabularyKey(nameof(OKATO), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StartDate = group.Add(new VocabularyKey(nameof(StartDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EndDate = group.Add(new VocabularyKey(nameof(EndDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SteadId { get; private set; }
         public VocabularyKey SteadGuid { get; private set; }
         public VocabularyKey ParentGuid { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OKATO { get; private set; }
         public VocabularyKey StartDate { get; private set; }
         public VocabularyKey EndDate { get; private set; }
-
-
     }
 }

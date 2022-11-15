@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationZoneDetailEntityVocabulary()
         {
-            VocabularyName = "TMSTransportationZoneDetailEntity";
+            VocabularyName = "TMS Transportation Zone Detail Entity";
             KeyPrefix = "commonDataModel.tmstransportationzonedetailentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationZoneDetailEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 EighthField = group.Add(new VocabularyKey(nameof(EighthField), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransportationZoneId = group.Add(new VocabularyKey(nameof(TransportationZoneId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransportationZoneMasterCode = group.Add(new VocabularyKey(nameof(TransportationZoneMasterCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FirstField { get; private set; }
         public VocabularyKey SecondField { get; private set; }
         public VocabularyKey ThirdField { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey EighthField { get; private set; }
         public VocabularyKey TransportationZoneId { get; private set; }
         public VocabularyKey TransportationZoneMasterCode { get; private set; }
-
-
     }
 }

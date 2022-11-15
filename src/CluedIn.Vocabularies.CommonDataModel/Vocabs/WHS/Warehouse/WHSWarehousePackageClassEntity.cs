@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehousePackageClassEntityVocabulary()
         {
-            VocabularyName = "WHSWarehousePackageClassEntity";
+            VocabularyName = "WHS Warehouse Package Class Entity";
             KeyPrefix = "commonDataModel.whswarehousepackageclassentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehousePackageClassEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 PackageClassDescription = group.Add(new VocabularyKey(nameof(PackageClassDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PackageClassId = group.Add(new VocabularyKey(nameof(PackageClassId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PackageClassDescription { get; private set; }
         public VocabularyKey PackageClassId { get; private set; }
-
-
     }
 }

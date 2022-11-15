@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CaseDependencyEntityVocabulary()
         {
-            VocabularyName = "CaseDependencyEntity";
+            VocabularyName = "Case Dependency Entity";
             KeyPrefix = "commonDataModel.casedependencyentity";
             KeySeparator = ".";
             Grouping = "/CaseDependencyEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ParentCase = group.Add(new VocabularyKey(nameof(ParentCase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CaseId = group.Add(new VocabularyKey(nameof(CaseId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ParentCaseId = group.Add(new VocabularyKey(nameof(ParentCaseId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Case { get; private set; }
         public VocabularyKey ParentCase { get; private set; }
         public VocabularyKey CaseId { get; private set; }
         public VocabularyKey ParentCaseId { get; private set; }
-
-
     }
 }

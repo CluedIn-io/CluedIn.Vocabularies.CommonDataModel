@@ -6,26 +6,22 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AppointmentEMRSlotVocabulary()
         {
-            VocabularyName = "AppointmentEMRSlot";
+            VocabularyName = "Appointment EMR Slot";
             KeyPrefix = "commonDataModel.appointmentemrslot";
             KeySeparator = ".";
             Grouping = "/AppointmentEMRSlot";
 
             AddGroup("AppointmentEMRSlot Details", group =>
             {
-                appointmentEMRSlotId = group.Add(new VocabularyKey(nameof(appointmentEMRSlotId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                AppointmentEMRSlotId = group.Add(new VocabularyKey(nameof(AppointmentEMRSlotId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey appointmentEMRSlotId { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey AppointmentEMRSlotId { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

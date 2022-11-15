@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxImportInvoiceTaxIntegrationEntityVocabulary()
         {
-            VocabularyName = "TaxImportInvoiceTaxIntegrationEntity";
+            VocabularyName = "Tax Import Invoice Tax Integration Entity";
             KeyPrefix = "commonDataModel.taximportinvoicetaxintegrationentity";
             KeySeparator = ".";
             Grouping = "/TaxImportInvoiceTaxIntegrationEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 ExternalInvoiceId = group.Add(new VocabularyKey(nameof(ExternalInvoiceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Id = group.Add(new VocabularyKey(nameof(Id), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ExternalInvoiceId { get; private set; }
         public VocabularyKey Id { get; private set; }
-
-
     }
 }

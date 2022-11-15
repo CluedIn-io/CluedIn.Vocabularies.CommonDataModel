@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollAccrualPlanRuleEntityVocabulary()
         {
-            VocabularyName = "PayrollAccrualPlanRuleEntity";
+            VocabularyName = "Payroll Accrual Plan Rule Entity";
             KeyPrefix = "commonDataModel.payrollaccrualplanruleentity";
             KeySeparator = ".";
             Grouping = "/PayrollAccrualPlanRuleEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MaximumLimit = group.Add(new VocabularyKey(nameof(MaximumLimit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MinimumLimit = group.Add(new VocabularyKey(nameof(MinimumLimit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AccrualId = group.Add(new VocabularyKey(nameof(AccrualId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Accrual { get; private set; }
         public VocabularyKey CarryForwardLimit { get; private set; }
         public VocabularyKey EmploymentMonths { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey MaximumLimit { get; private set; }
         public VocabularyKey MinimumLimit { get; private set; }
         public VocabularyKey AccrualId { get; private set; }
-
-
     }
 }

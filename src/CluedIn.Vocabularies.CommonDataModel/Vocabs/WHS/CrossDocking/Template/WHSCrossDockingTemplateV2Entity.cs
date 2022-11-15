@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSCrossDockingTemplateV2EntityVocabulary()
         {
-            VocabularyName = "WHSCrossDockingTemplateV2Entity";
+            VocabularyName = "WHS Cross Docking Template V2 Entity";
             KeyPrefix = "commonDataModel.whscrossdockingtemplatev2entity";
             KeySeparator = ".";
             Grouping = "/WHSCrossDockingTemplateV2Entity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SequenceNumber = group.Add(new VocabularyKey(nameof(SequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CrossDockingWorkTemplateId = group.Add(new VocabularyKey(nameof(CrossDockingWorkTemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DemandReleasePolicy = group.Add(new VocabularyKey(nameof(DemandReleasePolicy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TemplateId { get; private set; }
         public VocabularyKey TemplateDescription { get; private set; }
         public VocabularyKey WarehouseId { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SequenceNumber { get; private set; }
         public VocabularyKey CrossDockingWorkTemplateId { get; private set; }
         public VocabularyKey DemandReleasePolicy { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailReturnPolicyChannelPaymentMappingEntityVocabulary()
         {
-            VocabularyName = "RetailReturnPolicyChannelPaymentMappingEntity";
+            VocabularyName = "Retail Return Policy Channel Payment Mapping Entity";
             KeyPrefix = "commonDataModel.retailreturnpolicychannelpaymentmappingentity";
             KeySeparator = ".";
             Grouping = "/RetailReturnPolicyChannelPaymentMappingEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LineNumber = group.Add(new VocabularyKey(nameof(LineNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RetailReturnPolicyChannel_PolicyName = group.Add(new VocabularyKey(nameof(RetailReturnPolicyChannel_PolicyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AllowedReturnTenderTypeId = group.Add(new VocabularyKey(nameof(AllowedReturnTenderTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RetailReturnPolicyChannel { get; private set; }
         public VocabularyKey OriginalTenderTypeId { get; private set; }
         public VocabularyKey LineNumber { get; private set; }
         public VocabularyKey RetailReturnPolicyChannel_PolicyName { get; private set; }
         public VocabularyKey AllowedReturnTenderTypeId { get; private set; }
-
-
     }
 }

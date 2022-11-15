@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FinancialDimensionDefaultTemplateEntityVocabulary()
         {
-            VocabularyName = "FinancialDimensionDefaultTemplateEntity";
+            VocabularyName = "Financial Dimension Default Template Entity";
             KeyPrefix = "commonDataModel.financialdimensiondefaulttemplateentity";
             KeySeparator = ".";
             Grouping = "/FinancialDimensionDefaultTemplateEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LineNum = group.Add(new VocabularyKey(nameof(LineNum), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DistributionPercent = group.Add(new VocabularyKey(nameof(DistributionPercent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultDimensionDisplayValue = group.Add(new VocabularyKey(nameof(DefaultDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TemplateName { get; private set; }
         public VocabularyKey LegalEntity { get; private set; }
         public VocabularyKey LegalEntityId { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LineNum { get; private set; }
         public VocabularyKey DistributionPercent { get; private set; }
         public VocabularyKey DefaultDimensionDisplayValue { get; private set; }
-
-
     }
 }

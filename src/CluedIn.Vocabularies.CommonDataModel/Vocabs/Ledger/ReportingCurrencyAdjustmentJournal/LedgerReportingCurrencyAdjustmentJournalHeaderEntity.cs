@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerReportingCurrencyAdjustmentJournalHeaderEntityVocabulary()
         {
-            VocabularyName = "LedgerReportingCurrencyAdjustmentJournalHeaderEntity";
+            VocabularyName = "Ledger Reporting Currency Adjustment Journal Header Entity";
             KeyPrefix = "commonDataModel.ledgerreportingcurrencyadjustmentjournalheaderentity";
             KeySeparator = ".";
             Grouping = "/LedgerReportingCurrencyAdjustmentJournalHeaderEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 JournalTotalDebitReportingCurrency = group.Add(new VocabularyKey(nameof(JournalTotalDebitReportingCurrency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 JournalTotalCreditReportingCurrency = group.Add(new VocabularyKey(nameof(JournalTotalCreditReportingCurrency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReportingCurrency = group.Add(new VocabularyKey(nameof(ReportingCurrency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PostingLayer { get; private set; }
         public VocabularyKey JournalName { get; private set; }
         public VocabularyKey JournalBatchNumber { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey JournalTotalDebitReportingCurrency { get; private set; }
         public VocabularyKey JournalTotalCreditReportingCurrency { get; private set; }
         public VocabularyKey ReportingCurrency { get; private set; }
-
-
     }
 }

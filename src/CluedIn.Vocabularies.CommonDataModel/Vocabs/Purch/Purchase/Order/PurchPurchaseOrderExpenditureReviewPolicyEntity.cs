@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPurchaseOrderExpenditureReviewPolicyEntityVocabulary()
         {
-            VocabularyName = "PurchPurchaseOrderExpenditureReviewPolicyEntity";
+            VocabularyName = "Purch Purchase Order Expenditure Review Policy Entity";
             KeyPrefix = "commonDataModel.purchpurchaseorderexpenditurereviewpolicyentity";
             KeySeparator = ".";
             Grouping = "/PurchPurchaseOrderExpenditureReviewPolicyEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PolicyName = group.Add(new VocabularyKey(nameof(PolicyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AreOrganizationFinancialDimensionOwnerExpenditureReviewerDisplayValue = group.Add(new VocabularyKey(nameof(AreOrganizationFinancialDimensionOwnerExpenditureReviewerDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AreProjectFinancialDimensionOwnerExpenditureReviewerDisplayValue = group.Add(new VocabularyKey(nameof(AreProjectFinancialDimensionOwnerExpenditureReviewerDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsProjectControllerExpenditureReviewer { get; private set; }
         public VocabularyKey IsProjectManagerExpenditureReviewer { get; private set; }
         public VocabularyKey IsProjectSalesManagerExpenditureReviewer { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PolicyName { get; private set; }
         public VocabularyKey AreOrganizationFinancialDimensionOwnerExpenditureReviewerDisplayValue { get; private set; }
         public VocabularyKey AreProjectFinancialDimensionOwnerExpenditureReviewerDisplayValue { get; private set; }
-
-
     }
 }

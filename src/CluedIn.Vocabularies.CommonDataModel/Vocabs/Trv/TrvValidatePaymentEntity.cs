@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvValidatePaymentEntityVocabulary()
         {
-            VocabularyName = "TrvValidatePaymentEntity";
+            VocabularyName = "Trv Validate Payment Entity";
             KeyPrefix = "commonDataModel.trvvalidatepaymententity";
             KeySeparator = ".";
             Grouping = "/TrvValidatePaymentEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 ExpenseCategory = group.Add(new VocabularyKey(nameof(ExpenseCategory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PaymentMethod = group.Add(new VocabularyKey(nameof(PaymentMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ExpenseCategory { get; private set; }
         public VocabularyKey PaymentMethod { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollWorkerAccrualAdjustmentEntityVocabulary()
         {
-            VocabularyName = "PayrollWorkerAccrualAdjustmentEntity";
+            VocabularyName = "Payroll Worker Accrual Adjustment Entity";
             KeyPrefix = "commonDataModel.payrollworkeraccrualadjustmententity";
             KeySeparator = ".";
             Grouping = "/PayrollWorkerAccrualAdjustmentEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SequenceNumber = group.Add(new VocabularyKey(nameof(SequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LegalEntityId = group.Add(new VocabularyKey(nameof(LegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EnrolledAccrualLegalEntityId = group.Add(new VocabularyKey(nameof(EnrolledAccrualLegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AdjustedHours { get; private set; }
         public VocabularyKey AdjustmentType { get; private set; }
         public VocabularyKey Description { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SequenceNumber { get; private set; }
         public VocabularyKey LegalEntityId { get; private set; }
         public VocabularyKey EnrolledAccrualLegalEntityId { get; private set; }
-
-
     }
 }

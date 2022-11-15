@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvProjectExpensePolicyEntityVocabulary()
         {
-            VocabularyName = "TrvProjectExpensePolicyEntity";
+            VocabularyName = "Trv Project Expense Policy Entity";
             KeyPrefix = "commonDataModel.trvprojectexpensepolicyentity";
             KeySeparator = ".";
             Grouping = "/TrvProjectExpensePolicyEntity";
@@ -31,10 +31,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 StartDate = group.Add(new VocabularyKey(nameof(StartDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Worker = group.Add(new VocabularyKey(nameof(Worker), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PersonnelNumber = group.Add(new VocabularyKey(nameof(PersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AllowableAmount { get; private set; }
         public VocabularyKey City { get; private set; }
         public VocabularyKey ExpenseCategory { get; private set; }
@@ -53,7 +51,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey StartDate { get; private set; }
         public VocabularyKey Worker { get; private set; }
         public VocabularyKey PersonnelNumber { get; private set; }
-
-
     }
 }

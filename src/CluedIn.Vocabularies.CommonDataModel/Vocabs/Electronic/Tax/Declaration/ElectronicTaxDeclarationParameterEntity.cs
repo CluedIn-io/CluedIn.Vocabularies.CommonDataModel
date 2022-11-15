@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ElectronicTaxDeclarationParameterEntityVocabulary()
         {
-            VocabularyName = "ElectronicTaxDeclarationParameterEntity";
+            VocabularyName = "Electronic Tax Declaration Parameter Entity";
             KeyPrefix = "commonDataModel.electronictaxdeclarationparameterentity";
             KeySeparator = ".";
             Grouping = "/ElectronicTaxDeclarationParameterEntity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DigipoortStatusURL = group.Add(new VocabularyKey(nameof(DigipoortStatusURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AuthorizationAddress = group.Add(new VocabularyKey(nameof(AuthorizationAddress), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Company = group.Add(new VocabularyKey(nameof(Company), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TimeOut { get; private set; }
         public VocabularyKey ContactId { get; private set; }
         public VocabularyKey Name { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DigipoortStatusURL { get; private set; }
         public VocabularyKey AuthorizationAddress { get; private set; }
         public VocabularyKey Company { get; private set; }
-
-
     }
 }

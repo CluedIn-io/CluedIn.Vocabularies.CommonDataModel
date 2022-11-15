@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventItemBatchEntityVocabulary()
         {
-            VocabularyName = "InventItemBatchEntity";
+            VocabularyName = "Invent Item Batch Entity";
             KeyPrefix = "commonDataModel.inventitembatchentity";
             KeySeparator = ".";
             Grouping = "/InventItemBatchEntity";
@@ -32,10 +32,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 VendorBatchNumber = group.Add(new VocabularyKey(nameof(VendorBatchNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorExpirationDate = group.Add(new VocabularyKey(nameof(VendorExpirationDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ManufacturingDate = group.Add(new VocabularyKey(nameof(ManufacturingDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BatchDescription { get; private set; }
         public VocabularyKey BatchExpirationDate { get; private set; }
         public VocabularyKey BatchNumber { get; private set; }
@@ -55,7 +53,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey VendorBatchNumber { get; private set; }
         public VocabularyKey VendorExpirationDate { get; private set; }
         public VocabularyKey ManufacturingDate { get; private set; }
-
-
     }
 }

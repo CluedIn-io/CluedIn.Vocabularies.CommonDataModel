@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProcurementProductCategoryItemSalesTaxGroupAssignmentEntityVocabulary()
         {
-            VocabularyName = "ProcurementProductCategoryItemSalesTaxGroupAssignmentEntity";
+            VocabularyName = "Procurement Product Category Item Sales Tax Group Assignment Entity";
             KeyPrefix = "commonDataModel.procurementproductcategoryitemsalestaxgroupassignmententity";
             KeySeparator = ".";
             Grouping = "/ProcurementProductCategoryItemSalesTaxGroupAssignmentEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductSalesTaxGroupId = group.Add(new VocabularyKey(nameof(ProductSalesTaxGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsPurchasingCalculatingWithholdingTax = group.Add(new VocabularyKey(nameof(IsPurchasingCalculatingWithholdingTax), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ItemWithholdingTaxPurchaseGroupCode = group.Add(new VocabularyKey(nameof(ItemWithholdingTaxPurchaseGroupCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductCategoryHierarchyName { get; private set; }
         public VocabularyKey ProductCategoryName { get; private set; }
         public VocabularyKey ProductSalesTaxGroupLegalEntityId { get; private set; }
         public VocabularyKey ProductSalesTaxGroupId { get; private set; }
         public VocabularyKey IsPurchasingCalculatingWithholdingTax { get; private set; }
         public VocabularyKey ItemWithholdingTaxPurchaseGroupCode { get; private set; }
-
-
     }
 }

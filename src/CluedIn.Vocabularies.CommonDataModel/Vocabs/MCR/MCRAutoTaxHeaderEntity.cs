@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRAutoTaxHeaderEntityVocabulary()
         {
-            VocabularyName = "MCRAutoTaxHeaderEntity";
+            VocabularyName = "MCR Auto Tax Header Entity";
             KeyPrefix = "commonDataModel.mcrautotaxheaderentity";
             KeySeparator = ".";
             Grouping = "/MCRAutoTaxHeaderEntity";
@@ -14,12 +14,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             AddGroup("MCRAutoTaxHeaderEntity Details", group =>
             {
                 Warnings = group.Add(new VocabularyKey(nameof(Warnings), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Warnings { get; private set; }
-
-
     }
 }

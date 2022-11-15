@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchaseTotalDiscountAgreementEntityVocabulary()
         {
-            VocabularyName = "PurchaseTotalDiscountAgreementEntity";
+            VocabularyName = "Purchase Total Discount Agreement Entity";
             KeyPrefix = "commonDataModel.purchasetotaldiscountagreemententity";
             KeySeparator = ".";
             Grouping = "/PurchaseTotalDiscountAgreementEntity";
@@ -18,7 +18,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DiscountAmount = group.Add(new VocabularyKey(nameof(DiscountAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DiscountCurrencyCode = group.Add(new VocabularyKey(nameof(DiscountCurrencyCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DiscountApplicableFromDate = group.Add(new VocabularyKey(nameof(DiscountApplicableFromDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                inventDimId = group.Add(new VocabularyKey(nameof(inventDimId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InventDimId = group.Add(new VocabularyKey(nameof(InventDimId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ItemCode = group.Add(new VocabularyKey(nameof(ItemCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ItemRelation = group.Add(new VocabularyKey(nameof(ItemRelation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DiscountPercentage1 = group.Add(new VocabularyKey(nameof(DiscountPercentage1), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
@@ -30,16 +30,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RecordId = group.Add(new VocabularyKey(nameof(RecordId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorAccountNumber = group.Add(new VocabularyKey(nameof(VendorAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TotalDiscountVendorGroupCode = group.Add(new VocabularyKey(nameof(TotalDiscountVendorGroupCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountCode { get; private set; }
         public VocabularyKey AccountRelation { get; private set; }
         public VocabularyKey DiscountAmount { get; private set; }
         public VocabularyKey DiscountCurrencyCode { get; private set; }
         public VocabularyKey DiscountApplicableFromDate { get; private set; }
-        public VocabularyKey inventDimId { get; private set; }
+        public VocabularyKey InventDimId { get; private set; }
         public VocabularyKey ItemCode { get; private set; }
         public VocabularyKey ItemRelation { get; private set; }
         public VocabularyKey DiscountPercentage1 { get; private set; }
@@ -51,7 +49,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RecordId { get; private set; }
         public VocabularyKey VendorAccountNumber { get; private set; }
         public VocabularyKey TotalDiscountVendorGroupCode { get; private set; }
-
-
     }
 }

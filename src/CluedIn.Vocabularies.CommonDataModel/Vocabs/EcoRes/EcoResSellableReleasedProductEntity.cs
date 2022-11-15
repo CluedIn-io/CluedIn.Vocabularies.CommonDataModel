@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResSellableReleasedProductEntityVocabulary()
         {
-            VocabularyName = "EcoResSellableReleasedProductEntity";
+            VocabularyName = "Eco Res Sellable Released Product Entity";
             KeyPrefix = "commonDataModel.ecoressellablereleasedproductentity";
             KeySeparator = ".";
             Grouping = "/EcoResSellableReleasedProductEntity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FieldServiceProductType = group.Add(new VocabularyKey(nameof(FieldServiceProductType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InventoryUnitDecimalPrecision = group.Add(new VocabularyKey(nameof(InventoryUnitDecimalPrecision), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InventoryUnitSymbol = group.Add(new VocabularyKey(nameof(InventoryUnitSymbol), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductNumber { get; private set; }
         public VocabularyKey SalesUnitSymbol { get; private set; }
         public VocabularyKey SalesUnitDecimalPrecision { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FieldServiceProductType { get; private set; }
         public VocabularyKey InventoryUnitDecimalPrecision { get; private set; }
         public VocabularyKey InventoryUnitSymbol { get; private set; }
-
-
     }
 }

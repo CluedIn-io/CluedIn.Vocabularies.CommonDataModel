@@ -6,42 +6,38 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MarketingEmailDynamicContentMetadataVocabulary()
         {
-            VocabularyName = "MarketingEmailDynamicContentMetadata";
+            VocabularyName = "Marketing Email Dynamic Content Metadata";
             KeyPrefix = "commonDataModel.marketingemaildynamiccontentmetadata";
             KeySeparator = ".";
             Grouping = "/MarketingEmailDynamicContentMetadata";
 
             AddGroup("MarketingEmailDynamicContentMetadata Details", group =>
             {
-                fields = group.Add(new VocabularyKey(nameof(fields), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                isContextEntity = group.Add(new VocabularyKey(nameof(isContextEntity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                displayName = group.Add(new VocabularyKey(nameof(displayName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                itemType = group.Add(new VocabularyKey(nameof(itemType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                marketingEmailDynamicContentMetadataId = group.Add(new VocabularyKey(nameof(marketingEmailDynamicContentMetadataId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                syntax = group.Add(new VocabularyKey(nameof(syntax), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdName = group.Add(new VocabularyKey(nameof(ownerIdName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdType = group.Add(new VocabularyKey(nameof(ownerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdYomiName = group.Add(new VocabularyKey(nameof(ownerIdYomiName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                Fields = group.Add(new VocabularyKey(nameof(Fields), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsContextEntity = group.Add(new VocabularyKey(nameof(IsContextEntity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DisplayName = group.Add(new VocabularyKey(nameof(DisplayName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ItemType = group.Add(new VocabularyKey(nameof(ItemType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MarketingEmailDynamicContentMetadataId = group.Add(new VocabularyKey(nameof(MarketingEmailDynamicContentMetadataId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Syntax = group.Add(new VocabularyKey(nameof(Syntax), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdName = group.Add(new VocabularyKey(nameof(OwnerIdName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdType = group.Add(new VocabularyKey(nameof(OwnerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdYomiName = group.Add(new VocabularyKey(nameof(OwnerIdYomiName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey fields { get; private set; }
-        public VocabularyKey isContextEntity { get; private set; }
-        public VocabularyKey displayName { get; private set; }
-        public VocabularyKey itemType { get; private set; }
-        public VocabularyKey marketingEmailDynamicContentMetadataId { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey syntax { get; private set; }
-        public VocabularyKey ownerIdName { get; private set; }
-        public VocabularyKey ownerIdType { get; private set; }
-        public VocabularyKey ownerIdYomiName { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey Fields { get; private set; }
+        public VocabularyKey IsContextEntity { get; private set; }
+        public VocabularyKey DisplayName { get; private set; }
+        public VocabularyKey ItemType { get; private set; }
+        public VocabularyKey MarketingEmailDynamicContentMetadataId { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey Syntax { get; private set; }
+        public VocabularyKey OwnerIdName { get; private set; }
+        public VocabularyKey OwnerIdType { get; private set; }
+        public VocabularyKey OwnerIdYomiName { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

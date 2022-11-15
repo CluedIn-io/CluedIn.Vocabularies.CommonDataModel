@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchBookVATProcessParametersEntityVocabulary()
         {
-            VocabularyName = "PurchBookVATProcessParametersEntity";
+            VocabularyName = "Purch Book VAT Process Parameters Entity";
             KeyPrefix = "commonDataModel.purchbookvatprocessparametersentity";
             KeySeparator = ".";
             Grouping = "/PurchBookVATProcessParametersEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OperationType = group.Add(new VocabularyKey(nameof(OperationType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FacturePostProcessVAT = group.Add(new VocabularyKey(nameof(FacturePostProcessVAT), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FactureOperationTypeCode = group.Add(new VocabularyKey(nameof(FactureOperationTypeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Dimension { get; private set; }
         public VocabularyKey DefaultDimensionEnabled { get; private set; }
         public VocabularyKey Description { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OperationType { get; private set; }
         public VocabularyKey FacturePostProcessVAT { get; private set; }
         public VocabularyKey FactureOperationTypeCode { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxVATReportDateCodeEntityVocabulary()
         {
-            VocabularyName = "TaxVATReportDateCodeEntity";
+            VocabularyName = "Tax VAT Report Date Code Entity";
             KeyPrefix = "commonDataModel.taxvatreportdatecodeentity";
             KeySeparator = ".";
             Grouping = "/TaxVATReportDateCodeEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CountedFrom = group.Add(new VocabularyKey(nameof(CountedFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PartialSettlement = group.Add(new VocabularyKey(nameof(PartialSettlement), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VatDateIsPaymentDate = group.Add(new VocabularyKey(nameof(VatDateIsPaymentDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey VATReportDateCode { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey IncludeInVATReport { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CountedFrom { get; private set; }
         public VocabularyKey PartialSettlement { get; private set; }
         public VocabularyKey VatDateIsPaymentDate { get; private set; }
-
-
     }
 }

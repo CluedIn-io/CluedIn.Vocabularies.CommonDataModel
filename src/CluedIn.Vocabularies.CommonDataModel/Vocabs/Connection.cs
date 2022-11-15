@@ -13,11 +13,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Connection Details", group =>
             {
-
             });
         }
-
-
-
     }
 }

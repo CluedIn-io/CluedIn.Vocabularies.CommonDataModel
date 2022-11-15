@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchRequestForQuotationReplyStatusEntityVocabulary()
         {
-            VocabularyName = "PurchRequestForQuotationReplyStatusEntity";
+            VocabularyName = "Purch Request For Quotation Reply Status Entity";
             KeyPrefix = "commonDataModel.purchrequestforquotationreplystatusentity";
             KeySeparator = ".";
             Grouping = "/PurchRequestForQuotationReplyStatusEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StatusDescription = group.Add(new VocabularyKey(nameof(StatusDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey StatusDescription { get; private set; }
-
-
     }
 }

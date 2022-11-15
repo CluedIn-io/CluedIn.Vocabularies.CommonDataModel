@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailRecoListEntityVocabulary()
         {
-            VocabularyName = "RetailRecoListEntity";
+            VocabularyName = "Retail Reco List Entity";
             KeyPrefix = "commonDataModel.retailrecolistentity";
             KeySeparator = ".";
             Grouping = "/RetailRecoListEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ListType = group.Add(new VocabularyKey(nameof(ListType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ListTitle = group.Add(new VocabularyKey(nameof(ListTitle), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LastModifiedDateTime = group.Add(new VocabularyKey(nameof(LastModifiedDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ListId { get; private set; }
         public VocabularyKey ListType { get; private set; }
         public VocabularyKey ListTitle { get; private set; }
         public VocabularyKey LastModifiedDateTime { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendInvoiceRegisterLineV2EntityVocabulary()
         {
-            VocabularyName = "VendInvoiceRegisterLineV2Entity";
+            VocabularyName = "Vend Invoice Register Line V2 Entity";
             KeyPrefix = "commonDataModel.vendinvoiceregisterlinev2entity";
             KeySeparator = ".";
             Grouping = "/VendInvoiceRegisterLineV2Entity";
@@ -77,10 +77,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RemittanceAddressValidFrom = group.Add(new VocabularyKey(nameof(RemittanceAddressValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FullPrimaryRemittanceAddress = group.Add(new VocabularyKey(nameof(FullPrimaryRemittanceAddress), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RemittanceAddressLocationId = group.Add(new VocabularyKey(nameof(RemittanceAddressLocationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Company { get; private set; }
         public VocabularyKey AccountType { get; private set; }
         public VocabularyKey Credit { get; private set; }
@@ -145,7 +143,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RemittanceAddressValidFrom { get; private set; }
         public VocabularyKey FullPrimaryRemittanceAddress { get; private set; }
         public VocabularyKey RemittanceAddressLocationId { get; private set; }
-
-
     }
 }

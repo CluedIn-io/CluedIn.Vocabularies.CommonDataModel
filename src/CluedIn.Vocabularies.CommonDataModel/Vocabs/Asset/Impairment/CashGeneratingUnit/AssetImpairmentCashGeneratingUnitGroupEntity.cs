@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetImpairmentCashGeneratingUnitGroupEntityVocabulary()
         {
-            VocabularyName = "AssetImpairmentCashGeneratingUnitGroupEntity";
+            VocabularyName = "Asset Impairment Cash Generating Unit Group Entity";
             KeyPrefix = "commonDataModel.assetimpairmentcashgeneratingunitgroupentity";
             KeySeparator = ".";
             Grouping = "/AssetImpairmentCashGeneratingUnitGroupEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProrationMethod = group.Add(new VocabularyKey(nameof(ProrationMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ImpairmentMethod = group.Add(new VocabularyKey(nameof(ImpairmentMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SharedAssetHasHigherPriority = group.Add(new VocabularyKey(nameof(SharedAssetHasHigherPriority), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CGUGroup { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey Status { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProrationMethod { get; private set; }
         public VocabularyKey ImpairmentMethod { get; private set; }
         public VocabularyKey SharedAssetHasHigherPriority { get; private set; }
-
-
     }
 }

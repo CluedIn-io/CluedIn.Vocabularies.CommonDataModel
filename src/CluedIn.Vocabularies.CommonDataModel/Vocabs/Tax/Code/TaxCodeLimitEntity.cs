@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxCodeLimitEntityVocabulary()
         {
-            VocabularyName = "TaxCodeLimitEntity";
+            VocabularyName = "Tax Code Limit Entity";
             KeyPrefix = "commonDataModel.taxcodelimitentity";
             KeySeparator = ".";
             Grouping = "/TaxCodeLimitEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MaximumSalesTax = group.Add(new VocabularyKey(nameof(MaximumSalesTax), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MinimumSalesTax = group.Add(new VocabularyKey(nameof(MinimumSalesTax), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ToDate = group.Add(new VocabularyKey(nameof(ToDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TaxCodeId { get; private set; }
         public VocabularyKey FromDate { get; private set; }
         public VocabularyKey MaximumSalesTax { get; private set; }
         public VocabularyKey MinimumSalesTax { get; private set; }
         public VocabularyKey ToDate { get; private set; }
-
-
     }
 }

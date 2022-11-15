@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendPaymFeeBankRuleEntityVocabulary()
         {
-            VocabularyName = "VendPaymFeeBankRuleEntity";
+            VocabularyName = "Vend Paym Fee Bank Rule Entity";
             KeyPrefix = "commonDataModel.vendpaymfeebankruleentity";
             KeySeparator = ".";
             Grouping = "/VendPaymFeeBankRuleEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CompanyTableId = group.Add(new VocabularyKey(nameof(CompanyTableId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CustVendFieldId = group.Add(new VocabularyKey(nameof(CustVendFieldId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CustVendTableId = group.Add(new VocabularyKey(nameof(CustVendTableId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ID { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey LineId { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CompanyTableId { get; private set; }
         public VocabularyKey CustVendFieldId { get; private set; }
         public VocabularyKey CustVendTableId { get; private set; }
-
-
     }
 }

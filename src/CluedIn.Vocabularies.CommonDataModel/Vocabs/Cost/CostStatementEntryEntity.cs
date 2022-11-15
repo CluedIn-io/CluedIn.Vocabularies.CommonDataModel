@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CostStatementEntryEntityVocabulary()
         {
-            VocabularyName = "CostStatementEntryEntity";
+            VocabularyName = "Cost Statement Entry Entity";
             KeyPrefix = "commonDataModel.coststatemententryentity";
             KeySeparator = ".";
             Grouping = "/CostStatementEntryEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OperationalSiteId = group.Add(new VocabularyKey(nameof(OperationalSiteId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductSizeId = group.Add(new VocabularyKey(nameof(ProductSizeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductStyleId = group.Add(new VocabularyKey(nameof(ProductStyleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountingDate { get; private set; }
         public VocabularyKey CostAmount { get; private set; }
         public VocabularyKey CostResourceId { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OperationalSiteId { get; private set; }
         public VocabularyKey ProductSizeId { get; private set; }
         public VocabularyKey ProductStyleId { get; private set; }
-
-
     }
 }

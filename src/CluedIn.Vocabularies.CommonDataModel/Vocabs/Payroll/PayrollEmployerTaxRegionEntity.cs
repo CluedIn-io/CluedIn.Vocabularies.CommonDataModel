@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollEmployerTaxRegionEntityVocabulary()
         {
-            VocabularyName = "PayrollEmployerTaxRegionEntity";
+            VocabularyName = "Payroll Employer Tax Region Entity";
             KeyPrefix = "commonDataModel.payrollemployertaxregionentity";
             KeySeparator = ".";
             Grouping = "/PayrollEmployerTaxRegionEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 State = group.Add(new VocabularyKey(nameof(State), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CountryRegion = group.Add(new VocabularyKey(nameof(CountryRegion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LegalEntity = group.Add(new VocabularyKey(nameof(LegalEntity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsActive { get; private set; }
         public VocabularyKey LegalEntityId { get; private set; }
         public VocabularyKey StateId { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey State { get; private set; }
         public VocabularyKey CountryRegion { get; private set; }
         public VocabularyKey LegalEntity { get; private set; }
-
-
     }
 }

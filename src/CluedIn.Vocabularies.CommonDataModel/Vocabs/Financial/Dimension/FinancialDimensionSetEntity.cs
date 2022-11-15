@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FinancialDimensionSetEntityVocabulary()
         {
-            VocabularyName = "FinancialDimensionSetEntity";
+            VocabularyName = "Financial Dimension Set Entity";
             KeyPrefix = "commonDataModel.financialdimensionsetentity";
             KeySeparator = ".";
             Grouping = "/FinancialDimensionSetEntity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SegmentName10 = group.Add(new VocabularyKey(nameof(SegmentName10), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SegmentName11 = group.Add(new VocabularyKey(nameof(SegmentName11), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FocusState = group.Add(new VocabularyKey(nameof(FocusState), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Name { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey SegmentName01 { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SegmentName10 { get; private set; }
         public VocabularyKey SegmentName11 { get; private set; }
         public VocabularyKey FocusState { get; private set; }
-
-
     }
 }

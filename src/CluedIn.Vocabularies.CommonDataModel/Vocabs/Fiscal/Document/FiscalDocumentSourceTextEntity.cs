@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FiscalDocumentSourceTextEntityVocabulary()
         {
-            VocabularyName = "FiscalDocumentSourceTextEntity";
+            VocabularyName = "Fiscal Document Source Text Entity";
             KeyPrefix = "commonDataModel.fiscaldocumentsourcetextentity";
             KeySeparator = ".";
             Grouping = "/FiscalDocumentSourceTextEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Text = group.Add(new VocabularyKey(nameof(Text), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Restriction = group.Add(new VocabularyKey(nameof(Restriction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FiscalDocumentText = group.Add(new VocabularyKey(nameof(FiscalDocumentText), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FiscalInformation { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey Text { get; private set; }
         public VocabularyKey Restriction { get; private set; }
         public VocabularyKey FiscalDocumentText { get; private set; }
-
-
     }
 }

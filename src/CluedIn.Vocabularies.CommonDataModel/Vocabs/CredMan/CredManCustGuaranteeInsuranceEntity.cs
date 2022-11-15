@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CredManCustGuaranteeInsuranceEntityVocabulary()
         {
-            VocabularyName = "CredManCustGuaranteeInsuranceEntity";
+            VocabularyName = "Cred Man Cust Guarantee Insurance Entity";
             KeyPrefix = "commonDataModel.credmancustguaranteeinsuranceentity";
             KeySeparator = ".";
             Grouping = "/CredManCustGuaranteeInsuranceEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CurrencyCode = group.Add(new VocabularyKey(nameof(CurrencyCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IncreaseCreditLimitPercent = group.Add(new VocabularyKey(nameof(IncreaseCreditLimitPercent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IncludeInExposure = group.Add(new VocabularyKey(nameof(IncludeInExposure), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CustAccount { get; private set; }
         public VocabularyKey GuaranteeInsurance { get; private set; }
         public VocabularyKey GuaranteeInsuranceType { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CurrencyCode { get; private set; }
         public VocabularyKey IncreaseCreditLimitPercent { get; private set; }
         public VocabularyKey IncludeInExposure { get; private set; }
-
-
     }
 }

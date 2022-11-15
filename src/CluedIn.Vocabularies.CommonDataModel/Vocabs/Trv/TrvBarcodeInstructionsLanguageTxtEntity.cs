@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvBarcodeInstructionsLanguageTxtEntityVocabulary()
         {
-            VocabularyName = "TrvBarcodeInstructionsLanguageTxtEntity";
+            VocabularyName = "Trv Barcode Instructions Language Txt Entity";
             KeyPrefix = "commonDataModel.trvbarcodeinstructionslanguagetxtentity";
             KeySeparator = ".";
             Grouping = "/TrvBarcodeInstructionsLanguageTxtEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 Language = group.Add(new VocabularyKey(nameof(Language), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Text = group.Add(new VocabularyKey(nameof(Text), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Language { get; private set; }
         public VocabularyKey Text { get; private set; }
-
-
     }
 }

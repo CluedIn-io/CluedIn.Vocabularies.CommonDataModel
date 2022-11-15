@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EFDocAuthorityWebserviceEntityVocabulary()
         {
-            VocabularyName = "EFDocAuthorityWebserviceEntity";
+            VocabularyName = "EF Doc Authority Webservice Entity";
             KeyPrefix = "commonDataModel.efdocauthoritywebserviceentity";
             KeySeparator = ".";
             Grouping = "/EFDocAuthorityWebserviceEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Url = group.Add(new VocabularyKey(nameof(Url), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Version = group.Add(new VocabularyKey(nameof(Version), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WebServiceType = group.Add(new VocabularyKey(nameof(WebServiceType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Authority { get; private set; }
         public VocabularyKey EnvironmentType { get; private set; }
         public VocabularyKey Url { get; private set; }
         public VocabularyKey Version { get; private set; }
         public VocabularyKey WebServiceType { get; private set; }
-
-
     }
 }

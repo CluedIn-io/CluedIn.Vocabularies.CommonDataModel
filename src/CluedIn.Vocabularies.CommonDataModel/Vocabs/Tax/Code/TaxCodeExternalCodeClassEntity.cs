@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxCodeExternalCodeClassEntityVocabulary()
         {
-            VocabularyName = "TaxCodeExternalCodeClassEntity";
+            VocabularyName = "Tax Code External Code Class Entity";
             KeyPrefix = "commonDataModel.taxcodeexternalcodeclassentity";
             KeySeparator = ".";
             Grouping = "/TaxCodeExternalCodeClassEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CodeClassId = group.Add(new VocabularyKey(nameof(CodeClassId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CodeClassTableId = group.Add(new VocabularyKey(nameof(CodeClassTableId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsStandardizedCode = group.Add(new VocabularyKey(nameof(IsStandardizedCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CodeClassDefinition { get; private set; }
         public VocabularyKey CodeClassDescription { get; private set; }
         public VocabularyKey CodeClassId { get; private set; }
         public VocabularyKey CodeClassTableId { get; private set; }
         public VocabularyKey IsStandardizedCode { get; private set; }
-
-
     }
 }

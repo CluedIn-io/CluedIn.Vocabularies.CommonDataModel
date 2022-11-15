@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollTaxCodeDefaultDimensionEntityVocabulary()
         {
-            VocabularyName = "PayrollTaxCodeDefaultDimensionEntity";
+            VocabularyName = "Payroll Tax Code Default Dimension Entity";
             KeyPrefix = "commonDataModel.payrolltaxcodedefaultdimensionentity";
             KeySeparator = ".";
             Grouping = "/PayrollTaxCodeDefaultDimensionEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 VendorLegalEntityId = group.Add(new VocabularyKey(nameof(VendorLegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProjectCategoryId = group.Add(new VocabularyKey(nameof(ProjectCategoryId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProjectCategoryLegalEntityId = group.Add(new VocabularyKey(nameof(ProjectCategoryLegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TaxCodeId { get; private set; }
         public VocabularyKey TaxCodeCountryRegionId { get; private set; }
         public VocabularyKey LegalEntityId { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey VendorLegalEntityId { get; private set; }
         public VocabularyKey ProjectCategoryId { get; private set; }
         public VocabularyKey ProjectCategoryLegalEntityId { get; private set; }
-
-
     }
 }

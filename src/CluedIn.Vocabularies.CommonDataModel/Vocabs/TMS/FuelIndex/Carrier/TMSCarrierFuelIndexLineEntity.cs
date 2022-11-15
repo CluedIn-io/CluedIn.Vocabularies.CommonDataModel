@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSCarrierFuelIndexLineEntityVocabulary()
         {
-            VocabularyName = "TMSCarrierFuelIndexLineEntity";
+            VocabularyName = "TMS Carrier Fuel Index Line Entity";
             KeyPrefix = "commonDataModel.tmscarrierfuelindexlineentity";
             KeySeparator = ".";
             Grouping = "/TMSCarrierFuelIndexLineEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PriceCurrencyCode = group.Add(new VocabularyKey(nameof(PriceCurrencyCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AccessorialUnitPercentage = group.Add(new VocabularyKey(nameof(AccessorialUnitPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FreightSurchargeFlatRate = group.Add(new VocabularyKey(nameof(FreightSurchargeFlatRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CarrierFuelIndexCode { get; private set; }
         public VocabularyKey EffectiveDateTime { get; private set; }
         public VocabularyKey FromGallonPrice { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PriceCurrencyCode { get; private set; }
         public VocabularyKey AccessorialUnitPercentage { get; private set; }
         public VocabularyKey FreightSurchargeFlatRate { get; private set; }
-
-
     }
 }

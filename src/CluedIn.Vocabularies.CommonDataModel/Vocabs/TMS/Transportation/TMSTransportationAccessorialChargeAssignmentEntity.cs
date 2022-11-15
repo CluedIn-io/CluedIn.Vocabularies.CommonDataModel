@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationAccessorialChargeAssignmentEntityVocabulary()
         {
-            VocabularyName = "TMSTransportationAccessorialChargeAssignmentEntity";
+            VocabularyName = "TMS Transportation Accessorial Charge Assignment Entity";
             KeyPrefix = "commonDataModel.tmstransportationaccessorialchargeassignmententity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationAccessorialChargeAssignmentEntity";
@@ -52,10 +52,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MinimumFreightWeightCriterion = group.Add(new VocabularyKey(nameof(MinimumFreightWeightCriterion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransportationZoneIdCriterion = group.Add(new VocabularyKey(nameof(TransportationZoneIdCriterion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransportationZoneMasterCodeCriterion = group.Add(new VocabularyKey(nameof(TransportationZoneMasterCodeCriterion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ChargeAssignmentLevel { get; private set; }
         public VocabularyKey WillChargeCalculationIncludeTransportationDiscounts { get; private set; }
         public VocabularyKey AreChargeAssignmentCriteriaIgnored { get; private set; }
@@ -95,7 +93,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey MinimumFreightWeightCriterion { get; private set; }
         public VocabularyKey TransportationZoneIdCriterion { get; private set; }
         public VocabularyKey TransportationZoneMasterCodeCriterion { get; private set; }
-
-
     }
 }

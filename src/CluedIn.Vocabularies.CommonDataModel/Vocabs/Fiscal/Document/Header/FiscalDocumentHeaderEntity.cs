@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FiscalDocumentHeaderEntityVocabulary()
         {
-            VocabularyName = "FiscalDocumentHeaderEntity";
+            VocabularyName = "Fiscal Document Header Entity";
             KeyPrefix = "commonDataModel.fiscaldocumentheaderentity";
             KeySeparator = ".";
             Grouping = "/FiscalDocumentHeaderEntity";
@@ -119,10 +119,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PaymentAmount = group.Add(new VocabularyKey(nameof(PaymentAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PaymentDueDate = group.Add(new VocabularyKey(nameof(PaymentDueDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Voucher = group.Add(new VocabularyKey(nameof(Voucher), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FiscalDocumentNumber { get; private set; }
         public VocabularyKey Series { get; private set; }
         public VocabularyKey AccessKey { get; private set; }
@@ -229,7 +227,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PaymentAmount { get; private set; }
         public VocabularyKey PaymentDueDate { get; private set; }
         public VocabularyKey Voucher { get; private set; }
-
-
     }
 }

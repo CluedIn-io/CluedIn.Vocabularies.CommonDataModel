@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankStatementDocumentEntityVocabulary()
         {
-            VocabularyName = "BankStatementDocumentEntity";
+            VocabularyName = "Bank Statement Document Entity";
             KeyPrefix = "commonDataModel.bankstatementdocumententity";
             KeySeparator = ".";
             Grouping = "/BankStatementDocumentEntity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BankStatementDocumentRecId = group.Add(new VocabularyKey(nameof(BankStatementDocumentRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SenderName = group.Add(new VocabularyKey(nameof(SenderName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SenderId = group.Add(new VocabularyKey(nameof(SenderId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FormatName { get; private set; }
         public VocabularyKey FormatVersion { get; private set; }
         public VocabularyKey GroupHeader { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey BankStatementDocumentRecId { get; private set; }
         public VocabularyKey SenderName { get; private set; }
         public VocabularyKey SenderId { get; private set; }
-
-
     }
 }

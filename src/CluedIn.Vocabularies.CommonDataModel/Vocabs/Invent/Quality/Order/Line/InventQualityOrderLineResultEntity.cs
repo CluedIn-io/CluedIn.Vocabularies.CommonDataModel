@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventQualityOrderLineResultEntityVocabulary()
         {
-            VocabularyName = "InventQualityOrderLineResultEntity";
+            VocabularyName = "Invent Quality Order Line Result Entity";
             KeyPrefix = "commonDataModel.inventqualityorderlineresultentity";
             KeySeparator = ".";
             Grouping = "/InventQualityOrderLineResultEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 QualityTestVariableOutcomeId = group.Add(new VocabularyKey(nameof(QualityTestVariableOutcomeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ResultValue = group.Add(new VocabularyKey(nameof(ResultValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 QualityOrderSequenceNumber = group.Add(new VocabularyKey(nameof(QualityOrderSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsTestValidationIncludingResult { get; private set; }
         public VocabularyKey ResultLineNumber { get; private set; }
         public VocabularyKey ResultCatchWeightQuantity { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey QualityTestVariableOutcomeId { get; private set; }
         public VocabularyKey ResultValue { get; private set; }
         public VocabularyKey QualityOrderSequenceNumber { get; private set; }
-
-
     }
 }

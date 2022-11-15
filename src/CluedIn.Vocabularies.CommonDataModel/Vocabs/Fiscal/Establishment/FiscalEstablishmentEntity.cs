@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FiscalEstablishmentEntityVocabulary()
         {
-            VocabularyName = "FiscalEstablishmentEntity";
+            VocabularyName = "Fiscal Establishment Entity";
             KeyPrefix = "commonDataModel.fiscalestablishmententity";
             KeySeparator = ".";
             Grouping = "/FiscalEstablishmentEntity";
@@ -58,10 +58,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FiscalEstablishmentSalesIssuerId = group.Add(new VocabularyKey(nameof(FiscalEstablishmentSalesIssuerId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EFDocNFe402018005v110 = group.Add(new VocabularyKey(nameof(EFDocNFe402018005v110), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EFDocNFeTechNotes = group.Add(new VocabularyKey(nameof(EFDocNFeTechNotes), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Accountant { get; private set; }
         public VocabularyKey CCM { get; private set; }
         public VocabularyKey CNPJ { get; private set; }
@@ -107,7 +105,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FiscalEstablishmentSalesIssuerId { get; private set; }
         public VocabularyKey EFDocNFe402018005v110 { get; private set; }
         public VocabularyKey EFDocNFeTechNotes { get; private set; }
-
-
     }
 }

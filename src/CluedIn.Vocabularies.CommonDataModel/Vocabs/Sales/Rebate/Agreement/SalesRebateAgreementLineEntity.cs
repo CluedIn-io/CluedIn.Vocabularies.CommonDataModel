@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesRebateAgreementLineEntityVocabulary()
         {
-            VocabularyName = "SalesRebateAgreementLineEntity";
+            VocabularyName = "Sales Rebate Agreement Line Entity";
             KeyPrefix = "commonDataModel.salesrebateagreementlineentity";
             KeySeparator = ".";
             Grouping = "/SalesRebateAgreementLineEntity";
@@ -34,10 +34,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ToGrossSalesAmount = group.Add(new VocabularyKey(nameof(ToGrossSalesAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsValidated = group.Add(new VocabularyKey(nameof(IsValidated), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidatingWorkerPersonnelNumber = group.Add(new VocabularyKey(nameof(ValidatingWorkerPersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CurrencyCode { get; private set; }
         public VocabularyKey LineNumber { get; private set; }
         public VocabularyKey RebateAgreementRefRecId { get; private set; }
@@ -59,7 +57,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ToGrossSalesAmount { get; private set; }
         public VocabularyKey IsValidated { get; private set; }
         public VocabularyKey ValidatingWorkerPersonnelNumber { get; private set; }
-
-
     }
 }

@@ -6,28 +6,24 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EventVendorVocabulary()
         {
-            VocabularyName = "EventVendor";
+            VocabularyName = "Event Vendor";
             KeyPrefix = "commonDataModel.eventvendor";
             KeySeparator = ".";
             Grouping = "/EventVendor";
 
             AddGroup("EventVendor Details", group =>
             {
-                eventVendorId = group.Add(new VocabularyKey(nameof(eventVendorId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                type = group.Add(new VocabularyKey(nameof(type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                EventVendorId = group.Add(new VocabularyKey(nameof(EventVendorId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Type = group.Add(new VocabularyKey(nameof(Type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey eventVendorId { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey type { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey EventVendorId { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey Type { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

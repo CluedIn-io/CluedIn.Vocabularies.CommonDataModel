@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxHSNCodeEntityVocabulary()
         {
-            VocabularyName = "TaxHSNCodeEntity";
+            VocabularyName = "Tax HSN Code Entity";
             KeyPrefix = "commonDataModel.taxhsncodeentity";
             KeySeparator = ".";
             Grouping = "/TaxHSNCodeEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 StatisticalSuffix = group.Add(new VocabularyKey(nameof(StatisticalSuffix), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Subheading = group.Add(new VocabularyKey(nameof(Subheading), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Chapter { get; private set; }
         public VocabularyKey Code { get; private set; }
         public VocabularyKey CountryExtension { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey StatisticalSuffix { get; private set; }
         public VocabularyKey Subheading { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

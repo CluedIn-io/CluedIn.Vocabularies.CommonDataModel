@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgJobCardTerminalGridControlConfigurationEntityVocabulary()
         {
-            VocabularyName = "JmgJobCardTerminalGridControlConfigurationEntity";
+            VocabularyName = "Jmg Job Card Terminal Grid Control Configuration Entity";
             KeyPrefix = "commonDataModel.jmgjobcardterminalgridcontrolconfigurationentity";
             KeySeparator = ".";
             Grouping = "/JmgJobCardTerminalGridControlConfigurationEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 JobCardTerminalGridConfigurationId = group.Add(new VocabularyKey(nameof(JobCardTerminalGridConfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ControlLabel = group.Add(new VocabularyKey(nameof(ControlLabel), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ControlSequenceNumber = group.Add(new VocabularyKey(nameof(ControlSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FieldName { get; private set; }
         public VocabularyKey ControlLocation { get; private set; }
         public VocabularyKey JobCardTerminalGridConfigurationRecId { get; private set; }
         public VocabularyKey JobCardTerminalGridConfigurationId { get; private set; }
         public VocabularyKey ControlLabel { get; private set; }
         public VocabularyKey ControlSequenceNumber { get; private set; }
-
-
     }
 }

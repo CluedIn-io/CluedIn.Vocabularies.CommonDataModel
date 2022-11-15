@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReqMasterPlanningProductCoverageGroupEntityVocabulary()
         {
-            VocabularyName = "ReqMasterPlanningProductCoverageGroupEntity";
+            VocabularyName = "Req Master Planning Product Coverage Group Entity";
             KeyPrefix = "commonDataModel.reqmasterplanningproductcoveragegroupentity";
             KeySeparator = ".";
             Grouping = "/ReqMasterPlanningProductCoverageGroupEntity";
@@ -52,10 +52,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsDelayCalculationEnabled = group.Add(new VocabularyKey(nameof(IsDelayCalculationEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CalculateDelayTimeFenceDays = group.Add(new VocabularyKey(nameof(CalculateDelayTimeFenceDays), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PeriodTemplate = group.Add(new VocabularyKey(nameof(PeriodTemplate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey GroupId { get; private set; }
         public VocabularyKey GroupName { get; private set; }
         public VocabularyKey WorkCalendarId { get; private set; }
@@ -95,7 +93,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsDelayCalculationEnabled { get; private set; }
         public VocabularyKey CalculateDelayTimeFenceDays { get; private set; }
         public VocabularyKey PeriodTemplate { get; private set; }
-
-
     }
 }

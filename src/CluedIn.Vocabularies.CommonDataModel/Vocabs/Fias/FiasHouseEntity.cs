@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FiasHouseEntityVocabulary()
         {
-            VocabularyName = "FiasHouseEntity";
+            VocabularyName = "Fias House Entity";
             KeyPrefix = "commonDataModel.fiashouseentity";
             KeySeparator = ".";
             Grouping = "/FiasHouseEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OKATO = group.Add(new VocabularyKey(nameof(OKATO), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StartDate = group.Add(new VocabularyKey(nameof(StartDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EndDate = group.Add(new VocabularyKey(nameof(EndDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey HouseId { get; private set; }
         public VocabularyKey HouseGuid { get; private set; }
         public VocabularyKey AOGuid { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OKATO { get; private set; }
         public VocabularyKey StartDate { get; private set; }
         public VocabularyKey EndDate { get; private set; }
-
-
     }
 }

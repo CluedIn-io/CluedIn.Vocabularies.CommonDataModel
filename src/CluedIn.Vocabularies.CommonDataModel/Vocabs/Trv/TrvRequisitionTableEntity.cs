@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvRequisitionTableEntityVocabulary()
         {
-            VocabularyName = "TrvRequisitionTableEntity";
+            VocabularyName = "Trv Requisition Table Entity";
             KeyPrefix = "commonDataModel.trvrequisitiontableentity";
             KeySeparator = ".";
             Grouping = "/TrvRequisitionTableEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BusinessPurpose = group.Add(new VocabularyKey(nameof(BusinessPurpose), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkerPersonnelNumber = group.Add(new VocabularyKey(nameof(WorkerPersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DimensionDisplayValue = group.Add(new VocabularyKey(nameof(DimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ApprovalStatus { get; private set; }
         public VocabularyKey Employee { get; private set; }
         public VocabularyKey Dimension { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey BusinessPurpose { get; private set; }
         public VocabularyKey WorkerPersonnelNumber { get; private set; }
         public VocabularyKey DimensionDisplayValue { get; private set; }
-
-
     }
 }

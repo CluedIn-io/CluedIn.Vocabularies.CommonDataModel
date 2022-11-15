@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ConfiguratorLayoutLinesEntityVocabulary()
         {
-            VocabularyName = "ConfiguratorLayoutLinesEntity";
+            VocabularyName = "Configurator Layout Lines Entity";
             KeyPrefix = "commonDataModel.configuratorlayoutlinesentity";
             KeySeparator = ".";
             Grouping = "/ConfiguratorLayoutLinesEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LineNumber = group.Add(new VocabularyKey(nameof(LineNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RecordType = group.Add(new VocabularyKey(nameof(RecordType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Segment = group.Add(new VocabularyKey(nameof(Segment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BatchId { get; private set; }
         public VocabularyKey BatchRecordType { get; private set; }
         public VocabularyKey RecordSize { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LineNumber { get; private set; }
         public VocabularyKey RecordType { get; private set; }
         public VocabularyKey Segment { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProdProductionOrderHeaderEntityVocabulary()
         {
-            VocabularyName = "ProdProductionOrderHeaderEntity";
+            VocabularyName = "Prod Production Order Header Entity";
             KeyPrefix = "commonDataModel.prodproductionorderheaderentity";
             KeySeparator = ".";
             Grouping = "/ProdProductionOrderHeaderEntity";
@@ -91,10 +91,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SubcontractingPurchaseOrderLineInventoryLotId = group.Add(new VocabularyKey(nameof(SubcontractingPurchaseOrderLineInventoryLotId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WarehouseReleaseReservationRequirementRule = group.Add(new VocabularyKey(nameof(WarehouseReleaseReservationRequirementRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkingTimeSchedulingPropertyId = group.Add(new VocabularyKey(nameof(WorkingTimeSchedulingPropertyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AreRouteJobsGenerated { get; private set; }
         public VocabularyKey AutoReservationMode { get; private set; }
         public VocabularyKey DefaultLedgerDimension { get; private set; }
@@ -173,7 +171,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SubcontractingPurchaseOrderLineInventoryLotId { get; private set; }
         public VocabularyKey WarehouseReleaseReservationRequirementRule { get; private set; }
         public VocabularyKey WorkingTimeSchedulingPropertyId { get; private set; }
-
-
     }
 }

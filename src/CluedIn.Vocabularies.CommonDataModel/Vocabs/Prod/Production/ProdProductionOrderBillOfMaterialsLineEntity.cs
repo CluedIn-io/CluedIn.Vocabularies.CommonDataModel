@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProdProductionOrderBillOfMaterialsLineEntityVocabulary()
         {
-            VocabularyName = "ProdProductionOrderBillOfMaterialsLineEntity";
+            VocabularyName = "Prod Production Order Bill Of Materials Line Entity";
             KeyPrefix = "commonDataModel.prodproductionorderbillofmaterialslineentity";
             KeySeparator = ".";
             Grouping = "/ProdProductionOrderBillOfMaterialsLineEntity";
@@ -82,10 +82,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SubRouteOperationId = group.Add(new VocabularyKey(nameof(SubRouteOperationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VariableScrapPercentage = group.Add(new VocabularyKey(nameof(VariableScrapPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillCostCalculationIncludeLine = group.Add(new VocabularyKey(nameof(WillCostCalculationIncludeLine), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AutoReservationMode { get; private set; }
         public VocabularyKey BOMLineQuantity { get; private set; }
         public VocabularyKey BOMLineQuantityDenominator { get; private set; }
@@ -155,7 +153,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SubRouteOperationId { get; private set; }
         public VocabularyKey VariableScrapPercentage { get; private set; }
         public VocabularyKey WillCostCalculationIncludeLine { get; private set; }
-
-
     }
 }

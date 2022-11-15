@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchCommitmentLineEntityVocabulary()
         {
-            VocabularyName = "PurchCommitmentLineEntity";
+            VocabularyName = "Purch Commitment Line Entity";
             KeyPrefix = "commonDataModel.purchcommitmentlineentity";
             KeySeparator = ".";
             Grouping = "/PurchCommitmentLineEntity";
@@ -36,10 +36,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(LedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AgreementLineNumber = group.Add(new VocabularyKey(nameof(AgreementLineNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AgreementNumber = group.Add(new VocabularyKey(nameof(AgreementNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AgreementLine { get; private set; }
         public VocabularyKey Comment { get; private set; }
         public VocabularyKey LedgerDimension { get; private set; }
@@ -63,7 +61,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LedgerDimensionDisplayValue { get; private set; }
         public VocabularyKey AgreementLineNumber { get; private set; }
         public VocabularyKey AgreementNumber { get; private set; }
-
-
     }
 }

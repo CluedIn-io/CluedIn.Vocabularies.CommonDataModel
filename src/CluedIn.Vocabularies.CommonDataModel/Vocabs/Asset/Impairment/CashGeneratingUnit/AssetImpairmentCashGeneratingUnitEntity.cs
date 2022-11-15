@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetImpairmentCashGeneratingUnitEntityVocabulary()
         {
-            VocabularyName = "AssetImpairmentCashGeneratingUnitEntity";
+            VocabularyName = "Asset Impairment Cash Generating Unit Entity";
             KeyPrefix = "commonDataModel.assetimpairmentcashgeneratingunitentity";
             KeySeparator = ".";
             Grouping = "/AssetImpairmentCashGeneratingUnitEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RecoverableAmountLastUpdatedDate = group.Add(new VocabularyKey(nameof(RecoverableAmountLastUpdatedDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UndiscountedCashFlow = group.Add(new VocabularyKey(nameof(UndiscountedCashFlow), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UndiscountedCashFlowLastUpdatedDate = group.Add(new VocabularyKey(nameof(UndiscountedCashFlowLastUpdatedDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CashGeneratingUnitNumber { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey CGUGroup { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RecoverableAmountLastUpdatedDate { get; private set; }
         public VocabularyKey UndiscountedCashFlow { get; private set; }
         public VocabularyKey UndiscountedCashFlowLastUpdatedDate { get; private set; }
-
-
     }
 }

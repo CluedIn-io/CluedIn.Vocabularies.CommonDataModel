@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankStatementLineEntityVocabulary()
         {
-            VocabularyName = "BankStatementLineEntity";
+            VocabularyName = "Bank Statement Line Entity";
             KeyPrefix = "commonDataModel.bankstatementlineentity";
             KeySeparator = ".";
             Grouping = "/BankStatementLineEntity";
@@ -45,10 +45,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BankStatementInstructedCurrencyAmt = group.Add(new VocabularyKey(nameof(BankStatementInstructedCurrencyAmt), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BankStatementInstructedExchangeRate = group.Add(new VocabularyKey(nameof(BankStatementInstructedExchangeRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CreditorReferenceInformation = group.Add(new VocabularyKey(nameof(CreditorReferenceInformation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LineAmount { get; private set; }
         public VocabularyKey AccountServicerReference { get; private set; }
         public VocabularyKey AdditionalEntryInformation { get; private set; }
@@ -81,7 +79,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey BankStatementInstructedCurrencyAmt { get; private set; }
         public VocabularyKey BankStatementInstructedExchangeRate { get; private set; }
         public VocabularyKey CreditorReferenceInformation { get; private set; }
-
-
     }
 }

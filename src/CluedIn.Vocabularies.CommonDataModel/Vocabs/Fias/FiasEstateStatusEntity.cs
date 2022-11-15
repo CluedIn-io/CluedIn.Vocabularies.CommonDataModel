@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FiasEstateStatusEntityVocabulary()
         {
-            VocabularyName = "FiasEstateStatusEntity";
+            VocabularyName = "Fias Estate Status Entity";
             KeyPrefix = "commonDataModel.fiasestatestatusentity";
             KeySeparator = ".";
             Grouping = "/FiasEstateStatusEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 EstStatId = group.Add(new VocabularyKey(nameof(EstStatId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey EstStatId { get; private set; }
         public VocabularyKey Name { get; private set; }
-
-
     }
 }

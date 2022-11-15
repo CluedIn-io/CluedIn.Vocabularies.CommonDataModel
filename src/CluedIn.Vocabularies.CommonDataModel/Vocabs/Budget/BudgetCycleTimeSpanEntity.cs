@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetCycleTimeSpanEntityVocabulary()
         {
-            VocabularyName = "BudgetCycleTimeSpanEntity";
+            VocabularyName = "Budget Cycle Time Span Entity";
             KeyPrefix = "commonDataModel.budgetcycletimespanentity";
             KeySeparator = ".";
             Grouping = "/BudgetCycleTimeSpanEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FiscalCalendar = group.Add(new VocabularyKey(nameof(FiscalCalendar), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BudgetCycleLengthOption = group.Add(new VocabularyKey(nameof(BudgetCycleLengthOption), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultNumberOfAccountingPeriods = group.Add(new VocabularyKey(nameof(DefaultNumberOfAccountingPeriods), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Name { get; private set; }
         public VocabularyKey FiscalCalendarId { get; private set; }
         public VocabularyKey FiscalCalendar { get; private set; }
         public VocabularyKey BudgetCycleLengthOption { get; private set; }
         public VocabularyKey DefaultNumberOfAccountingPeriods { get; private set; }
-
-
     }
 }

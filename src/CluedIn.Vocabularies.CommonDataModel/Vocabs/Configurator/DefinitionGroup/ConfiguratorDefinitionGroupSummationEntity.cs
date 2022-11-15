@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ConfiguratorDefinitionGroupSummationEntityVocabulary()
         {
-            VocabularyName = "ConfiguratorDefinitionGroupSummationEntity";
+            VocabularyName = "Configurator Definition Group Summation Entity";
             KeyPrefix = "commonDataModel.configuratordefinitiongroupsummationentity";
             KeySeparator = ".";
             Grouping = "/ConfiguratorDefinitionGroupSummationEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SumAll = group.Add(new VocabularyKey(nameof(SumAll), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SumSelected = group.Add(new VocabularyKey(nameof(SumSelected), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TableName = group.Add(new VocabularyKey(nameof(TableName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Average { get; private set; }
         public VocabularyKey AverageSelected { get; private set; }
         public VocabularyKey DefinitionGroupId { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SumAll { get; private set; }
         public VocabularyKey SumSelected { get; private set; }
         public VocabularyKey TableName { get; private set; }
-
-
     }
 }

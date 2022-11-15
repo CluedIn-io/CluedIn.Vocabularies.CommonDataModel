@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SMAServiceSubscriptionSalesPriceEntityVocabulary()
         {
-            VocabularyName = "SMAServiceSubscriptionSalesPriceEntity";
+            VocabularyName = "SMA Service Subscription Sales Price Entity";
             KeyPrefix = "commonDataModel.smaservicesubscriptionsalespriceentity";
             KeySeparator = ".";
             Grouping = "/SMAServiceSubscriptionSalesPriceEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SalesPrice = group.Add(new VocabularyKey(nameof(SalesPrice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ServiceSubscriptionId = group.Add(new VocabularyKey(nameof(ServiceSubscriptionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EffectiveDate = group.Add(new VocabularyKey(nameof(EffectiveDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProjectCategoryId { get; private set; }
         public VocabularyKey SalesPriceCurrencyCode { get; private set; }
         public VocabularyKey ProjectId { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SalesPrice { get; private set; }
         public VocabularyKey ServiceSubscriptionId { get; private set; }
         public VocabularyKey EffectiveDate { get; private set; }
-
-
     }
 }

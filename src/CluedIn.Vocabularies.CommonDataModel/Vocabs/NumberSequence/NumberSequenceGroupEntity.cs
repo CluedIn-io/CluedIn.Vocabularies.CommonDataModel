@@ -6,22 +6,18 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public NumberSequenceGroupEntityVocabulary()
         {
-            VocabularyName = "NumberSequenceGroupEntity";
+            VocabularyName = "Number Sequence Group Entity";
             KeyPrefix = "commonDataModel.numbersequencegroupentity";
             KeySeparator = ".";
             Grouping = "/NumberSequenceGroupEntity";
 
             AddGroup("NumberSequenceGroupEntity Details", group =>
             {
-                description = group.Add(new VocabularyKey(nameof(description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NumberSequenceGroup = group.Add(new VocabularyKey(nameof(NumberSequenceGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
-        public VocabularyKey description { get; private set; }
+        public VocabularyKey Description { get; private set; }
         public VocabularyKey NumberSequenceGroup { get; private set; }
-
-
     }
 }

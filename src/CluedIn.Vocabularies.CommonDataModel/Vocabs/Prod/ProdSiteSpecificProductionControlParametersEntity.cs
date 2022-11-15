@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProdSiteSpecificProductionControlParametersEntityVocabulary()
         {
-            VocabularyName = "ProdSiteSpecificProductionControlParametersEntity";
+            VocabularyName = "Prod Site Specific Production Control Parameters Entity";
             KeyPrefix = "commonDataModel.prodsitespecificproductioncontrolparametersentity";
             KeySeparator = ".";
             Grouping = "/ProdSiteSpecificProductionControlParametersEntity";
@@ -94,10 +94,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DefaultRouteCardProductionJournalNameId = group.Add(new VocabularyKey(nameof(DefaultRouteCardProductionJournalNameId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AutomaticSchedulingMethod = group.Add(new VocabularyKey(nameof(AutomaticSchedulingMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillProductionEstimationCalculateEstimatedUnitCost = group.Add(new VocabularyKey(nameof(WillProductionEstimationCalculateEstimatedUnitCost), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InventDimId { get; private set; }
         public VocabularyKey ProductionSiteId { get; private set; }
         public VocabularyKey IsCreatedToEstimatedStatusChangedAllowed { get; private set; }
@@ -179,7 +177,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DefaultRouteCardProductionJournalNameId { get; private set; }
         public VocabularyKey AutomaticSchedulingMethod { get; private set; }
         public VocabularyKey WillProductionEstimationCalculateEstimatedUnitCost { get; private set; }
-
-
     }
 }

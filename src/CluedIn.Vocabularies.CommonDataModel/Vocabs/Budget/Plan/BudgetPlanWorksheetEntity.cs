@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetPlanWorksheetEntityVocabulary()
         {
-            VocabularyName = "BudgetPlanWorksheetEntity";
+            VocabularyName = "Budget Plan Worksheet Entity";
             KeyPrefix = "commonDataModel.budgetplanworksheetentity";
             KeySeparator = ".";
             Grouping = "/BudgetPlanWorksheetEntity";
@@ -133,10 +133,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProjectIdDescription = group.Add(new VocabularyKey(nameof(ProjectIdDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PositionDescription = group.Add(new VocabularyKey(nameof(PositionDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PositionWorkerName = group.Add(new VocabularyKey(nameof(PositionWorkerName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BudgetPlanHeader { get; private set; }
         public VocabularyKey BudgetClass { get; private set; }
         public VocabularyKey Comment { get; private set; }
@@ -257,7 +255,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProjectIdDescription { get; private set; }
         public VocabularyKey PositionDescription { get; private set; }
         public VocabularyKey PositionWorkerName { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchProcurementDocumentProcessingPolicyEntityVocabulary()
         {
-            VocabularyName = "PurchProcurementDocumentProcessingPolicyEntity";
+            VocabularyName = "Purch Procurement Document Processing Policy Entity";
             KeyPrefix = "commonDataModel.purchprocurementdocumentprocessingpolicyentity";
             KeySeparator = ".";
             Grouping = "/PurchProcurementDocumentProcessingPolicyEntity";
@@ -31,10 +31,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RFQCancellationNotificationEmailTemplateId = group.Add(new VocabularyKey(nameof(RFQCancellationNotificationEmailTemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExchangeRateDateRule = group.Add(new VocabularyKey(nameof(ExchangeRateDateRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IndependentDeliveryNoteNumbering = group.Add(new VocabularyKey(nameof(IndependentDeliveryNoteNumbering), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AreThreeWayMatchedPurchaseOrderLinesDecentrallyReceivedOnly { get; private set; }
         public VocabularyKey DefaultSummaryUpdateMethod { get; private set; }
         public VocabularyKey DuplicateProductReceiptNumberValidationRule { get; private set; }
@@ -53,7 +51,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RFQCancellationNotificationEmailTemplateId { get; private set; }
         public VocabularyKey ExchangeRateDateRule { get; private set; }
         public VocabularyKey IndependentDeliveryNoteNumbering { get; private set; }
-
-
     }
 }

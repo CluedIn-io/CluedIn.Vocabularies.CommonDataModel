@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ConfirmingPOEntityVocabulary()
         {
-            VocabularyName = "ConfirmingPOEntity";
+            VocabularyName = "Confirming PO Entity";
             KeyPrefix = "commonDataModel.confirmingpoentity";
             KeySeparator = ".";
             Grouping = "/ConfirmingPOEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LabelFile = group.Add(new VocabularyKey(nameof(LabelFile), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LanguageId = group.Add(new VocabularyKey(nameof(LanguageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ConfirmingPOID { get; private set; }
         public VocabularyKey ConfirmingPOMessage { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey LabelFile { get; private set; }
         public VocabularyKey LanguageId { get; private set; }
-
-
     }
 }

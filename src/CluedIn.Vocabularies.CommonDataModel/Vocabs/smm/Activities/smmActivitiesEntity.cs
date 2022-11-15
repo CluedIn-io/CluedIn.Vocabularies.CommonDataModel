@@ -2,16 +2,16 @@ using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 {
-    public class smmActivitiesEntityVocabulary : SimpleVocabulary
+    public class SmmActivitiesEntityVocabulary : SimpleVocabulary
     {
-        public smmActivitiesEntityVocabulary()
+        public SmmActivitiesEntityVocabulary()
         {
-            VocabularyName = "smmActivitiesEntity";
+            VocabularyName = "Smm Activities Entity";
             KeyPrefix = "commonDataModel.smmactivitiesentity";
             KeySeparator = ".";
-            Grouping = "/smmActivitiesEntity";
+            Grouping = "/SmmActivitiesEntity";
 
-            AddGroup("smmActivitiesEntity Details", group =>
+            AddGroup("SmmActivitiesEntity Details", group =>
             {
                 ActivityNumber = group.Add(new VocabularyKey(nameof(ActivityNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ActivityStatus = group.Add(new VocabularyKey(nameof(ActivityStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
@@ -60,10 +60,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Template = group.Add(new VocabularyKey(nameof(Template), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TotalWork = group.Add(new VocabularyKey(nameof(TotalWork), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TypeId = group.Add(new VocabularyKey(nameof(TypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ActivityNumber { get; private set; }
         public VocabularyKey ActivityStatus { get; private set; }
         public VocabularyKey ActualWork { get; private set; }
@@ -111,7 +109,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Template { get; private set; }
         public VocabularyKey TotalWork { get; private set; }
         public VocabularyKey TypeId { get; private set; }
-
-
     }
 }

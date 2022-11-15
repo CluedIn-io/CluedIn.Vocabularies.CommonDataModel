@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetConditionEntityVocabulary()
         {
-            VocabularyName = "AssetConditionEntity";
+            VocabularyName = "Asset Condition Entity";
             KeyPrefix = "commonDataModel.assetconditionentity";
             KeySeparator = ".";
             Grouping = "/AssetConditionEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 ConditionCode = group.Add(new VocabularyKey(nameof(ConditionCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ConditionCode { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

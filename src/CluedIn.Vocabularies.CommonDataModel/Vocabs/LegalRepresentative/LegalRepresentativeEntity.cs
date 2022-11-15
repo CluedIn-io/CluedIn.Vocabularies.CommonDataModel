@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LegalRepresentativeEntityVocabulary()
         {
-            VocabularyName = "LegalRepresentativeEntity";
+            VocabularyName = "Legal Representative Entity";
             KeyPrefix = "commonDataModel.legalrepresentativeentity";
             KeySeparator = ".";
             Grouping = "/LegalRepresentativeEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CRCState = group.Add(new VocabularyKey(nameof(CRCState), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CRC = group.Add(new VocabularyKey(nameof(CRC), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CRCExpirationDate = group.Add(new VocabularyKey(nameof(CRCExpirationDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FiscalOrganization { get; private set; }
         public VocabularyKey FiscalOrganizationRootFiscalEstablishmentDataArea { get; private set; }
         public VocabularyKey FiscalOrganizationRootFiscalEstablishment { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CRCState { get; private set; }
         public VocabularyKey CRC { get; private set; }
         public VocabularyKey CRCExpirationDate { get; private set; }
-
-
     }
 }

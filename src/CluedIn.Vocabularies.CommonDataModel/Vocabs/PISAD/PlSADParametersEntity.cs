@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PlSADParametersEntityVocabulary()
         {
-            VocabularyName = "PlSADParametersEntity";
+            VocabularyName = "Pl SAD Parameters Entity";
             KeyPrefix = "commonDataModel.plsadparametersentity";
             KeySeparator = ".";
             Grouping = "/PlSADParametersEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TransportAccountDisplayValue = group.Add(new VocabularyKey(nameof(TransportAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MiscellaneousChargesFromTheSADDocumentAccountDisplayValue = group.Add(new VocabularyKey(nameof(MiscellaneousChargesFromTheSADDocumentAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransportOnSADDocumentAccountDisplayValue = group.Add(new VocabularyKey(nameof(TransportOnSADDocumentAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InsuranceAccount { get; private set; }
         public VocabularyKey AdditionalCostsFormInvoice { get; private set; }
         public VocabularyKey MiscPaymentsAccount { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TransportAccountDisplayValue { get; private set; }
         public VocabularyKey MiscellaneousChargesFromTheSADDocumentAccountDisplayValue { get; private set; }
         public VocabularyKey TransportOnSADDocumentAccountDisplayValue { get; private set; }
-
-
     }
 }

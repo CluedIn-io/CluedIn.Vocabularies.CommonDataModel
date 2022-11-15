@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankState11EntityVocabulary()
         {
-            VocabularyName = "BankState11Entity";
+            VocabularyName = "Bank State 11 Entity";
             KeyPrefix = "commonDataModel.bankstate11entity";
             KeySeparator = ".";
             Grouping = "/BankState11Entity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BankAccount = group.Add(new VocabularyKey(nameof(BankAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SequenceNumber = group.Add(new VocabularyKey(nameof(SequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReportOnState11 = group.Add(new VocabularyKey(nameof(ReportOnState11), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BankAccount { get; private set; }
         public VocabularyKey SequenceNumber { get; private set; }
         public VocabularyKey ReportOnState11 { get; private set; }
-
-
     }
 }

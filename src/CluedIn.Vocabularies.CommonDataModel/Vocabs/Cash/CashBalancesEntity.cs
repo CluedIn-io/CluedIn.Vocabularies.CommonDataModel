@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CashBalancesEntityVocabulary()
         {
-            VocabularyName = "CashBalancesEntity";
+            VocabularyName = "Cash Balances Entity";
             KeyPrefix = "commonDataModel.cashbalancesentity";
             KeySeparator = ".";
             Grouping = "/CashBalancesEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Amount = group.Add(new VocabularyKey(nameof(Amount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Currency = group.Add(new VocabularyKey(nameof(Currency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExchangeRateAdjustmentAmount = group.Add(new VocabularyKey(nameof(ExchangeRateAdjustmentAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Cash { get; private set; }
         public VocabularyKey AmountInTransactionCurrency { get; private set; }
         public VocabularyKey Amount { get; private set; }
         public VocabularyKey Currency { get; private set; }
         public VocabularyKey ExchangeRateAdjustmentAmount { get; private set; }
-
-
     }
 }

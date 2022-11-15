@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProdReportAsFinishedProductionJournalEntryEntityVocabulary()
         {
-            VocabularyName = "ProdReportAsFinishedProductionJournalEntryEntity";
+            VocabularyName = "Prod Report As Finished Production Journal Entry Entity";
             KeyPrefix = "commonDataModel.prodreportasfinishedproductionjournalentryentity";
             KeySeparator = ".";
             Grouping = "/ProdReportAsFinishedProductionJournalEntryEntity";
@@ -48,10 +48,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductStyleId = group.Add(new VocabularyKey(nameof(ProductStyleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LicensePlateNumber = group.Add(new VocabularyKey(nameof(LicensePlateNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 JournalNumber = group.Add(new VocabularyKey(nameof(JournalNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ErrorCause { get; private set; }
         public VocabularyKey InventDimId { get; private set; }
         public VocabularyKey IsReceiptReturned { get; private set; }
@@ -87,7 +85,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProductStyleId { get; private set; }
         public VocabularyKey LicensePlateNumber { get; private set; }
         public VocabularyKey JournalNumber { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseWaveLoadBuildingTemplateV2EntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseWaveLoadBuildingTemplateV2Entity";
+            VocabularyName = "WHS Warehouse Wave Load Building Template V2 Entity";
             KeyPrefix = "commonDataModel.whswarehousewaveloadbuildingtemplatev2entity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseWaveLoadBuildingTemplateV2Entity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CanWarehouseWaveLoadBuildingCreateLoads = group.Add(new VocabularyKey(nameof(CanWarehouseWaveLoadBuildingCreateLoads), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsLoadLineSplittingAllowed = group.Add(new VocabularyKey(nameof(IsLoadLineSplittingAllowed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TemplateQuery = group.Add(new VocabularyKey(nameof(TemplateQuery), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TemplateSequenceNumber { get; private set; }
         public VocabularyKey TemplateName { get; private set; }
         public VocabularyKey WaveStepCode { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CanWarehouseWaveLoadBuildingCreateLoads { get; private set; }
         public VocabularyKey IsLoadLineSplittingAllowed { get; private set; }
         public VocabularyKey TemplateQuery { get; private set; }
-
-
     }
 }

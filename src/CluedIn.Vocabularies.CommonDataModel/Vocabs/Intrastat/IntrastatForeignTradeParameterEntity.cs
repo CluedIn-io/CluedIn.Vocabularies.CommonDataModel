@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public IntrastatForeignTradeParameterEntityVocabulary()
         {
-            VocabularyName = "IntrastatForeignTradeParameterEntity";
+            VocabularyName = "Intrastat Foreign Trade Parameter Entity";
             KeyPrefix = "commonDataModel.intrastatforeigntradeparameterentity";
             KeySeparator = ".";
             Grouping = "/IntrastatForeignTradeParameterEntity";
@@ -108,10 +108,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IntrastatFulfillmentDateEmptyWarning = group.Add(new VocabularyKey(nameof(IntrastatFulfillmentDateEmptyWarning), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IntrastatSpecMove = group.Add(new VocabularyKey(nameof(IntrastatSpecMove), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IntrastatSpecificMovement = group.Add(new VocabularyKey(nameof(IntrastatSpecificMovement), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AdditionalUnits { get; private set; }
         public VocabularyKey AgentBranchId { get; private set; }
         public VocabularyKey AgentLocation { get; private set; }
@@ -207,7 +205,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IntrastatFulfillmentDateEmptyWarning { get; private set; }
         public VocabularyKey IntrastatSpecMove { get; private set; }
         public VocabularyKey IntrastatSpecificMovement { get; private set; }
-
-
     }
 }

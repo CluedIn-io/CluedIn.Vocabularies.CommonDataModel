@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetAcceleratedDepreciationGroupEntityVocabulary()
         {
-            VocabularyName = "AssetAcceleratedDepreciationGroupEntity";
+            VocabularyName = "Asset Accelerated Depreciation Group Entity";
             KeyPrefix = "commonDataModel.assetaccelerateddepreciationgroupentity";
             KeySeparator = ".";
             Grouping = "/AssetAcceleratedDepreciationGroupEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 EquipmentTypeDivision = group.Add(new VocabularyKey(nameof(EquipmentTypeDivision), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IndustryAverageHoursPerDay = group.Add(new VocabularyKey(nameof(IndustryAverageHoursPerDay), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IndustryAnnualWorkingDays = group.Add(new VocabularyKey(nameof(IndustryAnnualWorkingDays), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey EquipmentGroup { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey Location { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey EquipmentTypeDivision { get; private set; }
         public VocabularyKey IndustryAverageHoursPerDay { get; private set; }
         public VocabularyKey IndustryAnnualWorkingDays { get; private set; }
-
-
     }
 }

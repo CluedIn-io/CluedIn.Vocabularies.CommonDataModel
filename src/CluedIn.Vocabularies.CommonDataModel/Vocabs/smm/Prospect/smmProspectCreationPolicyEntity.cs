@@ -2,16 +2,16 @@ using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 {
-    public class smmProspectCreationPolicyEntityVocabulary : SimpleVocabulary
+    public class SmmProspectCreationPolicyEntityVocabulary : SimpleVocabulary
     {
-        public smmProspectCreationPolicyEntityVocabulary()
+        public SmmProspectCreationPolicyEntityVocabulary()
         {
-            VocabularyName = "smmProspectCreationPolicyEntity";
+            VocabularyName = "Smm Prospect Creation Policy Entity";
             KeyPrefix = "commonDataModel.smmprospectcreationpolicyentity";
             KeySeparator = ".";
-            Grouping = "/smmProspectCreationPolicyEntity";
+            Grouping = "/SmmProspectCreationPolicyEntity";
 
-            AddGroup("smmProspectCreationPolicyEntity Details", group =>
+            AddGroup("SmmProspectCreationPolicyEntity Details", group =>
             {
                 DefaultProspectRelationTypeId = group.Add(new VocabularyKey(nameof(DefaultProspectRelationTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultLanguageId = group.Add(new VocabularyKey(nameof(DefaultLanguageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DefaultBusinessClosingTime = group.Add(new VocabularyKey(nameof(DefaultBusinessClosingTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultProspectStatusId = group.Add(new VocabularyKey(nameof(DefaultProspectStatusId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillProspectConversionOpenRelationTypeForm = group.Add(new VocabularyKey(nameof(WillProspectConversionOpenRelationTypeForm), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DefaultProspectRelationTypeId { get; private set; }
         public VocabularyKey DefaultLanguageId { get; private set; }
         public VocabularyKey DefaultVendorGroupId { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DefaultBusinessClosingTime { get; private set; }
         public VocabularyKey DefaultProspectStatusId { get; private set; }
         public VocabularyKey WillProspectConversionOpenRelationTypeForm { get; private set; }
-
-
     }
 }

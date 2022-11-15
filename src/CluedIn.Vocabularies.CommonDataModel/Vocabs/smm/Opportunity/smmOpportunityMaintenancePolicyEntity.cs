@@ -2,30 +2,26 @@ using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 {
-    public class smmOpportunityMaintenancePolicyEntityVocabulary : SimpleVocabulary
+    public class SmmOpportunityMaintenancePolicyEntityVocabulary : SimpleVocabulary
     {
-        public smmOpportunityMaintenancePolicyEntityVocabulary()
+        public SmmOpportunityMaintenancePolicyEntityVocabulary()
         {
-            VocabularyName = "smmOpportunityMaintenancePolicyEntity";
+            VocabularyName = "Smm Opportunity Maintenance Policy Entity";
             KeyPrefix = "commonDataModel.smmopportunitymaintenancepolicyentity";
             KeySeparator = ".";
-            Grouping = "/smmOpportunityMaintenancePolicyEntity";
+            Grouping = "/SmmOpportunityMaintenancePolicyEntity";
 
-            AddGroup("smmOpportunityMaintenancePolicyEntity Details", group =>
+            AddGroup("SmmOpportunityMaintenancePolicyEntity Details", group =>
             {
                 SalesQuotationOpportunityCreationRule = group.Add(new VocabularyKey(nameof(SalesQuotationOpportunityCreationRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesQuotationOpportunityModificationRule = group.Add(new VocabularyKey(nameof(SalesQuotationOpportunityModificationRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProjectQuotationOpportunityCreationRule = group.Add(new VocabularyKey(nameof(ProjectQuotationOpportunityCreationRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProjectQuotationOpportunityModificationRule = group.Add(new VocabularyKey(nameof(ProjectQuotationOpportunityModificationRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SalesQuotationOpportunityCreationRule { get; private set; }
         public VocabularyKey SalesQuotationOpportunityModificationRule { get; private set; }
         public VocabularyKey ProjectQuotationOpportunityCreationRule { get; private set; }
         public VocabularyKey ProjectQuotationOpportunityModificationRule { get; private set; }
-
-
     }
 }

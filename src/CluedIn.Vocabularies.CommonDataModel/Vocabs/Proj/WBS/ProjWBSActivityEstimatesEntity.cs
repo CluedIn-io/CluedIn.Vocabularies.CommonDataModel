@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjWBSActivityEstimatesEntityVocabulary()
         {
-            VocabularyName = "ProjWBSActivityEstimatesEntity";
+            VocabularyName = "Proj WBS Activity Estimates Entity";
             KeyPrefix = "commonDataModel.projwbsactivityestimatesentity";
             KeySeparator = ".";
             Grouping = "/ProjWBSActivityEstimatesEntity";
@@ -32,10 +32,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SalesCategory = group.Add(new VocabularyKey(nameof(SalesCategory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TotalCostPrice = group.Add(new VocabularyKey(nameof(TotalCostPrice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TotalSalesPrice = group.Add(new VocabularyKey(nameof(TotalSalesPrice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProjectId { get; private set; }
         public VocabularyKey HierarchyId { get; private set; }
         public VocabularyKey TaskId { get; private set; }
@@ -55,7 +53,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SalesCategory { get; private set; }
         public VocabularyKey TotalCostPrice { get; private set; }
         public VocabularyKey TotalSalesPrice { get; private set; }
-
-
     }
 }

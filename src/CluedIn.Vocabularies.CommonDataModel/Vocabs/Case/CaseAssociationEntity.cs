@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CaseAssociationEntityVocabulary()
         {
-            VocabularyName = "CaseAssociationEntity";
+            VocabularyName = "Case Association Entity";
             KeyPrefix = "commonDataModel.caseassociationentity";
             KeySeparator = ".";
             Grouping = "/CaseAssociationEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 EntityType = group.Add(new VocabularyKey(nameof(EntityType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsPrimary = group.Add(new VocabularyKey(nameof(IsPrimary), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Reference = group.Add(new VocabularyKey(nameof(Reference), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AssociationCompany { get; private set; }
         public VocabularyKey AssociationId { get; private set; }
         public VocabularyKey CaseId { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey EntityType { get; private set; }
         public VocabularyKey IsPrimary { get; private set; }
         public VocabularyKey Reference { get; private set; }
-
-
     }
 }

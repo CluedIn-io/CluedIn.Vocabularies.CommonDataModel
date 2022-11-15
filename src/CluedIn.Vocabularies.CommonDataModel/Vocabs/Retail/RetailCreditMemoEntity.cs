@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailCreditMemoEntityVocabulary()
         {
-            VocabularyName = "RetailCreditMemoEntity";
+            VocabularyName = "Retail Credit Memo Entity";
             KeyPrefix = "commonDataModel.retailcreditmemoentity";
             KeySeparator = ".";
             Grouping = "/RetailCreditMemoEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CurrencyCode = group.Add(new VocabularyKey(nameof(CurrencyCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EntryId = group.Add(new VocabularyKey(nameof(EntryId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Voided = group.Add(new VocabularyKey(nameof(Voided), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Amount { get; private set; }
         public VocabularyKey Applied { get; private set; }
         public VocabularyKey AppliedAmount { get; private set; }
         public VocabularyKey CurrencyCode { get; private set; }
         public VocabularyKey EntryId { get; private set; }
         public VocabularyKey Voided { get; private set; }
-
-
     }
 }

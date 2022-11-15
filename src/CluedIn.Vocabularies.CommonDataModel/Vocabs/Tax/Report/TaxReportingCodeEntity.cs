@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxReportingCodeEntityVocabulary()
         {
-            VocabularyName = "TaxReportingCodeEntity";
+            VocabularyName = "Tax Reporting Code Entity";
             KeyPrefix = "commonDataModel.taxreportingcodeentity";
             KeySeparator = ".";
             Grouping = "/TaxReportingCodeEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ReportText = group.Add(new VocabularyKey(nameof(ReportText), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesTaxCorrections = group.Add(new VocabularyKey(nameof(SalesTaxCorrections), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TaxReportingCode { get; private set; }
         public VocabularyKey ReportLayout { get; private set; }
         public VocabularyKey ReportText { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey SalesTaxCorrections { get; private set; }
-
-
     }
 }

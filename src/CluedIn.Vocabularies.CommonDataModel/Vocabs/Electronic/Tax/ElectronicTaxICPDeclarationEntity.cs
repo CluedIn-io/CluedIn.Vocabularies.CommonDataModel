@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ElectronicTaxICPDeclarationEntityVocabulary()
         {
-            VocabularyName = "ElectronicTaxICPDeclarationEntity";
+            VocabularyName = "Electronic Tax ICP Declaration Entity";
             KeyPrefix = "commonDataModel.electronictaxicpdeclarationentity";
             KeySeparator = ".";
             Grouping = "/ElectronicTaxICPDeclarationEntity";
@@ -69,10 +69,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CorrectionShortName = group.Add(new VocabularyKey(nameof(CorrectionShortName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CorrectionTimeZone = group.Add(new VocabularyKey(nameof(CorrectionTimeZone), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CompanyTaxID = group.Add(new VocabularyKey(nameof(CompanyTaxID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ID { get; private set; }
         public VocabularyKey ContactID { get; private set; }
         public VocabularyKey Name { get; private set; }
@@ -129,7 +127,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CorrectionShortName { get; private set; }
         public VocabularyKey CorrectionTimeZone { get; private set; }
         public VocabularyKey CompanyTaxID { get; private set; }
-
-
     }
 }

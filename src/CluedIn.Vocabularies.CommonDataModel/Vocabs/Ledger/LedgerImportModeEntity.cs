@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerImportModeEntityVocabulary()
         {
-            VocabularyName = "LedgerImportModeEntity";
+            VocabularyName = "Ledger Import Mode Entity";
             KeyPrefix = "commonDataModel.ledgerimportmodeentity";
             KeySeparator = ".";
             Grouping = "/LedgerImportModeEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BridgingAccountDisplayValue = group.Add(new VocabularyKey(nameof(BridgingAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ClassName = group.Add(new VocabularyKey(nameof(ClassName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BankAccount { get; private set; }
         public VocabularyKey ClassID { get; private set; }
         public VocabularyKey MethodOfImport { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Description { get; private set; }
         public VocabularyKey BridgingAccountDisplayValue { get; private set; }
         public VocabularyKey ClassName { get; private set; }
-
-
     }
 }

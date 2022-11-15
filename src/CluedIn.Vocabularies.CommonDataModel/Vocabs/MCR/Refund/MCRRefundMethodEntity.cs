@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRRefundMethodEntityVocabulary()
         {
-            VocabularyName = "MCRRefundMethodEntity";
+            VocabularyName = "MCR Refund Method Entity";
             KeyPrefix = "commonDataModel.mcrrefundmethodentity";
             KeySeparator = ".";
             Grouping = "/MCRRefundMethodEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CurrencyCode = group.Add(new VocabularyKey(nameof(CurrencyCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PaymentMode = group.Add(new VocabularyKey(nameof(PaymentMode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TenderTypeId = group.Add(new VocabularyKey(nameof(TenderTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CurrencyCode { get; private set; }
         public VocabularyKey PaymentMode { get; private set; }
         public VocabularyKey TenderTypeId { get; private set; }
-
-
     }
 }

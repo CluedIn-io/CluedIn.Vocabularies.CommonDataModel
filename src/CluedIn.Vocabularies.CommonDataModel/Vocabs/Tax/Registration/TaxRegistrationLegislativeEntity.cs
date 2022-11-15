@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxRegistrationLegislativeEntityVocabulary()
         {
-            VocabularyName = "TaxRegistrationLegislativeEntity";
+            VocabularyName = "Tax Registration Legislative Entity";
             KeyPrefix = "commonDataModel.taxregistrationlegislativeentity";
             KeySeparator = ".";
             Grouping = "/TaxRegistrationLegislativeEntity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Issuer = group.Add(new VocabularyKey(nameof(Issuer), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IssueDate = group.Add(new VocabularyKey(nameof(IssueDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Section = group.Add(new VocabularyKey(nameof(Section), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LegislationType { get; private set; }
         public VocabularyKey TaxRegstrationType { get; private set; }
         public VocabularyKey CountryRegionId { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Issuer { get; private set; }
         public VocabularyKey IssueDate { get; private set; }
         public VocabularyKey Section { get; private set; }
-
-
     }
 }

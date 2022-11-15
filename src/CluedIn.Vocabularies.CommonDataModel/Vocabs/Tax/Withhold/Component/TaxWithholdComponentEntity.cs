@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxWithholdComponentEntityVocabulary()
         {
-            VocabularyName = "TaxWithholdComponentEntity";
+            VocabularyName = "Tax Withhold Component Entity";
             KeyPrefix = "commonDataModel.taxwithholdcomponententity";
             KeySeparator = ".";
             Grouping = "/TaxWithholdComponentEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TaxType = group.Add(new VocabularyKey(nameof(TaxType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WithholdingTaxComponentGroupRecId = group.Add(new VocabularyKey(nameof(WithholdingTaxComponentGroupRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WithholdingTaxComponentGroup = group.Add(new VocabularyKey(nameof(WithholdingTaxComponentGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WithholingTaxComponent { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey TaxType { get; private set; }
         public VocabularyKey WithholdingTaxComponentGroupRecId { get; private set; }
         public VocabularyKey WithholdingTaxComponentGroup { get; private set; }
-
-
     }
 }

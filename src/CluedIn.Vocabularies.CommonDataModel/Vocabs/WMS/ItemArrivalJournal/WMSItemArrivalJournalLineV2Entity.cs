@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WMSItemArrivalJournalLineV2EntityVocabulary()
         {
-            VocabularyName = "WMSItemArrivalJournalLineV2Entity";
+            VocabularyName = "WMS Item Arrival Journal Line V2 Entity";
             KeyPrefix = "commonDataModel.wmsitemarrivaljournallinev2entity";
             KeySeparator = ".";
             Grouping = "/WMSItemArrivalJournalLineV2Entity";
@@ -40,10 +40,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ReturnDispositionCodeId = group.Add(new VocabularyKey(nameof(ReturnDispositionCodeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReturnItemNumber = group.Add(new VocabularyKey(nameof(ReturnItemNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AccountNumber = group.Add(new VocabularyKey(nameof(AccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey JournalNumber { get; private set; }
         public VocabularyKey LineNumber { get; private set; }
         public VocabularyKey ItemNumber { get; private set; }
@@ -71,7 +69,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ReturnDispositionCodeId { get; private set; }
         public VocabularyKey ReturnItemNumber { get; private set; }
         public VocabularyKey AccountNumber { get; private set; }
-
-
     }
 }

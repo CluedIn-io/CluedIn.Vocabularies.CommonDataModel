@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPurchaseRequisitionReplenishmentCategoryAccessPolicyRuleEntityVocabulary()
         {
-            VocabularyName = "PurchPurchaseRequisitionReplenishmentCategoryAccessPolicyRuleEntity";
+            VocabularyName = "Purch Purchase Requisition Replenishment Category Access Policy Rule Entity";
             KeyPrefix = "commonDataModel.purchpurchaserequisitionreplenishmentcategoryaccesspolicyruleentity";
             KeySeparator = ".";
             Grouping = "/PurchPurchaseRequisitionReplenishmentCategoryAccessPolicyRuleEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProcurementCategoryHierarchyName = group.Add(new VocabularyKey(nameof(ProcurementCategoryHierarchyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProcurementCategoryName = group.Add(new VocabularyKey(nameof(ProcurementCategoryName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProcurementCategory = group.Add(new VocabularyKey(nameof(ProcurementCategory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey ValidTo { get; private set; }
         public VocabularyKey PurchasingPolicyName { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProcurementCategoryHierarchyName { get; private set; }
         public VocabularyKey ProcurementCategoryName { get; private set; }
         public VocabularyKey ProcurementCategory { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPublishedRequestForQuotationHeaderDocumentAttachmentEntityVocabulary()
         {
-            VocabularyName = "PurchPublishedRequestForQuotationHeaderDocumentAttachmentEntity";
+            VocabularyName = "Purch Published Request For Quotation Header Document Attachment Entity";
             KeyPrefix = "commonDataModel.purchpublishedrequestforquotationheaderdocumentattachmententity";
             KeySeparator = ".";
             Grouping = "/PurchPublishedRequestForQuotationHeaderDocumentAttachmentEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ActualCompanyId = group.Add(new VocabularyKey(nameof(ActualCompanyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsDefaultAttachment = group.Add(new VocabularyKey(nameof(IsDefaultAttachment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PublishedRFQCaseNumber = group.Add(new VocabularyKey(nameof(PublishedRFQCaseNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DocumentId { get; private set; }
         public VocabularyKey DocumentAttachmentTypeCode { get; private set; }
         public VocabularyKey AttachmentDescription { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ActualCompanyId { get; private set; }
         public VocabularyKey IsDefaultAttachment { get; private set; }
         public VocabularyKey PublishedRFQCaseNumber { get; private set; }
-
-
     }
 }

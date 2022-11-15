@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DirPartyLocationPostalAddressHistoricalEntityVocabulary()
         {
-            VocabularyName = "DirPartyLocationPostalAddressHistoricalEntity";
+            VocabularyName = "Dir Party Location Postal Address Historical Entity";
             KeyPrefix = "commonDataModel.dirpartylocationpostaladdresshistoricalentity";
             KeySeparator = ".";
             Grouping = "/DirPartyLocationPostalAddressHistoricalEntity";
@@ -50,10 +50,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ValidTo = group.Add(new VocabularyKey(nameof(ValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ZipCode = group.Add(new VocabularyKey(nameof(ZipCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Roles = group.Add(new VocabularyKey(nameof(Roles), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AttentionToAddressLine { get; private set; }
         public VocabularyKey IsLocationOwner { get; private set; }
         public VocabularyKey IsPostalAddress { get; private set; }
@@ -91,7 +89,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ValidTo { get; private set; }
         public VocabularyKey ZipCode { get; private set; }
         public VocabularyKey Roles { get; private set; }
-
-
     }
 }

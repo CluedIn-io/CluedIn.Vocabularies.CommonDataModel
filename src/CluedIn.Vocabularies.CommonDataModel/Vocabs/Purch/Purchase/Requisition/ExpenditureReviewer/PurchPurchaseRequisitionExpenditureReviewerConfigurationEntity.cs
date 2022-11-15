@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPurchaseRequisitionExpenditureReviewerConfigurationEntityVocabulary()
         {
-            VocabularyName = "PurchPurchaseRequisitionExpenditureReviewerConfigurationEntity";
+            VocabularyName = "Purch Purchase Requisition Expenditure Reviewer Configuration Entity";
             KeyPrefix = "commonDataModel.purchpurchaserequisitionexpenditurereviewerconfigurationentity";
             KeySeparator = ".";
             Grouping = "/PurchPurchaseRequisitionExpenditureReviewerConfigurationEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 ConfigurationName = group.Add(new VocabularyKey(nameof(ConfigurationName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExpenditureDocumentType = group.Add(new VocabularyKey(nameof(ExpenditureDocumentType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ConfigurationName { get; private set; }
         public VocabularyKey ExpenditureDocumentType { get; private set; }
-
-
     }
 }

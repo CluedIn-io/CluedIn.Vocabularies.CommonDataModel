@@ -6,30 +6,26 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EntityCounterVocabulary()
         {
-            VocabularyName = "EntityCounter";
+            VocabularyName = "Entity Counter";
             KeyPrefix = "commonDataModel.entitycounter";
             KeySeparator = ".";
             Grouping = "/EntityCounter";
 
             AddGroup("EntityCounter Details", group =>
             {
-                counterValue = group.Add(new VocabularyKey(nameof(counterValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                entityCounterId = group.Add(new VocabularyKey(nameof(entityCounterId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                entityName = group.Add(new VocabularyKey(nameof(entityName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                @lock = group.Add(new VocabularyKey(nameof(@lock), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                CounterValue = group.Add(new VocabularyKey(nameof(CounterValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EntityCounterId = group.Add(new VocabularyKey(nameof(EntityCounterId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EntityName = group.Add(new VocabularyKey(nameof(EntityName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                @Lock = group.Add(new VocabularyKey(nameof(@Lock), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey counterValue { get; private set; }
-        public VocabularyKey entityCounterId { get; private set; }
-        public VocabularyKey entityName { get; private set; }
-        public VocabularyKey @lock { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey CounterValue { get; private set; }
+        public VocabularyKey EntityCounterId { get; private set; }
+        public VocabularyKey EntityName { get; private set; }
+        public VocabularyKey @Lock { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

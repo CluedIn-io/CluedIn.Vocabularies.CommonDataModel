@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollFormW2BoxReportingAdjustmentEntityVocabulary()
         {
-            VocabularyName = "PayrollFormW2BoxReportingAdjustmentEntity";
+            VocabularyName = "Payroll Form W2 Box Reporting Adjustment Entity";
             KeyPrefix = "commonDataModel.payrollformw2boxreportingadjustmententity";
             KeySeparator = ".";
             Grouping = "/PayrollFormW2BoxReportingAdjustmentEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 W2BoxNumber = group.Add(new VocabularyKey(nameof(W2BoxNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Worker = group.Add(new VocabularyKey(nameof(Worker), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PersonnelNumber = group.Add(new VocabularyKey(nameof(PersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Amount { get; private set; }
         public VocabularyKey ReportingDate { get; private set; }
         public VocabularyKey W2BoxLabel { get; private set; }
         public VocabularyKey W2BoxNumber { get; private set; }
         public VocabularyKey Worker { get; private set; }
         public VocabularyKey PersonnelNumber { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollBenefitAccountingRuleEntityVocabulary()
         {
-            VocabularyName = "PayrollBenefitAccountingRuleEntity";
+            VocabularyName = "Payroll Benefit Accounting Rule Entity";
             KeyPrefix = "commonDataModel.payrollbenefitaccountingruleentity";
             KeySeparator = ".";
             Grouping = "/PayrollBenefitAccountingRuleEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LegalEntityId = group.Add(new VocabularyKey(nameof(LegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PlanId = group.Add(new VocabularyKey(nameof(PlanId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MainAccountDisplayValue = group.Add(new VocabularyKey(nameof(MainAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Plan { get; private set; }
         public VocabularyKey MainAccount { get; private set; }
         public VocabularyKey LegalEntity { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LegalEntityId { get; private set; }
         public VocabularyKey PlanId { get; private set; }
         public VocabularyKey MainAccountDisplayValue { get; private set; }
-
-
     }
 }

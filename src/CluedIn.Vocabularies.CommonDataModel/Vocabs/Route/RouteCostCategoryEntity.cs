@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RouteCostCategoryEntityVocabulary()
         {
-            VocabularyName = "RouteCostCategoryEntity";
+            VocabularyName = "Route Cost Category Entity";
             KeyPrefix = "commonDataModel.routecostcategoryentity";
             KeySeparator = ".";
             Grouping = "/RouteCostCategoryEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AbsorbedWIPManufacturingCostMainAccountIdDisplayValue = group.Add(new VocabularyKey(nameof(AbsorbedWIPManufacturingCostMainAccountIdDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EstimatedAbsorbedManufacturingCostMainAccountIdDisplayValue = group.Add(new VocabularyKey(nameof(EstimatedAbsorbedManufacturingCostMainAccountIdDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EstimatedAbsorbedWIPManufacturingCostMainAccountIdDisplayValue = group.Add(new VocabularyKey(nameof(EstimatedAbsorbedWIPManufacturingCostMainAccountIdDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CategoryId { get; private set; }
         public VocabularyKey CostGroupId { get; private set; }
         public VocabularyKey UnitCost { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AbsorbedWIPManufacturingCostMainAccountIdDisplayValue { get; private set; }
         public VocabularyKey EstimatedAbsorbedManufacturingCostMainAccountIdDisplayValue { get; private set; }
         public VocabularyKey EstimatedAbsorbedWIPManufacturingCostMainAccountIdDisplayValue { get; private set; }
-
-
     }
 }

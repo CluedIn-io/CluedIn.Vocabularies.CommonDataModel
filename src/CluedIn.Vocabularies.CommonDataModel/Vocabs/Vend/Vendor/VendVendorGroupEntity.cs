@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendVendorGroupEntityVocabulary()
         {
-            VocabularyName = "VendVendorGroupEntity";
+            VocabularyName = "Vend Vendor Group Entity";
             KeyPrefix = "commonDataModel.vendvendorgroupentity";
             KeySeparator = ".";
             Grouping = "/VendVendorGroupEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsExcludedFromSearchResults = group.Add(new VocabularyKey(nameof(IsExcludedFromSearchResults), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendAccountNumSeq = group.Add(new VocabularyKey(nameof(VendAccountNumSeq), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorAccountNumberSequence = group.Add(new VocabularyKey(nameof(VendorAccountNumberSequence), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey VendorGroupId { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey DefaultPaymentTermName { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsExcludedFromSearchResults { get; private set; }
         public VocabularyKey VendAccountNumSeq { get; private set; }
         public VocabularyKey VendorAccountNumberSequence { get; private set; }
-
-
     }
 }

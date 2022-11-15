@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationTransferLoadBuildingTemplateSequenceEntityVocabulary()
         {
-            VocabularyName = "TMSTransportationTransferLoadBuildingTemplateSequenceEntity";
+            VocabularyName = "TMS Transportation Transfer Load Building Template Sequence Entity";
             KeyPrefix = "commonDataModel.tmstransportationtransferloadbuildingtemplatesequenceentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationTransferLoadBuildingTemplateSequenceEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LoadTemplateId = group.Add(new VocabularyKey(nameof(LoadTemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SequenceNumber = group.Add(new VocabularyKey(nameof(SequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransportationTransferLoadBuildingTemplateName = group.Add(new VocabularyKey(nameof(TransportationTransferLoadBuildingTemplateName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LoadTemplateId { get; private set; }
         public VocabularyKey SequenceNumber { get; private set; }
         public VocabularyKey TransportationTransferLoadBuildingTemplateName { get; private set; }
-
-
     }
 }

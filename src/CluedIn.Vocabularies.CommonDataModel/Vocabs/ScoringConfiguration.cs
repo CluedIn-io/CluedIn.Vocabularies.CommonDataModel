@@ -6,48 +6,44 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ScoringConfigurationVocabulary()
         {
-            VocabularyName = "ScoringConfiguration";
+            VocabularyName = "Scoring Configuration";
             KeyPrefix = "commonDataModel.scoringconfiguration";
             KeySeparator = ".";
             Grouping = "/ScoringConfiguration";
 
             AddGroup("ScoringConfiguration Details", group =>
             {
-                automaticleadscorescleanupEnabled = group.Add(new VocabularyKey(nameof(automaticleadscorescleanupEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                automaticqualificationEnabled = group.Add(new VocabularyKey(nameof(automaticqualificationEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                automaticSalesreadyEnabled = group.Add(new VocabularyKey(nameof(automaticSalesreadyEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                leadscoringconfigurationId = group.Add(new VocabularyKey(nameof(leadscoringconfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                createdOnBehalfBy = group.Add(new VocabularyKey(nameof(createdOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                importSequenceNumber = group.Add(new VocabularyKey(nameof(importSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                modifiedOn = group.Add(new VocabularyKey(nameof(modifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                modifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(modifiedOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                overriddenCreatedOn = group.Add(new VocabularyKey(nameof(overriddenCreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                timeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(timeZoneRuleVersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AutomaticleadscorescleanupEnabled = group.Add(new VocabularyKey(nameof(AutomaticleadscorescleanupEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AutomaticqualificationEnabled = group.Add(new VocabularyKey(nameof(AutomaticqualificationEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AutomaticSalesreadyEnabled = group.Add(new VocabularyKey(nameof(AutomaticSalesreadyEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LeadscoringconfigurationId = group.Add(new VocabularyKey(nameof(LeadscoringconfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOnBehalfBy = group.Add(new VocabularyKey(nameof(CreatedOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(ModifiedOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
-        public VocabularyKey automaticleadscorescleanupEnabled { get; private set; }
-        public VocabularyKey automaticqualificationEnabled { get; private set; }
-        public VocabularyKey automaticSalesreadyEnabled { get; private set; }
-        public VocabularyKey leadscoringconfigurationId { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey createdOn { get; private set; }
-        public VocabularyKey createdOnBehalfBy { get; private set; }
-        public VocabularyKey importSequenceNumber { get; private set; }
-        public VocabularyKey modifiedOn { get; private set; }
-        public VocabularyKey modifiedOnBehalfBy { get; private set; }
-        public VocabularyKey overriddenCreatedOn { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-        public VocabularyKey timeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey AutomaticleadscorescleanupEnabled { get; private set; }
+        public VocabularyKey AutomaticqualificationEnabled { get; private set; }
+        public VocabularyKey AutomaticSalesreadyEnabled { get; private set; }
+        public VocabularyKey LeadscoringconfigurationId { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey CreatedOnBehalfBy { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey ModifiedOnBehalfBy { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-
-
     }
 }

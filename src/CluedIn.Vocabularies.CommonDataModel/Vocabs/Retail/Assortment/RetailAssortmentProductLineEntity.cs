@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailAssortmentProductLineEntityVocabulary()
         {
-            VocabularyName = "RetailAssortmentProductLineEntity";
+            VocabularyName = "Retail Assortment Product Line Entity";
             KeyPrefix = "commonDataModel.retailassortmentproductlineentity";
             KeySeparator = ".";
             Grouping = "/RetailAssortmentProductLineEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CategoryName = group.Add(new VocabularyKey(nameof(CategoryName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineNumber = group.Add(new VocabularyKey(nameof(LineNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SourceDataAreaId = group.Add(new VocabularyKey(nameof(SourceDataAreaId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LineType { get; private set; }
         public VocabularyKey RetailGroupMemberLineId { get; private set; }
         public VocabularyKey Status { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CategoryName { get; private set; }
         public VocabularyKey LineNumber { get; private set; }
         public VocabularyKey SourceDataAreaId { get; private set; }
-
-
     }
 }

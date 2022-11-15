@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvAllowanceRateEntityVocabulary()
         {
-            VocabularyName = "TrvAllowanceRateEntity";
+            VocabularyName = "Trv Allowance Rate Entity";
             KeyPrefix = "commonDataModel.trvallowancerateentity";
             KeySeparator = ".";
             Grouping = "/TrvAllowanceRateEntity";
@@ -31,10 +31,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Location = group.Add(new VocabularyKey(nameof(Location), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StateId = group.Add(new VocabularyKey(nameof(StateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CountryRegionId = group.Add(new VocabularyKey(nameof(CountryRegionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ReductionInPercentageForBreakfast { get; private set; }
         public VocabularyKey ReductionInPercentageForDinner { get; private set; }
         public VocabularyKey ReductionInPercentageForLunch { get; private set; }
@@ -53,7 +51,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Location { get; private set; }
         public VocabularyKey StateId { get; private set; }
         public VocabularyKey CountryRegionId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CostSheetNodeCalculationFactorV2EntityVocabulary()
         {
-            VocabularyName = "CostSheetNodeCalculationFactorV2Entity";
+            VocabularyName = "Cost Sheet Node Calculation Factor V2 Entity";
             KeyPrefix = "commonDataModel.costsheetnodecalculationfactorv2entity";
             KeySeparator = ".";
             Grouping = "/CostSheetNodeCalculationFactorV2Entity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CostSheetNodeType = group.Add(new VocabularyKey(nameof(CostSheetNodeType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CostingVersionStatus = group.Add(new VocabularyKey(nameof(CostingVersionStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Amount = group.Add(new VocabularyKey(nameof(Amount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FromDate { get; private set; }
         public VocabularyKey PriceSiteId { get; private set; }
         public VocabularyKey SurchargePercentage { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CostSheetNodeType { get; private set; }
         public VocabularyKey CostingVersionStatus { get; private set; }
         public VocabularyKey Amount { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LogisticsPostalAddressElectronicContactEntityVocabulary()
         {
-            VocabularyName = "LogisticsPostalAddressElectronicContactEntity";
+            VocabularyName = "Logistics Postal Address Electronic Contact Entity";
             KeyPrefix = "commonDataModel.logisticspostaladdresselectroniccontactentity";
             KeySeparator = ".";
             Grouping = "/LogisticsPostalAddressElectronicContactEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PostalAddressLocationId = group.Add(new VocabularyKey(nameof(PostalAddressLocationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Purpose = group.Add(new VocabularyKey(nameof(Purpose), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LocationId = group.Add(new VocabularyKey(nameof(LocationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InternationalCallingCode { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey IsInstantMessage { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PostalAddressLocationId { get; private set; }
         public VocabularyKey Purpose { get; private set; }
         public VocabularyKey LocationId { get; private set; }
-
-
     }
 }

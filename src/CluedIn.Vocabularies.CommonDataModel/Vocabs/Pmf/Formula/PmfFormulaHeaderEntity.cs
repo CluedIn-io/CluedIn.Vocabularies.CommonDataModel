@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PmfFormulaHeaderEntityVocabulary()
         {
-            VocabularyName = "PmfFormulaHeaderEntity";
+            VocabularyName = "Pmf Formula Header Entity";
             KeyPrefix = "commonDataModel.pmfformulaheaderentity";
             KeySeparator = ".";
             Grouping = "/PmfFormulaHeaderEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FormulaName = group.Add(new VocabularyKey(nameof(FormulaName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductionSiteId = group.Add(new VocabularyKey(nameof(ProductionSiteId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ApproverPersonnelNumber = group.Add(new VocabularyKey(nameof(ApproverPersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsApproved { get; private set; }
         public VocabularyKey ApproverId { get; private set; }
         public VocabularyKey FormulaId { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FormulaName { get; private set; }
         public VocabularyKey ProductionSiteId { get; private set; }
         public VocabularyKey ApproverPersonnelNumber { get; private set; }
-
-
     }
 }

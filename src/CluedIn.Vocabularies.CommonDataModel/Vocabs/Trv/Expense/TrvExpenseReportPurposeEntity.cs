@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvExpenseReportPurposeEntityVocabulary()
         {
-            VocabularyName = "TrvExpenseReportPurposeEntity";
+            VocabularyName = "Trv Expense Report Purpose Entity";
             KeyPrefix = "commonDataModel.trvexpensereportpurposeentity";
             KeySeparator = ".";
             Grouping = "/TrvExpenseReportPurposeEntity";
@@ -14,12 +14,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             AddGroup("TrvExpenseReportPurposeEntity Details", group =>
             {
                 Purpose = group.Add(new VocabularyKey(nameof(Purpose), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Purpose { get; private set; }
-
-
     }
 }

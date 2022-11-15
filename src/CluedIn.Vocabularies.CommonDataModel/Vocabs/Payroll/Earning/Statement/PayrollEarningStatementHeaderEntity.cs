@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollEarningStatementHeaderEntityVocabulary()
         {
-            VocabularyName = "PayrollEarningStatementHeaderEntity";
+            VocabularyName = "Payroll Earning Statement Header Entity";
             KeyPrefix = "commonDataModel.payrollearningstatementheaderentity";
             KeySeparator = ".";
             Grouping = "/PayrollEarningStatementHeaderEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PayCycleId = group.Add(new VocabularyKey(nameof(PayCycleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PersonnelNumber = group.Add(new VocabularyKey(nameof(PersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Company = group.Add(new VocabularyKey(nameof(Company), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey EarningsStatementNumber { get; private set; }
         public VocabularyKey Note { get; private set; }
         public VocabularyKey PayPeriod { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PayCycleId { get; private set; }
         public VocabularyKey PersonnelNumber { get; private set; }
         public VocabularyKey Company { get; private set; }
-
-
     }
 }

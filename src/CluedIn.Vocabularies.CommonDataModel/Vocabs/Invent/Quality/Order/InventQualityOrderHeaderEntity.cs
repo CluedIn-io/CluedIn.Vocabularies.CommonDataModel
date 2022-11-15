@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventQualityOrderHeaderEntityVocabulary()
         {
-            VocabularyName = "InventQualityOrderHeaderEntity";
+            VocabularyName = "Invent Quality Order Header Entity";
             KeyPrefix = "commonDataModel.inventqualityorderheaderentity";
             KeySeparator = ".";
             Grouping = "/InventQualityOrderHeaderEntity";
@@ -64,10 +64,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductConfigurationId = group.Add(new VocabularyKey(nameof(ProductConfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ItemSerialNumber = group.Add(new VocabularyKey(nameof(ItemSerialNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WarehouseLocationId = group.Add(new VocabularyKey(nameof(WarehouseLocationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AcceptableQualityLevelPercentage { get; private set; }
         public VocabularyKey DefaultDimension { get; private set; }
         public VocabularyKey FailedOrderInventoryStatusId { get; private set; }
@@ -119,7 +117,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProductConfigurationId { get; private set; }
         public VocabularyKey ItemSerialNumber { get; private set; }
         public VocabularyKey WarehouseLocationId { get; private set; }
-
-
     }
 }

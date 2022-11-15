@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RDeferralsLedgerAccountsEntityVocabulary()
         {
-            VocabularyName = "RDeferralsLedgerAccountsEntity";
+            VocabularyName = "R Deferrals Ledger Accounts Entity";
             KeyPrefix = "commonDataModel.rdeferralsledgeraccountsentity";
             KeySeparator = ".";
             Grouping = "/RDeferralsLedgerAccountsEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PostValue = group.Add(new VocabularyKey(nameof(PostValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MainAccountDisplayValue = group.Add(new VocabularyKey(nameof(MainAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OffsetAccountDisplayValue = group.Add(new VocabularyKey(nameof(OffsetAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Groupings { get; private set; }
         public VocabularyKey MainAccount { get; private set; }
         public VocabularyKey OffsetAccount { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PostValue { get; private set; }
         public VocabularyKey MainAccountDisplayValue { get; private set; }
         public VocabularyKey OffsetAccountDisplayValue { get; private set; }
-
-
     }
 }

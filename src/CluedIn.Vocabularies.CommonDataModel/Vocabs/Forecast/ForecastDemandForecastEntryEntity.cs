@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ForecastDemandForecastEntryEntityVocabulary()
         {
-            VocabularyName = "ForecastDemandForecastEntryEntity";
+            VocabularyName = "Forecast Demand Forecast Entry Entity";
             KeyPrefix = "commonDataModel.forecastdemandforecastentryentity";
             KeySeparator = ".";
             Grouping = "/ForecastDemandForecastEntryEntity";
@@ -38,10 +38,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ForecastedUnitCost = group.Add(new VocabularyKey(nameof(ForecastedUnitCost), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DimensionDisplayValue = group.Add(new VocabularyKey(nameof(DimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Dimension = group.Add(new VocabularyKey(nameof(Dimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ForecastModelId { get; private set; }
         public VocabularyKey ForecastStartDate { get; private set; }
         public VocabularyKey ForecastAllocationMethod { get; private set; }
@@ -67,7 +65,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ForecastedUnitCost { get; private set; }
         public VocabularyKey DimensionDisplayValue { get; private set; }
         public VocabularyKey Dimension { get; private set; }
-
-
     }
 }

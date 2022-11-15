@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WorkflowVersionEntityVocabulary()
         {
-            VocabularyName = "WorkflowVersionEntity";
+            VocabularyName = "Workflow Version Entity";
             KeyPrefix = "commonDataModel.workflowversionentity";
             KeySeparator = ".";
             Grouping = "/WorkflowVersionEntity";
@@ -36,10 +36,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WorkflowTypeName = group.Add(new VocabularyKey(nameof(WorkflowTypeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Type = group.Add(new VocabularyKey(nameof(Type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VersionId = group.Add(new VocabularyKey(nameof(VersionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ActivationConditionId { get; private set; }
         public VocabularyKey ActivationConditionType { get; private set; }
         public VocabularyKey WorkflowId { get; private set; }
@@ -63,7 +61,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WorkflowTypeName { get; private set; }
         public VocabularyKey Type { get; private set; }
         public VocabularyKey VersionId { get; private set; }
-
-
     }
 }

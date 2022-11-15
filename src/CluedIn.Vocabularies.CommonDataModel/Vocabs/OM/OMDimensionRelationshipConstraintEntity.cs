@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public OMDimensionRelationshipConstraintEntityVocabulary()
         {
-            VocabularyName = "OMDimensionRelationshipConstraintEntity";
+            VocabularyName = "OM Dimension Relationship Constraint Entity";
             KeyPrefix = "commonDataModel.omdimensionrelationshipconstraintentity";
             KeySeparator = ".";
             Grouping = "/OMDimensionRelationshipConstraintEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RightAccountStructureName = group.Add(new VocabularyKey(nameof(RightAccountStructureName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RightAccountStructureStatus = group.Add(new VocabularyKey(nameof(RightAccountStructureStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RightReferenceFieldName = group.Add(new VocabularyKey(nameof(RightReferenceFieldName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LeftSegment { get; private set; }
         public VocabularyKey LeftDimensionHierarchyLevel { get; private set; }
         public VocabularyKey LeftAccountStructureName { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RightAccountStructureName { get; private set; }
         public VocabularyKey RightAccountStructureStatus { get; private set; }
         public VocabularyKey RightReferenceFieldName { get; private set; }
-
-
     }
 }

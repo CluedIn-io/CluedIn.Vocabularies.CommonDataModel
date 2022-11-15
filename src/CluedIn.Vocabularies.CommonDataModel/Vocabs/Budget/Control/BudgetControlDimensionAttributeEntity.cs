@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetControlDimensionAttributeEntityVocabulary()
         {
-            VocabularyName = "BudgetControlDimensionAttributeEntity";
+            VocabularyName = "Budget Control Dimension Attribute Entity";
             KeyPrefix = "commonDataModel.budgetcontroldimensionattributeentity";
             KeySeparator = ".";
             Grouping = "/BudgetControlDimensionAttributeEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Status = group.Add(new VocabularyKey(nameof(Status), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BudgetPrimaryLedgerDimensionAttribute = group.Add(new VocabularyKey(nameof(BudgetPrimaryLedgerDimensionAttribute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PrimaryLedger = group.Add(new VocabularyKey(nameof(PrimaryLedger), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LegalEntityId { get; private set; }
         public VocabularyKey InUseBy { get; private set; }
         public VocabularyKey Position { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Status { get; private set; }
         public VocabularyKey BudgetPrimaryLedgerDimensionAttribute { get; private set; }
         public VocabularyKey PrimaryLedger { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesOrderLineCDSEntityVocabulary()
         {
-            VocabularyName = "SalesOrderLineCDSEntity";
+            VocabularyName = "Sales Order Line CDS Entity";
             KeyPrefix = "commonDataModel.salesorderlinecdsentity";
             KeySeparator = ".";
             Grouping = "/SalesOrderLineCDSEntity";
@@ -88,10 +88,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProjectLinePropertyId = group.Add(new VocabularyKey(nameof(ProjectLinePropertyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesProductCategoryHierarchyName = group.Add(new VocabularyKey(nameof(SalesProductCategoryHierarchyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DeliveryPostalAddressRecId = group.Add(new VocabularyKey(nameof(DeliveryPostalAddressRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SalesOrderNumber { get; private set; }
         public VocabularyKey LineCreationSequenceNumber { get; private set; }
         public VocabularyKey SalesOrderLineStatus { get; private set; }
@@ -167,7 +165,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProjectLinePropertyId { get; private set; }
         public VocabularyKey SalesProductCategoryHierarchyName { get; private set; }
         public VocabularyKey DeliveryPostalAddressRecId { get; private set; }
-
-
     }
 }

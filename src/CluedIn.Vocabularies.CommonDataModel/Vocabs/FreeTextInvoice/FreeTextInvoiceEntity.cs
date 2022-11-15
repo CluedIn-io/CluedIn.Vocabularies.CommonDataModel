@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FreeTextInvoiceEntityVocabulary()
         {
-            VocabularyName = "FreeTextInvoiceEntity";
+            VocabularyName = "Free Text Invoice Entity";
             KeyPrefix = "commonDataModel.freetextinvoiceentity";
             KeySeparator = ".";
             Grouping = "/FreeTextInvoiceEntity";
@@ -84,10 +84,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DateOfVATRegister = group.Add(new VocabularyKey(nameof(DateOfVATRegister), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesDate = group.Add(new VocabularyKey(nameof(SalesDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IntentLetterId_IT = group.Add(new VocabularyKey(nameof(IntentLetterId_IT), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FreeTextNumber { get; private set; }
         public VocabularyKey InvoiceDate { get; private set; }
         public VocabularyKey CustomerAccount { get; private set; }
@@ -159,7 +157,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DateOfVATRegister { get; private set; }
         public VocabularyKey SalesDate { get; private set; }
         public VocabularyKey IntentLetterId_IT { get; private set; }
-
-
     }
 }

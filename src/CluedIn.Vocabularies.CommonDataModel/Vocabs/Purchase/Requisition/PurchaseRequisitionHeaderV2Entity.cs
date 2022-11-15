@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchaseRequisitionHeaderV2EntityVocabulary()
         {
-            VocabularyName = "PurchaseRequisitionHeaderV2Entity";
+            VocabularyName = "Purchase Requisition Header V2 Entity";
             KeyPrefix = "commonDataModel.purchaserequisitionheaderv2entity";
             KeySeparator = ".";
             Grouping = "/PurchaseRequisitionHeaderV2Entity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DefaultProjectId = group.Add(new VocabularyKey(nameof(DefaultProjectId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsPurchaseRequisitionOnHold = group.Add(new VocabularyKey(nameof(IsPurchaseRequisitionOnHold), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OnHoldExplanation = group.Add(new VocabularyKey(nameof(OnHoldExplanation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RequisitionNumber { get; private set; }
         public VocabularyKey RequisitionName { get; private set; }
         public VocabularyKey PreparerRecId { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DefaultProjectId { get; private set; }
         public VocabularyKey IsPurchaseRequisitionOnHold { get; private set; }
         public VocabularyKey OnHoldExplanation { get; private set; }
-
-
     }
 }

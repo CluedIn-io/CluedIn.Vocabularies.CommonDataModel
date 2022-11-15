@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SMAServiceOrderHeaderEntityVocabulary()
         {
-            VocabularyName = "SMAServiceOrderHeaderEntity";
+            VocabularyName = "SMA Service Order Header Entity";
             KeyPrefix = "commonDataModel.smaserviceorderheaderentity";
             KeySeparator = ".";
             Grouping = "/SMAServiceOrderHeaderEntity";
@@ -61,10 +61,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ServicePostalAddressRecId = group.Add(new VocabularyKey(nameof(ServicePostalAddressRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ServiceAddressTimeZone = group.Add(new VocabularyKey(nameof(ServiceAddressTimeZone), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsServiceAddressOrderSpecific = group.Add(new VocabularyKey(nameof(IsServiceAddressOrderSpecific), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ServiceOrderNumber { get; private set; }
         public VocabularyKey ServiceOrderDescription { get; private set; }
         public VocabularyKey ServiceCustomerAccountNumber { get; private set; }
@@ -113,7 +111,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ServicePostalAddressRecId { get; private set; }
         public VocabularyKey ServiceAddressTimeZone { get; private set; }
         public VocabularyKey IsServiceAddressOrderSpecific { get; private set; }
-
-
     }
 }

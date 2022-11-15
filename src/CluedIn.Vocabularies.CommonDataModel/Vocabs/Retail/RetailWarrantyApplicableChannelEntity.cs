@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailWarrantyApplicableChannelEntityVocabulary()
         {
-            VocabularyName = "RetailWarrantyApplicableChannelEntity";
+            VocabularyName = "Retail Warranty Applicable Channel Entity";
             KeyPrefix = "commonDataModel.retailwarrantyapplicablechannelentity";
             KeySeparator = ".";
             Grouping = "/RetailWarrantyApplicableChannelEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PartyNumber = group.Add(new VocabularyKey(nameof(PartyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Status = group.Add(new VocabularyKey(nameof(Status), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineIdentifier = group.Add(new VocabularyKey(nameof(LineIdentifier), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WarrantyGroupId { get; private set; }
         public VocabularyKey OMHierarchyTypeId { get; private set; }
         public VocabularyKey OMInternalOrganizationId { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PartyNumber { get; private set; }
         public VocabularyKey Status { get; private set; }
         public VocabularyKey LineIdentifier { get; private set; }
-
-
     }
 }

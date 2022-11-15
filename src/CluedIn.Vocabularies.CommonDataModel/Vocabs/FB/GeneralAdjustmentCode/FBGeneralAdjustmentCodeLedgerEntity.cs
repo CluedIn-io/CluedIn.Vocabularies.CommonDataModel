@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FBGeneralAdjustmentCodeLedgerEntityVocabulary()
         {
-            VocabularyName = "FBGeneralAdjustmentCodeLedgerEntity";
+            VocabularyName = "FB General Adjustment Code Ledger Entity";
             KeyPrefix = "commonDataModel.fbgeneraladjustmentcodeledgerentity";
             KeySeparator = ".";
             Grouping = "/FBGeneralAdjustmentCodeLedgerEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TaxCode = group.Add(new VocabularyKey(nameof(TaxCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LedgerDimension = group.Add(new VocabularyKey(nameof(LedgerDimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(LedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FBGeneralAdjustmentCodeRecId { get; private set; }
         public VocabularyKey FBGeneralAdjustmentCodeIdentification { get; private set; }
         public VocabularyKey Company { get; private set; }
         public VocabularyKey TaxCode { get; private set; }
         public VocabularyKey LedgerDimension { get; private set; }
         public VocabularyKey LedgerDimensionDisplayValue { get; private set; }
-
-
     }
 }

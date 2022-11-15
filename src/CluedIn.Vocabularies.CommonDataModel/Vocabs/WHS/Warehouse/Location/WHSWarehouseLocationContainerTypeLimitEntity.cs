@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseLocationContainerTypeLimitEntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseLocationContainerTypeLimitEntity";
+            VocabularyName = "WHS Warehouse Location Container Type Limit Entity";
             KeyPrefix = "commonDataModel.whswarehouselocationcontainertypelimitentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseLocationContainerTypeLimitEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WarehouseLocationProfileId = group.Add(new VocabularyKey(nameof(WarehouseLocationProfileId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ContainerTypeQuantityLimit = group.Add(new VocabularyKey(nameof(ContainerTypeQuantityLimit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ContainerTypeQuantityLimitUnitSymbol = group.Add(new VocabularyKey(nameof(ContainerTypeQuantityLimitUnitSymbol), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsUnlimitedQuantityAllowed { get; private set; }
         public VocabularyKey ContainerTypeId { get; private set; }
         public VocabularyKey WarehouseId { get; private set; }
         public VocabularyKey WarehouseLocationProfileId { get; private set; }
         public VocabularyKey ContainerTypeQuantityLimit { get; private set; }
         public VocabularyKey ContainerTypeQuantityLimitUnitSymbol { get; private set; }
-
-
     }
 }

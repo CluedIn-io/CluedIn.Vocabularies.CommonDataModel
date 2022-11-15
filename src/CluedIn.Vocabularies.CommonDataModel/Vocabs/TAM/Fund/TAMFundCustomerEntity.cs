@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TAMFundCustomerEntityVocabulary()
         {
-            VocabularyName = "TAMFundCustomerEntity";
+            VocabularyName = "TAM Fund Customer Entity";
             KeyPrefix = "commonDataModel.tamfundcustomerentity";
             KeySeparator = ".";
             Grouping = "/TAMFundCustomerEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 FundId = group.Add(new VocabularyKey(nameof(FundId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CustomerAccountNumber = group.Add(new VocabularyKey(nameof(CustomerAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FundId { get; private set; }
         public VocabularyKey CustomerAccountNumber { get; private set; }
-
-
     }
 }

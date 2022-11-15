@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmLaborUnionEntityVocabulary()
         {
-            VocabularyName = "HcmLaborUnionEntity";
+            VocabularyName = "Hcm Labor Union Entity";
             KeyPrefix = "commonDataModel.hcmlaborunionentity";
             KeySeparator = ".";
             Grouping = "/HcmLaborUnionEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EntitledToNegotiate = group.Add(new VocabularyKey(nameof(EntitledToNegotiate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UnionId = group.Add(new VocabularyKey(nameof(UnionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Name { get; private set; }
         public VocabularyKey EntitledToNegotiate { get; private set; }
         public VocabularyKey UnionId { get; private set; }
-
-
     }
 }

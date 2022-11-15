@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RDeferralsTableEntityVocabulary()
         {
-            VocabularyName = "RDeferralsTableEntity";
+            VocabularyName = "R Deferrals Table Entity";
             KeyPrefix = "commonDataModel.rdeferralstableentity";
             KeySeparator = ".";
             Grouping = "/RDeferralsTableEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Reference = group.Add(new VocabularyKey(nameof(Reference), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExpenseCode = group.Add(new VocabularyKey(nameof(ExpenseCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VATOffsetMethodForDeferrals = group.Add(new VocabularyKey(nameof(VATOffsetMethodForDeferrals), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DateAttached { get; private set; }
         public VocabularyKey DeferralId { get; private set; }
         public VocabularyKey Name { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Reference { get; private set; }
         public VocabularyKey ExpenseCode { get; private set; }
         public VocabularyKey VATOffsetMethodForDeferrals { get; private set; }
-
-
     }
 }

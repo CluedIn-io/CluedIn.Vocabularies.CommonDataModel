@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvExpenseParametersEntityVocabulary()
         {
-            VocabularyName = "TrvExpenseParametersEntity";
+            VocabularyName = "Trv Expense Parameters Entity";
             KeyPrefix = "commonDataModel.trvexpenseparametersentity";
             KeySeparator = ".";
             Grouping = "/TrvExpenseParametersEntity";
@@ -48,10 +48,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AllowEditCreditCardExchRate = group.Add(new VocabularyKey(nameof(AllowEditCreditCardExchRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UseAntiCorruption = group.Add(new VocabularyKey(nameof(UseAntiCorruption), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MealReductionType = group.Add(new VocabularyKey(nameof(MealReductionType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AllowEditDistributions { get; private set; }
         public VocabularyKey BarCodeSetupId { get; private set; }
         public VocabularyKey ConvertPBSExchToInternal { get; private set; }
@@ -87,7 +85,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AllowEditCreditCardExchRate { get; private set; }
         public VocabularyKey UseAntiCorruption { get; private set; }
         public VocabularyKey MealReductionType { get; private set; }
-
-
     }
 }

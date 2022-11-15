@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmPersonalContactOrganizationEntityVocabulary()
         {
-            VocabularyName = "HcmPersonalContactOrganizationEntity";
+            VocabularyName = "Hcm Personal Contact Organization Entity";
             KeyPrefix = "commonDataModel.hcmpersonalcontactorganizationentity";
             KeySeparator = ".";
             Grouping = "/HcmPersonalContactOrganizationEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RelationshipType = group.Add(new VocabularyKey(nameof(RelationshipType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsBeneficiary = group.Add(new VocabularyKey(nameof(IsBeneficiary), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OrganizationName = group.Add(new VocabularyKey(nameof(OrganizationName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WorkerPersonnelNumber { get; private set; }
         public VocabularyKey ContactOrganizationPartyNumber { get; private set; }
         public VocabularyKey RelationshipType { get; private set; }
         public VocabularyKey IsBeneficiary { get; private set; }
         public VocabularyKey OrganizationName { get; private set; }
-
-
     }
 }

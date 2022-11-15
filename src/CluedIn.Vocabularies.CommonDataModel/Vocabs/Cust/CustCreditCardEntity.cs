@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustCreditCardEntityVocabulary()
         {
-            VocabularyName = "CustCreditCardEntity";
+            VocabularyName = "Cust Credit Card Entity";
             KeyPrefix = "commonDataModel.custcreditcardentity";
             KeySeparator = ".";
             Grouping = "/CustCreditCardEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 State = group.Add(new VocabularyKey(nameof(State), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PostalCode = group.Add(new VocabularyKey(nameof(PostalCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Country = group.Add(new VocabularyKey(nameof(Country), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CustomerAccountNum { get; private set; }
         public VocabularyKey CardNumber { get; private set; }
         public VocabularyKey CreditCardTypeName { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey State { get; private set; }
         public VocabularyKey PostalCode { get; private set; }
         public VocabularyKey Country { get; private set; }
-
-
     }
 }

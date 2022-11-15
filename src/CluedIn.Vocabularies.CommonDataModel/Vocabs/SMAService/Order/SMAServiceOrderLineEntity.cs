@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SMAServiceOrderLineEntityVocabulary()
         {
-            VocabularyName = "SMAServiceOrderLineEntity";
+            VocabularyName = "SMA Service Order Line Entity";
             KeyPrefix = "commonDataModel.smaserviceorderlineentity";
             KeySeparator = ".";
             Grouping = "/SMAServiceOrderLineEntity";
@@ -72,10 +72,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ServiceInventorySiteId = group.Add(new VocabularyKey(nameof(ServiceInventorySiteId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ServiceInventoryWarehouseId = group.Add(new VocabularyKey(nameof(ServiceInventoryWarehouseId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ServiceInventoryStatusId = group.Add(new VocabularyKey(nameof(ServiceInventoryStatusId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProjectSalesCurrencyCode { get; private set; }
         public VocabularyKey DispatchActivityNumber { get; private set; }
         public VocabularyKey ProjectActivityNumber { get; private set; }
@@ -135,7 +133,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ServiceInventorySiteId { get; private set; }
         public VocabularyKey ServiceInventoryWarehouseId { get; private set; }
         public VocabularyKey ServiceInventoryStatusId { get; private set; }
-
-
     }
 }

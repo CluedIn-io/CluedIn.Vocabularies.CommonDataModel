@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustomerPriorityClassificationGroupEntityVocabulary()
         {
-            VocabularyName = "CustomerPriorityClassificationGroupEntity";
+            VocabularyName = "Customer Priority Classification Group Entity";
             KeyPrefix = "commonDataModel.customerpriorityclassificationgroupentity";
             KeySeparator = ".";
             Grouping = "/CustomerPriorityClassificationGroupEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 CustomerPriorityClassificationGroupCode = group.Add(new VocabularyKey(nameof(CustomerPriorityClassificationGroupCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CustomerPriorityClassificationGroupCode { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

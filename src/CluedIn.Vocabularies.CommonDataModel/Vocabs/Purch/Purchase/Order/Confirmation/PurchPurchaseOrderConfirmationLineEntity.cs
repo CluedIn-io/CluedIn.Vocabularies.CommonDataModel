@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPurchaseOrderConfirmationLineEntityVocabulary()
         {
-            VocabularyName = "PurchPurchaseOrderConfirmationLineEntity";
+            VocabularyName = "Purch Purchase Order Confirmation Line Entity";
             KeyPrefix = "commonDataModel.purchpurchaseorderconfirmationlineentity";
             KeySeparator = ".";
             Grouping = "/PurchPurchaseOrderConfirmationLineEntity";
@@ -125,10 +125,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ConfirmationDate = group.Add(new VocabularyKey(nameof(ConfirmationDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ArePricesIncludingSalesTax = group.Add(new VocabularyKey(nameof(ArePricesIncludingSalesTax), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TotalLineSalesTaxAmount = group.Add(new VocabularyKey(nameof(TotalLineSalesTaxAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PurchaseOrderLineStatus { get; private set; }
         public VocabularyKey SalesTaxItemGroupCode { get; private set; }
         public VocabularyKey SalesTaxGroupCode { get; private set; }
@@ -241,7 +239,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ConfirmationDate { get; private set; }
         public VocabularyKey ArePricesIncludingSalesTax { get; private set; }
         public VocabularyKey TotalLineSalesTaxAmount { get; private set; }
-
-
     }
 }

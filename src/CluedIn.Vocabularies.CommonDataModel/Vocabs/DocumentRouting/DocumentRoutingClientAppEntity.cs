@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DocumentRoutingClientAppEntityVocabulary()
         {
-            VocabularyName = "DocumentRoutingClientAppEntity";
+            VocabularyName = "Document Routing Client App Entity";
             KeyPrefix = "commonDataModel.documentroutingclientappentity";
             KeySeparator = ".";
             Grouping = "/DocumentRoutingClientAppEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 ClientApplicationId = group.Add(new VocabularyKey(nameof(ClientApplicationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ClientApplicationDescription = group.Add(new VocabularyKey(nameof(ClientApplicationDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ClientApplicationId { get; private set; }
         public VocabularyKey ClientApplicationDescription { get; private set; }
-
-
     }
 }

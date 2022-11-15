@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjCDSEstimateHoursEntityVocabulary()
         {
-            VocabularyName = "ProjCDSEstimateHoursEntity";
+            VocabularyName = "Proj CDS Estimate Hours Entity";
             KeyPrefix = "commonDataModel.projcdsestimatehoursentity";
             KeySeparator = ".";
             Grouping = "/ProjCDSEstimateHoursEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Duration = group.Add(new VocabularyKey(nameof(Duration), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ForecastModel = group.Add(new VocabularyKey(nameof(ForecastModel), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StartDate = group.Add(new VocabularyKey(nameof(StartDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TaskId { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey ProjectId { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Duration { get; private set; }
         public VocabularyKey ForecastModel { get; private set; }
         public VocabularyKey StartDate { get; private set; }
-
-
     }
 }

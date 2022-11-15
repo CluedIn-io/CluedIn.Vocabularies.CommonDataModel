@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollTaxCodeHeaderEntityVocabulary()
         {
-            VocabularyName = "PayrollTaxCodeHeaderEntity";
+            VocabularyName = "Payroll Tax Code Header Entity";
             KeyPrefix = "commonDataModel.payrolltaxcodeheaderentity";
             KeySeparator = ".";
             Grouping = "/PayrollTaxCodeHeaderEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsEmployerTax = group.Add(new VocabularyKey(nameof(IsEmployerTax), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsPayStatementLineLocked = group.Add(new VocabularyKey(nameof(IsPayStatementLineLocked), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Type = group.Add(new VocabularyKey(nameof(Type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CodeId { get; private set; }
         public VocabularyKey CountryRegionId { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey IsEmployerTax { get; private set; }
         public VocabularyKey IsPayStatementLineLocked { get; private set; }
         public VocabularyKey Type { get; private set; }
-
-
     }
 }

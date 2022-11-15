@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ElectronicPaymentTypeEntityVocabulary()
         {
-            VocabularyName = "ElectronicPaymentTypeEntity";
+            VocabularyName = "Electronic Payment Type Entity";
             KeyPrefix = "commonDataModel.electronicpaymenttypeentity";
             KeySeparator = ".";
             Grouping = "/ElectronicPaymentTypeEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 PaymentType = group.Add(new VocabularyKey(nameof(PaymentType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PaymentType { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

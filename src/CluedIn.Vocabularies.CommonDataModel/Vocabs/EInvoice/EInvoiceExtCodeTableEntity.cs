@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EInvoiceExtCodeTableEntityVocabulary()
         {
-            VocabularyName = "EInvoiceExtCodeTableEntity";
+            VocabularyName = "E Invoice Ext Code Table Entity";
             KeyPrefix = "commonDataModel.einvoiceextcodetableentity";
             KeySeparator = ".";
             Grouping = "/EInvoiceExtCodeTableEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidFrom = group.Add(new VocabularyKey(nameof(ValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Version = group.Add(new VocabularyKey(nameof(Version), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CodeId { get; private set; }
         public VocabularyKey CodeType { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey Version { get; private set; }
-
-
     }
 }

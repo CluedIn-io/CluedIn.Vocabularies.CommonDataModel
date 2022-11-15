@@ -2,16 +2,16 @@ using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 {
-    public class smmSalesRoleResponsibilityEntityVocabulary : SimpleVocabulary
+    public class SmmSalesRoleResponsibilityEntityVocabulary : SimpleVocabulary
     {
-        public smmSalesRoleResponsibilityEntityVocabulary()
+        public SmmSalesRoleResponsibilityEntityVocabulary()
         {
-            VocabularyName = "smmSalesRoleResponsibilityEntity";
+            VocabularyName = "Smm Sales Role Responsibility Entity";
             KeyPrefix = "commonDataModel.smmsalesroleresponsibilityentity";
             KeySeparator = ".";
-            Grouping = "/smmSalesRoleResponsibilityEntity";
+            Grouping = "/SmmSalesRoleResponsibilityEntity";
 
-            AddGroup("smmSalesRoleResponsibilityEntity Details", group =>
+            AddGroup("SmmSalesRoleResponsibilityEntity Details", group =>
             {
                 ResponsibilityDescription = group.Add(new VocabularyKey(nameof(ResponsibilityDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 HasProspectResponsibility = group.Add(new VocabularyKey(nameof(HasProspectResponsibility), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 HasSalesUnitResponsibility = group.Add(new VocabularyKey(nameof(HasSalesUnitResponsibility), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 HasVendorResponsibility = group.Add(new VocabularyKey(nameof(HasVendorResponsibility), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ResponsibilityCode = group.Add(new VocabularyKey(nameof(ResponsibilityCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ResponsibilityDescription { get; private set; }
         public VocabularyKey HasProspectResponsibility { get; private set; }
         public VocabularyKey HasCallListResponsibility { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey HasSalesUnitResponsibility { get; private set; }
         public VocabularyKey HasVendorResponsibility { get; private set; }
         public VocabularyKey ResponsibilityCode { get; private set; }
-
-
     }
 }

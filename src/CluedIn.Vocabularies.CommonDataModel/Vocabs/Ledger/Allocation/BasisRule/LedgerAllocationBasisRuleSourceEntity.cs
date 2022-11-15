@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerAllocationBasisRuleSourceEntityVocabulary()
         {
-            VocabularyName = "LedgerAllocationBasisRuleSourceEntity";
+            VocabularyName = "Ledger Allocation Basis Rule Source Entity";
             KeyPrefix = "commonDataModel.ledgerallocationbasisrulesourceentity";
             KeySeparator = ".";
             Grouping = "/LedgerAllocationBasisRuleSourceEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FieldSetting = group.Add(new VocabularyKey(nameof(FieldSetting), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineNumber = group.Add(new VocabularyKey(nameof(LineNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BasisDimensionAttributeName = group.Add(new VocabularyKey(nameof(BasisDimensionAttributeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BasisCriteria { get; private set; }
         public VocabularyKey BasisDimensionAttribute { get; private set; }
         public VocabularyKey BasisId { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FieldSetting { get; private set; }
         public VocabularyKey LineNumber { get; private set; }
         public VocabularyKey BasisDimensionAttributeName { get; private set; }
-
-
     }
 }

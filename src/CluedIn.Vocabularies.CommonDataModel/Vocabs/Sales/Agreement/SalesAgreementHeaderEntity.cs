@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesAgreementHeaderEntityVocabulary()
         {
-            VocabularyName = "SalesAgreementHeaderEntity";
+            VocabularyName = "Sales Agreement Header Entity";
             KeyPrefix = "commonDataModel.salesagreementheaderentity";
             KeySeparator = ".";
             Grouping = "/SalesAgreementHeaderEntity";
@@ -109,10 +109,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ExcludeFromReserveInBusinessAccounting = group.Add(new VocabularyKey(nameof(ExcludeFromReserveInBusinessAccounting), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExcludeFromReserveInTaxAccounting = group.Add(new VocabularyKey(nameof(ExcludeFromReserveInTaxAccounting), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReportingCurrencyFixedExchangeRate = group.Add(new VocabularyKey(nameof(ReportingCurrencyFixedExchangeRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SellingLegalEntityRecId { get; private set; }
         public VocabularyKey SellingLegalEntityId { get; private set; }
         public VocabularyKey SalesAgreementId { get; private set; }
@@ -209,7 +207,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ExcludeFromReserveInBusinessAccounting { get; private set; }
         public VocabularyKey ExcludeFromReserveInTaxAccounting { get; private set; }
         public VocabularyKey ReportingCurrencyFixedExchangeRate { get; private set; }
-
-
     }
 }

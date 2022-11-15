@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CatVendorProductCandidatePurchasePriceEntityVocabulary()
         {
-            VocabularyName = "CatVendorProductCandidatePurchasePriceEntity";
+            VocabularyName = "Cat Vendor Product Candidate Purchase Price Entity";
             KeyPrefix = "commonDataModel.catvendorproductcandidatepurchasepriceentity";
             KeySeparator = ".";
             Grouping = "/CatVendorProductCandidatePurchasePriceEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductCandidateStyleId = group.Add(new VocabularyKey(nameof(ProductCandidateStyleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductCandidateProductNumber = group.Add(new VocabularyKey(nameof(ProductCandidateProductNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorCatalogMaintenanceRequestUploadDateTime = group.Add(new VocabularyKey(nameof(VendorCatalogMaintenanceRequestUploadDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CurrencyCode { get; private set; }
         public VocabularyKey Price { get; private set; }
         public VocabularyKey UnitOfMeasureRecId { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProductCandidateStyleId { get; private set; }
         public VocabularyKey ProductCandidateProductNumber { get; private set; }
         public VocabularyKey VendorCatalogMaintenanceRequestUploadDateTime { get; private set; }
-
-
     }
 }

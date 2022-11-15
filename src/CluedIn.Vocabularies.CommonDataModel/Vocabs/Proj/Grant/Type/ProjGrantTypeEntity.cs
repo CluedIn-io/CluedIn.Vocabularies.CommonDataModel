@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjGrantTypeEntityVocabulary()
         {
-            VocabularyName = "ProjGrantTypeEntity";
+            VocabularyName = "Proj Grant Type Entity";
             KeyPrefix = "commonDataModel.projgranttypeentity";
             KeySeparator = ".";
             Grouping = "/ProjGrantTypeEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WorkerContact = group.Add(new VocabularyKey(nameof(WorkerContact), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ManagerPersonnelNumber = group.Add(new VocabularyKey(nameof(ManagerPersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ContactPersonnelNumber = group.Add(new VocabularyKey(nameof(ContactPersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey FederalMandate { get; private set; }
         public VocabularyKey GrantManager { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WorkerContact { get; private set; }
         public VocabularyKey ManagerPersonnelNumber { get; private set; }
         public VocabularyKey ContactPersonnelNumber { get; private set; }
-
-
     }
 }

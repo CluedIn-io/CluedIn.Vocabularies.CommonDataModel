@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EFDocumentReceivedXmlEntityVocabulary()
         {
-            VocabularyName = "EFDocumentReceivedXmlEntity";
+            VocabularyName = "EF Document Received Xml Entity";
             KeyPrefix = "commonDataModel.efdocumentreceivedxmlentity";
             KeySeparator = ".";
             Grouping = "/EFDocumentReceivedXmlEntity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ReturnCode = group.Add(new VocabularyKey(nameof(ReturnCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FiscalEstablishmentId = group.Add(new VocabularyKey(nameof(FiscalEstablishmentId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Accesskey { get; private set; }
         public VocabularyKey CNPJ { get; private set; }
         public VocabularyKey FiscalDocumentReference { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ReturnCode { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey FiscalEstablishmentId { get; private set; }
-
-
     }
 }

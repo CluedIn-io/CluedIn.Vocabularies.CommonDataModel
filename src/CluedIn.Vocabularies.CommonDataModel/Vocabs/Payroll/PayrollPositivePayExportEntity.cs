@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollPositivePayExportEntityVocabulary()
         {
-            VocabularyName = "PayrollPositivePayExportEntity";
+            VocabularyName = "Payroll Positive Pay Export Entity";
             KeyPrefix = "commonDataModel.payrollpositivepayexportentity";
             KeySeparator = ".";
             Grouping = "/PayrollPositivePayExportEntity";
@@ -40,10 +40,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Phone = group.Add(new VocabularyKey(nameof(Phone), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RecipientType = group.Add(new VocabularyKey(nameof(RecipientType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BankAccountID = group.Add(new VocabularyKey(nameof(BankAccountID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CompanyId { get; private set; }
         public VocabularyKey PositivePayNumber { get; private set; }
         public VocabularyKey VoidedDate { get; private set; }
@@ -71,7 +69,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Phone { get; private set; }
         public VocabularyKey RecipientType { get; private set; }
         public VocabularyKey BankAccountID { get; private set; }
-
-
     }
 }

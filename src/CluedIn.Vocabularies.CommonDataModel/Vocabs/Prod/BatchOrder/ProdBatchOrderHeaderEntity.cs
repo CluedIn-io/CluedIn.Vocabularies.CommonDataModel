@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProdBatchOrderHeaderEntityVocabulary()
         {
-            VocabularyName = "ProdBatchOrderHeaderEntity";
+            VocabularyName = "Prod Batch Order Header Entity";
             KeyPrefix = "commonDataModel.prodbatchorderheaderentity";
             KeySeparator = ".";
             Grouping = "/ProdBatchOrderHeaderEntity";
@@ -102,10 +102,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WarehouseReleaseReservationRequirementRule = group.Add(new VocabularyKey(nameof(WarehouseReleaseReservationRequirementRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkingTimeSchedulingPropertyId = group.Add(new VocabularyKey(nameof(WorkingTimeSchedulingPropertyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 YieldPercentage = group.Add(new VocabularyKey(nameof(YieldPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AreRouteJobsGenerated { get; private set; }
         public VocabularyKey AutoReservationMode { get; private set; }
         public VocabularyKey BatchOrderLedgerPostingRule { get; private set; }
@@ -195,7 +193,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WarehouseReleaseReservationRequirementRule { get; private set; }
         public VocabularyKey WorkingTimeSchedulingPropertyId { get; private set; }
         public VocabularyKey YieldPercentage { get; private set; }
-
-
     }
 }

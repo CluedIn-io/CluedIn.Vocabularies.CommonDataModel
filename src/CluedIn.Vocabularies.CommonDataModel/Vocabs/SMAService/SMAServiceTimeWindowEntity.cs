@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SMAServiceTimeWindowEntityVocabulary()
         {
-            VocabularyName = "SMAServiceTimeWindowEntity";
+            VocabularyName = "SMA Service Time Window Entity";
             KeyPrefix = "commonDataModel.smaservicetimewindowentity";
             KeySeparator = ".";
             Grouping = "/SMAServiceTimeWindowEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WindowDescription = group.Add(new VocabularyKey(nameof(WindowDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SchedulingMethod = group.Add(new VocabularyKey(nameof(SchedulingMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WindowId = group.Add(new VocabularyKey(nameof(WindowId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey MaximumManualForwardMovementDays { get; private set; }
         public VocabularyKey MaximumManualBackwardMovementDays { get; private set; }
         public VocabularyKey WindowDescription { get; private set; }
         public VocabularyKey SchedulingMethod { get; private set; }
         public VocabularyKey WindowId { get; private set; }
-
-
     }
 }

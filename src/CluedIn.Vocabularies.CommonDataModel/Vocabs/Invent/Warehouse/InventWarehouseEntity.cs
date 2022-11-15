@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventWarehouseEntityVocabulary()
         {
-            VocabularyName = "InventWarehouseEntity";
+            VocabularyName = "Invent Warehouse Entity";
             KeyPrefix = "commonDataModel.inventwarehouseentity";
             KeySeparator = ".";
             Grouping = "/InventWarehouseEntity";
@@ -87,10 +87,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WarehouseReleaseReservationRequirementRule = group.Add(new VocabularyKey(nameof(WarehouseReleaseReservationRequirementRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WarehouseWorkProcessingPolicyName = group.Add(new VocabularyKey(nameof(WarehouseWorkProcessingPolicyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AutoUpdateShipmentRule = group.Add(new VocabularyKey(nameof(AutoUpdateShipmentRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AreLaborStandardsAllowed { get; private set; }
         public VocabularyKey InventoryStatusChangeReservationRemovalLevel { get; private set; }
         public VocabularyKey WillOrderReleasingConsolidateShipments { get; private set; }
@@ -165,7 +163,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WarehouseReleaseReservationRequirementRule { get; private set; }
         public VocabularyKey WarehouseWorkProcessingPolicyName { get; private set; }
         public VocabularyKey AutoUpdateShipmentRule { get; private set; }
-
-
     }
 }

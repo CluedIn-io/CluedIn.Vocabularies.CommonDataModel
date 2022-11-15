@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProcProductCategoryInformationPageEntityVocabulary()
         {
-            VocabularyName = "ProcProductCategoryInformationPageEntity";
+            VocabularyName = "Proc Product Category Information Page Entity";
             KeyPrefix = "commonDataModel.procproductcategoryinformationpageentity";
             KeySeparator = ".";
             Grouping = "/ProcProductCategoryInformationPageEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 InformationPageName = group.Add(new VocabularyKey(nameof(InformationPageName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DescriptionInHTML = group.Add(new VocabularyKey(nameof(DescriptionInHTML), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductCategoryHierarchyName { get; private set; }
         public VocabularyKey ProductCategoryName { get; private set; }
         public VocabularyKey InformationPageName { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey DescriptionInHTML { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxCodeEntityVocabulary()
         {
-            VocabularyName = "TaxCodeEntity";
+            VocabularyName = "Tax Code Entity";
             KeyPrefix = "commonDataModel.taxcodeentity";
             KeySeparator = ".";
             Grouping = "/TaxCodeEntity";
@@ -84,10 +84,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 VATChargeSource = group.Add(new VocabularyKey(nameof(VATChargeSource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 JapanTaxType = group.Add(new VocabularyKey(nameof(JapanTaxType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DescriptionQRBill = group.Add(new VocabularyKey(nameof(DescriptionQRBill), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TaxCode { get; private set; }
         public VocabularyKey NegativeTax { get; private set; }
         public VocabularyKey NotEUSalesList { get; private set; }
@@ -159,7 +157,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey VATChargeSource { get; private set; }
         public VocabularyKey JapanTaxType { get; private set; }
         public VocabularyKey DescriptionQRBill { get; private set; }
-
-
     }
 }

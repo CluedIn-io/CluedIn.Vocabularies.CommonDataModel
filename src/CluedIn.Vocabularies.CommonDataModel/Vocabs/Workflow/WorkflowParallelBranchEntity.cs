@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WorkflowParallelBranchEntityVocabulary()
         {
-            VocabularyName = "WorkflowParallelBranchEntity";
+            VocabularyName = "Workflow Parallel Branch Entity";
             KeyPrefix = "commonDataModel.workflowparallelbranchentity";
             KeySeparator = ".";
             Grouping = "/WorkflowParallelBranchEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ElementId = group.Add(new VocabularyKey(nameof(ElementId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Name { get; private set; }
         public VocabularyKey ElementId { get; private set; }
-
-
     }
 }

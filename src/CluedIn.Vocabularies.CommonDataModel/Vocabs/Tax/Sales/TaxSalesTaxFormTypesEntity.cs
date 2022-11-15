@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxSalesTaxFormTypesEntityVocabulary()
         {
-            VocabularyName = "TaxSalesTaxFormTypesEntity";
+            VocabularyName = "Tax Sales Tax Form Types Entity";
             KeyPrefix = "commonDataModel.taxsalestaxformtypesentity";
             KeySeparator = ".";
             Grouping = "/TaxSalesTaxFormTypesEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FormType = group.Add(new VocabularyKey(nameof(FormType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxType = group.Add(new VocabularyKey(nameof(TaxType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey FormType { get; private set; }
         public VocabularyKey TaxType { get; private set; }
-
-
     }
 }

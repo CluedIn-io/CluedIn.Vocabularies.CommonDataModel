@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public OfficeAddinLegalEntityEntityVocabulary()
         {
-            VocabularyName = "OfficeAddinLegalEntityEntity";
+            VocabularyName = "Office Addin Legal Entity Entity";
             KeyPrefix = "commonDataModel.officeaddinlegalentityentity";
             KeySeparator = ".";
             Grouping = "/OfficeAddinLegalEntityEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BusinessActivity = group.Add(new VocabularyKey(nameof(BusinessActivity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BusinessActivityDescription = group.Add(new VocabularyKey(nameof(BusinessActivityDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ZakatFileNumber = group.Add(new VocabularyKey(nameof(ZakatFileNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CompanyName { get; private set; }
         public VocabularyKey CompanyId { get; private set; }
         public VocabularyKey BusinessActivity { get; private set; }
         public VocabularyKey BusinessActivityDescription { get; private set; }
         public VocabularyKey ZakatFileNumber { get; private set; }
-
-
     }
 }

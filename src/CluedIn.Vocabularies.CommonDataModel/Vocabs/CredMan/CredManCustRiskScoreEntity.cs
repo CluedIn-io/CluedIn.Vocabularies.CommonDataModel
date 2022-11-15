@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CredManCustRiskScoreEntityVocabulary()
         {
-            VocabularyName = "CredManCustRiskScoreEntity";
+            VocabularyName = "Cred Man Cust Risk Score Entity";
             KeyPrefix = "commonDataModel.credmancustriskscoreentity";
             KeySeparator = ".";
             Grouping = "/CredManCustRiskScoreEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CustAccount = group.Add(new VocabularyKey(nameof(CustAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RiskScoreGroupId = group.Add(new VocabularyKey(nameof(RiskScoreGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Value = group.Add(new VocabularyKey(nameof(Value), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CustAccount { get; private set; }
         public VocabularyKey RiskScoreGroupId { get; private set; }
         public VocabularyKey Value { get; private set; }
-
-
     }
 }

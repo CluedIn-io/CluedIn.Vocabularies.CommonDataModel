@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventoryChargeCDSEntityVocabulary()
         {
-            VocabularyName = "InventoryChargeCDSEntity";
+            VocabularyName = "Inventory Charge CDS Entity";
             KeyPrefix = "commonDataModel.inventorychargecdsentity";
             KeySeparator = ".";
             Grouping = "/InventoryChargeCDSEntity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WillIntrastatStatisticalValueIncludeChargeAmounts = group.Add(new VocabularyKey(nameof(WillIntrastatStatisticalValueIncludeChargeAmounts), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LedgerName = group.Add(new VocabularyKey(nameof(LedgerName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ChartOfAccountsName = group.Add(new VocabularyKey(nameof(ChartOfAccountsName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ChargeClassification { get; private set; }
         public VocabularyKey ChargeCode { get; private set; }
         public VocabularyKey ChargeDescription { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WillIntrastatStatisticalValueIncludeChargeAmounts { get; private set; }
         public VocabularyKey LedgerName { get; private set; }
         public VocabularyKey ChartOfAccountsName { get; private set; }
-
-
     }
 }

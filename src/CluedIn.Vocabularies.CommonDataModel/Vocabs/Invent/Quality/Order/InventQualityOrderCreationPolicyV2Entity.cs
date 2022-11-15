@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventQualityOrderCreationPolicyV2EntityVocabulary()
         {
-            VocabularyName = "InventQualityOrderCreationPolicyV2Entity";
+            VocabularyName = "Invent Quality Order Creation Policy V2 Entity";
             KeyPrefix = "commonDataModel.inventqualityordercreationpolicyv2entity";
             KeySeparator = ".";
             Grouping = "/InventQualityOrderCreationPolicyV2Entity";
@@ -42,10 +42,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RouteOperationId = group.Add(new VocabularyKey(nameof(RouteOperationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RouteGroupId = group.Add(new VocabularyKey(nameof(RouteGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AssociationCreationSequenceNumber = group.Add(new VocabularyKey(nameof(AssociationCreationSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AcceptableQualityLevelPercentage { get; private set; }
         public VocabularyKey AccountCode { get; private set; }
         public VocabularyKey AccountRelation { get; private set; }
@@ -75,7 +73,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RouteOperationId { get; private set; }
         public VocabularyKey RouteGroupId { get; private set; }
         public VocabularyKey AssociationCreationSequenceNumber { get; private set; }
-
-
     }
 }

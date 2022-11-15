@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReqPlannedOrderRouteOperationEntityVocabulary()
         {
-            VocabularyName = "ReqPlannedOrderRouteOperationEntity";
+            VocabularyName = "Req Planned Order Route Operation Entity";
             KeyPrefix = "commonDataModel.reqplannedorderrouteoperationentity";
             KeySeparator = ".";
             Grouping = "/ReqPlannedOrderRouteOperationEntity";
@@ -35,10 +35,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductionUnitId = group.Add(new VocabularyKey(nameof(ProductionUnitId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OperationsResourceType = group.Add(new VocabularyKey(nameof(OperationsResourceType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RouteOperationDataAreaId = group.Add(new VocabularyKey(nameof(RouteOperationDataAreaId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccumulatedScrapPercentage { get; private set; }
         public VocabularyKey ScrapPercentage { get; private set; }
         public VocabularyKey ScheduledStartDate { get; private set; }
@@ -61,7 +59,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProductionUnitId { get; private set; }
         public VocabularyKey OperationsResourceType { get; private set; }
         public VocabularyKey RouteOperationDataAreaId { get; private set; }
-
-
     }
 }

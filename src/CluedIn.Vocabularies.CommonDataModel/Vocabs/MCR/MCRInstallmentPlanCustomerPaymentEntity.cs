@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRInstallmentPlanCustomerPaymentEntityVocabulary()
         {
-            VocabularyName = "MCRInstallmentPlanCustomerPaymentEntity";
+            VocabularyName = "MCR Installment Plan Customer Payment Entity";
             KeyPrefix = "commonDataModel.mcrinstallmentplancustomerpaymententity";
             KeySeparator = ".";
             Grouping = "/MCRInstallmentPlanCustomerPaymentEntity";
@@ -39,10 +39,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OriginalRefundSalesOrderId = group.Add(new VocabularyKey(nameof(OriginalRefundSalesOrderId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OriginalRefundPaymentScheduleId = group.Add(new VocabularyKey(nameof(OriginalRefundPaymentScheduleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OriginalRefundLineNumber = group.Add(new VocabularyKey(nameof(OriginalRefundLineNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Amount { get; private set; }
         public VocabularyKey IsCheckAuthorized { get; private set; }
         public VocabularyKey CheckNumber { get; private set; }
@@ -69,7 +67,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OriginalRefundSalesOrderId { get; private set; }
         public VocabularyKey OriginalRefundPaymentScheduleId { get; private set; }
         public VocabularyKey OriginalRefundLineNumber { get; private set; }
-
-
     }
 }

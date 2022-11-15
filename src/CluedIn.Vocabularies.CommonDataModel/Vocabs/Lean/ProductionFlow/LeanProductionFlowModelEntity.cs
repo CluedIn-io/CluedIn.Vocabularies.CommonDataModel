@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LeanProductionFlowModelEntityVocabulary()
         {
-            VocabularyName = "LeanProductionFlowModelEntity";
+            VocabularyName = "Lean Production Flow Model Entity";
             KeyPrefix = "commonDataModel.leanproductionflowmodelentity";
             KeySeparator = ".";
             Grouping = "/LeanProductionFlowModelEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PlanningPeriodType = group.Add(new VocabularyKey(nameof(PlanningPeriodType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PlanningTimeFence = group.Add(new VocabularyKey(nameof(PlanningTimeFence), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CapacityShortageReaction = group.Add(new VocabularyKey(nameof(CapacityShortageReaction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ModelName { get; private set; }
         public VocabularyKey ModelType { get; private set; }
         public VocabularyKey EPECycleDays { get; private set; }
         public VocabularyKey PlanningPeriodType { get; private set; }
         public VocabularyKey PlanningTimeFence { get; private set; }
         public VocabularyKey CapacityShortageReaction { get; private set; }
-
-
     }
 }

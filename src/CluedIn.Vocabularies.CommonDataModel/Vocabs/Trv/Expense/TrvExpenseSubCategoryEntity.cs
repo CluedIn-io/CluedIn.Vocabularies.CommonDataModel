@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvExpenseSubCategoryEntityVocabulary()
         {
-            VocabularyName = "TrvExpenseSubCategoryEntity";
+            VocabularyName = "Trv Expense Sub Category Entity";
             KeyPrefix = "commonDataModel.trvexpensesubcategoryentity";
             KeySeparator = ".";
             Grouping = "/TrvExpenseSubCategoryEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TrvSharedSubCategory = group.Add(new VocabularyKey(nameof(TrvSharedSubCategory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SharedSubCategoryName = group.Add(new VocabularyKey(nameof(SharedSubCategoryName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(LedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ExpenseCategory { get; private set; }
         public VocabularyKey DisplayOrder { get; private set; }
         public VocabularyKey IsInactive { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TrvSharedSubCategory { get; private set; }
         public VocabularyKey SharedSubCategoryName { get; private set; }
         public VocabularyKey LedgerDimensionDisplayValue { get; private set; }
-
-
     }
 }

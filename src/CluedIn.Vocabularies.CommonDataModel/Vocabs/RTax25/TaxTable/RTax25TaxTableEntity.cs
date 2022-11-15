@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RTax25TaxTableEntityVocabulary()
         {
-            VocabularyName = "RTax25TaxTableEntity";
+            VocabularyName = "R Tax 25 Tax Table Entity";
             KeyPrefix = "commonDataModel.rtax25taxtableentity";
             KeySeparator = ".";
             Grouping = "/RTax25TaxTableEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Module = group.Add(new VocabularyKey(nameof(Module), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExpenseCode = group.Add(new VocabularyKey(nameof(ExpenseCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MainAccountDisplayValue = group.Add(new VocabularyKey(nameof(MainAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey MainAccount { get; private set; }
         public VocabularyKey TypeOfTax { get; private set; }
         public VocabularyKey Code { get; private set; }
         public VocabularyKey Module { get; private set; }
         public VocabularyKey ExpenseCode { get; private set; }
         public VocabularyKey MainAccountDisplayValue { get; private set; }
-
-
     }
 }

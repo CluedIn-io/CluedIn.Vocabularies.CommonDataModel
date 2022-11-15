@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankStatementBalanceEntityVocabulary()
         {
-            VocabularyName = "BankStatementBalanceEntity";
+            VocabularyName = "Bank Statement Balance Entity";
             KeyPrefix = "commonDataModel.bankstatementbalanceentity";
             KeySeparator = ".";
             Grouping = "/BankStatementBalanceEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AvailibilityNumberOfDays = group.Add(new VocabularyKey(nameof(AvailibilityNumberOfDays), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StatementLineNum = group.Add(new VocabularyKey(nameof(StatementLineNum), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DocumentLineNum = group.Add(new VocabularyKey(nameof(DocumentLineNum), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BalanceLineNum { get; private set; }
         public VocabularyKey AvailibilityLineNum { get; private set; }
         public VocabularyKey BalanceType { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AvailibilityNumberOfDays { get; private set; }
         public VocabularyKey StatementLineNum { get; private set; }
         public VocabularyKey DocumentLineNum { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JournalizingTransactionPostingDefinitionBudgetEntityVocabulary()
         {
-            VocabularyName = "JournalizingTransactionPostingDefinitionBudgetEntity";
+            VocabularyName = "Journalizing Transaction Posting Definition Budget Entity";
             KeyPrefix = "commonDataModel.journalizingtransactionpostingdefinitionbudgetentity";
             KeySeparator = ".";
             Grouping = "/JournalizingTransactionPostingDefinitionBudgetEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PostingDefinition = group.Add(new VocabularyKey(nameof(PostingDefinition), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BudgetCodeRelationName = group.Add(new VocabularyKey(nameof(BudgetCodeRelationName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PostingDefinitionId = group.Add(new VocabularyKey(nameof(PostingDefinitionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BudgetTransactionCode { get; private set; }
         public VocabularyKey BudgetType { get; private set; }
         public VocabularyKey BudgetCodeTableAll { get; private set; }
         public VocabularyKey PostingDefinition { get; private set; }
         public VocabularyKey BudgetCodeRelationName { get; private set; }
         public VocabularyKey PostingDefinitionId { get; private set; }
-
-
     }
 }

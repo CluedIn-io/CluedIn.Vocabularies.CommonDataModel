@@ -2,28 +2,24 @@ using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 {
-    public class smmLeadPriorityEntityVocabulary : SimpleVocabulary
+    public class SmmLeadPriorityEntityVocabulary : SimpleVocabulary
     {
-        public smmLeadPriorityEntityVocabulary()
+        public SmmLeadPriorityEntityVocabulary()
         {
-            VocabularyName = "smmLeadPriorityEntity";
+            VocabularyName = "Smm Lead Priority Entity";
             KeyPrefix = "commonDataModel.smmleadpriorityentity";
             KeySeparator = ".";
-            Grouping = "/smmLeadPriorityEntity";
+            Grouping = "/SmmLeadPriorityEntity";
 
-            AddGroup("smmLeadPriorityEntity Details", group =>
+            AddGroup("SmmLeadPriorityEntity Details", group =>
             {
                 PriorityDescription = group.Add(new VocabularyKey(nameof(PriorityDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillCustomerServiceIssueHotAlert = group.Add(new VocabularyKey(nameof(WillCustomerServiceIssueHotAlert), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PriorityCode = group.Add(new VocabularyKey(nameof(PriorityCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PriorityDescription { get; private set; }
         public VocabularyKey WillCustomerServiceIssueHotAlert { get; private set; }
         public VocabularyKey PriorityCode { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPublishedRequestForQuotationReplyLineSummaryEntityVocabulary()
         {
-            VocabularyName = "PurchPublishedRequestForQuotationReplyLineSummaryEntity";
+            VocabularyName = "Purch Published Request For Quotation Reply Line Summary Entity";
             KeyPrefix = "commonDataModel.purchpublishedrequestforquotationreplylinesummaryentity";
             KeySeparator = ".";
             Grouping = "/PurchPublishedRequestForQuotationReplyLineSummaryEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TotalVendorScoreComment = group.Add(new VocabularyKey(nameof(TotalVendorScoreComment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorReplyStatus = group.Add(new VocabularyKey(nameof(VendorReplyStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RFQRecId = group.Add(new VocabularyKey(nameof(RFQRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RFQNumber { get; private set; }
         public VocabularyKey RFQCaseNumber { get; private set; }
         public VocabularyKey RFQCaseRequestingWorkerName { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TotalVendorScoreComment { get; private set; }
         public VocabularyKey VendorReplyStatus { get; private set; }
         public VocabularyKey RFQRecId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchRequestForQuotationReplyQuestionnaireEntityVocabulary()
         {
-            VocabularyName = "PurchRequestForQuotationReplyQuestionnaireEntity";
+            VocabularyName = "Purch Request For Quotation Reply Questionnaire Entity";
             KeyPrefix = "commonDataModel.purchrequestforquotationreplyquestionnaireentity";
             KeySeparator = ".";
             Grouping = "/PurchRequestForQuotationReplyQuestionnaireEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AnswerComment = group.Add(new VocabularyKey(nameof(AnswerComment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 QuestionnaireStatus = group.Add(new VocabularyKey(nameof(QuestionnaireStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ResponseRecId = group.Add(new VocabularyKey(nameof(ResponseRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey KMVirtualNetworkAnswerTableId { get; private set; }
         public VocabularyKey QuestionnaireId { get; private set; }
         public VocabularyKey RFQNumber { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AnswerComment { get; private set; }
         public VocabularyKey QuestionnaireStatus { get; private set; }
         public VocabularyKey ResponseRecId { get; private set; }
-
-
     }
 }

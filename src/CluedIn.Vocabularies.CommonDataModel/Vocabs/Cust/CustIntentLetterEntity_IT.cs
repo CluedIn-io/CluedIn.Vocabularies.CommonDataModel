@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustIntentLetterEntity_ITVocabulary()
         {
-            VocabularyName = "CustIntentLetterEntity_IT";
+            VocabularyName = "Cust Intent Letter Entity _IT";
             KeyPrefix = "commonDataModel.custintentletterentity_it";
             KeySeparator = ".";
             Grouping = "/CustIntentLetterEntity_IT";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Status = group.Add(new VocabularyKey(nameof(Status), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ToDate = group.Add(new VocabularyKey(nameof(ToDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IntentLetterYear = group.Add(new VocabularyKey(nameof(IntentLetterYear), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountNum { get; private set; }
         public VocabularyKey ClosedDate { get; private set; }
         public VocabularyKey DateLetter { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Status { get; private set; }
         public VocabularyKey ToDate { get; private set; }
         public VocabularyKey IntentLetterYear { get; private set; }
-
-
     }
 }

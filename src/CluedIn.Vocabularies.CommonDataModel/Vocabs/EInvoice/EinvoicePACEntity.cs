@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EinvoicePACEntityVocabulary()
         {
-            VocabularyName = "EinvoicePACEntity";
+            VocabularyName = "Einvoice PAC Entity";
             KeyPrefix = "commonDataModel.einvoicepacentity";
             KeySeparator = ".";
             Grouping = "/EinvoicePACEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 URL = group.Add(new VocabularyKey(nameof(URL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WebService = group.Add(new VocabularyKey(nameof(WebService), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WebServiceMethod = group.Add(new VocabularyKey(nameof(WebServiceMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PACAccountId { get; private set; }
         public VocabularyKey PACAccountName { get; private set; }
         public VocabularyKey RFCNumber { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey URL { get; private set; }
         public VocabularyKey WebService { get; private set; }
         public VocabularyKey WebServiceMethod { get; private set; }
-
-
     }
 }

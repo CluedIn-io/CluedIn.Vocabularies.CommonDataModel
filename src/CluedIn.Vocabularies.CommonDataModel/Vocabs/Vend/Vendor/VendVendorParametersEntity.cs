@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendVendorParametersEntityVocabulary()
         {
-            VocabularyName = "VendVendorParametersEntity";
+            VocabularyName = "Vend Vendor Parameters Entity";
             KeyPrefix = "commonDataModel.vendvendorparametersentity";
             KeySeparator = ".";
             Grouping = "/VendVendorParametersEntity";
@@ -145,10 +145,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PSNActivatePurchasingCard = group.Add(new VocabularyKey(nameof(PSNActivatePurchasingCard), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PSNPostingDefinitionRecId = group.Add(new VocabularyKey(nameof(PSNPostingDefinitionRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PSNPostingDefinitionCode = group.Add(new VocabularyKey(nameof(PSNPostingDefinitionCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RoyaltyAccrualJournalName { get; private set; }
         public VocabularyKey InvoicingPeriod { get; private set; }
         public VocabularyKey PostingProfile { get; private set; }
@@ -281,7 +279,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PSNActivatePurchasingCard { get; private set; }
         public VocabularyKey PSNPostingDefinitionRecId { get; private set; }
         public VocabularyKey PSNPostingDefinitionCode { get; private set; }
-
-
     }
 }

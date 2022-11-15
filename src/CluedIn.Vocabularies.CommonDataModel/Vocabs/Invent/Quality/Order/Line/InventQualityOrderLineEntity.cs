@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventQualityOrderLineEntityVocabulary()
         {
-            VocabularyName = "InventQualityOrderLineEntity";
+            VocabularyName = "Invent Quality Order Line Entity";
             KeyPrefix = "commonDataModel.inventqualityorderlineentity";
             KeySeparator = ".";
             Grouping = "/InventQualityOrderLineEntity";
@@ -42,10 +42,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ItemBatchAttributeDateValue = group.Add(new VocabularyKey(nameof(ItemBatchAttributeDateValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PdsBatchAttribType = group.Add(new VocabularyKey(nameof(PdsBatchAttribType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ItemBatchAttributeValue = group.Add(new VocabularyKey(nameof(ItemBatchAttributeValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AcceptableQualityLevelPercentage { get; private set; }
         public VocabularyKey FailureAction { get; private set; }
         public VocabularyKey IsCertificateOfAnalysisReportIncludingTestMeasurement { get; private set; }
@@ -75,7 +73,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ItemBatchAttributeDateValue { get; private set; }
         public VocabularyKey PdsBatchAttribType { get; private set; }
         public VocabularyKey ItemBatchAttributeValue { get; private set; }
-
-
     }
 }

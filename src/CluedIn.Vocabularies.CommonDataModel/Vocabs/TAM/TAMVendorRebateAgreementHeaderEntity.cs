@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TAMVendorRebateAgreementHeaderEntityVocabulary()
         {
-            VocabularyName = "TAMVendorRebateAgreementHeaderEntity";
+            VocabularyName = "TAM Vendor Rebate Agreement Header Entity";
             KeyPrefix = "commonDataModel.tamvendorrebateagreementheaderentity";
             KeySeparator = ".";
             Grouping = "/TAMVendorRebateAgreementHeaderEntity";
@@ -29,7 +29,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductUnitSymbol = group.Add(new VocabularyKey(nameof(ProductUnitSymbol), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductUnitSymbolOption = group.Add(new VocabularyKey(nameof(ProductUnitSymbolOption), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductUnitSymbolType = group.Add(new VocabularyKey(nameof(ProductUnitSymbolType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                isAgreementValidated = group.Add(new VocabularyKey(nameof(isAgreementValidated), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsAgreementValidated = group.Add(new VocabularyKey(nameof(IsAgreementValidated), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EffectiveDate = group.Add(new VocabularyKey(nameof(EffectiveDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExpirationDate = group.Add(new VocabularyKey(nameof(ExpirationDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CalculationSearchDateType = group.Add(new VocabularyKey(nameof(CalculationSearchDateType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
@@ -55,10 +55,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RebateAgreementId = group.Add(new VocabularyKey(nameof(RebateAgreementId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsProductSelectionUsed = group.Add(new VocabularyKey(nameof(IsProductSelectionUsed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsProductUnitSymbolExact = group.Add(new VocabularyKey(nameof(IsProductUnitSymbolExact), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsApprovalRequired { get; private set; }
         public VocabularyKey PurchaseCumulationMethod { get; private set; }
         public VocabularyKey ItemCode { get; private set; }
@@ -75,7 +73,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProductUnitSymbol { get; private set; }
         public VocabularyKey ProductUnitSymbolOption { get; private set; }
         public VocabularyKey ProductUnitSymbolType { get; private set; }
-        public VocabularyKey isAgreementValidated { get; private set; }
+        public VocabularyKey IsAgreementValidated { get; private set; }
         public VocabularyKey EffectiveDate { get; private set; }
         public VocabularyKey ExpirationDate { get; private set; }
         public VocabularyKey CalculationSearchDateType { get; private set; }
@@ -101,7 +99,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RebateAgreementId { get; private set; }
         public VocabularyKey IsProductSelectionUsed { get; private set; }
         public VocabularyKey IsProductUnitSymbolExact { get; private set; }
-
-
     }
 }

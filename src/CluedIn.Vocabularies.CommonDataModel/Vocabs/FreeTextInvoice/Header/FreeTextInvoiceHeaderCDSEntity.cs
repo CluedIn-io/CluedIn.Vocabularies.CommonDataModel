@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FreeTextInvoiceHeaderCDSEntityVocabulary()
         {
-            VocabularyName = "FreeTextInvoiceHeaderCDSEntity";
+            VocabularyName = "Free Text Invoice Header CDS Entity";
             KeyPrefix = "commonDataModel.freetextinvoiceheadercdsentity";
             KeySeparator = ".";
             Grouping = "/FreeTextInvoiceHeaderCDSEntity";
@@ -43,10 +43,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SalesTaxGroupId = group.Add(new VocabularyKey(nameof(SalesTaxGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesTaxItemGroupId = group.Add(new VocabularyKey(nameof(SalesTaxItemGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TermsOfPayment = group.Add(new VocabularyKey(nameof(TermsOfPayment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ExternalInvoiceId { get; private set; }
         public VocabularyKey CashDiscountCode { get; private set; }
         public VocabularyKey CashDiscountDate { get; private set; }
@@ -77,7 +75,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SalesTaxGroupId { get; private set; }
         public VocabularyKey SalesTaxItemGroupId { get; private set; }
         public VocabularyKey TermsOfPayment { get; private set; }
-
-
     }
 }

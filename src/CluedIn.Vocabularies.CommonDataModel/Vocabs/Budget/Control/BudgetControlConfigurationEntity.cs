@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetControlConfigurationEntityVocabulary()
         {
-            VocabularyName = "BudgetControlConfigurationEntity";
+            VocabularyName = "Budget Control Configuration Entity";
             KeyPrefix = "commonDataModel.budgetcontrolconfigurationentity";
             KeySeparator = ".";
             Grouping = "/BudgetControlConfigurationEntity";
@@ -43,10 +43,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SubtractPreencumbrancesInBudgetFundsAvailableCalculation = group.Add(new VocabularyKey(nameof(SubtractPreencumbrancesInBudgetFundsAvailableCalculation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SubtractUnconfirmedPreencumbrancesInBudgetFundsAvailableCalculation = group.Add(new VocabularyKey(nameof(SubtractUnconfirmedPreencumbrancesInBudgetFundsAvailableCalculation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UseOnlyApportionedAmountInBudgetFundsAvailableCalculation = group.Add(new VocabularyKey(nameof(UseOnlyApportionedAmountInBudgetFundsAvailableCalculation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DefaultBudgetCycleTimeSpan { get; private set; }
         public VocabularyKey DefaultBudgetCycleTimeSpanFiscalCalendarId { get; private set; }
         public VocabularyKey DefaultBudgetCycleTimeSpanName { get; private set; }
@@ -77,7 +75,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SubtractPreencumbrancesInBudgetFundsAvailableCalculation { get; private set; }
         public VocabularyKey SubtractUnconfirmedPreencumbrancesInBudgetFundsAvailableCalculation { get; private set; }
         public VocabularyKey UseOnlyApportionedAmountInBudgetFundsAvailableCalculation { get; private set; }
-
-
     }
 }

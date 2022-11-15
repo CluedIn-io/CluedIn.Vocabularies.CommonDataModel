@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PSNPositionForecastDimensionValidationEntityVocabulary()
         {
-            VocabularyName = "PSNPositionForecastDimensionValidationEntity";
+            VocabularyName = "PSN Position Forecast Dimension Validation Entity";
             KeyPrefix = "commonDataModel.psnpositionforecastdimensionvalidationentity";
             KeySeparator = ".";
             Grouping = "/PSNPositionForecastDimensionValidationEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BudgetPlanScenarioName = group.Add(new VocabularyKey(nameof(BudgetPlanScenarioName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PositionRecId = group.Add(new VocabularyKey(nameof(PositionRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PositionId = group.Add(new VocabularyKey(nameof(PositionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DimensionValidatedBy { get; private set; }
         public VocabularyKey DimensionValidatedDateTime { get; private set; }
         public VocabularyKey ForecastPositionScenarioRecId { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey BudgetPlanScenarioName { get; private set; }
         public VocabularyKey PositionRecId { get; private set; }
         public VocabularyKey PositionId { get; private set; }
-
-
     }
 }

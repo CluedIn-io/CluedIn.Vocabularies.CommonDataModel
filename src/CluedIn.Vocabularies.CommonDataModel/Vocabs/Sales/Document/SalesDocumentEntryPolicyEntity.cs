@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesDocumentEntryPolicyEntityVocabulary()
         {
-            VocabularyName = "SalesDocumentEntryPolicyEntity";
+            VocabularyName = "Sales Document Entry Policy Entity";
             KeyPrefix = "commonDataModel.salesdocumententrypolicyentity";
             KeySeparator = ".";
             Grouping = "/SalesDocumentEntryPolicyEntity";
@@ -50,10 +50,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsSalesAgreementYearUniquenessRequired = group.Add(new VocabularyKey(nameof(IsSalesAgreementYearUniquenessRequired), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExcisePosting = group.Add(new VocabularyKey(nameof(ExcisePosting), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DomesticSalesTaxGroupCode = group.Add(new VocabularyKey(nameof(DomesticSalesTaxGroupCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AcceptablePriceMarginPercentage { get; private set; }
         public VocabularyKey WillDocumentEntryAutomaticallyAllocateHeaderLevelCharges { get; private set; }
         public VocabularyKey WillDocumentEntryAutomaticallyAllocateLineLevelCharges { get; private set; }
@@ -91,7 +89,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsSalesAgreementYearUniquenessRequired { get; private set; }
         public VocabularyKey ExcisePosting { get; private set; }
         public VocabularyKey DomesticSalesTaxGroupCode { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankClientPaymentEntityVocabulary()
         {
-            VocabularyName = "BankClientPaymentEntity";
+            VocabularyName = "Bank Client Payment Entity";
             KeyPrefix = "commonDataModel.bankclientpaymententity";
             KeySeparator = ".";
             Grouping = "/BankClientPaymentEntity";
@@ -67,10 +67,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 UCI = group.Add(new VocabularyKey(nameof(UCI), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DimensionDisplayValue = group.Add(new VocabularyKey(nameof(DimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AgreementId = group.Add(new VocabularyKey(nameof(AgreementId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BankAccount { get; private set; }
         public VocabularyKey AgreementNumberLocking { get; private set; }
         public VocabularyKey Amount { get; private set; }
@@ -125,7 +123,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey UCI { get; private set; }
         public VocabularyKey DimensionDisplayValue { get; private set; }
         public VocabularyKey AgreementId { get; private set; }
-
-
     }
 }

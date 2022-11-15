@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesRebateProgramTypeEntityVocabulary()
         {
-            VocabularyName = "SalesRebateProgramTypeEntity";
+            VocabularyName = "Sales Rebate Program Type Entity";
             KeyPrefix = "commonDataModel.salesrebateprogramtypeentity";
             KeySeparator = ".";
             Grouping = "/SalesRebateProgramTypeEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DefaultExpenseMainAccountId = group.Add(new VocabularyKey(nameof(DefaultExpenseMainAccountId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultAccuralMainAccountIdDisplayValue = group.Add(new VocabularyKey(nameof(DefaultAccuralMainAccountIdDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultExpenseMainAccountIdDisplayValue = group.Add(new VocabularyKey(nameof(DefaultExpenseMainAccountIdDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TypeId { get; private set; }
         public VocabularyKey TypeDescription { get; private set; }
         public VocabularyKey RebateProgramType { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DefaultExpenseMainAccountId { get; private set; }
         public VocabularyKey DefaultAccuralMainAccountIdDisplayValue { get; private set; }
         public VocabularyKey DefaultExpenseMainAccountIdDisplayValue { get; private set; }
-
-
     }
 }

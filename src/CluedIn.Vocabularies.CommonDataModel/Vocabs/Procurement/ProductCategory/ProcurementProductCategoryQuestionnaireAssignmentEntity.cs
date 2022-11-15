@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProcurementProductCategoryQuestionnaireAssignmentEntityVocabulary()
         {
-            VocabularyName = "ProcurementProductCategoryQuestionnaireAssignmentEntity";
+            VocabularyName = "Procurement Product Category Questionnaire Assignment Entity";
             KeyPrefix = "commonDataModel.procurementproductcategoryquestionnaireassignmententity";
             KeySeparator = ".";
             Grouping = "/ProcurementProductCategoryQuestionnaireAssignmentEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 QuestionnaireLegalEntityId = group.Add(new VocabularyKey(nameof(QuestionnaireLegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 QuestionnaireName = group.Add(new VocabularyKey(nameof(QuestionnaireName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AdministrationActivityType = group.Add(new VocabularyKey(nameof(AdministrationActivityType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductCategoryHierarchyName { get; private set; }
         public VocabularyKey ProductCategoryName { get; private set; }
         public VocabularyKey QuestionnaireLegalEntityId { get; private set; }
         public VocabularyKey QuestionnaireName { get; private set; }
         public VocabularyKey AdministrationActivityType { get; private set; }
-
-
     }
 }

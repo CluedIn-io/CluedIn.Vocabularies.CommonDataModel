@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendorEvaluationCriterionGroupForCategoryEntityVocabulary()
         {
-            VocabularyName = "VendorEvaluationCriterionGroupForCategoryEntity";
+            VocabularyName = "Vendor Evaluation Criterion Group For Category Entity";
             KeyPrefix = "commonDataModel.vendorevaluationcriteriongroupforcategoryentity";
             KeySeparator = ".";
             Grouping = "/VendorEvaluationCriterionGroupForCategoryEntity";
@@ -14,12 +14,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             AddGroup("VendorEvaluationCriterionGroupForCategoryEntity Details", group =>
             {
                 GroupName = group.Add(new VocabularyKey(nameof(GroupName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey GroupName { get; private set; }
-
-
     }
 }

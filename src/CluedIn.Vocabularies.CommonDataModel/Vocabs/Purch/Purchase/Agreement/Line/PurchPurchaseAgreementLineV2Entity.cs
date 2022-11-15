@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPurchaseAgreementLineV2EntityVocabulary()
         {
-            VocabularyName = "PurchPurchaseAgreementLineV2Entity";
+            VocabularyName = "Purch Purchase Agreement Line V2 Entity";
             KeyPrefix = "commonDataModel.purchpurchaseagreementlinev2entity";
             KeySeparator = ".";
             Grouping = "/PurchPurchaseAgreementLineV2Entity";
@@ -50,10 +50,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProjectCategoryId = group.Add(new VocabularyKey(nameof(ProjectCategoryId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AgreementVendorAccountNumber = group.Add(new VocabularyKey(nameof(AgreementVendorAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InvoiceVendorAccountNumber = group.Add(new VocabularyKey(nameof(InvoiceVendorAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PurchaseAgreementRecId { get; private set; }
         public VocabularyKey PurchaseAgreementLegalEntityId { get; private set; }
         public VocabularyKey PurchaseAgreementId { get; private set; }
@@ -91,7 +89,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProjectCategoryId { get; private set; }
         public VocabularyKey AgreementVendorAccountNumber { get; private set; }
         public VocabularyKey InvoiceVendorAccountNumber { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesQuotationPrognosisEntityVocabulary()
         {
-            VocabularyName = "SalesQuotationPrognosisEntity";
+            VocabularyName = "Sales Quotation Prognosis Entity";
             KeyPrefix = "commonDataModel.salesquotationprognosisentity";
             KeySeparator = ".";
             Grouping = "/SalesQuotationPrognosisEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PrognosisFromDay = group.Add(new VocabularyKey(nameof(PrognosisFromDay), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PrognosisCode = group.Add(new VocabularyKey(nameof(PrognosisCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PrognosisToDay = group.Add(new VocabularyKey(nameof(PrognosisToDay), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PrognosisDescription { get; private set; }
         public VocabularyKey PrognosisFromDay { get; private set; }
         public VocabularyKey PrognosisCode { get; private set; }
         public VocabularyKey PrognosisToDay { get; private set; }
-
-
     }
 }

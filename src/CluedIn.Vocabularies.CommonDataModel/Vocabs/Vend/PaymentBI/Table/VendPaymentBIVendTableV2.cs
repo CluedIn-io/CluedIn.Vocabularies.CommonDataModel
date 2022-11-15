@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendPaymentBIVendTableV2Vocabulary()
         {
-            VocabularyName = "VendPaymentBIVendTableV2";
+            VocabularyName = "Vend Payment BI Vend Table V2";
             KeyPrefix = "commonDataModel.vendpaymentbivendtablev2";
             KeySeparator = ".";
             Grouping = "/VendPaymentBIVendTableV2";
@@ -33,10 +33,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ValidTo1 = group.Add(new VocabularyKey(nameof(ValidTo1), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidFrom1 = group.Add(new VocabularyKey(nameof(ValidFrom1), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AccountingCurrency = group.Add(new VocabularyKey(nameof(AccountingCurrency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountNum { get; private set; }
         public VocabularyKey Company { get; private set; }
         public VocabularyKey VendGroup { get; private set; }
@@ -57,7 +55,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ValidTo1 { get; private set; }
         public VocabularyKey ValidFrom1 { get; private set; }
         public VocabularyKey AccountingCurrency { get; private set; }
-
-
     }
 }

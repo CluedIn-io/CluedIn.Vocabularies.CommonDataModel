@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DirPartyRelationshipEntityVocabulary()
         {
-            VocabularyName = "DirPartyRelationshipEntity";
+            VocabularyName = "Dir Party Relationship Entity";
             KeyPrefix = "commonDataModel.dirpartyrelationshipentity";
             KeySeparator = ".";
             Grouping = "/DirPartyRelationshipEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 NullableParentPartyId = group.Add(new VocabularyKey(nameof(NullableParentPartyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ParentPartyId = group.Add(new VocabularyKey(nameof(ParentPartyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SystemType = group.Add(new VocabularyKey(nameof(SystemType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LegalEntityDataArea { get; private set; }
         public VocabularyKey RelationshipType { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey NullableParentPartyId { get; private set; }
         public VocabularyKey ParentPartyId { get; private set; }
         public VocabularyKey SystemType { get; private set; }
-
-
     }
 }

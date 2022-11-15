@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRSourceCodeEntityVocabulary()
         {
-            VocabularyName = "MCRSourceCodeEntity";
+            VocabularyName = "MCR Source Code Entity";
             KeyPrefix = "commonDataModel.mcrsourcecodeentity";
             KeySeparator = ".";
             Grouping = "/MCRSourceCodeEntity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SourceId = group.Add(new VocabularyKey(nameof(SourceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TargetId = group.Add(new VocabularyKey(nameof(TargetId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CatalogNumber = group.Add(new VocabularyKey(nameof(CatalogNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ActualCost { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey DistributionQuantity { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SourceId { get; private set; }
         public VocabularyKey TargetId { get; private set; }
         public VocabularyKey CatalogNumber { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DeliveryTermsEntityVocabulary()
         {
-            VocabularyName = "DeliveryTermsEntity";
+            VocabularyName = "Delivery Terms Entity";
             KeyPrefix = "commonDataModel.deliverytermsentity";
             KeySeparator = ".";
             Grouping = "/DeliveryTermsEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WillShipmentConfirmationTransferCharges = group.Add(new VocabularyKey(nameof(WillShipmentConfirmationTransferCharges), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReceiptTransactionStatus = group.Add(new VocabularyKey(nameof(ReceiptTransactionStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InventoryProfile = group.Add(new VocabularyKey(nameof(InventoryProfile), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TermsCode { get; private set; }
         public VocabularyKey IntrastatCode { get; private set; }
         public VocabularyKey SalesTaxLocationRole { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WillShipmentConfirmationTransferCharges { get; private set; }
         public VocabularyKey ReceiptTransactionStatus { get; private set; }
         public VocabularyKey InventoryProfile { get; private set; }
-
-
     }
 }

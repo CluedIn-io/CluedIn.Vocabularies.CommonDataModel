@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxServiceAccountingCodeEntityVocabulary()
         {
-            VocabularyName = "TaxServiceAccountingCodeEntity";
+            VocabularyName = "Tax Service Accounting Code Entity";
             KeyPrefix = "commonDataModel.taxserviceaccountingcodeentity";
             KeySeparator = ".";
             Grouping = "/TaxServiceAccountingCodeEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 SAC = group.Add(new VocabularyKey(nameof(SAC), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SAC { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MeasurementSourceSystemEntityVocabulary()
         {
-            VocabularyName = "MeasurementSourceSystemEntity";
+            VocabularyName = "Measurement Source System Entity";
             KeyPrefix = "commonDataModel.measurementsourcesystementity";
             KeySeparator = ".";
             Grouping = "/MeasurementSourceSystemEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Name { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

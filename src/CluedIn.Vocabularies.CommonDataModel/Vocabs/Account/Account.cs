@@ -13,13 +13,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Account Details", group =>
             {
-                hotelGroup = group.Add(new VocabularyKey(nameof(hotelGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                rentalCarProvider = group.Add(new VocabularyKey(nameof(rentalCarProvider), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                HotelGroup = group.Add(new VocabularyKey(nameof(HotelGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RentalCarProvider = group.Add(new VocabularyKey(nameof(RentalCarProvider), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey hotelGroup { get; private set; }
-        public VocabularyKey rentalCarProvider { get; private set; }
+        public VocabularyKey HotelGroup { get; private set; }
+        public VocabularyKey RentalCarProvider { get; private set; }
     }
 }

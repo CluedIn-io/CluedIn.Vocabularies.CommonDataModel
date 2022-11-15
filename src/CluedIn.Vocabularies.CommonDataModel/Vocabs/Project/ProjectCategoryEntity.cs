@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjectCategoryEntityVocabulary()
         {
-            VocabularyName = "ProjectCategoryEntity";
+            VocabularyName = "Project Category Entity";
             KeyPrefix = "commonDataModel.projectcategoryentity";
             KeySeparator = ".";
             Grouping = "/ProjectCategoryEntity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ItemWithholdingTaxGroup = group.Add(new VocabularyKey(nameof(ItemWithholdingTaxGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ItemWithholdingTaxGroupId = group.Add(new VocabularyKey(nameof(ItemWithholdingTaxGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxRateTypeName = group.Add(new VocabularyKey(nameof(TaxRateTypeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ActiveInJournals { get; private set; }
         public VocabularyKey CategoryGroup { get; private set; }
         public VocabularyKey Category { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ItemWithholdingTaxGroup { get; private set; }
         public VocabularyKey ItemWithholdingTaxGroupId { get; private set; }
         public VocabularyKey TaxRateTypeName { get; private set; }
-
-
     }
 }

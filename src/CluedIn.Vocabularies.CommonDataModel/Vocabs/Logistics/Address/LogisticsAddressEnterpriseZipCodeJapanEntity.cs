@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LogisticsAddressEnterpriseZipCodeJapanEntityVocabulary()
         {
-            VocabularyName = "LogisticsAddressEnterpriseZipCodeJapanEntity";
+            VocabularyName = "Logistics Address Enterprise Zip Code Japan Entity";
             KeyPrefix = "commonDataModel.logisticsaddressenterprisezipcodejapanentity";
             KeySeparator = ".";
             Grouping = "/LogisticsAddressEnterpriseZipCodeJapanEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IndividualEnterpriseBuildingNumber = group.Add(new VocabularyKey(nameof(IndividualEnterpriseBuildingNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 KanjiEnterpriseName = group.Add(new VocabularyKey(nameof(KanjiEnterpriseName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 KanjiStreet = group.Add(new VocabularyKey(nameof(KanjiStreet), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey KanjiCity { get; private set; }
         public VocabularyKey CityRecId { get; private set; }
         public VocabularyKey CountryRegionId { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IndividualEnterpriseBuildingNumber { get; private set; }
         public VocabularyKey KanjiEnterpriseName { get; private set; }
         public VocabularyKey KanjiStreet { get; private set; }
-
-
     }
 }

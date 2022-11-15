@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DocuRefEntityVocabulary()
         {
-            VocabularyName = "DocuRefEntity";
+            VocabularyName = "Docu Ref Entity";
             KeyPrefix = "commonDataModel.docurefentity";
             KeySeparator = ".";
             Grouping = "/DocuRefEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FileType = group.Add(new VocabularyKey(nameof(FileType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FileContents = group.Add(new VocabularyKey(nameof(FileContents), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultAttachment = group.Add(new VocabularyKey(nameof(DefaultAttachment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DocumentId { get; private set; }
         public VocabularyKey ActualCompanyId { get; private set; }
         public VocabularyKey TypeId { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FileType { get; private set; }
         public VocabularyKey FileContents { get; private set; }
         public VocabularyKey DefaultAttachment { get; private set; }
-
-
     }
 }

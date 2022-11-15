@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjProjectFormSetupEntityVocabulary()
         {
-            VocabularyName = "ProjProjectFormSetupEntity";
+            VocabularyName = "Proj Project Form Setup Entity";
             KeyPrefix = "commonDataModel.projprojectformsetupentity";
             KeySeparator = ".";
             Grouping = "/ProjProjectFormSetupEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SeparateTaxExemptBalanceInForms = group.Add(new VocabularyKey(nameof(SeparateTaxExemptBalanceInForms), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesTaxSpecification = group.Add(new VocabularyKey(nameof(SalesTaxSpecification), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TotalsFirstLastPage = group.Add(new VocabularyKey(nameof(TotalsFirstLastPage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AssociatedPaymentAttachmentOnInvoice { get; private set; }
         public VocabularyKey Invoice { get; private set; }
         public VocabularyKey PackingSlip { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SeparateTaxExemptBalanceInForms { get; private set; }
         public VocabularyKey SalesTaxSpecification { get; private set; }
         public VocabularyKey TotalsFirstLastPage { get; private set; }
-
-
     }
 }

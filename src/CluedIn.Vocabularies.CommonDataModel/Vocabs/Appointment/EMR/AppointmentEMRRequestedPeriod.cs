@@ -6,30 +6,26 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AppointmentEMRRequestedPeriodVocabulary()
         {
-            VocabularyName = "AppointmentEMRRequestedPeriod";
+            VocabularyName = "Appointment EMR Requested Period";
             KeyPrefix = "commonDataModel.appointmentemrrequestedperiod";
             KeySeparator = ".";
             Grouping = "/AppointmentEMRRequestedPeriod";
 
             AddGroup("AppointmentEMRRequestedPeriod Details", group =>
             {
-                appointmentEMRRequestedPeriodId = group.Add(new VocabularyKey(nameof(appointmentEMRRequestedPeriodId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                requestedPeriodEndDate = group.Add(new VocabularyKey(nameof(requestedPeriodEndDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                requestedPeriodStartDate = group.Add(new VocabularyKey(nameof(requestedPeriodStartDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                AppointmentEMRRequestedPeriodId = group.Add(new VocabularyKey(nameof(AppointmentEMRRequestedPeriodId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RequestedPeriodEndDate = group.Add(new VocabularyKey(nameof(RequestedPeriodEndDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RequestedPeriodStartDate = group.Add(new VocabularyKey(nameof(RequestedPeriodStartDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey appointmentEMRRequestedPeriodId { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey requestedPeriodEndDate { get; private set; }
-        public VocabularyKey requestedPeriodStartDate { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey AppointmentEMRRequestedPeriodId { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey RequestedPeriodEndDate { get; private set; }
+        public VocabularyKey RequestedPeriodStartDate { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

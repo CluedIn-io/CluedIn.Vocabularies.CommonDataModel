@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PSNPurchasingCardVendTransEntityVocabulary()
         {
-            VocabularyName = "PSNPurchasingCardVendTransEntity";
+            VocabularyName = "PSN Purchasing Card Vend Trans Entity";
             KeyPrefix = "commonDataModel.psnpurchasingcardvendtransentity";
             KeySeparator = ".";
             Grouping = "/PSNPurchasingCardVendTransEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 VendTransRecId = group.Add(new VocabularyKey(nameof(VendTransRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Invoice = group.Add(new VocabularyKey(nameof(Invoice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Voucher = group.Add(new VocabularyKey(nameof(Voucher), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BankAccountId { get; private set; }
         public VocabularyKey CardHolderName { get; private set; }
         public VocabularyKey PurchasingCardInvoice { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey VendTransRecId { get; private set; }
         public VocabularyKey Invoice { get; private set; }
         public VocabularyKey Voucher { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public OMOperatingUnitContactEntityVocabulary()
         {
-            VocabularyName = "OMOperatingUnitContactEntity";
+            VocabularyName = "OM Operating Unit Contact Entity";
             KeyPrefix = "commonDataModel.omoperatingunitcontactentity";
             KeySeparator = ".";
             Grouping = "/OMOperatingUnitContactEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsPrimary = group.Add(new VocabularyKey(nameof(IsPrimary), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsPrivate = group.Add(new VocabularyKey(nameof(IsPrivate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OMOperatingUnitNumber = group.Add(new VocabularyKey(nameof(OMOperatingUnitNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PartyNumber { get; private set; }
         public VocabularyKey LocationId { get; private set; }
         public VocabularyKey Description { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsPrimary { get; private set; }
         public VocabularyKey IsPrivate { get; private set; }
         public VocabularyKey OMOperatingUnitNumber { get; private set; }
-
-
     }
 }

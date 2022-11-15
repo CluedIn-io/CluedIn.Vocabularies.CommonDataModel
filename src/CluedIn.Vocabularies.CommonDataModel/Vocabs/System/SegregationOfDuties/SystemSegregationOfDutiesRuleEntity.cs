@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SystemSegregationOfDutiesRuleEntityVocabulary()
         {
-            VocabularyName = "SystemSegregationOfDutiesRuleEntity";
+            VocabularyName = "System Segregation Of Duties Rule Entity";
             KeyPrefix = "commonDataModel.systemsegregationofdutiesruleentity";
             KeySeparator = ".";
             Grouping = "/SystemSegregationOfDutiesRuleEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Severity = group.Add(new VocabularyKey(nameof(Severity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Risk = group.Add(new VocabularyKey(nameof(Risk), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Mitigation = group.Add(new VocabularyKey(nameof(Mitigation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey ValidTo { get; private set; }
         public VocabularyKey Name { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Severity { get; private set; }
         public VocabularyKey Risk { get; private set; }
         public VocabularyKey Mitigation { get; private set; }
-
-
     }
 }

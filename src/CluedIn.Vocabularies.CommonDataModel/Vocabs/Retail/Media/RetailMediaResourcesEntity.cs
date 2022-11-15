@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailMediaResourcesEntityVocabulary()
         {
-            VocabularyName = "RetailMediaResourcesEntity";
+            VocabularyName = "Retail Media Resources Entity";
             KeyPrefix = "commonDataModel.retailmediaresourcesentity";
             KeySeparator = ".";
             Grouping = "/RetailMediaResourcesEntity";
@@ -15,7 +15,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 ResourceId = group.Add(new VocabularyKey(nameof(ResourceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ResourceUrl = group.Add(new VocabularyKey(nameof(ResourceUrl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                isPartialUrl = group.Add(new VocabularyKey(nameof(isPartialUrl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsPartialUrl = group.Add(new VocabularyKey(nameof(IsPartialUrl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FileName = group.Add(new VocabularyKey(nameof(FileName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SizeInKilobytes = group.Add(new VocabularyKey(nameof(SizeInKilobytes), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
@@ -36,13 +36,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsProduct = group.Add(new VocabularyKey(nameof(IsProduct), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsWorker = group.Add(new VocabularyKey(nameof(IsWorker), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InstanceRelationType = group.Add(new VocabularyKey(nameof(InstanceRelationType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ResourceId { get; private set; }
         public VocabularyKey ResourceUrl { get; private set; }
-        public VocabularyKey isPartialUrl { get; private set; }
+        public VocabularyKey IsPartialUrl { get; private set; }
         public VocabularyKey FileName { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey SizeInKilobytes { get; private set; }
@@ -63,7 +61,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsProduct { get; private set; }
         public VocabularyKey IsWorker { get; private set; }
         public VocabularyKey InstanceRelationType { get; private set; }
-
-
     }
 }

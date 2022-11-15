@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxWithholdNatureOfRemittanceEntityVocabulary()
         {
-            VocabularyName = "TaxWithholdNatureOfRemittanceEntity";
+            VocabularyName = "Tax Withhold Nature Of Remittance Entity";
             KeyPrefix = "commonDataModel.taxwithholdnatureofremittanceentity";
             KeySeparator = ".";
             Grouping = "/TaxWithholdNatureOfRemittanceEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 RemittanceCategoryCode = group.Add(new VocabularyKey(nameof(RemittanceCategoryCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RemittanceDetails = group.Add(new VocabularyKey(nameof(RemittanceDetails), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RemittanceCategoryCode { get; private set; }
         public VocabularyKey RemittanceDetails { get; private set; }
-
-
     }
 }

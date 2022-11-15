@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendorPaymentFeeEntityVocabulary()
         {
-            VocabularyName = "VendorPaymentFeeEntity";
+            VocabularyName = "Vendor Payment Fee Entity";
             KeyPrefix = "commonDataModel.vendorpaymentfeeentity";
             KeySeparator = ".";
             Grouping = "/VendorPaymentFeeEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FeeLedgerAccountDisplayValue = group.Add(new VocabularyKey(nameof(FeeLedgerAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorCoveredFeeLedgerAccount = group.Add(new VocabularyKey(nameof(VendorCoveredFeeLedgerAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorCoveredFeeLedgerAccountDisplayValue = group.Add(new VocabularyKey(nameof(VendorCoveredFeeLedgerAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey ChargeType { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FeeLedgerAccountDisplayValue { get; private set; }
         public VocabularyKey VendorCoveredFeeLedgerAccount { get; private set; }
         public VocabularyKey VendorCoveredFeeLedgerAccountDisplayValue { get; private set; }
-
-
     }
 }

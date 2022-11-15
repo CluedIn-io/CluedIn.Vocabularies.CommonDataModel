@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public IntrastatTransportMethodEntityVocabulary()
         {
-            VocabularyName = "IntrastatTransportMethodEntity";
+            VocabularyName = "Intrastat Transport Method Entity";
             KeyPrefix = "commonDataModel.intrastattransportmethodentity";
             KeySeparator = ".";
             Grouping = "/IntrastatTransportMethodEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Port = group.Add(new VocabularyKey(nameof(Port), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Transport = group.Add(new VocabularyKey(nameof(Transport), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey Port { get; private set; }
         public VocabularyKey Transport { get; private set; }
-
-
     }
 }

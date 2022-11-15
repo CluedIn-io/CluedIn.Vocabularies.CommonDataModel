@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgIndirectTimeAndAttendanceActivityEntityVocabulary()
         {
-            VocabularyName = "JmgIndirectTimeAndAttendanceActivityEntity";
+            VocabularyName = "Jmg Indirect Time And Attendance Activity Entity";
             KeyPrefix = "commonDataModel.jmgindirecttimeandattendanceactivityentity";
             KeySeparator = ".";
             Grouping = "/JmgIndirectTimeAndAttendanceActivityEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 JobSystemFunction = group.Add(new VocabularyKey(nameof(JobSystemFunction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MainAccountIdDisplayValue = group.Add(new VocabularyKey(nameof(MainAccountIdDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OffsetAccountIdDisplayValue = group.Add(new VocabularyKey(nameof(OffsetAccountIdDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ActivityId { get; private set; }
         public VocabularyKey BreakCancelationRule { get; private set; }
         public VocabularyKey IsBreakPayable { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey JobSystemFunction { get; private set; }
         public VocabularyKey MainAccountIdDisplayValue { get; private set; }
         public VocabularyKey OffsetAccountIdDisplayValue { get; private set; }
-
-
     }
 }

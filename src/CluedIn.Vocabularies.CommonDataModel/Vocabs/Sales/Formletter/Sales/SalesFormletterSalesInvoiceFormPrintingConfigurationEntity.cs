@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesFormletterSalesInvoiceFormPrintingConfigurationEntityVocabulary()
         {
-            VocabularyName = "SalesFormletterSalesInvoiceFormPrintingConfigurationEntity";
+            VocabularyName = "Sales Formletter Sales Invoice Form Printing Configuration Entity";
             KeyPrefix = "commonDataModel.salesformlettersalesinvoiceformprintingconfigurationentity";
             KeySeparator = ".";
             Grouping = "/SalesFormletterSalesInvoiceFormPrintingConfigurationEntity";
@@ -36,10 +36,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DisplayedPaymentAttachmentType = group.Add(new VocabularyKey(nameof(DisplayedPaymentAttachmentType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LumpSumRecoveryGracePeriodDays = group.Add(new VocabularyKey(nameof(LumpSumRecoveryGracePeriodDays), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LumpSumRecoveryText = group.Add(new VocabularyKey(nameof(LumpSumRecoveryText), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsInventoryStatusIdDisplayed { get; private set; }
         public VocabularyKey IsItemBatchNumberDisplayed { get; private set; }
         public VocabularyKey IsItemSerialNumberDisplayed { get; private set; }
@@ -63,7 +61,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DisplayedPaymentAttachmentType { get; private set; }
         public VocabularyKey LumpSumRecoveryGracePeriodDays { get; private set; }
         public VocabularyKey LumpSumRecoveryText { get; private set; }
-
-
     }
 }

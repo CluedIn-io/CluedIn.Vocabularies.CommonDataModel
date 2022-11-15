@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPurchaseRequisitionConsumptionControlPolicyRuleEntityVocabulary()
         {
-            VocabularyName = "PurchPurchaseRequisitionConsumptionControlPolicyRuleEntity";
+            VocabularyName = "Purch Purchase Requisition Consumption Control Policy Rule Entity";
             KeyPrefix = "commonDataModel.purchpurchaserequisitionconsumptioncontrolpolicyruleentity";
             KeySeparator = ".";
             Grouping = "/PurchPurchaseRequisitionConsumptionControlPolicyRuleEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsRequiredDateDefaultAccountingDate = group.Add(new VocabularyKey(nameof(IsRequiredDateDefaultAccountingDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PolicyRuleName = group.Add(new VocabularyKey(nameof(PolicyRuleName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PurchasingPolicyName = group.Add(new VocabularyKey(nameof(PurchasingPolicyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Policy { get; private set; }
         public VocabularyKey PolicyRuleType { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsRequiredDateDefaultAccountingDate { get; private set; }
         public VocabularyKey PolicyRuleName { get; private set; }
         public VocabularyKey PurchasingPolicyName { get; private set; }
-
-
     }
 }

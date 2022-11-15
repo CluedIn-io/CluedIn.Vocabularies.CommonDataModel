@@ -6,28 +6,24 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CommunicationRequestRecipientVocabulary()
         {
-            VocabularyName = "CommunicationRequestRecipient";
+            VocabularyName = "Communication Request Recipient";
             KeyPrefix = "commonDataModel.communicationrequestrecipient";
             KeySeparator = ".";
             Grouping = "/CommunicationRequestRecipient";
 
             AddGroup("CommunicationRequestRecipient Details", group =>
             {
-                communicationRequestRecipientId = group.Add(new VocabularyKey(nameof(communicationRequestRecipientId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                recipientType = group.Add(new VocabularyKey(nameof(recipientType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                CommunicationRequestRecipientId = group.Add(new VocabularyKey(nameof(CommunicationRequestRecipientId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RecipientType = group.Add(new VocabularyKey(nameof(RecipientType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey communicationRequestRecipientId { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey recipientType { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey CommunicationRequestRecipientId { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey RecipientType { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

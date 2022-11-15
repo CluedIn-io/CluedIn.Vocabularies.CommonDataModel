@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjCollaborationWorkspaceSettingsEntityVocabulary()
         {
-            VocabularyName = "ProjCollaborationWorkspaceSettingsEntity";
+            VocabularyName = "Proj Collaboration Workspace Settings Entity";
             KeyPrefix = "commonDataModel.projcollaborationworkspacesettingsentity";
             KeySeparator = ".";
             Grouping = "/ProjCollaborationWorkspaceSettingsEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 StoreMSProjectFiles = group.Add(new VocabularyKey(nameof(StoreMSProjectFiles), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SyncTaskLists = group.Add(new VocabularyKey(nameof(SyncTaskLists), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Template = group.Add(new VocabularyKey(nameof(Template), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsWorkspaceAutoCreatedForCost { get; private set; }
         public VocabularyKey IsWorkspaceAutoCreatedForFixedPrice { get; private set; }
         public VocabularyKey IsWorkspaceAutoCreatedForInternal { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey StoreMSProjectFiles { get; private set; }
         public VocabularyKey SyncTaskLists { get; private set; }
         public VocabularyKey Template { get; private set; }
-
-
     }
 }

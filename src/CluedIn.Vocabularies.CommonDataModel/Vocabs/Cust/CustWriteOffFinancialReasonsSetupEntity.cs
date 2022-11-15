@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustWriteOffFinancialReasonsSetupEntityVocabulary()
         {
-            VocabularyName = "CustWriteOffFinancialReasonsSetupEntity";
+            VocabularyName = "Cust Write Off Financial Reasons Setup Entity";
             KeyPrefix = "commonDataModel.custwriteofffinancialreasonssetupentity";
             KeySeparator = ".";
             Grouping = "/CustWriteOffFinancialReasonsSetupEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsDefault = group.Add(new VocabularyKey(nameof(IsDefault), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WriteOffLedgerDimension = group.Add(new VocabularyKey(nameof(WriteOffLedgerDimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WriteOffLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(WriteOffLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Company { get; private set; }
         public VocabularyKey WriteOffReason { get; private set; }
         public VocabularyKey WriteOffDescription { get; private set; }
         public VocabularyKey IsDefault { get; private set; }
         public VocabularyKey WriteOffLedgerDimension { get; private set; }
         public VocabularyKey WriteOffLedgerDimensionDisplayValue { get; private set; }
-
-
     }
 }

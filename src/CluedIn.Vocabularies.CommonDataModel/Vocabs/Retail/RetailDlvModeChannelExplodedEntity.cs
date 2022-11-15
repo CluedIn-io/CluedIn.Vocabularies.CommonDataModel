@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailDlvModeChannelExplodedEntityVocabulary()
         {
-            VocabularyName = "RetailDlvModeChannelExplodedEntity";
+            VocabularyName = "Retail Dlv Mode Channel Exploded Entity";
             KeyPrefix = "commonDataModel.retaildlvmodechannelexplodedentity";
             KeySeparator = ".";
             Grouping = "/RetailDlvModeChannelExplodedEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DlvMode_Code = group.Add(new VocabularyKey(nameof(DlvMode_Code), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PartyNumber = group.Add(new VocabularyKey(nameof(PartyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OperatingUnitNumber = group.Add(new VocabularyKey(nameof(OperatingUnitNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DlvMode { get; private set; }
         public VocabularyKey OMOperatingUnit { get; private set; }
         public VocabularyKey DlvMode_Code { get; private set; }
         public VocabularyKey PartyNumber { get; private set; }
         public VocabularyKey OperatingUnitNumber { get; private set; }
-
-
     }
 }

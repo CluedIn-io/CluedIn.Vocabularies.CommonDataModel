@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailLanguageTextEntityVocabulary()
         {
-            VocabularyName = "RetailLanguageTextEntity";
+            VocabularyName = "Retail Language Text Entity";
             KeyPrefix = "commonDataModel.retaillanguagetextentity";
             KeySeparator = ".";
             Grouping = "/RetailLanguageTextEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ModuleId = group.Add(new VocabularyKey(nameof(ModuleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Text = group.Add(new VocabularyKey(nameof(Text), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TextId = group.Add(new VocabularyKey(nameof(TextId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DateCreated { get; private set; }
         public VocabularyKey DateUpdated { get; private set; }
         public VocabularyKey ErrorText { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ModuleId { get; private set; }
         public VocabularyKey Text { get; private set; }
         public VocabularyKey TextId { get; private set; }
-
-
     }
 }

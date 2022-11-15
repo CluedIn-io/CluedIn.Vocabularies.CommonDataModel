@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseReplenishmentTemplateLineEntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseReplenishmentTemplateLineEntity";
+            VocabularyName = "WHS Warehouse Replenishment Template Line Entity";
             KeyPrefix = "commonDataModel.whswarehousereplenishmenttemplatelineentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseReplenishmentTemplateLineEntity";
@@ -36,10 +36,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ReplenishmentThresholdScope = group.Add(new VocabularyKey(nameof(ReplenishmentThresholdScope), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ZoneQuery = group.Add(new VocabularyKey(nameof(ZoneQuery), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReplenishmentWarehouseId = group.Add(new VocabularyKey(nameof(ReplenishmentWarehouseId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WarehouseReplenishmentTemplateId { get; private set; }
         public VocabularyKey SequenceNumber { get; private set; }
         public VocabularyKey LineDescription { get; private set; }
@@ -63,7 +61,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ReplenishmentThresholdScope { get; private set; }
         public VocabularyKey ZoneQuery { get; private set; }
         public VocabularyKey ReplenishmentWarehouseId { get; private set; }
-
-
     }
 }

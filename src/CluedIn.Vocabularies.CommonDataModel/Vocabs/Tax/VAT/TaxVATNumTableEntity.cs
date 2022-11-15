@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxVATNumTableEntityVocabulary()
         {
-            VocabularyName = "TaxVATNumTableEntity";
+            VocabularyName = "Tax VAT Num Table Entity";
             KeyPrefix = "commonDataModel.taxvatnumtableentity";
             KeySeparator = ".";
             Grouping = "/TaxVATNumTableEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CountryRegionId = group.Add(new VocabularyKey(nameof(CountryRegionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VATNum = group.Add(new VocabularyKey(nameof(VATNum), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CountryRegionId { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey VATNum { get; private set; }
-
-
     }
 }

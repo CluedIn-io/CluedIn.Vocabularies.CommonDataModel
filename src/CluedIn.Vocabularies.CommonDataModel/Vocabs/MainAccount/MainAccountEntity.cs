@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MainAccountEntityVocabulary()
         {
-            VocabularyName = "MainAccountEntity";
+            VocabularyName = "Main Account Entity";
             KeyPrefix = "commonDataModel.mainaccountentity";
             KeySeparator = ".";
             Grouping = "/MainAccountEntity";
@@ -57,10 +57,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ExchangeAdjustmentRateType = group.Add(new VocabularyKey(nameof(ExchangeAdjustmentRateType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReportingExchangeAdjustmentRateTypeRecId = group.Add(new VocabularyKey(nameof(ReportingExchangeAdjustmentRateTypeRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReportingExchangeAdjustmentRateType = group.Add(new VocabularyKey(nameof(ReportingExchangeAdjustmentRateType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey MainAccountCategory { get; private set; }
         public VocabularyKey AccountCategoryReference { get; private set; }
         public VocabularyKey Closing { get; private set; }
@@ -105,7 +103,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ExchangeAdjustmentRateType { get; private set; }
         public VocabularyKey ReportingExchangeAdjustmentRateTypeRecId { get; private set; }
         public VocabularyKey ReportingExchangeAdjustmentRateType { get; private set; }
-
-
     }
 }

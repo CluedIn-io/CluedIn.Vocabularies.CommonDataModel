@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SystemGroupEntityVocabulary()
         {
-            VocabularyName = "SystemGroupEntity";
+            VocabularyName = "System Group Entity";
             KeyPrefix = "commonDataModel.systemgroupentity";
             KeySeparator = ".";
             Grouping = "/SystemGroupEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Language = group.Add(new VocabularyKey(nameof(Language), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PreferredTimeZone = group.Add(new VocabularyKey(nameof(PreferredTimeZone), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PreferredCalendar = group.Add(new VocabularyKey(nameof(PreferredCalendar), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey UserId { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey ObjectID { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Language { get; private set; }
         public VocabularyKey PreferredTimeZone { get; private set; }
         public VocabularyKey PreferredCalendar { get; private set; }
-
-
     }
 }

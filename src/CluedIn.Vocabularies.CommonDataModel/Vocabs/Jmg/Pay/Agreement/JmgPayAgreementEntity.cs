@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgPayAgreementEntityVocabulary()
         {
-            VocabularyName = "JmgPayAgreementEntity";
+            VocabularyName = "Jmg Pay Agreement Entity";
             KeyPrefix = "commonDataModel.jmgpayagreemententity";
             KeySeparator = ".";
             Grouping = "/JmgPayAgreementEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MinutesToDeductWhenLate = group.Add(new VocabularyKey(nameof(MinutesToDeductWhenLate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FromDate = group.Add(new VocabularyKey(nameof(FromDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ToDate = group.Add(new VocabularyKey(nameof(ToDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PayAgreementCode { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey OvertimeRoundingValue { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey MinutesToDeductWhenLate { get; private set; }
         public VocabularyKey FromDate { get; private set; }
         public VocabularyKey ToDate { get; private set; }
-
-
     }
 }

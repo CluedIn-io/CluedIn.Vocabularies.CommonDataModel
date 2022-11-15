@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRRoyaltyAgreementLineProductSelectionV2EntityVocabulary()
         {
-            VocabularyName = "MCRRoyaltyAgreementLineProductSelectionV2Entity";
+            VocabularyName = "MCR Royalty Agreement Line Product Selection V2 Entity";
             KeyPrefix = "commonDataModel.mcrroyaltyagreementlineproductselectionv2entity";
             KeySeparator = ".";
             Grouping = "/MCRRoyaltyAgreementLineProductSelectionV2Entity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 QualifyingSiteId = group.Add(new VocabularyKey(nameof(QualifyingSiteId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 QualifyingWarehouseId = group.Add(new VocabularyKey(nameof(QualifyingWarehouseId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorAccountNumber = group.Add(new VocabularyKey(nameof(VendorAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RoyaltyAgreementLineId { get; private set; }
         public VocabularyKey RoyaltyAgreementId { get; private set; }
         public VocabularyKey ItemNumber { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey QualifyingSiteId { get; private set; }
         public VocabularyKey QualifyingWarehouseId { get; private set; }
         public VocabularyKey VendorAccountNumber { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustomerPaymentMethodSpecificationEntityVocabulary()
         {
-            VocabularyName = "CustomerPaymentMethodSpecificationEntity";
+            VocabularyName = "Customer Payment Method Specification Entity";
             KeyPrefix = "commonDataModel.customerpaymentmethodspecificationentity";
             KeySeparator = ".";
             Grouping = "/CustomerPaymentMethodSpecificationEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PaymentWay = group.Add(new VocabularyKey(nameof(PaymentWay), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RemittanceSegment = group.Add(new VocabularyKey(nameof(RemittanceSegment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReturnSegment = group.Add(new VocabularyKey(nameof(ReturnSegment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ClassId { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey PaymentMethodName { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PaymentWay { get; private set; }
         public VocabularyKey RemittanceSegment { get; private set; }
         public VocabularyKey ReturnSegment { get; private set; }
-
-
     }
 }

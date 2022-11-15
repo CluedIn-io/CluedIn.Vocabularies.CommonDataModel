@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseWorkTemplateLineEntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseWorkTemplateLineEntity";
+            VocabularyName = "WHS Warehouse Work Template Line Entity";
             KeyPrefix = "commonDataModel.whswarehouseworktemplatelineentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseWorkTemplateLineEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WarehouseLocationDirectiveCode = group.Add(new VocabularyKey(nameof(WarehouseLocationDirectiveCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WarehouseWorkClassId = group.Add(new VocabularyKey(nameof(WarehouseWorkClassId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 QualityCheckTemplateId = group.Add(new VocabularyKey(nameof(QualityCheckTemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WarehouseWorkOrderType { get; private set; }
         public VocabularyKey WarehouseWorkTemplateId { get; private set; }
         public VocabularyKey LineNumber { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WarehouseLocationDirectiveCode { get; private set; }
         public VocabularyKey WarehouseWorkClassId { get; private set; }
         public VocabularyKey QualityCheckTemplateId { get; private set; }
-
-
     }
 }

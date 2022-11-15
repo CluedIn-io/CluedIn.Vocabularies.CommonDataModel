@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendorInvoiceDocumentAttachmentEntityVocabulary()
         {
-            VocabularyName = "VendorInvoiceDocumentAttachmentEntity";
+            VocabularyName = "Vendor Invoice Document Attachment Entity";
             KeyPrefix = "commonDataModel.vendorinvoicedocumentattachmententity";
             KeySeparator = ".";
             Grouping = "/VendorInvoiceDocumentAttachmentEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FileType = group.Add(new VocabularyKey(nameof(FileType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ActualCompanyId = group.Add(new VocabularyKey(nameof(ActualCompanyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultAttachment = group.Add(new VocabularyKey(nameof(DefaultAttachment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DocumentId { get; private set; }
         public VocabularyKey TypeId { get; private set; }
         public VocabularyKey HeaderReference { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FileType { get; private set; }
         public VocabularyKey ActualCompanyId { get; private set; }
         public VocabularyKey DefaultAttachment { get; private set; }
-
-
     }
 }

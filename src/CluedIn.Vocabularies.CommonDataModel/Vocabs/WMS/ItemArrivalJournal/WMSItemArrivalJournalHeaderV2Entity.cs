@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WMSItemArrivalJournalHeaderV2EntityVocabulary()
         {
-            VocabularyName = "WMSItemArrivalJournalHeaderV2Entity";
+            VocabularyName = "WMS Item Arrival Journal Header V2 Entity";
             KeyPrefix = "commonDataModel.wmsitemarrivaljournalheaderv2entity";
             KeySeparator = ".";
             Grouping = "/WMSItemArrivalJournalHeaderV2Entity";
@@ -33,10 +33,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PostedDateTime = group.Add(new VocabularyKey(nameof(PostedDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PostedUserId = group.Add(new VocabularyKey(nameof(PostedUserId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AreLinesDeletedAfterPosting = group.Add(new VocabularyKey(nameof(AreLinesDeletedAfterPosting), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey JournalNumber { get; private set; }
         public VocabularyKey JournalNameId { get; private set; }
         public VocabularyKey JournalDescription { get; private set; }
@@ -57,7 +55,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PostedDateTime { get; private set; }
         public VocabularyKey PostedUserId { get; private set; }
         public VocabularyKey AreLinesDeletedAfterPosting { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerAccountStructureActivationEntityVocabulary()
         {
-            VocabularyName = "LedgerAccountStructureActivationEntity";
+            VocabularyName = "Ledger Account Structure Activation Entity";
             KeyPrefix = "commonDataModel.ledgeraccountstructureactivationentity";
             KeySeparator = ".";
             Grouping = "/LedgerAccountStructureActivationEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 AccountStructure = group.Add(new VocabularyKey(nameof(AccountStructure), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DoActivate = group.Add(new VocabularyKey(nameof(DoActivate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountStructure { get; private set; }
         public VocabularyKey DoActivate { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxAgentEntityVocabulary()
         {
-            VocabularyName = "TaxAgentEntity";
+            VocabularyName = "Tax Agent Entity";
             KeyPrefix = "commonDataModel.taxagententity";
             KeySeparator = ".";
             Grouping = "/TaxAgentEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TaxRegNum = group.Add(new VocabularyKey(nameof(TaxRegNum), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PartyNumber = group.Add(new VocabularyKey(nameof(PartyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AgentId { get; private set; }
         public VocabularyKey Party { get; private set; }
         public VocabularyKey TaxRegNum { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey PartyNumber { get; private set; }
-
-
     }
 }

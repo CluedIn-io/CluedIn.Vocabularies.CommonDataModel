@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseLocationFormatSegmentEntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseLocationFormatSegmentEntity";
+            VocabularyName = "WHS Warehouse Location Format Segment Entity";
             KeyPrefix = "commonDataModel.whswarehouselocationformatsegmententity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseLocationFormatSegmentEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SegmentDescription = group.Add(new VocabularyKey(nameof(SegmentDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SegmentLength = group.Add(new VocabularyKey(nameof(SegmentLength), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SegmentSeparator = group.Add(new VocabularyKey(nameof(SegmentSeparator), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Sequence { get; private set; }
         public VocabularyKey WarehouseLocationFormatId { get; private set; }
         public VocabularyKey SegmentDescription { get; private set; }
         public VocabularyKey SegmentLength { get; private set; }
         public VocabularyKey SegmentSeparator { get; private set; }
-
-
     }
 }

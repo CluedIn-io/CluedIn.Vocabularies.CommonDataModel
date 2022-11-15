@@ -6,30 +6,26 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public UserSettingVocabulary()
         {
-            VocabularyName = "UserSetting";
+            VocabularyName = "User Setting";
             KeyPrefix = "commonDataModel.usersetting";
             KeySeparator = ".";
             Grouping = "/UserSetting";
 
             AddGroup("UserSetting Details", group =>
             {
-                key = group.Add(new VocabularyKey(nameof(key), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                userSettingId = group.Add(new VocabularyKey(nameof(userSettingId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                value = group.Add(new VocabularyKey(nameof(value), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                comment = group.Add(new VocabularyKey(nameof(comment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                Key = group.Add(new VocabularyKey(nameof(Key), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                UserSettingId = group.Add(new VocabularyKey(nameof(UserSettingId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Value = group.Add(new VocabularyKey(nameof(Value), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Comment = group.Add(new VocabularyKey(nameof(Comment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey key { get; private set; }
-        public VocabularyKey userSettingId { get; private set; }
-        public VocabularyKey value { get; private set; }
-        public VocabularyKey comment { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey Key { get; private set; }
+        public VocabularyKey UserSettingId { get; private set; }
+        public VocabularyKey Value { get; private set; }
+        public VocabularyKey Comment { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WorkTypeTableEntityVocabulary()
         {
-            VocabularyName = "WorkTypeTableEntity";
+            VocabularyName = "Work Type Table Entity";
             KeyPrefix = "commonDataModel.worktypetableentity";
             KeySeparator = ".";
             Grouping = "/WorkTypeTableEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 TypeOfWorks = group.Add(new VocabularyKey(nameof(TypeOfWorks), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TypeOfWorks { get; private set; }
         public VocabularyKey Name { get; private set; }
-
-
     }
 }

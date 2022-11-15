@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InflationAdjJournalEntityVocabulary()
         {
-            VocabularyName = "InflationAdjJournalEntity";
+            VocabularyName = "Inflation Adj Journal Entity";
             KeyPrefix = "commonDataModel.inflationadjjournalentity";
             KeySeparator = ".";
             Grouping = "/InflationAdjJournalEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PostingLayer = group.Add(new VocabularyKey(nameof(PostingLayer), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Voucher = group.Add(new VocabularyKey(nameof(Voucher), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReversedVoucher = group.Add(new VocabularyKey(nameof(ReversedVoucher), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FromDate { get; private set; }
         public VocabularyKey ToDate { get; private set; }
         public VocabularyKey Status { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PostingLayer { get; private set; }
         public VocabularyKey Voucher { get; private set; }
         public VocabularyKey ReversedVoucher { get; private set; }
-
-
     }
 }

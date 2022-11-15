@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmCompensationPayPerformanceAllocationEntityVocabulary()
         {
-            VocabularyName = "HcmCompensationPayPerformanceAllocationEntity";
+            VocabularyName = "Hcm Compensation Pay Performance Allocation Entity";
             KeyPrefix = "commonDataModel.hcmcompensationpayperformanceallocationentity";
             KeySeparator = ".";
             Grouping = "/HcmCompensationPayPerformanceAllocationEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Plan = group.Add(new VocabularyKey(nameof(Plan), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Effective = group.Add(new VocabularyKey(nameof(Effective), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Expiration = group.Add(new VocabularyKey(nameof(Expiration), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Name { get; private set; }
         public VocabularyKey Allocation { get; private set; }
         public VocabularyKey Department { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Plan { get; private set; }
         public VocabularyKey Effective { get; private set; }
         public VocabularyKey Expiration { get; private set; }
-
-
     }
 }

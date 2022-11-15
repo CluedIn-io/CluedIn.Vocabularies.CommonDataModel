@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmJobDetailEntityVocabulary()
         {
-            VocabularyName = "HcmJobDetailEntity";
+            VocabularyName = "Hcm Job Detail Entity";
             KeyPrefix = "commonDataModel.hcmjobdetailentity";
             KeySeparator = ".";
             Grouping = "/HcmJobDetailEntity";
@@ -36,10 +36,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ValidFrom = group.Add(new VocabularyKey(nameof(ValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidTo = group.Add(new VocabularyKey(nameof(ValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PaidHourly = group.Add(new VocabularyKey(nameof(PaidHourly), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CompensationLevel { get; private set; }
         public VocabularyKey CompensationLevelId { get; private set; }
         public VocabularyKey FullTimeEquivalent { get; private set; }
@@ -63,7 +61,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey ValidTo { get; private set; }
         public VocabularyKey PaidHourly { get; private set; }
-
-
     }
 }

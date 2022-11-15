@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerEntityVocabulary()
         {
-            VocabularyName = "LedgerEntity";
+            VocabularyName = "Ledger Entity";
             KeyPrefix = "commonDataModel.ledgerentity";
             KeySeparator = ".";
             Grouping = "/LedgerEntity";
@@ -59,10 +59,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MainAccountIdFinancialLoss = group.Add(new VocabularyKey(nameof(MainAccountIdFinancialLoss), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReportingCurrencyExchangeRateType = group.Add(new VocabularyKey(nameof(ReportingCurrencyExchangeRateType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReportingCurrencyExchangeRateTypeRecId = group.Add(new VocabularyKey(nameof(ReportingCurrencyExchangeRateTypeRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountingCurrency { get; private set; }
         public VocabularyKey ReportingCurrency { get; private set; }
         public VocabularyKey Description { get; private set; }
@@ -109,7 +107,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey MainAccountIdFinancialLoss { get; private set; }
         public VocabularyKey ReportingCurrencyExchangeRateType { get; private set; }
         public VocabularyKey ReportingCurrencyExchangeRateTypeRecId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendVendorReasonsEntityVocabulary()
         {
-            VocabularyName = "VendVendorReasonsEntity";
+            VocabularyName = "Vend Vendor Reasons Entity";
             KeyPrefix = "commonDataModel.vendvendorreasonsentity";
             KeySeparator = ".";
             Grouping = "/VendVendorReasonsEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DefaultComment = group.Add(new VocabularyKey(nameof(DefaultComment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReasonCode = group.Add(new VocabularyKey(nameof(ReasonCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ForVendorTransactionType = group.Add(new VocabularyKey(nameof(ForVendorTransactionType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CancellationReason { get; private set; }
         public VocabularyKey PurposeCode { get; private set; }
         public VocabularyKey DefaultComment { get; private set; }
         public VocabularyKey ReasonCode { get; private set; }
         public VocabularyKey ForVendorTransactionType { get; private set; }
-
-
     }
 }

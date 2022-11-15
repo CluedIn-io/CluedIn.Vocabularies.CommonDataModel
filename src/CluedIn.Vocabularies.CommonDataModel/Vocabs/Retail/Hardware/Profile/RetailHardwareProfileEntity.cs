@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailHardwareProfileEntityVocabulary()
         {
-            VocabularyName = "RetailHardwareProfileEntity";
+            VocabularyName = "Retail Hardware Profile Entity";
             KeyPrefix = "commonDataModel.retailhardwareprofileentity";
             KeySeparator = ".";
             Grouping = "/RetailHardwareProfileEntity";
@@ -162,10 +162,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Scanner2DecodeScanData = group.Add(new VocabularyKey(nameof(Scanner2DecodeScanData), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Scanner1DecodeScanData = group.Add(new VocabularyKey(nameof(Scanner1DecodeScanData), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MergedSelfServicePackageReference = group.Add(new VocabularyKey(nameof(MergedSelfServicePackageReference), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CaptureExtraData { get; private set; }
         public VocabularyKey CashChanger { get; private set; }
         public VocabularyKey CashChangerInitialSettings { get; private set; }
@@ -315,7 +313,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Scanner2DecodeScanData { get; private set; }
         public VocabularyKey Scanner1DecodeScanData { get; private set; }
         public VocabularyKey MergedSelfServicePackageReference { get; private set; }
-
-
     }
 }

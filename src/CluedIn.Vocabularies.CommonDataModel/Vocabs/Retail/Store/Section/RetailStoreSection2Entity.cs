@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailStoreSection2EntityVocabulary()
         {
-            VocabularyName = "RetailStoreSection2Entity";
+            VocabularyName = "Retail Store Section 2 Entity";
             KeyPrefix = "commonDataModel.retailstoresection2entity";
             KeySeparator = ".";
             Grouping = "/RetailStoreSection2Entity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Size = group.Add(new VocabularyKey(nameof(Size), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SizeUnit = group.Add(new VocabularyKey(nameof(SizeUnit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StoreNumber = group.Add(new VocabularyKey(nameof(StoreNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LastCheckedStock { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey SectionId { get; private set; }
         public VocabularyKey Size { get; private set; }
         public VocabularyKey SizeUnit { get; private set; }
         public VocabularyKey StoreNumber { get; private set; }
-
-
     }
 }

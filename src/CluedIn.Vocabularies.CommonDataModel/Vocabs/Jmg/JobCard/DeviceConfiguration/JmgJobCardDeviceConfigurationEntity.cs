@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgJobCardDeviceConfigurationEntityVocabulary()
         {
-            VocabularyName = "JmgJobCardDeviceConfigurationEntity";
+            VocabularyName = "Jmg Job Card Device Configuration Entity";
             KeyPrefix = "commonDataModel.jmgjobcarddeviceconfigurationentity";
             KeySeparator = ".";
             Grouping = "/JmgJobCardDeviceConfigurationEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DefaultOperationsResourceGroupIdFilter = group.Add(new VocabularyKey(nameof(DefaultOperationsResourceGroupIdFilter), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ArePersonalFiltersAllowed = group.Add(new VocabularyKey(nameof(ArePersonalFiltersAllowed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsSingleWorkerModeEnforced = group.Add(new VocabularyKey(nameof(IsSingleWorkerModeEnforced), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsWorkerIdFieldDisabled { get; private set; }
         public VocabularyKey ConfigurationId { get; private set; }
         public VocabularyKey WillClockOutPromptWorkerForQuantity { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DefaultOperationsResourceGroupIdFilter { get; private set; }
         public VocabularyKey ArePersonalFiltersAllowed { get; private set; }
         public VocabularyKey IsSingleWorkerModeEnforced { get; private set; }
-
-
     }
 }

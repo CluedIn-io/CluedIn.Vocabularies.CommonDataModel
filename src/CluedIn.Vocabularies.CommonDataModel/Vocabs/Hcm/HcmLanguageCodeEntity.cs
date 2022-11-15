@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmLanguageCodeEntityVocabulary()
         {
-            VocabularyName = "HcmLanguageCodeEntity";
+            VocabularyName = "Hcm Language Code Entity";
             KeyPrefix = "commonDataModel.hcmlanguagecodeentity";
             KeySeparator = ".";
             Grouping = "/HcmLanguageCodeEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LanguageCodeId = group.Add(new VocabularyKey(nameof(LanguageCodeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey LanguageCodeId { get; private set; }
-
-
     }
 }

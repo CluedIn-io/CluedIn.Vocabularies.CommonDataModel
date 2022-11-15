@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public IntrastatEntityVocabulary()
         {
-            VocabularyName = "IntrastatEntity";
+            VocabularyName = "Intrastat Entity";
             KeyPrefix = "commonDataModel.intrastatentity";
             KeySeparator = ".";
             Grouping = "/IntrastatEntity";
@@ -51,7 +51,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Preference = group.Add(new VocabularyKey(nameof(Preference), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Quantity = group.Add(new VocabularyKey(nameof(Quantity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Quarter = group.Add(new VocabularyKey(nameof(Quarter), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                relation = group.Add(new VocabularyKey(nameof(relation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Relation = group.Add(new VocabularyKey(nameof(Relation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SequenceNumber = group.Add(new VocabularyKey(nameof(SequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 State = group.Add(new VocabularyKey(nameof(State), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IntrastatStatisticalAdjustmentAmount = group.Add(new VocabularyKey(nameof(IntrastatStatisticalAdjustmentAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
@@ -98,10 +98,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SpecialMovement = group.Add(new VocabularyKey(nameof(SpecialMovement), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SendReceiveState = group.Add(new VocabularyKey(nameof(SendReceiveState), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MiscChargePerKg = group.Add(new VocabularyKey(nameof(MiscChargePerKg), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountNumber { get; private set; }
         public VocabularyKey AdditionalUnitsQuantity { get; private set; }
         public VocabularyKey AdditionalUnit { get; private set; }
@@ -140,7 +138,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Preference { get; private set; }
         public VocabularyKey Quantity { get; private set; }
         public VocabularyKey Quarter { get; private set; }
-        public VocabularyKey relation { get; private set; }
+        public VocabularyKey Relation { get; private set; }
         public VocabularyKey SequenceNumber { get; private set; }
         public VocabularyKey State { get; private set; }
         public VocabularyKey IntrastatStatisticalAdjustmentAmount { get; private set; }
@@ -187,7 +185,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SpecialMovement { get; private set; }
         public VocabularyKey SendReceiveState { get; private set; }
         public VocabularyKey MiscChargePerKg { get; private set; }
-
-
     }
 }

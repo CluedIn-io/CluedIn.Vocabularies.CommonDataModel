@@ -2,16 +2,16 @@ using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 {
-    public class smmMarketingMailPolicyEntityVocabulary : SimpleVocabulary
+    public class SmmMarketingMailPolicyEntityVocabulary : SimpleVocabulary
     {
-        public smmMarketingMailPolicyEntityVocabulary()
+        public SmmMarketingMailPolicyEntityVocabulary()
         {
-            VocabularyName = "smmMarketingMailPolicyEntity";
+            VocabularyName = "Smm Marketing Mail Policy Entity";
             KeyPrefix = "commonDataModel.smmmarketingmailpolicyentity";
             KeySeparator = ".";
-            Grouping = "/smmMarketingMailPolicyEntity";
+            Grouping = "/SmmMarketingMailPolicyEntity";
 
-            AddGroup("smmMarketingMailPolicyEntity Details", group =>
+            AddGroup("SmmMarketingMailPolicyEntity Details", group =>
             {
                 GroupEmailRecipientType = group.Add(new VocabularyKey(nameof(GroupEmailRecipientType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DocumentAgeLimitDays = group.Add(new VocabularyKey(nameof(DocumentAgeLimitDays), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IncomingEmailDocumentAttachmentTypeCode = group.Add(new VocabularyKey(nameof(IncomingEmailDocumentAttachmentTypeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OutgoingEmailDocumentAttachmentTypeCode = group.Add(new VocabularyKey(nameof(OutgoingEmailDocumentAttachmentTypeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FileDocumentAttachmentTypeCode = group.Add(new VocabularyKey(nameof(FileDocumentAttachmentTypeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey GroupEmailRecipientType { get; private set; }
         public VocabularyKey DocumentAgeLimitDays { get; private set; }
         public VocabularyKey DefaultMailingFileFolder { get; private set; }
         public VocabularyKey IncomingEmailDocumentAttachmentTypeCode { get; private set; }
         public VocabularyKey OutgoingEmailDocumentAttachmentTypeCode { get; private set; }
         public VocabularyKey FileDocumentAttachmentTypeCode { get; private set; }
-
-
     }
 }

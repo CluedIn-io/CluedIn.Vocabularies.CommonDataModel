@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollPositionDetailsEntity_InternalVocabulary()
         {
-            VocabularyName = "PayrollPositionDetailsEntity_Internal";
+            VocabularyName = "Payroll Position Details Entity _ Internal";
             KeyPrefix = "commonDataModel.payrollpositiondetailsentity_internal";
             KeySeparator = ".";
             Grouping = "/PayrollPositionDetailsEntity_Internal";
@@ -31,10 +31,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DefaultEarningCodeId = group.Add(new VocabularyKey(nameof(DefaultEarningCodeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PayCycleId = group.Add(new VocabularyKey(nameof(PayCycleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PositionId = group.Add(new VocabularyKey(nameof(PositionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsSalaryGenerated { get; private set; }
         public VocabularyKey DefaultEarningCode { get; private set; }
         public VocabularyKey InsuranceBenefit { get; private set; }
@@ -53,7 +51,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DefaultEarningCodeId { get; private set; }
         public VocabularyKey PayCycleId { get; private set; }
         public VocabularyKey PositionId { get; private set; }
-
-
     }
 }

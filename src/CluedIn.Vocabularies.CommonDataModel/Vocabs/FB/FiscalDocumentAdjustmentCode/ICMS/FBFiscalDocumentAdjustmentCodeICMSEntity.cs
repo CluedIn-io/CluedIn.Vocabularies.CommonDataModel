@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FBFiscalDocumentAdjustmentCodeICMSEntityVocabulary()
         {
-            VocabularyName = "FBFiscalDocumentAdjustmentCodeICMSEntity";
+            VocabularyName = "FB Fiscal Document Adjustment Code ICMS Entity";
             KeyPrefix = "commonDataModel.fbfiscaldocumentadjustmentcodeicmsentity";
             KeySeparator = ".";
             Grouping = "/FBFiscalDocumentAdjustmentCodeICMSEntity";
@@ -32,10 +32,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OtherDebit = group.Add(new VocabularyKey(nameof(OtherDebit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReceitaCode = group.Add(new VocabularyKey(nameof(ReceitaCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TypeOfBenefitCode = group.Add(new VocabularyKey(nameof(TypeOfBenefitCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AdjustmentCode { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey TaxType { get; private set; }
@@ -55,7 +53,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OtherDebit { get; private set; }
         public VocabularyKey ReceitaCode { get; private set; }
         public VocabularyKey TypeOfBenefitCode { get; private set; }
-
-
     }
 }

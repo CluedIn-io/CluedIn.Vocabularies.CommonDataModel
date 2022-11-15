@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventQualityGroupItemAssignmentEntityVocabulary()
         {
-            VocabularyName = "InventQualityGroupItemAssignmentEntity";
+            VocabularyName = "Invent Quality Group Item Assignment Entity";
             KeyPrefix = "commonDataModel.inventqualitygroupitemassignmententity";
             KeySeparator = ".";
             Grouping = "/InventQualityGroupItemAssignmentEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 ItemNumber = group.Add(new VocabularyKey(nameof(ItemNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 QualityGroupId = group.Add(new VocabularyKey(nameof(QualityGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ItemNumber { get; private set; }
         public VocabularyKey QualityGroupId { get; private set; }
-
-
     }
 }

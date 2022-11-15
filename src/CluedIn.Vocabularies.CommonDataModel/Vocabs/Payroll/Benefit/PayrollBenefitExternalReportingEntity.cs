@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollBenefitExternalReportingEntityVocabulary()
         {
-            VocabularyName = "PayrollBenefitExternalReportingEntity";
+            VocabularyName = "Payroll Benefit External Reporting Entity";
             KeyPrefix = "commonDataModel.payrollbenefitexternalreportingentity";
             KeySeparator = ".";
             Grouping = "/PayrollBenefitExternalReportingEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 W2BoxNumber = group.Add(new VocabularyKey(nameof(W2BoxNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 W2BoxNumberContribution = group.Add(new VocabularyKey(nameof(W2BoxNumberContribution), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BenefitPlanID = group.Add(new VocabularyKey(nameof(BenefitPlanID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BenefitPlan { get; private set; }
         public VocabularyKey CountryRegionId { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey W2BoxNumber { get; private set; }
         public VocabularyKey W2BoxNumberContribution { get; private set; }
         public VocabularyKey BenefitPlanID { get; private set; }
-
-
     }
 }

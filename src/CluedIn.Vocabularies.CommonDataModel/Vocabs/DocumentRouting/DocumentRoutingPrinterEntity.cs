@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DocumentRoutingPrinterEntityVocabulary()
         {
-            VocabularyName = "DocumentRoutingPrinterEntity";
+            VocabularyName = "Document Routing Printer Entity";
             KeyPrefix = "commonDataModel.documentroutingprinterentity";
             KeySeparator = ".";
             Grouping = "/DocumentRoutingPrinterEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PrinterCompanyId = group.Add(new VocabularyKey(nameof(PrinterCompanyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ClientApplicationId = group.Add(new VocabularyKey(nameof(ClientApplicationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ClientApplicationDescription = group.Add(new VocabularyKey(nameof(ClientApplicationDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ClientApp { get; private set; }
         public VocabularyKey Printer { get; private set; }
         public VocabularyKey PrinterName { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PrinterCompanyId { get; private set; }
         public VocabularyKey ClientApplicationId { get; private set; }
         public VocabularyKey ClientApplicationDescription { get; private set; }
-
-
     }
 }

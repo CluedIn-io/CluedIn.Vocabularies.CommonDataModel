@@ -6,60 +6,56 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ContentSettingsVocabulary()
         {
-            VocabularyName = "ContentSettings";
+            VocabularyName = "Content Settings";
             KeyPrefix = "commonDataModel.contentsettings";
             KeySeparator = ".";
             Grouping = "/ContentSettings";
 
             AddGroup("ContentSettings Details", group =>
             {
-                addressLine2 = group.Add(new VocabularyKey(nameof(addressLine2), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                addressMain = group.Add(new VocabularyKey(nameof(addressMain), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                contentSettingsId = group.Add(new VocabularyKey(nameof(contentSettingsId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                @default = group.Add(new VocabularyKey(nameof(@default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                isbusinessunitdefault = group.Add(new VocabularyKey(nameof(isbusinessunitdefault), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                facebookURL = group.Add(new VocabularyKey(nameof(facebookURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                forwardToAFriend = group.Add(new VocabularyKey(nameof(forwardToAFriend), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                linkedInURL = group.Add(new VocabularyKey(nameof(linkedInURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                subscriptionCenter = group.Add(new VocabularyKey(nameof(subscriptionCenter), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                twitterURL = group.Add(new VocabularyKey(nameof(twitterURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                instagramURL = group.Add(new VocabularyKey(nameof(instagramURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                mediumURL = group.Add(new VocabularyKey(nameof(mediumURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                skypeURL = group.Add(new VocabularyKey(nameof(skypeURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                googlePlusURL = group.Add(new VocabularyKey(nameof(googlePlusURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                youTubeURL = group.Add(new VocabularyKey(nameof(youTubeURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdName = group.Add(new VocabularyKey(nameof(ownerIdName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdType = group.Add(new VocabularyKey(nameof(ownerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdYomiName = group.Add(new VocabularyKey(nameof(ownerIdYomiName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                AddressLine2 = group.Add(new VocabularyKey(nameof(AddressLine2), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AddressMain = group.Add(new VocabularyKey(nameof(AddressMain), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ContentSettingsId = group.Add(new VocabularyKey(nameof(ContentSettingsId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                @Default = group.Add(new VocabularyKey(nameof(@Default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Isbusinessunitdefault = group.Add(new VocabularyKey(nameof(Isbusinessunitdefault), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FacebookURL = group.Add(new VocabularyKey(nameof(FacebookURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ForwardToAFriend = group.Add(new VocabularyKey(nameof(ForwardToAFriend), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LinkedInURL = group.Add(new VocabularyKey(nameof(LinkedInURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SubscriptionCenter = group.Add(new VocabularyKey(nameof(SubscriptionCenter), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TwitterURL = group.Add(new VocabularyKey(nameof(TwitterURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InstagramURL = group.Add(new VocabularyKey(nameof(InstagramURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MediumURL = group.Add(new VocabularyKey(nameof(MediumURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SkypeURL = group.Add(new VocabularyKey(nameof(SkypeURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                GooglePlusURL = group.Add(new VocabularyKey(nameof(GooglePlusURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                YouTubeURL = group.Add(new VocabularyKey(nameof(YouTubeURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdName = group.Add(new VocabularyKey(nameof(OwnerIdName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdType = group.Add(new VocabularyKey(nameof(OwnerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdYomiName = group.Add(new VocabularyKey(nameof(OwnerIdYomiName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey addressLine2 { get; private set; }
-        public VocabularyKey addressMain { get; private set; }
-        public VocabularyKey contentSettingsId { get; private set; }
-        public VocabularyKey @default { get; private set; }
-        public VocabularyKey isbusinessunitdefault { get; private set; }
-        public VocabularyKey facebookURL { get; private set; }
-        public VocabularyKey forwardToAFriend { get; private set; }
-        public VocabularyKey linkedInURL { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey subscriptionCenter { get; private set; }
-        public VocabularyKey twitterURL { get; private set; }
-        public VocabularyKey instagramURL { get; private set; }
-        public VocabularyKey mediumURL { get; private set; }
-        public VocabularyKey skypeURL { get; private set; }
-        public VocabularyKey googlePlusURL { get; private set; }
-        public VocabularyKey youTubeURL { get; private set; }
-        public VocabularyKey ownerIdName { get; private set; }
-        public VocabularyKey ownerIdType { get; private set; }
-        public VocabularyKey ownerIdYomiName { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey AddressLine2 { get; private set; }
+        public VocabularyKey AddressMain { get; private set; }
+        public VocabularyKey ContentSettingsId { get; private set; }
+        public VocabularyKey @Default { get; private set; }
+        public VocabularyKey Isbusinessunitdefault { get; private set; }
+        public VocabularyKey FacebookURL { get; private set; }
+        public VocabularyKey ForwardToAFriend { get; private set; }
+        public VocabularyKey LinkedInURL { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey SubscriptionCenter { get; private set; }
+        public VocabularyKey TwitterURL { get; private set; }
+        public VocabularyKey InstagramURL { get; private set; }
+        public VocabularyKey MediumURL { get; private set; }
+        public VocabularyKey SkypeURL { get; private set; }
+        public VocabularyKey GooglePlusURL { get; private set; }
+        public VocabularyKey YouTubeURL { get; private set; }
+        public VocabularyKey OwnerIdName { get; private set; }
+        public VocabularyKey OwnerIdType { get; private set; }
+        public VocabularyKey OwnerIdYomiName { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

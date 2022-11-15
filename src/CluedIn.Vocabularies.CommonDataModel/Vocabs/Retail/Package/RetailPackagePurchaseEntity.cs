@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailPackagePurchaseEntityVocabulary()
         {
-            VocabularyName = "RetailPackagePurchaseEntity";
+            VocabularyName = "Retail Package Purchase Entity";
             KeyPrefix = "commonDataModel.retailpackagepurchaseentity";
             KeySeparator = ".";
             Grouping = "/RetailPackagePurchaseEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Quantity = group.Add(new VocabularyKey(nameof(Quantity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 QuantityReceived = group.Add(new VocabularyKey(nameof(QuantityReceived), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AllocatedCrossDockQty = group.Add(new VocabularyKey(nameof(AllocatedCrossDockQty), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LineNumber { get; private set; }
         public VocabularyKey PackageId { get; private set; }
         public VocabularyKey PurchaseId { get; private set; }
         public VocabularyKey Quantity { get; private set; }
         public VocabularyKey QuantityReceived { get; private set; }
         public VocabularyKey AllocatedCrossDockQty { get; private set; }
-
-
     }
 }

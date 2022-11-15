@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollEssPayStatementEntityVocabulary()
         {
-            VocabularyName = "PayrollEssPayStatementEntity";
+            VocabularyName = "Payroll Ess Pay Statement Entity";
             KeyPrefix = "commonDataModel.payrollesspaystatemententity";
             KeySeparator = ".";
             Grouping = "/PayrollEssPayStatementEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PaymentMethodType = group.Add(new VocabularyKey(nameof(PaymentMethodType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PersonnelNumber = group.Add(new VocabularyKey(nameof(PersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Worker = group.Add(new VocabularyKey(nameof(Worker), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PayCycle { get; private set; }
         public VocabularyKey PeriodStartDate { get; private set; }
         public VocabularyKey PeriodEndDate { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PaymentMethodType { get; private set; }
         public VocabularyKey PersonnelNumber { get; private set; }
         public VocabularyKey Worker { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SMAServiceRepairDiagnosisAreaEntityVocabulary()
         {
-            VocabularyName = "SMAServiceRepairDiagnosisAreaEntity";
+            VocabularyName = "SMA Service Repair Diagnosis Area Entity";
             KeyPrefix = "commonDataModel.smaservicerepairdiagnosisareaentity";
             KeySeparator = ".";
             Grouping = "/SMAServiceRepairDiagnosisAreaEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 AreaCode = group.Add(new VocabularyKey(nameof(AreaCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AreaDescription = group.Add(new VocabularyKey(nameof(AreaDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AreaCode { get; private set; }
         public VocabularyKey AreaDescription { get; private set; }
-
-
     }
 }

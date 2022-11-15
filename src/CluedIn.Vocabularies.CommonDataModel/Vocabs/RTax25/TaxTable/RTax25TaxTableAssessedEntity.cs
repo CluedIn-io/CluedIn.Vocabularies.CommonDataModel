@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RTax25TaxTableAssessedEntityVocabulary()
         {
-            VocabularyName = "RTax25TaxTableAssessedEntity";
+            VocabularyName = "R Tax 25 Tax Table Assessed Entity";
             KeyPrefix = "commonDataModel.rtax25taxtableassessedentity";
             KeySeparator = ".";
             Grouping = "/RTax25TaxTableAssessedEntity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AllowanceDecreaseBase387Value = group.Add(new VocabularyKey(nameof(AllowanceDecreaseBase387Value), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AllowanceDecreaseBase391 = group.Add(new VocabularyKey(nameof(AllowanceDecreaseBase391), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AllowanceDecreaseBase391Value = group.Add(new VocabularyKey(nameof(AllowanceDecreaseBase391Value), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey MainAccount { get; private set; }
         public VocabularyKey TypeOfTax { get; private set; }
         public VocabularyKey Code { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AllowanceDecreaseBase387Value { get; private set; }
         public VocabularyKey AllowanceDecreaseBase391 { get; private set; }
         public VocabularyKey AllowanceDecreaseBase391Value { get; private set; }
-
-
     }
 }

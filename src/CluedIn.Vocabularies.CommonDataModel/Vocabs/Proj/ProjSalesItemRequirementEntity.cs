@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjSalesItemRequirementEntityVocabulary()
         {
-            VocabularyName = "ProjSalesItemRequirementEntity";
+            VocabularyName = "Proj Sales Item Requirement Entity";
             KeyPrefix = "commonDataModel.projsalesitemrequiremententity";
             KeySeparator = ".";
             Grouping = "/ProjSalesItemRequirementEntity";
@@ -103,10 +103,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsDeliveryAddressOrderSpecific = group.Add(new VocabularyKey(nameof(IsDeliveryAddressOrderSpecific), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DeliveryCFOP = group.Add(new VocabularyKey(nameof(DeliveryCFOP), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DeliveryCFOPId = group.Add(new VocabularyKey(nameof(DeliveryCFOPId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ActivityNumber { get; private set; }
         public VocabularyKey BarCode { get; private set; }
         public VocabularyKey BarCodeType { get; private set; }
@@ -197,7 +195,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsDeliveryAddressOrderSpecific { get; private set; }
         public VocabularyKey DeliveryCFOP { get; private set; }
         public VocabularyKey DeliveryCFOPId { get; private set; }
-
-
     }
 }

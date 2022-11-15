@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TAMTradeAllowanceAgreementMerchandisingEventDiscountEntityVocabulary()
         {
-            VocabularyName = "TAMTradeAllowanceAgreementMerchandisingEventDiscountEntity";
+            VocabularyName = "TAM Trade Allowance Agreement Merchandising Event Discount Entity";
             KeyPrefix = "commonDataModel.tamtradeallowanceagreementmerchandisingeventdiscountentity";
             KeySeparator = ".";
             Grouping = "/TAMTradeAllowanceAgreementMerchandisingEventDiscountEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CustomerAccountNumber = group.Add(new VocabularyKey(nameof(CustomerAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TradeAllowanceAgreementMerchandisingEventId = group.Add(new VocabularyKey(nameof(TradeAllowanceAgreementMerchandisingEventId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TradeAllowanceAgreementId = group.Add(new VocabularyKey(nameof(TradeAllowanceAgreementId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LIneDiscountAmount { get; private set; }
         public VocabularyKey LineDiscountPercentage { get; private set; }
         public VocabularyKey FromQuantity { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CustomerAccountNumber { get; private set; }
         public VocabularyKey TradeAllowanceAgreementMerchandisingEventId { get; private set; }
         public VocabularyKey TradeAllowanceAgreementId { get; private set; }
-
-
     }
 }

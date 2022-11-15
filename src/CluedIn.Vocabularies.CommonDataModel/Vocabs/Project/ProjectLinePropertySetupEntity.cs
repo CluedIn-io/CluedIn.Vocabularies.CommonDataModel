@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjectLinePropertySetupEntityVocabulary()
         {
-            VocabularyName = "ProjectLinePropertySetupEntity";
+            VocabularyName = "Project Line Property Setup Entity";
             KeyPrefix = "commonDataModel.projectlinepropertysetupentity";
             KeySeparator = ".";
             Grouping = "/ProjectLinePropertySetupEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProjectCode = group.Add(new VocabularyKey(nameof(ProjectCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProjectRelation = group.Add(new VocabularyKey(nameof(ProjectRelation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsDebitNoteSetupEnabled = group.Add(new VocabularyKey(nameof(IsDebitNoteSetupEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CategoryCode { get; private set; }
         public VocabularyKey CategoryRelation { get; private set; }
         public VocabularyKey LinePropertyId { get; private set; }
         public VocabularyKey ProjectCode { get; private set; }
         public VocabularyKey ProjectRelation { get; private set; }
         public VocabularyKey IsDebitNoteSetupEnabled { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustCollectionsBICasesOpenVocabulary()
         {
-            VocabularyName = "CustCollectionsBICasesOpen";
+            VocabularyName = "Cust Collections BI Cases Open";
             KeyPrefix = "commonDataModel.custcollectionsbicasesopen";
             KeySeparator = ".";
             Grouping = "/CustCollectionsBICasesOpen";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ResponsibleWorker = group.Add(new VocabularyKey(nameof(ResponsibleWorker), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AccountNum = group.Add(new VocabularyKey(nameof(AccountNum), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CaseId { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey ResponsibleWorker { get; private set; }
         public VocabularyKey AccountNum { get; private set; }
         public VocabularyKey Name { get; private set; }
-
-
     }
 }

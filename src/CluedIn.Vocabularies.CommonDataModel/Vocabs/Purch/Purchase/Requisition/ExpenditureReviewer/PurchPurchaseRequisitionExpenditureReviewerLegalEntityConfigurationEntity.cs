@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPurchaseRequisitionExpenditureReviewerLegalEntityConfigurationEntityVocabulary()
         {
-            VocabularyName = "PurchPurchaseRequisitionExpenditureReviewerLegalEntityConfigurationEntity";
+            VocabularyName = "Purch Purchase Requisition Expenditure Reviewer Legal Entity Configuration Entity";
             KeyPrefix = "commonDataModel.purchpurchaserequisitionexpenditurereviewerlegalentityconfigurationentity";
             KeySeparator = ".";
             Grouping = "/PurchPurchaseRequisitionExpenditureReviewerLegalEntityConfigurationEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsProjectSalesManagerExpenditureReviewer = group.Add(new VocabularyKey(nameof(IsProjectSalesManagerExpenditureReviewer), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LegalEntityId = group.Add(new VocabularyKey(nameof(LegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PurchaseRequisitionExpenditureReviewerConfigurationName = group.Add(new VocabularyKey(nameof(PurchaseRequisitionExpenditureReviewerConfigurationName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsProjectControllerExpenditureReviewer { get; private set; }
         public VocabularyKey IsProjectManagerExpenditureReviewer { get; private set; }
         public VocabularyKey IsProjectSalesManagerExpenditureReviewer { get; private set; }
         public VocabularyKey LegalEntityId { get; private set; }
         public VocabularyKey PurchaseRequisitionExpenditureReviewerConfigurationName { get; private set; }
-
-
     }
 }

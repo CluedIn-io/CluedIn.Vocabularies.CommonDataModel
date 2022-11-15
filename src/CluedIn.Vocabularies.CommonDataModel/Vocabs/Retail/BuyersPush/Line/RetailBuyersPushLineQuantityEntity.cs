@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailBuyersPushLineQuantityEntityVocabulary()
         {
-            VocabularyName = "RetailBuyersPushLineQuantityEntity";
+            VocabularyName = "Retail Buyers Push Line Quantity Entity";
             KeyPrefix = "commonDataModel.retailbuyerspushlinequantityentity";
             KeySeparator = ".";
             Grouping = "/RetailBuyersPushLineQuantityEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SalesTable = group.Add(new VocabularyKey(nameof(SalesTable), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WarehouseLegalEntity = group.Add(new VocabularyKey(nameof(WarehouseLegalEntity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesId = group.Add(new VocabularyKey(nameof(SalesId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BuyersPushId { get; private set; }
         public VocabularyKey WarehouseId { get; private set; }
         public VocabularyKey LineNumber { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SalesTable { get; private set; }
         public VocabularyKey WarehouseLegalEntity { get; private set; }
         public VocabularyKey SalesId { get; private set; }
-
-
     }
 }

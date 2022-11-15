@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetImpairmentCashGeneratingUnitSharedAssetEntityVocabulary()
         {
-            VocabularyName = "AssetImpairmentCashGeneratingUnitSharedAssetEntity";
+            VocabularyName = "Asset Impairment Cash Generating Unit Shared Asset Entity";
             KeyPrefix = "commonDataModel.assetimpairmentcashgeneratingunitsharedassetentity";
             KeySeparator = ".";
             Grouping = "/AssetImpairmentCashGeneratingUnitSharedAssetEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 NetSellingPrice = group.Add(new VocabularyKey(nameof(NetSellingPrice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProrationMethodOverride = group.Add(new VocabularyKey(nameof(ProrationMethodOverride), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SharedAssetType = group.Add(new VocabularyKey(nameof(SharedAssetType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CGUGroup { get; private set; }
         public VocabularyKey CGUGroupName { get; private set; }
         public VocabularyKey AssetNumber { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey NetSellingPrice { get; private set; }
         public VocabularyKey ProrationMethodOverride { get; private set; }
         public VocabularyKey SharedAssetType { get; private set; }
-
-
     }
 }

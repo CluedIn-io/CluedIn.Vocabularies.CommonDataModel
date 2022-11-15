@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSCatchWeightTagEntityVocabulary()
         {
-            VocabularyName = "WHSCatchWeightTagEntity";
+            VocabularyName = "WHS Catch Weight Tag Entity";
             KeyPrefix = "commonDataModel.whscatchweighttagentity";
             KeySeparator = ".";
             Grouping = "/WHSCatchWeightTagEntity";
@@ -30,10 +30,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LicensePlateNumber = group.Add(new VocabularyKey(nameof(LicensePlateNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InventorySiteId = group.Add(new VocabularyKey(nameof(InventorySiteId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WarehouseLocationId = group.Add(new VocabularyKey(nameof(WarehouseLocationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TagNumber { get; private set; }
         public VocabularyKey ItemNumber { get; private set; }
         public VocabularyKey CapturedWeight { get; private set; }
@@ -51,7 +49,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LicensePlateNumber { get; private set; }
         public VocabularyKey InventorySiteId { get; private set; }
         public VocabularyKey WarehouseLocationId { get; private set; }
-
-
     }
 }

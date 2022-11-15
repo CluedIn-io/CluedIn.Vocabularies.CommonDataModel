@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LogisticsAddressStateEntityVocabulary()
         {
-            VocabularyName = "LogisticsAddressStateEntity";
+            VocabularyName = "Logistics Address State Entity";
             KeyPrefix = "commonDataModel.logisticsaddressstateentity";
             KeySeparator = ".";
             Grouping = "/LogisticsAddressStateEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TimeZone = group.Add(new VocabularyKey(nameof(TimeZone), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IntrastatCode = group.Add(new VocabularyKey(nameof(IntrastatCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BrazilStateCode = group.Add(new VocabularyKey(nameof(BrazilStateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CountryRegionId { get; private set; }
         public VocabularyKey State { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey TimeZone { get; private set; }
         public VocabularyKey IntrastatCode { get; private set; }
         public VocabularyKey BrazilStateCode { get; private set; }
-
-
     }
 }

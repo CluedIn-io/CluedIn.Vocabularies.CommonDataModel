@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgSiteSpecificManufacturingExecutionProductionOrderDefaultsEntityVocabulary()
         {
-            VocabularyName = "JmgSiteSpecificManufacturingExecutionProductionOrderDefaultsEntity";
+            VocabularyName = "Jmg Site Specific Manufacturing Execution Production Order Defaults Entity";
             KeyPrefix = "commonDataModel.jmgsitespecificmanufacturingexecutionproductionorderdefaultsentity";
             KeySeparator = ".";
             Grouping = "/JmgSiteSpecificManufacturingExecutionProductionOrderDefaultsEntity";
@@ -71,10 +71,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TimeJobCardProductionJournalNameId = group.Add(new VocabularyKey(nameof(TimeJobCardProductionJournalNameId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsOperationFeedbackQuantityValidated = group.Add(new VocabularyKey(nameof(IsOperationFeedbackQuantityValidated), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsProductionstartQuantityValidated = group.Add(new VocabularyKey(nameof(IsProductionstartQuantityValidated), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InventDimId { get; private set; }
         public VocabularyKey ProductionSiteId { get; private set; }
         public VocabularyKey DefaultProductionStartRouteCardProductionJournalNameId { get; private set; }
@@ -133,7 +131,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TimeJobCardProductionJournalNameId { get; private set; }
         public VocabularyKey IsOperationFeedbackQuantityValidated { get; private set; }
         public VocabularyKey IsProductionstartQuantityValidated { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmWorkerPostalAddressV2EntityVocabulary()
         {
-            VocabularyName = "HcmWorkerPostalAddressV2Entity";
+            VocabularyName = "Hcm Worker Postal Address V2 Entity";
             KeyPrefix = "commonDataModel.hcmworkerpostaladdressv2entity";
             KeySeparator = ".";
             Grouping = "/HcmWorkerPostalAddressV2Entity";
@@ -50,10 +50,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsRoleInvoice = group.Add(new VocabularyKey(nameof(IsRoleInvoice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Effective = group.Add(new VocabularyKey(nameof(Effective), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Expiration = group.Add(new VocabularyKey(nameof(Expiration), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PersonnelNumber { get; private set; }
         public VocabularyKey FormattedAddress { get; private set; }
         public VocabularyKey AttentionToAddressLine { get; private set; }
@@ -91,7 +89,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsRoleInvoice { get; private set; }
         public VocabularyKey Effective { get; private set; }
         public VocabularyKey Expiration { get; private set; }
-
-
     }
 }

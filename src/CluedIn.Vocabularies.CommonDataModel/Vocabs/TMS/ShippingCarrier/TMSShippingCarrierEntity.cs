@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSShippingCarrierEntityVocabulary()
         {
-            VocabularyName = "TMSShippingCarrierEntity";
+            VocabularyName = "TMS Shipping Carrier Entity";
             KeyPrefix = "commonDataModel.tmsshippingcarrierentity";
             KeySeparator = ".";
             Grouping = "/TMSShippingCarrierEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TransportationTenderType = group.Add(new VocabularyKey(nameof(TransportationTenderType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ShippingCarrierVendorAccountNumber = group.Add(new VocabularyKey(nameof(ShippingCarrierVendorAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AverageContainerWeight = group.Add(new VocabularyKey(nameof(AverageContainerWeight), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsBroker { get; private set; }
         public VocabularyKey IsShippingCarrierActive { get; private set; }
         public VocabularyKey IsShippingCarrierRatingActive { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TransportationTenderType { get; private set; }
         public VocabularyKey ShippingCarrierVendorAccountNumber { get; private set; }
         public VocabularyKey AverageContainerWeight { get; private set; }
-
-
     }
 }

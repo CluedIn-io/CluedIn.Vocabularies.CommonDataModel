@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendVendorExternalCodeClassEntityVocabulary()
         {
-            VocabularyName = "VendVendorExternalCodeClassEntity";
+            VocabularyName = "Vend Vendor External Code Class Entity";
             KeyPrefix = "commonDataModel.vendvendorexternalcodeclassentity";
             KeySeparator = ".";
             Grouping = "/VendVendorExternalCodeClassEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsStandardizedCode = group.Add(new VocabularyKey(nameof(IsStandardizedCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CodeClassDescription = group.Add(new VocabularyKey(nameof(CodeClassDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CodeClassTableId = group.Add(new VocabularyKey(nameof(CodeClassTableId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CodeClassId { get; private set; }
         public VocabularyKey CodeClassDefinition { get; private set; }
         public VocabularyKey IsStandardizedCode { get; private set; }
         public VocabularyKey CodeClassDescription { get; private set; }
         public VocabularyKey CodeClassTableId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ConfiguratorDefinitionGroupTableRelationEntityVocabulary()
         {
-            VocabularyName = "ConfiguratorDefinitionGroupTableRelationEntity";
+            VocabularyName = "Configurator Definition Group Table Relation Entity";
             KeyPrefix = "commonDataModel.configuratordefinitiongrouptablerelationentity";
             KeySeparator = ".";
             Grouping = "/ConfiguratorDefinitionGroupTableRelationEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RelationshipType = group.Add(new VocabularyKey(nameof(RelationshipType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SourceFieldName = group.Add(new VocabularyKey(nameof(SourceFieldName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SourceTableName = group.Add(new VocabularyKey(nameof(SourceTableName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DefinitionGroupId { get; private set; }
         public VocabularyKey FixedValue { get; private set; }
         public VocabularyKey RelatedField { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RelationshipType { get; private set; }
         public VocabularyKey SourceFieldName { get; private set; }
         public VocabularyKey SourceTableName { get; private set; }
-
-
     }
 }

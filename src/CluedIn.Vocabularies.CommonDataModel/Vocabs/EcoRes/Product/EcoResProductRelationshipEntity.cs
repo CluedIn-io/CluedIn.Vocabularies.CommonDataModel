@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResProductRelationshipEntityVocabulary()
         {
-            VocabularyName = "EcoResProductRelationshipEntity";
+            VocabularyName = "Eco Res Product Relationship Entity";
             KeyPrefix = "commonDataModel.ecoresproductrelationshipentity";
             KeySeparator = ".";
             Grouping = "/EcoResProductRelationshipEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RelatedProductNumber = group.Add(new VocabularyKey(nameof(RelatedProductNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductRelationTypeName = group.Add(new VocabularyKey(nameof(ProductRelationTypeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DisplayOrder = group.Add(new VocabularyKey(nameof(DisplayOrder), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey MainProductRecId { get; private set; }
         public VocabularyKey RelatedProductRecId { get; private set; }
         public VocabularyKey RelationshipTypeRecId { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RelatedProductNumber { get; private set; }
         public VocabularyKey ProductRelationTypeName { get; private set; }
         public VocabularyKey DisplayOrder { get; private set; }
-
-
     }
 }

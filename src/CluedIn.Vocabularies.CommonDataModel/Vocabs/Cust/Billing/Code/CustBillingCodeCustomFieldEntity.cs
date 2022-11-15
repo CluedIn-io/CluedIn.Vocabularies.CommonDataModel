@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustBillingCodeCustomFieldEntityVocabulary()
         {
-            VocabularyName = "CustBillingCodeCustomFieldEntity";
+            VocabularyName = "Cust Billing Code Custom Field Entity";
             KeyPrefix = "commonDataModel.custbillingcodecustomfieldentity";
             KeySeparator = ".";
             Grouping = "/CustBillingCodeCustomFieldEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ValidTo = group.Add(new VocabularyKey(nameof(ValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BillingCode = group.Add(new VocabularyKey(nameof(BillingCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CustomField = group.Add(new VocabularyKey(nameof(CustomField), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CustBillingCodeVersion { get; private set; }
         public VocabularyKey CustCustomField { get; private set; }
         public VocabularyKey IsActive { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ValidTo { get; private set; }
         public VocabularyKey BillingCode { get; private set; }
         public VocabularyKey CustomField { get; private set; }
-
-
     }
 }

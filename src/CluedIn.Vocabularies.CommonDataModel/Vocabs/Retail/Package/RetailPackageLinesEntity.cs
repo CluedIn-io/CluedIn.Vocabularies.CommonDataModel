@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailPackageLinesEntityVocabulary()
         {
-            VocabularyName = "RetailPackageLinesEntity";
+            VocabularyName = "Retail Package Lines Entity";
             KeyPrefix = "commonDataModel.retailpackagelinesentity";
             KeySeparator = ".";
             Grouping = "/RetailPackageLinesEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Size = group.Add(new VocabularyKey(nameof(Size), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Style = group.Add(new VocabularyKey(nameof(Style), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ConfigId = group.Add(new VocabularyKey(nameof(ConfigId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InventDimId { get; private set; }
         public VocabularyKey VariantId { get; private set; }
         public VocabularyKey ItemId { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Size { get; private set; }
         public VocabularyKey Style { get; private set; }
         public VocabularyKey ConfigId { get; private set; }
-
-
     }
 }

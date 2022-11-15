@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FBReasonCodeForRestitutionComplementEntity_BRVocabulary()
         {
-            VocabularyName = "FBReasonCodeForRestitutionComplementEntity_BR";
+            VocabularyName = "FB Reason Code For Restitution Complement Entity _BR";
             KeyPrefix = "commonDataModel.fbreasoncodeforrestitutioncomplemententity_br";
             KeySeparator = ".";
             Grouping = "/FBReasonCodeForRestitutionComplementEntity_BR";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OccurrenceCode = group.Add(new VocabularyKey(nameof(OccurrenceCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidFrom = group.Add(new VocabularyKey(nameof(ValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidTo = group.Add(new VocabularyKey(nameof(ValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ReasonCode { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey State { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OccurrenceCode { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey ValidTo { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DataManagementTemplateSourceEntityVocabulary()
         {
-            VocabularyName = "DataManagementTemplateSourceEntity";
+            VocabularyName = "Data Management Template Source Entity";
             KeyPrefix = "commonDataModel.datamanagementtemplatesourceentity";
             KeySeparator = ".";
             Grouping = "/DataManagementTemplateSourceEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TemplateId = group.Add(new VocabularyKey(nameof(TemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SourceEntity = group.Add(new VocabularyKey(nameof(SourceEntity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TemplateId { get; private set; }
         public VocabularyKey SourceEntity { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

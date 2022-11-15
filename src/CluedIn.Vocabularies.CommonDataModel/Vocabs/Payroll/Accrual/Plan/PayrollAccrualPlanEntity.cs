@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollAccrualPlanEntityVocabulary()
         {
-            VocabularyName = "PayrollAccrualPlanEntity";
+            VocabularyName = "Payroll Accrual Plan Entity";
             KeyPrefix = "commonDataModel.payrollaccrualplanentity";
             KeySeparator = ".";
             Grouping = "/PayrollAccrualPlanEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Frequency = group.Add(new VocabularyKey(nameof(Frequency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkerAccrualDateMethod = group.Add(new VocabularyKey(nameof(WorkerAccrualDateMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CalculationFrequency = group.Add(new VocabularyKey(nameof(CalculationFrequency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccrualId { get; private set; }
         public VocabularyKey CanCarryForward { get; private set; }
         public VocabularyKey Description { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Frequency { get; private set; }
         public VocabularyKey WorkerAccrualDateMethod { get; private set; }
         public VocabularyKey CalculationFrequency { get; private set; }
-
-
     }
 }

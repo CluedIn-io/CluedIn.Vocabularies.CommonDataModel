@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProdProductionOrderRouteOperationResourceRequirementEntityVocabulary()
         {
-            VocabularyName = "ProdProductionOrderRouteOperationResourceRequirementEntity";
+            VocabularyName = "Prod Production Order Route Operation Resource Requirement Entity";
             KeyPrefix = "commonDataModel.prodproductionorderrouteoperationresourcerequiremententity";
             KeySeparator = ".";
             Grouping = "/ProdProductionOrderRouteOperationResourceRequirementEntity";
@@ -32,10 +32,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RequiredSkillLevel = group.Add(new VocabularyKey(nameof(RequiredSkillLevel), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RecordId = group.Add(new VocabularyKey(nameof(RecordId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductionOrderRouteOperationDataAreaId = group.Add(new VocabularyKey(nameof(ProductionOrderRouteOperationDataAreaId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RelationshipType { get; private set; }
         public VocabularyKey Capability { get; private set; }
         public VocabularyKey WillJobSchedulingUseRequirement { get; private set; }
@@ -55,7 +53,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RequiredSkillLevel { get; private set; }
         public VocabularyKey RecordId { get; private set; }
         public VocabularyKey ProductionOrderRouteOperationDataAreaId { get; private set; }
-
-
     }
 }

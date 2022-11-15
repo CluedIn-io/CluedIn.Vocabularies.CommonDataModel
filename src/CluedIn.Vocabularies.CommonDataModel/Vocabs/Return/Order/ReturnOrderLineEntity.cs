@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReturnOrderLineEntityVocabulary()
         {
-            VocabularyName = "ReturnOrderLineEntity";
+            VocabularyName = "Return Order Line Entity";
             KeyPrefix = "commonDataModel.returnorderlineentity";
             KeySeparator = ".";
             Grouping = "/ReturnOrderLineEntity";
@@ -77,10 +77,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ReturnAddressTimeZone = group.Add(new VocabularyKey(nameof(ReturnAddressTimeZone), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReturnAddressValidFrom = group.Add(new VocabularyKey(nameof(ReturnAddressValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReturnAddressValidTo = group.Add(new VocabularyKey(nameof(ReturnAddressValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RMANumber { get; private set; }
         public VocabularyKey ReturnOrderNumber { get; private set; }
         public VocabularyKey CustomerAccountNumber { get; private set; }
@@ -145,7 +143,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ReturnAddressTimeZone { get; private set; }
         public VocabularyKey ReturnAddressValidFrom { get; private set; }
         public VocabularyKey ReturnAddressValidTo { get; private set; }
-
-
     }
 }

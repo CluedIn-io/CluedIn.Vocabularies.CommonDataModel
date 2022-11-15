@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendPaymentBIPaymentsInWorkflowVocabulary()
         {
-            VocabularyName = "VendPaymentBIPaymentsInWorkflow";
+            VocabularyName = "Vend Payment BI Payments In Workflow";
             KeyPrefix = "commonDataModel.vendpaymentbipaymentsinworkflow";
             KeySeparator = ".";
             Grouping = "/VendPaymentBIPaymentsInWorkflow";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Posted = group.Add(new VocabularyKey(nameof(Posted), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Duration = group.Add(new VocabularyKey(nameof(Duration), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ConfigurationNumber = group.Add(new VocabularyKey(nameof(ConfigurationNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CompanyId { get; private set; }
         public VocabularyKey CreatedDateTime1 { get; private set; }
         public VocabularyKey Id { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Posted { get; private set; }
         public VocabularyKey Duration { get; private set; }
         public VocabularyKey ConfigurationNumber { get; private set; }
-
-
     }
 }

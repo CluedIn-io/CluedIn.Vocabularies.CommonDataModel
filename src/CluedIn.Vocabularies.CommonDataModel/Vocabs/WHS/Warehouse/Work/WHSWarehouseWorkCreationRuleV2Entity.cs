@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseWorkCreationRuleV2EntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseWorkCreationRuleV2Entity";
+            VocabularyName = "WHS Warehouse Work Creation Rule V2 Entity";
             KeyPrefix = "commonDataModel.whswarehouseworkcreationrulev2entity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseWorkCreationRuleV2Entity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WorkPolicyName = group.Add(new VocabularyKey(nameof(WorkPolicyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CrossDockingOpportunityPolicyName = group.Add(new VocabularyKey(nameof(CrossDockingOpportunityPolicyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkProcess = group.Add(new VocabularyKey(nameof(WorkProcess), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WHSPolicyRecId { get; private set; }
         public VocabularyKey WorkOrderType { get; private set; }
         public VocabularyKey WorkCreationMethod { get; private set; }
         public VocabularyKey WorkPolicyName { get; private set; }
         public VocabularyKey CrossDockingOpportunityPolicyName { get; private set; }
         public VocabularyKey WorkProcess { get; private set; }
-
-
     }
 }

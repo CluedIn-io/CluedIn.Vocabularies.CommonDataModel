@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetControlRuleCriterionEntityVocabulary()
         {
-            VocabularyName = "BudgetControlRuleCriterionEntity";
+            VocabularyName = "Budget Control Rule Criterion Entity";
             KeyPrefix = "commonDataModel.budgetcontrolrulecriterionentity";
             KeySeparator = ".";
             Grouping = "/BudgetControlRuleCriterionEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BudgetControlRule = group.Add(new VocabularyKey(nameof(BudgetControlRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DimensionAttributeId = group.Add(new VocabularyKey(nameof(DimensionAttributeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Criterion = group.Add(new VocabularyKey(nameof(Criterion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LegalEntityId { get; private set; }
         public VocabularyKey Status { get; private set; }
         public VocabularyKey InUseBy { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey BudgetControlRule { get; private set; }
         public VocabularyKey DimensionAttributeId { get; private set; }
         public VocabularyKey Criterion { get; private set; }
-
-
     }
 }

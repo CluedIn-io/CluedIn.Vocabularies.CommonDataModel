@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SysPolicyEntityVocabulary()
         {
-            VocabularyName = "SysPolicyEntity";
+            VocabularyName = "Sys Policy Entity";
             KeyPrefix = "commonDataModel.syspolicyentity";
             KeySeparator = ".";
             Grouping = "/SysPolicyEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PolicyName = group.Add(new VocabularyKey(nameof(PolicyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PolicyTypeRecId = group.Add(new VocabularyKey(nameof(PolicyTypeRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PolicyType = group.Add(new VocabularyKey(nameof(PolicyType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey IsPolicyActive { get; private set; }
         public VocabularyKey PolicyName { get; private set; }
         public VocabularyKey PolicyTypeRecId { get; private set; }
         public VocabularyKey PolicyType { get; private set; }
-
-
     }
 }

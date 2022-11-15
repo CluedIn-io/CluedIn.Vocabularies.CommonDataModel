@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesOrderHeaderV2ExistAddrReadOnlyEntityVocabulary()
         {
-            VocabularyName = "SalesOrderHeaderV2ExistAddrReadOnlyEntity";
+            VocabularyName = "Sales Order Header V2 Exist Addr Read Only Entity";
             KeyPrefix = "commonDataModel.salesorderheaderv2existaddrreadonlyentity";
             KeySeparator = ".";
             Grouping = "/SalesOrderHeaderV2ExistAddrReadOnlyEntity";
@@ -179,10 +179,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OrderOrAgreementCode = group.Add(new VocabularyKey(nameof(OrderOrAgreementCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TenderCode = group.Add(new VocabularyKey(nameof(TenderCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReportingCurrencyFixedExchangeRate = group.Add(new VocabularyKey(nameof(ReportingCurrencyFixedExchangeRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SalesOrderNumber { get; private set; }
         public VocabularyKey SalesOrderStatus { get; private set; }
         public VocabularyKey OrderingCustomerAccountNumber { get; private set; }
@@ -349,7 +347,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OrderOrAgreementCode { get; private set; }
         public VocabularyKey TenderCode { get; private set; }
         public VocabularyKey ReportingCurrencyFixedExchangeRate { get; private set; }
-
-
     }
 }

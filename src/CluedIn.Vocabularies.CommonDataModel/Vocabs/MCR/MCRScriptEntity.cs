@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRScriptEntityVocabulary()
         {
-            VocabularyName = "MCRScriptEntity";
+            VocabularyName = "MCR Script Entity";
             KeyPrefix = "commonDataModel.mcrscriptentity";
             KeySeparator = ".";
             Grouping = "/MCRScriptEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ScriptUse = group.Add(new VocabularyKey(nameof(ScriptUse), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LanguageId = group.Add(new VocabularyKey(nameof(LanguageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ScriptTitle = group.Add(new VocabularyKey(nameof(ScriptTitle), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AssociationTypes { get; private set; }
         public VocabularyKey ScriptUse { get; private set; }
         public VocabularyKey LanguageId { get; private set; }
         public VocabularyKey ScriptTitle { get; private set; }
-
-
     }
 }

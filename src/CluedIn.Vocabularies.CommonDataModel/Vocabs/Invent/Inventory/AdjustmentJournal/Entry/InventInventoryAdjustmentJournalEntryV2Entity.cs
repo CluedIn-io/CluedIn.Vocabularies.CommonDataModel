@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventInventoryAdjustmentJournalEntryV2EntityVocabulary()
         {
-            VocabularyName = "InventInventoryAdjustmentJournalEntryV2Entity";
+            VocabularyName = "Invent Inventory Adjustment Journal Entry V2 Entity";
             KeyPrefix = "commonDataModel.inventinventoryadjustmentjournalentryv2entity";
             KeySeparator = ".";
             Grouping = "/InventInventoryAdjustmentJournalEntryV2Entity";
@@ -41,10 +41,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 JournalHeaderVoucherDraw = group.Add(new VocabularyKey(nameof(JournalHeaderVoucherDraw), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 JournalHeaderJournalType = group.Add(new VocabularyKey(nameof(JournalHeaderJournalType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 JournalHeaderWorker = group.Add(new VocabularyKey(nameof(JournalHeaderWorker), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CostAmount { get; private set; }
         public VocabularyKey FixedCostCharges { get; private set; }
         public VocabularyKey UnitCost { get; private set; }
@@ -73,7 +71,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey JournalHeaderVoucherDraw { get; private set; }
         public VocabularyKey JournalHeaderJournalType { get; private set; }
         public VocabularyKey JournalHeaderWorker { get; private set; }
-
-
     }
 }

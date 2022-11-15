@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustCollectionAgencyGracePeriodSetupEntityVocabulary()
         {
-            VocabularyName = "CustCollectionAgencyGracePeriodSetupEntity";
+            VocabularyName = "Cust Collection Agency Grace Period Setup Entity";
             KeyPrefix = "commonDataModel.custcollectionagencygraceperiodsetupentity";
             KeySeparator = ".";
             Grouping = "/CustCollectionAgencyGracePeriodSetupEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ValidFrom = group.Add(new VocabularyKey(nameof(ValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidTo = group.Add(new VocabularyKey(nameof(ValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GracePeriodInDaysAfterTransactionDate = group.Add(new VocabularyKey(nameof(GracePeriodInDaysAfterTransactionDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountOrGroupNumber { get; private set; }
         public VocabularyKey AccountCode { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey ValidTo { get; private set; }
         public VocabularyKey GracePeriodInDaysAfterTransactionDate { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSInventoryStatusEntityVocabulary()
         {
-            VocabularyName = "WHSInventoryStatusEntity";
+            VocabularyName = "WHS Inventory Status Entity";
             KeyPrefix = "commonDataModel.whsinventorystatusentity";
             KeySeparator = ".";
             Grouping = "/WHSInventoryStatusEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 StatusId = group.Add(new VocabularyKey(nameof(StatusId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StatusName = group.Add(new VocabularyKey(nameof(StatusName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillStatusBlockInventory = group.Add(new VocabularyKey(nameof(WillStatusBlockInventory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey StatusId { get; private set; }
         public VocabularyKey StatusName { get; private set; }
         public VocabularyKey WillStatusBlockInventory { get; private set; }
-
-
     }
 }

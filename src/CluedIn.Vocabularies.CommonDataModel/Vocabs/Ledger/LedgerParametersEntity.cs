@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerParametersEntityVocabulary()
         {
-            VocabularyName = "LedgerParametersEntity";
+            VocabularyName = "Ledger Parameters Entity";
             KeyPrefix = "commonDataModel.ledgerparametersentity";
             KeySeparator = ".";
             Grouping = "/LedgerParametersEntity";
@@ -109,10 +109,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RevRecHeaderDiscounts = group.Add(new VocabularyKey(nameof(RevRecHeaderDiscounts), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RevRecJournalNameId = group.Add(new VocabularyKey(nameof(RevRecJournalNameId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RevRecPostToAccountsReceivable = group.Add(new VocabularyKey(nameof(RevRecPostToAccountsReceivable), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DoNotUseErrorAccount { get; private set; }
         public VocabularyKey RequireContinuousNumberSequences { get; private set; }
         public VocabularyKey RequireJournalizingOnFiscalPeriodClose { get; private set; }
@@ -209,7 +207,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RevRecHeaderDiscounts { get; private set; }
         public VocabularyKey RevRecJournalNameId { get; private set; }
         public VocabularyKey RevRecPostToAccountsReceivable { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ConfiguratorLayoutFieldEntityVocabulary()
         {
-            VocabularyName = "ConfiguratorLayoutFieldEntity";
+            VocabularyName = "Configurator Layout Field Entity";
             KeyPrefix = "commonDataModel.configuratorlayoutfieldentity";
             KeySeparator = ".";
             Grouping = "/ConfiguratorLayoutFieldEntity";
@@ -33,10 +33,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TruncateField = group.Add(new VocabularyKey(nameof(TruncateField), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Type = group.Add(new VocabularyKey(nameof(Type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Content = group.Add(new VocabularyKey(nameof(Content), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BatchId { get; private set; }
         public VocabularyKey Comments { get; private set; }
         public VocabularyKey ArrayIndex { get; private set; }
@@ -57,7 +55,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TruncateField { get; private set; }
         public VocabularyKey Type { get; private set; }
         public VocabularyKey Content { get; private set; }
-
-
     }
 }

@@ -13,97 +13,93 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Device Details", group =>
             {
-                createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
-                createdBy = group.Add(new VocabularyKey(nameof(createdBy), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                modifiedOn = group.Add(new VocabularyKey(nameof(modifiedOn), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
-                modifiedBy = group.Add(new VocabularyKey(nameof(modifiedBy), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                createdOnBehalfBy = group.Add(new VocabularyKey(nameof(createdOnBehalfBy), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                modifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(modifiedOnBehalfBy), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                overriddenCreatedOn = group.Add(new VocabularyKey(nameof(overriddenCreatedOn), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
-                importSequenceNumber = group.Add(new VocabularyKey(nameof(importSequenceNumber), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
-                ownerId = group.Add(new VocabularyKey(nameof(ownerId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                ownerIdType = group.Add(new VocabularyKey(nameof(ownerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                owningBusinessUnit = group.Add(new VocabularyKey(nameof(owningBusinessUnit), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                owningUser = group.Add(new VocabularyKey(nameof(owningUser), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                owningTeam = group.Add(new VocabularyKey(nameof(owningTeam), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                timeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(timeZoneRuleVersionNumber), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
+                CreatedBy = group.Add(new VocabularyKey(nameof(CreatedBy), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
+                ModifiedBy = group.Add(new VocabularyKey(nameof(ModifiedBy), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                CreatedOnBehalfBy = group.Add(new VocabularyKey(nameof(CreatedOnBehalfBy), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                ModifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(ModifiedOnBehalfBy), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
+                ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                OwnerId = group.Add(new VocabularyKey(nameof(OwnerId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                OwnerIdType = group.Add(new VocabularyKey(nameof(OwnerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwningBusinessUnit = group.Add(new VocabularyKey(nameof(OwningBusinessUnit), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                OwningUser = group.Add(new VocabularyKey(nameof(OwningUser), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                OwningTeam = group.Add(new VocabularyKey(nameof(OwningTeam), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
                 UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
-                versionNumber = group.Add(new VocabularyKey(nameof(versionNumber), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
-                deviceId = group.Add(new VocabularyKey(nameof(deviceId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
-                stateCode_display = group.Add(new VocabularyKey(nameof(stateCode_display), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
-                statusCode_display = group.Add(new VocabularyKey(nameof(statusCode_display), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                carrierAIDC = group.Add(new VocabularyKey(nameof(carrierAIDC), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                deviceNumber = group.Add(new VocabularyKey(nameof(deviceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                deviceStatus = group.Add(new VocabularyKey(nameof(deviceStatus), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
-                deviceStatus_display = group.Add(new VocabularyKey(nameof(deviceStatus_display), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                expirationDate = group.Add(new VocabularyKey(nameof(expirationDate), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
-                location = group.Add(new VocabularyKey(nameof(location), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                lotNumber = group.Add(new VocabularyKey(nameof(lotNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                manufacturer = group.Add(new VocabularyKey(nameof(manufacturer), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                manufacturerDate = group.Add(new VocabularyKey(nameof(manufacturerDate), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
-                model = group.Add(new VocabularyKey(nameof(model), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                owner = group.Add(new VocabularyKey(nameof(owner), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                patient = group.Add(new VocabularyKey(nameof(patient), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                type = group.Add(new VocabularyKey(nameof(type), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                DeviceId = group.Add(new VocabularyKey(nameof(DeviceId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                StateCode_display = group.Add(new VocabularyKey(nameof(StateCode_display), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                StatusCode_display = group.Add(new VocabularyKey(nameof(StatusCode_display), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CarrierAIDC = group.Add(new VocabularyKey(nameof(CarrierAIDC), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DeviceNumber = group.Add(new VocabularyKey(nameof(DeviceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DeviceStatus = group.Add(new VocabularyKey(nameof(DeviceStatus), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                DeviceStatus_display = group.Add(new VocabularyKey(nameof(DeviceStatus_display), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExpirationDate = group.Add(new VocabularyKey(nameof(ExpirationDate), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
+                Location = group.Add(new VocabularyKey(nameof(Location), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                LotNumber = group.Add(new VocabularyKey(nameof(LotNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Manufacturer = group.Add(new VocabularyKey(nameof(Manufacturer), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ManufacturerDate = group.Add(new VocabularyKey(nameof(ManufacturerDate), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
+                Model = group.Add(new VocabularyKey(nameof(Model), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Owner = group.Add(new VocabularyKey(nameof(Owner), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                Patient = group.Add(new VocabularyKey(nameof(Patient), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                Type = group.Add(new VocabularyKey(nameof(Type), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
                 UDI = group.Add(new VocabularyKey(nameof(UDI), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UDICarrierHRF = group.Add(new VocabularyKey(nameof(UDICarrierHRF), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UDIEntryType = group.Add(new VocabularyKey(nameof(UDIEntryType), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
                 UDIEntryType_display = group.Add(new VocabularyKey(nameof(UDIEntryType_display), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UDIIssuer = group.Add(new VocabularyKey(nameof(UDIIssuer), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                udiJurisdiction = group.Add(new VocabularyKey(nameof(udiJurisdiction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                UdiJurisdiction = group.Add(new VocabularyKey(nameof(UdiJurisdiction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 URL = group.Add(new VocabularyKey(nameof(URL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                version = group.Add(new VocabularyKey(nameof(version), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                Version = group.Add(new VocabularyKey(nameof(Version), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey createdOn { get; private set; }
-        public VocabularyKey createdBy { get; private set; }
-        public VocabularyKey modifiedOn { get; private set; }
-        public VocabularyKey modifiedBy { get; private set; }
-        public VocabularyKey createdOnBehalfBy { get; private set; }
-        public VocabularyKey modifiedOnBehalfBy { get; private set; }
-        public VocabularyKey overriddenCreatedOn { get; private set; }
-        public VocabularyKey importSequenceNumber { get; private set; }
-        public VocabularyKey ownerId { get; private set; }
-        public VocabularyKey ownerIdType { get; private set; }
-        public VocabularyKey owningBusinessUnit { get; private set; }
-        public VocabularyKey owningUser { get; private set; }
-        public VocabularyKey owningTeam { get; private set; }
-        public VocabularyKey timeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey CreatedBy { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey ModifiedBy { get; private set; }
+        public VocabularyKey CreatedOnBehalfBy { get; private set; }
+        public VocabularyKey ModifiedOnBehalfBy { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey OwnerId { get; private set; }
+        public VocabularyKey OwnerIdType { get; private set; }
+        public VocabularyKey OwningBusinessUnit { get; private set; }
+        public VocabularyKey OwningUser { get; private set; }
+        public VocabularyKey OwningTeam { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey versionNumber { get; private set; }
-        public VocabularyKey deviceId { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey stateCode_display { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-        public VocabularyKey statusCode_display { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey carrierAIDC { get; private set; }
-        public VocabularyKey deviceNumber { get; private set; }
-        public VocabularyKey deviceStatus { get; private set; }
-        public VocabularyKey deviceStatus_display { get; private set; }
-        public VocabularyKey expirationDate { get; private set; }
-        public VocabularyKey location { get; private set; }
-        public VocabularyKey lotNumber { get; private set; }
-        public VocabularyKey manufacturer { get; private set; }
-        public VocabularyKey manufacturerDate { get; private set; }
-        public VocabularyKey model { get; private set; }
-        public VocabularyKey owner { get; private set; }
-        public VocabularyKey patient { get; private set; }
-        public VocabularyKey type { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
+        public VocabularyKey DeviceId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StateCode_display { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey StatusCode_display { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey CarrierAIDC { get; private set; }
+        public VocabularyKey DeviceNumber { get; private set; }
+        public VocabularyKey DeviceStatus { get; private set; }
+        public VocabularyKey DeviceStatus_display { get; private set; }
+        public VocabularyKey ExpirationDate { get; private set; }
+        public VocabularyKey Location { get; private set; }
+        public VocabularyKey LotNumber { get; private set; }
+        public VocabularyKey Manufacturer { get; private set; }
+        public VocabularyKey ManufacturerDate { get; private set; }
+        public VocabularyKey Model { get; private set; }
+        public VocabularyKey Owner { get; private set; }
+        public VocabularyKey Patient { get; private set; }
+        public VocabularyKey Type { get; private set; }
         public VocabularyKey UDI { get; private set; }
         public VocabularyKey UDICarrierHRF { get; private set; }
         public VocabularyKey UDIEntryType { get; private set; }
         public VocabularyKey UDIEntryType_display { get; private set; }
         public VocabularyKey UDIIssuer { get; private set; }
-        public VocabularyKey udiJurisdiction { get; private set; }
+        public VocabularyKey UdiJurisdiction { get; private set; }
         public VocabularyKey URL { get; private set; }
-        public VocabularyKey version { get; private set; }
-
-
+        public VocabularyKey Version { get; private set; }
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmTotalCompStatementSectionTaxEntityVocabulary()
         {
-            VocabularyName = "HcmTotalCompStatementSectionTaxEntity";
+            VocabularyName = "Hcm Total Comp Statement Section Tax Entity";
             KeyPrefix = "commonDataModel.hcmtotalcompstatementsectiontaxentity";
             KeySeparator = ".";
             Grouping = "/HcmTotalCompStatementSectionTaxEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 NullableCountryRegionId = group.Add(new VocabularyKey(nameof(NullableCountryRegionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxGroupId = group.Add(new VocabularyKey(nameof(TaxGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NullableTaxGroupId = group.Add(new VocabularyKey(nameof(NullableTaxGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TotalCompensationStatementSection { get; private set; }
         public VocabularyKey TaxCode { get; private set; }
         public VocabularyKey TaxCodeGroupType { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey NullableCountryRegionId { get; private set; }
         public VocabularyKey TaxGroupId { get; private set; }
         public VocabularyKey NullableTaxGroupId { get; private set; }
-
-
     }
 }

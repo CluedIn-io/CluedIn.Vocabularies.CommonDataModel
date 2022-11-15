@@ -6,40 +6,36 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RedirectURLVocabulary()
         {
-            VocabularyName = "RedirectURL";
+            VocabularyName = "Redirect URL";
             KeyPrefix = "commonDataModel.redirecturl";
             KeySeparator = ".";
             Grouping = "/RedirectURL";
 
             AddGroup("RedirectURL Details", group =>
             {
-                insightsResults = group.Add(new VocabularyKey(nameof(insightsResults), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                insightsTimeline = group.Add(new VocabularyKey(nameof(insightsTimeline), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                originalURL = group.Add(new VocabularyKey(nameof(originalURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                redirectingURL = group.Add(new VocabularyKey(nameof(redirectingURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                redirectURLId = group.Add(new VocabularyKey(nameof(redirectURLId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdName = group.Add(new VocabularyKey(nameof(ownerIdName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdType = group.Add(new VocabularyKey(nameof(ownerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdYomiName = group.Add(new VocabularyKey(nameof(ownerIdYomiName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                InsightsResults = group.Add(new VocabularyKey(nameof(InsightsResults), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InsightsTimeline = group.Add(new VocabularyKey(nameof(InsightsTimeline), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OriginalURL = group.Add(new VocabularyKey(nameof(OriginalURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RedirectingURL = group.Add(new VocabularyKey(nameof(RedirectingURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RedirectURLId = group.Add(new VocabularyKey(nameof(RedirectURLId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdName = group.Add(new VocabularyKey(nameof(OwnerIdName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdType = group.Add(new VocabularyKey(nameof(OwnerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdYomiName = group.Add(new VocabularyKey(nameof(OwnerIdYomiName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey insightsResults { get; private set; }
-        public VocabularyKey insightsTimeline { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey originalURL { get; private set; }
-        public VocabularyKey redirectingURL { get; private set; }
-        public VocabularyKey redirectURLId { get; private set; }
-        public VocabularyKey ownerIdName { get; private set; }
-        public VocabularyKey ownerIdType { get; private set; }
-        public VocabularyKey ownerIdYomiName { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey InsightsResults { get; private set; }
+        public VocabularyKey InsightsTimeline { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OriginalURL { get; private set; }
+        public VocabularyKey RedirectingURL { get; private set; }
+        public VocabularyKey RedirectURLId { get; private set; }
+        public VocabularyKey OwnerIdName { get; private set; }
+        public VocabularyKey OwnerIdType { get; private set; }
+        public VocabularyKey OwnerIdYomiName { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

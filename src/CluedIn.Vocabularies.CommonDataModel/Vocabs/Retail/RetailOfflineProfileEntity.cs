@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailOfflineProfileEntityVocabulary()
         {
-            VocabularyName = "RetailOfflineProfileEntity";
+            VocabularyName = "Retail Offline Profile Entity";
             KeyPrefix = "commonDataModel.retailofflineprofileentity";
             KeySeparator = ".";
             Grouping = "/RetailOfflineProfileEntity";
@@ -51,10 +51,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 EnableAdvancedOfflineSwitching = group.Add(new VocabularyKey(nameof(EnableAdvancedOfflineSwitching), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SystemHealthCheckInterval = group.Add(new VocabularyKey(nameof(SystemHealthCheckInterval), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PauseOfflineSync = group.Add(new VocabularyKey(nameof(PauseOfflineSync), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AddressBook { get; private set; }
         public VocabularyKey Assortment { get; private set; }
         public VocabularyKey CheckNewDBInterval { get; private set; }
@@ -93,7 +91,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey EnableAdvancedOfflineSwitching { get; private set; }
         public VocabularyKey SystemHealthCheckInterval { get; private set; }
         public VocabularyKey PauseOfflineSync { get; private set; }
-
-
     }
 }

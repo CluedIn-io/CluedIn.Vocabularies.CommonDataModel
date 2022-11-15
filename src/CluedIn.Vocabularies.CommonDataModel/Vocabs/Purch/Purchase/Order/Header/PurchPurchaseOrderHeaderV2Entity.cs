@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPurchaseOrderHeaderV2EntityVocabulary()
         {
-            VocabularyName = "PurchPurchaseOrderHeaderV2Entity";
+            VocabularyName = "Purch Purchase Order Header V2 Entity";
             KeyPrefix = "commonDataModel.purchpurchaseorderheaderv2entity";
             KeySeparator = ".";
             Grouping = "/PurchPurchaseOrderHeaderV2Entity";
@@ -133,10 +133,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DocumentApprovalStatus = group.Add(new VocabularyKey(nameof(DocumentApprovalStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FormattedInvoiceAddress = group.Add(new VocabularyKey(nameof(FormattedInvoiceAddress), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InvoiceAddressStreetNumber = group.Add(new VocabularyKey(nameof(InvoiceAddressStreetNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PurchaseOrderStatus { get; private set; }
         public VocabularyKey BankDocumentType { get; private set; }
         public VocabularyKey CashDiscountPercentage { get; private set; }
@@ -257,7 +255,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DocumentApprovalStatus { get; private set; }
         public VocabularyKey FormattedInvoiceAddress { get; private set; }
         public VocabularyKey InvoiceAddressStreetNumber { get; private set; }
-
-
     }
 }

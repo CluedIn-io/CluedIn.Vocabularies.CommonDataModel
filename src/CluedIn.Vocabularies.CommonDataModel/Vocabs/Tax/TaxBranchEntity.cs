@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxBranchEntityVocabulary()
         {
-            VocabularyName = "TaxBranchEntity";
+            VocabularyName = "Tax Branch Entity";
             KeyPrefix = "commonDataModel.taxbranchentity";
             KeySeparator = ".";
             Grouping = "/TaxBranchEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LogisticsLocation_LocationId = group.Add(new VocabularyKey(nameof(LogisticsLocation_LocationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Address = group.Add(new VocabularyKey(nameof(Address), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Code { get; private set; }
         public VocabularyKey HeadOffice { get; private set; }
         public VocabularyKey LogisticsLocation { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey LogisticsLocation_LocationId { get; private set; }
         public VocabularyKey Address { get; private set; }
-
-
     }
 }

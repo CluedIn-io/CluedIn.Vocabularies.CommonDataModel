@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesOrderLineChargeV2EntityVocabulary()
         {
-            VocabularyName = "SalesOrderLineChargeV2Entity";
+            VocabularyName = "Sales Order Line Charge V2 Entity";
             KeyPrefix = "commonDataModel.salesorderlinechargev2entity";
             KeySeparator = ".";
             Grouping = "/SalesOrderLineChargeV2Entity";
@@ -33,10 +33,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DocumentStatus = group.Add(new VocabularyKey(nameof(DocumentStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsIntercompanyCharge = group.Add(new VocabularyKey(nameof(IsIntercompanyCharge), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsBrokerContractCharge = group.Add(new VocabularyKey(nameof(IsBrokerContractCharge), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ChargeCategory { get; private set; }
         public VocabularyKey SalesChargeCode { get; private set; }
         public VocabularyKey ChargeDescription { get; private set; }
@@ -57,7 +55,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DocumentStatus { get; private set; }
         public VocabularyKey IsIntercompanyCharge { get; private set; }
         public VocabularyKey IsBrokerContractCharge { get; private set; }
-
-
     }
 }

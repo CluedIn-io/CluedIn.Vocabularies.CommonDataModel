@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetTransactionSummaryEntityVocabulary()
         {
-            VocabularyName = "AssetTransactionSummaryEntity";
+            VocabularyName = "Asset Transaction Summary Entity";
             KeyPrefix = "commonDataModel.assettransactionsummaryentity";
             KeySeparator = ".";
             Grouping = "/AssetTransactionSummaryEntity";
@@ -41,10 +41,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TransDate = group.Add(new VocabularyKey(nameof(TransDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransType = group.Add(new VocabularyKey(nameof(TransType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DisposalTransactionType = group.Add(new VocabularyKey(nameof(DisposalTransactionType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Name { get; private set; }
         public VocabularyKey AcquisitionDate { get; private set; }
         public VocabularyKey DisposalDate { get; private set; }
@@ -73,7 +71,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TransDate { get; private set; }
         public VocabularyKey TransType { get; private set; }
         public VocabularyKey DisposalTransactionType { get; private set; }
-
-
     }
 }

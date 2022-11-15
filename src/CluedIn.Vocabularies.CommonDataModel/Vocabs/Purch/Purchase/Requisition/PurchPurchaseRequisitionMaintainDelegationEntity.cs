@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPurchaseRequisitionMaintainDelegationEntityVocabulary()
         {
-            VocabularyName = "PurchPurchaseRequisitionMaintainDelegationEntity";
+            VocabularyName = "Purch Purchase Requisition Maintain Delegation Entity";
             KeyPrefix = "commonDataModel.purchpurchaserequisitionmaintaindelegationentity";
             KeySeparator = ".";
             Grouping = "/PurchPurchaseRequisitionMaintainDelegationEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ValidFrom = group.Add(new VocabularyKey(nameof(ValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidTo = group.Add(new VocabularyKey(nameof(ValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 HasAdministratorGrantedPermission = group.Add(new VocabularyKey(nameof(HasAdministratorGrantedPermission), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Originator { get; private set; }
         public VocabularyKey Requisitioner { get; private set; }
         public VocabularyKey PreparerPersonnelNumber { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey ValidTo { get; private set; }
         public VocabularyKey HasAdministratorGrantedPermission { get; private set; }
-
-
     }
 }

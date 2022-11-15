@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationDiscountEntityVocabulary()
         {
-            VocabularyName = "TMSTransportationDiscountEntity";
+            VocabularyName = "TMS Transportation Discount Entity";
             KeyPrefix = "commonDataModel.tmstransportationdiscountentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationDiscountEntity";
@@ -38,10 +38,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MinimumFreightWeightCriterion = group.Add(new VocabularyKey(nameof(MinimumFreightWeightCriterion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransportationZoneIdCriterion = group.Add(new VocabularyKey(nameof(TransportationZoneIdCriterion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransportationZoneMasterCodeCriterion = group.Add(new VocabularyKey(nameof(TransportationZoneMasterCodeCriterion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ShippingCarrierIdCriterion { get; private set; }
         public VocabularyKey ShippingCarrierServiceIdCriterion { get; private set; }
         public VocabularyKey DiscountCurrencyCode { get; private set; }
@@ -67,7 +65,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey MinimumFreightWeightCriterion { get; private set; }
         public VocabularyKey TransportationZoneIdCriterion { get; private set; }
         public VocabularyKey TransportationZoneMasterCodeCriterion { get; private set; }
-
-
     }
 }

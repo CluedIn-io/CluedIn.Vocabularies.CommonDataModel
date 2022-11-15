@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PdsCommodityQuantityMarginTemplateV2EntityVocabulary()
         {
-            VocabularyName = "PdsCommodityQuantityMarginTemplateV2Entity";
+            VocabularyName = "Pds Commodity Quantity Margin Template V2 Entity";
             KeyPrefix = "commonDataModel.pdscommodityquantitymargintemplatev2entity";
             KeySeparator = ".";
             Grouping = "/PdsCommodityQuantityMarginTemplateV2Entity";
@@ -38,10 +38,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductVersionId = group.Add(new VocabularyKey(nameof(ProductVersionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ItemBatchNumber = group.Add(new VocabularyKey(nameof(ItemBatchNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ItemSerialNumber = group.Add(new VocabularyKey(nameof(ItemSerialNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CommodityPricingTemplateId { get; private set; }
         public VocabularyKey MarginAccountCode { get; private set; }
         public VocabularyKey MarginAccountRelation { get; private set; }
@@ -67,7 +65,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProductVersionId { get; private set; }
         public VocabularyKey ItemBatchNumber { get; private set; }
         public VocabularyKey ItemSerialNumber { get; private set; }
-
-
     }
 }

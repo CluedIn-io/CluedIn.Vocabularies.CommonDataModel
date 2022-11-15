@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CredManPaymTermRankEntityVocabulary()
         {
-            VocabularyName = "CredManPaymTermRankEntity";
+            VocabularyName = "Cred Man Paym Term Rank Entity";
             KeyPrefix = "commonDataModel.credmanpaymtermrankentity";
             KeySeparator = ".";
             Grouping = "/CredManPaymTermRankEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 PaymentTerms = group.Add(new VocabularyKey(nameof(PaymentTerms), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PaymentTermsRanking = group.Add(new VocabularyKey(nameof(PaymentTermsRanking), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PaymentTerms { get; private set; }
         public VocabularyKey PaymentTermsRanking { get; private set; }
-
-
     }
 }

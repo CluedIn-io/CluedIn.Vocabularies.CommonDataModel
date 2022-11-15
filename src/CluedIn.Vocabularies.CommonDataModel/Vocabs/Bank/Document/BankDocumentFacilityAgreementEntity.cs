@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankDocumentFacilityAgreementEntityVocabulary()
         {
-            VocabularyName = "BankDocumentFacilityAgreementEntity";
+            VocabularyName = "Bank Document Facility Agreement Entity";
             KeyPrefix = "commonDataModel.bankdocumentfacilityagreemententity";
             KeySeparator = ".";
             Grouping = "/BankDocumentFacilityAgreementEntity";
@@ -37,10 +37,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LGIssuanceCommissionAmount = group.Add(new VocabularyKey(nameof(LGIssuanceCommissionAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LGIssuanceCommissionPercentage = group.Add(new VocabularyKey(nameof(LGIssuanceCommissionPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LGIssuanceCommissionCalcMethod = group.Add(new VocabularyKey(nameof(LGIssuanceCommissionCalcMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FacilityTypeRecId { get; private set; }
         public VocabularyKey AgreementLine { get; private set; }
         public VocabularyKey AmountUsed { get; private set; }
@@ -65,7 +63,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LGIssuanceCommissionAmount { get; private set; }
         public VocabularyKey LGIssuanceCommissionPercentage { get; private set; }
         public VocabularyKey LGIssuanceCommissionCalcMethod { get; private set; }
-
-
     }
 }

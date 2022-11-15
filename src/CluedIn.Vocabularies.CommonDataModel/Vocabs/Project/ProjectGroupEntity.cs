@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjectGroupEntityVocabulary()
         {
-            VocabularyName = "ProjectGroupEntity";
+            VocabularyName = "Project Group Entity";
             KeyPrefix = "commonDataModel.projectgroupentity";
             KeySeparator = ".";
             Grouping = "/ProjectGroupEntity";
@@ -37,10 +37,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AccrueRevenueFee = group.Add(new VocabularyKey(nameof(AccrueRevenueFee), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CalculationMethod = group.Add(new VocabularyKey(nameof(CalculationMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesValueCategoryId = group.Add(new VocabularyKey(nameof(SalesValueCategoryId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccruedLossCategoryId { get; private set; }
         public VocabularyKey CanVerifyCostAgainstRemainingForecast { get; private set; }
         public VocabularyKey RevenueRecognitionAccountingRule { get; private set; }
@@ -65,7 +63,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AccrueRevenueFee { get; private set; }
         public VocabularyKey CalculationMethod { get; private set; }
         public VocabularyKey SalesValueCategoryId { get; private set; }
-
-
     }
 }

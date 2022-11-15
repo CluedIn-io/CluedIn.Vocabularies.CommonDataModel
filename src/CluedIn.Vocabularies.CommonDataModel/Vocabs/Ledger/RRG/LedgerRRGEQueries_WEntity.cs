@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerRRGEQueries_WEntityVocabulary()
         {
-            VocabularyName = "LedgerRRGEQueries_WEntity";
+            VocabularyName = "Ledger RRGE Queries _W Entity";
             KeyPrefix = "commonDataModel.ledgerrrgequeries_wentity";
             KeySeparator = ".";
             Grouping = "/LedgerRRGEQueries_WEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Type = group.Add(new VocabularyKey(nameof(Type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TypeByCorrect = group.Add(new VocabularyKey(nameof(TypeByCorrect), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DimensionHierarchyHashKey = group.Add(new VocabularyKey(nameof(DimensionHierarchyHashKey), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CurrencyForCalc { get; private set; }
         public VocabularyKey DataType { get; private set; }
         public VocabularyKey FirstOnly { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Type { get; private set; }
         public VocabularyKey TypeByCorrect { get; private set; }
         public VocabularyKey DimensionHierarchyHashKey { get; private set; }
-
-
     }
 }

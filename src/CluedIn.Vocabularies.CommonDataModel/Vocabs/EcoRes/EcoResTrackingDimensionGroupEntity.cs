@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResTrackingDimensionGroupEntityVocabulary()
         {
-            VocabularyName = "EcoResTrackingDimensionGroupEntity";
+            VocabularyName = "Eco Res Tracking Dimension Group Entity";
             KeyPrefix = "commonDataModel.ecorestrackingdimensiongroupentity";
             KeySeparator = ".";
             Grouping = "/EcoResTrackingDimensionGroupEntity";
@@ -41,10 +41,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsInventoryProfileActive = group.Add(new VocabularyKey(nameof(IsInventoryProfileActive), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsGTDActive = group.Add(new VocabularyKey(nameof(IsGTDActive), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsCoveragePlanEnabledForInventoryProfile = group.Add(new VocabularyKey(nameof(IsCoveragePlanEnabledForInventoryProfile), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey GroupName { get; private set; }
         public VocabularyKey GroupDescription { get; private set; }
         public VocabularyKey SerialNumberCapturingOperation { get; private set; }
@@ -73,7 +71,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsInventoryProfileActive { get; private set; }
         public VocabularyKey IsGTDActive { get; private set; }
         public VocabularyKey IsCoveragePlanEnabledForInventoryProfile { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FBContribCreditTypeEntityVocabulary()
         {
-            VocabularyName = "FBContribCreditTypeEntity";
+            VocabularyName = "FB Contrib Credit Type Entity";
             KeyPrefix = "commonDataModel.fbcontribcredittypeentity";
             KeySeparator = ".";
             Grouping = "/FBContribCreditTypeEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidFromDate = group.Add(new VocabularyKey(nameof(ValidFromDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidToDate = group.Add(new VocabularyKey(nameof(ValidToDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CreditType { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey ValidFromDate { get; private set; }
         public VocabularyKey ValidToDate { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WorkflowElementNotificationMessageEntityVocabulary()
         {
-            VocabularyName = "WorkflowElementNotificationMessageEntity";
+            VocabularyName = "Workflow Element Notification Message Entity";
             KeyPrefix = "commonDataModel.workflowelementnotificationmessageentity";
             KeySeparator = ".";
             Grouping = "/WorkflowElementNotificationMessageEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Text = group.Add(new VocabularyKey(nameof(Text), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ElementId = group.Add(new VocabularyKey(nameof(ElementId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LanguageId { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey Text { get; private set; }
         public VocabularyKey ElementId { get; private set; }
-
-
     }
 }

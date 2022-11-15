@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSPackSizeCategoryEntityVocabulary()
         {
-            VocabularyName = "WHSPackSizeCategoryEntity";
+            VocabularyName = "WHS Pack Size Category Entity";
             KeyPrefix = "commonDataModel.whspacksizecategoryentity";
             KeySeparator = ".";
             Grouping = "/WHSPackSizeCategoryEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 PackSizeCategoryId = group.Add(new VocabularyKey(nameof(PackSizeCategoryId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PackSizeCategoryName = group.Add(new VocabularyKey(nameof(PackSizeCategoryName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PackSizeCategoryId { get; private set; }
         public VocabularyKey PackSizeCategoryName { get; private set; }
-
-
     }
 }

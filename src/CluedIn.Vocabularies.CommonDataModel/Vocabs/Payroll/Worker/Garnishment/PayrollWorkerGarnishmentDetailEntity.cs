@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollWorkerGarnishmentDetailEntityVocabulary()
         {
-            VocabularyName = "PayrollWorkerGarnishmentDetailEntity";
+            VocabularyName = "Payroll Worker Garnishment Detail Entity";
             KeyPrefix = "commonDataModel.payrollworkergarnishmentdetailentity";
             KeySeparator = ".";
             Grouping = "/PayrollWorkerGarnishmentDetailEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Worker = group.Add(new VocabularyKey(nameof(Worker), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BenefitID = group.Add(new VocabularyKey(nameof(BenefitID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PersonnelNumber = group.Add(new VocabularyKey(nameof(PersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AdministrativeFee { get; private set; }
         public VocabularyKey CountryRegionId { get; private set; }
         public VocabularyKey CaseNumber { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Worker { get; private set; }
         public VocabularyKey BenefitID { get; private set; }
         public VocabularyKey PersonnelNumber { get; private set; }
-
-
     }
 }

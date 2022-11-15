@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerConsolidateAccountGroupV2EntityVocabulary()
         {
-            VocabularyName = "LedgerConsolidateAccountGroupV2Entity";
+            VocabularyName = "Ledger Consolidate Account Group V2 Entity";
             KeyPrefix = "commonDataModel.ledgerconsolidateaccountgroupv2entity";
             KeySeparator = ".";
             Grouping = "/LedgerConsolidateAccountGroupV2Entity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MainAccountCategory = group.Add(new VocabularyKey(nameof(MainAccountCategory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ChartOfAccounts = group.Add(new VocabularyKey(nameof(ChartOfAccounts), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CostCenterName = group.Add(new VocabularyKey(nameof(CostCenterName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey MainAccount { get; private set; }
         public VocabularyKey MainAccountName { get; private set; }
         public VocabularyKey ConsolidationAccountGroup { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey MainAccountCategory { get; private set; }
         public VocabularyKey ChartOfAccounts { get; private set; }
         public VocabularyKey CostCenterName { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SMAServiceRepairStageEntityVocabulary()
         {
-            VocabularyName = "SMAServiceRepairStageEntity";
+            VocabularyName = "SMA Service Repair Stage Entity";
             KeyPrefix = "commonDataModel.smaservicerepairstageentity";
             KeySeparator = ".";
             Grouping = "/SMAServiceRepairStageEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsFinishedStage = group.Add(new VocabularyKey(nameof(IsFinishedStage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StageDescription = group.Add(new VocabularyKey(nameof(StageDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StageId = group.Add(new VocabularyKey(nameof(StageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsFinishedStage { get; private set; }
         public VocabularyKey StageDescription { get; private set; }
         public VocabularyKey StageId { get; private set; }
-
-
     }
 }

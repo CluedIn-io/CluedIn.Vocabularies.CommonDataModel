@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxItalianSalesTaxBookSectionEntityVocabulary()
         {
-            VocabularyName = "TaxItalianSalesTaxBookSectionEntity";
+            VocabularyName = "Tax Italian Sales Tax Book Section Entity";
             KeyPrefix = "commonDataModel.taxitaliansalestaxbooksectionentity";
             KeySeparator = ".";
             Grouping = "/TaxItalianSalesTaxBookSectionEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CloseItalianSalesTaxBookSection = group.Add(new VocabularyKey(nameof(CloseItalianSalesTaxBookSection), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Date = group.Add(new VocabularyKey(nameof(Date), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Voucher = group.Add(new VocabularyKey(nameof(Voucher), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SalesTaxBookSection { get; private set; }
         public VocabularyKey SalesTaxBook { get; private set; }
         public VocabularyKey Name { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CloseItalianSalesTaxBookSection { get; private set; }
         public VocabularyKey Date { get; private set; }
         public VocabularyKey Voucher { get; private set; }
-
-
     }
 }

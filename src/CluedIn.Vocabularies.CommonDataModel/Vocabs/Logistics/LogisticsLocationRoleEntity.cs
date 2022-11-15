@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LogisticsLocationRoleEntityVocabulary()
         {
-            VocabularyName = "LogisticsLocationRoleEntity";
+            VocabularyName = "Logistics Location Role Entity";
             KeyPrefix = "commonDataModel.logisticslocationroleentity";
             KeySeparator = ".";
             Grouping = "/LogisticsLocationRoleEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ContactInfo = group.Add(new VocabularyKey(nameof(ContactInfo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Language = group.Add(new VocabularyKey(nameof(Language), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Type = group.Add(new VocabularyKey(nameof(Type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Purpose { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey PostalAddress { get; private set; }
         public VocabularyKey ContactInfo { get; private set; }
         public VocabularyKey Language { get; private set; }
         public VocabularyKey Type { get; private set; }
-
-
     }
 }

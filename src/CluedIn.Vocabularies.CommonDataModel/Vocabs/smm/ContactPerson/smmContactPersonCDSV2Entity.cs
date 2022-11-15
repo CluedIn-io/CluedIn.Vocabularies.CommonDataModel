@@ -2,16 +2,16 @@ using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 {
-    public class smmContactPersonCDSV2EntityVocabulary : SimpleVocabulary
+    public class SmmContactPersonCDSV2EntityVocabulary : SimpleVocabulary
     {
-        public smmContactPersonCDSV2EntityVocabulary()
+        public SmmContactPersonCDSV2EntityVocabulary()
         {
-            VocabularyName = "smmContactPersonCDSV2Entity";
+            VocabularyName = "Smm Contact Person CDSV2 Entity";
             KeyPrefix = "commonDataModel.smmcontactpersoncdsv2entity";
             KeySeparator = ".";
-            Grouping = "/smmContactPersonCDSV2Entity";
+            Grouping = "/SmmContactPersonCDSV2Entity";
 
-            AddGroup("smmContactPersonCDSV2Entity Details", group =>
+            AddGroup("SmmContactPersonCDSV2Entity Details", group =>
             {
                 ContactPersonPartyNumber = group.Add(new VocabularyKey(nameof(ContactPersonPartyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AssociatedPartyNumber = group.Add(new VocabularyKey(nameof(AssociatedPartyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
@@ -65,10 +65,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PrimaryContactURLRecordId = group.Add(new VocabularyKey(nameof(PrimaryContactURLRecordId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PrimaryAddressLocation = group.Add(new VocabularyKey(nameof(PrimaryAddressLocation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PartyRecordId = group.Add(new VocabularyKey(nameof(PartyRecordId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ContactPersonPartyNumber { get; private set; }
         public VocabularyKey AssociatedPartyNumber { get; private set; }
         public VocabularyKey BirthDay { get; private set; }
@@ -121,7 +119,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PrimaryContactURLRecordId { get; private set; }
         public VocabularyKey PrimaryAddressLocation { get; private set; }
         public VocabularyKey PartyRecordId { get; private set; }
-
-
     }
 }

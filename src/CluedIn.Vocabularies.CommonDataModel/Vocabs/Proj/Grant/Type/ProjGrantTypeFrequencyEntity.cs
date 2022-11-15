@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjGrantTypeFrequencyEntityVocabulary()
         {
-            VocabularyName = "ProjGrantTypeFrequencyEntity";
+            VocabularyName = "Proj Grant Type Frequency Entity";
             KeyPrefix = "commonDataModel.projgranttypefrequencyentity";
             KeySeparator = ".";
             Grouping = "/ProjGrantTypeFrequencyEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Frequency = group.Add(new VocabularyKey(nameof(Frequency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProjGrantType = group.Add(new VocabularyKey(nameof(ProjGrantType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProjGrantType_GrantType = group.Add(new VocabularyKey(nameof(ProjGrantType_GrantType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Comments { get; private set; }
         public VocabularyKey Frequency { get; private set; }
         public VocabularyKey ProjGrantType { get; private set; }
         public VocabularyKey ProjGrantType_GrantType { get; private set; }
-
-
     }
 }

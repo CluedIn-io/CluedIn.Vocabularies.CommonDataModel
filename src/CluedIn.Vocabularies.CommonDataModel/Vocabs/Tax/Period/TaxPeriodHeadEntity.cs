@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxPeriodHeadEntityVocabulary()
         {
-            VocabularyName = "TaxPeriodHeadEntity";
+            VocabularyName = "Tax Period Head Entity";
             KeyPrefix = "commonDataModel.taxperiodheadentity";
             KeySeparator = ".";
             Grouping = "/TaxPeriodHeadEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Duration = group.Add(new VocabularyKey(nameof(Duration), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxAuthority = group.Add(new VocabularyKey(nameof(TaxAuthority), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxPeriodId = group.Add(new VocabularyKey(nameof(TaxPeriodId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Name { get; private set; }
         public VocabularyKey PaymentTerms { get; private set; }
         public VocabularyKey DurationUnit { get; private set; }
         public VocabularyKey Duration { get; private set; }
         public VocabularyKey TaxAuthority { get; private set; }
         public VocabularyKey TaxPeriodId { get; private set; }
-
-
     }
 }

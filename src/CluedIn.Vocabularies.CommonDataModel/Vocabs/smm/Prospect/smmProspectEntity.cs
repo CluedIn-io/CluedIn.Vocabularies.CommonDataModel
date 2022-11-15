@@ -2,16 +2,16 @@ using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 {
-    public class smmProspectEntityVocabulary : SimpleVocabulary
+    public class SmmProspectEntityVocabulary : SimpleVocabulary
     {
-        public smmProspectEntityVocabulary()
+        public SmmProspectEntityVocabulary()
         {
-            VocabularyName = "smmProspectEntity";
+            VocabularyName = "Smm Prospect Entity";
             KeyPrefix = "commonDataModel.smmprospectentity";
             KeySeparator = ".";
-            Grouping = "/smmProspectEntity";
+            Grouping = "/SmmProspectEntity";
 
-            AddGroup("smmProspectEntity Details", group =>
+            AddGroup("SmmProspectEntity Details", group =>
             {
                 CompanyChainName = group.Add(new VocabularyKey(nameof(CompanyChainName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CreditLimit = group.Add(new VocabularyKey(nameof(CreditLimit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
@@ -125,10 +125,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PrimaryTwitterDescription = group.Add(new VocabularyKey(nameof(PrimaryTwitterDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PrimaryTwitterPurpose = group.Add(new VocabularyKey(nameof(PrimaryTwitterPurpose), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ElectronicLocationId = group.Add(new VocabularyKey(nameof(ElectronicLocationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CompanyChainName { get; private set; }
         public VocabularyKey CreditLimit { get; private set; }
         public VocabularyKey CreditRating { get; private set; }
@@ -241,7 +239,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PrimaryTwitterDescription { get; private set; }
         public VocabularyKey PrimaryTwitterPurpose { get; private set; }
         public VocabularyKey ElectronicLocationId { get; private set; }
-
-
     }
 }

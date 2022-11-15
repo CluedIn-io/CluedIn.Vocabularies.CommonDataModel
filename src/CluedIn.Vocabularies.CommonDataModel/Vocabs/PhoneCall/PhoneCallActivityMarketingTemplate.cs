@@ -6,50 +6,46 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PhoneCallActivityMarketingTemplateVocabulary()
         {
-            VocabularyName = "PhoneCallActivityMarketingTemplate";
+            VocabularyName = "Phone Call Activity Marketing Template";
             KeyPrefix = "commonDataModel.phonecallactivitymarketingtemplate";
             KeySeparator = ".";
             Grouping = "/PhoneCallActivityMarketingTemplate";
 
             AddGroup("PhoneCallActivityMarketingTemplate Details", group =>
             {
-                scheduleddurationminutes = group.Add(new VocabularyKey(nameof(scheduleddurationminutes), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                description = group.Add(new VocabularyKey(nameof(description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                phoneCallActivityMarketingTemplateId = group.Add(new VocabularyKey(nameof(phoneCallActivityMarketingTemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                prioritycode = group.Add(new VocabularyKey(nameof(prioritycode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                scheduleType = group.Add(new VocabularyKey(nameof(scheduleType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                startDate = group.Add(new VocabularyKey(nameof(startDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                startDelay = group.Add(new VocabularyKey(nameof(startDelay), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                startTimeHour = group.Add(new VocabularyKey(nameof(startTimeHour), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                startTimeMinute = group.Add(new VocabularyKey(nameof(startTimeMinute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                subject = group.Add(new VocabularyKey(nameof(subject), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdName = group.Add(new VocabularyKey(nameof(ownerIdName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdType = group.Add(new VocabularyKey(nameof(ownerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdYomiName = group.Add(new VocabularyKey(nameof(ownerIdYomiName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                Scheduleddurationminutes = group.Add(new VocabularyKey(nameof(Scheduleddurationminutes), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PhoneCallActivityMarketingTemplateId = group.Add(new VocabularyKey(nameof(PhoneCallActivityMarketingTemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Prioritycode = group.Add(new VocabularyKey(nameof(Prioritycode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ScheduleType = group.Add(new VocabularyKey(nameof(ScheduleType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StartDate = group.Add(new VocabularyKey(nameof(StartDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StartDelay = group.Add(new VocabularyKey(nameof(StartDelay), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StartTimeHour = group.Add(new VocabularyKey(nameof(StartTimeHour), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StartTimeMinute = group.Add(new VocabularyKey(nameof(StartTimeMinute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Subject = group.Add(new VocabularyKey(nameof(Subject), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdName = group.Add(new VocabularyKey(nameof(OwnerIdName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdType = group.Add(new VocabularyKey(nameof(OwnerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdYomiName = group.Add(new VocabularyKey(nameof(OwnerIdYomiName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey scheduleddurationminutes { get; private set; }
-        public VocabularyKey description { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey phoneCallActivityMarketingTemplateId { get; private set; }
-        public VocabularyKey prioritycode { get; private set; }
-        public VocabularyKey scheduleType { get; private set; }
-        public VocabularyKey startDate { get; private set; }
-        public VocabularyKey startDelay { get; private set; }
-        public VocabularyKey startTimeHour { get; private set; }
-        public VocabularyKey startTimeMinute { get; private set; }
-        public VocabularyKey subject { get; private set; }
-        public VocabularyKey ownerIdName { get; private set; }
-        public VocabularyKey ownerIdType { get; private set; }
-        public VocabularyKey ownerIdYomiName { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey Scheduleddurationminutes { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey PhoneCallActivityMarketingTemplateId { get; private set; }
+        public VocabularyKey Prioritycode { get; private set; }
+        public VocabularyKey ScheduleType { get; private set; }
+        public VocabularyKey StartDate { get; private set; }
+        public VocabularyKey StartDelay { get; private set; }
+        public VocabularyKey StartTimeHour { get; private set; }
+        public VocabularyKey StartTimeMinute { get; private set; }
+        public VocabularyKey Subject { get; private set; }
+        public VocabularyKey OwnerIdName { get; private set; }
+        public VocabularyKey OwnerIdType { get; private set; }
+        public VocabularyKey OwnerIdYomiName { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

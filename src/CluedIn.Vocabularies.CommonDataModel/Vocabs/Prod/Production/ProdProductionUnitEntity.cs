@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProdProductionUnitEntityVocabulary()
         {
-            VocabularyName = "ProdProductionUnitEntity";
+            VocabularyName = "Prod Production Unit Entity";
             KeyPrefix = "commonDataModel.prodproductionunitentity";
             KeySeparator = ".";
             Grouping = "/ProdProductionUnitEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OperationalSiteId = group.Add(new VocabularyKey(nameof(OperationalSiteId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductionUnitId = group.Add(new VocabularyKey(nameof(ProductionUnitId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey OutputWarehouseId { get; private set; }
         public VocabularyKey InputWarehouseId { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey OperationalSiteId { get; private set; }
         public VocabularyKey ProductionUnitId { get; private set; }
-
-
     }
 }

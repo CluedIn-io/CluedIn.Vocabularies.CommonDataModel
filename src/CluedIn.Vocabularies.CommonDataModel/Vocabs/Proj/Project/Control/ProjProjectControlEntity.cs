@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjProjectControlEntityVocabulary()
         {
-            VocabularyName = "ProjProjectControlEntity";
+            VocabularyName = "Proj Project Control Entity";
             KeyPrefix = "commonDataModel.projprojectcontrolentity";
             KeySeparator = ".";
             Grouping = "/ProjProjectControlEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 HourCostLineId = group.Add(new VocabularyKey(nameof(HourCostLineId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ItemCostLineId = group.Add(new VocabularyKey(nameof(ItemCostLineId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CompletionBasedOn { get; private set; }
         public VocabularyKey CompletionMethod { get; private set; }
         public VocabularyKey CostTemplateId { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey HourCostLineId { get; private set; }
         public VocabularyKey ItemCostLineId { get; private set; }
         public VocabularyKey Name { get; private set; }
-
-
     }
 }

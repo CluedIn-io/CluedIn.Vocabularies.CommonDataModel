@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SMAServiceLevelAgreementEntityVocabulary()
         {
-            VocabularyName = "SMAServiceLevelAgreementEntity";
+            VocabularyName = "SMA Service Level Agreement Entity";
             KeyPrefix = "commonDataModel.smaservicelevelagreemententity";
             KeySeparator = ".";
             Grouping = "/SMAServiceLevelAgreementEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ServiceRequestResponseMinutes = group.Add(new VocabularyKey(nameof(ServiceRequestResponseMinutes), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AgreementId = group.Add(new VocabularyKey(nameof(AgreementId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsAgreementSuspended = group.Add(new VocabularyKey(nameof(IsAgreementSuspended), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AgreementWorkCalendarId { get; private set; }
         public VocabularyKey ServiceRequestResponseDays { get; private set; }
         public VocabularyKey AgreementDescription { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ServiceRequestResponseMinutes { get; private set; }
         public VocabularyKey AgreementId { get; private set; }
         public VocabularyKey IsAgreementSuspended { get; private set; }
-
-
     }
 }

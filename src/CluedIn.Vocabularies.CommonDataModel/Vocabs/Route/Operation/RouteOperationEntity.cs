@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RouteOperationEntityVocabulary()
         {
-            VocabularyName = "RouteOperationEntity";
+            VocabularyName = "Route Operation Entity";
             KeyPrefix = "commonDataModel.routeoperationentity";
             KeySeparator = ".";
             Grouping = "/RouteOperationEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 OperationName = group.Add(new VocabularyKey(nameof(OperationName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OperationId = group.Add(new VocabularyKey(nameof(OperationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey OperationName { get; private set; }
         public VocabularyKey OperationId { get; private set; }
-
-
     }
 }

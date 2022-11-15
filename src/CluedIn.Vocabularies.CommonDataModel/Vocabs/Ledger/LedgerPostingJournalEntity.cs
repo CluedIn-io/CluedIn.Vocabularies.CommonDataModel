@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerPostingJournalEntityVocabulary()
         {
-            VocabularyName = "LedgerPostingJournalEntity";
+            VocabularyName = "Ledger Posting Journal Entity";
             KeyPrefix = "commonDataModel.ledgerpostingjournalentity";
             KeySeparator = ".";
             Grouping = "/LedgerPostingJournalEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ToDate = group.Add(new VocabularyKey(nameof(ToDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NumberSequenceCode = group.Add(new VocabularyKey(nameof(NumberSequenceCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 JournalType = group.Add(new VocabularyKey(nameof(JournalType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Journal { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey FromDate { get; private set; }
         public VocabularyKey ToDate { get; private set; }
         public VocabularyKey NumberSequenceCode { get; private set; }
         public VocabularyKey JournalType { get; private set; }
-
-
     }
 }

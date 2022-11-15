@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjContractEntityVocabulary()
         {
-            VocabularyName = "ProjContractEntity";
+            VocabularyName = "Proj Contract Entity";
             KeyPrefix = "commonDataModel.projcontractentity";
             KeySeparator = ".";
             Grouping = "/ProjContractEntity";
@@ -37,10 +37,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TransactionCode = group.Add(new VocabularyKey(nameof(TransactionCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesResponsiblePersonnelNumber = group.Add(new VocabularyKey(nameof(SalesResponsiblePersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesCurrency = group.Add(new VocabularyKey(nameof(SalesCurrency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BankAccount { get; private set; }
         public VocabularyKey CentralBankPurposeCode { get; private set; }
         public VocabularyKey PurposeText { get; private set; }
@@ -65,7 +63,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TransactionCode { get; private set; }
         public VocabularyKey SalesResponsiblePersonnelNumber { get; private set; }
         public VocabularyKey SalesCurrency { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WorkflowVersionNotesEntityVocabulary()
         {
-            VocabularyName = "WorkflowVersionNotesEntity";
+            VocabularyName = "Workflow Version Notes Entity";
             KeyPrefix = "commonDataModel.workflowversionnotesentity";
             KeySeparator = ".";
             Grouping = "/WorkflowVersionNotesEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 Notes = group.Add(new VocabularyKey(nameof(Notes), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkflowId = group.Add(new VocabularyKey(nameof(WorkflowId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Notes { get; private set; }
         public VocabularyKey WorkflowId { get; private set; }
-
-
     }
 }

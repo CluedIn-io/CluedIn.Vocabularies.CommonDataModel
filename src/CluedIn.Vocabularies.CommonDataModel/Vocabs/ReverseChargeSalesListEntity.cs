@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReverseChargeSalesListEntityVocabulary()
         {
-            VocabularyName = "ReverseChargeSalesListEntity";
+            VocabularyName = "Reverse Charge Sales List Entity";
             KeyPrefix = "commonDataModel.reversechargesaleslistentity";
             KeySeparator = ".";
             Grouping = "/ReverseChargeSalesListEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Years = group.Add(new VocabularyKey(nameof(Years), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxExemptNumber = group.Add(new VocabularyKey(nameof(TaxExemptNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Company = group.Add(new VocabularyKey(nameof(Company), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CustomerAccount { get; private set; }
         public VocabularyKey Value { get; private set; }
         public VocabularyKey Correction { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Years { get; private set; }
         public VocabularyKey TaxExemptNumber { get; private set; }
         public VocabularyKey Company { get; private set; }
-
-
     }
 }

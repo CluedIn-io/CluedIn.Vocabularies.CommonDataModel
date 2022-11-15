@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesDocumentDefaultsEntityVocabulary()
         {
-            VocabularyName = "SalesDocumentDefaultsEntity";
+            VocabularyName = "Sales Document Defaults Entity";
             KeyPrefix = "commonDataModel.salesdocumentdefaultsentity";
             KeySeparator = ".";
             Grouping = "/SalesDocumentDefaultsEntity";
@@ -33,10 +33,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WillAutomaticInventoryReservationConsiderBatchAttributesByDefault = group.Add(new VocabularyKey(nameof(WillAutomaticInventoryReservationConsiderBatchAttributesByDefault), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExchangeRateDate = group.Add(new VocabularyKey(nameof(ExchangeRateDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsDirectDeliveryChainCreationDeferred = group.Add(new VocabularyKey(nameof(IsDirectDeliveryChainCreationDeferred), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DefaultBillOfLadingCarrierName { get; private set; }
         public VocabularyKey DefaultBillOfLadingFreightChargeTerms { get; private set; }
         public VocabularyKey DefaultBillOfLadingFreightCountingRule { get; private set; }
@@ -57,7 +55,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WillAutomaticInventoryReservationConsiderBatchAttributesByDefault { get; private set; }
         public VocabularyKey ExchangeRateDate { get; private set; }
         public VocabularyKey IsDirectDeliveryChainCreationDeferred { get; private set; }
-
-
     }
 }

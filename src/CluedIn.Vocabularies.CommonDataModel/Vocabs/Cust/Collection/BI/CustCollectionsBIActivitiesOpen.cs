@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustCollectionsBIActivitiesOpenVocabulary()
         {
-            VocabularyName = "CustCollectionsBIActivitiesOpen";
+            VocabularyName = "Cust Collections BI Activities Open";
             KeyPrefix = "commonDataModel.custcollectionsbiactivitiesopen";
             KeySeparator = ".";
             Grouping = "/CustCollectionsBIActivitiesOpen";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TypeId = group.Add(new VocabularyKey(nameof(TypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StartDateTime = group.Add(new VocabularyKey(nameof(StartDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EndDateTime = group.Add(new VocabularyKey(nameof(EndDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ActivityNumber { get; private set; }
         public VocabularyKey AccountNum { get; private set; }
         public VocabularyKey Name { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TypeId { get; private set; }
         public VocabularyKey StartDateTime { get; private set; }
         public VocabularyKey EndDateTime { get; private set; }
-
-
     }
 }

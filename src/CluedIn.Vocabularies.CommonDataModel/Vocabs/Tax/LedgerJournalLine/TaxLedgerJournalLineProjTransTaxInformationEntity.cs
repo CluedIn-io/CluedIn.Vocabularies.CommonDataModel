@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxLedgerJournalLineProjTransTaxInformationEntityVocabulary()
         {
-            VocabularyName = "TaxLedgerJournalLineProjTransTaxInformationEntity";
+            VocabularyName = "Tax Ledger Journal Line Proj Trans Tax Information Entity";
             KeyPrefix = "commonDataModel.taxledgerjournallineprojtranstaxinformationentity";
             KeySeparator = ".";
             Grouping = "/TaxLedgerJournalLineProjTransTaxInformationEntity";
@@ -67,10 +67,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 VendorTaxInformation = group.Add(new VocabularyKey(nameof(VendorTaxInformation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 JournalBatchNumber = group.Add(new VocabularyKey(nameof(JournalBatchNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineNumber = group.Add(new VocabularyKey(nameof(LineNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BankLocation { get; private set; }
         public VocabularyKey BankTaxInformation { get; private set; }
         public VocabularyKey CompanyLocation { get; private set; }
@@ -125,7 +123,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey VendorTaxInformation { get; private set; }
         public VocabularyKey JournalBatchNumber { get; private set; }
         public VocabularyKey LineNumber { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FiscalDocumentTaxTransEntityVocabulary()
         {
-            VocabularyName = "FiscalDocumentTaxTransEntity";
+            VocabularyName = "Fiscal Document Tax Trans Entity";
             KeyPrefix = "commonDataModel.fiscaldocumenttaxtransentity";
             KeySeparator = ".";
             Grouping = "/FiscalDocumentTaxTransEntity";
@@ -40,10 +40,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TaxSubstitutionMarkupPct = group.Add(new VocabularyKey(nameof(TaxSubstitutionMarkupPct), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxValue = group.Add(new VocabularyKey(nameof(TaxValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Type = group.Add(new VocabularyKey(nameof(Type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FiscalDocumentDirection { get; private set; }
         public VocabularyKey FiscalDocumentFiscalEstablishmentId { get; private set; }
         public VocabularyKey FiscalDocumentLine { get; private set; }
@@ -71,7 +69,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TaxSubstitutionMarkupPct { get; private set; }
         public VocabularyKey TaxValue { get; private set; }
         public VocabularyKey Type { get; private set; }
-
-
     }
 }

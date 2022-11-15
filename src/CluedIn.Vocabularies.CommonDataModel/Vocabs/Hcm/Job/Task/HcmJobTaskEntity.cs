@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmJobTaskEntityVocabulary()
         {
-            VocabularyName = "HcmJobTaskEntity";
+            VocabularyName = "Hcm Job Task Entity";
             KeyPrefix = "commonDataModel.hcmjobtaskentity";
             KeySeparator = ".";
             Grouping = "/HcmJobTaskEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 JobTaskId = group.Add(new VocabularyKey(nameof(JobTaskId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Note = group.Add(new VocabularyKey(nameof(Note), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey JobTaskId { get; private set; }
         public VocabularyKey Note { get; private set; }
-
-
     }
 }

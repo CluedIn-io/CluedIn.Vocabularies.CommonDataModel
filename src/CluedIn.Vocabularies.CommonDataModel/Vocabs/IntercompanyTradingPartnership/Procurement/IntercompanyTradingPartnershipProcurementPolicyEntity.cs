@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public IntercompanyTradingPartnershipProcurementPolicyEntityVocabulary()
         {
-            VocabularyName = "IntercompanyTradingPartnershipProcurementPolicyEntity";
+            VocabularyName = "Intercompany Trading Partnership Procurement Policy Entity";
             KeyPrefix = "commonDataModel.intercompanytradingpartnershipprocurementpolicyentity";
             KeySeparator = ".";
             Grouping = "/IntercompanyTradingPartnershipProcurementPolicyEntity";
@@ -37,10 +37,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsIntercompanyPurchaseAgreementValidityPeriodChangeAllowed = group.Add(new VocabularyKey(nameof(IsIntercompanyPurchaseAgreementValidityPeriodChangeAllowed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsIntercompanyPurchaseAgreementPriceChangeAllowed = group.Add(new VocabularyKey(nameof(IsIntercompanyPurchaseAgreementPriceChangeAllowed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsIntercompanyPurchaseAgreementDiscountChangeAllowed = group.Add(new VocabularyKey(nameof(IsIntercompanyPurchaseAgreementDiscountChangeAllowed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey VendorLegalEntityId { get; private set; }
         public VocabularyKey VendorAccountNumber { get; private set; }
         public VocabularyKey IsDirectDeliveryOriginalSalesOrderPackingSlipAutomaticallyPrinted { get; private set; }
@@ -65,7 +63,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsIntercompanyPurchaseAgreementValidityPeriodChangeAllowed { get; private set; }
         public VocabularyKey IsIntercompanyPurchaseAgreementPriceChangeAllowed { get; private set; }
         public VocabularyKey IsIntercompanyPurchaseAgreementDiscountChangeAllowed { get; private set; }
-
-
     }
 }

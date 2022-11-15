@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxRegistrationOnCustomerEntityVocabulary()
         {
-            VocabularyName = "TaxRegistrationOnCustomerEntity";
+            VocabularyName = "Tax Registration On Customer Entity";
             KeyPrefix = "commonDataModel.taxregistrationoncustomerentity";
             KeySeparator = ".";
             Grouping = "/TaxRegistrationOnCustomerEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Section = group.Add(new VocabularyKey(nameof(Section), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BranchNumber = group.Add(new VocabularyKey(nameof(BranchNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxNatureOfAddress = group.Add(new VocabularyKey(nameof(TaxNatureOfAddress), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountNum { get; private set; }
         public VocabularyKey TaxRegstrationType { get; private set; }
         public VocabularyKey CountryRegionId { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Section { get; private set; }
         public VocabularyKey BranchNumber { get; private set; }
         public VocabularyKey TaxNatureOfAddress { get; private set; }
-
-
     }
 }

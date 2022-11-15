@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxGSTReportConfigurationEntityVocabulary()
         {
-            VocabularyName = "TaxGSTReportConfigurationEntity";
+            VocabularyName = "Tax GST Report Configuration Entity";
             KeyPrefix = "commonDataModel.taxgstreportconfigurationentity";
             KeySeparator = ".";
             Grouping = "/TaxGSTReportConfigurationEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TypeOfTransaction = group.Add(new VocabularyKey(nameof(TypeOfTransaction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReportConfigurationName = group.Add(new VocabularyKey(nameof(ReportConfigurationName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReportConfigurationDescription = group.Add(new VocabularyKey(nameof(ReportConfigurationDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ReportingCodesForGSTAmount { get; private set; }
         public VocabularyKey ReportingCodesForTransactionAmount { get; private set; }
         public VocabularyKey TypeOfTransaction { get; private set; }
         public VocabularyKey ReportConfigurationName { get; private set; }
         public VocabularyKey ReportConfigurationDescription { get; private set; }
-
-
     }
 }

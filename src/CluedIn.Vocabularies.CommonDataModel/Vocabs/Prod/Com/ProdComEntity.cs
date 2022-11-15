@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProdComEntityVocabulary()
         {
-            VocabularyName = "ProdComEntity";
+            VocabularyName = "Prod Com Entity";
             KeyPrefix = "commonDataModel.prodcomentity";
             KeySeparator = ".";
             Grouping = "/ProdComEntity";
@@ -49,10 +49,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 UnitId = group.Add(new VocabularyKey(nameof(UnitId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesQty = group.Add(new VocabularyKey(nameof(SalesQty), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesPrice = group.Add(new VocabularyKey(nameof(SalesPrice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Period { get; private set; }
         public VocabularyKey StartDate { get; private set; }
         public VocabularyKey EndDate { get; private set; }
@@ -89,7 +87,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey UnitId { get; private set; }
         public VocabularyKey SalesQty { get; private set; }
         public VocabularyKey SalesPrice { get; private set; }
-
-
     }
 }

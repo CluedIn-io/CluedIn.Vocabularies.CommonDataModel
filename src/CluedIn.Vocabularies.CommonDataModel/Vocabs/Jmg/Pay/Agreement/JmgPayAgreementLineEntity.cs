@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgPayAgreementLineEntityVocabulary()
         {
-            VocabularyName = "JmgPayAgreementLineEntity";
+            VocabularyName = "Jmg Pay Agreement Line Entity";
             KeyPrefix = "commonDataModel.jmgpayagreementlineentity";
             KeySeparator = ".";
             Grouping = "/JmgPayAgreementLineEntity";
@@ -50,10 +50,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ToAgreementDate = group.Add(new VocabularyKey(nameof(ToAgreementDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsPayQuantityFixed = group.Add(new VocabularyKey(nameof(IsPayQuantityFixed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsPaidTimeRequired = group.Add(new VocabularyKey(nameof(IsPaidTimeRequired), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AbsenceIndirectTimeAndAttendanceActivityId { get; private set; }
         public VocabularyKey ProjectActivityNumber { get; private set; }
         public VocabularyKey WillCancelPayment { get; private set; }
@@ -91,7 +89,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ToAgreementDate { get; private set; }
         public VocabularyKey IsPayQuantityFixed { get; private set; }
         public VocabularyKey IsPaidTimeRequired { get; private set; }
-
-
     }
 }

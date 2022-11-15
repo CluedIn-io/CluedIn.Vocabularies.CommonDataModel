@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvExpenseReportFieldEntityVocabulary()
         {
-            VocabularyName = "TrvExpenseReportFieldEntity";
+            VocabularyName = "Trv Expense Report Field Entity";
             KeyPrefix = "commonDataModel.trvexpensereportfieldentity";
             KeySeparator = ".";
             Grouping = "/TrvExpenseReportFieldEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LegalEntityId = group.Add(new VocabularyKey(nameof(LegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TableName = group.Add(new VocabularyKey(nameof(TableName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FieldName = group.Add(new VocabularyKey(nameof(FieldName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LegalEntity { get; private set; }
         public VocabularyKey MethodName { get; private set; }
         public VocabularyKey RefFieldId { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LegalEntityId { get; private set; }
         public VocabularyKey TableName { get; private set; }
         public VocabularyKey FieldName { get; private set; }
-
-
     }
 }

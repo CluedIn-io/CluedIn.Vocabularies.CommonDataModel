@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendAdvancedInvoiceEntityVocabulary()
         {
-            VocabularyName = "VendAdvancedInvoiceEntity";
+            VocabularyName = "Vend Advanced Invoice Entity";
             KeyPrefix = "commonDataModel.vendadvancedinvoiceentity";
             KeySeparator = ".";
             Grouping = "/VendAdvancedInvoiceEntity";
@@ -72,10 +72,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DeliveryValidTo = group.Add(new VocabularyKey(nameof(DeliveryValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DeliveryPostBox = group.Add(new VocabularyKey(nameof(DeliveryPostBox), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ComputedLineNum = group.Add(new VocabularyKey(nameof(ComputedLineNum), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey VendAccount { get; private set; }
         public VocabularyKey InvoiceAccount { get; private set; }
         public VocabularyKey Status { get; private set; }
@@ -135,7 +133,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DeliveryValidTo { get; private set; }
         public VocabularyKey DeliveryPostBox { get; private set; }
         public VocabularyKey ComputedLineNum { get; private set; }
-
-
     }
 }

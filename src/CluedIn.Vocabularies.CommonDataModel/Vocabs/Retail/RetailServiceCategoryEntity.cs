@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailServiceCategoryEntityVocabulary()
         {
-            VocabularyName = "RetailServiceCategoryEntity";
+            VocabularyName = "Retail Service Category Entity";
             KeyPrefix = "commonDataModel.retailservicecategoryentity";
             KeySeparator = ".";
             Grouping = "/RetailServiceCategoryEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ReplenishmentWarehouse = group.Add(new VocabularyKey(nameof(ReplenishmentWarehouse), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReplenishmentRule = group.Add(new VocabularyKey(nameof(ReplenishmentRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ServiceCategory = group.Add(new VocabularyKey(nameof(ServiceCategory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SalesDate { get; private set; }
         public VocabularyKey Calendar { get; private set; }
         public VocabularyKey CrossDockingWarehouse { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ReplenishmentWarehouse { get; private set; }
         public VocabularyKey ReplenishmentRule { get; private set; }
         public VocabularyKey ServiceCategory { get; private set; }
-
-
     }
 }

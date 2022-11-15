@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseClusterProfileSortingEntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseClusterProfileSortingEntity";
+            VocabularyName = "WHS Warehouse Cluster Profile Sorting Entity";
             KeyPrefix = "commonDataModel.whswarehouseclusterprofilesortingentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseClusterProfileSortingEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ClusterProfileId = group.Add(new VocabularyKey(nameof(ClusterProfileId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WarehouseWorkLineFieldName = group.Add(new VocabularyKey(nameof(WarehouseWorkLineFieldName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ClusterSortingSequence = group.Add(new VocabularyKey(nameof(ClusterSortingSequence), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ClusterSortingMethod { get; private set; }
         public VocabularyKey ClusterProfileId { get; private set; }
         public VocabularyKey WarehouseWorkLineFieldName { get; private set; }
         public VocabularyKey ClusterSortingSequence { get; private set; }
-
-
     }
 }

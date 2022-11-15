@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CredManCreditLimitRuleLineEntityVocabulary()
         {
-            VocabularyName = "CredManCreditLimitRuleLineEntity";
+            VocabularyName = "Cred Man Credit Limit Rule Line Entity";
             KeyPrefix = "commonDataModel.credmancreditlimitrulelineentity";
             KeySeparator = ".";
             Grouping = "/CredManCreditLimitRuleLineEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RiskScoreGroupId = group.Add(new VocabularyKey(nameof(RiskScoreGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RuleCurrencyCode = group.Add(new VocabularyKey(nameof(RuleCurrencyCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RuleRiskGroupId = group.Add(new VocabularyKey(nameof(RuleRiskGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ComparisonOperator { get; private set; }
         public VocabularyKey ComparisonValue { get; private set; }
         public VocabularyKey CreditMax { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RiskScoreGroupId { get; private set; }
         public VocabularyKey RuleCurrencyCode { get; private set; }
         public VocabularyKey RuleRiskGroupId { get; private set; }
-
-
     }
 }

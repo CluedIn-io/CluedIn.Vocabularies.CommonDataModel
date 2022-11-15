@@ -6,54 +6,50 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LoanApplicationCollateralValuationVocabulary()
         {
-            VocabularyName = "LoanApplicationCollateralValuation";
+            VocabularyName = "Loan Application Collateral Valuation";
             KeyPrefix = "commonDataModel.loanapplicationcollateralvaluation";
             KeySeparator = ".";
             Grouping = "/LoanApplicationCollateralValuation";
 
             AddGroup("LoanApplicationCollateralValuation Details", group =>
             {
-                loanApplicationCollateralValuationId = group.Add(new VocabularyKey(nameof(loanApplicationCollateralValuationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                modifiedOn = group.Add(new VocabularyKey(nameof(modifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statecode = group.Add(new VocabularyKey(nameof(statecode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statuscode = group.Add(new VocabularyKey(nameof(statuscode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                importSequenceNumber = group.Add(new VocabularyKey(nameof(importSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                overriddenCreatedOn = group.Add(new VocabularyKey(nameof(overriddenCreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                timeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(timeZoneRuleVersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LoanApplicationCollateralValuationId = group.Add(new VocabularyKey(nameof(LoanApplicationCollateralValuationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Statecode = group.Add(new VocabularyKey(nameof(Statecode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Statuscode = group.Add(new VocabularyKey(nameof(Statuscode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                assessorName = group.Add(new VocabularyKey(nameof(assessorName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                status = group.Add(new VocabularyKey(nameof(status), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                type = group.Add(new VocabularyKey(nameof(type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                valuation = group.Add(new VocabularyKey(nameof(valuation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                valuation_Base = group.Add(new VocabularyKey(nameof(valuation_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                valuationDate = group.Add(new VocabularyKey(nameof(valuationDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                valuationInstructionDate = group.Add(new VocabularyKey(nameof(valuationInstructionDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                valuationReceivedDate = group.Add(new VocabularyKey(nameof(valuationReceivedDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AssessorName = group.Add(new VocabularyKey(nameof(AssessorName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Status = group.Add(new VocabularyKey(nameof(Status), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Type = group.Add(new VocabularyKey(nameof(Type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Valuation = group.Add(new VocabularyKey(nameof(Valuation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Valuation_Base = group.Add(new VocabularyKey(nameof(Valuation_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ValuationDate = group.Add(new VocabularyKey(nameof(ValuationDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ValuationInstructionDate = group.Add(new VocabularyKey(nameof(ValuationInstructionDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ValuationReceivedDate = group.Add(new VocabularyKey(nameof(ValuationReceivedDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey loanApplicationCollateralValuationId { get; private set; }
-        public VocabularyKey createdOn { get; private set; }
-        public VocabularyKey modifiedOn { get; private set; }
-        public VocabularyKey statecode { get; private set; }
-        public VocabularyKey statuscode { get; private set; }
-        public VocabularyKey importSequenceNumber { get; private set; }
-        public VocabularyKey overriddenCreatedOn { get; private set; }
-        public VocabularyKey timeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey LoanApplicationCollateralValuationId { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Statecode { get; private set; }
+        public VocabularyKey Statuscode { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey assessorName { get; private set; }
-        public VocabularyKey status { get; private set; }
-        public VocabularyKey type { get; private set; }
-        public VocabularyKey valuation { get; private set; }
-        public VocabularyKey valuation_Base { get; private set; }
-        public VocabularyKey valuationDate { get; private set; }
-        public VocabularyKey valuationInstructionDate { get; private set; }
-        public VocabularyKey valuationReceivedDate { get; private set; }
-
-
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey AssessorName { get; private set; }
+        public VocabularyKey Status { get; private set; }
+        public VocabularyKey Type { get; private set; }
+        public VocabularyKey Valuation { get; private set; }
+        public VocabularyKey Valuation_Base { get; private set; }
+        public VocabularyKey ValuationDate { get; private set; }
+        public VocabularyKey ValuationInstructionDate { get; private set; }
+        public VocabularyKey ValuationReceivedDate { get; private set; }
     }
 }

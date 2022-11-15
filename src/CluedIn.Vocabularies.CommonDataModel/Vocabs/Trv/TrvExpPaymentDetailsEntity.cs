@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvExpPaymentDetailsEntityVocabulary()
         {
-            VocabularyName = "TrvExpPaymentDetailsEntity";
+            VocabularyName = "Trv Exp Payment Details Entity";
             KeyPrefix = "commonDataModel.trvexppaymentdetailsentity";
             KeySeparator = ".";
             Grouping = "/TrvExpPaymentDetailsEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ExpNumber = group.Add(new VocabularyKey(nameof(ExpNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TrvExpTable_LegalEntity = group.Add(new VocabularyKey(nameof(TrvExpTable_LegalEntity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExpTransNumber = group.Add(new VocabularyKey(nameof(ExpTransNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InvoiceId { get; private set; }
         public VocabularyKey TrvExpTable { get; private set; }
         public VocabularyKey TrvExpTrans { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ExpNumber { get; private set; }
         public VocabularyKey TrvExpTable_LegalEntity { get; private set; }
         public VocabularyKey ExpTransNumber { get; private set; }
-
-
     }
 }

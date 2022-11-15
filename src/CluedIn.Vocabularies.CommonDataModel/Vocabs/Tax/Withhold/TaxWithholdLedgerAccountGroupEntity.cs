@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxWithholdLedgerAccountGroupEntityVocabulary()
         {
-            VocabularyName = "TaxWithholdLedgerAccountGroupEntity";
+            VocabularyName = "Tax Withhold Ledger Account Group Entity";
             KeyPrefix = "commonDataModel.taxwithholdledgeraccountgroupentity";
             KeySeparator = ".";
             Grouping = "/TaxWithholdLedgerAccountGroupEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TaxWithhodlSettlementLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(TaxWithhodlSettlementLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxWithholdLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(TaxWithholdLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxWithholdOffsetLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(TaxWithholdOffsetLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ExpenseLedgerDimension { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey TaxWithhodlSettlementLedgerDimension { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TaxWithhodlSettlementLedgerDimensionDisplayValue { get; private set; }
         public VocabularyKey TaxWithholdLedgerDimensionDisplayValue { get; private set; }
         public VocabularyKey TaxWithholdOffsetLedgerDimensionDisplayValue { get; private set; }
-
-
     }
 }

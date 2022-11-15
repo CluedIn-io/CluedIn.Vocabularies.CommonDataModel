@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RDeferralsGroupEntityVocabulary()
         {
-            VocabularyName = "RDeferralsGroupEntity";
+            VocabularyName = "R Deferrals Group Entity";
             KeyPrefix = "commonDataModel.rdeferralsgroupentity";
             KeySeparator = ".";
             Grouping = "/RDeferralsGroupEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WritingOffMethod = group.Add(new VocabularyKey(nameof(WritingOffMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VATOffsetMethodForDeferrals = group.Add(new VocabularyKey(nameof(VATOffsetMethodForDeferrals), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DimensionDisplayValue = group.Add(new VocabularyKey(nameof(DimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Dimension { get; private set; }
         public VocabularyKey ModelNumber { get; private set; }
         public VocabularyKey DeferralsGroup { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WritingOffMethod { get; private set; }
         public VocabularyKey VATOffsetMethodForDeferrals { get; private set; }
         public VocabularyKey DimensionDisplayValue { get; private set; }
-
-
     }
 }

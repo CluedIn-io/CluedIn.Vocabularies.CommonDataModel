@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailIncomeExpenseAccountEntityVocabulary()
         {
-            VocabularyName = "RetailIncomeExpenseAccountEntity";
+            VocabularyName = "Retail Income Expense Account Entity";
             KeyPrefix = "commonDataModel.retailincomeexpenseaccountentity";
             KeySeparator = ".";
             Grouping = "/RetailIncomeExpenseAccountEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SlipText2 = group.Add(new VocabularyKey(nameof(SlipText2), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StoreNumber = group.Add(new VocabularyKey(nameof(StoreNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LedgerAccountDisplayValue = group.Add(new VocabularyKey(nameof(LedgerAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountNumber { get; private set; }
         public VocabularyKey AccountType { get; private set; }
         public VocabularyKey LedgerAccount { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SlipText2 { get; private set; }
         public VocabularyKey StoreNumber { get; private set; }
         public VocabularyKey LedgerAccountDisplayValue { get; private set; }
-
-
     }
 }

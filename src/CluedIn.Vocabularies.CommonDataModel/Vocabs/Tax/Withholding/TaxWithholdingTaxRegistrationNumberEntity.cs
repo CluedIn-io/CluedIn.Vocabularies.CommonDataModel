@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxWithholdingTaxRegistrationNumberEntityVocabulary()
         {
-            VocabularyName = "TaxWithholdingTaxRegistrationNumberEntity";
+            VocabularyName = "Tax Withholding Tax Registration Number Entity";
             KeyPrefix = "commonDataModel.taxwithholdingtaxregistrationnumberentity";
             KeySeparator = ".";
             Grouping = "/TaxWithholdingTaxRegistrationNumberEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TDSAssessingofficer = group.Add(new VocabularyKey(nameof(TDSAssessingofficer), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TDSCircleNumber = group.Add(new VocabularyKey(nameof(TDSCircleNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TDSWardNumber = group.Add(new VocabularyKey(nameof(TDSWardNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Shared { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey RefCompanyId { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TDSAssessingofficer { get; private set; }
         public VocabularyKey TDSCircleNumber { get; private set; }
         public VocabularyKey TDSWardNumber { get; private set; }
-
-
     }
 }

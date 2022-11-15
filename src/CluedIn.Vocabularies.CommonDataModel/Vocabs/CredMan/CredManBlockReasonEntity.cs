@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CredManBlockReasonEntityVocabulary()
         {
-            VocabularyName = "CredManBlockReasonEntity";
+            VocabularyName = "Cred Man Block Reason Entity";
             KeyPrefix = "commonDataModel.credmanblockreasonentity";
             KeySeparator = ".";
             Grouping = "/CredManBlockReasonEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RefRecId = group.Add(new VocabularyKey(nameof(RefRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CredManId = group.Add(new VocabularyKey(nameof(CredManId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Company = group.Add(new VocabularyKey(nameof(Company), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Active { get; private set; }
         public VocabularyKey Reason { get; private set; }
         public VocabularyKey RefRecId { get; private set; }
         public VocabularyKey CredManId { get; private set; }
         public VocabularyKey Company { get; private set; }
-
-
     }
 }

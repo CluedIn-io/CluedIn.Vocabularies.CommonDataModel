@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PriceDiscMultilineDiscountVendorGroupEntityVocabulary()
         {
-            VocabularyName = "PriceDiscMultilineDiscountVendorGroupEntity";
+            VocabularyName = "Price Disc Multiline Discount Vendor Group Entity";
             KeyPrefix = "commonDataModel.pricediscmultilinediscountvendorgroupentity";
             KeySeparator = ".";
             Grouping = "/PriceDiscMultilineDiscountVendorGroupEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 GroupCode = group.Add(new VocabularyKey(nameof(GroupCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GroupName = group.Add(new VocabularyKey(nameof(GroupName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey GroupCode { get; private set; }
         public VocabularyKey GroupName { get; private set; }
-
-
     }
 }

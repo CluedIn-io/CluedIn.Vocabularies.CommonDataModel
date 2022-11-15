@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RTSLDimensionRuleEntityVocabulary()
         {
-            VocabularyName = "RTSLDimensionRuleEntity";
+            VocabularyName = "RTSL Dimension Rule Entity";
             KeyPrefix = "commonDataModel.rtsldimensionruleentity";
             KeySeparator = ".";
             Grouping = "/RTSLDimensionRuleEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ToDimensionAttribute_Type = group.Add(new VocabularyKey(nameof(ToDimensionAttribute_Type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RuleGroup = group.Add(new VocabularyKey(nameof(RuleGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DimesionRuleGroup = group.Add(new VocabularyKey(nameof(DimesionRuleGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ConversionMethod { get; private set; }
         public VocabularyKey Dimension { get; private set; }
         public VocabularyKey FromDimensionCode { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ToDimensionAttribute_Type { get; private set; }
         public VocabularyKey RuleGroup { get; private set; }
         public VocabularyKey DimesionRuleGroup { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollWorkCycleEntityVocabulary()
         {
-            VocabularyName = "PayrollWorkCycleEntity";
+            VocabularyName = "Payroll Work Cycle Entity";
             KeyPrefix = "commonDataModel.payrollworkcycleentity";
             KeySeparator = ".";
             Grouping = "/PayrollWorkCycleEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DaysPerPeriod = group.Add(new VocabularyKey(nameof(DaysPerPeriod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkCycleId = group.Add(new VocabularyKey(nameof(WorkCycleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DaysPerPeriod { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey WorkCycleId { get; private set; }
-
-
     }
 }

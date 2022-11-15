@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjCDSTransactionRelationshipImportEntityVocabulary()
         {
-            VocabularyName = "ProjCDSTransactionRelationshipImportEntity";
+            VocabularyName = "Proj CDS Transaction Relationship Import Entity";
             KeyPrefix = "commonDataModel.projcdstransactionrelationshipimportentity";
             KeySeparator = ".";
             Grouping = "/ProjCDSTransactionRelationshipImportEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Transaction2Id = group.Add(new VocabularyKey(nameof(Transaction2Id), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Transaction2Role = group.Add(new VocabularyKey(nameof(Transaction2Role), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Transaction2Type = group.Add(new VocabularyKey(nameof(Transaction2Type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ConnectionId { get; private set; }
         public VocabularyKey Transaction1Id { get; private set; }
         public VocabularyKey Transaction1Role { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Transaction2Id { get; private set; }
         public VocabularyKey Transaction2Role { get; private set; }
         public VocabularyKey Transaction2Type { get; private set; }
-
-
     }
 }

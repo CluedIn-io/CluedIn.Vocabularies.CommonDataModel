@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventPackingMaterialAllocationLineV2EntityVocabulary()
         {
-            VocabularyName = "InventPackingMaterialAllocationLineV2Entity";
+            VocabularyName = "Invent Packing Material Allocation Line V2 Entity";
             KeyPrefix = "commonDataModel.inventpackingmaterialallocationlinev2entity";
             KeySeparator = ".";
             Grouping = "/InventPackingMaterialAllocationLineV2Entity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ItemNumber = group.Add(new VocabularyKey(nameof(ItemNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PackingMaterialGroupId = group.Add(new VocabularyKey(nameof(PackingMaterialGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PackingUnitSymbol = group.Add(new VocabularyKey(nameof(PackingUnitSymbol), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PackingUnitRecID { get; private set; }
         public VocabularyKey PackingUnitWeight { get; private set; }
         public VocabularyKey PackingMaterialCode { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ItemNumber { get; private set; }
         public VocabularyKey PackingMaterialGroupId { get; private set; }
         public VocabularyKey PackingUnitSymbol { get; private set; }
-
-
     }
 }

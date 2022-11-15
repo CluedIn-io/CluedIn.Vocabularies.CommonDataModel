@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailLoyaltyCardRewardPointNonTransactionalActivityEntityVocabulary()
         {
-            VocabularyName = "RetailLoyaltyCardRewardPointNonTransactionalActivityEntity";
+            VocabularyName = "Retail Loyalty Card Reward Point Non Transactional Activity Entity";
             KeyPrefix = "commonDataModel.retailloyaltycardrewardpointnontransactionalactivityentity";
             KeySeparator = ".";
             Grouping = "/RetailLoyaltyCardRewardPointNonTransactionalActivityEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RetailAffiliationId = group.Add(new VocabularyKey(nameof(RetailAffiliationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Status = group.Add(new VocabularyKey(nameof(Status), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ErrorLogs = group.Add(new VocabularyKey(nameof(ErrorLogs), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CardNumber { get; private set; }
         public VocabularyKey NonTransactionalActivityId { get; private set; }
         public VocabularyKey LoyaltyOtherActivityTypeId { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RetailAffiliationId { get; private set; }
         public VocabularyKey Status { get; private set; }
         public VocabularyKey ErrorLogs { get; private set; }
-
-
     }
 }

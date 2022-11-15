@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPurchaseAgreementHeaderV2EntityVocabulary()
         {
-            VocabularyName = "PurchPurchaseAgreementHeaderV2Entity";
+            VocabularyName = "Purch Purchase Agreement Header V2 Entity";
             KeyPrefix = "commonDataModel.purchpurchaseagreementheaderv2entity";
             KeySeparator = ".";
             Grouping = "/PurchPurchaseAgreementHeaderV2Entity";
@@ -117,10 +117,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PrimaryResponsibleWorkerName = group.Add(new VocabularyKey(nameof(PrimaryResponsibleWorkerName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SecondaryResponsibleWorkerName = group.Add(new VocabularyKey(nameof(SecondaryResponsibleWorkerName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MatchingPolicy = group.Add(new VocabularyKey(nameof(MatchingPolicy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BuyingLegalEntityRecId { get; private set; }
         public VocabularyKey BuyingLegalEntityId { get; private set; }
         public VocabularyKey PurchaseAgreementId { get; private set; }
@@ -225,7 +223,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PrimaryResponsibleWorkerName { get; private set; }
         public VocabularyKey SecondaryResponsibleWorkerName { get; private set; }
         public VocabularyKey MatchingPolicy { get; private set; }
-
-
     }
 }

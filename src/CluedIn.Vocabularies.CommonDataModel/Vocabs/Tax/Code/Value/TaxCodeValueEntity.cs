@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxCodeValueEntityVocabulary()
         {
-            VocabularyName = "TaxCodeValueEntity";
+            VocabularyName = "Tax Code Value Entity";
             KeyPrefix = "commonDataModel.taxcodevalueentity";
             KeySeparator = ".";
             Grouping = "/TaxCodeValueEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ReductionPercentage = group.Add(new VocabularyKey(nameof(ReductionPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SubstitutionMarkupPercentage = group.Add(new VocabularyKey(nameof(SubstitutionMarkupPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Duty = group.Add(new VocabularyKey(nameof(Duty), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TaxCodeId { get; private set; }
         public VocabularyKey FromDate { get; private set; }
         public VocabularyKey MaximumLimit { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ReductionPercentage { get; private set; }
         public VocabularyKey SubstitutionMarkupPercentage { get; private set; }
         public VocabularyKey Duty { get; private set; }
-
-
     }
 }

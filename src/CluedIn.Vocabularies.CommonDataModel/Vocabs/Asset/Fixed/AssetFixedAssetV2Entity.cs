@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetFixedAssetV2EntityVocabulary()
         {
-            VocabularyName = "AssetFixedAssetV2Entity";
+            VocabularyName = "Asset Fixed Asset V2 Entity";
             KeyPrefix = "commonDataModel.assetfixedassetv2entity";
             KeySeparator = ".";
             Grouping = "/AssetFixedAssetV2Entity";
@@ -107,10 +107,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AssetTypeOfMajorType = group.Add(new VocabularyKey(nameof(AssetTypeOfMajorType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ContactName = group.Add(new VocabularyKey(nameof(ContactName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ResponsibleName = group.Add(new VocabularyKey(nameof(ResponsibleName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Agent { get; private set; }
         public VocabularyKey AssetActivityCode { get; private set; }
         public VocabularyKey ActivityCode { get; private set; }
@@ -205,7 +203,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AssetTypeOfMajorType { get; private set; }
         public VocabularyKey ContactName { get; private set; }
         public VocabularyKey ResponsibleName { get; private set; }
-
-
     }
 }

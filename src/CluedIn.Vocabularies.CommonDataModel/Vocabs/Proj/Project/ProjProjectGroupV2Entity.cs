@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjProjectGroupV2EntityVocabulary()
         {
-            VocabularyName = "ProjProjectGroupV2Entity";
+            VocabularyName = "Proj Project Group V2 Entity";
             KeyPrefix = "commonDataModel.projprojectgroupv2entity";
             KeySeparator = ".";
             Grouping = "/ProjProjectGroupV2Entity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LedgerPostingSearchPriorityType = group.Add(new VocabularyKey(nameof(LedgerPostingSearchPriorityType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GroupId = group.Add(new VocabularyKey(nameof(GroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProjectLinePropertyId = group.Add(new VocabularyKey(nameof(ProjectLinePropertyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WillCostBeVerifiedAgainstRemainingForecast { get; private set; }
         public VocabularyKey GroupName { get; private set; }
         public VocabularyKey LinePropertySearchPriorityType { get; private set; }
         public VocabularyKey LedgerPostingSearchPriorityType { get; private set; }
         public VocabularyKey GroupId { get; private set; }
         public VocabularyKey ProjectLinePropertyId { get; private set; }
-
-
     }
 }

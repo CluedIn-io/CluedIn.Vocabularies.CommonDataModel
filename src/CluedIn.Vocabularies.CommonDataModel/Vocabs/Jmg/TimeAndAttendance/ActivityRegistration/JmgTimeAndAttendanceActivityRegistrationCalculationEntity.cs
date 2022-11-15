@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgTimeAndAttendanceActivityRegistrationCalculationEntityVocabulary()
         {
-            VocabularyName = "JmgTimeAndAttendanceActivityRegistrationCalculationEntity";
+            VocabularyName = "Jmg Time And Attendance Activity Registration Calculation Entity";
             KeyPrefix = "commonDataModel.jmgtimeandattendanceactivityregistrationcalculationentity";
             KeySeparator = ".";
             Grouping = "/JmgTimeAndAttendanceActivityRegistrationCalculationEntity";
@@ -62,10 +62,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CalculatorPersonnelNumber = group.Add(new VocabularyKey(nameof(CalculatorPersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransferrerPeronnelNumber = group.Add(new VocabularyKey(nameof(TransferrerPeronnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultDimensionDisplayValue = group.Add(new VocabularyKey(nameof(DefaultDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DefaultDimension { get; private set; }
         public VocabularyKey ErrorLogText { get; private set; }
         public VocabularyKey HasErrors { get; private set; }
@@ -115,7 +113,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CalculatorPersonnelNumber { get; private set; }
         public VocabularyKey TransferrerPeronnelNumber { get; private set; }
         public VocabularyKey DefaultDimensionDisplayValue { get; private set; }
-
-
     }
 }

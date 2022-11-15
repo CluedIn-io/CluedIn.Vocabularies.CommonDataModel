@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgWorkOrderDocumentGroupMemberEntityVocabulary()
         {
-            VocabularyName = "JmgWorkOrderDocumentGroupMemberEntity";
+            VocabularyName = "Jmg Work Order Document Group Member Entity";
             KeyPrefix = "commonDataModel.jmgworkorderdocumentgroupmemberentity";
             KeySeparator = ".";
             Grouping = "/JmgWorkOrderDocumentGroupMemberEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Worker = group.Add(new VocabularyKey(nameof(Worker), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkOrderDocumentGroupId = group.Add(new VocabularyKey(nameof(WorkOrderDocumentGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NotifiedWorkerPersonnelNumber = group.Add(new VocabularyKey(nameof(NotifiedWorkerPersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WorkOrderDocumentGroupRecId { get; private set; }
         public VocabularyKey Worker { get; private set; }
         public VocabularyKey WorkOrderDocumentGroupId { get; private set; }
         public VocabularyKey NotifiedWorkerPersonnelNumber { get; private set; }
-
-
     }
 }

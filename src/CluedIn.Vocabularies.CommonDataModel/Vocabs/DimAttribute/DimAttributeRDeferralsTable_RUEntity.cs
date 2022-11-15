@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DimAttributeRDeferralsTable_RUEntityVocabulary()
         {
-            VocabularyName = "DimAttributeRDeferralsTable_RUEntity";
+            VocabularyName = "Dim Attribute R Deferrals Table _RU Entity";
             KeyPrefix = "commonDataModel.dimattributerdeferralstable_ruentity";
             KeySeparator = ".";
             Grouping = "/DimAttributeRDeferralsTable_RUEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 Value = group.Add(new VocabularyKey(nameof(Value), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Value { get; private set; }
         public VocabularyKey Name { get; private set; }
-
-
     }
 }

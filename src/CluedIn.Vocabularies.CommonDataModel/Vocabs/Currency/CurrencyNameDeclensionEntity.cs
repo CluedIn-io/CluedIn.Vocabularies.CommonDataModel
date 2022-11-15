@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CurrencyNameDeclensionEntityVocabulary()
         {
-            VocabularyName = "CurrencyNameDeclensionEntity";
+            VocabularyName = "Currency Name Declension Entity";
             KeyPrefix = "commonDataModel.currencynamedeclensionentity";
             KeySeparator = ".";
             Grouping = "/CurrencyNameDeclensionEntity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ShortName = group.Add(new VocabularyKey(nameof(ShortName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ShortNamePenny = group.Add(new VocabularyKey(nameof(ShortNamePenny), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Gender = group.Add(new VocabularyKey(nameof(Gender), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CurrencyCode { get; private set; }
         public VocabularyKey CurrencyPluralNominative { get; private set; }
         public VocabularyKey CurrencyPluralNominativePenny { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ShortName { get; private set; }
         public VocabularyKey ShortNamePenny { get; private set; }
         public VocabularyKey Gender { get; private set; }
-
-
     }
 }

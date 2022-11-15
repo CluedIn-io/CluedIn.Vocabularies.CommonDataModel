@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendProspectiveVendorRegistrationProcurementCategoryEntityVocabulary()
         {
-            VocabularyName = "VendProspectiveVendorRegistrationProcurementCategoryEntity";
+            VocabularyName = "Vend Prospective Vendor Registration Procurement Category Entity";
             KeyPrefix = "commonDataModel.vendprospectivevendorregistrationprocurementcategoryentity";
             KeySeparator = ".";
             Grouping = "/VendProspectiveVendorRegistrationProcurementCategoryEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CategoryName = group.Add(new VocabularyKey(nameof(CategoryName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorRegistrationId = group.Add(new VocabularyKey(nameof(VendorRegistrationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CategoryHierarchyName = group.Add(new VocabularyKey(nameof(CategoryHierarchyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CategoryStatus { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey ValidTo { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CategoryName { get; private set; }
         public VocabularyKey VendorRegistrationId { get; private set; }
         public VocabularyKey CategoryHierarchyName { get; private set; }
-
-
     }
 }

@@ -6,38 +6,34 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EventTeamMemberVocabulary()
         {
-            VocabularyName = "EventTeamMember";
+            VocabularyName = "Event Team Member";
             KeyPrefix = "commonDataModel.eventteammember";
             KeySeparator = ".";
             Grouping = "/EventTeamMember";
 
             AddGroup("EventTeamMember Details", group =>
             {
-                company = group.Add(new VocabularyKey(nameof(company), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                description = group.Add(new VocabularyKey(nameof(description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                email = group.Add(new VocabularyKey(nameof(email), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                eventTeamMemberId = group.Add(new VocabularyKey(nameof(eventTeamMemberId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                memberType = group.Add(new VocabularyKey(nameof(memberType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                phone = group.Add(new VocabularyKey(nameof(phone), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                role = group.Add(new VocabularyKey(nameof(role), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                Company = group.Add(new VocabularyKey(nameof(Company), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Email = group.Add(new VocabularyKey(nameof(Email), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EventTeamMemberId = group.Add(new VocabularyKey(nameof(EventTeamMemberId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MemberType = group.Add(new VocabularyKey(nameof(MemberType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Phone = group.Add(new VocabularyKey(nameof(Phone), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Role = group.Add(new VocabularyKey(nameof(Role), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey company { get; private set; }
-        public VocabularyKey description { get; private set; }
-        public VocabularyKey email { get; private set; }
-        public VocabularyKey eventTeamMemberId { get; private set; }
-        public VocabularyKey memberType { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey phone { get; private set; }
-        public VocabularyKey role { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey Company { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey Email { get; private set; }
+        public VocabularyKey EventTeamMemberId { get; private set; }
+        public VocabularyKey MemberType { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey Phone { get; private set; }
+        public VocabularyKey Role { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

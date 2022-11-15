@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetAllocationRuleEntityVocabulary()
         {
-            VocabularyName = "AssetAllocationRuleEntity";
+            VocabularyName = "Asset Allocation Rule Entity";
             KeyPrefix = "commonDataModel.assetallocationruleentity";
             KeySeparator = ".";
             Grouping = "/AssetAllocationRuleEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DimensionAttribute = group.Add(new VocabularyKey(nameof(DimensionAttribute), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RuleId = group.Add(new VocabularyKey(nameof(RuleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DimensionName = group.Add(new VocabularyKey(nameof(DimensionName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey DimensionAttribute { get; private set; }
         public VocabularyKey RuleId { get; private set; }
         public VocabularyKey DimensionName { get; private set; }
-
-
     }
 }

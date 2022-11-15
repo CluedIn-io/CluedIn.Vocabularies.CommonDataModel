@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetImpairmentIndicatorEntityVocabulary()
         {
-            VocabularyName = "AssetImpairmentIndicatorEntity";
+            VocabularyName = "Asset Impairment Indicator Entity";
             KeyPrefix = "commonDataModel.assetimpairmentindicatorentity";
             KeySeparator = ".";
             Grouping = "/AssetImpairmentIndicatorEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 UndiscountedCashFlow = group.Add(new VocabularyKey(nameof(UndiscountedCashFlow), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReferenceBook = group.Add(new VocabularyKey(nameof(ReferenceBook), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReferenceFixedAssetNumber = group.Add(new VocabularyKey(nameof(ReferenceFixedAssetNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey IsFinalized { get; private set; }
         public VocabularyKey AssessmentLevel { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey UndiscountedCashFlow { get; private set; }
         public VocabularyKey ReferenceBook { get; private set; }
         public VocabularyKey ReferenceFixedAssetNumber { get; private set; }
-
-
     }
 }

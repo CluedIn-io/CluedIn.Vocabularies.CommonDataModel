@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPurchaseRequisitionConsumptionControlWorkflowEntityVocabulary()
         {
-            VocabularyName = "PurchPurchaseRequisitionConsumptionControlWorkflowEntity";
+            VocabularyName = "Purch Purchase Requisition Consumption Control Workflow Entity";
             KeyPrefix = "commonDataModel.purchpurchaserequisitionconsumptioncontrolworkflowentity";
             KeySeparator = ".";
             Grouping = "/PurchPurchaseRequisitionConsumptionControlWorkflowEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WorkflowFieldName = group.Add(new VocabularyKey(nameof(WorkflowFieldName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkflowFieldExpressionId = group.Add(new VocabularyKey(nameof(WorkflowFieldExpressionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PurchasingPolicyName = group.Add(new VocabularyKey(nameof(PurchasingPolicyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FieldId { get; private set; }
         public VocabularyKey PurchReqControlRule { get; private set; }
         public VocabularyKey PurchaseRequisitionConsumptionControlPolicyRuleValidFrom { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WorkflowFieldName { get; private set; }
         public VocabularyKey WorkflowFieldExpressionId { get; private set; }
         public VocabularyKey PurchasingPolicyName { get; private set; }
-
-
     }
 }

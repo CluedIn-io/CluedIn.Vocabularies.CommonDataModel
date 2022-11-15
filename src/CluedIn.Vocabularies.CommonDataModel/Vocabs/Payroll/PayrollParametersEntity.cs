@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollParametersEntityVocabulary()
         {
-            VocabularyName = "PayrollParametersEntity";
+            VocabularyName = "Payroll Parameters Entity";
             KeyPrefix = "commonDataModel.payrollparametersentity";
             KeySeparator = ".";
             Grouping = "/PayrollParametersEntity";
@@ -31,10 +31,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CategoryName = group.Add(new VocabularyKey(nameof(CategoryName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CategoryHierarchyName = group.Add(new VocabularyKey(nameof(CategoryHierarchyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalaryClearingAccountLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(SalaryClearingAccountLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccrualDateBasis { get; private set; }
         public VocabularyKey ApplyRetirementAnnualWageLimit { get; private set; }
         public VocabularyKey ArrearThresholdOverride { get; private set; }
@@ -53,7 +51,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CategoryName { get; private set; }
         public VocabularyKey CategoryHierarchyName { get; private set; }
         public VocabularyKey SalaryClearingAccountLedgerDimensionDisplayValue { get; private set; }
-
-
     }
 }

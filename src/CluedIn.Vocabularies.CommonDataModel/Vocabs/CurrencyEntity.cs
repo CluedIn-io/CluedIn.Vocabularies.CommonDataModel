@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CurrencyEntityVocabulary()
         {
-            VocabularyName = "CurrencyEntity";
+            VocabularyName = "Currency Entity";
             KeyPrefix = "commonDataModel.currencyentity";
             KeySeparator = ".";
             Grouping = "/CurrencyEntity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RoundingRulePurchaseOrders = group.Add(new VocabularyKey(nameof(RoundingRulePurchaseOrders), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RoundingRuleSalesOrders = group.Add(new VocabularyKey(nameof(RoundingRuleSalesOrders), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Symbol = group.Add(new VocabularyKey(nameof(Symbol), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CurrencyCode { get; private set; }
         public VocabularyKey GeneralRoundingRule { get; private set; }
         public VocabularyKey CurrencyGender { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RoundingRulePurchaseOrders { get; private set; }
         public VocabularyKey RoundingRuleSalesOrders { get; private set; }
         public VocabularyKey Symbol { get; private set; }
-
-
     }
 }

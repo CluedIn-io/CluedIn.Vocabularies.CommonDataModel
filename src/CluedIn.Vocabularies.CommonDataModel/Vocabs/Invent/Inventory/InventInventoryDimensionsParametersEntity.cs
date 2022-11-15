@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventInventoryDimensionsParametersEntityVocabulary()
         {
-            VocabularyName = "InventInventoryDimensionsParametersEntity";
+            VocabularyName = "Invent Inventory Dimensions Parameters Entity";
             KeyPrefix = "commonDataModel.inventinventorydimensionsparametersentity";
             KeySeparator = ".";
             Grouping = "/InventInventoryDimensionsParametersEntity";
@@ -40,13 +40,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsInventoryProjectConsumptionJournalGridDisplayingDimensionByDefault = group.Add(new VocabularyKey(nameof(IsInventoryProjectConsumptionJournalGridDisplayingDimensionByDefault), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsProjectQuotationLineGridDisplayingDimensionByDefault = group.Add(new VocabularyKey(nameof(IsProjectQuotationLineGridDisplayingDimensionByDefault), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsPurchaseOrderLineGridDisplayingDimensionByDefault = group.Add(new VocabularyKey(nameof(IsPurchaseOrderLineGridDisplayingDimensionByDefault), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                dimFieldId = group.Add(new VocabularyKey(nameof(dimFieldId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DimFieldId = group.Add(new VocabularyKey(nameof(DimFieldId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsConsignmentReplenishmentOrderLineGridDisplayingDimensionByDefault = group.Add(new VocabularyKey(nameof(IsConsignmentReplenishmentOrderLineGridDisplayingDimensionByDefault), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsInventoryOwnershipChangeLineGridDisplayingDimensionByDefault = group.Add(new VocabularyKey(nameof(IsInventoryOwnershipChangeLineGridDisplayingDimensionByDefault), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InventoryDimensionName { get; private set; }
         public VocabularyKey IsSalesOrderLineGridDisplayingDimensionByDefault { get; private set; }
         public VocabularyKey IsSalesQuotationLineGridDisplayingDimensionByDefault { get; private set; }
@@ -74,10 +72,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsInventoryProjectConsumptionJournalGridDisplayingDimensionByDefault { get; private set; }
         public VocabularyKey IsProjectQuotationLineGridDisplayingDimensionByDefault { get; private set; }
         public VocabularyKey IsPurchaseOrderLineGridDisplayingDimensionByDefault { get; private set; }
-        public VocabularyKey dimFieldId { get; private set; }
+        public VocabularyKey DimFieldId { get; private set; }
         public VocabularyKey IsConsignmentReplenishmentOrderLineGridDisplayingDimensionByDefault { get; private set; }
         public VocabularyKey IsInventoryOwnershipChangeLineGridDisplayingDimensionByDefault { get; private set; }
-
-
     }
 }

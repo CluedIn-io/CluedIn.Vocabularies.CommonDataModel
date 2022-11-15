@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DirNameSequenceEntityVocabulary()
         {
-            VocabularyName = "DirNameSequenceEntity";
+            VocabularyName = "Dir Name Sequence Entity";
             KeyPrefix = "commonDataModel.dirnamesequenceentity";
             KeySeparator = ".";
             Grouping = "/DirNameSequenceEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Separator3 = group.Add(new VocabularyKey(nameof(Separator3), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Separator3Spaces = group.Add(new VocabularyKey(nameof(Separator3Spaces), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LastPosition = group.Add(new VocabularyKey(nameof(LastPosition), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey NameSequence { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey LanguageId { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Separator3 { get; private set; }
         public VocabularyKey Separator3Spaces { get; private set; }
         public VocabularyKey LastPosition { get; private set; }
-
-
     }
 }

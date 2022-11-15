@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerFiscalCloseGroupEntityVocabulary()
         {
-            VocabularyName = "LedgerFiscalCloseGroupEntity";
+            VocabularyName = "Ledger Fiscal Close Group Entity";
             KeyPrefix = "commonDataModel.ledgerfiscalclosegroupentity";
             KeySeparator = ".";
             Grouping = "/LedgerFiscalCloseGroupEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FiscalCalendar = group.Add(new VocabularyKey(nameof(FiscalCalendar), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CalendarId = group.Add(new VocabularyKey(nameof(CalendarId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Name { get; private set; }
         public VocabularyKey FiscalCalendar { get; private set; }
         public VocabularyKey CalendarId { get; private set; }
-
-
     }
 }

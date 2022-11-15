@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseClusterProfileV2EntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseClusterProfileV2Entity";
+            VocabularyName = "WHS Warehouse Cluster Profile V2 Entity";
             KeyPrefix = "commonDataModel.whswarehouseclusterprofilev2entity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseClusterProfileV2Entity";
@@ -32,10 +32,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProfileSequenceNumber = group.Add(new VocabularyKey(nameof(ProfileSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WarehouseLocationDirectiveCode = group.Add(new VocabularyKey(nameof(WarehouseLocationDirectiveCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProfileQuery = group.Add(new VocabularyKey(nameof(ProfileQuery), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ClusterBreakingAction { get; private set; }
         public VocabularyKey ClusterPositionCount { get; private set; }
         public VocabularyKey ClusterPositionNameType { get; private set; }
@@ -55,7 +53,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProfileSequenceNumber { get; private set; }
         public VocabularyKey WarehouseLocationDirectiveCode { get; private set; }
         public VocabularyKey ProfileQuery { get; private set; }
-
-
     }
 }

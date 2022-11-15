@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankParametersEntityVocabulary()
         {
-            VocabularyName = "BankParametersEntity";
+            VocabularyName = "Bank Parameters Entity";
             KeyPrefix = "commonDataModel.bankparametersentity";
             KeySeparator = ".";
             Grouping = "/BankParametersEntity";
@@ -63,10 +63,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AllowBankCurrencyReval = group.Add(new VocabularyKey(nameof(AllowBankCurrencyReval), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AllowBankAccountStatementEdit = group.Add(new VocabularyKey(nameof(AllowBankAccountStatementEdit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PSNEnableEscheatment = group.Add(new VocabularyKey(nameof(PSNEnableEscheatment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AllowChecksForLedgerAccounts { get; private set; }
         public VocabularyKey AllowCheckReuse { get; private set; }
         public VocabularyKey MaxDateDifferenceForReconciliationMatching { get; private set; }
@@ -117,7 +115,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AllowBankCurrencyReval { get; private set; }
         public VocabularyKey AllowBankAccountStatementEdit { get; private set; }
         public VocabularyKey PSNEnableEscheatment { get; private set; }
-
-
     }
 }

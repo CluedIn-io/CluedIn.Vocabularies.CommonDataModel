@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollStatutoryWorkerEntityVocabulary()
         {
-            VocabularyName = "PayrollStatutoryWorkerEntity";
+            VocabularyName = "Payroll Statutory Worker Entity";
             KeyPrefix = "commonDataModel.payrollstatutoryworkerentity";
             KeySeparator = ".";
             Grouping = "/PayrollStatutoryWorkerEntity";
@@ -31,10 +31,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 NameValidTo = group.Add(new VocabularyKey(nameof(NameValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AddressValidFrom = group.Add(new VocabularyKey(nameof(AddressValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AddressValidTo = group.Add(new VocabularyKey(nameof(AddressValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PersonnelNumber { get; private set; }
         public VocabularyKey FirstName { get; private set; }
         public VocabularyKey MiddleName { get; private set; }
@@ -53,7 +51,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey NameValidTo { get; private set; }
         public VocabularyKey AddressValidFrom { get; private set; }
         public VocabularyKey AddressValidTo { get; private set; }
-
-
     }
 }

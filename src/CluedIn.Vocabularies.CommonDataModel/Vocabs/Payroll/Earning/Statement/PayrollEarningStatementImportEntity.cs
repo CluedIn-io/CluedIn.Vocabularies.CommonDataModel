@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollEarningStatementImportEntityVocabulary()
         {
-            VocabularyName = "PayrollEarningStatementImportEntity";
+            VocabularyName = "Payroll Earning Statement Import Entity";
             KeyPrefix = "commonDataModel.payrollearningstatementimportentity";
             KeySeparator = ".";
             Grouping = "/PayrollEarningStatementImportEntity";
@@ -45,10 +45,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WorkerGeneralLiabilityInsuranceBenefitId = group.Add(new VocabularyKey(nameof(WorkerGeneralLiabilityInsuranceBenefitId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkerTaxRegion = group.Add(new VocabularyKey(nameof(WorkerTaxRegion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PersonnelNumber = group.Add(new VocabularyKey(nameof(PersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountingDate { get; private set; }
         public VocabularyKey AccountingDistributionTemplate { get; private set; }
         public VocabularyKey Dimension { get; private set; }
@@ -81,7 +79,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WorkerGeneralLiabilityInsuranceBenefitId { get; private set; }
         public VocabularyKey WorkerTaxRegion { get; private set; }
         public VocabularyKey PersonnelNumber { get; private set; }
-
-
     }
 }

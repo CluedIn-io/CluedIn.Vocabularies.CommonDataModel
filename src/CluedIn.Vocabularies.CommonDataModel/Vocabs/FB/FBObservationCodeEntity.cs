@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FBObservationCodeEntityVocabulary()
         {
-            VocabularyName = "FBObservationCodeEntity";
+            VocabularyName = "FB Observation Code Entity";
             KeyPrefix = "commonDataModel.fbobservationcodeentity";
             KeySeparator = ".";
             Grouping = "/FBObservationCodeEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 ObservationCode = group.Add(new VocabularyKey(nameof(ObservationCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ObservationCode { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

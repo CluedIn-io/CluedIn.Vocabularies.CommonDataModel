@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventInventoryCountingJournalLineEntityVocabulary()
         {
-            VocabularyName = "InventInventoryCountingJournalLineEntity";
+            VocabularyName = "Invent Inventory Counting Journal Line Entity";
             KeyPrefix = "commonDataModel.inventinventorycountingjournallineentity";
             KeySeparator = ".";
             Grouping = "/InventInventoryCountingJournalLineEntity";
@@ -43,10 +43,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DefaultLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(DefaultLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InventoryOwnerId = group.Add(new VocabularyKey(nameof(InventoryOwnerId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CountingReasonCode = group.Add(new VocabularyKey(nameof(CountingReasonCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey JournalNumber { get; private set; }
         public VocabularyKey LineNumber { get; private set; }
         public VocabularyKey CountingDate { get; private set; }
@@ -77,7 +75,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DefaultLedgerDimensionDisplayValue { get; private set; }
         public VocabularyKey InventoryOwnerId { get; private set; }
         public VocabularyKey CountingReasonCode { get; private set; }
-
-
     }
 }

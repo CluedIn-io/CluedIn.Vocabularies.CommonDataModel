@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjectItemJournalTransEntityVocabulary()
         {
-            VocabularyName = "ProjectItemJournalTransEntity";
+            VocabularyName = "Project Item Journal Trans Entity";
             KeyPrefix = "commonDataModel.projectitemjournaltransentity";
             KeySeparator = ".";
             Grouping = "/ProjectItemJournalTransEntity";
@@ -47,11 +47,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 StorageSiteId = group.Add(new VocabularyKey(nameof(StorageSiteId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StorageWarehouseId = group.Add(new VocabularyKey(nameof(StorageWarehouseId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StorageLocationId = group.Add(new VocabularyKey(nameof(StorageLocationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                inventSerialId = group.Add(new VocabularyKey(nameof(inventSerialId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                InventSerialId = group.Add(new VocabularyKey(nameof(InventSerialId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
         public VocabularyKey ActivityNumber { get; private set; }
         public VocabularyKey CostAmount { get; private set; }
         public VocabularyKey CostPrice { get; private set; }
@@ -86,8 +84,6 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey StorageSiteId { get; private set; }
         public VocabularyKey StorageWarehouseId { get; private set; }
         public VocabularyKey StorageLocationId { get; private set; }
-        public VocabularyKey inventSerialId { get; private set; }
-
-
+        public VocabularyKey InventSerialId { get; private set; }
     }
 }

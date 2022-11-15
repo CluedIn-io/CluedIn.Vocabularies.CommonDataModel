@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvMileageRateEntityVocabulary()
         {
-            VocabularyName = "TrvMileageRateEntity";
+            VocabularyName = "Trv Mileage Rate Entity";
             KeyPrefix = "commonDataModel.trvmileagerateentity";
             KeySeparator = ".";
             Grouping = "/TrvMileageRateEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RateType = group.Add(new VocabularyKey(nameof(RateType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ToDate = group.Add(new VocabularyKey(nameof(ToDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VehicleType = group.Add(new VocabularyKey(nameof(VehicleType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Rate { get; private set; }
         public VocabularyKey ExpenseCategory { get; private set; }
         public VocabularyKey Description { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RateType { get; private set; }
         public VocabularyKey ToDate { get; private set; }
         public VocabularyKey VehicleType { get; private set; }
-
-
     }
 }

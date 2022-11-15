@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationTemplateCustomerChargeManualOverrideRateEntityVocabulary()
         {
-            VocabularyName = "TMSTransportationTemplateCustomerChargeManualOverrideRateEntity";
+            VocabularyName = "TMS Transportation Template Customer Charge Manual Override Rate Entity";
             KeyPrefix = "commonDataModel.tmstransportationtemplatecustomerchargemanualoverriderateentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationTemplateCustomerChargeManualOverrideRateEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RateUnitPrice = group.Add(new VocabularyKey(nameof(RateUnitPrice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RateQuantity = group.Add(new VocabularyKey(nameof(RateQuantity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransportationTemplateId = group.Add(new VocabularyKey(nameof(TransportationTemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccessorialChargeMasterCode { get; private set; }
         public VocabularyKey ShippingCarrierId { get; private set; }
         public VocabularyKey ShippingCarrierServiceId { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RateUnitPrice { get; private set; }
         public VocabularyKey RateQuantity { get; private set; }
         public VocabularyKey TransportationTemplateId { get; private set; }
-
-
     }
 }

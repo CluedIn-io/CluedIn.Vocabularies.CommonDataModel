@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendCorrectionNoteEntityVocabulary()
         {
-            VocabularyName = "VendCorrectionNoteEntity";
+            VocabularyName = "Vend Correction Note Entity";
             KeyPrefix = "commonDataModel.vendcorrectionnoteentity";
             KeySeparator = ".";
             Grouping = "/VendCorrectionNoteEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OriginalText = group.Add(new VocabularyKey(nameof(OriginalText), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CorrectedText = group.Add(new VocabularyKey(nameof(CorrectedText), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Posted = group.Add(new VocabularyKey(nameof(Posted), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Invoice { get; private set; }
         public VocabularyKey InvoiceAccount { get; private set; }
         public VocabularyKey Date { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OriginalText { get; private set; }
         public VocabularyKey CorrectedText { get; private set; }
         public VocabularyKey Posted { get; private set; }
-
-
     }
 }

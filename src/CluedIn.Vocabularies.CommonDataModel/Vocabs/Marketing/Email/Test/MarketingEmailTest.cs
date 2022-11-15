@@ -6,32 +6,28 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MarketingEmailTestVocabulary()
         {
-            VocabularyName = "MarketingEmailTest";
+            VocabularyName = "Marketing Email Test";
             KeyPrefix = "commonDataModel.marketingemailtest";
             KeySeparator = ".";
             Grouping = "/MarketingEmailTest";
 
             AddGroup("MarketingEmailTest Details", group =>
             {
-                marketingEmailTestId = group.Add(new VocabularyKey(nameof(marketingEmailTestId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                testProperty = group.Add(new VocabularyKey(nameof(testProperty), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                testPropertyCombinationType = group.Add(new VocabularyKey(nameof(testPropertyCombinationType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                teststatus = group.Add(new VocabularyKey(nameof(teststatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                MarketingEmailTestId = group.Add(new VocabularyKey(nameof(MarketingEmailTestId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TestProperty = group.Add(new VocabularyKey(nameof(TestProperty), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TestPropertyCombinationType = group.Add(new VocabularyKey(nameof(TestPropertyCombinationType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Teststatus = group.Add(new VocabularyKey(nameof(Teststatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey marketingEmailTestId { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey testProperty { get; private set; }
-        public VocabularyKey testPropertyCombinationType { get; private set; }
-        public VocabularyKey teststatus { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey MarketingEmailTestId { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey TestProperty { get; private set; }
+        public VocabularyKey TestPropertyCombinationType { get; private set; }
+        public VocabularyKey Teststatus { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

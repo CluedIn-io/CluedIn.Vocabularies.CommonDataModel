@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailPosBatchEntityVocabulary()
         {
-            VocabularyName = "RetailPosBatchEntity";
+            VocabularyName = "Retail Pos Batch Entity";
             KeyPrefix = "commonDataModel.retailposbatchentity";
             KeySeparator = ".";
             Grouping = "/RetailPosBatchEntity";
@@ -69,10 +69,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ErrorCodeDateTime = group.Add(new VocabularyKey(nameof(ErrorCodeDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ErrorCodeEditUser = group.Add(new VocabularyKey(nameof(ErrorCodeEditUser), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StoreNumber = group.Add(new VocabularyKey(nameof(StoreNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Terminal { get; private set; }
         public VocabularyKey BatchShiftId { get; private set; }
         public VocabularyKey Channel { get; private set; }
@@ -129,7 +127,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ErrorCodeDateTime { get; private set; }
         public VocabularyKey ErrorCodeEditUser { get; private set; }
         public VocabularyKey StoreNumber { get; private set; }
-
-
     }
 }

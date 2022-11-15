@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PdsBatchDispositionEntityVocabulary()
         {
-            VocabularyName = "PdsBatchDispositionEntity";
+            VocabularyName = "Pds Batch Disposition Entity";
             KeyPrefix = "commonDataModel.pdsbatchdispositionentity";
             KeySeparator = ".";
             Grouping = "/PdsBatchDispositionEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WillBlockTransferPicking = group.Add(new VocabularyKey(nameof(WillBlockTransferPicking), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillBlockTransferReservation = group.Add(new VocabularyKey(nameof(WillBlockTransferReservation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillBlockTransferShipping = group.Add(new VocabularyKey(nameof(WillBlockTransferShipping), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DispositionCode { get; private set; }
         public VocabularyKey DispositionDescription { get; private set; }
         public VocabularyKey DispositionStatus { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WillBlockTransferPicking { get; private set; }
         public VocabularyKey WillBlockTransferReservation { get; private set; }
         public VocabularyKey WillBlockTransferShipping { get; private set; }
-
-
     }
 }

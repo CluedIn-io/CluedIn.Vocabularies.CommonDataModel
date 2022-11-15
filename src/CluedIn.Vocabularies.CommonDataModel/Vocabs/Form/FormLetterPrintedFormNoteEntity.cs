@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FormLetterPrintedFormNoteEntityVocabulary()
         {
-            VocabularyName = "FormLetterPrintedFormNoteEntity";
+            VocabularyName = "Form Letter Printed Form Note Entity";
             KeyPrefix = "commonDataModel.formletterprintedformnoteentity";
             KeySeparator = ".";
             Grouping = "/FormLetterPrintedFormNoteEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FormLetterType = group.Add(new VocabularyKey(nameof(FormLetterType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LanguageId = group.Add(new VocabularyKey(nameof(LanguageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FormNote = group.Add(new VocabularyKey(nameof(FormNote), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FormLetterType { get; private set; }
         public VocabularyKey LanguageId { get; private set; }
         public VocabularyKey FormNote { get; private set; }
-
-
     }
 }

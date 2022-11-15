@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSProductHarmonizedTariffCodeEntityVocabulary()
         {
-            VocabularyName = "WHSProductHarmonizedTariffCodeEntity";
+            VocabularyName = "WHS Product Harmonized Tariff Code Entity";
             KeyPrefix = "commonDataModel.whsproductharmonizedtariffcodeentity";
             KeySeparator = ".";
             Grouping = "/WHSProductHarmonizedTariffCodeEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 TariffCode = group.Add(new VocabularyKey(nameof(TariffCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TariffName = group.Add(new VocabularyKey(nameof(TariffName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TariffCode { get; private set; }
         public VocabularyKey TariffName { get; private set; }
-
-
     }
 }

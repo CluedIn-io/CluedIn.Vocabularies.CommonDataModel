@@ -6,32 +6,28 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HotelRoomReservationVocabulary()
         {
-            VocabularyName = "HotelRoomReservation";
+            VocabularyName = "Hotel Room Reservation";
             KeyPrefix = "commonDataModel.hotelroomreservation";
             KeySeparator = ".";
             Grouping = "/HotelRoomReservation";
 
             AddGroup("HotelRoomReservation Details", group =>
             {
-                guestType = group.Add(new VocabularyKey(nameof(guestType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                hotelRoomReservationId = group.Add(new VocabularyKey(nameof(hotelRoomReservationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                rewardsProgramNumber = group.Add(new VocabularyKey(nameof(rewardsProgramNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                specialRequests = group.Add(new VocabularyKey(nameof(specialRequests), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                GuestType = group.Add(new VocabularyKey(nameof(GuestType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                HotelRoomReservationId = group.Add(new VocabularyKey(nameof(HotelRoomReservationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RewardsProgramNumber = group.Add(new VocabularyKey(nameof(RewardsProgramNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SpecialRequests = group.Add(new VocabularyKey(nameof(SpecialRequests), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey guestType { get; private set; }
-        public VocabularyKey hotelRoomReservationId { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey rewardsProgramNumber { get; private set; }
-        public VocabularyKey specialRequests { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey GuestType { get; private set; }
+        public VocabularyKey HotelRoomReservationId { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey RewardsProgramNumber { get; private set; }
+        public VocabularyKey SpecialRequests { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

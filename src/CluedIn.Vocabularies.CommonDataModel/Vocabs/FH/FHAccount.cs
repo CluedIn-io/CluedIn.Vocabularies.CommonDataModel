@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FHAccountVocabulary()
         {
-            VocabularyName = "FHAccount";
+            VocabularyName = "FH Account";
             KeyPrefix = "commonDataModel.fhaccount";
             KeySeparator = ".";
             Grouping = "/FHAccount";
@@ -14,86 +14,82 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             AddGroup("FHAccount Details", group =>
             {
                 FH_AccountId = group.Add(new VocabularyKey(nameof(FH_AccountId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                modifiedOn = group.Add(new VocabularyKey(nameof(modifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statecode = group.Add(new VocabularyKey(nameof(statecode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statuscode = group.Add(new VocabularyKey(nameof(statuscode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                importSequenceNumber = group.Add(new VocabularyKey(nameof(importSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                overriddenCreatedOn = group.Add(new VocabularyKey(nameof(overriddenCreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                timeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(timeZoneRuleVersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Statecode = group.Add(new VocabularyKey(nameof(Statecode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Statuscode = group.Add(new VocabularyKey(nameof(Statuscode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                accountingClassification = group.Add(new VocabularyKey(nameof(accountingClassification), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                availableBalance = group.Add(new VocabularyKey(nameof(availableBalance), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                availablebalance_Base = group.Add(new VocabularyKey(nameof(availablebalance_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                availableBalance_default = group.Add(new VocabularyKey(nameof(availableBalance_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                averageBalance = group.Add(new VocabularyKey(nameof(averageBalance), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                averagebalance_Base = group.Add(new VocabularyKey(nameof(averagebalance_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                averageBalance_default = group.Add(new VocabularyKey(nameof(averageBalance_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                balance = group.Add(new VocabularyKey(nameof(balance), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                balance_Base = group.Add(new VocabularyKey(nameof(balance_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                balanceDefault = group.Add(new VocabularyKey(nameof(balanceDefault), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                balanceExchangerate = group.Add(new VocabularyKey(nameof(balanceExchangerate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                blockedAmount = group.Add(new VocabularyKey(nameof(blockedAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                blockedamount_Base = group.Add(new VocabularyKey(nameof(blockedamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                blockedAmount_default = group.Add(new VocabularyKey(nameof(blockedAmount_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                dateoflasttransaction = group.Add(new VocabularyKey(nameof(dateoflasttransaction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                delinquencyStatus = group.Add(new VocabularyKey(nameof(delinquencyStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                financialHoldingCategory = group.Add(new VocabularyKey(nameof(financialHoldingCategory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                financialHoldingType = group.Add(new VocabularyKey(nameof(financialHoldingType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                integrationKey = group.Add(new VocabularyKey(nameof(integrationKey), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                interestrate = group.Add(new VocabularyKey(nameof(interestrate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                interestType = group.Add(new VocabularyKey(nameof(interestType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                numberoftransactions = group.Add(new VocabularyKey(nameof(numberoftransactions), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                unclearedBalance = group.Add(new VocabularyKey(nameof(unclearedBalance), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                unclearedbalance_Base = group.Add(new VocabularyKey(nameof(unclearedbalance_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                unclearedBalance_default = group.Add(new VocabularyKey(nameof(unclearedBalance_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                balanceDefaultDisplayValue = group.Add(new VocabularyKey(nameof(balanceDefaultDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                balanceDisplayValue = group.Add(new VocabularyKey(nameof(balanceDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                balancedisplayvalue_Base = group.Add(new VocabularyKey(nameof(balancedisplayvalue_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AccountingClassification = group.Add(new VocabularyKey(nameof(AccountingClassification), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AvailableBalance = group.Add(new VocabularyKey(nameof(AvailableBalance), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Availablebalance_Base = group.Add(new VocabularyKey(nameof(Availablebalance_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AvailableBalance_default = group.Add(new VocabularyKey(nameof(AvailableBalance_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AverageBalance = group.Add(new VocabularyKey(nameof(AverageBalance), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Averagebalance_Base = group.Add(new VocabularyKey(nameof(Averagebalance_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AverageBalance_default = group.Add(new VocabularyKey(nameof(AverageBalance_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Balance = group.Add(new VocabularyKey(nameof(Balance), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Balance_Base = group.Add(new VocabularyKey(nameof(Balance_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BalanceDefault = group.Add(new VocabularyKey(nameof(BalanceDefault), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BalanceExchangerate = group.Add(new VocabularyKey(nameof(BalanceExchangerate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BlockedAmount = group.Add(new VocabularyKey(nameof(BlockedAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Blockedamount_Base = group.Add(new VocabularyKey(nameof(Blockedamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BlockedAmount_default = group.Add(new VocabularyKey(nameof(BlockedAmount_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Dateoflasttransaction = group.Add(new VocabularyKey(nameof(Dateoflasttransaction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DelinquencyStatus = group.Add(new VocabularyKey(nameof(DelinquencyStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FinancialHoldingCategory = group.Add(new VocabularyKey(nameof(FinancialHoldingCategory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FinancialHoldingType = group.Add(new VocabularyKey(nameof(FinancialHoldingType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IntegrationKey = group.Add(new VocabularyKey(nameof(IntegrationKey), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Interestrate = group.Add(new VocabularyKey(nameof(Interestrate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InterestType = group.Add(new VocabularyKey(nameof(InterestType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Numberoftransactions = group.Add(new VocabularyKey(nameof(Numberoftransactions), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                UnclearedBalance = group.Add(new VocabularyKey(nameof(UnclearedBalance), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Unclearedbalance_Base = group.Add(new VocabularyKey(nameof(Unclearedbalance_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                UnclearedBalance_default = group.Add(new VocabularyKey(nameof(UnclearedBalance_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BalanceDefaultDisplayValue = group.Add(new VocabularyKey(nameof(BalanceDefaultDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BalanceDisplayValue = group.Add(new VocabularyKey(nameof(BalanceDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Balancedisplayvalue_Base = group.Add(new VocabularyKey(nameof(Balancedisplayvalue_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
         public VocabularyKey FH_AccountId { get; private set; }
-        public VocabularyKey createdOn { get; private set; }
-        public VocabularyKey modifiedOn { get; private set; }
-        public VocabularyKey statecode { get; private set; }
-        public VocabularyKey statuscode { get; private set; }
-        public VocabularyKey importSequenceNumber { get; private set; }
-        public VocabularyKey overriddenCreatedOn { get; private set; }
-        public VocabularyKey timeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Statecode { get; private set; }
+        public VocabularyKey Statuscode { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey accountingClassification { get; private set; }
-        public VocabularyKey availableBalance { get; private set; }
-        public VocabularyKey availablebalance_Base { get; private set; }
-        public VocabularyKey availableBalance_default { get; private set; }
-        public VocabularyKey averageBalance { get; private set; }
-        public VocabularyKey averagebalance_Base { get; private set; }
-        public VocabularyKey averageBalance_default { get; private set; }
-        public VocabularyKey balance { get; private set; }
-        public VocabularyKey balance_Base { get; private set; }
-        public VocabularyKey balanceDefault { get; private set; }
-        public VocabularyKey balanceExchangerate { get; private set; }
-        public VocabularyKey blockedAmount { get; private set; }
-        public VocabularyKey blockedamount_Base { get; private set; }
-        public VocabularyKey blockedAmount_default { get; private set; }
-        public VocabularyKey dateoflasttransaction { get; private set; }
-        public VocabularyKey delinquencyStatus { get; private set; }
-        public VocabularyKey financialHoldingCategory { get; private set; }
-        public VocabularyKey financialHoldingType { get; private set; }
-        public VocabularyKey integrationKey { get; private set; }
-        public VocabularyKey interestrate { get; private set; }
-        public VocabularyKey interestType { get; private set; }
-        public VocabularyKey numberoftransactions { get; private set; }
-        public VocabularyKey unclearedBalance { get; private set; }
-        public VocabularyKey unclearedbalance_Base { get; private set; }
-        public VocabularyKey unclearedBalance_default { get; private set; }
-        public VocabularyKey balanceDefaultDisplayValue { get; private set; }
-        public VocabularyKey balanceDisplayValue { get; private set; }
-        public VocabularyKey balancedisplayvalue_Base { get; private set; }
-
-
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey AccountingClassification { get; private set; }
+        public VocabularyKey AvailableBalance { get; private set; }
+        public VocabularyKey Availablebalance_Base { get; private set; }
+        public VocabularyKey AvailableBalance_default { get; private set; }
+        public VocabularyKey AverageBalance { get; private set; }
+        public VocabularyKey Averagebalance_Base { get; private set; }
+        public VocabularyKey AverageBalance_default { get; private set; }
+        public VocabularyKey Balance { get; private set; }
+        public VocabularyKey Balance_Base { get; private set; }
+        public VocabularyKey BalanceDefault { get; private set; }
+        public VocabularyKey BalanceExchangerate { get; private set; }
+        public VocabularyKey BlockedAmount { get; private set; }
+        public VocabularyKey Blockedamount_Base { get; private set; }
+        public VocabularyKey BlockedAmount_default { get; private set; }
+        public VocabularyKey Dateoflasttransaction { get; private set; }
+        public VocabularyKey DelinquencyStatus { get; private set; }
+        public VocabularyKey FinancialHoldingCategory { get; private set; }
+        public VocabularyKey FinancialHoldingType { get; private set; }
+        public VocabularyKey IntegrationKey { get; private set; }
+        public VocabularyKey Interestrate { get; private set; }
+        public VocabularyKey InterestType { get; private set; }
+        public VocabularyKey Numberoftransactions { get; private set; }
+        public VocabularyKey UnclearedBalance { get; private set; }
+        public VocabularyKey Unclearedbalance_Base { get; private set; }
+        public VocabularyKey UnclearedBalance_default { get; private set; }
+        public VocabularyKey BalanceDefaultDisplayValue { get; private set; }
+        public VocabularyKey BalanceDisplayValue { get; private set; }
+        public VocabularyKey Balancedisplayvalue_Base { get; private set; }
     }
 }

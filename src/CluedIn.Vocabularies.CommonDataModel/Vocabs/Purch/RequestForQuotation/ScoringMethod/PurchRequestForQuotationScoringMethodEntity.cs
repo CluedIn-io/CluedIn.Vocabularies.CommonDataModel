@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchRequestForQuotationScoringMethodEntityVocabulary()
         {
-            VocabularyName = "PurchRequestForQuotationScoringMethodEntity";
+            VocabularyName = "Purch Request For Quotation Scoring Method Entity";
             KeyPrefix = "commonDataModel.purchrequestforquotationscoringmethodentity";
             KeySeparator = ".";
             Grouping = "/PurchRequestForQuotationScoringMethodEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 MethodName = group.Add(new VocabularyKey(nameof(MethodName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MethodDescription = group.Add(new VocabularyKey(nameof(MethodDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey MethodName { get; private set; }
         public VocabularyKey MethodDescription { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankCheckLayoutEntityVocabulary()
         {
-            VocabularyName = "BankCheckLayoutEntity";
+            VocabularyName = "Bank Check Layout Entity";
             KeyPrefix = "commonDataModel.bankchecklayoutentity";
             KeySeparator = ".";
             Grouping = "/BankCheckLayoutEntity";
@@ -51,10 +51,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PrintCCode = group.Add(new VocabularyKey(nameof(PrintCCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CustomChequeLayout = group.Add(new VocabularyKey(nameof(CustomChequeLayout), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CustomChequeLayoutId = group.Add(new VocabularyKey(nameof(CustomChequeLayoutId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BankAccountId { get; private set; }
         public VocabularyKey AmountPrefix { get; private set; }
         public VocabularyKey PrintBankAccount { get; private set; }
@@ -93,7 +91,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PrintCCode { get; private set; }
         public VocabularyKey CustomChequeLayout { get; private set; }
         public VocabularyKey CustomChequeLayoutId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollPremiumEarningCodeActiveIntervalEntityVocabulary()
         {
-            VocabularyName = "PayrollPremiumEarningCodeActiveIntervalEntity";
+            VocabularyName = "Payroll Premium Earning Code Active Interval Entity";
             KeyPrefix = "commonDataModel.payrollpremiumearningcodeactiveintervalentity";
             KeySeparator = ".";
             Grouping = "/PayrollPremiumEarningCodeActiveIntervalEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ValidFrom = group.Add(new VocabularyKey(nameof(ValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidTo = group.Add(new VocabularyKey(nameof(ValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PremiumEarningCodeId = group.Add(new VocabularyKey(nameof(PremiumEarningCodeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PremiumEarningCode { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey ValidTo { get; private set; }
         public VocabularyKey PremiumEarningCodeId { get; private set; }
-
-
     }
 }

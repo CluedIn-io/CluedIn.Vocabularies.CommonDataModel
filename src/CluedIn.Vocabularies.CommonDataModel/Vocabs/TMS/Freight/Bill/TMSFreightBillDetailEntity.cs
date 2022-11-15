@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSFreightBillDetailEntityVocabulary()
         {
-            VocabularyName = "TMSFreightBillDetailEntity";
+            VocabularyName = "TMS Freight Bill Detail Entity";
             KeyPrefix = "commonDataModel.tmsfreightbilldetailentity";
             KeySeparator = ".";
             Grouping = "/TMSFreightBillDetailEntity";
@@ -103,10 +103,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LoadVendorAccountNumber = group.Add(new VocabularyKey(nameof(LoadVendorAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LoadSalesOrderNumber = group.Add(new VocabularyKey(nameof(LoadSalesOrderNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LoadPurchaseOrderNumber = group.Add(new VocabularyKey(nameof(LoadPurchaseOrderNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccessorialChargeMasterCode { get; private set; }
         public VocabularyKey BillOfLadingId { get; private set; }
         public VocabularyKey CurrencyCode { get; private set; }
@@ -197,7 +195,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LoadVendorAccountNumber { get; private set; }
         public VocabularyKey LoadSalesOrderNumber { get; private set; }
         public VocabularyKey LoadPurchaseOrderNumber { get; private set; }
-
-
     }
 }

@@ -6,36 +6,32 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EventManagementActivityVocabulary()
         {
-            VocabularyName = "EventManagementActivity";
+            VocabularyName = "Event Management Activity";
             KeyPrefix = "commonDataModel.eventmanagementactivity";
             KeySeparator = ".";
             Grouping = "/EventManagementActivity";
 
             AddGroup("EventManagementActivity Details", group =>
             {
-                actionStatus = group.Add(new VocabularyKey(nameof(actionStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                activityadditionalparams = group.Add(new VocabularyKey(nameof(activityadditionalparams), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                durationInMilliseconds = group.Add(new VocabularyKey(nameof(durationInMilliseconds), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                errorMessage = group.Add(new VocabularyKey(nameof(errorMessage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                eventManagementActivityId = group.Add(new VocabularyKey(nameof(eventManagementActivityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                processingResult = group.Add(new VocabularyKey(nameof(processingResult), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                ActionStatus = group.Add(new VocabularyKey(nameof(ActionStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Activityadditionalparams = group.Add(new VocabularyKey(nameof(Activityadditionalparams), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DurationInMilliseconds = group.Add(new VocabularyKey(nameof(DurationInMilliseconds), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ErrorMessage = group.Add(new VocabularyKey(nameof(ErrorMessage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EventManagementActivityId = group.Add(new VocabularyKey(nameof(EventManagementActivityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProcessingResult = group.Add(new VocabularyKey(nameof(ProcessingResult), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey actionStatus { get; private set; }
-        public VocabularyKey activityadditionalparams { get; private set; }
-        public VocabularyKey durationInMilliseconds { get; private set; }
-        public VocabularyKey errorMessage { get; private set; }
-        public VocabularyKey eventManagementActivityId { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey processingResult { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey ActionStatus { get; private set; }
+        public VocabularyKey Activityadditionalparams { get; private set; }
+        public VocabularyKey DurationInMilliseconds { get; private set; }
+        public VocabularyKey ErrorMessage { get; private set; }
+        public VocabularyKey EventManagementActivityId { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey ProcessingResult { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

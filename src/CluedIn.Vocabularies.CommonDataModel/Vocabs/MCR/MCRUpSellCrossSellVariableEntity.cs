@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRUpSellCrossSellVariableEntityVocabulary()
         {
-            VocabularyName = "MCRUpSellCrossSellVariableEntity";
+            VocabularyName = "MCR Up Sell Cross Sell Variable Entity";
             KeyPrefix = "commonDataModel.mcrupsellcrosssellvariableentity";
             KeySeparator = ".";
             Grouping = "/MCRUpSellCrossSellVariableEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Field = group.Add(new VocabularyKey(nameof(Field), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VariableName = group.Add(new VocabularyKey(nameof(VariableName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VariableTable = group.Add(new VocabularyKey(nameof(VariableTable), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey Field { get; private set; }
         public VocabularyKey VariableName { get; private set; }
         public VocabularyKey VariableTable { get; private set; }
-
-
     }
 }

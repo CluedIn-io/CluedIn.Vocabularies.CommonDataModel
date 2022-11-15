@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailOperationsEntityVocabulary()
         {
-            VocabularyName = "RetailOperationsEntity";
+            VocabularyName = "Retail Operations Entity";
             KeyPrefix = "commonDataModel.retailoperationsentity";
             KeySeparator = ".";
             Grouping = "/RetailOperationsEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PermissionId2 = group.Add(new VocabularyKey(nameof(PermissionId2), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UserOperation = group.Add(new VocabularyKey(nameof(UserOperation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EnableNotifications = group.Add(new VocabularyKey(nameof(EnableNotifications), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey OperationId { get; private set; }
         public VocabularyKey ActionPropertyLookupType { get; private set; }
         public VocabularyKey CheckUserAccess { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PermissionId2 { get; private set; }
         public VocabularyKey UserOperation { get; private set; }
         public VocabularyKey EnableNotifications { get; private set; }
-
-
     }
 }

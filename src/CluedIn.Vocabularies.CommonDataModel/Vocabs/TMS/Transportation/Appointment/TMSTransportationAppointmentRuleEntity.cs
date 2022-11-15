@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationAppointmentRuleEntityVocabulary()
         {
-            VocabularyName = "TMSTransportationAppointmentRuleEntity";
+            VocabularyName = "TMS Transportation Appointment Rule Entity";
             KeyPrefix = "commonDataModel.tmstransportationappointmentruleentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationAppointmentRuleEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AppointmentWarehouseId = group.Add(new VocabularyKey(nameof(AppointmentWarehouseId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AppointmentSiteId = group.Add(new VocabularyKey(nameof(AppointmentSiteId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AppointmentCheckInCheckOutWarehouseLocationProfileId = group.Add(new VocabularyKey(nameof(AppointmentCheckInCheckOutWarehouseLocationProfileId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ItemMovementDirectionRule { get; private set; }
         public VocabularyKey MaximumAppointmentsAllowed { get; private set; }
         public VocabularyKey AppointmentRuleId { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AppointmentWarehouseId { get; private set; }
         public VocabularyKey AppointmentSiteId { get; private set; }
         public VocabularyKey AppointmentCheckInCheckOutWarehouseLocationProfileId { get; private set; }
-
-
     }
 }

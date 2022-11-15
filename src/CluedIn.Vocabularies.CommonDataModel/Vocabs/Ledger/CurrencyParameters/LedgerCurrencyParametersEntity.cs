@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerCurrencyParametersEntityVocabulary()
         {
-            VocabularyName = "LedgerCurrencyParametersEntity";
+            VocabularyName = "Ledger Currency Parameters Entity";
             KeyPrefix = "commonDataModel.ledgercurrencyparametersentity";
             KeySeparator = ".";
             Grouping = "/LedgerCurrencyParametersEntity";
@@ -95,10 +95,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CustUnrealizedGainMainAccount = group.Add(new VocabularyKey(nameof(CustUnrealizedGainMainAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EmplUnrealizedGainMainAccount = group.Add(new VocabularyKey(nameof(EmplUnrealizedGainMainAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendUnrealizedGainMainAccount = group.Add(new VocabularyKey(nameof(VendUnrealizedGainMainAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ConversionLoss { get; private set; }
         public VocabularyKey ConversionGain { get; private set; }
         public VocabularyKey Currency { get; private set; }
@@ -181,7 +179,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CustUnrealizedGainMainAccount { get; private set; }
         public VocabularyKey EmplUnrealizedGainMainAccount { get; private set; }
         public VocabularyKey VendUnrealizedGainMainAccount { get; private set; }
-
-
     }
 }

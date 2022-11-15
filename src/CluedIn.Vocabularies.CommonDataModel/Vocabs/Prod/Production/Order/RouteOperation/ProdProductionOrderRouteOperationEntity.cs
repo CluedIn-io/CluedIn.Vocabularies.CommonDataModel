@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProdProductionOrderRouteOperationEntityVocabulary()
         {
-            VocabularyName = "ProdProductionOrderRouteOperationEntity";
+            VocabularyName = "Prod Production Order Route Operation Entity";
             KeyPrefix = "commonDataModel.prodproductionorderrouteoperationentity";
             KeySeparator = ".";
             Grouping = "/ProdProductionOrderRouteOperationEntity";
@@ -61,10 +61,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WorkingTimeSchedulingPropertyId = group.Add(new VocabularyKey(nameof(WorkingTimeSchedulingPropertyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WrkCtrActivityRequirementSetRecId = group.Add(new VocabularyKey(nameof(WrkCtrActivityRequirementSetRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ActivityToCopyRecordId = group.Add(new VocabularyKey(nameof(ActivityToCopyRecordId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccumulatedScrapPercentage { get; private set; }
         public VocabularyKey CostingOperationResourceId { get; private set; }
         public VocabularyKey DefaultLedgerDimensionDisplayValue { get; private set; }
@@ -113,7 +111,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WorkingTimeSchedulingPropertyId { get; private set; }
         public VocabularyKey WrkCtrActivityRequirementSetRecId { get; private set; }
         public VocabularyKey ActivityToCopyRecordId { get; private set; }
-
-
     }
 }

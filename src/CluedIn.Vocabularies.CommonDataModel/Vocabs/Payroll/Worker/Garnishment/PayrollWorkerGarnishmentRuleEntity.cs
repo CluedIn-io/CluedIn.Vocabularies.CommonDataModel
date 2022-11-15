@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollWorkerGarnishmentRuleEntityVocabulary()
         {
-            VocabularyName = "PayrollWorkerGarnishmentRuleEntity";
+            VocabularyName = "Payroll Worker Garnishment Rule Entity";
             KeyPrefix = "commonDataModel.payrollworkergarnishmentruleentity";
             KeySeparator = ".";
             Grouping = "/PayrollWorkerGarnishmentRuleEntity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AllowReduction = group.Add(new VocabularyKey(nameof(AllowReduction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Worker = group.Add(new VocabularyKey(nameof(Worker), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PersonnelNumber = group.Add(new VocabularyKey(nameof(PersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey GarnishmentTaxLevyType { get; private set; }
         public VocabularyKey StateId { get; private set; }
         public VocabularyKey CountryRegionId { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AllowReduction { get; private set; }
         public VocabularyKey Worker { get; private set; }
         public VocabularyKey PersonnelNumber { get; private set; }
-
-
     }
 }

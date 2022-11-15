@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustomerPaymentJournalHeaderEntityVocabulary()
         {
-            VocabularyName = "CustomerPaymentJournalHeaderEntity";
+            VocabularyName = "Customer Payment Journal Header Entity";
             KeyPrefix = "commonDataModel.customerpaymentjournalheaderentity";
             KeySeparator = ".";
             Grouping = "/CustomerPaymentJournalHeaderEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 JournalBatchNumber = group.Add(new VocabularyKey(nameof(JournalBatchNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsPosted = group.Add(new VocabularyKey(nameof(IsPosted), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey JournalName { get; private set; }
         public VocabularyKey JournalBatchNumber { get; private set; }
         public VocabularyKey IsPosted { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

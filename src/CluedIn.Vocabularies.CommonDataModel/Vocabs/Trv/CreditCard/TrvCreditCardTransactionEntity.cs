@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvCreditCardTransactionEntityVocabulary()
         {
-            VocabularyName = "TrvCreditCardTransactionEntity";
+            VocabularyName = "Trv Credit Card Transaction Entity";
             KeyPrefix = "commonDataModel.trvcreditcardtransactionentity";
             KeySeparator = ".";
             Grouping = "/TrvCreditCardTransactionEntity";
@@ -88,10 +88,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Itinerary_PBSRecid = group.Add(new VocabularyKey(nameof(Itinerary_PBSRecid), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Hotel_PBSRecid = group.Add(new VocabularyKey(nameof(Hotel_PBSRecid), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 HashedCCNumber = group.Add(new VocabularyKey(nameof(HashedCCNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Amount_CreditCardCurrency { get; private set; }
         public VocabularyKey Amount_LocalCurrency { get; private set; }
         public VocabularyKey BusinessName { get; private set; }
@@ -167,7 +165,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Itinerary_PBSRecid { get; private set; }
         public VocabularyKey Hotel_PBSRecid { get; private set; }
         public VocabularyKey HashedCCNumber { get; private set; }
-
-
     }
 }

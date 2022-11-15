@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PaymentDueDateLimitsEntityVocabulary()
         {
-            VocabularyName = "PaymentDueDateLimitsEntity";
+            VocabularyName = "Payment Due Date Limits Entity";
             KeyPrefix = "commonDataModel.paymentduedatelimitsentity";
             KeySeparator = ".";
             Grouping = "/PaymentDueDateLimitsEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PeriodInterval = group.Add(new VocabularyKey(nameof(PeriodInterval), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NumberOfUnits = group.Add(new VocabularyKey(nameof(NumberOfUnits), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DueDateLimit { get; private set; }
         public VocabularyKey StartDate { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey PeriodInterval { get; private set; }
         public VocabularyKey NumberOfUnits { get; private set; }
-
-
     }
 }

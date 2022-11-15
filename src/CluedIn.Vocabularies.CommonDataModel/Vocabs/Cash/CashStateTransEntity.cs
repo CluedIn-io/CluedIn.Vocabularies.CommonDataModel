@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CashStateTransEntityVocabulary()
         {
-            VocabularyName = "CashStateTransEntity";
+            VocabularyName = "Cash State Trans Entity";
             KeyPrefix = "commonDataModel.cashstatetransentity";
             KeySeparator = ".";
             Grouping = "/CashStateTransEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PaymentDirection = group.Add(new VocabularyKey(nameof(PaymentDirection), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Date = group.Add(new VocabularyKey(nameof(Date), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Voucher = group.Add(new VocabularyKey(nameof(Voucher), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Name { get; private set; }
         public VocabularyKey CompanyRegistrationNumber { get; private set; }
         public VocabularyKey CountryCode { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PaymentDirection { get; private set; }
         public VocabularyKey Date { get; private set; }
         public VocabularyKey Voucher { get; private set; }
-
-
     }
 }

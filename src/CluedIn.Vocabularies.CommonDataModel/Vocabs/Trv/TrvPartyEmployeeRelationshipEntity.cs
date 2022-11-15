@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvPartyEmployeeRelationshipEntityVocabulary()
         {
-            VocabularyName = "TrvPartyEmployeeRelationshipEntity";
+            VocabularyName = "Trv Party Employee Relationship Entity";
             KeyPrefix = "commonDataModel.trvpartyemployeerelationshipentity";
             KeySeparator = ".";
             Grouping = "/TrvPartyEmployeeRelationshipEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PerDiem = group.Add(new VocabularyKey(nameof(PerDiem), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Employee = group.Add(new VocabularyKey(nameof(Employee), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TrvHcmWorker_PersonnelNumber = group.Add(new VocabularyKey(nameof(TrvHcmWorker_PersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountType { get; private set; }
         public VocabularyKey Account { get; private set; }
         public VocabularyKey AccountDisplayValue { get; private set; }
         public VocabularyKey PerDiem { get; private set; }
         public VocabularyKey Employee { get; private set; }
         public VocabularyKey TrvHcmWorker_PersonnelNumber { get; private set; }
-
-
     }
 }

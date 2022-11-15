@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxPeriodEntityVocabulary()
         {
-            VocabularyName = "TaxPeriodEntity";
+            VocabularyName = "Tax Period Entity";
             KeyPrefix = "commonDataModel.taxperiodentity";
             KeySeparator = ".";
             Grouping = "/TaxPeriodEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PeriodInterval = group.Add(new VocabularyKey(nameof(PeriodInterval), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NumberOfUnit = group.Add(new VocabularyKey(nameof(NumberOfUnit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxAuthorityId = group.Add(new VocabularyKey(nameof(TaxAuthorityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FromDate { get; private set; }
         public VocabularyKey TaxPeriodId { get; private set; }
         public VocabularyKey ToDate { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PeriodInterval { get; private set; }
         public VocabularyKey NumberOfUnit { get; private set; }
         public VocabularyKey TaxAuthorityId { get; private set; }
-
-
     }
 }

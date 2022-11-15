@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PSAActualEntityVocabulary()
         {
-            VocabularyName = "PSAActualEntity";
+            VocabularyName = "PSA Actual Entity";
             KeyPrefix = "commonDataModel.psaactualentity";
             KeySeparator = ".";
             Grouping = "/PSAActualEntity";
@@ -16,7 +16,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ActivityNumber = group.Add(new VocabularyKey(nameof(ActivityNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AmountMst = group.Add(new VocabularyKey(nameof(AmountMst), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CategoryId = group.Add(new VocabularyKey(nameof(CategoryId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                costSales = group.Add(new VocabularyKey(nameof(costSales), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CostSales = group.Add(new VocabularyKey(nameof(CostSales), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultDimension = group.Add(new VocabularyKey(nameof(DefaultDimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EmplItemId = group.Add(new VocabularyKey(nameof(EmplItemId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InventTransId = group.Add(new VocabularyKey(nameof(InventTransId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
@@ -59,7 +59,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ConsumedLaborQty = group.Add(new VocabularyKey(nameof(ConsumedLaborQty), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ConsumedExpenseCost = group.Add(new VocabularyKey(nameof(ConsumedExpenseCost), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ConsumedMaterialCost = group.Add(new VocabularyKey(nameof(ConsumedMaterialCost), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                totalConsumption = group.Add(new VocabularyKey(nameof(totalConsumption), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TotalConsumption = group.Add(new VocabularyKey(nameof(TotalConsumption), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PayrollAllocation = group.Add(new VocabularyKey(nameof(PayrollAllocation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LaborInvoicedRevenue = group.Add(new VocabularyKey(nameof(LaborInvoicedRevenue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LaborInvoicedQty = group.Add(new VocabularyKey(nameof(LaborInvoicedQty), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
@@ -72,7 +72,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OnAccBegBal = group.Add(new VocabularyKey(nameof(OnAccBegBal), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OnAccTotal = group.Add(new VocabularyKey(nameof(OnAccTotal), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PLInvoicedRevenue = group.Add(new VocabularyKey(nameof(PLInvoicedRevenue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                totalInvoicedRevenue = group.Add(new VocabularyKey(nameof(totalInvoicedRevenue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TotalInvoicedRevenue = group.Add(new VocabularyKey(nameof(TotalInvoicedRevenue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PLAccruedRevenueSalesValue = group.Add(new VocabularyKey(nameof(PLAccruedRevenueSalesValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PLAccruedRevenueProduction = group.Add(new VocabularyKey(nameof(PLAccruedRevenueProduction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PLAccruedRevenueProfit = group.Add(new VocabularyKey(nameof(PLAccruedRevenueProfit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
@@ -103,14 +103,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ConsumedMaterialCostWithoutNeverLedger = group.Add(new VocabularyKey(nameof(ConsumedMaterialCostWithoutNeverLedger), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ResourceId = group.Add(new VocabularyKey(nameof(ResourceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ResourceCompanyId = group.Add(new VocabularyKey(nameof(ResourceCompanyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ActivityNumber { get; private set; }
         public VocabularyKey AmountMst { get; private set; }
         public VocabularyKey CategoryId { get; private set; }
-        public VocabularyKey costSales { get; private set; }
+        public VocabularyKey CostSales { get; private set; }
         public VocabularyKey DefaultDimension { get; private set; }
         public VocabularyKey EmplItemId { get; private set; }
         public VocabularyKey InventTransId { get; private set; }
@@ -153,7 +151,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ConsumedLaborQty { get; private set; }
         public VocabularyKey ConsumedExpenseCost { get; private set; }
         public VocabularyKey ConsumedMaterialCost { get; private set; }
-        public VocabularyKey totalConsumption { get; private set; }
+        public VocabularyKey TotalConsumption { get; private set; }
         public VocabularyKey PayrollAllocation { get; private set; }
         public VocabularyKey LaborInvoicedRevenue { get; private set; }
         public VocabularyKey LaborInvoicedQty { get; private set; }
@@ -166,7 +164,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OnAccBegBal { get; private set; }
         public VocabularyKey OnAccTotal { get; private set; }
         public VocabularyKey PLInvoicedRevenue { get; private set; }
-        public VocabularyKey totalInvoicedRevenue { get; private set; }
+        public VocabularyKey TotalInvoicedRevenue { get; private set; }
         public VocabularyKey PLAccruedRevenueSalesValue { get; private set; }
         public VocabularyKey PLAccruedRevenueProduction { get; private set; }
         public VocabularyKey PLAccruedRevenueProfit { get; private set; }
@@ -197,7 +195,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ConsumedMaterialCostWithoutNeverLedger { get; private set; }
         public VocabularyKey ResourceId { get; private set; }
         public VocabularyKey ResourceCompanyId { get; private set; }
-
-
     }
 }

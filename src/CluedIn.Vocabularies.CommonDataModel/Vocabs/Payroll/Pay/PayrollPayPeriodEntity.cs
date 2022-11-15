@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollPayPeriodEntityVocabulary()
         {
-            VocabularyName = "PayrollPayPeriodEntity";
+            VocabularyName = "Payroll Pay Period Entity";
             KeyPrefix = "commonDataModel.payrollpayperiodentity";
             KeySeparator = ".";
             Grouping = "/PayrollPayPeriodEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PeriodStartDate = group.Add(new VocabularyKey(nameof(PeriodStartDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Status = group.Add(new VocabularyKey(nameof(Status), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PayCycleId = group.Add(new VocabularyKey(nameof(PayCycleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DefaultPaymentDate { get; private set; }
         public VocabularyKey Comments { get; private set; }
         public VocabularyKey PayCycle { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PeriodStartDate { get; private set; }
         public VocabularyKey Status { get; private set; }
         public VocabularyKey PayCycleId { get; private set; }
-
-
     }
 }

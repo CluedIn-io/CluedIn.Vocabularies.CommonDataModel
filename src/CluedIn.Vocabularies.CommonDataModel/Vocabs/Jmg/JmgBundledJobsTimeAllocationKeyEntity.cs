@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgBundledJobsTimeAllocationKeyEntityVocabulary()
         {
-            VocabularyName = "JmgBundledJobsTimeAllocationKeyEntity";
+            VocabularyName = "Jmg Bundled Jobs Time Allocation Key Entity";
             KeyPrefix = "commonDataModel.jmgbundledjobstimeallocationkeyentity";
             KeySeparator = ".";
             Grouping = "/JmgBundledJobsTimeAllocationKeyEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductionSiteId = group.Add(new VocabularyKey(nameof(ProductionSiteId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductionUnitId = group.Add(new VocabularyKey(nameof(ProductionUnitId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OperationsResourceId = group.Add(new VocabularyKey(nameof(OperationsResourceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TimeAllocationMethod { get; private set; }
         public VocabularyKey ProductionSiteId { get; private set; }
         public VocabularyKey ProductionUnitId { get; private set; }
         public VocabularyKey OperationsResourceId { get; private set; }
-
-
     }
 }

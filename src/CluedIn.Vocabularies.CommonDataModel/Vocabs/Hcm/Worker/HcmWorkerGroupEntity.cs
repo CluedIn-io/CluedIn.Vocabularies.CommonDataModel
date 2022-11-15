@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmWorkerGroupEntityVocabulary()
         {
-            VocabularyName = "HcmWorkerGroupEntity";
+            VocabularyName = "Hcm Worker Group Entity";
             KeyPrefix = "commonDataModel.hcmworkergroupentity";
             KeySeparator = ".";
             Grouping = "/HcmWorkerGroupEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EmployeeGroupId = group.Add(new VocabularyKey(nameof(EmployeeGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey EmployeeGroupId { get; private set; }
-
-
     }
 }

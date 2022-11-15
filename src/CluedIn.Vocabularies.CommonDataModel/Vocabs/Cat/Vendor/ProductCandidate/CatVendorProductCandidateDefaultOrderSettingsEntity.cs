@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CatVendorProductCandidateDefaultOrderSettingsEntityVocabulary()
         {
-            VocabularyName = "CatVendorProductCandidateDefaultOrderSettingsEntity";
+            VocabularyName = "Cat Vendor Product Candidate Default Order Settings Entity";
             KeyPrefix = "commonDataModel.catvendorproductcandidatedefaultordersettingsentity";
             KeySeparator = ".";
             Grouping = "/CatVendorProductCandidateDefaultOrderSettingsEntity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductCandidateProductNumber = group.Add(new VocabularyKey(nameof(ProductCandidateProductNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorCatalogMaintenanceRequestUploadDateTime = group.Add(new VocabularyKey(nameof(VendorCatalogMaintenanceRequestUploadDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UnitSymbol = group.Add(new VocabularyKey(nameof(UnitSymbol), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey VendorProductCandidate { get; private set; }
         public VocabularyKey UnitOfMeasure { get; private set; }
         public VocabularyKey OrderQuantityMultiples { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProductCandidateProductNumber { get; private set; }
         public VocabularyKey VendorCatalogMaintenanceRequestUploadDateTime { get; private set; }
         public VocabularyKey UnitSymbol { get; private set; }
-
-
     }
 }

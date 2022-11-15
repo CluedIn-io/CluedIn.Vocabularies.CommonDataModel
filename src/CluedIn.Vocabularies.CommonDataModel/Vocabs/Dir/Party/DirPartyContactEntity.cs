@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DirPartyContactEntityVocabulary()
         {
-            VocabularyName = "DirPartyContactEntity";
+            VocabularyName = "Dir Party Contact Entity";
             KeyPrefix = "commonDataModel.dirpartycontactentity";
             KeySeparator = ".";
             Grouping = "/DirPartyContactEntity";
@@ -30,10 +30,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DunsNumberRecId = group.Add(new VocabularyKey(nameof(DunsNumberRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ParentLocation = group.Add(new VocabularyKey(nameof(ParentLocation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LogisticsElectronicAddressRecId = group.Add(new VocabularyKey(nameof(LogisticsElectronicAddressRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PartyNumber { get; private set; }
         public VocabularyKey LocationId { get; private set; }
         public VocabularyKey Description { get; private set; }
@@ -51,7 +49,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DunsNumberRecId { get; private set; }
         public VocabularyKey ParentLocation { get; private set; }
         public VocabularyKey LogisticsElectronicAddressRecId { get; private set; }
-
-
     }
 }

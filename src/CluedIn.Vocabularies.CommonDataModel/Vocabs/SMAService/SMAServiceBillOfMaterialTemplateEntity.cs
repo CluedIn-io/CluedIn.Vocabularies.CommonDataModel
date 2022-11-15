@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SMAServiceBillOfMaterialTemplateEntityVocabulary()
         {
-            VocabularyName = "SMAServiceBillOfMaterialTemplateEntity";
+            VocabularyName = "SMA Service Bill Of Material Template Entity";
             KeyPrefix = "commonDataModel.smaservicebillofmaterialtemplateentity";
             KeySeparator = ".";
             Grouping = "/SMAServiceBillOfMaterialTemplateEntity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SourceProductionOrderNumber = group.Add(new VocabularyKey(nameof(SourceProductionOrderNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SourceBOMId = group.Add(new VocabularyKey(nameof(SourceBOMId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SourceServiceBOMTemplateId = group.Add(new VocabularyKey(nameof(SourceServiceBOMTemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BOMId { get; private set; }
         public VocabularyKey BOMName { get; private set; }
         public VocabularyKey ValidFromDate { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SourceProductionOrderNumber { get; private set; }
         public VocabularyKey SourceBOMId { get; private set; }
         public VocabularyKey SourceServiceBOMTemplateId { get; private set; }
-
-
     }
 }

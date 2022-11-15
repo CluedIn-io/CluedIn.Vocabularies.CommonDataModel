@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ElectronicPaymentInstructionEntityVocabulary()
         {
-            VocabularyName = "ElectronicPaymentInstructionEntity";
+            VocabularyName = "Electronic Payment Instruction Entity";
             KeyPrefix = "commonDataModel.electronicpaymentinstructionentity";
             KeySeparator = ".";
             Grouping = "/ElectronicPaymentInstructionEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Instruction = group.Add(new VocabularyKey(nameof(Instruction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Quantity = group.Add(new VocabularyKey(nameof(Quantity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LayoutGroupId { get; private set; }
         public VocabularyKey Instruction { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey Quantity { get; private set; }
-
-
     }
 }

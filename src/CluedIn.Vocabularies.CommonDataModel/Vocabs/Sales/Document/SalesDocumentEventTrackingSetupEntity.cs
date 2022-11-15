@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesDocumentEventTrackingSetupEntityVocabulary()
         {
-            VocabularyName = "SalesDocumentEventTrackingSetupEntity";
+            VocabularyName = "Sales Document Event Tracking Setup Entity";
             KeyPrefix = "commonDataModel.salesdocumenteventtrackingsetupentity";
             KeySeparator = ".";
             Grouping = "/SalesDocumentEventTrackingSetupEntity";
@@ -53,10 +53,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AreConfirmedReceiptOrShipDateModificationsLogged = group.Add(new VocabularyKey(nameof(AreConfirmedReceiptOrShipDateModificationsLogged), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UserId = group.Add(new VocabularyKey(nameof(UserId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UserGroupId = group.Add(new VocabularyKey(nameof(UserGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AreFraudHoldAdditionsLogged { get; private set; }
         public VocabularyKey AreSalesOrderHoldAdditionsLogged { get; private set; }
         public VocabularyKey IsAlternateItemUsageLogged { get; private set; }
@@ -97,7 +95,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AreConfirmedReceiptOrShipDateModificationsLogged { get; private set; }
         public VocabularyKey UserId { get; private set; }
         public VocabularyKey UserGroupId { get; private set; }
-
-
     }
 }

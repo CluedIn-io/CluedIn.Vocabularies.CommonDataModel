@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetGroupValueModelSetupEntityVocabulary()
         {
-            VocabularyName = "AssetGroupValueModelSetupEntity";
+            VocabularyName = "Asset Group Value Model Setup Entity";
             KeyPrefix = "commonDataModel.assetgroupvaluemodelsetupentity";
             KeySeparator = ".";
             Grouping = "/AssetGroupValueModelSetupEntity";
@@ -31,10 +31,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AcceleratedDepreciationProfileId = group.Add(new VocabularyKey(nameof(AcceleratedDepreciationProfileId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsAssetGroupDepreciation = group.Add(new VocabularyKey(nameof(IsAssetGroupDepreciation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DepreciationGroupId = group.Add(new VocabularyKey(nameof(DepreciationGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FixedAssetGroupId { get; private set; }
         public VocabularyKey ValueModelId { get; private set; }
         public VocabularyKey CalculateDepreciation { get; private set; }
@@ -53,7 +51,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AcceleratedDepreciationProfileId { get; private set; }
         public VocabularyKey IsAssetGroupDepreciation { get; private set; }
         public VocabularyKey DepreciationGroupId { get; private set; }
-
-
     }
 }

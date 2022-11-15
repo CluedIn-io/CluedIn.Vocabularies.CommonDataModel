@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSUnitOfMeasureConversionSequenceGroupSequenceEntityVocabulary()
         {
-            VocabularyName = "WHSUnitOfMeasureConversionSequenceGroupSequenceEntity";
+            VocabularyName = "WHS Unit Of Measure Conversion Sequence Group Sequence Entity";
             KeyPrefix = "commonDataModel.whsunitofmeasureconversionsequencegroupsequenceentity";
             KeySeparator = ".";
             Grouping = "/WHSUnitOfMeasureConversionSequenceGroupSequenceEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DefaultContainerTypeId = group.Add(new VocabularyKey(nameof(DefaultContainerTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsDefaultMaterialConsumptionUnit = group.Add(new VocabularyKey(nameof(IsDefaultMaterialConsumptionUnit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WaveLabelTypeId = group.Add(new VocabularyKey(nameof(WaveLabelTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsCycleCountingUnit { get; private set; }
         public VocabularyKey IsDefaultProductionReceivingUnit { get; private set; }
         public VocabularyKey IsDefaultInboundReceivingUnit { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DefaultContainerTypeId { get; private set; }
         public VocabularyKey IsDefaultMaterialConsumptionUnit { get; private set; }
         public VocabularyKey WaveLabelTypeId { get; private set; }
-
-
     }
 }

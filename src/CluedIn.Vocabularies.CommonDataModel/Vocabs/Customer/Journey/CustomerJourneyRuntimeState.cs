@@ -6,36 +6,32 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustomerJourneyRuntimeStateVocabulary()
         {
-            VocabularyName = "CustomerJourneyRuntimeState";
+            VocabularyName = "Customer Journey Runtime State";
             KeyPrefix = "commonDataModel.customerjourneyruntimestate";
             KeySeparator = ".";
             Grouping = "/CustomerJourneyRuntimeState";
 
             AddGroup("CustomerJourneyRuntimeState Details", group =>
             {
-                customerJourneyRuntimeStateId = group.Add(new VocabularyKey(nameof(customerJourneyRuntimeStateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                runtimeState = group.Add(new VocabularyKey(nameof(runtimeState), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                runtimeStateTimestamp = group.Add(new VocabularyKey(nameof(runtimeStateTimestamp), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdName = group.Add(new VocabularyKey(nameof(ownerIdName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdType = group.Add(new VocabularyKey(nameof(ownerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdYomiName = group.Add(new VocabularyKey(nameof(ownerIdYomiName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                CustomerJourneyRuntimeStateId = group.Add(new VocabularyKey(nameof(CustomerJourneyRuntimeStateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RuntimeState = group.Add(new VocabularyKey(nameof(RuntimeState), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RuntimeStateTimestamp = group.Add(new VocabularyKey(nameof(RuntimeStateTimestamp), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdName = group.Add(new VocabularyKey(nameof(OwnerIdName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdType = group.Add(new VocabularyKey(nameof(OwnerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdYomiName = group.Add(new VocabularyKey(nameof(OwnerIdYomiName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey customerJourneyRuntimeStateId { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey runtimeState { get; private set; }
-        public VocabularyKey runtimeStateTimestamp { get; private set; }
-        public VocabularyKey ownerIdName { get; private set; }
-        public VocabularyKey ownerIdType { get; private set; }
-        public VocabularyKey ownerIdYomiName { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey CustomerJourneyRuntimeStateId { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey RuntimeState { get; private set; }
+        public VocabularyKey RuntimeStateTimestamp { get; private set; }
+        public VocabularyKey OwnerIdName { get; private set; }
+        public VocabularyKey OwnerIdType { get; private set; }
+        public VocabularyKey OwnerIdYomiName { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

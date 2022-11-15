@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesRebateAgreementProductSelectionV2EntityVocabulary()
         {
-            VocabularyName = "SalesRebateAgreementProductSelectionV2Entity";
+            VocabularyName = "Sales Rebate Agreement Product Selection V2 Entity";
             KeyPrefix = "commonDataModel.salesrebateagreementproductselectionv2entity";
             KeySeparator = ".";
             Grouping = "/SalesRebateAgreementProductSelectionV2Entity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 QualifyingSiteId = group.Add(new VocabularyKey(nameof(QualifyingSiteId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 QualifyingWarehouseId = group.Add(new VocabularyKey(nameof(QualifyingWarehouseId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RebateAgreementId = group.Add(new VocabularyKey(nameof(RebateAgreementId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ItemNumber { get; private set; }
         public VocabularyKey RebateAgreementRefRecId { get; private set; }
         public VocabularyKey ProductUnitSymbol { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey QualifyingSiteId { get; private set; }
         public VocabularyKey QualifyingWarehouseId { get; private set; }
         public VocabularyKey RebateAgreementId { get; private set; }
-
-
     }
 }

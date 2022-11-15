@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailChannelCurrencyEntityVocabulary()
         {
-            VocabularyName = "RetailChannelCurrencyEntity";
+            VocabularyName = "Retail Channel Currency Entity";
             KeyPrefix = "commonDataModel.retailchannelcurrencyentity";
             KeySeparator = ".";
             Grouping = "/RetailChannelCurrencyEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CurrencyCode = group.Add(new VocabularyKey(nameof(CurrencyCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OMOperatingUnitNumber = group.Add(new VocabularyKey(nameof(OMOperatingUnitNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OMOperatingUnitID = group.Add(new VocabularyKey(nameof(OMOperatingUnitID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Channel { get; private set; }
         public VocabularyKey CurrencyCode { get; private set; }
         public VocabularyKey OMOperatingUnitNumber { get; private set; }
         public VocabularyKey OMOperatingUnitID { get; private set; }
-
-
     }
 }

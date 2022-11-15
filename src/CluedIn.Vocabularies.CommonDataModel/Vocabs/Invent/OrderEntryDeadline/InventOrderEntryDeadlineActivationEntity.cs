@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventOrderEntryDeadlineActivationEntityVocabulary()
         {
-            VocabularyName = "InventOrderEntryDeadlineActivationEntity";
+            VocabularyName = "Invent Order Entry Deadline Activation Entity";
             KeyPrefix = "commonDataModel.inventorderentrydeadlineactivationentity";
             KeySeparator = ".";
             Grouping = "/InventOrderEntryDeadlineActivationEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsSpecificSiteSpecificOrderGroupCombinationActivated = group.Add(new VocabularyKey(nameof(IsSpecificSiteSpecificOrderGroupCombinationActivated), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsSpecificSiteCrossOrderGroupCombinationActivated = group.Add(new VocabularyKey(nameof(IsSpecificSiteCrossOrderGroupCombinationActivated), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsCrossSiteSpecificOrderGroupCombinationActivated = group.Add(new VocabularyKey(nameof(IsCrossSiteSpecificOrderGroupCombinationActivated), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsSpecificSiteSpecificOrderGroupCombinationActivated { get; private set; }
         public VocabularyKey IsSpecificSiteCrossOrderGroupCombinationActivated { get; private set; }
         public VocabularyKey IsCrossSiteSpecificOrderGroupCombinationActivated { get; private set; }
-
-
     }
 }

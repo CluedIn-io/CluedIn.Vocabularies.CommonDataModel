@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailInformationSubcodeEntityVocabulary()
         {
-            VocabularyName = "RetailInformationSubcodeEntity";
+            VocabularyName = "Retail Information Subcode Entity";
             KeyPrefix = "commonDataModel.retailinformationsubcodeentity";
             KeySeparator = ".";
             Grouping = "/RetailInformationSubcodeEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SubcodeId = group.Add(new VocabularyKey(nameof(SubcodeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TriggerCode = group.Add(new VocabularyKey(nameof(TriggerCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TriggerFunction = group.Add(new VocabularyKey(nameof(TriggerFunction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AmountPercent { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey InfocodeId { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SubcodeId { get; private set; }
         public VocabularyKey TriggerCode { get; private set; }
         public VocabularyKey TriggerFunction { get; private set; }
-
-
     }
 }

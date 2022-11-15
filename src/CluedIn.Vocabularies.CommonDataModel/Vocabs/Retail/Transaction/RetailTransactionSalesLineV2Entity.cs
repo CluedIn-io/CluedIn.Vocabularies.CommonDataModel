@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailTransactionSalesLineV2EntityVocabulary()
         {
-            VocabularyName = "RetailTransactionSalesLineV2Entity";
+            VocabularyName = "Retail Transaction Sales Line V2 Entity";
             KeyPrefix = "commonDataModel.retailtransactionsaleslinev2entity";
             KeySeparator = ".";
             Grouping = "/RetailTransactionSalesLineV2Entity";
@@ -112,10 +112,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TransactionDate = group.Add(new VocabularyKey(nameof(TransactionDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxExemptPriceInclusiveOriginalPrice = group.Add(new VocabularyKey(nameof(TaxExemptPriceInclusiveOriginalPrice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxExemptPriceInclusiveReductionAmount = group.Add(new VocabularyKey(nameof(TaxExemptPriceInclusiveReductionAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SalesTaxGroup { get; private set; }
         public VocabularyKey ItemSalesTaxGroup { get; private set; }
         public VocabularyKey Terminal { get; private set; }
@@ -215,7 +213,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TransactionDate { get; private set; }
         public VocabularyKey TaxExemptPriceInclusiveOriginalPrice { get; private set; }
         public VocabularyKey TaxExemptPriceInclusiveReductionAmount { get; private set; }
-
-
     }
 }

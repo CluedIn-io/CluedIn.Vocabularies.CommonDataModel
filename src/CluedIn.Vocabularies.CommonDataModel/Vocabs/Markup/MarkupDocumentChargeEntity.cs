@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MarkupDocumentChargeEntityVocabulary()
         {
-            VocabularyName = "MarkupDocumentChargeEntity";
+            VocabularyName = "Markup Document Charge Entity";
             KeyPrefix = "commonDataModel.markupdocumentchargeentity";
             KeySeparator = ".";
             Grouping = "/MarkupDocumentChargeEntity";
@@ -64,10 +64,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ExternalChargeAmount = group.Add(new VocabularyKey(nameof(ExternalChargeAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProportionalChargeAmount = group.Add(new VocabularyKey(nameof(ProportionalChargeAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ChargeClassification = group.Add(new VocabularyKey(nameof(ChargeClassification), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountingDate { get; private set; }
         public VocabularyKey CalculatedDocumentCurrencyAmount { get; private set; }
         public VocabularyKey ChargeAccountingCurrencyCode { get; private set; }
@@ -119,7 +117,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ExternalChargeAmount { get; private set; }
         public VocabularyKey ProportionalChargeAmount { get; private set; }
         public VocabularyKey ChargeClassification { get; private set; }
-
-
     }
 }

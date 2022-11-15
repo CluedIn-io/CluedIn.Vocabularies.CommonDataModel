@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmContractorEntityVocabulary()
         {
-            VocabularyName = "HcmContractorEntity";
+            VocabularyName = "Hcm Contractor Entity";
             KeyPrefix = "commonDataModel.hcmcontractorentity";
             KeySeparator = ".";
             Grouping = "/HcmContractorEntity";
@@ -152,10 +152,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ContractorDetailsExpiration = group.Add(new VocabularyKey(nameof(ContractorDetailsExpiration), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CalendarId = group.Add(new VocabularyKey(nameof(CalendarId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CalendarDataAreaId = group.Add(new VocabularyKey(nameof(CalendarDataAreaId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PersonnelNumber { get; private set; }
         public VocabularyKey Person { get; private set; }
         public VocabularyKey PartyNumber { get; private set; }
@@ -295,7 +293,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ContractorDetailsExpiration { get; private set; }
         public VocabularyKey CalendarId { get; private set; }
         public VocabularyKey CalendarDataAreaId { get; private set; }
-
-
     }
 }

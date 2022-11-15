@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgTimeAndAttendanceFlexGroupEntityVocabulary()
         {
-            VocabularyName = "JmgTimeAndAttendanceFlexGroupEntity";
+            VocabularyName = "Jmg Time And Attendance Flex Group Entity";
             KeyPrefix = "commonDataModel.jmgtimeandattendanceflexgroupentity";
             KeySeparator = ".";
             Grouping = "/JmgTimeAndAttendanceFlexGroupEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MaximumFlexBalanceInTimePresentationUnits = group.Add(new VocabularyKey(nameof(MaximumFlexBalanceInTimePresentationUnits), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MinimunFlexBalanceInTimePresentationUnits = group.Add(new VocabularyKey(nameof(MinimunFlexBalanceInTimePresentationUnits), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsFlexBalanceCalculatedFromPayTypeCode = group.Add(new VocabularyKey(nameof(IsFlexBalanceCalculatedFromPayTypeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FlexGroupId { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey IsFlexMaximumBalanceAdjusted { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey MaximumFlexBalanceInTimePresentationUnits { get; private set; }
         public VocabularyKey MinimunFlexBalanceInTimePresentationUnits { get; private set; }
         public VocabularyKey IsFlexBalanceCalculatedFromPayTypeCode { get; private set; }
-
-
     }
 }

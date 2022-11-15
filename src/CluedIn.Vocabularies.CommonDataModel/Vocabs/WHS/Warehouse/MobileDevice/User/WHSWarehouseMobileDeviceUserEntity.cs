@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseMobileDeviceUserEntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseMobileDeviceUserEntity";
+            VocabularyName = "WHS Warehouse Mobile Device User Entity";
             KeyPrefix = "commonDataModel.whswarehousemobiledeviceuserentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseMobileDeviceUserEntity";
@@ -32,10 +32,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsSalesOrderOverpickingAllowed = group.Add(new VocabularyKey(nameof(IsSalesOrderOverpickingAllowed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsTransferOrderOverpickingAllowed = group.Add(new VocabularyKey(nameof(IsTransferOrderOverpickingAllowed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsManualItemReallocationAllowed = group.Add(new VocabularyKey(nameof(IsManualItemReallocationAllowed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WarehouseWorkerPersonnelNumber { get; private set; }
         public VocabularyKey UserId { get; private set; }
         public VocabularyKey UserName { get; private set; }
@@ -55,7 +53,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsSalesOrderOverpickingAllowed { get; private set; }
         public VocabularyKey IsTransferOrderOverpickingAllowed { get; private set; }
         public VocabularyKey IsManualItemReallocationAllowed { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailProductRatingEntityVocabulary()
         {
-            VocabularyName = "RetailProductRatingEntity";
+            VocabularyName = "Retail Product Rating Entity";
             KeyPrefix = "commonDataModel.retailproductratingentity";
             KeySeparator = ".";
             Grouping = "/RetailProductRatingEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ChannelId = group.Add(new VocabularyKey(nameof(ChannelId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Rating = group.Add(new VocabularyKey(nameof(Rating), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TotalRatings = group.Add(new VocabularyKey(nameof(TotalRatings), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductId { get; private set; }
         public VocabularyKey MasterProductId { get; private set; }
         public VocabularyKey ChannelId { get; private set; }
         public VocabularyKey Rating { get; private set; }
         public VocabularyKey TotalRatings { get; private set; }
-
-
     }
 }

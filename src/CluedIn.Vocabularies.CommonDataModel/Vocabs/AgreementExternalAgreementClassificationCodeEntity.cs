@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AgreementExternalAgreementClassificationCodeEntityVocabulary()
         {
-            VocabularyName = "AgreementExternalAgreementClassificationCodeEntity";
+            VocabularyName = "Agreement External Agreement Classification Code Entity";
             KeyPrefix = "commonDataModel.agreementexternalagreementclassificationcodeentity";
             KeySeparator = ".";
             Grouping = "/AgreementExternalAgreementClassificationCodeEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CodeDescription = group.Add(new VocabularyKey(nameof(CodeDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CodeId = group.Add(new VocabularyKey(nameof(CodeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsStandardCode = group.Add(new VocabularyKey(nameof(IsStandardCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CodeDefinition { get; private set; }
         public VocabularyKey CodeDescription { get; private set; }
         public VocabularyKey CodeId { get; private set; }
         public VocabularyKey IsStandardCode { get; private set; }
-
-
     }
 }

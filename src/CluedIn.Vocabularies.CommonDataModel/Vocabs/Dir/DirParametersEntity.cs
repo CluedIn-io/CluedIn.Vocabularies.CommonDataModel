@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DirParametersEntityVocabulary()
         {
-            VocabularyName = "DirParametersEntity";
+            VocabularyName = "Dir Parameters Entity";
             KeyPrefix = "commonDataModel.dirparametersentity";
             KeySeparator = ".";
             Grouping = "/DirParametersEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DunsCheckUnique = group.Add(new VocabularyKey(nameof(DunsCheckUnique), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultPartyType = group.Add(new VocabularyKey(nameof(DefaultPartyType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EnableEditForExternallyMaintainedFields = group.Add(new VocabularyKey(nameof(EnableEditForExternallyMaintainedFields), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Key { get; private set; }
         public VocabularyKey NameSequence { get; private set; }
         public VocabularyKey DeletePartiesWithNoRole { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DunsCheckUnique { get; private set; }
         public VocabularyKey DefaultPartyType { get; private set; }
         public VocabularyKey EnableEditForExternallyMaintainedFields { get; private set; }
-
-
     }
 }

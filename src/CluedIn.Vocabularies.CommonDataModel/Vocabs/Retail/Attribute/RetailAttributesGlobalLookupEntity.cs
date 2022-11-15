@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailAttributesGlobalLookupEntityVocabulary()
         {
-            VocabularyName = "RetailAttributesGlobalLookupEntity";
+            VocabularyName = "Retail Attributes Global Lookup Entity";
             KeyPrefix = "commonDataModel.retailattributesgloballookupentity";
             KeySeparator = ".";
             Grouping = "/RetailAttributesGlobalLookupEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 VariantColorGroup = group.Add(new VocabularyKey(nameof(VariantColorGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VariantSizeGroup = group.Add(new VocabularyKey(nameof(VariantSizeGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VariantStyleGroup = group.Add(new VocabularyKey(nameof(VariantStyleGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductCategoryHierarchyName { get; private set; }
         public VocabularyKey ProductCategoryName { get; private set; }
         public VocabularyKey GroupProductDimension { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey VariantColorGroup { get; private set; }
         public VocabularyKey VariantSizeGroup { get; private set; }
         public VocabularyKey VariantStyleGroup { get; private set; }
-
-
     }
 }

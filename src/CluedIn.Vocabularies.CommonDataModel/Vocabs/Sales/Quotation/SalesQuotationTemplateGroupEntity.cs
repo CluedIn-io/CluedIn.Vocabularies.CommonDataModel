@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesQuotationTemplateGroupEntityVocabulary()
         {
-            VocabularyName = "SalesQuotationTemplateGroupEntity";
+            VocabularyName = "Sales Quotation Template Group Entity";
             KeyPrefix = "commonDataModel.salesquotationtemplategroupentity";
             KeySeparator = ".";
             Grouping = "/SalesQuotationTemplateGroupEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 GroupDescription = group.Add(new VocabularyKey(nameof(GroupDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GroupId = group.Add(new VocabularyKey(nameof(GroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey GroupDescription { get; private set; }
         public VocabularyKey GroupId { get; private set; }
-
-
     }
 }

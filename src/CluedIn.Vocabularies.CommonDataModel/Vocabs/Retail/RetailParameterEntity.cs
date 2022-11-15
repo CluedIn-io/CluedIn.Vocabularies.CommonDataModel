@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailParameterEntityVocabulary()
         {
-            VocabularyName = "RetailParameterEntity";
+            VocabularyName = "Retail Parameter Entity";
             KeyPrefix = "commonDataModel.retailparameterentity";
             KeySeparator = ".";
             Grouping = "/RetailParameterEntity";
@@ -150,10 +150,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AllowConcludeCreditMemoTransactionsWhenOffline = group.Add(new VocabularyKey(nameof(AllowConcludeCreditMemoTransactionsWhenOffline), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InventoryAvailabilityQuantityReturnType = group.Add(new VocabularyKey(nameof(InventoryAvailabilityQuantityReturnType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InventoryEnableAutomaticValidation = group.Add(new VocabularyKey(nameof(InventoryEnableAutomaticValidation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PrePaymentLedgerJournalName { get; private set; }
         public VocabularyKey MixAndMatchActivityType { get; private set; }
         public VocabularyKey AccountExportProfile { get; private set; }
@@ -291,7 +289,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AllowConcludeCreditMemoTransactionsWhenOffline { get; private set; }
         public VocabularyKey InventoryAvailabilityQuantityReturnType { get; private set; }
         public VocabularyKey InventoryEnableAutomaticValidation { get; private set; }
-
-
     }
 }

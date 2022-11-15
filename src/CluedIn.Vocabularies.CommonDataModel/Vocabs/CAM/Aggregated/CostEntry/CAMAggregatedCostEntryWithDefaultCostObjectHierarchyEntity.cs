@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CAMAggregatedCostEntryWithDefaultCostObjectHierarchyEntityVocabulary()
         {
-            VocabularyName = "CAMAggregatedCostEntryWithDefaultCostObjectHierarchyEntity";
+            VocabularyName = "CAM Aggregated Cost Entry With Default Cost Object Hierarchy Entity";
             KeyPrefix = "commonDataModel.camaggregatedcostentrywithdefaultcostobjecthierarchyentity";
             KeySeparator = ".";
             Grouping = "/CAMAggregatedCostEntryWithDefaultCostObjectHierarchyEntity";
@@ -64,10 +64,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 VersionIdentificationName = group.Add(new VocabularyKey(nameof(VersionIdentificationName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SourceVersionIdentificationName = group.Add(new VocabularyKey(nameof(SourceVersionIdentificationName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VersionType = group.Add(new VocabularyKey(nameof(VersionType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CostAccountingCurrencyAmount { get; private set; }
         public VocabularyKey CostAccountingDate { get; private set; }
         public VocabularyKey CostAccountingLedgerName { get; private set; }
@@ -119,7 +117,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey VersionIdentificationName { get; private set; }
         public VocabularyKey SourceVersionIdentificationName { get; private set; }
         public VocabularyKey VersionType { get; private set; }
-
-
     }
 }

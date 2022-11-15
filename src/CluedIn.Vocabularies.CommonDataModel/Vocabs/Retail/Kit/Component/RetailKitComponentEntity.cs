@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailKitComponentEntityVocabulary()
         {
-            VocabularyName = "RetailKitComponentEntity";
+            VocabularyName = "Retail Kit Component Entity";
             KeyPrefix = "commonDataModel.retailkitcomponententity";
             KeySeparator = ".";
             Grouping = "/RetailKitComponentEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 UnitOfMeasureSymbol = group.Add(new VocabularyKey(nameof(UnitOfMeasureSymbol), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 KitProductNumber = group.Add(new VocabularyKey(nameof(KitProductNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ComponentProductNumber = group.Add(new VocabularyKey(nameof(ComponentProductNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DoNotShowAtRegister { get; private set; }
         public VocabularyKey Quantity { get; private set; }
         public VocabularyKey UnitOfMeasure { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey UnitOfMeasureSymbol { get; private set; }
         public VocabularyKey KitProductNumber { get; private set; }
         public VocabularyKey ComponentProductNumber { get; private set; }
-
-
     }
 }

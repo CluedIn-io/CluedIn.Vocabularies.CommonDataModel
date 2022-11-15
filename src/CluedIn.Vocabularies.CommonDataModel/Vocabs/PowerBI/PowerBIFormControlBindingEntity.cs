@@ -6,30 +6,26 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PowerBIFormControlBindingEntityVocabulary()
         {
-            VocabularyName = "PowerBIFormControlBindingEntity";
+            VocabularyName = "Power BI Form Control Binding Entity";
             KeyPrefix = "commonDataModel.powerbiformcontrolbindingentity";
             KeySeparator = ".";
             Grouping = "/PowerBIFormControlBindingEntity";
 
             AddGroup("PowerBIFormControlBindingEntity Details", group =>
             {
-                formName = group.Add(new VocabularyKey(nameof(formName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                userId = group.Add(new VocabularyKey(nameof(userId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                dashboardId = group.Add(new VocabularyKey(nameof(dashboardId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                controlId = group.Add(new VocabularyKey(nameof(controlId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                size = group.Add(new VocabularyKey(nameof(size), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                embedUrl = group.Add(new VocabularyKey(nameof(embedUrl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                FormName = group.Add(new VocabularyKey(nameof(FormName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                UserId = group.Add(new VocabularyKey(nameof(UserId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DashboardId = group.Add(new VocabularyKey(nameof(DashboardId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ControlId = group.Add(new VocabularyKey(nameof(ControlId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Size = group.Add(new VocabularyKey(nameof(Size), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EmbedUrl = group.Add(new VocabularyKey(nameof(EmbedUrl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey formName { get; private set; }
-        public VocabularyKey userId { get; private set; }
-        public VocabularyKey dashboardId { get; private set; }
-        public VocabularyKey controlId { get; private set; }
-        public VocabularyKey size { get; private set; }
-        public VocabularyKey embedUrl { get; private set; }
-
-
+        public VocabularyKey FormName { get; private set; }
+        public VocabularyKey UserId { get; private set; }
+        public VocabularyKey DashboardId { get; private set; }
+        public VocabularyKey ControlId { get; private set; }
+        public VocabularyKey Size { get; private set; }
+        public VocabularyKey EmbedUrl { get; private set; }
     }
 }

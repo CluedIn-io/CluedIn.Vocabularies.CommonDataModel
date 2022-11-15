@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerVoucherTypeAccountRestrictionEntityVocabulary()
         {
-            VocabularyName = "LedgerVoucherTypeAccountRestrictionEntity";
+            VocabularyName = "Ledger Voucher Type Account Restriction Entity";
             KeyPrefix = "commonDataModel.ledgervouchertypeaccountrestrictionentity";
             KeySeparator = ".";
             Grouping = "/LedgerVoucherTypeAccountRestrictionEntity";
@@ -32,10 +32,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LedgerDimension = group.Add(new VocabularyKey(nameof(LedgerDimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(LedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RestrictionType = group.Add(new VocabularyKey(nameof(RestrictionType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DefaultApproverRecId { get; private set; }
         public VocabularyKey JournalName { get; private set; }
         public VocabularyKey DefaultPreparedByWorkerRecId { get; private set; }
@@ -55,7 +53,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LedgerDimension { get; private set; }
         public VocabularyKey LedgerDimensionDisplayValue { get; private set; }
         public VocabularyKey RestrictionType { get; private set; }
-
-
     }
 }

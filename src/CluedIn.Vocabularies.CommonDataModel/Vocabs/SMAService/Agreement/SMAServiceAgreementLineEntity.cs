@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SMAServiceAgreementLineEntityVocabulary()
         {
-            VocabularyName = "SMAServiceAgreementLineEntity";
+            VocabularyName = "SMA Service Agreement Line Entity";
             KeyPrefix = "commonDataModel.smaserviceagreementlineentity";
             KeySeparator = ".";
             Grouping = "/SMAServiceAgreementLineEntity";
@@ -56,10 +56,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Hours = group.Add(new VocabularyKey(nameof(Hours), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ItemQuantity = group.Add(new VocabularyKey(nameof(ItemQuantity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExpenseQuantity = group.Add(new VocabularyKey(nameof(ExpenseQuantity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DefaultLedgerDimension { get; private set; }
         public VocabularyKey DefaultLedgerDimensionDisplayValue { get; private set; }
         public VocabularyKey IsLineSuspended { get; private set; }
@@ -103,7 +101,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Hours { get; private set; }
         public VocabularyKey ItemQuantity { get; private set; }
         public VocabularyKey ExpenseQuantity { get; private set; }
-
-
     }
 }

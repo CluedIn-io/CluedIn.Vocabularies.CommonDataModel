@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesOrderHeaderCDSEntityVocabulary()
         {
-            VocabularyName = "SalesOrderHeaderCDSEntity";
+            VocabularyName = "Sales Order Header CDS Entity";
             KeyPrefix = "commonDataModel.salesorderheadercdsentity";
             KeySeparator = ".";
             Grouping = "/SalesOrderHeaderCDSEntity";
@@ -103,10 +103,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SalesOrderOriginType = group.Add(new VocabularyKey(nameof(SalesOrderOriginType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExternalWorkOrderStatus = group.Add(new VocabularyKey(nameof(ExternalWorkOrderStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProjectId = group.Add(new VocabularyKey(nameof(ProjectId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ArePricesIncludingSalesTax { get; private set; }
         public VocabularyKey CashDiscountCode { get; private set; }
         public VocabularyKey ConfirmedReceiptDate { get; private set; }
@@ -197,7 +195,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SalesOrderOriginType { get; private set; }
         public VocabularyKey ExternalWorkOrderStatus { get; private set; }
         public VocabularyKey ProjectId { get; private set; }
-
-
     }
 }

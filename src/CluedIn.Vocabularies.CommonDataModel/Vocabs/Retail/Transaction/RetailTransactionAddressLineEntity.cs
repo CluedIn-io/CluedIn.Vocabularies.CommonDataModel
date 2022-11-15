@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailTransactionAddressLineEntityVocabulary()
         {
-            VocabularyName = "RetailTransactionAddressLineEntity";
+            VocabularyName = "Retail Transaction Address Line Entity";
             KeyPrefix = "commonDataModel.retailtransactionaddresslineentity";
             KeySeparator = ".";
             Grouping = "/RetailTransactionAddressLineEntity";
@@ -31,10 +31,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Email = group.Add(new VocabularyKey(nameof(Email), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RetailChannelTableOMOperatingUnitId = group.Add(new VocabularyKey(nameof(RetailChannelTableOMOperatingUnitId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OperatingUnitNumber = group.Add(new VocabularyKey(nameof(OperatingUnitNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AttentionToAddressLine { get; private set; }
         public VocabularyKey Channel { get; private set; }
         public VocabularyKey City { get; private set; }
@@ -53,7 +51,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Email { get; private set; }
         public VocabularyKey RetailChannelTableOMOperatingUnitId { get; private set; }
         public VocabularyKey OperatingUnitNumber { get; private set; }
-
-
     }
 }

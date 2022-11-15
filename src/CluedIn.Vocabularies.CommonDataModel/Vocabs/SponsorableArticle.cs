@@ -6,40 +6,36 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SponsorableArticleVocabulary()
         {
-            VocabularyName = "SponsorableArticle";
+            VocabularyName = "Sponsorable Article";
             KeyPrefix = "commonDataModel.sponsorablearticle";
             KeySeparator = ".";
             Grouping = "/SponsorableArticle";
 
             AddGroup("SponsorableArticle Details", group =>
             {
-                exchangeRate = group.Add(new VocabularyKey(nameof(exchangeRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                costPerUnit = group.Add(new VocabularyKey(nameof(costPerUnit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                costPerUnitBase = group.Add(new VocabularyKey(nameof(costPerUnitBase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                description = group.Add(new VocabularyKey(nameof(description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                numberOfUnits = group.Add(new VocabularyKey(nameof(numberOfUnits), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                sponsorableArticleId = group.Add(new VocabularyKey(nameof(sponsorableArticleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                totalCost = group.Add(new VocabularyKey(nameof(totalCost), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                totalCostBase = group.Add(new VocabularyKey(nameof(totalCostBase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CostPerUnit = group.Add(new VocabularyKey(nameof(CostPerUnit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CostPerUnitBase = group.Add(new VocabularyKey(nameof(CostPerUnitBase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                NumberOfUnits = group.Add(new VocabularyKey(nameof(NumberOfUnits), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SponsorableArticleId = group.Add(new VocabularyKey(nameof(SponsorableArticleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TotalCost = group.Add(new VocabularyKey(nameof(TotalCost), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TotalCostBase = group.Add(new VocabularyKey(nameof(TotalCostBase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey exchangeRate { get; private set; }
-        public VocabularyKey costPerUnit { get; private set; }
-        public VocabularyKey costPerUnitBase { get; private set; }
-        public VocabularyKey description { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey numberOfUnits { get; private set; }
-        public VocabularyKey sponsorableArticleId { get; private set; }
-        public VocabularyKey totalCost { get; private set; }
-        public VocabularyKey totalCostBase { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey CostPerUnit { get; private set; }
+        public VocabularyKey CostPerUnitBase { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey NumberOfUnits { get; private set; }
+        public VocabularyKey SponsorableArticleId { get; private set; }
+        public VocabularyKey TotalCost { get; private set; }
+        public VocabularyKey TotalCostBase { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

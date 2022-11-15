@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmJobEntityVocabulary()
         {
-            VocabularyName = "HcmJobEntity";
+            VocabularyName = "Hcm Job Entity";
             KeyPrefix = "commonDataModel.hcmjobentity";
             KeySeparator = ".";
             Grouping = "/HcmJobEntity";
@@ -37,10 +37,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Expiration = group.Add(new VocabularyKey(nameof(Expiration), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AllowUnlimitedPositions = group.Add(new VocabularyKey(nameof(AllowUnlimitedPositions), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PaidHourly = group.Add(new VocabularyKey(nameof(PaidHourly), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey JobId { get; private set; }
         public VocabularyKey MaximumNumberOfPositions { get; private set; }
         public VocabularyKey CompensationLevel { get; private set; }
@@ -65,7 +63,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Expiration { get; private set; }
         public VocabularyKey AllowUnlimitedPositions { get; private set; }
         public VocabularyKey PaidHourly { get; private set; }
-
-
     }
 }

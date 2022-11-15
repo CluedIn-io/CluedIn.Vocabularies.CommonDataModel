@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCROpenSalesPostageDiscountJournalLineCDSEntityVocabulary()
         {
-            VocabularyName = "MCROpenSalesPostageDiscountJournalLineCDSEntity";
+            VocabularyName = "MCR Open Sales Postage Discount Journal Line CDS Entity";
             KeyPrefix = "commonDataModel.mcropensalespostagediscountjournallinecdsentity";
             KeySeparator = ".";
             Grouping = "/MCROpenSalesPostageDiscountJournalLineCDSEntity";
@@ -37,10 +37,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 QuantityFrom = group.Add(new VocabularyKey(nameof(QuantityFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 QuantityTo = group.Add(new VocabularyKey(nameof(QuantityTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 QuantityUnitSymbol = group.Add(new VocabularyKey(nameof(QuantityUnitSymbol), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductNumber { get; private set; }
         public VocabularyKey CustomerAccountNumber { get; private set; }
         public VocabularyKey DiscountAmount { get; private set; }
@@ -65,7 +63,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey QuantityFrom { get; private set; }
         public VocabularyKey QuantityTo { get; private set; }
         public VocabularyKey QuantityUnitSymbol { get; private set; }
-
-
     }
 }

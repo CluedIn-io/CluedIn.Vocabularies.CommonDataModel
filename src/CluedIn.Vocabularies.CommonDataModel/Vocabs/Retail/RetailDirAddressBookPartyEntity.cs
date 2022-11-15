@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailDirAddressBookPartyEntityVocabulary()
         {
-            VocabularyName = "RetailDirAddressBookPartyEntity";
+            VocabularyName = "Retail Dir Address Book Party Entity";
             KeyPrefix = "commonDataModel.retaildiraddressbookpartyentity";
             KeySeparator = ".";
             Grouping = "/RetailDirAddressBookPartyEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PartyRecordId = group.Add(new VocabularyKey(nameof(PartyRecordId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AddressBookName = group.Add(new VocabularyKey(nameof(AddressBookName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PartyNumber = group.Add(new VocabularyKey(nameof(PartyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AddressBookRecordId { get; private set; }
         public VocabularyKey PartyRecordId { get; private set; }
         public VocabularyKey AddressBookName { get; private set; }
         public VocabularyKey PartyNumber { get; private set; }
-
-
     }
 }

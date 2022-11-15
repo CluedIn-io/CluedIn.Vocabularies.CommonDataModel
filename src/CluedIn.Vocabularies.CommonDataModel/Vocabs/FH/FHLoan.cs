@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FHLoanVocabulary()
         {
-            VocabularyName = "FHLoan";
+            VocabularyName = "FH Loan";
             KeyPrefix = "commonDataModel.fhloan";
             KeySeparator = ".";
             Grouping = "/FHLoan";
@@ -14,146 +14,142 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             AddGroup("FHLoan Details", group =>
             {
                 FH_LoanId = group.Add(new VocabularyKey(nameof(FH_LoanId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                modifiedOn = group.Add(new VocabularyKey(nameof(modifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statecode = group.Add(new VocabularyKey(nameof(statecode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statuscode = group.Add(new VocabularyKey(nameof(statuscode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                importSequenceNumber = group.Add(new VocabularyKey(nameof(importSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                overriddenCreatedOn = group.Add(new VocabularyKey(nameof(overriddenCreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                timeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(timeZoneRuleVersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Statecode = group.Add(new VocabularyKey(nameof(Statecode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Statuscode = group.Add(new VocabularyKey(nameof(Statuscode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                accountingClassification = group.Add(new VocabularyKey(nameof(accountingClassification), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                balance = group.Add(new VocabularyKey(nameof(balance), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                balance_Base = group.Add(new VocabularyKey(nameof(balance_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                balanceDefault = group.Add(new VocabularyKey(nameof(balanceDefault), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                balanceExchangerate = group.Add(new VocabularyKey(nameof(balanceExchangerate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                capitalArrears = group.Add(new VocabularyKey(nameof(capitalArrears), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                capitalarrears_Base = group.Add(new VocabularyKey(nameof(capitalarrears_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                capitalArrears_default = group.Add(new VocabularyKey(nameof(capitalArrears_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                collectionRisk = group.Add(new VocabularyKey(nameof(collectionRisk), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                delinquencyStatus = group.Add(new VocabularyKey(nameof(delinquencyStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                disbursedAmount = group.Add(new VocabularyKey(nameof(disbursedAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                disbursedamount_Base = group.Add(new VocabularyKey(nameof(disbursedamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                disbursedAmount_default = group.Add(new VocabularyKey(nameof(disbursedAmount_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                disbursementDate = group.Add(new VocabularyKey(nameof(disbursementDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                feeArrears = group.Add(new VocabularyKey(nameof(feeArrears), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                feearrears_Base = group.Add(new VocabularyKey(nameof(feearrears_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                feeArrears_default = group.Add(new VocabularyKey(nameof(feeArrears_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                financialHoldingCategory = group.Add(new VocabularyKey(nameof(financialHoldingCategory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                financialHoldingType = group.Add(new VocabularyKey(nameof(financialHoldingType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                installmentAmount = group.Add(new VocabularyKey(nameof(installmentAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                installmentamount_Base = group.Add(new VocabularyKey(nameof(installmentamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                installmentAmount_default = group.Add(new VocabularyKey(nameof(installmentAmount_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                integrationKey = group.Add(new VocabularyKey(nameof(integrationKey), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                interestArrears = group.Add(new VocabularyKey(nameof(interestArrears), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                interestarrears_Base = group.Add(new VocabularyKey(nameof(interestarrears_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                interestArrears_default = group.Add(new VocabularyKey(nameof(interestArrears_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                interestrate = group.Add(new VocabularyKey(nameof(interestrate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                interestReviewPeriod = group.Add(new VocabularyKey(nameof(interestReviewPeriod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                interestType = group.Add(new VocabularyKey(nameof(interestType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                lastPaymentAmount = group.Add(new VocabularyKey(nameof(lastPaymentAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                lastpaymentamount_Base = group.Add(new VocabularyKey(nameof(lastpaymentamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                lastPaymentAmount_default = group.Add(new VocabularyKey(nameof(lastPaymentAmount_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                lastPaymentDate = group.Add(new VocabularyKey(nameof(lastPaymentDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                loanStartDate = group.Add(new VocabularyKey(nameof(loanStartDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                maturitydate = group.Add(new VocabularyKey(nameof(maturitydate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                modeofPayment = group.Add(new VocabularyKey(nameof(modeofPayment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                nextInterestReviewDate = group.Add(new VocabularyKey(nameof(nextInterestReviewDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                nextPaymentAmount = group.Add(new VocabularyKey(nameof(nextPaymentAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                nextpaymentamount_Base = group.Add(new VocabularyKey(nameof(nextpaymentamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                nextPaymentAmount_default = group.Add(new VocabularyKey(nameof(nextPaymentAmount_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                nextPaymentDate = group.Add(new VocabularyKey(nameof(nextPaymentDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                numberofDeferralsMade = group.Add(new VocabularyKey(nameof(numberofDeferralsMade), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                numberofInstallmentsPaid = group.Add(new VocabularyKey(nameof(numberofInstallmentsPaid), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                overdueDate = group.Add(new VocabularyKey(nameof(overdueDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                principalAmount = group.Add(new VocabularyKey(nameof(principalAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                principalamount_Base = group.Add(new VocabularyKey(nameof(principalamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                principalAmount_default = group.Add(new VocabularyKey(nameof(principalAmount_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                repaymentAccount = group.Add(new VocabularyKey(nameof(repaymentAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                totalArrear = group.Add(new VocabularyKey(nameof(totalArrear), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                totalarrear_Base = group.Add(new VocabularyKey(nameof(totalarrear_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                totalArrear_default = group.Add(new VocabularyKey(nameof(totalArrear_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                totalInterestPaid = group.Add(new VocabularyKey(nameof(totalInterestPaid), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                totalinterestpaid_Base = group.Add(new VocabularyKey(nameof(totalinterestpaid_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                totalInterestPaid_default = group.Add(new VocabularyKey(nameof(totalInterestPaid_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                balanceDefaultDisplayValue = group.Add(new VocabularyKey(nameof(balanceDefaultDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                balanceDisplayValue = group.Add(new VocabularyKey(nameof(balanceDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                balancedisplayvalue_Base = group.Add(new VocabularyKey(nameof(balancedisplayvalue_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                dayspastdue = group.Add(new VocabularyKey(nameof(dayspastdue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AccountingClassification = group.Add(new VocabularyKey(nameof(AccountingClassification), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Balance = group.Add(new VocabularyKey(nameof(Balance), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Balance_Base = group.Add(new VocabularyKey(nameof(Balance_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BalanceDefault = group.Add(new VocabularyKey(nameof(BalanceDefault), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BalanceExchangerate = group.Add(new VocabularyKey(nameof(BalanceExchangerate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CapitalArrears = group.Add(new VocabularyKey(nameof(CapitalArrears), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Capitalarrears_Base = group.Add(new VocabularyKey(nameof(Capitalarrears_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CapitalArrears_default = group.Add(new VocabularyKey(nameof(CapitalArrears_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CollectionRisk = group.Add(new VocabularyKey(nameof(CollectionRisk), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DelinquencyStatus = group.Add(new VocabularyKey(nameof(DelinquencyStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DisbursedAmount = group.Add(new VocabularyKey(nameof(DisbursedAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Disbursedamount_Base = group.Add(new VocabularyKey(nameof(Disbursedamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DisbursedAmount_default = group.Add(new VocabularyKey(nameof(DisbursedAmount_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DisbursementDate = group.Add(new VocabularyKey(nameof(DisbursementDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FeeArrears = group.Add(new VocabularyKey(nameof(FeeArrears), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Feearrears_Base = group.Add(new VocabularyKey(nameof(Feearrears_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FeeArrears_default = group.Add(new VocabularyKey(nameof(FeeArrears_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FinancialHoldingCategory = group.Add(new VocabularyKey(nameof(FinancialHoldingCategory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FinancialHoldingType = group.Add(new VocabularyKey(nameof(FinancialHoldingType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InstallmentAmount = group.Add(new VocabularyKey(nameof(InstallmentAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Installmentamount_Base = group.Add(new VocabularyKey(nameof(Installmentamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InstallmentAmount_default = group.Add(new VocabularyKey(nameof(InstallmentAmount_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IntegrationKey = group.Add(new VocabularyKey(nameof(IntegrationKey), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InterestArrears = group.Add(new VocabularyKey(nameof(InterestArrears), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Interestarrears_Base = group.Add(new VocabularyKey(nameof(Interestarrears_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InterestArrears_default = group.Add(new VocabularyKey(nameof(InterestArrears_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Interestrate = group.Add(new VocabularyKey(nameof(Interestrate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InterestReviewPeriod = group.Add(new VocabularyKey(nameof(InterestReviewPeriod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InterestType = group.Add(new VocabularyKey(nameof(InterestType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LastPaymentAmount = group.Add(new VocabularyKey(nameof(LastPaymentAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Lastpaymentamount_Base = group.Add(new VocabularyKey(nameof(Lastpaymentamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LastPaymentAmount_default = group.Add(new VocabularyKey(nameof(LastPaymentAmount_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LastPaymentDate = group.Add(new VocabularyKey(nameof(LastPaymentDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LoanStartDate = group.Add(new VocabularyKey(nameof(LoanStartDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Maturitydate = group.Add(new VocabularyKey(nameof(Maturitydate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModeofPayment = group.Add(new VocabularyKey(nameof(ModeofPayment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                NextInterestReviewDate = group.Add(new VocabularyKey(nameof(NextInterestReviewDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                NextPaymentAmount = group.Add(new VocabularyKey(nameof(NextPaymentAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Nextpaymentamount_Base = group.Add(new VocabularyKey(nameof(Nextpaymentamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                NextPaymentAmount_default = group.Add(new VocabularyKey(nameof(NextPaymentAmount_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                NextPaymentDate = group.Add(new VocabularyKey(nameof(NextPaymentDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                NumberofDeferralsMade = group.Add(new VocabularyKey(nameof(NumberofDeferralsMade), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                NumberofInstallmentsPaid = group.Add(new VocabularyKey(nameof(NumberofInstallmentsPaid), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OverdueDate = group.Add(new VocabularyKey(nameof(OverdueDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PrincipalAmount = group.Add(new VocabularyKey(nameof(PrincipalAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Principalamount_Base = group.Add(new VocabularyKey(nameof(Principalamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PrincipalAmount_default = group.Add(new VocabularyKey(nameof(PrincipalAmount_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RepaymentAccount = group.Add(new VocabularyKey(nameof(RepaymentAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TotalArrear = group.Add(new VocabularyKey(nameof(TotalArrear), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Totalarrear_Base = group.Add(new VocabularyKey(nameof(Totalarrear_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TotalArrear_default = group.Add(new VocabularyKey(nameof(TotalArrear_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TotalInterestPaid = group.Add(new VocabularyKey(nameof(TotalInterestPaid), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Totalinterestpaid_Base = group.Add(new VocabularyKey(nameof(Totalinterestpaid_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TotalInterestPaid_default = group.Add(new VocabularyKey(nameof(TotalInterestPaid_default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BalanceDefaultDisplayValue = group.Add(new VocabularyKey(nameof(BalanceDefaultDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BalanceDisplayValue = group.Add(new VocabularyKey(nameof(BalanceDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Balancedisplayvalue_Base = group.Add(new VocabularyKey(nameof(Balancedisplayvalue_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Dayspastdue = group.Add(new VocabularyKey(nameof(Dayspastdue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
         public VocabularyKey FH_LoanId { get; private set; }
-        public VocabularyKey createdOn { get; private set; }
-        public VocabularyKey modifiedOn { get; private set; }
-        public VocabularyKey statecode { get; private set; }
-        public VocabularyKey statuscode { get; private set; }
-        public VocabularyKey importSequenceNumber { get; private set; }
-        public VocabularyKey overriddenCreatedOn { get; private set; }
-        public VocabularyKey timeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Statecode { get; private set; }
+        public VocabularyKey Statuscode { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey accountingClassification { get; private set; }
-        public VocabularyKey balance { get; private set; }
-        public VocabularyKey balance_Base { get; private set; }
-        public VocabularyKey balanceDefault { get; private set; }
-        public VocabularyKey balanceExchangerate { get; private set; }
-        public VocabularyKey capitalArrears { get; private set; }
-        public VocabularyKey capitalarrears_Base { get; private set; }
-        public VocabularyKey capitalArrears_default { get; private set; }
-        public VocabularyKey collectionRisk { get; private set; }
-        public VocabularyKey delinquencyStatus { get; private set; }
-        public VocabularyKey disbursedAmount { get; private set; }
-        public VocabularyKey disbursedamount_Base { get; private set; }
-        public VocabularyKey disbursedAmount_default { get; private set; }
-        public VocabularyKey disbursementDate { get; private set; }
-        public VocabularyKey feeArrears { get; private set; }
-        public VocabularyKey feearrears_Base { get; private set; }
-        public VocabularyKey feeArrears_default { get; private set; }
-        public VocabularyKey financialHoldingCategory { get; private set; }
-        public VocabularyKey financialHoldingType { get; private set; }
-        public VocabularyKey installmentAmount { get; private set; }
-        public VocabularyKey installmentamount_Base { get; private set; }
-        public VocabularyKey installmentAmount_default { get; private set; }
-        public VocabularyKey integrationKey { get; private set; }
-        public VocabularyKey interestArrears { get; private set; }
-        public VocabularyKey interestarrears_Base { get; private set; }
-        public VocabularyKey interestArrears_default { get; private set; }
-        public VocabularyKey interestrate { get; private set; }
-        public VocabularyKey interestReviewPeriod { get; private set; }
-        public VocabularyKey interestType { get; private set; }
-        public VocabularyKey lastPaymentAmount { get; private set; }
-        public VocabularyKey lastpaymentamount_Base { get; private set; }
-        public VocabularyKey lastPaymentAmount_default { get; private set; }
-        public VocabularyKey lastPaymentDate { get; private set; }
-        public VocabularyKey loanStartDate { get; private set; }
-        public VocabularyKey maturitydate { get; private set; }
-        public VocabularyKey modeofPayment { get; private set; }
-        public VocabularyKey nextInterestReviewDate { get; private set; }
-        public VocabularyKey nextPaymentAmount { get; private set; }
-        public VocabularyKey nextpaymentamount_Base { get; private set; }
-        public VocabularyKey nextPaymentAmount_default { get; private set; }
-        public VocabularyKey nextPaymentDate { get; private set; }
-        public VocabularyKey numberofDeferralsMade { get; private set; }
-        public VocabularyKey numberofInstallmentsPaid { get; private set; }
-        public VocabularyKey overdueDate { get; private set; }
-        public VocabularyKey principalAmount { get; private set; }
-        public VocabularyKey principalamount_Base { get; private set; }
-        public VocabularyKey principalAmount_default { get; private set; }
-        public VocabularyKey repaymentAccount { get; private set; }
-        public VocabularyKey totalArrear { get; private set; }
-        public VocabularyKey totalarrear_Base { get; private set; }
-        public VocabularyKey totalArrear_default { get; private set; }
-        public VocabularyKey totalInterestPaid { get; private set; }
-        public VocabularyKey totalinterestpaid_Base { get; private set; }
-        public VocabularyKey totalInterestPaid_default { get; private set; }
-        public VocabularyKey balanceDefaultDisplayValue { get; private set; }
-        public VocabularyKey balanceDisplayValue { get; private set; }
-        public VocabularyKey balancedisplayvalue_Base { get; private set; }
-        public VocabularyKey dayspastdue { get; private set; }
-
-
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey AccountingClassification { get; private set; }
+        public VocabularyKey Balance { get; private set; }
+        public VocabularyKey Balance_Base { get; private set; }
+        public VocabularyKey BalanceDefault { get; private set; }
+        public VocabularyKey BalanceExchangerate { get; private set; }
+        public VocabularyKey CapitalArrears { get; private set; }
+        public VocabularyKey Capitalarrears_Base { get; private set; }
+        public VocabularyKey CapitalArrears_default { get; private set; }
+        public VocabularyKey CollectionRisk { get; private set; }
+        public VocabularyKey DelinquencyStatus { get; private set; }
+        public VocabularyKey DisbursedAmount { get; private set; }
+        public VocabularyKey Disbursedamount_Base { get; private set; }
+        public VocabularyKey DisbursedAmount_default { get; private set; }
+        public VocabularyKey DisbursementDate { get; private set; }
+        public VocabularyKey FeeArrears { get; private set; }
+        public VocabularyKey Feearrears_Base { get; private set; }
+        public VocabularyKey FeeArrears_default { get; private set; }
+        public VocabularyKey FinancialHoldingCategory { get; private set; }
+        public VocabularyKey FinancialHoldingType { get; private set; }
+        public VocabularyKey InstallmentAmount { get; private set; }
+        public VocabularyKey Installmentamount_Base { get; private set; }
+        public VocabularyKey InstallmentAmount_default { get; private set; }
+        public VocabularyKey IntegrationKey { get; private set; }
+        public VocabularyKey InterestArrears { get; private set; }
+        public VocabularyKey Interestarrears_Base { get; private set; }
+        public VocabularyKey InterestArrears_default { get; private set; }
+        public VocabularyKey Interestrate { get; private set; }
+        public VocabularyKey InterestReviewPeriod { get; private set; }
+        public VocabularyKey InterestType { get; private set; }
+        public VocabularyKey LastPaymentAmount { get; private set; }
+        public VocabularyKey Lastpaymentamount_Base { get; private set; }
+        public VocabularyKey LastPaymentAmount_default { get; private set; }
+        public VocabularyKey LastPaymentDate { get; private set; }
+        public VocabularyKey LoanStartDate { get; private set; }
+        public VocabularyKey Maturitydate { get; private set; }
+        public VocabularyKey ModeofPayment { get; private set; }
+        public VocabularyKey NextInterestReviewDate { get; private set; }
+        public VocabularyKey NextPaymentAmount { get; private set; }
+        public VocabularyKey Nextpaymentamount_Base { get; private set; }
+        public VocabularyKey NextPaymentAmount_default { get; private set; }
+        public VocabularyKey NextPaymentDate { get; private set; }
+        public VocabularyKey NumberofDeferralsMade { get; private set; }
+        public VocabularyKey NumberofInstallmentsPaid { get; private set; }
+        public VocabularyKey OverdueDate { get; private set; }
+        public VocabularyKey PrincipalAmount { get; private set; }
+        public VocabularyKey Principalamount_Base { get; private set; }
+        public VocabularyKey PrincipalAmount_default { get; private set; }
+        public VocabularyKey RepaymentAccount { get; private set; }
+        public VocabularyKey TotalArrear { get; private set; }
+        public VocabularyKey Totalarrear_Base { get; private set; }
+        public VocabularyKey TotalArrear_default { get; private set; }
+        public VocabularyKey TotalInterestPaid { get; private set; }
+        public VocabularyKey Totalinterestpaid_Base { get; private set; }
+        public VocabularyKey TotalInterestPaid_default { get; private set; }
+        public VocabularyKey BalanceDefaultDisplayValue { get; private set; }
+        public VocabularyKey BalanceDisplayValue { get; private set; }
+        public VocabularyKey Balancedisplayvalue_Base { get; private set; }
+        public VocabularyKey Dayspastdue { get; private set; }
     }
 }

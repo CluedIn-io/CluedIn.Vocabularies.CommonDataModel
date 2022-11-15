@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustomerParametersEntityVocabulary()
         {
-            VocabularyName = "CustomerParametersEntity";
+            VocabularyName = "Customer Parameters Entity";
             KeyPrefix = "commonDataModel.customerparametersentity";
             KeySeparator = ".";
             Grouping = "/CustomerParametersEntity";
@@ -141,10 +141,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TaxItemGroup = group.Add(new VocabularyKey(nameof(TaxItemGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PrepaymentFactureAutoCreate = group.Add(new VocabularyKey(nameof(PrepaymentFactureAutoCreate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SettlePrepaymentVATType = group.Add(new VocabularyKey(nameof(SettlePrepaymentVATType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CustomerDefaultOneTimeAccount { get; private set; }
         public VocabularyKey CustomerIsTaxGroupMandatory { get; private set; }
         public VocabularyKey CustomerMinimumRefund { get; private set; }
@@ -273,7 +271,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TaxItemGroup { get; private set; }
         public VocabularyKey PrepaymentFactureAutoCreate { get; private set; }
         public VocabularyKey SettlePrepaymentVATType { get; private set; }
-
-
     }
 }

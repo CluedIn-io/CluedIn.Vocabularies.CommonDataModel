@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjProjectJournalApprovalDetailsEntityVocabulary()
         {
-            VocabularyName = "ProjProjectJournalApprovalDetailsEntity";
+            VocabularyName = "Proj Project Journal Approval Details Entity";
             KeyPrefix = "commonDataModel.projprojectjournalapprovaldetailsentity";
             KeySeparator = ".";
             Grouping = "/ProjProjectJournalApprovalDetailsEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Previous = group.Add(new VocabularyKey(nameof(Previous), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Approve = group.Add(new VocabularyKey(nameof(Approve), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Next = group.Add(new VocabularyKey(nameof(Next), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Editing { get; private set; }
         public VocabularyKey CheckJournal { get; private set; }
         public VocabularyKey Group { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Previous { get; private set; }
         public VocabularyKey Approve { get; private set; }
         public VocabularyKey Next { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPurchaseRebateParametersEntityVocabulary()
         {
-            VocabularyName = "PurchPurchaseRebateParametersEntity";
+            VocabularyName = "Purch Purchase Rebate Parameters Entity";
             KeyPrefix = "commonDataModel.purchpurchaserebateparametersentity";
             KeySeparator = ".";
             Grouping = "/PurchPurchaseRebateParametersEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AccruedLiabilityMainAccountIdDisplayValue = group.Add(new VocabularyKey(nameof(AccruedLiabilityMainAccountIdDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InterimExpenseMainAccountId = group.Add(new VocabularyKey(nameof(InterimExpenseMainAccountId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InterimExpenseMainAccountIdDisplayValue = group.Add(new VocabularyKey(nameof(InterimExpenseMainAccountIdDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WillInvoiceProcessingCreateRebateClaim { get; private set; }
         public VocabularyKey RebateWeekStartingDay { get; private set; }
         public VocabularyKey RebateAccrualProcessingJournalNameId { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AccruedLiabilityMainAccountIdDisplayValue { get; private set; }
         public VocabularyKey InterimExpenseMainAccountId { get; private set; }
         public VocabularyKey InterimExpenseMainAccountIdDisplayValue { get; private set; }
-
-
     }
 }

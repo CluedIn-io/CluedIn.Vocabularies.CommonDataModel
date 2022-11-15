@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationRatingMetadataRateBaseFieldEntityVocabulary()
         {
-            VocabularyName = "TMSTransportationRatingMetadataRateBaseFieldEntity";
+            VocabularyName = "TMS Transportation Rating Metadata Rate Base Field Entity";
             KeyPrefix = "commonDataModel.tmstransportationratingmetadataratebasefieldentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationRatingMetadataRateBaseFieldEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FieldSequence = group.Add(new VocabularyKey(nameof(FieldSequence), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsMandatoryField = group.Add(new VocabularyKey(nameof(IsMandatoryField), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FieldLookupType = group.Add(new VocabularyKey(nameof(FieldLookupType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FieldDataType { get; private set; }
         public VocabularyKey FieldName { get; private set; }
         public VocabularyKey TransportationRatingMetadataId { get; private set; }
         public VocabularyKey FieldSequence { get; private set; }
         public VocabularyKey IsMandatoryField { get; private set; }
         public VocabularyKey FieldLookupType { get; private set; }
-
-
     }
 }

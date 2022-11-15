@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LogisticsAddressDistrictV2EntityVocabulary()
         {
-            VocabularyName = "LogisticsAddressDistrictV2Entity";
+            VocabularyName = "Logistics Address District V2 Entity";
             KeyPrefix = "commonDataModel.logisticsaddressdistrictv2entity";
             KeySeparator = ".";
             Grouping = "/LogisticsAddressDistrictV2Entity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CountryRegionId = group.Add(new VocabularyKey(nameof(CountryRegionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CountyId = group.Add(new VocabularyKey(nameof(CountyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StateId = group.Add(new VocabularyKey(nameof(StateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey City { get; private set; }
         public VocabularyKey CityKey { get; private set; }
         public VocabularyKey District { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CountryRegionId { get; private set; }
         public VocabularyKey CountyId { get; private set; }
         public VocabularyKey StateId { get; private set; }
-
-
     }
 }

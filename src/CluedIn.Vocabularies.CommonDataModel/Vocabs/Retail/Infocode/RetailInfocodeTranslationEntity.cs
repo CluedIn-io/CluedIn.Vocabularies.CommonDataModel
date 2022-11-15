@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailInfocodeTranslationEntityVocabulary()
         {
-            VocabularyName = "RetailInfocodeTranslationEntity";
+            VocabularyName = "Retail Infocode Translation Entity";
             KeyPrefix = "commonDataModel.retailinfocodetranslationentity";
             KeySeparator = ".";
             Grouping = "/RetailInfocodeTranslationEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LanguageId = group.Add(new VocabularyKey(nameof(LanguageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Prompt = group.Add(new VocabularyKey(nameof(Prompt), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RetailInfocodeTable_infocodeId = group.Add(new VocabularyKey(nameof(RetailInfocodeTable_infocodeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey LanguageId { get; private set; }
         public VocabularyKey Prompt { get; private set; }
         public VocabularyKey RetailInfocodeTable_infocodeId { get; private set; }
-
-
     }
 }

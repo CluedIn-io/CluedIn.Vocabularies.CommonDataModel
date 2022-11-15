@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxServiceCodeByLocationEntityVocabulary()
         {
-            VocabularyName = "TaxServiceCodeByLocationEntity";
+            VocabularyName = "Tax Service Code By Location Entity";
             KeyPrefix = "commonDataModel.taxservicecodebylocationentity";
             KeySeparator = ".";
             Grouping = "/TaxServiceCodeByLocationEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ServiceCode = group.Add(new VocabularyKey(nameof(ServiceCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ServiceCodeDescription = group.Add(new VocabularyKey(nameof(ServiceCodeDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ParentServiceCode { get; private set; }
         public VocabularyKey CountryRegion { get; private set; }
         public VocabularyKey State { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ServiceCode { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey ServiceCodeDescription { get; private set; }
-
-
     }
 }

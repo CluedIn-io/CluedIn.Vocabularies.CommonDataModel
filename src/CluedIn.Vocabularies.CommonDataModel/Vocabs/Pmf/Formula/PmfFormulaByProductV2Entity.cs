@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PmfFormulaByProductV2EntityVocabulary()
         {
-            VocabularyName = "PmfFormulaByProductV2Entity";
+            VocabularyName = "Pmf Formula By Product V2 Entity";
             KeyPrefix = "commonDataModel.pmfformulabyproductv2entity";
             KeySeparator = ".";
             Grouping = "/PmfFormulaByProductV2Entity";
@@ -42,10 +42,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 VersionProductVersionId = group.Add(new VocabularyKey(nameof(VersionProductVersionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VersionRecordId = group.Add(new VocabularyKey(nameof(VersionRecordId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ByProductFormulaId = group.Add(new VocabularyKey(nameof(ByProductFormulaId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FormulaId { get; private set; }
         public VocabularyKey Quantity { get; private set; }
         public VocabularyKey QuantityDenominator { get; private set; }
@@ -75,7 +73,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey VersionProductVersionId { get; private set; }
         public VocabularyKey VersionRecordId { get; private set; }
         public VocabularyKey ByProductFormulaId { get; private set; }
-
-
     }
 }

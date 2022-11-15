@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetImpairmentCashGeneratingUnitAssetEntityVocabulary()
         {
-            VocabularyName = "AssetImpairmentCashGeneratingUnitAssetEntity";
+            VocabularyName = "Asset Impairment Cash Generating Unit Asset Entity";
             KeyPrefix = "commonDataModel.assetimpairmentcashgeneratingunitassetentity";
             KeySeparator = ".";
             Grouping = "/AssetImpairmentCashGeneratingUnitAssetEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ImpairmentAllocationMethod = group.Add(new VocabularyKey(nameof(ImpairmentAllocationMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ImpairmentHoldingAssetId = group.Add(new VocabularyKey(nameof(ImpairmentHoldingAssetId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ImpairmentHoldingBookId = group.Add(new VocabularyKey(nameof(ImpairmentHoldingBookId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ImpairmentCGU { get; private set; }
         public VocabularyKey CashGeneratingUnitNumber { get; private set; }
         public VocabularyKey AssetNumber { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ImpairmentAllocationMethod { get; private set; }
         public VocabularyKey ImpairmentHoldingAssetId { get; private set; }
         public VocabularyKey ImpairmentHoldingBookId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSLoadPostingMethodEntityVocabulary()
         {
-            VocabularyName = "WHSLoadPostingMethodEntity";
+            VocabularyName = "WHS Load Posting Method Entity";
             KeyPrefix = "commonDataModel.whsloadpostingmethodentity";
             KeySeparator = ".";
             Grouping = "/WHSLoadPostingMethodEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 MethodName = group.Add(new VocabularyKey(nameof(MethodName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MethodPosition = group.Add(new VocabularyKey(nameof(MethodPosition), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey MethodName { get; private set; }
         public VocabularyKey MethodPosition { get; private set; }
-
-
     }
 }

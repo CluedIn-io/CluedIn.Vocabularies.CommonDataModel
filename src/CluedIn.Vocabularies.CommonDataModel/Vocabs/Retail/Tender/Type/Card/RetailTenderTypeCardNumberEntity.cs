@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailTenderTypeCardNumberEntityVocabulary()
         {
-            VocabularyName = "RetailTenderTypeCardNumberEntity";
+            VocabularyName = "Retail Tender Type Card Number Entity";
             KeyPrefix = "commonDataModel.retailtendertypecardnumberentity";
             KeySeparator = ".";
             Grouping = "/RetailTenderTypeCardNumberEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CardNumberLength = group.Add(new VocabularyKey(nameof(CardNumberLength), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CardNumberTo = group.Add(new VocabularyKey(nameof(CardNumberTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CardTypeId = group.Add(new VocabularyKey(nameof(CardTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CardNumberFrom { get; private set; }
         public VocabularyKey CardNumberLength { get; private set; }
         public VocabularyKey CardNumberTo { get; private set; }
         public VocabularyKey CardTypeId { get; private set; }
-
-
     }
 }

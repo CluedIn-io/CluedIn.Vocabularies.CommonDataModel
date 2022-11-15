@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSCustomerGroupProductFilterEntityVocabulary()
         {
-            VocabularyName = "WHSCustomerGroupProductFilterEntity";
+            VocabularyName = "WHS Customer Group Product Filter Entity";
             KeyPrefix = "commonDataModel.whscustomergroupproductfilterentity";
             KeySeparator = ".";
             Grouping = "/WHSCustomerGroupProductFilterEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SecondProductFilterCode = group.Add(new VocabularyKey(nameof(SecondProductFilterCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ThirdProductFilterCode = group.Add(new VocabularyKey(nameof(ThirdProductFilterCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FourthProductFilterCode = group.Add(new VocabularyKey(nameof(FourthProductFilterCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FromDateTime { get; private set; }
         public VocabularyKey ProductGroupId { get; private set; }
         public VocabularyKey ReferenceRecordId { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SecondProductFilterCode { get; private set; }
         public VocabularyKey ThirdProductFilterCode { get; private set; }
         public VocabularyKey FourthProductFilterCode { get; private set; }
-
-
     }
 }

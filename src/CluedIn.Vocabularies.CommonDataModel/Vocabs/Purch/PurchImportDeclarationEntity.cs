@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchImportDeclarationEntityVocabulary()
         {
-            VocabularyName = "PurchImportDeclarationEntity";
+            VocabularyName = "Purch Import Declaration Entity";
             KeyPrefix = "commonDataModel.purchimportdeclarationentity";
             KeySeparator = ".";
             Grouping = "/PurchImportDeclarationEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DrawBackNumber = group.Add(new VocabularyKey(nameof(DrawBackNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransportMode = group.Add(new VocabularyKey(nameof(TransportMode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AFRMM = group.Add(new VocabularyKey(nameof(AFRMM), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ImportDeclarationNumber { get; private set; }
         public VocabularyKey ImportDeclarationDate { get; private set; }
         public VocabularyKey Port { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DrawBackNumber { get; private set; }
         public VocabularyKey TransportMode { get; private set; }
         public VocabularyKey AFRMM { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmPositionWorkerAssignmentEntityVocabulary()
         {
-            VocabularyName = "HcmPositionWorkerAssignmentEntity";
+            VocabularyName = "Hcm Position Worker Assignment Entity";
             KeyPrefix = "commonDataModel.hcmpositionworkerassignmententity";
             KeySeparator = ".";
             Grouping = "/HcmPositionWorkerAssignmentEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ValidTo = group.Add(new VocabularyKey(nameof(ValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Worker = group.Add(new VocabularyKey(nameof(Worker), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsPrimaryPosition = group.Add(new VocabularyKey(nameof(IsPrimaryPosition), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Position { get; private set; }
         public VocabularyKey PositionId { get; private set; }
         public VocabularyKey PersonnelNumber { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ValidTo { get; private set; }
         public VocabularyKey Worker { get; private set; }
         public VocabularyKey IsPrimaryPosition { get; private set; }
-
-
     }
 }

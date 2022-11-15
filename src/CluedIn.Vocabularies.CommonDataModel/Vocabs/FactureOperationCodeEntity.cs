@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FactureOperationCodeEntityVocabulary()
         {
-            VocabularyName = "FactureOperationCodeEntity";
+            VocabularyName = "Facture Operation Code Entity";
             KeyPrefix = "commonDataModel.factureoperationcodeentity";
             KeySeparator = ".";
             Grouping = "/FactureOperationCodeEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Derive = group.Add(new VocabularyKey(nameof(Derive), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OperationTypeDefault = group.Add(new VocabularyKey(nameof(OperationTypeDefault), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Code { get; private set; }
         public VocabularyKey Derive { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey OperationTypeDefault { get; private set; }
-
-
     }
 }

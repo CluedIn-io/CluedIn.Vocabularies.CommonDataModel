@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LogisticsAddressParametersEntityVocabulary()
         {
-            VocabularyName = "LogisticsAddressParametersEntity";
+            VocabularyName = "Logistics Address Parameters Entity";
             KeyPrefix = "commonDataModel.logisticsaddressparametersentity";
             KeySeparator = ".";
             Grouping = "/LogisticsAddressParametersEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ValidateCity = group.Add(new VocabularyKey(nameof(ValidateCity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidateDistrict = group.Add(new VocabularyKey(nameof(ValidateDistrict), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidateZipCode = group.Add(new VocabularyKey(nameof(ValidateZipCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Key { get; private set; }
         public VocabularyKey ValidateCity { get; private set; }
         public VocabularyKey ValidateDistrict { get; private set; }
         public VocabularyKey ValidateZipCode { get; private set; }
-
-
     }
 }

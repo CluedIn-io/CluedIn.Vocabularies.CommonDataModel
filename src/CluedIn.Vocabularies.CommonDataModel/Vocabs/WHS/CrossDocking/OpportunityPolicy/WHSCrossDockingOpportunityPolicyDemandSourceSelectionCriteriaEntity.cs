@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSCrossDockingOpportunityPolicyDemandSourceSelectionCriteriaEntityVocabulary()
         {
-            VocabularyName = "WHSCrossDockingOpportunityPolicyDemandSourceSelectionCriteriaEntity";
+            VocabularyName = "WHS Cross Docking Opportunity Policy Demand Source Selection Criteria Entity";
             KeyPrefix = "commonDataModel.whscrossdockingopportunitypolicydemandsourceselectioncriteriaentity";
             KeySeparator = ".";
             Grouping = "/WHSCrossDockingOpportunityPolicyDemandSourceSelectionCriteriaEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MustAppointmentSchedulingHaveAssignedLocationCriterion = group.Add(new VocabularyKey(nameof(MustAppointmentSchedulingHaveAssignedLocationCriterion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CrossDockingPrioritizationStrategy = group.Add(new VocabularyKey(nameof(CrossDockingPrioritizationStrategy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CrossDockingOpportunityPolicyName = group.Add(new VocabularyKey(nameof(CrossDockingOpportunityPolicyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DemandSourceTypeCriterion { get; private set; }
         public VocabularyKey PrioritySequenceNumber { get; private set; }
         public VocabularyKey CrossDockingOpportunityPolicyRecId { get; private set; }
         public VocabularyKey MustAppointmentSchedulingHaveAssignedLocationCriterion { get; private set; }
         public VocabularyKey CrossDockingPrioritizationStrategy { get; private set; }
         public VocabularyKey CrossDockingOpportunityPolicyName { get; private set; }
-
-
     }
 }

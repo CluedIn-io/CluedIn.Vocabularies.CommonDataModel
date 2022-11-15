@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustomerAttributeValueEntityVocabulary()
         {
-            VocabularyName = "CustomerAttributeValueEntity";
+            VocabularyName = "Customer Attribute Value Entity";
             KeyPrefix = "commonDataModel.customerattributevalueentity";
             KeySeparator = ".";
             Grouping = "/CustomerAttributeValueEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DecimalValue = group.Add(new VocabularyKey(nameof(DecimalValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IntValue = group.Add(new VocabularyKey(nameof(IntValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TextValue = group.Add(new VocabularyKey(nameof(TextValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InstanceRelationType { get; private set; }
         public VocabularyKey CustomerDataAreaId { get; private set; }
         public VocabularyKey AccountNum { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DecimalValue { get; private set; }
         public VocabularyKey IntValue { get; private set; }
         public VocabularyKey TextValue { get; private set; }
-
-
     }
 }

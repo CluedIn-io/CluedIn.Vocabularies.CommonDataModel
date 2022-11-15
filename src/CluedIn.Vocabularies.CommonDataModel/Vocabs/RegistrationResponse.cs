@@ -6,28 +6,24 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RegistrationResponseVocabulary()
         {
-            VocabularyName = "RegistrationResponse";
+            VocabularyName = "Registration Response";
             KeyPrefix = "commonDataModel.registrationresponse";
             KeySeparator = ".";
             Grouping = "/RegistrationResponse";
 
             AddGroup("RegistrationResponse Details", group =>
             {
-                createdFromApi = group.Add(new VocabularyKey(nameof(createdFromApi), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                registrationResponseId = group.Add(new VocabularyKey(nameof(registrationResponseId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                response = group.Add(new VocabularyKey(nameof(response), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                CreatedFromApi = group.Add(new VocabularyKey(nameof(CreatedFromApi), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RegistrationResponseId = group.Add(new VocabularyKey(nameof(RegistrationResponseId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Response = group.Add(new VocabularyKey(nameof(Response), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey createdFromApi { get; private set; }
-        public VocabularyKey registrationResponseId { get; private set; }
-        public VocabularyKey response { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey CreatedFromApi { get; private set; }
+        public VocabularyKey RegistrationResponseId { get; private set; }
+        public VocabularyKey Response { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

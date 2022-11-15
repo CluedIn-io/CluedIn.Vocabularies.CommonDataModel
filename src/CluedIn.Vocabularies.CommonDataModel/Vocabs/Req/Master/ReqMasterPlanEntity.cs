@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReqMasterPlanEntityVocabulary()
         {
-            VocabularyName = "ReqMasterPlanEntity";
+            VocabularyName = "Req Master Plan Entity";
             KeyPrefix = "commonDataModel.reqmasterplanentity";
             KeySeparator = ".";
             Grouping = "/ReqMasterPlanEntity";
@@ -76,10 +76,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WillMasterPlanningIncludeExpectedInventoryTransactions = group.Add(new VocabularyKey(nameof(WillMasterPlanningIncludeExpectedInventoryTransactions), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillMasterPlanningIncludeQuotations = group.Add(new VocabularyKey(nameof(WillMasterPlanningIncludeQuotations), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillMasterPlanningIncludeRFQs = group.Add(new VocabularyKey(nameof(WillMasterPlanningIncludeRFQs), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ForecastModelId { get; private set; }
         public VocabularyKey ForecastRequirementReductionMethod { get; private set; }
         public VocabularyKey ContinuityPlanId { get; private set; }
@@ -143,7 +141,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WillMasterPlanningIncludeExpectedInventoryTransactions { get; private set; }
         public VocabularyKey WillMasterPlanningIncludeQuotations { get; private set; }
         public VocabularyKey WillMasterPlanningIncludeRFQs { get; private set; }
-
-
     }
 }

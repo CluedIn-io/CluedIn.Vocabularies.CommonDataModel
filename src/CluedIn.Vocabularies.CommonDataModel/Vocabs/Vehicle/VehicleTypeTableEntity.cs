@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VehicleTypeTableEntityVocabulary()
         {
-            VocabularyName = "VehicleTypeTableEntity";
+            VocabularyName = "Vehicle Type Table Entity";
             KeyPrefix = "commonDataModel.vehicletypetableentity";
             KeySeparator = ".";
             Grouping = "/VehicleTypeTableEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 VehicleType = group.Add(new VocabularyKey(nameof(VehicleType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey VehicleType { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendPaymentBIAccountingToSystemExchRateVocabulary()
         {
-            VocabularyName = "VendPaymentBIAccountingToSystemExchRate";
+            VocabularyName = "Vend Payment BI Accounting To System Exch Rate";
             KeyPrefix = "commonDataModel.vendpaymentbiaccountingtosystemexchrate";
             KeySeparator = ".";
             Grouping = "/VendPaymentBIAccountingToSystemExchRate";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CrossRate = group.Add(new VocabularyKey(nameof(CrossRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GregorianDate = group.Add(new VocabularyKey(nameof(GregorianDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AccountingCurrency = group.Add(new VocabularyKey(nameof(AccountingCurrency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Company { get; private set; }
         public VocabularyKey CrossRate { get; private set; }
         public VocabularyKey GregorianDate { get; private set; }
         public VocabularyKey AccountingCurrency { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvPerDiemsEntityVocabulary()
         {
-            VocabularyName = "TrvPerDiemsEntity";
+            VocabularyName = "Trv Per Diems Entity";
             KeyPrefix = "commonDataModel.trvperdiemsentity";
             KeySeparator = ".";
             Grouping = "/TrvPerDiemsEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DeductOneMeal = group.Add(new VocabularyKey(nameof(DeductOneMeal), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DeductThreeOrMoreMeals = group.Add(new VocabularyKey(nameof(DeductThreeOrMoreMeals), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DeductTwoMeals = group.Add(new VocabularyKey(nameof(DeductTwoMeals), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Currency { get; private set; }
         public VocabularyKey DateFrom { get; private set; }
         public VocabularyKey DateTo { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DeductOneMeal { get; private set; }
         public VocabularyKey DeductThreeOrMoreMeals { get; private set; }
         public VocabularyKey DeductTwoMeals { get; private set; }
-
-
     }
 }

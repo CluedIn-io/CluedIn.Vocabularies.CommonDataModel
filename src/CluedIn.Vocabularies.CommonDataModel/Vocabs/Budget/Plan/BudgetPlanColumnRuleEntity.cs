@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetPlanColumnRuleEntityVocabulary()
         {
-            VocabularyName = "BudgetPlanColumnRuleEntity";
+            VocabularyName = "Budget Plan Column Rule Entity";
             KeyPrefix = "commonDataModel.budgetplancolumnruleentity";
             KeySeparator = ".";
             Grouping = "/BudgetPlanColumnRuleEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RightSideValueOne = group.Add(new VocabularyKey(nameof(RightSideValueOne), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RightSideValueTwo = group.Add(new VocabularyKey(nameof(RightSideValueTwo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ColumnName = group.Add(new VocabularyKey(nameof(ColumnName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Column { get; private set; }
         public VocabularyKey TableName { get; private set; }
         public VocabularyKey FieldName { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RightSideValueOne { get; private set; }
         public VocabularyKey RightSideValueTwo { get; private set; }
         public VocabularyKey ColumnName { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FiscalDocumentMiscChargeEntityVocabulary()
         {
-            VocabularyName = "FiscalDocumentMiscChargeEntity";
+            VocabularyName = "Fiscal Document Misc Charge Entity";
             KeyPrefix = "commonDataModel.fiscaldocumentmiscchargeentity";
             KeySeparator = ".";
             Grouping = "/FiscalDocumentMiscChargeEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FiscalDocumentThirdPartyCNPJorCPF = group.Add(new VocabularyKey(nameof(FiscalDocumentThirdPartyCNPJorCPF), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FiscalDocumentVoucher = group.Add(new VocabularyKey(nameof(FiscalDocumentVoucher), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Type = group.Add(new VocabularyKey(nameof(Type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Amount { get; private set; }
         public VocabularyKey ChargeNumber { get; private set; }
         public VocabularyKey FiscalDocumentDirection { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FiscalDocumentThirdPartyCNPJorCPF { get; private set; }
         public VocabularyKey FiscalDocumentVoucher { get; private set; }
         public VocabularyKey Type { get; private set; }
-
-
     }
 }

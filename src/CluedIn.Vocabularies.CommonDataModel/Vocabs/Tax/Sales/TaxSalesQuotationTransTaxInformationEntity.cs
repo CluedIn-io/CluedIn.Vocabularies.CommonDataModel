@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxSalesQuotationTransTaxInformationEntityVocabulary()
         {
-            VocabularyName = "TaxSalesQuotationTransTaxInformationEntity";
+            VocabularyName = "Tax Sales Quotation Trans Tax Information Entity";
             KeyPrefix = "commonDataModel.taxsalesquotationtranstaxinformationentity";
             KeySeparator = ".";
             Grouping = "/TaxSalesQuotationTransTaxInformationEntity";
@@ -67,10 +67,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 VendorLocation = group.Add(new VocabularyKey(nameof(VendorLocation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 QuotationId = group.Add(new VocabularyKey(nameof(QuotationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineCreationSequenceNumber = group.Add(new VocabularyKey(nameof(LineCreationSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey VendorTaxInformation { get; private set; }
         public VocabularyKey BankLocation { get; private set; }
         public VocabularyKey BankTaxInformation { get; private set; }
@@ -125,7 +123,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey VendorLocation { get; private set; }
         public VocabularyKey QuotationId { get; private set; }
         public VocabularyKey LineCreationSequenceNumber { get; private set; }
-
-
     }
 }

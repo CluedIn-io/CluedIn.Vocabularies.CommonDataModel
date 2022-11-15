@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendVendorV2EntityVocabulary()
         {
-            VocabularyName = "VendVendorV2Entity";
+            VocabularyName = "Vend Vendor V2 Entity";
             KeyPrefix = "commonDataModel.vendvendorv2entity";
             KeySeparator = ".";
             Grouping = "/VendVendorV2Entity";
@@ -283,10 +283,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PrimaryContactEmailRecordId = group.Add(new VocabularyKey(nameof(PrimaryContactEmailRecordId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PrimaryContactURLRecordId = group.Add(new VocabularyKey(nameof(PrimaryContactURLRecordId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AddressRecordId = group.Add(new VocabularyKey(nameof(AddressRecordId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey VendorAccountNumber { get; private set; }
         public VocabularyKey WithholdingTaxGroupCode { get; private set; }
         public VocabularyKey DefaultPaymentTermsName { get; private set; }
@@ -557,7 +555,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PrimaryContactEmailRecordId { get; private set; }
         public VocabularyKey PrimaryContactURLRecordId { get; private set; }
         public VocabularyKey AddressRecordId { get; private set; }
-
-
     }
 }

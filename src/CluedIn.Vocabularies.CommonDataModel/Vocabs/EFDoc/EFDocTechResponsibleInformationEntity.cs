@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EFDocTechResponsibleInformationEntityVocabulary()
         {
-            VocabularyName = "EFDocTechResponsibleInformationEntity";
+            VocabularyName = "EF Doc Tech Responsible Information Entity";
             KeyPrefix = "commonDataModel.efdoctechresponsibleinformationentity";
             KeySeparator = ".";
             Grouping = "/EFDocTechResponsibleInformationEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TechnicalResponsiblePhone = group.Add(new VocabularyKey(nameof(TechnicalResponsiblePhone), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TechnicalResponsibleCSRTId = group.Add(new VocabularyKey(nameof(TechnicalResponsibleCSRTId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TechnicalResponsibleCSRT = group.Add(new VocabularyKey(nameof(TechnicalResponsibleCSRT), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey State { get; private set; }
         public VocabularyKey TechnicalResponsibleCNPJ { get; private set; }
         public VocabularyKey TechnicalResponsibleContactName { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TechnicalResponsiblePhone { get; private set; }
         public VocabularyKey TechnicalResponsibleCSRTId { get; private set; }
         public VocabularyKey TechnicalResponsibleCSRT { get; private set; }
-
-
     }
 }

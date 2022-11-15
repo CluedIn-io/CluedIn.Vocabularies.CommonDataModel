@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventInventoryAdjustmentJournalEntryCDSEntityVocabulary()
         {
-            VocabularyName = "InventInventoryAdjustmentJournalEntryCDSEntity";
+            VocabularyName = "Invent Inventory Adjustment Journal Entry CDS Entity";
             KeyPrefix = "commonDataModel.inventinventoryadjustmentjournalentrycdsentity";
             KeySeparator = ".";
             Grouping = "/InventInventoryAdjustmentJournalEntryCDSEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductVersionId = group.Add(new VocabularyKey(nameof(ProductVersionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductColorId = group.Add(new VocabularyKey(nameof(ProductColorId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductConfigurationId = group.Add(new VocabularyKey(nameof(ProductConfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey JournalNameId { get; private set; }
         public VocabularyKey JournalNumber { get; private set; }
         public VocabularyKey LineNumber { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProductVersionId { get; private set; }
         public VocabularyKey ProductColorId { get; private set; }
         public VocabularyKey ProductConfigurationId { get; private set; }
-
-
     }
 }

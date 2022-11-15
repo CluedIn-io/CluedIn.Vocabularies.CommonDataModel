@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailInfocodeLineEntityVocabulary()
         {
-            VocabularyName = "RetailInfocodeLineEntity";
+            VocabularyName = "Retail Infocode Line Entity";
             KeyPrefix = "commonDataModel.retailinfocodelineentity";
             KeySeparator = ".";
             Grouping = "/RetailInfocodeLineEntity";
@@ -30,10 +30,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 InventoryLotId = group.Add(new VocabularyKey(nameof(InventoryLotId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 JournalBatchNumber = group.Add(new VocabularyKey(nameof(JournalBatchNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 JournalLineNumber = group.Add(new VocabularyKey(nameof(JournalLineNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Amount { get; private set; }
         public VocabularyKey InformationAmount { get; private set; }
         public VocabularyKey InfocodeId { get; private set; }
@@ -51,7 +49,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey InventoryLotId { get; private set; }
         public VocabularyKey JournalBatchNumber { get; private set; }
         public VocabularyKey JournalLineNumber { get; private set; }
-
-
     }
 }

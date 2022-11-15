@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetPlanProcessAdministrationEntityVocabulary()
         {
-            VocabularyName = "BudgetPlanProcessAdministrationEntity";
+            VocabularyName = "Budget Plan Process Administration Entity";
             KeyPrefix = "commonDataModel.budgetplanprocessadministrationentity";
             KeySeparator = ".";
             Grouping = "/BudgetPlanProcessAdministrationEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Process = group.Add(new VocabularyKey(nameof(Process), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Workflow = group.Add(new VocabularyKey(nameof(Workflow), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PartyName = group.Add(new VocabularyKey(nameof(PartyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BudgetingOrganization { get; private set; }
         public VocabularyKey BudgetPlanningProcess { get; private set; }
         public VocabularyKey BudgetPlanningWorkflow { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Process { get; private set; }
         public VocabularyKey Workflow { get; private set; }
         public VocabularyKey PartyName { get; private set; }
-
-
     }
 }

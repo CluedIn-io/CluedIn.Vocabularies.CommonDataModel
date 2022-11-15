@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetPlanWorkflowStagesEntityVocabulary()
         {
-            VocabularyName = "BudgetPlanWorkflowStagesEntity";
+            VocabularyName = "Budget Plan Workflow Stages Entity";
             KeyPrefix = "commonDataModel.budgetplanworkflowstagesentity";
             KeySeparator = ".";
             Grouping = "/BudgetPlanWorkflowStagesEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RestrictResetBudgetPlan = group.Add(new VocabularyKey(nameof(RestrictResetBudgetPlan), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PriorBudgetPlanningStageRecId = group.Add(new VocabularyKey(nameof(PriorBudgetPlanningStageRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PriorBudgetPlanningWorkflowRecId = group.Add(new VocabularyKey(nameof(PriorBudgetPlanningWorkflowRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BudgetPlanningStage { get; private set; }
         public VocabularyKey BudgetPlanningWorkflow { get; private set; }
         public VocabularyKey PriorBudgetPlanningWorkflowStage { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RestrictResetBudgetPlan { get; private set; }
         public VocabularyKey PriorBudgetPlanningStageRecId { get; private set; }
         public VocabularyKey PriorBudgetPlanningWorkflowRecId { get; private set; }
-
-
     }
 }

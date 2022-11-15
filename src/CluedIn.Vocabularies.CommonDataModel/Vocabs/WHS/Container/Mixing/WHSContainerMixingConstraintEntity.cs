@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSContainerMixingConstraintEntityVocabulary()
         {
-            VocabularyName = "WHSContainerMixingConstraintEntity";
+            VocabularyName = "WHS Container Mixing Constraint Entity";
             KeyPrefix = "commonDataModel.whscontainermixingconstraintentity";
             KeySeparator = ".";
             Grouping = "/WHSContainerMixingConstraintEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ConstraintTableId = group.Add(new VocabularyKey(nameof(ConstraintTableId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ConstraintTableName = group.Add(new VocabularyKey(nameof(ConstraintTableName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ContainerBuildTemplateId = group.Add(new VocabularyKey(nameof(ContainerBuildTemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ConstraintFieldName { get; private set; }
         public VocabularyKey ConstraintTableId { get; private set; }
         public VocabularyKey ConstraintTableName { get; private set; }
         public VocabularyKey ContainerBuildTemplateId { get; private set; }
-
-
     }
 }

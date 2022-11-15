@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DirPartyLocationPostalAddressV2EntityVocabulary()
         {
-            VocabularyName = "DirPartyLocationPostalAddressV2Entity";
+            VocabularyName = "Dir Party Location Postal Address V2 Entity";
             KeyPrefix = "commonDataModel.dirpartylocationpostaladdressv2entity";
             KeySeparator = ".";
             Grouping = "/DirPartyLocationPostalAddressV2Entity";
@@ -54,10 +54,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Roles = group.Add(new VocabularyKey(nameof(Roles), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ResolveDuplicateAddress = group.Add(new VocabularyKey(nameof(ResolveDuplicateAddress), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxGroup = group.Add(new VocabularyKey(nameof(TaxGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AttentionToAddressLine { get; private set; }
         public VocabularyKey IsLocationOwner { get; private set; }
         public VocabularyKey IsPostalAddress { get; private set; }
@@ -99,7 +97,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Roles { get; private set; }
         public VocabularyKey ResolveDuplicateAddress { get; private set; }
         public VocabularyKey TaxGroup { get; private set; }
-
-
     }
 }

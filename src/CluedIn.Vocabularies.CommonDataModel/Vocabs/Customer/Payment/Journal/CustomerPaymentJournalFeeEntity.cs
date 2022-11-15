@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustomerPaymentJournalFeeEntityVocabulary()
         {
-            VocabularyName = "CustomerPaymentJournalFeeEntity";
+            VocabularyName = "Customer Payment Journal Fee Entity";
             KeyPrefix = "commonDataModel.customerpaymentjournalfeeentity";
             KeySeparator = ".";
             Grouping = "/CustomerPaymentJournalFeeEntity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SourceJournalBatchNumber = group.Add(new VocabularyKey(nameof(SourceJournalBatchNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsWithholdingCalculationEnabled = group.Add(new VocabularyKey(nameof(IsWithholdingCalculationEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ItemWithholdingTaxGroupCode = group.Add(new VocabularyKey(nameof(ItemWithholdingTaxGroupCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SourceJournalLineRefRecId { get; private set; }
         public VocabularyKey DefaultDimension { get; private set; }
         public VocabularyKey CurrencyCode { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SourceJournalBatchNumber { get; private set; }
         public VocabularyKey IsWithholdingCalculationEnabled { get; private set; }
         public VocabularyKey ItemWithholdingTaxGroupCode { get; private set; }
-
-
     }
 }

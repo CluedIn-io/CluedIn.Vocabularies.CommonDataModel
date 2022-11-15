@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SMAServiceAgreementHeaderEntityVocabulary()
         {
-            VocabularyName = "SMAServiceAgreementHeaderEntity";
+            VocabularyName = "SMA Service Agreement Header Entity";
             KeyPrefix = "commonDataModel.smaserviceagreementheaderentity";
             KeySeparator = ".";
             Grouping = "/SMAServiceAgreementHeaderEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ServiceAgreementTemplateGroupId = group.Add(new VocabularyKey(nameof(ServiceAgreementTemplateGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ServiceLevelAgreementId = group.Add(new VocabularyKey(nameof(ServiceLevelAgreementId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ServiceResponsiblePersonnelNumber = group.Add(new VocabularyKey(nameof(ServiceResponsiblePersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CombineServiceOrderMethod { get; private set; }
         public VocabularyKey ContactPersonId { get; private set; }
         public VocabularyKey DefaultLineActivityTypeId { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ServiceAgreementTemplateGroupId { get; private set; }
         public VocabularyKey ServiceLevelAgreementId { get; private set; }
         public VocabularyKey ServiceResponsiblePersonnelNumber { get; private set; }
-
-
     }
 }

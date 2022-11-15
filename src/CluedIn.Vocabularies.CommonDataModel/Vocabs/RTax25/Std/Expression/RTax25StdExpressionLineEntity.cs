@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RTax25StdExpressionLineEntityVocabulary()
         {
-            VocabularyName = "RTax25StdExpressionLineEntity";
+            VocabularyName = "R Tax 25 Std Expression Line Entity";
             KeyPrefix = "commonDataModel.rtax25stdexpressionlineentity";
             KeySeparator = ".";
             Grouping = "/RTax25StdExpressionLineEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 To = group.Add(new VocabularyKey(nameof(To), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Output = group.Add(new VocabularyKey(nameof(Output), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PeriodTypes = group.Add(new VocabularyKey(nameof(PeriodTypes), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LineNumber { get; private set; }
         public VocabularyKey LineType { get; private set; }
         public VocabularyKey Note { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey To { get; private set; }
         public VocabularyKey Output { get; private set; }
         public VocabularyKey PeriodTypes { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRTaxGroupDefaultRulesEntityVocabulary()
         {
-            VocabularyName = "MCRTaxGroupDefaultRulesEntity";
+            VocabularyName = "MCR Tax Group Default Rules Entity";
             KeyPrefix = "commonDataModel.mcrtaxgroupdefaultrulesentity";
             KeySeparator = ".";
             Grouping = "/MCRTaxGroupDefaultRulesEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Priority = group.Add(new VocabularyKey(nameof(Priority), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IncludeState = group.Add(new VocabularyKey(nameof(IncludeState), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IncludeZipCode = group.Add(new VocabularyKey(nameof(IncludeZipCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IncludeCity { get; private set; }
         public VocabularyKey IncludeCountry { get; private set; }
         public VocabularyKey IncludeCounty { get; private set; }
         public VocabularyKey Priority { get; private set; }
         public VocabularyKey IncludeState { get; private set; }
         public VocabularyKey IncludeZipCode { get; private set; }
-
-
     }
 }

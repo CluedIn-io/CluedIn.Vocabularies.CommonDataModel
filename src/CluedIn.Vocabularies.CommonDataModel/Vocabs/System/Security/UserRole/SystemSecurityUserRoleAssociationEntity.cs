@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SystemSecurityUserRoleAssociationEntityVocabulary()
         {
-            VocabularyName = "SystemSecurityUserRoleAssociationEntity";
+            VocabularyName = "System Security User Role Association Entity";
             KeyPrefix = "commonDataModel.systemsecurityuserroleassociationentity";
             KeySeparator = ".";
             Grouping = "/SystemSecurityUserRoleAssociationEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 UserId = group.Add(new VocabularyKey(nameof(UserId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SecurityRoleIdentifier = group.Add(new VocabularyKey(nameof(SecurityRoleIdentifier), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SecurityRoleName = group.Add(new VocabularyKey(nameof(SecurityRoleName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AssignmentMode { get; private set; }
         public VocabularyKey AssignmentStatus { get; private set; }
         public VocabularyKey SecurityRole { get; private set; }
         public VocabularyKey UserId { get; private set; }
         public VocabularyKey SecurityRoleIdentifier { get; private set; }
         public VocabularyKey SecurityRoleName { get; private set; }
-
-
     }
 }

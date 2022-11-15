@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseWorkAuditTemplateEntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseWorkAuditTemplateEntity";
+            VocabularyName = "WHS Warehouse Work Audit Template Entity";
             KeyPrefix = "commonDataModel.whswarehouseworkaudittemplateentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseWorkAuditTemplateEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TemplateDescription = group.Add(new VocabularyKey(nameof(TemplateDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StatusChangeTriggeringValue = group.Add(new VocabularyKey(nameof(StatusChangeTriggeringValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TemplateId = group.Add(new VocabularyKey(nameof(TemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AuditTriggeringEvent { get; private set; }
         public VocabularyKey AuditTriggeringReferenceWarehouseWorkFieldName { get; private set; }
         public VocabularyKey AuditTriggeringFieldId { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TemplateDescription { get; private set; }
         public VocabularyKey StatusChangeTriggeringValue { get; private set; }
         public VocabularyKey TemplateId { get; private set; }
-
-
     }
 }

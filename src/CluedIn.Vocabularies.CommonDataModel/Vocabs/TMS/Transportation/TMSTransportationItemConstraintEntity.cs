@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationItemConstraintEntityVocabulary()
         {
-            VocabularyName = "TMSTransportationItemConstraintEntity";
+            VocabularyName = "TMS Transportation Item Constraint Entity";
             KeyPrefix = "commonDataModel.tmstransportationitemconstraintentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationItemConstraintEntity";
@@ -30,10 +30,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TransportationMethodId = group.Add(new VocabularyKey(nameof(TransportationMethodId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransportationModeCode = group.Add(new VocabularyKey(nameof(TransportationModeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ConstraintName = group.Add(new VocabularyKey(nameof(ConstraintName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ConstraintActionMode { get; private set; }
         public VocabularyKey ShippingCarrierId { get; private set; }
         public VocabularyKey ShippingCarrierServiceId { get; private set; }
@@ -51,7 +49,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TransportationMethodId { get; private set; }
         public VocabularyKey TransportationModeCode { get; private set; }
         public VocabularyKey ConstraintName { get; private set; }
-
-
     }
 }

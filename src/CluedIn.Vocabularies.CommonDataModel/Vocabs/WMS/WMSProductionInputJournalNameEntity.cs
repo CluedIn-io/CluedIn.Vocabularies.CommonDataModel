@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WMSProductionInputJournalNameEntityVocabulary()
         {
-            VocabularyName = "WMSProductionInputJournalNameEntity";
+            VocabularyName = "WMS Production Input Journal Name Entity";
             KeyPrefix = "commonDataModel.wmsproductioninputjournalnameentity";
             KeySeparator = ".";
             Grouping = "/WMSProductionInputJournalNameEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WillPostingDeleteLinesByDefault = group.Add(new VocabularyKey(nameof(WillPostingDeleteLinesByDefault), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultJournalDescription = group.Add(new VocabularyKey(nameof(DefaultJournalDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 JournalNameId = group.Add(new VocabularyKey(nameof(JournalNameId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DefaultPrivateUserGroupId { get; private set; }
         public VocabularyKey IsPickingWarehouseLocationCheckedByDefault { get; private set; }
         public VocabularyKey WillPostingDeleteLinesByDefault { get; private set; }
         public VocabularyKey DefaultJournalDescription { get; private set; }
         public VocabularyKey JournalNameId { get; private set; }
-
-
     }
 }

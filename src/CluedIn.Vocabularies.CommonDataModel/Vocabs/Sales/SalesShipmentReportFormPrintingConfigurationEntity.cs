@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesShipmentReportFormPrintingConfigurationEntityVocabulary()
         {
-            VocabularyName = "SalesShipmentReportFormPrintingConfigurationEntity";
+            VocabularyName = "Sales Shipment Report Form Printing Configuration Entity";
             KeyPrefix = "commonDataModel.salesshipmentreportformprintingconfigurationentity";
             KeySeparator = ".";
             Grouping = "/SalesShipmentReportFormPrintingConfigurationEntity";
@@ -14,12 +14,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             AddGroup("SalesShipmentReportFormPrintingConfigurationEntity Details", group =>
             {
                 ReportLayout = group.Add(new VocabularyKey(nameof(ReportLayout), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ReportLayout { get; private set; }
-
-
     }
 }

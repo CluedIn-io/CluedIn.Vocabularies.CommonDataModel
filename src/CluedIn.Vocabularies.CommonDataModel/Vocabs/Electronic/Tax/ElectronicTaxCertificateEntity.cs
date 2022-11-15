@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ElectronicTaxCertificateEntityVocabulary()
         {
-            VocabularyName = "ElectronicTaxCertificateEntity";
+            VocabularyName = "Electronic Tax Certificate Entity";
             KeyPrefix = "commonDataModel.electronictaxcertificateentity";
             KeySeparator = ".";
             Grouping = "/ElectronicTaxCertificateEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CertificateType = group.Add(new VocabularyKey(nameof(CertificateType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UserId = group.Add(new VocabularyKey(nameof(UserId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Company = group.Add(new VocabularyKey(nameof(Company), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CertificatesReference { get; private set; }
         public VocabularyKey CertificateType { get; private set; }
         public VocabularyKey UserId { get; private set; }
         public VocabularyKey Company { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventInventoryValueReportLayoutEntityVocabulary()
         {
-            VocabularyName = "InventInventoryValueReportLayoutEntity";
+            VocabularyName = "Invent Inventory Value Report Layout Entity";
             KeyPrefix = "commonDataModel.inventinventoryvaluereportlayoutentity";
             KeySeparator = ".";
             Grouping = "/InventInventoryValueReportLayoutEntity";
@@ -70,10 +70,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsCostResourceTypeDirectOutsourcingDisplayed = group.Add(new VocabularyKey(nameof(IsCostResourceTypeDirectOutsourcingDisplayed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReportDetailLevel = group.Add(new VocabularyKey(nameof(ReportDetailLevel), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsSubLedgerBeginningBalanceIncluded = group.Add(new VocabularyKey(nameof(IsSubLedgerBeginningBalanceIncluded), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ReportId { get; private set; }
         public VocabularyKey ReportName { get; private set; }
         public VocabularyKey DateIntervalCode { get; private set; }
@@ -131,7 +129,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsCostResourceTypeDirectOutsourcingDisplayed { get; private set; }
         public VocabularyKey ReportDetailLevel { get; private set; }
         public VocabularyKey IsSubLedgerBeginningBalanceIncluded { get; private set; }
-
-
     }
 }

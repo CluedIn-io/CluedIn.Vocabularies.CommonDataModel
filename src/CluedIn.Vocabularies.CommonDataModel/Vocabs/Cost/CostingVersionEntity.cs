@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CostingVersionEntityVocabulary()
         {
-            VocabularyName = "CostingVersionEntity";
+            VocabularyName = "Costing Version Entity";
             KeyPrefix = "commonDataModel.costingversionentity";
             KeySeparator = ".";
             Grouping = "/CostingVersionEntity";
@@ -37,10 +37,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RecordingRestriction = group.Add(new VocabularyKey(nameof(RecordingRestriction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RoundOffCalculation = group.Add(new VocabularyKey(nameof(RoundOffCalculation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VersionId = group.Add(new VocabularyKey(nameof(VersionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AreCostPricesAllowed { get; private set; }
         public VocabularyKey ArePurchasePricesAllowed { get; private set; }
         public VocabularyKey AreSalesPricesAllowed { get; private set; }
@@ -65,7 +63,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RecordingRestriction { get; private set; }
         public VocabularyKey RoundOffCalculation { get; private set; }
         public VocabularyKey VersionId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetPlanEntityVocabulary()
         {
-            VocabularyName = "BudgetPlanEntity";
+            VocabularyName = "Budget Plan Entity";
             KeyPrefix = "commonDataModel.budgetplanentity";
             KeySeparator = ".";
             Grouping = "/BudgetPlanEntity";
@@ -68,10 +68,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BudgetingOrganizationName = group.Add(new VocabularyKey(nameof(BudgetingOrganizationName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PersonnelName = group.Add(new VocabularyKey(nameof(PersonnelName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LedgerAccountAccountStructure = group.Add(new VocabularyKey(nameof(LedgerAccountAccountStructure), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BudgetClass { get; private set; }
         public VocabularyKey BudgetPlanHeader { get; private set; }
         public VocabularyKey BudgetPlanScenario { get; private set; }
@@ -127,7 +125,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey BudgetingOrganizationName { get; private set; }
         public VocabularyKey PersonnelName { get; private set; }
         public VocabularyKey LedgerAccountAccountStructure { get; private set; }
-
-
     }
 }

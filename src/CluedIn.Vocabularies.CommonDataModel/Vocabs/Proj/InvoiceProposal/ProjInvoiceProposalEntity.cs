@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjInvoiceProposalEntityVocabulary()
         {
-            VocabularyName = "ProjInvoiceProposalEntity";
+            VocabularyName = "Proj Invoice Proposal Entity";
             KeyPrefix = "commonDataModel.projinvoiceproposalentity";
             KeySeparator = ".";
             Grouping = "/ProjInvoiceProposalEntity";
@@ -35,10 +35,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 VolumeType = group.Add(new VocabularyKey(nameof(VolumeType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FiscalDocumentTypeId = group.Add(new VocabularyKey(nameof(FiscalDocumentTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FiscalEstablishmentId = group.Add(new VocabularyKey(nameof(FiscalEstablishmentId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SalesCurrency { get; private set; }
         public VocabularyKey FundingSource { get; private set; }
         public VocabularyKey InvoiceDate { get; private set; }
@@ -61,7 +59,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey VolumeType { get; private set; }
         public VocabularyKey FiscalDocumentTypeId { get; private set; }
         public VocabularyKey FiscalEstablishmentId { get; private set; }
-
-
     }
 }

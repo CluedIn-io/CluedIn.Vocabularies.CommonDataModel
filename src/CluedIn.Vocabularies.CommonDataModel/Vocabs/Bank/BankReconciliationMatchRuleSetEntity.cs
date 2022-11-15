@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankReconciliationMatchRuleSetEntityVocabulary()
         {
-            VocabularyName = "BankReconciliationMatchRuleSetEntity";
+            VocabularyName = "Bank Reconciliation Match Rule Set Entity";
             KeyPrefix = "commonDataModel.bankreconciliationmatchrulesetentity";
             KeySeparator = ".";
             Grouping = "/BankReconciliationMatchRuleSetEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LineNumber = group.Add(new VocabularyKey(nameof(LineNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MatchingRule = group.Add(new VocabularyKey(nameof(MatchingRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReconciliationMatchRule = group.Add(new VocabularyKey(nameof(ReconciliationMatchRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey MatchingRuleSet { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey LineNumber { get; private set; }
         public VocabularyKey MatchingRule { get; private set; }
         public VocabularyKey ReconciliationMatchRule { get; private set; }
-
-
     }
 }

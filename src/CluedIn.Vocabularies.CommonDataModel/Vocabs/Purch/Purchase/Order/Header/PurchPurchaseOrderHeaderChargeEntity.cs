@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPurchaseOrderHeaderChargeEntityVocabulary()
         {
-            VocabularyName = "PurchPurchaseOrderHeaderChargeEntity";
+            VocabularyName = "Purch Purchase Order Header Charge Entity";
             KeyPrefix = "commonDataModel.purchpurchaseorderheaderchargeentity";
             KeySeparator = ".";
             Grouping = "/PurchPurchaseOrderHeaderChargeEntity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DocumentRecId = group.Add(new VocabularyKey(nameof(DocumentRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DocumentStatus = group.Add(new VocabularyKey(nameof(DocumentStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsIntercompanyCharge = group.Add(new VocabularyKey(nameof(IsIntercompanyCharge), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ChargeCategory { get; private set; }
         public VocabularyKey PurchaseChargeCode { get; private set; }
         public VocabularyKey ChargeDescription { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DocumentRecId { get; private set; }
         public VocabularyKey DocumentStatus { get; private set; }
         public VocabularyKey IsIntercompanyCharge { get; private set; }
-
-
     }
 }

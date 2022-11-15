@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EInvoiceCFDIParametersEntityVocabulary()
         {
-            VocabularyName = "EInvoiceCFDIParametersEntity";
+            VocabularyName = "E Invoice CFDI Parameters Entity";
             KeyPrefix = "commonDataModel.einvoicecfdiparametersentity";
             KeySeparator = ".";
             Grouping = "/EInvoiceCFDIParametersEntity";
@@ -35,10 +35,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RetailRecalculateRoundingOfTaxBaseAmount = group.Add(new VocabularyKey(nameof(RetailRecalculateRoundingOfTaxBaseAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RetailUnitCode = group.Add(new VocabularyKey(nameof(RetailUnitCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SplitTaxAmountPerLines = group.Add(new VocabularyKey(nameof(SplitTaxAmountPerLines), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Certificate { get; private set; }
         public VocabularyKey CFDIDigestAlgorithm { get; private set; }
         public VocabularyKey CFDIEnvironment { get; private set; }
@@ -61,7 +59,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RetailRecalculateRoundingOfTaxBaseAmount { get; private set; }
         public VocabularyKey RetailUnitCode { get; private set; }
         public VocabularyKey SplitTaxAmountPerLines { get; private set; }
-
-
     }
 }

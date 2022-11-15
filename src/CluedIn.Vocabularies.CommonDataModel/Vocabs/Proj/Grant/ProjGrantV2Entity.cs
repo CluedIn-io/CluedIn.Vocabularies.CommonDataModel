@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjGrantV2EntityVocabulary()
         {
-            VocabularyName = "ProjGrantV2Entity";
+            VocabularyName = "Proj Grant V2 Entity";
             KeyPrefix = "commonDataModel.projgrantv2entity";
             KeySeparator = ".";
             Grouping = "/ProjGrantV2Entity";
@@ -54,10 +54,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProjGrantorType_GrantorType = group.Add(new VocabularyKey(nameof(ProjGrantorType_GrantorType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProjGrantType_GrantType = group.Add(new VocabularyKey(nameof(ProjGrantType_GrantType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkerContact_PersonnelNumber = group.Add(new VocabularyKey(nameof(WorkerContact_PersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ActualAwardDate { get; private set; }
         public VocabularyKey ActualExpirationDate { get; private set; }
         public VocabularyKey ActualStartDate { get; private set; }
@@ -99,7 +97,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProjGrantorType_GrantorType { get; private set; }
         public VocabularyKey ProjGrantType_GrantType { get; private set; }
         public VocabularyKey WorkerContact_PersonnelNumber { get; private set; }
-
-
     }
 }

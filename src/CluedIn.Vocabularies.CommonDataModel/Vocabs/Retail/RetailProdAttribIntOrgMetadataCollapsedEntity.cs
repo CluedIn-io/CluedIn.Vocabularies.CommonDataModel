@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailProdAttribIntOrgMetadataCollapsedEntityVocabulary()
         {
-            VocabularyName = "RetailProdAttribIntOrgMetadataCollapsedEntity";
+            VocabularyName = "Retail Prod Attrib Int Org Metadata Collapsed Entity";
             KeyPrefix = "commonDataModel.retailprodattribintorgmetadatacollapsedentity";
             KeySeparator = ".";
             Grouping = "/RetailProdAttribIntOrgMetadataCollapsedEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ValidFrom = group.Add(new VocabularyKey(nameof(ValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidTo = group.Add(new VocabularyKey(nameof(ValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InternalOrganizationNumber = group.Add(new VocabularyKey(nameof(InternalOrganizationNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AttributeRelationType { get; private set; }
         public VocabularyKey Distance { get; private set; }
         public VocabularyKey IsRequired { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey ValidTo { get; private set; }
         public VocabularyKey InternalOrganizationNumber { get; private set; }
-
-
     }
 }

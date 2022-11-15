@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetPlanLayoutEntityVocabulary()
         {
-            VocabularyName = "BudgetPlanLayoutEntity";
+            VocabularyName = "Budget Plan Layout Entity";
             KeyPrefix = "commonDataModel.budgetplanlayoutentity";
             KeySeparator = ".";
             Grouping = "/BudgetPlanLayoutEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DimensionFocusStructureType = group.Add(new VocabularyKey(nameof(DimensionFocusStructureType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ElementDefinitionName = group.Add(new VocabularyKey(nameof(ElementDefinitionName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Ordinal = group.Add(new VocabularyKey(nameof(Ordinal), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Layout { get; private set; }
         public VocabularyKey ElementDefinition { get; private set; }
         public VocabularyKey IsEditable { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DimensionFocusStructureType { get; private set; }
         public VocabularyKey ElementDefinitionName { get; private set; }
         public VocabularyKey Ordinal { get; private set; }
-
-
     }
 }

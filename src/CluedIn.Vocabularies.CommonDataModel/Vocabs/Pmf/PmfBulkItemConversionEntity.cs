@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PmfBulkItemConversionEntityVocabulary()
         {
-            VocabularyName = "PmfBulkItemConversionEntity";
+            VocabularyName = "Pmf Bulk Item Conversion Entity";
             KeyPrefix = "commonDataModel.pmfbulkitemconversionentity";
             KeySeparator = ".";
             Grouping = "/PmfBulkItemConversionEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ConversionNumerator = group.Add(new VocabularyKey(nameof(ConversionNumerator), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ConversionDenominator = group.Add(new VocabularyKey(nameof(ConversionDenominator), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RoundingMethod = group.Add(new VocabularyKey(nameof(RoundingMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PackedItemNumber { get; private set; }
         public VocabularyKey BulkItemNumber { get; private set; }
         public VocabularyKey ConversionFactor { get; private set; }
         public VocabularyKey ConversionNumerator { get; private set; }
         public VocabularyKey ConversionDenominator { get; private set; }
         public VocabularyKey RoundingMethod { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSShippingCarrierRatingProfileEntityVocabulary()
         {
-            VocabularyName = "TMSShippingCarrierRatingProfileEntity";
+            VocabularyName = "TMS Shipping Carrier Rating Profile Entity";
             KeyPrefix = "commonDataModel.tmsshippingcarrierratingprofileentity";
             KeySeparator = ".";
             Grouping = "/TMSShippingCarrierRatingProfileEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProfileId = group.Add(new VocabularyKey(nameof(ProfileId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProfileName = group.Add(new VocabularyKey(nameof(ProfileName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransportationTransitTimeEngineId = group.Add(new VocabularyKey(nameof(TransportationTransitTimeEngineId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey EffectiveEndDateTime { get; private set; }
         public VocabularyKey EffectiveStartDateTime { get; private set; }
         public VocabularyKey FreightRateEngineId { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProfileId { get; private set; }
         public VocabularyKey ProfileName { get; private set; }
         public VocabularyKey TransportationTransitTimeEngineId { get; private set; }
-
-
     }
 }

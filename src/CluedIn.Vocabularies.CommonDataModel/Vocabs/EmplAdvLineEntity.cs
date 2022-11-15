@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EmplAdvLineEntityVocabulary()
         {
-            VocabularyName = "EmplAdvLineEntity";
+            VocabularyName = "Empl Adv Line Entity";
             KeyPrefix = "commonDataModel.empladvlineentity";
             KeySeparator = ".";
             Grouping = "/EmplAdvLineEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OverRate = group.Add(new VocabularyKey(nameof(OverRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MainAccount = group.Add(new VocabularyKey(nameof(MainAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineNum = group.Add(new VocabularyKey(nameof(LineNum), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AdvanceId { get; private set; }
         public VocabularyKey Amount { get; private set; }
         public VocabularyKey ConfirmedAmountOfAdvanceReport { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OverRate { get; private set; }
         public VocabularyKey MainAccount { get; private set; }
         public VocabularyKey LineNum { get; private set; }
-
-
     }
 }

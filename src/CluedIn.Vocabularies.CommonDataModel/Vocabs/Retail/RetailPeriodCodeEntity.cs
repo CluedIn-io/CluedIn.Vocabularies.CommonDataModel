@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailPeriodCodeEntityVocabulary()
         {
-            VocabularyName = "RetailPeriodCodeEntity";
+            VocabularyName = "Retail Period Code Entity";
             KeyPrefix = "commonDataModel.retailperiodcodeentity";
             KeySeparator = ".";
             Grouping = "/RetailPeriodCodeEntity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 StartPeriod2 = group.Add(new VocabularyKey(nameof(StartPeriod2), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StartUnit = group.Add(new VocabularyKey(nameof(StartUnit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Txt = group.Add(new VocabularyKey(nameof(Txt), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Code { get; private set; }
         public VocabularyKey EndChange { get; private set; }
         public VocabularyKey EndFixedDate { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey StartPeriod2 { get; private set; }
         public VocabularyKey StartUnit { get; private set; }
         public VocabularyKey Txt { get; private set; }
-
-
     }
 }

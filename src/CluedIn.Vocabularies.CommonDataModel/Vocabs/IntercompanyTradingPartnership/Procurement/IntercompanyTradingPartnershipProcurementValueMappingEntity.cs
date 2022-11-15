@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public IntercompanyTradingPartnershipProcurementValueMappingEntityVocabulary()
         {
-            VocabularyName = "IntercompanyTradingPartnershipProcurementValueMappingEntity";
+            VocabularyName = "Intercompany Trading Partnership Procurement Value Mapping Entity";
             KeyPrefix = "commonDataModel.intercompanytradingpartnershipprocurementvaluemappingentity";
             KeySeparator = ".";
             Grouping = "/IntercompanyTradingPartnershipProcurementValueMappingEntity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ExternalOrderInventoryProfileCode = group.Add(new VocabularyKey(nameof(ExternalOrderInventoryProfileCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AgreementClassificationDefinition = group.Add(new VocabularyKey(nameof(AgreementClassificationDefinition), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExternalAgreementClassificationCode = group.Add(new VocabularyKey(nameof(ExternalAgreementClassificationCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey VendorLegalEntityId { get; private set; }
         public VocabularyKey VendorAccountNumber { get; private set; }
         public VocabularyKey DeliveryModeCodeDefinition { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ExternalOrderInventoryProfileCode { get; private set; }
         public VocabularyKey AgreementClassificationDefinition { get; private set; }
         public VocabularyKey ExternalAgreementClassificationCode { get; private set; }
-
-
     }
 }

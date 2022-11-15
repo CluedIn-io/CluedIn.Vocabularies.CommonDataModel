@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PlSADDocumentInvoicePurchaseOrderEntityVocabulary()
         {
-            VocabularyName = "PlSADDocumentInvoicePurchaseOrderEntity";
+            VocabularyName = "Pl SAD Document Invoice Purchase Order Entity";
             KeyPrefix = "commonDataModel.plsaddocumentinvoicepurchaseorderentity";
             KeySeparator = ".";
             Grouping = "/PlSADDocumentInvoicePurchaseOrderEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Position = group.Add(new VocabularyKey(nameof(Position), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DocumentCode = group.Add(new VocabularyKey(nameof(DocumentCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DimensionDisplayValue = group.Add(new VocabularyKey(nameof(DimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Dimension { get; private set; }
         public VocabularyKey DocumentDate { get; private set; }
         public VocabularyKey Invoice { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Position { get; private set; }
         public VocabularyKey DocumentCode { get; private set; }
         public VocabularyKey DimensionDisplayValue { get; private set; }
-
-
     }
 }

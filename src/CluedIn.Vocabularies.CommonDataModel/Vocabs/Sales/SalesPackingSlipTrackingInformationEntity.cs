@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesPackingSlipTrackingInformationEntityVocabulary()
         {
-            VocabularyName = "SalesPackingSlipTrackingInformationEntity";
+            VocabularyName = "Sales Packing Slip Tracking Information Entity";
             KeyPrefix = "commonDataModel.salespackingsliptrackinginformationentity";
             KeySeparator = ".";
             Grouping = "/SalesPackingSlipTrackingInformationEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DeliveryDate = group.Add(new VocabularyKey(nameof(DeliveryDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TrackingNumber = group.Add(new VocabularyKey(nameof(TrackingNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TrackingURL = group.Add(new VocabularyKey(nameof(TrackingURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SalesOrderNumber { get; private set; }
         public VocabularyKey PackingSlipNumber { get; private set; }
         public VocabularyKey DeliveryDate { get; private set; }
         public VocabularyKey TrackingNumber { get; private set; }
         public VocabularyKey TrackingURL { get; private set; }
-
-
     }
 }

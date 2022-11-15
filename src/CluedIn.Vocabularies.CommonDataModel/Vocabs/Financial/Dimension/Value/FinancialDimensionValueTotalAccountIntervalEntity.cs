@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FinancialDimensionValueTotalAccountIntervalEntityVocabulary()
         {
-            VocabularyName = "FinancialDimensionValueTotalAccountIntervalEntity";
+            VocabularyName = "Financial Dimension Value Total Account Interval Entity";
             KeyPrefix = "commonDataModel.financialdimensionvaluetotalaccountintervalentity";
             KeySeparator = ".";
             Grouping = "/FinancialDimensionValueTotalAccountIntervalEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FromValue = group.Add(new VocabularyKey(nameof(FromValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ToValue = group.Add(new VocabularyKey(nameof(ToValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InvertTotalSign = group.Add(new VocabularyKey(nameof(InvertTotalSign), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FinancialDimension { get; private set; }
         public VocabularyKey LegalEntityId { get; private set; }
         public VocabularyKey DimensionValue { get; private set; }
         public VocabularyKey FromValue { get; private set; }
         public VocabularyKey ToValue { get; private set; }
         public VocabularyKey InvertTotalSign { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendRequestForQuotationJournalHeaderEntityVocabulary()
         {
-            VocabularyName = "VendRequestForQuotationJournalHeaderEntity";
+            VocabularyName = "Vend Request For Quotation Journal Header Entity";
             KeyPrefix = "commonDataModel.vendrequestforquotationjournalheaderentity";
             KeySeparator = ".";
             Grouping = "/VendRequestForQuotationJournalHeaderEntity";
@@ -116,10 +116,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DeliveryAddressTimeZone = group.Add(new VocabularyKey(nameof(DeliveryAddressTimeZone), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BidSubmittedBy = group.Add(new VocabularyKey(nameof(BidSubmittedBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BidSubmittingPersonPartyNumber = group.Add(new VocabularyKey(nameof(BidSubmittingPersonPartyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PurchaseAgreementId { get; private set; }
         public VocabularyKey TotalRFQAmount { get; private set; }
         public VocabularyKey VendorCashDiscountCode { get; private set; }
@@ -223,7 +221,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DeliveryAddressTimeZone { get; private set; }
         public VocabularyKey BidSubmittedBy { get; private set; }
         public VocabularyKey BidSubmittingPersonPartyNumber { get; private set; }
-
-
     }
 }

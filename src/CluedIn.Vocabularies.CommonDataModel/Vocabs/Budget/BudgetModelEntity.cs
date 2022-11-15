@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetModelEntityVocabulary()
         {
-            VocabularyName = "BudgetModelEntity";
+            VocabularyName = "Budget Model Entity";
             KeyPrefix = "commonDataModel.budgetmodelentity";
             KeySeparator = ".";
             Grouping = "/BudgetModelEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Stopped = group.Add(new VocabularyKey(nameof(Stopped), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Submodel = group.Add(new VocabularyKey(nameof(Submodel), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Type = group.Add(new VocabularyKey(nameof(Type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BudgetModel { get; private set; }
         public VocabularyKey CashFlowForecasts { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey Stopped { get; private set; }
         public VocabularyKey Submodel { get; private set; }
         public VocabularyKey Type { get; private set; }
-
-
     }
 }

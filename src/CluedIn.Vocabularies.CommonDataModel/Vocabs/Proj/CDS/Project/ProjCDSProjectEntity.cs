@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjCDSProjectEntityVocabulary()
         {
-            VocabularyName = "ProjCDSProjectEntity";
+            VocabularyName = "Proj CDS Project Entity";
             KeyPrefix = "commonDataModel.projcdsprojectentity";
             KeySeparator = ".";
             Grouping = "/ProjCDSProjectEntity";
@@ -30,10 +30,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SourceDataID = group.Add(new VocabularyKey(nameof(SourceDataID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultDimension = group.Add(new VocabularyKey(nameof(DefaultDimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultDimensionDisplayValue = group.Add(new VocabularyKey(nameof(DefaultDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProjectID { get; private set; }
         public VocabularyKey CustomerAccount { get; private set; }
         public VocabularyKey ProjectName { get; private set; }
@@ -51,7 +49,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SourceDataID { get; private set; }
         public VocabularyKey DefaultDimension { get; private set; }
         public VocabularyKey DefaultDimensionDisplayValue { get; private set; }
-
-
     }
 }

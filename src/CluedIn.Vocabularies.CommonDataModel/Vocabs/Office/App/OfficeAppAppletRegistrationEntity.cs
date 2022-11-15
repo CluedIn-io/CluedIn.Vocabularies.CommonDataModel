@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public OfficeAppAppletRegistrationEntityVocabulary()
         {
-            VocabularyName = "OfficeAppAppletRegistrationEntity";
+            VocabularyName = "Office App Applet Registration Entity";
             KeyPrefix = "commonDataModel.officeappappletregistrationentity";
             KeySeparator = ".";
             Grouping = "/OfficeAppAppletRegistrationEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RequiredAppVersion = group.Add(new VocabularyKey(nameof(RequiredAppVersion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SupportedApplications = group.Add(new VocabularyKey(nameof(SupportedApplications), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DependentOn = group.Add(new VocabularyKey(nameof(DependentOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AppletID { get; private set; }
         public VocabularyKey RelativeUrl { get; private set; }
         public VocabularyKey Name { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RequiredAppVersion { get; private set; }
         public VocabularyKey SupportedApplications { get; private set; }
         public VocabularyKey DependentOn { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public OpResOperationsResourceWorkCalendarAssignmentEntityVocabulary()
         {
-            VocabularyName = "OpResOperationsResourceWorkCalendarAssignmentEntity";
+            VocabularyName = "Op Res Operations Resource Work Calendar Assignment Entity";
             KeyPrefix = "commonDataModel.opresoperationsresourceworkcalendarassignmententity";
             KeySeparator = ".";
             Grouping = "/OpResOperationsResourceWorkCalendarAssignmentEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WorkCalendarId = group.Add(new VocabularyKey(nameof(WorkCalendarId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidFrom = group.Add(new VocabularyKey(nameof(ValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidTo = group.Add(new VocabularyKey(nameof(ValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey OperationsResourceId { get; private set; }
         public VocabularyKey WorkCalendarId { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey ValidTo { get; private set; }
-
-
     }
 }

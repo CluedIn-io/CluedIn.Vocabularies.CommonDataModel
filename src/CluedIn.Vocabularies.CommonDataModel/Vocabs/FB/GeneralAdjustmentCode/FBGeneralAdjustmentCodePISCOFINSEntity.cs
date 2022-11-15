@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FBGeneralAdjustmentCodePISCOFINSEntityVocabulary()
         {
-            VocabularyName = "FBGeneralAdjustmentCodePISCOFINSEntity";
+            VocabularyName = "FB General Adjustment Code PISCOFINS Entity";
             KeyPrefix = "commonDataModel.fbgeneraladjustmentcodepiscofinsentity";
             KeySeparator = ".";
             Grouping = "/FBGeneralAdjustmentCodePISCOFINSEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ValidToDate = group.Add(new VocabularyKey(nameof(ValidToDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OtherDebit = group.Add(new VocabularyKey(nameof(OtherDebit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReceitaCode = group.Add(new VocabularyKey(nameof(ReceitaCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Identification { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey TaxType { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ValidToDate { get; private set; }
         public VocabularyKey OtherDebit { get; private set; }
         public VocabularyKey ReceitaCode { get; private set; }
-
-
     }
 }

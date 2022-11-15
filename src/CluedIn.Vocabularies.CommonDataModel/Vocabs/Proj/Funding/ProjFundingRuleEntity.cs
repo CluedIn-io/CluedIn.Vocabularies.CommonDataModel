@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjFundingRuleEntityVocabulary()
         {
-            VocabularyName = "ProjFundingRuleEntity";
+            VocabularyName = "Proj Funding Rule Entity";
             KeyPrefix = "commonDataModel.projfundingruleentity";
             KeySeparator = ".";
             Grouping = "/ProjFundingRuleEntity";
@@ -32,10 +32,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FundingSourceId = group.Add(new VocabularyKey(nameof(FundingSourceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FundingSource_ContractId = group.Add(new VocabularyKey(nameof(FundingSource_ContractId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FundingRule = group.Add(new VocabularyKey(nameof(FundingRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ActivityNumber { get; private set; }
         public VocabularyKey CategoryGroupId { get; private set; }
         public VocabularyKey CategoryId { get; private set; }
@@ -55,7 +53,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FundingSourceId { get; private set; }
         public VocabularyKey FundingSource_ContractId { get; private set; }
         public VocabularyKey FundingRule { get; private set; }
-
-
     }
 }

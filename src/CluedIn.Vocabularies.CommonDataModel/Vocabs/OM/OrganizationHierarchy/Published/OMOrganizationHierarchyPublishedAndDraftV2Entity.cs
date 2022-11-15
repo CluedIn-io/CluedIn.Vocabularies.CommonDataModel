@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public OMOrganizationHierarchyPublishedAndDraftV2EntityVocabulary()
         {
-            VocabularyName = "OMOrganizationHierarchyPublishedAndDraftV2Entity";
+            VocabularyName = "OM Organization Hierarchy Published And Draft V2 Entity";
             KeyPrefix = "commonDataModel.omorganizationhierarchypublishedanddraftv2entity";
             KeySeparator = ".";
             Grouping = "/OMOrganizationHierarchyPublishedAndDraftV2Entity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ParentOrganizationPartyNumber = group.Add(new VocabularyKey(nameof(ParentOrganizationPartyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RelationshipType = group.Add(new VocabularyKey(nameof(RelationshipType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsDraft = group.Add(new VocabularyKey(nameof(IsDraft), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ChildOrganization { get; private set; }
         public VocabularyKey Hierarchy { get; private set; }
         public VocabularyKey ParentOrganization { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ParentOrganizationPartyNumber { get; private set; }
         public VocabularyKey RelationshipType { get; private set; }
         public VocabularyKey IsDraft { get; private set; }
-
-
     }
 }

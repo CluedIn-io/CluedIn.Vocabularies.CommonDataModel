@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WorkPeriodTemplateLineEntityVocabulary()
         {
-            VocabularyName = "WorkPeriodTemplateLineEntity";
+            VocabularyName = "Work Period Template Line Entity";
             KeyPrefix = "commonDataModel.workperiodtemplatelineentity";
             KeySeparator = ".";
             Grouping = "/WorkPeriodTemplateLineEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PeriodDescription = group.Add(new VocabularyKey(nameof(PeriodDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PeriodTemplateName = group.Add(new VocabularyKey(nameof(PeriodTemplateName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AreMultiplePeriodsCreated = group.Add(new VocabularyKey(nameof(AreMultiplePeriodsCreated), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LineNumber { get; private set; }
         public VocabularyKey NumberOfPeriods { get; private set; }
         public VocabularyKey PeriodName { get; private set; }
         public VocabularyKey PeriodDescription { get; private set; }
         public VocabularyKey PeriodTemplateName { get; private set; }
         public VocabularyKey AreMultiplePeriodsCreated { get; private set; }
-
-
     }
 }

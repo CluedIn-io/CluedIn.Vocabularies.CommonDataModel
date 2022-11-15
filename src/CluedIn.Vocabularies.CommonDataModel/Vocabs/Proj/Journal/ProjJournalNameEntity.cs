@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjJournalNameEntityVocabulary()
         {
-            VocabularyName = "ProjJournalNameEntity";
+            VocabularyName = "Proj Journal Name Entity";
             KeyPrefix = "commonDataModel.projjournalnameentity";
             KeySeparator = ".";
             Grouping = "/ProjJournalNameEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 NumberSequenceCode = group.Add(new VocabularyKey(nameof(NumberSequenceCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NumberSequenceScope = group.Add(new VocabularyKey(nameof(NumberSequenceScope), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NumberSequenceDataArea = group.Add(new VocabularyKey(nameof(NumberSequenceDataArea), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey DetailSummary { get; private set; }
         public VocabularyKey Name { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey NumberSequenceCode { get; private set; }
         public VocabularyKey NumberSequenceScope { get; private set; }
         public VocabularyKey NumberSequenceDataArea { get; private set; }
-
-
     }
 }

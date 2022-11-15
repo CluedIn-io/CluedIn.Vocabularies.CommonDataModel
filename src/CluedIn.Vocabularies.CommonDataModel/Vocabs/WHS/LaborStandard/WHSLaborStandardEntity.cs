@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSLaborStandardEntityVocabulary()
         {
-            VocabularyName = "WHSLaborStandardEntity";
+            VocabularyName = "WHS Labor Standard Entity";
             KeyPrefix = "commonDataModel.whslaborstandardentity";
             KeySeparator = ".";
             Grouping = "/WHSLaborStandardEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LaborStandardId = group.Add(new VocabularyKey(nameof(LaborStandardId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LaborStandardWarehouseLocationQuery = group.Add(new VocabularyKey(nameof(LaborStandardWarehouseLocationQuery), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkOrderType = group.Add(new VocabularyKey(nameof(WorkOrderType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LaborStandardDescription { get; private set; }
         public VocabularyKey LaborStandardProductQuery { get; private set; }
         public VocabularyKey LaborStandardId { get; private set; }
         public VocabularyKey LaborStandardWarehouseLocationQuery { get; private set; }
         public VocabularyKey WorkOrderType { get; private set; }
-
-
     }
 }

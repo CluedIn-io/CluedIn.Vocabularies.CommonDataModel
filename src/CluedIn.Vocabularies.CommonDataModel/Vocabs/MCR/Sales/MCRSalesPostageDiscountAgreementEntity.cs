@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRSalesPostageDiscountAgreementEntityVocabulary()
         {
-            VocabularyName = "MCRSalesPostageDiscountAgreementEntity";
+            VocabularyName = "MCR Sales Postage Discount Agreement Entity";
             KeyPrefix = "commonDataModel.mcrsalespostagediscountagreemententity";
             KeySeparator = ".";
             Grouping = "/MCRSalesPostageDiscountAgreementEntity";
@@ -40,10 +40,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DiscountSiteId = group.Add(new VocabularyKey(nameof(DiscountSiteId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DiscountWarehouseId = group.Add(new VocabularyKey(nameof(DiscountWarehouseId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductNumber = group.Add(new VocabularyKey(nameof(ProductNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountCode { get; private set; }
         public VocabularyKey AccountRelation { get; private set; }
         public VocabularyKey DiscountAmount { get; private set; }
@@ -71,7 +69,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DiscountSiteId { get; private set; }
         public VocabularyKey DiscountWarehouseId { get; private set; }
         public VocabularyKey ProductNumber { get; private set; }
-
-
     }
 }

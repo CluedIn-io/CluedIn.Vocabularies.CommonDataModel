@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventDimSetupGridEntityVocabulary()
         {
-            VocabularyName = "InventDimSetupGridEntity";
+            VocabularyName = "Invent Dim Setup Grid Entity";
             KeyPrefix = "commonDataModel.inventdimsetupgridentity";
             KeySeparator = ".";
             Grouping = "/InventDimSetupGridEntity";
@@ -45,10 +45,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductionInput = group.Add(new VocabularyKey(nameof(ProductionInput), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InventoryOwnershipChange = group.Add(new VocabularyKey(nameof(InventoryOwnershipChange), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ConsignmentReplenishmentOrderLine = group.Add(new VocabularyKey(nameof(ConsignmentReplenishmentOrderLine), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FieldID { get; private set; }
         public VocabularyKey OrderEvent { get; private set; }
         public VocabularyKey PickingWorkbenchBatch { get; private set; }
@@ -81,7 +79,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProductionInput { get; private set; }
         public VocabularyKey InventoryOwnershipChange { get; private set; }
         public VocabularyKey ConsignmentReplenishmentOrderLine { get; private set; }
-
-
     }
 }

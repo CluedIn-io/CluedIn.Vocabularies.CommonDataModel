@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RouteHeaderEntityVocabulary()
         {
-            VocabularyName = "RouteHeaderEntity";
+            VocabularyName = "Route Header Entity";
             KeyPrefix = "commonDataModel.routeheaderentity";
             KeySeparator = ".";
             Grouping = "/RouteHeaderEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RouteName = group.Add(new VocabularyKey(nameof(RouteName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RouteId = group.Add(new VocabularyKey(nameof(RouteId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ApproverPersonnelNumber = group.Add(new VocabularyKey(nameof(ApproverPersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsApproved { get; private set; }
         public VocabularyKey ProductGroupId { get; private set; }
         public VocabularyKey RouteName { get; private set; }
         public VocabularyKey RouteId { get; private set; }
         public VocabularyKey ApproverPersonnelNumber { get; private set; }
-
-
     }
 }

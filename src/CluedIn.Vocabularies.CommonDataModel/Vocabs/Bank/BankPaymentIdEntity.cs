@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankPaymentIdEntityVocabulary()
         {
-            VocabularyName = "BankPaymentIdEntity";
+            VocabularyName = "Bank Payment Id Entity";
             KeyPrefix = "commonDataModel.bankpaymentidentity";
             KeySeparator = ".";
             Grouping = "/BankPaymentIdEntity";
@@ -32,10 +32,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SuffixTextValue = group.Add(new VocabularyKey(nameof(SuffixTextValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SuffixToPosition = group.Add(new VocabularyKey(nameof(SuffixToPosition), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SuffixValue = group.Add(new VocabularyKey(nameof(SuffixValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountFromPosition { get; private set; }
         public VocabularyKey AccountToPosition { get; private set; }
         public VocabularyKey BlankPaymentID { get; private set; }
@@ -55,7 +53,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SuffixTextValue { get; private set; }
         public VocabularyKey SuffixToPosition { get; private set; }
         public VocabularyKey SuffixValue { get; private set; }
-
-
     }
 }

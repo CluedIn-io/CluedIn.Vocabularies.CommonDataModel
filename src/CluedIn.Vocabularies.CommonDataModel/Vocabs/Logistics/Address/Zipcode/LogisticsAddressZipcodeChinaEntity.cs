@@ -6,36 +6,32 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LogisticsAddressZipcodeChinaEntityVocabulary()
         {
-            VocabularyName = "LogisticsAddressZipcodeChinaEntity";
+            VocabularyName = "Logistics Address Zipcode China Entity";
             KeyPrefix = "commonDataModel.logisticsaddresszipcodechinaentity";
             KeySeparator = ".";
             Grouping = "/LogisticsAddressZipcodeChinaEntity";
 
             AddGroup("LogisticsAddressZipcodeChinaEntity Details", group =>
             {
-                yzbm = group.Add(new VocabularyKey(nameof(yzbm), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                xzqh = group.Add(new VocabularyKey(nameof(xzqh), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                xzqu = group.Add(new VocabularyKey(nameof(xzqu), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                jd1 = group.Add(new VocabularyKey(nameof(jd1), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                jd2 = group.Add(new VocabularyKey(nameof(jd2), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                jd3 = group.Add(new VocabularyKey(nameof(jd3), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                jd4 = group.Add(new VocabularyKey(nameof(jd4), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                jd5 = group.Add(new VocabularyKey(nameof(jd5), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Yzbm = group.Add(new VocabularyKey(nameof(Yzbm), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Xzqh = group.Add(new VocabularyKey(nameof(Xzqh), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Xzqu = group.Add(new VocabularyKey(nameof(Xzqu), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Jd1 = group.Add(new VocabularyKey(nameof(Jd1), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Jd2 = group.Add(new VocabularyKey(nameof(Jd2), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Jd3 = group.Add(new VocabularyKey(nameof(Jd3), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Jd4 = group.Add(new VocabularyKey(nameof(Jd4), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Jd5 = group.Add(new VocabularyKey(nameof(Jd5), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Country = group.Add(new VocabularyKey(nameof(Country), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
-        public VocabularyKey yzbm { get; private set; }
-        public VocabularyKey xzqh { get; private set; }
-        public VocabularyKey xzqu { get; private set; }
-        public VocabularyKey jd1 { get; private set; }
-        public VocabularyKey jd2 { get; private set; }
-        public VocabularyKey jd3 { get; private set; }
-        public VocabularyKey jd4 { get; private set; }
-        public VocabularyKey jd5 { get; private set; }
+        public VocabularyKey Yzbm { get; private set; }
+        public VocabularyKey Xzqh { get; private set; }
+        public VocabularyKey Xzqu { get; private set; }
+        public VocabularyKey Jd1 { get; private set; }
+        public VocabularyKey Jd2 { get; private set; }
+        public VocabularyKey Jd3 { get; private set; }
+        public VocabularyKey Jd4 { get; private set; }
+        public VocabularyKey Jd5 { get; private set; }
         public VocabularyKey Country { get; private set; }
-
-
     }
 }

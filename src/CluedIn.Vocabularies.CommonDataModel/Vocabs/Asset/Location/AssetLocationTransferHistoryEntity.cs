@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetLocationTransferHistoryEntityVocabulary()
         {
-            VocabularyName = "AssetLocationTransferHistoryEntity";
+            VocabularyName = "Asset Location Transfer History Entity";
             KeyPrefix = "commonDataModel.assetlocationtransferhistoryentity";
             KeySeparator = ".";
             Grouping = "/AssetLocationTransferHistoryEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ToLocation = group.Add(new VocabularyKey(nameof(ToLocation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransferComments = group.Add(new VocabularyKey(nameof(TransferComments), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransferDate = group.Add(new VocabularyKey(nameof(TransferDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FixedAssetNumber { get; private set; }
         public VocabularyKey FromLocation { get; private set; }
         public VocabularyKey Id { get; private set; }
         public VocabularyKey ToLocation { get; private set; }
         public VocabularyKey TransferComments { get; private set; }
         public VocabularyKey TransferDate { get; private set; }
-
-
     }
 }

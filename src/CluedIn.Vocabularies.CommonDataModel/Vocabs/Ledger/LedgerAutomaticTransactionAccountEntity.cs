@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerAutomaticTransactionAccountEntityVocabulary()
         {
-            VocabularyName = "LedgerAutomaticTransactionAccountEntity";
+            VocabularyName = "Ledger Automatic Transaction Account Entity";
             KeyPrefix = "commonDataModel.ledgerautomatictransactionaccountentity";
             KeySeparator = ".";
             Grouping = "/LedgerAutomaticTransactionAccountEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PostingType = group.Add(new VocabularyKey(nameof(PostingType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MainAccountId = group.Add(new VocabularyKey(nameof(MainAccountId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MainAccountIdDisplayValue = group.Add(new VocabularyKey(nameof(MainAccountIdDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PostingType { get; private set; }
         public VocabularyKey MainAccountId { get; private set; }
         public VocabularyKey MainAccountIdDisplayValue { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustFormletterCustomerFreeTextInvoiceFormPrintingConfigurationEntityVocabulary()
         {
-            VocabularyName = "CustFormletterCustomerFreeTextInvoiceFormPrintingConfigurationEntity";
+            VocabularyName = "Cust Formletter Customer Free Text Invoice Form Printing Configuration Entity";
             KeyPrefix = "commonDataModel.custformlettercustomerfreetextinvoiceformprintingconfigurationentity";
             KeySeparator = ".";
             Grouping = "/CustFormletterCustomerFreeTextInvoiceFormPrintingConfigurationEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DisplayedPaymentAttachmentType = group.Add(new VocabularyKey(nameof(DisplayedPaymentAttachmentType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LumpSumRecoveryText = group.Add(new VocabularyKey(nameof(LumpSumRecoveryText), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LumpSumRecoveryGracePeriodDays = group.Add(new VocabularyKey(nameof(LumpSumRecoveryGracePeriodDays), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PaperFormat { get; private set; }
         public VocabularyKey DocumentAttachmentDisplayRule { get; private set; }
         public VocabularyKey DisplayedDocumentAttachmentTypeCode { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DisplayedPaymentAttachmentType { get; private set; }
         public VocabularyKey LumpSumRecoveryText { get; private set; }
         public VocabularyKey LumpSumRecoveryGracePeriodDays { get; private set; }
-
-
     }
 }

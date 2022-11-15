@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseLocationDirectiveLineUnitOfMeasureRestrictionEntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseLocationDirectiveLineUnitOfMeasureRestrictionEntity";
+            VocabularyName = "WHS Warehouse Location Directive Line Unit Of Measure Restriction Entity";
             KeyPrefix = "commonDataModel.whswarehouselocationdirectivelineunitofmeasurerestrictionentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseLocationDirectiveLineUnitOfMeasureRestrictionEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RefRecId = group.Add(new VocabularyKey(nameof(RefRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WHSLocDirLine_RefRecId = group.Add(new VocabularyKey(nameof(WHSLocDirLine_RefRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LocSeqNum = group.Add(new VocabularyKey(nameof(LocSeqNum), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WarehouseLocationDirectiveWorkOrderType { get; private set; }
         public VocabularyKey WarehouseLocationDirectiveId { get; private set; }
         public VocabularyKey WarehouseLocationDirectiveWorkType { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RefRecId { get; private set; }
         public VocabularyKey WHSLocDirLine_RefRecId { get; private set; }
         public VocabularyKey LocSeqNum { get; private set; }
-
-
     }
 }

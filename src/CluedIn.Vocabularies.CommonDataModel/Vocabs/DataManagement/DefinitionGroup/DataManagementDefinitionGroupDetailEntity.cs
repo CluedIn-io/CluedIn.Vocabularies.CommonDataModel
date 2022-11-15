@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DataManagementDefinitionGroupDetailEntityVocabulary()
         {
-            VocabularyName = "DataManagementDefinitionGroupDetailEntity";
+            VocabularyName = "Data Management Definition Group Detail Entity";
             KeyPrefix = "commonDataModel.datamanagementdefinitiongroupdetailentity";
             KeySeparator = ".";
             Grouping = "/DataManagementDefinitionGroupDetailEntity";
@@ -42,10 +42,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SkipStaging = group.Add(new VocabularyKey(nameof(SkipStaging), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PackageFilePath = group.Add(new VocabularyKey(nameof(PackageFilePath), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultRefreshType = group.Add(new VocabularyKey(nameof(DefaultRefreshType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DefinitionGroupId { get; private set; }
         public VocabularyKey EntityName { get; private set; }
         public VocabularyKey ExcelSheetName { get; private set; }
@@ -75,7 +73,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SkipStaging { get; private set; }
         public VocabularyKey PackageFilePath { get; private set; }
         public VocabularyKey DefaultRefreshType { get; private set; }
-
-
     }
 }

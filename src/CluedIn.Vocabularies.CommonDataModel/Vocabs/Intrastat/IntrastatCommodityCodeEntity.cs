@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public IntrastatCommodityCodeEntityVocabulary()
         {
-            VocabularyName = "IntrastatCommodityCodeEntity";
+            VocabularyName = "Intrastat Commodity Code Entity";
             KeyPrefix = "commonDataModel.intrastatcommoditycodeentity";
             KeySeparator = ".";
             Grouping = "/IntrastatCommodityCodeEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ParentName = group.Add(new VocabularyKey(nameof(ParentName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OptionalWeight = group.Add(new VocabularyKey(nameof(OptionalWeight), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IntrastatParametersDataAreaId = group.Add(new VocabularyKey(nameof(IntrastatParametersDataAreaId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AdditionalUnits { get; private set; }
         public VocabularyKey Commodity { get; private set; }
         public VocabularyKey Name { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ParentName { get; private set; }
         public VocabularyKey OptionalWeight { get; private set; }
         public VocabularyKey IntrastatParametersDataAreaId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailDiscountLineEntityVocabulary()
         {
-            VocabularyName = "RetailDiscountLineEntity";
+            VocabularyName = "Retail Discount Line Entity";
             KeyPrefix = "commonDataModel.retaildiscountlineentity";
             KeySeparator = ".";
             Grouping = "/RetailDiscountLineEntity";
@@ -39,10 +39,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OfferDiscountMethodN1 = group.Add(new VocabularyKey(nameof(OfferDiscountMethodN1), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OfferPriceInclTaxN1 = group.Add(new VocabularyKey(nameof(OfferPriceInclTaxN1), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OfferPriceN1 = group.Add(new VocabularyKey(nameof(OfferPriceN1), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DiscountPercentOrValue { get; private set; }
         public VocabularyKey LineNum { get; private set; }
         public VocabularyKey OfferId { get; private set; }
@@ -69,7 +67,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OfferDiscountMethodN1 { get; private set; }
         public VocabularyKey OfferPriceInclTaxN1 { get; private set; }
         public VocabularyKey OfferPriceN1 { get; private set; }
-
-
     }
 }

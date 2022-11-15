@@ -2,16 +2,16 @@ using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 {
-    public class smmTransactionLoggingPolicyEntityVocabulary : SimpleVocabulary
+    public class SmmTransactionLoggingPolicyEntityVocabulary : SimpleVocabulary
     {
-        public smmTransactionLoggingPolicyEntityVocabulary()
+        public SmmTransactionLoggingPolicyEntityVocabulary()
         {
-            VocabularyName = "smmTransactionLoggingPolicyEntity";
+            VocabularyName = "Smm Transaction Logging Policy Entity";
             KeyPrefix = "commonDataModel.smmtransactionloggingpolicyentity";
             KeySeparator = ".";
-            Grouping = "/smmTransactionLoggingPolicyEntity";
+            Grouping = "/SmmTransactionLoggingPolicyEntity";
 
-            AddGroup("smmTransactionLoggingPolicyEntity Details", group =>
+            AddGroup("SmmTransactionLoggingPolicyEntity Details", group =>
             {
                 AreCustomerChangesLogged = group.Add(new VocabularyKey(nameof(AreCustomerChangesLogged), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AreCustomerTransactionChangesLogged = group.Add(new VocabularyKey(nameof(AreCustomerTransactionChangesLogged), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
@@ -33,10 +33,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AreCreatedTransactionsLogged = group.Add(new VocabularyKey(nameof(AreCreatedTransactionsLogged), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AreDeletedTransactionsLogged = group.Add(new VocabularyKey(nameof(AreDeletedTransactionsLogged), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UpdatedTransactionsLoggingRule = group.Add(new VocabularyKey(nameof(UpdatedTransactionsLoggingRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AreCustomerChangesLogged { get; private set; }
         public VocabularyKey AreCustomerTransactionChangesLogged { get; private set; }
         public VocabularyKey AreVendorChangesLogged { get; private set; }
@@ -57,7 +55,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AreCreatedTransactionsLogged { get; private set; }
         public VocabularyKey AreDeletedTransactionsLogged { get; private set; }
         public VocabularyKey UpdatedTransactionsLoggingRule { get; private set; }
-
-
     }
 }

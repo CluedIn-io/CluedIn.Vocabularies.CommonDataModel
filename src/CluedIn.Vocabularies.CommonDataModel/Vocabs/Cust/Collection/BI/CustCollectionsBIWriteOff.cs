@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustCollectionsBIWriteOffVocabulary()
         {
-            VocabularyName = "CustCollectionsBIWriteOff";
+            VocabularyName = "Cust Collections BI Write Off";
             KeyPrefix = "commonDataModel.custcollectionsbiwriteoff";
             KeySeparator = ".";
             Grouping = "/CustCollectionsBIWriteOff";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SystemCurrencyAmount = group.Add(new VocabularyKey(nameof(SystemCurrencyAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WriteOffDimension = group.Add(new VocabularyKey(nameof(WriteOffDimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransDate = group.Add(new VocabularyKey(nameof(TransDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountNum { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey Reason { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SystemCurrencyAmount { get; private set; }
         public VocabularyKey WriteOffDimension { get; private set; }
         public VocabularyKey TransDate { get; private set; }
-
-
     }
 }

@@ -6,48 +6,44 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LifeEventVocabulary()
         {
-            VocabularyName = "LifeEvent";
+            VocabularyName = "Life Event";
             KeyPrefix = "commonDataModel.lifeevent";
             KeySeparator = ".";
             Grouping = "/LifeEvent";
 
             AddGroup("LifeEvent Details", group =>
             {
-                lifemomentId = group.Add(new VocabularyKey(nameof(lifemomentId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                modifiedOn = group.Add(new VocabularyKey(nameof(modifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statecode = group.Add(new VocabularyKey(nameof(statecode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statuscode = group.Add(new VocabularyKey(nameof(statuscode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                importSequenceNumber = group.Add(new VocabularyKey(nameof(importSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                overriddenCreatedOn = group.Add(new VocabularyKey(nameof(overriddenCreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                timeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(timeZoneRuleVersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LifemomentId = group.Add(new VocabularyKey(nameof(LifemomentId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Statecode = group.Add(new VocabularyKey(nameof(Statecode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Statuscode = group.Add(new VocabularyKey(nameof(Statuscode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                lifeMomentCategory = group.Add(new VocabularyKey(nameof(lifeMomentCategory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                lifemomentdate = group.Add(new VocabularyKey(nameof(lifemomentdate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                lifemomenttitle = group.Add(new VocabularyKey(nameof(lifemomenttitle), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                lifeMomentType = group.Add(new VocabularyKey(nameof(lifeMomentType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                msfsiModifiedOn = group.Add(new VocabularyKey(nameof(msfsiModifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LifeMomentCategory = group.Add(new VocabularyKey(nameof(LifeMomentCategory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Lifemomentdate = group.Add(new VocabularyKey(nameof(Lifemomentdate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Lifemomenttitle = group.Add(new VocabularyKey(nameof(Lifemomenttitle), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LifeMomentType = group.Add(new VocabularyKey(nameof(LifeMomentType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MsfsiModifiedOn = group.Add(new VocabularyKey(nameof(MsfsiModifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey lifemomentId { get; private set; }
-        public VocabularyKey createdOn { get; private set; }
-        public VocabularyKey modifiedOn { get; private set; }
-        public VocabularyKey statecode { get; private set; }
-        public VocabularyKey statuscode { get; private set; }
-        public VocabularyKey importSequenceNumber { get; private set; }
-        public VocabularyKey overriddenCreatedOn { get; private set; }
-        public VocabularyKey timeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey LifemomentId { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Statecode { get; private set; }
+        public VocabularyKey Statuscode { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey lifeMomentCategory { get; private set; }
-        public VocabularyKey lifemomentdate { get; private set; }
-        public VocabularyKey lifemomenttitle { get; private set; }
-        public VocabularyKey lifeMomentType { get; private set; }
-        public VocabularyKey msfsiModifiedOn { get; private set; }
-
-
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey LifeMomentCategory { get; private set; }
+        public VocabularyKey Lifemomentdate { get; private set; }
+        public VocabularyKey Lifemomenttitle { get; private set; }
+        public VocabularyKey LifeMomentType { get; private set; }
+        public VocabularyKey MsfsiModifiedOn { get; private set; }
     }
 }

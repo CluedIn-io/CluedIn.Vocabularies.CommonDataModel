@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RTSLCurrencyRuleEntityVocabulary()
         {
-            VocabularyName = "RTSLCurrencyRuleEntity";
+            VocabularyName = "RTSL Currency Rule Entity";
             KeyPrefix = "commonDataModel.rtslcurrencyruleentity";
             KeySeparator = ".";
             Grouping = "/RTSLCurrencyRuleEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RateMethod = group.Add(new VocabularyKey(nameof(RateMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RuleGroup = group.Add(new VocabularyKey(nameof(RuleGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CurrencyRuleGroup = group.Add(new VocabularyKey(nameof(CurrencyRuleGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CurrencyAction { get; private set; }
         public VocabularyKey Currency { get; private set; }
         public VocabularyKey CurrencyIndexId { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RateMethod { get; private set; }
         public VocabularyKey RuleGroup { get; private set; }
         public VocabularyKey CurrencyRuleGroup { get; private set; }
-
-
     }
 }

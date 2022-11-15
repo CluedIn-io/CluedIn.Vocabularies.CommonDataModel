@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RouteGroupEntityVocabulary()
         {
-            VocabularyName = "RouteGroupEntity";
+            VocabularyName = "Route Group Entity";
             KeyPrefix = "commonDataModel.routegroupentity";
             KeySeparator = ".";
             Grouping = "/RouteGroupEntity";
@@ -46,10 +46,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WillQueueAfterJobSchedulingUseJobManagement = group.Add(new VocabularyKey(nameof(WillQueueAfterJobSchedulingUseJobManagement), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillQueueAfterJobSchedulingUseWorkingTimeCalendar = group.Add(new VocabularyKey(nameof(WillQueueAfterJobSchedulingUseWorkingTimeCalendar), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillQueueAfterJobSchedulingCreateResourceCapacityReservations = group.Add(new VocabularyKey(nameof(WillQueueAfterJobSchedulingCreateResourceCapacityReservations), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey GroupId { get; private set; }
         public VocabularyKey GroupName { get; private set; }
         public VocabularyKey WillProductionEstimationAndCostingUseSetupTimeAndSetupCategory { get; private set; }
@@ -83,7 +81,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WillQueueAfterJobSchedulingUseJobManagement { get; private set; }
         public VocabularyKey WillQueueAfterJobSchedulingUseWorkingTimeCalendar { get; private set; }
         public VocabularyKey WillQueueAfterJobSchedulingCreateResourceCapacityReservations { get; private set; }
-
-
     }
 }

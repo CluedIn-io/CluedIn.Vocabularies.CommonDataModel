@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSContainerGroupDetailEntityVocabulary()
         {
-            VocabularyName = "WHSContainerGroupDetailEntity";
+            VocabularyName = "WHS Container Group Detail Entity";
             KeyPrefix = "commonDataModel.whscontainergroupdetailentity";
             KeySeparator = ".";
             Grouping = "/WHSContainerGroupDetailEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ContainerUtilizationPercentage = group.Add(new VocabularyKey(nameof(ContainerUtilizationPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ContainerGroupId = group.Add(new VocabularyKey(nameof(ContainerGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ContainerGroupDetailSequenceNumber = group.Add(new VocabularyKey(nameof(ContainerGroupDetailSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ContainerTypeId { get; private set; }
         public VocabularyKey ContainerUtilizationPercentage { get; private set; }
         public VocabularyKey ContainerGroupId { get; private set; }
         public VocabularyKey ContainerGroupDetailSequenceNumber { get; private set; }
-
-
     }
 }

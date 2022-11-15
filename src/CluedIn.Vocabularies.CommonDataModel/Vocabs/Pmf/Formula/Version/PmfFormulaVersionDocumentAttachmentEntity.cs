@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PmfFormulaVersionDocumentAttachmentEntityVocabulary()
         {
-            VocabularyName = "PmfFormulaVersionDocumentAttachmentEntity";
+            VocabularyName = "Pmf Formula Version Document Attachment Entity";
             KeyPrefix = "commonDataModel.pmfformulaversiondocumentattachmententity";
             KeySeparator = ".";
             Grouping = "/PmfFormulaVersionDocumentAttachmentEntity";
@@ -34,10 +34,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsFormulaVersionActive = group.Add(new VocabularyKey(nameof(IsFormulaVersionActive), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FormulaVersionValidFromDate = group.Add(new VocabularyKey(nameof(FormulaVersionValidFromDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FormulaVersionFromQuantity = group.Add(new VocabularyKey(nameof(FormulaVersionFromQuantity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DocumentId { get; private set; }
         public VocabularyKey DocumentAttachmentTypeCode { get; private set; }
         public VocabularyKey AttachmentDescription { get; private set; }
@@ -59,7 +57,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsFormulaVersionActive { get; private set; }
         public VocabularyKey FormulaVersionValidFromDate { get; private set; }
         public VocabularyKey FormulaVersionFromQuantity { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResProductRelationTypeTranslationEntityVocabulary()
         {
-            VocabularyName = "EcoResProductRelationTypeTranslationEntity";
+            VocabularyName = "Eco Res Product Relation Type Translation Entity";
             KeyPrefix = "commonDataModel.ecoresproductrelationtypetranslationentity";
             KeySeparator = ".";
             Grouping = "/EcoResProductRelationTypeTranslationEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LanguageId = group.Add(new VocabularyKey(nameof(LanguageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TranslatedTypeDescription = group.Add(new VocabularyKey(nameof(TranslatedTypeDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TranslatedFriendlyName = group.Add(new VocabularyKey(nameof(TranslatedFriendlyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductRelationType { get; private set; }
         public VocabularyKey ProductRelationTypeName { get; private set; }
         public VocabularyKey LanguageId { get; private set; }
         public VocabularyKey TranslatedTypeDescription { get; private set; }
         public VocabularyKey TranslatedFriendlyName { get; private set; }
-
-
     }
 }

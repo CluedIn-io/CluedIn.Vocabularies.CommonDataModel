@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TAMVendorRebateAgreementProductSelectionV2EntityVocabulary()
         {
-            VocabularyName = "TAMVendorRebateAgreementProductSelectionV2Entity";
+            VocabularyName = "TAM Vendor Rebate Agreement Product Selection V2 Entity";
             KeyPrefix = "commonDataModel.tamvendorrebateagreementproductselectionv2entity";
             KeySeparator = ".";
             Grouping = "/TAMVendorRebateAgreementProductSelectionV2Entity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductUnitSymbol = group.Add(new VocabularyKey(nameof(ProductUnitSymbol), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorAccountNumber = group.Add(new VocabularyKey(nameof(VendorAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RebateAgreementId = group.Add(new VocabularyKey(nameof(RebateAgreementId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InventDimID { get; private set; }
         public VocabularyKey ItemNumber { get; private set; }
         public VocabularyKey RebateAgreementRefRecId { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProductUnitSymbol { get; private set; }
         public VocabularyKey VendorAccountNumber { get; private set; }
         public VocabularyKey RebateAgreementId { get; private set; }
-
-
     }
 }

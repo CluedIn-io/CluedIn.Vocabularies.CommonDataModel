@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCROpenSalesPostageDiscountJournalLineEntityVocabulary()
         {
-            VocabularyName = "MCROpenSalesPostageDiscountJournalLineEntity";
+            VocabularyName = "MCR Open Sales Postage Discount Journal Line Entity";
             KeyPrefix = "commonDataModel.mcropensalespostagediscountjournallineentity";
             KeySeparator = ".";
             Grouping = "/MCROpenSalesPostageDiscountJournalLineEntity";
@@ -41,10 +41,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ItemCode = group.Add(new VocabularyKey(nameof(ItemCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ItemRelation = group.Add(new VocabularyKey(nameof(ItemRelation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 JournalNum = group.Add(new VocabularyKey(nameof(JournalNum), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey JournalNumber { get; private set; }
         public VocabularyKey LineNumber { get; private set; }
         public VocabularyKey PostageDiscountCustomerGroupCode { get; private set; }
@@ -73,7 +71,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ItemCode { get; private set; }
         public VocabularyKey ItemRelation { get; private set; }
         public VocabularyKey JournalNum { get; private set; }
-
-
     }
 }

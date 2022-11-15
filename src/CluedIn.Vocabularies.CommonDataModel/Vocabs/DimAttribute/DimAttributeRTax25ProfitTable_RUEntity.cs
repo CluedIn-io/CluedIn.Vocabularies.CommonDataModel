@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DimAttributeRTax25ProfitTable_RUEntityVocabulary()
         {
-            VocabularyName = "DimAttributeRTax25ProfitTable_RUEntity";
+            VocabularyName = "Dim Attribute R Tax 25 Profit Table _RU Entity";
             KeyPrefix = "commonDataModel.dimattributertax25profittable_ruentity";
             KeySeparator = ".";
             Grouping = "/DimAttributeRTax25ProfitTable_RUEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 Value = group.Add(new VocabularyKey(nameof(Value), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Value { get; private set; }
         public VocabularyKey Name { get; private set; }
-
-
     }
 }

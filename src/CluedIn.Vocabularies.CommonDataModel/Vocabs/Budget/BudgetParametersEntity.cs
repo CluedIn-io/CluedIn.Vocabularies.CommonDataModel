@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetParametersEntityVocabulary()
         {
-            VocabularyName = "BudgetParametersEntity";
+            VocabularyName = "Budget Parameters Entity";
             KeyPrefix = "commonDataModel.budgetparametersentity";
             KeySeparator = ".";
             Grouping = "/BudgetParametersEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 UseRulesForBudgetTransfers = group.Add(new VocabularyKey(nameof(UseRulesForBudgetTransfers), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UseGeneralBudgetReservationPublicSectorAccountingRules = group.Add(new VocabularyKey(nameof(UseGeneralBudgetReservationPublicSectorAccountingRules), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DoCompleteRegisterEntriesOnTransferFromFixedAssetsRU = group.Add(new VocabularyKey(nameof(DoCompleteRegisterEntriesOnTransferFromFixedAssetsRU), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AllocationKey { get; private set; }
         public VocabularyKey BudgetJournal { get; private set; }
         public VocabularyKey CheckRevenueBudgetForZeroBudgetBalances { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey UseRulesForBudgetTransfers { get; private set; }
         public VocabularyKey UseGeneralBudgetReservationPublicSectorAccountingRules { get; private set; }
         public VocabularyKey DoCompleteRegisterEntriesOnTransferFromFixedAssetsRU { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxSalesTaxHierarchiesEntityVocabulary()
         {
-            VocabularyName = "TaxSalesTaxHierarchiesEntity";
+            VocabularyName = "Tax Sales Tax Hierarchies Entity";
             KeyPrefix = "commonDataModel.taxsalestaxhierarchiesentity";
             KeySeparator = ".";
             Grouping = "/TaxSalesTaxHierarchiesEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsActiveVersion = group.Add(new VocabularyKey(nameof(IsActiveVersion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 HierarchyVersion = group.Add(new VocabularyKey(nameof(HierarchyVersion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 HierarchyStructure = group.Add(new VocabularyKey(nameof(HierarchyStructure), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsSetoffable { get; private set; }
         public VocabularyKey HierarchyName { get; private set; }
         public VocabularyKey ClassId { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsActiveVersion { get; private set; }
         public VocabularyKey HierarchyVersion { get; private set; }
         public VocabularyKey HierarchyStructure { get; private set; }
-
-
     }
 }

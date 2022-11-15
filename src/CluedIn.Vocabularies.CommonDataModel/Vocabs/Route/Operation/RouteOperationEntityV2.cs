@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RouteOperationEntityV2Vocabulary()
         {
-            VocabularyName = "RouteOperationEntityV2";
+            VocabularyName = "Route Operation Entity V2";
             KeyPrefix = "commonDataModel.routeoperationentityv2";
             KeySeparator = ".";
             Grouping = "/RouteOperationEntityV2";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OperationPriority = group.Add(new VocabularyKey(nameof(OperationPriority), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RouteId = group.Add(new VocabularyKey(nameof(RouteId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ScrapPercentage = group.Add(new VocabularyKey(nameof(ScrapPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccumulatedScrapPercentage { get; private set; }
         public VocabularyKey NextOperationLinkType { get; private set; }
         public VocabularyKey NextRouteOperationNumber { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OperationPriority { get; private set; }
         public VocabularyKey RouteId { get; private set; }
         public VocabularyKey ScrapPercentage { get; private set; }
-
-
     }
 }

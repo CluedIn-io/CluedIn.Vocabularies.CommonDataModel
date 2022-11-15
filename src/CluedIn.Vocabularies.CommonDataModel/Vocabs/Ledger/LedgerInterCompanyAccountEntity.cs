@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerInterCompanyAccountEntityVocabulary()
         {
-            VocabularyName = "LedgerInterCompanyAccountEntity";
+            VocabularyName = "Ledger Inter Company Account Entity";
             KeyPrefix = "commonDataModel.ledgerintercompanyaccountentity";
             KeySeparator = ".";
             Grouping = "/LedgerInterCompanyAccountEntity";
@@ -30,10 +30,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DestinationDebitAccountDisplayValue = group.Add(new VocabularyKey(nameof(DestinationDebitAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorPaymentPostFine = group.Add(new VocabularyKey(nameof(VendorPaymentPostFine), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorPaymentPostFinancialInterest = group.Add(new VocabularyKey(nameof(VendorPaymentPostFinancialInterest), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey OriginatingLegalEntityId { get; private set; }
         public VocabularyKey DestinationLegalEntityId { get; private set; }
         public VocabularyKey PostCashDiscount { get; private set; }
@@ -51,7 +49,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DestinationDebitAccountDisplayValue { get; private set; }
         public VocabularyKey VendorPaymentPostFine { get; private set; }
         public VocabularyKey VendorPaymentPostFinancialInterest { get; private set; }
-
-
     }
 }

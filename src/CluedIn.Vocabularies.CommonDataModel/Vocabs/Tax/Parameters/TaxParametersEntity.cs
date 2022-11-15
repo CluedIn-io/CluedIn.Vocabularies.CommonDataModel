@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxParametersEntityVocabulary()
         {
-            VocabularyName = "TaxParametersEntity";
+            VocabularyName = "Tax Parameters Entity";
             KeyPrefix = "commonDataModel.taxparametersentity";
             KeySeparator = ".";
             Grouping = "/TaxParametersEntity";
@@ -63,10 +63,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RestoredVATCalculationMethod = group.Add(new VocabularyKey(nameof(RestoredVATCalculationMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RestoredVATGainCalculationMethod = group.Add(new VocabularyKey(nameof(RestoredVATGainCalculationMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FixedOffsetPosting = group.Add(new VocabularyKey(nameof(FixedOffsetPosting), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CalculationPrinciple { get; private set; }
         public VocabularyKey CheckSalesTaxGroupIntersection { get; private set; }
         public VocabularyKey ConditionalTax { get; private set; }
@@ -117,7 +115,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RestoredVATCalculationMethod { get; private set; }
         public VocabularyKey RestoredVATGainCalculationMethod { get; private set; }
         public VocabularyKey FixedOffsetPosting { get; private set; }
-
-
     }
 }

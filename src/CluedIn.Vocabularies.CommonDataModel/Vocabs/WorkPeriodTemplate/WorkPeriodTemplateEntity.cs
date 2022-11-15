@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WorkPeriodTemplateEntityVocabulary()
         {
-            VocabularyName = "WorkPeriodTemplateEntity";
+            VocabularyName = "Work Period Template Entity";
             KeyPrefix = "commonDataModel.workperiodtemplateentity";
             KeySeparator = ".";
             Grouping = "/WorkPeriodTemplateEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WorkCalendarTimeTemplateId = group.Add(new VocabularyKey(nameof(WorkCalendarTimeTemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LegalEntityRecId = group.Add(new VocabularyKey(nameof(LegalEntityRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LegalEntityId = group.Add(new VocabularyKey(nameof(LegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FixedStartWeekDay { get; private set; }
         public VocabularyKey IsDefault { get; private set; }
         public VocabularyKey TemplateName { get; private set; }
         public VocabularyKey WorkCalendarTimeTemplateId { get; private set; }
         public VocabularyKey LegalEntityRecId { get; private set; }
         public VocabularyKey LegalEntityId { get; private set; }
-
-
     }
 }

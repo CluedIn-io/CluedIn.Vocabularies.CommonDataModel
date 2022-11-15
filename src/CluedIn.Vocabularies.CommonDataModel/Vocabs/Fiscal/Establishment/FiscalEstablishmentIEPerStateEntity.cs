@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FiscalEstablishmentIEPerStateEntityVocabulary()
         {
-            VocabularyName = "FiscalEstablishmentIEPerStateEntity";
+            VocabularyName = "Fiscal Establishment IE Per State Entity";
             KeyPrefix = "commonDataModel.fiscalestablishmentieperstateentity";
             KeySeparator = ".";
             Grouping = "/FiscalEstablishmentIEPerStateEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IE = group.Add(new VocabularyKey(nameof(IE), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 State = group.Add(new VocabularyKey(nameof(State), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FiscalEstablishmentId = group.Add(new VocabularyKey(nameof(FiscalEstablishmentId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CountryRegionId { get; private set; }
         public VocabularyKey FiscalEstablishment { get; private set; }
         public VocabularyKey IE { get; private set; }
         public VocabularyKey State { get; private set; }
         public VocabularyKey FiscalEstablishmentId { get; private set; }
-
-
     }
 }

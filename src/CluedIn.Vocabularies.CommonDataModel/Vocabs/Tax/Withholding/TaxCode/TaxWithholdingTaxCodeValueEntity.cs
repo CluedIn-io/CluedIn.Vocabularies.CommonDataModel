@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxWithholdingTaxCodeValueEntityVocabulary()
         {
-            VocabularyName = "TaxWithholdingTaxCodeValueEntity";
+            VocabularyName = "Tax Withholding Tax Code Value Entity";
             KeyPrefix = "commonDataModel.taxwithholdingtaxcodevalueentity";
             KeySeparator = ".";
             Grouping = "/TaxWithholdingTaxCodeValueEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MinimumLimit = group.Add(new VocabularyKey(nameof(MinimumLimit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ToDate = group.Add(new VocabularyKey(nameof(ToDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Value = group.Add(new VocabularyKey(nameof(Value), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TaxWithholdCodeId { get; private set; }
         public VocabularyKey ExcludePercentage { get; private set; }
         public VocabularyKey FromDate { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey MinimumLimit { get; private set; }
         public VocabularyKey ToDate { get; private set; }
         public VocabularyKey Value { get; private set; }
-
-
     }
 }

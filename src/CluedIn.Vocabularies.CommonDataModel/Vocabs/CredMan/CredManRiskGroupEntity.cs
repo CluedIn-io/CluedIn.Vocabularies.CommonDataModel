@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CredManRiskGroupEntityVocabulary()
         {
-            VocabularyName = "CredManRiskGroupEntity";
+            VocabularyName = "Cred Man Risk Group Entity";
             KeyPrefix = "commonDataModel.credmanriskgroupentity";
             KeySeparator = ".";
             Grouping = "/CredManRiskGroupEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PercentTo = group.Add(new VocabularyKey(nameof(PercentTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RiskGroupId = group.Add(new VocabularyKey(nameof(RiskGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RiskGroupIndicator = group.Add(new VocabularyKey(nameof(RiskGroupIndicator), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey PercentFrom { get; private set; }
         public VocabularyKey PercentTo { get; private set; }
         public VocabularyKey RiskGroupId { get; private set; }
         public VocabularyKey RiskGroupIndicator { get; private set; }
-
-
     }
 }

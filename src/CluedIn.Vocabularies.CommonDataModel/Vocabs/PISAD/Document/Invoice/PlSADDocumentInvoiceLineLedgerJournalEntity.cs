@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PlSADDocumentInvoiceLineLedgerJournalEntityVocabulary()
         {
-            VocabularyName = "PlSADDocumentInvoiceLineLedgerJournalEntity";
+            VocabularyName = "Pl SAD Document Invoice Line Ledger Journal Entity";
             KeyPrefix = "commonDataModel.plsaddocumentinvoicelineledgerjournalentity";
             KeySeparator = ".";
             Grouping = "/PlSADDocumentInvoiceLineLedgerJournalEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SADNumber = group.Add(new VocabularyKey(nameof(SADNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LedgerAccountDisplayValue = group.Add(new VocabularyKey(nameof(LedgerAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RecordId = group.Add(new VocabularyKey(nameof(RecordId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Amount { get; private set; }
         public VocabularyKey InvoiceDate { get; private set; }
         public VocabularyKey Invoice { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SADNumber { get; private set; }
         public VocabularyKey LedgerAccountDisplayValue { get; private set; }
         public VocabularyKey RecordId { get; private set; }
-
-
     }
 }

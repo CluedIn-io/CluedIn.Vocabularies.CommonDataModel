@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public YearlyTaxCommunicationSetupEntityVocabulary()
         {
-            VocabularyName = "YearlyTaxCommunicationSetupEntity";
+            VocabularyName = "Yearly Tax Communication Setup Entity";
             KeyPrefix = "commonDataModel.yearlytaxcommunicationsetupentity";
             KeySeparator = ".";
             Grouping = "/YearlyTaxCommunicationSetupEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TotalSign = group.Add(new VocabularyKey(nameof(TotalSign), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TotalFieldID = group.Add(new VocabularyKey(nameof(TotalFieldID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesTaxCode = group.Add(new VocabularyKey(nameof(SalesTaxCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FieldID { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey Format { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TotalSign { get; private set; }
         public VocabularyKey TotalFieldID { get; private set; }
         public VocabularyKey SalesTaxCode { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RTax25RegisterJournalTableEntityVocabulary()
         {
-            VocabularyName = "RTax25RegisterJournalTableEntity";
+            VocabularyName = "R Tax 25 Register Journal Table Entity";
             KeyPrefix = "commonDataModel.rtax25registerjournaltableentity";
             KeySeparator = ".";
             Grouping = "/RTax25RegisterJournalTableEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PeriodNumber = group.Add(new VocabularyKey(nameof(PeriodNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PeriodTypes = group.Add(new VocabularyKey(nameof(PeriodTypes), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CalculationDate = group.Add(new VocabularyKey(nameof(CalculationDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FinishDate { get; private set; }
         public VocabularyKey Years { get; private set; }
         public VocabularyKey JournalNumber { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PeriodNumber { get; private set; }
         public VocabularyKey PeriodTypes { get; private set; }
         public VocabularyKey CalculationDate { get; private set; }
-
-
     }
 }

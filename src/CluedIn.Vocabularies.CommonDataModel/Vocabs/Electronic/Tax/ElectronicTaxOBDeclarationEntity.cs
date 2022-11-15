@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ElectronicTaxOBDeclarationEntityVocabulary()
         {
-            VocabularyName = "ElectronicTaxOBDeclarationEntity";
+            VocabularyName = "Electronic Tax OB Declaration Entity";
             KeyPrefix = "commonDataModel.electronictaxobdeclarationentity";
             KeySeparator = ".";
             Grouping = "/ElectronicTaxOBDeclarationEntity";
@@ -35,10 +35,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CollectionDescription = group.Add(new VocabularyKey(nameof(CollectionDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CollectionTaxReportField = group.Add(new VocabularyKey(nameof(CollectionTaxReportField), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CollectionTaxReportLayout = group.Add(new VocabularyKey(nameof(CollectionTaxReportLayout), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ID { get; private set; }
         public VocabularyKey Company { get; private set; }
         public VocabularyKey StartDate { get; private set; }
@@ -61,7 +59,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CollectionDescription { get; private set; }
         public VocabularyKey CollectionTaxReportField { get; private set; }
         public VocabularyKey CollectionTaxReportLayout { get; private set; }
-
-
     }
 }

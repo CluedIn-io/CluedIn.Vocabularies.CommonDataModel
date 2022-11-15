@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetParametersEntityVocabulary()
         {
-            VocabularyName = "AssetParametersEntity";
+            VocabularyName = "Asset Parameters Entity";
             KeyPrefix = "commonDataModel.assetparametersentity";
             KeySeparator = ".";
             Grouping = "/AssetParametersEntity";
@@ -72,10 +72,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AreDepreciationMethodsEnabled = group.Add(new VocabularyKey(nameof(AreDepreciationMethodsEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsDepreciationPolicyEnabled = group.Add(new VocabularyKey(nameof(IsDepreciationPolicyEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MinimumDepreciationAmountReportingCurrency = group.Add(new VocabularyKey(nameof(MinimumDepreciationAmountReportingCurrency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountForUntransferredReserves { get; private set; }
         public VocabularyKey AccountForUntransferredReservesDisplayValue { get; private set; }
         public VocabularyKey Acquisition { get; private set; }
@@ -135,7 +133,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AreDepreciationMethodsEnabled { get; private set; }
         public VocabularyKey IsDepreciationPolicyEnabled { get; private set; }
         public VocabularyKey MinimumDepreciationAmountReportingCurrency { get; private set; }
-
-
     }
 }

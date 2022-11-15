@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmTitleEntityVocabulary()
         {
-            VocabularyName = "HcmTitleEntity";
+            VocabularyName = "Hcm Title Entity";
             KeyPrefix = "commonDataModel.hcmtitleentity";
             KeySeparator = ".";
             Grouping = "/HcmTitleEntity";
@@ -14,12 +14,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             AddGroup("HcmTitleEntity Details", group =>
             {
                 TitleId = group.Add(new VocabularyKey(nameof(TitleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TitleId { get; private set; }
-
-
     }
 }

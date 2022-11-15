@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DimAttributeOMValueStreamEntityVocabulary()
         {
-            VocabularyName = "DimAttributeOMValueStreamEntity";
+            VocabularyName = "Dim Attribute OM Value Stream Entity";
             KeyPrefix = "commonDataModel.dimattributeomvaluestreamentity";
             KeySeparator = ".";
             Grouping = "/DimAttributeOMValueStreamEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 Value = group.Add(new VocabularyKey(nameof(Value), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Value { get; private set; }
         public VocabularyKey Name { get; private set; }
-
-
     }
 }

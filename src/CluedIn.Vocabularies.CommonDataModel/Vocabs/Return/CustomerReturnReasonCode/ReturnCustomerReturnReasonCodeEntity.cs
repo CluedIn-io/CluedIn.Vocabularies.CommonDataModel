@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReturnCustomerReturnReasonCodeEntityVocabulary()
         {
-            VocabularyName = "ReturnCustomerReturnReasonCodeEntity";
+            VocabularyName = "Return Customer Return Reason Code Entity";
             KeyPrefix = "commonDataModel.returncustomerreturnreasoncodeentity";
             KeySeparator = ".";
             Grouping = "/ReturnCustomerReturnReasonCodeEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ReasonDescription = group.Add(new VocabularyKey(nameof(ReasonDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CustomerReturnReasonCodeGroupId = group.Add(new VocabularyKey(nameof(CustomerReturnReasonCodeGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReasonCode = group.Add(new VocabularyKey(nameof(ReasonCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ReasonDescription { get; private set; }
         public VocabularyKey CustomerReturnReasonCodeGroupId { get; private set; }
         public VocabularyKey ReasonCode { get; private set; }
-
-
     }
 }

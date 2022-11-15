@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxPostingGroupEntityV2Vocabulary()
         {
-            VocabularyName = "TaxPostingGroupEntityV2";
+            VocabularyName = "Tax Posting Group Entity V2";
             KeyPrefix = "commonDataModel.taxpostinggroupentityv2";
             KeySeparator = ".";
             Grouping = "/TaxPostingGroupEntityV2";
@@ -49,10 +49,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TaxOutgoingDiffOffsetMainAccountIdDisplayValue = group.Add(new VocabularyKey(nameof(TaxOutgoingDiffOffsetMainAccountIdDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxOutgoingOffsetLedgerMainAccountId = group.Add(new VocabularyKey(nameof(TaxOutgoingOffsetLedgerMainAccountId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxOutgoingOffsetLedgerMainAccountIdDisplayValue = group.Add(new VocabularyKey(nameof(TaxOutgoingOffsetLedgerMainAccountIdDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TaxPostingGroupCode { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey TaxFromCustomerCashDiscountMainAccountId { get; private set; }
@@ -89,7 +87,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TaxOutgoingDiffOffsetMainAccountIdDisplayValue { get; private set; }
         public VocabularyKey TaxOutgoingOffsetLedgerMainAccountId { get; private set; }
         public VocabularyKey TaxOutgoingOffsetLedgerMainAccountIdDisplayValue { get; private set; }
-
-
     }
 }

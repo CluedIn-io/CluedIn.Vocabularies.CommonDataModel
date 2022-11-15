@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankGroupEntityVocabulary()
         {
-            VocabularyName = "BankGroupEntity";
+            VocabularyName = "Bank Group Entity";
             KeyPrefix = "commonDataModel.bankgroupentity";
             KeySeparator = ".";
             Grouping = "/BankGroupEntity";
@@ -66,10 +66,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BankType_RU = group.Add(new VocabularyKey(nameof(BankType_RU), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BaseBankId_RU = group.Add(new VocabularyKey(nameof(BaseBankId_RU), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendAccountNum_RU = group.Add(new VocabularyKey(nameof(VendAccountNum_RU), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RoutingNumberType { get; private set; }
         public VocabularyKey ContractPostAccount { get; private set; }
         public VocabularyKey BankGroupId { get; private set; }
@@ -123,7 +121,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey BankType_RU { get; private set; }
         public VocabularyKey BaseBankId_RU { get; private set; }
         public VocabularyKey VendAccountNum_RU { get; private set; }
-
-
     }
 }

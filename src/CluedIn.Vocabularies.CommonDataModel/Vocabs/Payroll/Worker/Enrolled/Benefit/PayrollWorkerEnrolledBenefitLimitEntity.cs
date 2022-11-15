@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollWorkerEnrolledBenefitLimitEntityVocabulary()
         {
-            VocabularyName = "PayrollWorkerEnrolledBenefitLimitEntity";
+            VocabularyName = "Payroll Worker Enrolled Benefit Limit Entity";
             KeyPrefix = "commonDataModel.payrollworkerenrolledbenefitlimitentity";
             KeySeparator = ".";
             Grouping = "/PayrollWorkerEnrolledBenefitLimitEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 EnrolledBenefitWorker = group.Add(new VocabularyKey(nameof(EnrolledBenefitWorker), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BenefitId = group.Add(new VocabularyKey(nameof(BenefitId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PersonnelNumber = group.Add(new VocabularyKey(nameof(PersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ContributionLimitAmount { get; private set; }
         public VocabularyKey ContributionLimitEndDate { get; private set; }
         public VocabularyKey ContributionLimitPeriod { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey EnrolledBenefitWorker { get; private set; }
         public VocabularyKey BenefitId { get; private set; }
         public VocabularyKey PersonnelNumber { get; private set; }
-
-
     }
 }

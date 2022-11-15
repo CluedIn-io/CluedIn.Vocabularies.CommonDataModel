@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LogisticsAddressCountryRegionTranslationEntityVocabulary()
         {
-            VocabularyName = "LogisticsAddressCountryRegionTranslationEntity";
+            VocabularyName = "Logistics Address Country Region Translation Entity";
             KeyPrefix = "commonDataModel.logisticsaddresscountryregiontranslationentity";
             KeySeparator = ".";
             Grouping = "/LogisticsAddressCountryRegionTranslationEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LanguageId = group.Add(new VocabularyKey(nameof(LanguageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LongName = group.Add(new VocabularyKey(nameof(LongName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ShortName = group.Add(new VocabularyKey(nameof(ShortName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CountryRegionId { get; private set; }
         public VocabularyKey LanguageId { get; private set; }
         public VocabularyKey LongName { get; private set; }
         public VocabularyKey ShortName { get; private set; }
-
-
     }
 }

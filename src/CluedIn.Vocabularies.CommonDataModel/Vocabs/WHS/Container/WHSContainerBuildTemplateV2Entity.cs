@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSContainerBuildTemplateV2EntityVocabulary()
         {
-            VocabularyName = "WHSContainerBuildTemplateV2Entity";
+            VocabularyName = "WHS Container Build Template V2 Entity";
             KeyPrefix = "commonDataModel.whscontainerbuildtemplatev2entity";
             KeySeparator = ".";
             Grouping = "/WHSContainerBuildTemplateV2Entity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsContainerPackedByDirectiveUnit = group.Add(new VocabularyKey(nameof(IsContainerPackedByDirectiveUnit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ContainerTemplateSequenceNumber = group.Add(new VocabularyKey(nameof(ContainerTemplateSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WaveStepCode = group.Add(new VocabularyKey(nameof(WaveStepCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsSplitPickingAllowed { get; private set; }
         public VocabularyKey ContainerGroupId { get; private set; }
         public VocabularyKey ContainerTemplateId { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsContainerPackedByDirectiveUnit { get; private set; }
         public VocabularyKey ContainerTemplateSequenceNumber { get; private set; }
         public VocabularyKey WaveStepCode { get; private set; }
-
-
     }
 }

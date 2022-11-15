@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PlSADDocumentLinePurchaseOrderEntityVocabulary()
         {
-            VocabularyName = "PlSADDocumentLinePurchaseOrderEntity";
+            VocabularyName = "Pl SAD Document Line Purchase Order Entity";
             KeyPrefix = "commonDataModel.plsaddocumentlinepurchaseorderentity";
             KeySeparator = ".";
             Grouping = "/PlSADDocumentLinePurchaseOrderEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SalesTaxAmount = group.Add(new VocabularyKey(nameof(SalesTaxAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesTaxCode = group.Add(new VocabularyKey(nameof(SalesTaxCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DimensionDisplayValue = group.Add(new VocabularyKey(nameof(DimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Dimension { get; private set; }
         public VocabularyKey BaseForSAD { get; private set; }
         public VocabularyKey Duty { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SalesTaxAmount { get; private set; }
         public VocabularyKey SalesTaxCode { get; private set; }
         public VocabularyKey DimensionDisplayValue { get; private set; }
-
-
     }
 }

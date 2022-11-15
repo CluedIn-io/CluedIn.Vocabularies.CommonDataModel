@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SMAServiceSubscriptionGroupEntityVocabulary()
         {
-            VocabularyName = "SMAServiceSubscriptionGroupEntity";
+            VocabularyName = "SMA Service Subscription Group Entity";
             KeyPrefix = "commonDataModel.smaservicesubscriptiongroupentity";
             KeySeparator = ".";
             Grouping = "/SMAServiceSubscriptionGroupEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ServiceSubscriptionNumberSequenceRecId = group.Add(new VocabularyKey(nameof(ServiceSubscriptionNumberSequenceRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ServiceSubscriptionNumberSequenceCode = group.Add(new VocabularyKey(nameof(ServiceSubscriptionNumberSequenceCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ServiceSubscriptionNumberSequenceDataArea = group.Add(new VocabularyKey(nameof(ServiceSubscriptionNumberSequenceDataArea), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InvoiceFrequencyPeriodTypeCode { get; private set; }
         public VocabularyKey AccrualFrequencyPeriodTypeCode { get; private set; }
         public VocabularyKey IsRevenueAccrued { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ServiceSubscriptionNumberSequenceRecId { get; private set; }
         public VocabularyKey ServiceSubscriptionNumberSequenceCode { get; private set; }
         public VocabularyKey ServiceSubscriptionNumberSequenceDataArea { get; private set; }
-
-
     }
 }

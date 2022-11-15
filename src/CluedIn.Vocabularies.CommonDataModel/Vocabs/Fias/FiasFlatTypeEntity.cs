@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FiasFlatTypeEntityVocabulary()
         {
-            VocabularyName = "FiasFlatTypeEntity";
+            VocabularyName = "Fias Flat Type Entity";
             KeyPrefix = "commonDataModel.fiasflattypeentity";
             KeySeparator = ".";
             Grouping = "/FiasFlatTypeEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FlTypeId = group.Add(new VocabularyKey(nameof(FlTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ShortName = group.Add(new VocabularyKey(nameof(ShortName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FlTypeId { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey ShortName { get; private set; }
-
-
     }
 }

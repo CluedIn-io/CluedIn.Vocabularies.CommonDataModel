@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResReleasedProductDocumentAttachmentEntityVocabulary()
         {
-            VocabularyName = "EcoResReleasedProductDocumentAttachmentEntity";
+            VocabularyName = "Eco Res Released Product Document Attachment Entity";
             KeyPrefix = "commonDataModel.ecoresreleasedproductdocumentattachmententity";
             KeySeparator = ".";
             Grouping = "/EcoResReleasedProductDocumentAttachmentEntity";
@@ -30,10 +30,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsProductImage = group.Add(new VocabularyKey(nameof(IsProductImage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsDefaultProductImage = group.Add(new VocabularyKey(nameof(IsDefaultProductImage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductImageUsage = group.Add(new VocabularyKey(nameof(ProductImageUsage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ItemNumber { get; private set; }
         public VocabularyKey DocumentAttachmentTypeCode { get; private set; }
         public VocabularyKey DocumentAttachmentTypeLegalEntityId { get; private set; }
@@ -51,7 +49,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsProductImage { get; private set; }
         public VocabularyKey IsDefaultProductImage { get; private set; }
         public VocabularyKey ProductImageUsage { get; private set; }
-
-
     }
 }

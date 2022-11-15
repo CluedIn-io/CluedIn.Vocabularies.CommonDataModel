@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DataManagementTargetMapEntityVocabulary()
         {
-            VocabularyName = "DataManagementTargetMapEntity";
+            VocabularyName = "Data Management Target Map Entity";
             KeyPrefix = "commonDataModel.datamanagementtargetmapentity";
             KeySeparator = ".";
             Grouping = "/DataManagementTargetMapEntity";
@@ -30,10 +30,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FieldLength = group.Add(new VocabularyKey(nameof(FieldLength), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EntityLabel = group.Add(new VocabularyKey(nameof(EntityLabel), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FieldAOTName = group.Add(new VocabularyKey(nameof(FieldAOTName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Entity { get; private set; }
         public VocabularyKey IsAutoManual { get; private set; }
         public VocabularyKey TargetDataSourceName { get; private set; }
@@ -51,7 +49,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FieldLength { get; private set; }
         public VocabularyKey EntityLabel { get; private set; }
         public VocabularyKey FieldAOTName { get; private set; }
-
-
     }
 }

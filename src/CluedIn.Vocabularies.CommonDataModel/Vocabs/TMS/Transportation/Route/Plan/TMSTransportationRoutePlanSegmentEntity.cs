@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationRoutePlanSegmentEntityVocabulary()
         {
-            VocabularyName = "TMSTransportationRoutePlanSegmentEntity";
+            VocabularyName = "TMS Transportation Route Plan Segment Entity";
             KeyPrefix = "commonDataModel.tmstransportationrouteplansegmententity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationRoutePlanSegmentEntity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SequenceNumber = group.Add(new VocabularyKey(nameof(SequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OrderVendorAccountNumber = group.Add(new VocabularyKey(nameof(OrderVendorAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InvoiceVendorAccountNumber = group.Add(new VocabularyKey(nameof(InvoiceVendorAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey OriginTransportationHubId { get; private set; }
         public VocabularyKey ShippingCarrierId { get; private set; }
         public VocabularyKey ShippingCarrierServiceGroupId { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SequenceNumber { get; private set; }
         public VocabularyKey OrderVendorAccountNumber { get; private set; }
         public VocabularyKey InvoiceVendorAccountNumber { get; private set; }
-
-
     }
 }

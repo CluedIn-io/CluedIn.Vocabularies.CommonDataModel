@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PdsRegionalRegulatedProductEntityVocabulary()
         {
-            VocabularyName = "PdsRegionalRegulatedProductEntity";
+            VocabularyName = "Pds Regional Regulated Product Entity";
             KeyPrefix = "commonDataModel.pdsregionalregulatedproductentity";
             KeySeparator = ".";
             Grouping = "/PdsRegionalRegulatedProductEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsRegionalRegulatedProductListReportingList = group.Add(new VocabularyKey(nameof(IsRegionalRegulatedProductListReportingList), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RegionalRegulatedProductListReportingListId = group.Add(new VocabularyKey(nameof(RegionalRegulatedProductListReportingListId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RegulatedItemNumber = group.Add(new VocabularyKey(nameof(RegulatedItemNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RegionalRegulatedProductListRegulatingCountryRegionId { get; private set; }
         public VocabularyKey RegionalRegulatedProductListRegulatingStateId { get; private set; }
         public VocabularyKey IsRegionalRegulatedProductListReportingList { get; private set; }
         public VocabularyKey RegionalRegulatedProductListReportingListId { get; private set; }
         public VocabularyKey RegulatedItemNumber { get; private set; }
-
-
     }
 }

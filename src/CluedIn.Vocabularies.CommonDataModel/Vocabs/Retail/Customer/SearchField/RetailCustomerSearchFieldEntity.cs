@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailCustomerSearchFieldEntityVocabulary()
         {
-            VocabularyName = "RetailCustomerSearchFieldEntity";
+            VocabularyName = "Retail Customer Search Field Entity";
             KeyPrefix = "commonDataModel.retailcustomersearchfieldentity";
             KeySeparator = ".";
             Grouping = "/RetailCustomerSearchFieldEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RetailCustomerSearchFieldEnumLabel = group.Add(new VocabularyKey(nameof(RetailCustomerSearchFieldEnumLabel), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DisplayOrder = group.Add(new VocabularyKey(nameof(DisplayOrder), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CanBeRefined = group.Add(new VocabularyKey(nameof(CanBeRefined), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RetailCustomerSearchFieldEnumValue { get; private set; }
         public VocabularyKey IsShortcut { get; private set; }
         public VocabularyKey RetailCustomerSearchFieldEnumLabel { get; private set; }
         public VocabularyKey DisplayOrder { get; private set; }
         public VocabularyKey CanBeRefined { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReqMasterPlanningParametersEntityVocabulary()
         {
-            VocabularyName = "ReqMasterPlanningParametersEntity";
+            VocabularyName = "Req Master Planning Parameters Entity";
             KeyPrefix = "commonDataModel.reqmasterplanningparametersentity";
             KeySeparator = ".";
             Grouping = "/ReqMasterPlanningParametersEntity";
@@ -45,10 +45,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WillPreProcessingAutomaticallyFilterItems = group.Add(new VocabularyKey(nameof(WillPreProcessingAutomaticallyFilterItems), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultTransferOrderStockTransferPriceType_IN = group.Add(new VocabularyKey(nameof(DefaultTransferOrderStockTransferPriceType_IN), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultTranferOrderTransferType_IN = group.Add(new VocabularyKey(nameof(DefaultTranferOrderTransferType_IN), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WillCompletedStaticPlanBeCopiedToDynamicPlan { get; private set; }
         public VocabularyKey MaximumBundleSize { get; private set; }
         public VocabularyKey JobSchedulingStartTimeRule { get; private set; }
@@ -81,7 +79,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WillPreProcessingAutomaticallyFilterItems { get; private set; }
         public VocabularyKey DefaultTransferOrderStockTransferPriceType_IN { get; private set; }
         public VocabularyKey DefaultTranferOrderTransferType_IN { get; private set; }
-
-
     }
 }

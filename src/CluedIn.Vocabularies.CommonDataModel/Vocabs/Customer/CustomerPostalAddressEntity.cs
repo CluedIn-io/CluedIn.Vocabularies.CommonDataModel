@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustomerPostalAddressEntityVocabulary()
         {
-            VocabularyName = "CustomerPostalAddressEntity";
+            VocabularyName = "Customer Postal Address Entity";
             KeyPrefix = "commonDataModel.customerpostaladdressentity";
             KeySeparator = ".";
             Grouping = "/CustomerPostalAddressEntity";
@@ -52,10 +52,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Effective = group.Add(new VocabularyKey(nameof(Effective), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Expiration = group.Add(new VocabularyKey(nameof(Expiration), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AddressDefaultRoles = group.Add(new VocabularyKey(nameof(AddressDefaultRoles), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CustomerAccountNumber { get; private set; }
         public VocabularyKey CustomerLegalEntityId { get; private set; }
         public VocabularyKey FormattedAddress { get; private set; }
@@ -95,7 +93,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Effective { get; private set; }
         public VocabularyKey Expiration { get; private set; }
         public VocabularyKey AddressDefaultRoles { get; private set; }
-
-
     }
 }

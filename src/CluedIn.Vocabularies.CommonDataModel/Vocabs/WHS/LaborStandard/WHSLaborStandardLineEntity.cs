@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSLaborStandardLineEntityVocabulary()
         {
-            VocabularyName = "WHSLaborStandardLineEntity";
+            VocabularyName = "WHS Labor Standard Line Entity";
             KeyPrefix = "commonDataModel.whslaborstandardlineentity";
             KeySeparator = ".";
             Grouping = "/WHSLaborStandardLineEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 HourlyEstimatedWork = group.Add(new VocabularyKey(nameof(HourlyEstimatedWork), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WarehouseWorkClassId = group.Add(new VocabularyKey(nameof(WarehouseWorkClassId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MeasurementWorkType = group.Add(new VocabularyKey(nameof(MeasurementWorkType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LaborMeasurementType { get; private set; }
         public VocabularyKey LineSequenceNumber { get; private set; }
         public VocabularyKey LaborStandardId { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey HourlyEstimatedWork { get; private set; }
         public VocabularyKey WarehouseWorkClassId { get; private set; }
         public VocabularyKey MeasurementWorkType { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CredManCustBalanceStatEntityVocabulary()
         {
-            VocabularyName = "CredManCustBalanceStatEntity";
+            VocabularyName = "Cred Man Cust Balance Stat Entity";
             KeyPrefix = "commonDataModel.credmancustbalancestatentity";
             KeySeparator = ".";
             Grouping = "/CredManCustBalanceStatEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CreditLimit = group.Add(new VocabularyKey(nameof(CreditLimit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CustAccount = group.Add(new VocabularyKey(nameof(CustAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Exposure = group.Add(new VocabularyKey(nameof(Exposure), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Balance { get; private set; }
         public VocabularyKey BalanceDate { get; private set; }
         public VocabularyKey CreditLimit { get; private set; }
         public VocabularyKey CustAccount { get; private set; }
         public VocabularyKey Exposure { get; private set; }
-
-
     }
 }

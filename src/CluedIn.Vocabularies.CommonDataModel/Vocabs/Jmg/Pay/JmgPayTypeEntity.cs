@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgPayTypeEntityVocabulary()
         {
-            VocabularyName = "JmgPayTypeEntity";
+            VocabularyName = "Jmg Pay Type Entity";
             KeyPrefix = "commonDataModel.jmgpaytypeentity";
             KeySeparator = ".";
             Grouping = "/JmgPayTypeEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BasePayType = group.Add(new VocabularyKey(nameof(BasePayType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsIncludedInExport = group.Add(new VocabularyKey(nameof(IsIncludedInExport), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExternalPayCostType = group.Add(new VocabularyKey(nameof(ExternalPayCostType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PayType { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey BasePayType { get; private set; }
         public VocabularyKey IsIncludedInExport { get; private set; }
         public VocabularyKey ExternalPayCostType { get; private set; }
-
-
     }
 }

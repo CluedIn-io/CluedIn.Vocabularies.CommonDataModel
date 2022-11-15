@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustCollectionsBIActivitiesAverageCloseTimeVocabulary()
         {
-            VocabularyName = "CustCollectionsBIActivitiesAverageCloseTime";
+            VocabularyName = "Cust Collections BI Activities Average Close Time";
             KeyPrefix = "commonDataModel.custcollectionsbiactivitiesaverageclosetime";
             KeySeparator = ".";
             Grouping = "/CustCollectionsBIActivitiesAverageCloseTime";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AccountNum = group.Add(new VocabularyKey(nameof(AccountNum), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ResponsibleWorker = group.Add(new VocabularyKey(nameof(ResponsibleWorker), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ActivityNumber { get; private set; }
         public VocabularyKey AverageClosedTime { get; private set; }
         public VocabularyKey AccountNum { get; private set; }
         public VocabularyKey ResponsibleWorker { get; private set; }
         public VocabularyKey Name { get; private set; }
-
-
     }
 }

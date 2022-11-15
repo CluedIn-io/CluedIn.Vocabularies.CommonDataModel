@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSCycleCountingWarehouseWorkLineV2EntityVocabulary()
         {
-            VocabularyName = "WHSCycleCountingWarehouseWorkLineV2Entity";
+            VocabularyName = "WHS Cycle Counting Warehouse Work Line V2 Entity";
             KeyPrefix = "commonDataModel.whscyclecountingwarehouseworklinev2entity";
             KeySeparator = ".";
             Grouping = "/WHSCycleCountingWarehouseWorkLineV2Entity";
@@ -38,10 +38,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WorkClosedDateTime = group.Add(new VocabularyKey(nameof(WorkClosedDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkCreatedDateTime = group.Add(new VocabularyKey(nameof(WorkCreatedDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkStatus = group.Add(new VocabularyKey(nameof(WorkStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AdjustmentWarehouseWorkId { get; private set; }
         public VocabularyKey CountedQuantity { get; private set; }
         public VocabularyKey ExpectedQuantity { get; private set; }
@@ -67,7 +65,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WorkClosedDateTime { get; private set; }
         public VocabularyKey WorkCreatedDateTime { get; private set; }
         public VocabularyKey WorkStatus { get; private set; }
-
-
     }
 }

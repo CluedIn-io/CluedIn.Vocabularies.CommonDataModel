@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmPositionTypeEntityVocabulary()
         {
-            VocabularyName = "HcmPositionTypeEntity";
+            VocabularyName = "Hcm Position Type Entity";
             KeyPrefix = "commonDataModel.hcmpositiontypeentity";
             KeySeparator = ".";
             Grouping = "/HcmPositionTypeEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Classification = group.Add(new VocabularyKey(nameof(Classification), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PositionTypeId = group.Add(new VocabularyKey(nameof(PositionTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey Classification { get; private set; }
         public VocabularyKey PositionTypeId { get; private set; }
-
-
     }
 }

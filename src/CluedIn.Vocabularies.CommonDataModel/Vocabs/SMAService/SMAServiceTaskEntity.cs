@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SMAServiceTaskEntityVocabulary()
         {
-            VocabularyName = "SMAServiceTaskEntity";
+            VocabularyName = "SMA Service Task Entity";
             KeyPrefix = "commonDataModel.smaservicetaskentity";
             KeySeparator = ".";
             Grouping = "/SMAServiceTaskEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 TaskDescription = group.Add(new VocabularyKey(nameof(TaskDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaskId = group.Add(new VocabularyKey(nameof(TaskId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TaskDescription { get; private set; }
         public VocabularyKey TaskId { get; private set; }
-
-
     }
 }

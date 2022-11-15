@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EFDocAuthorityStateEntityVocabulary()
         {
-            VocabularyName = "EFDocAuthorityStateEntity";
+            VocabularyName = "EF Doc Authority State Entity";
             KeyPrefix = "commonDataModel.efdocauthoritystateentity";
             KeySeparator = ".";
             Grouping = "/EFDocAuthorityStateEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 State = group.Add(new VocabularyKey(nameof(State), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AddExempt = group.Add(new VocabularyKey(nameof(AddExempt), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidateBenefitCodes = group.Add(new VocabularyKey(nameof(ValidateBenefitCodes), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Authority { get; private set; }
         public VocabularyKey StateId { get; private set; }
         public VocabularyKey State { get; private set; }
         public VocabularyKey AddExempt { get; private set; }
         public VocabularyKey ValidateBenefitCodes { get; private set; }
-
-
     }
 }

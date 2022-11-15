@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmEmploymentDetailEntityVocabulary()
         {
-            VocabularyName = "HcmEmploymentDetailEntity";
+            VocabularyName = "Hcm Employment Detail Entity";
             KeyPrefix = "commonDataModel.hcmemploymentdetailentity";
             KeySeparator = ".";
             Grouping = "/HcmEmploymentDetailEntity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PersonnelNumber = group.Add(new VocabularyKey(nameof(PersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReasonCodeId = group.Add(new VocabularyKey(nameof(ReasonCodeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EmploymentType = group.Add(new VocabularyKey(nameof(EmploymentType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AdjustedWorkerStartDate { get; private set; }
         public VocabularyKey EmployerNoticeAmount { get; private set; }
         public VocabularyKey EmployerUnitOfNotice { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PersonnelNumber { get; private set; }
         public VocabularyKey ReasonCodeId { get; private set; }
         public VocabularyKey EmploymentType { get; private set; }
-
-
     }
 }

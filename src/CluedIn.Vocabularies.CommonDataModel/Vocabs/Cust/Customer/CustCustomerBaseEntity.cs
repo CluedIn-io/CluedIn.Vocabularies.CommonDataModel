@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustCustomerBaseEntityVocabulary()
         {
-            VocabularyName = "CustCustomerBaseEntity";
+            VocabularyName = "Cust Customer Base Entity";
             KeyPrefix = "commonDataModel.custcustomerbaseentity";
             KeySeparator = ".";
             Grouping = "/CustCustomerBaseEntity";
@@ -102,10 +102,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SalesTaxGroup = group.Add(new VocabularyKey(nameof(SalesTaxGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PaymentTerms = group.Add(new VocabularyKey(nameof(PaymentTerms), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PaymentMethod = group.Add(new VocabularyKey(nameof(PaymentMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CustomerAccount { get; private set; }
         public VocabularyKey SalesCurrencyCode { get; private set; }
         public VocabularyKey CustomerGroupId { get; private set; }
@@ -195,7 +193,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SalesTaxGroup { get; private set; }
         public VocabularyKey PaymentTerms { get; private set; }
         public VocabularyKey PaymentMethod { get; private set; }
-
-
     }
 }

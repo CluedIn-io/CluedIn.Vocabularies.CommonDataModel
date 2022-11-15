@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MainAccountTotalAccountIntervalEntityVocabulary()
         {
-            VocabularyName = "MainAccountTotalAccountIntervalEntity";
+            VocabularyName = "Main Account Total Account Interval Entity";
             KeyPrefix = "commonDataModel.mainaccounttotalaccountintervalentity";
             KeySeparator = ".";
             Grouping = "/MainAccountTotalAccountIntervalEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FromValue = group.Add(new VocabularyKey(nameof(FromValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ToValue = group.Add(new VocabularyKey(nameof(ToValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InvertTotalSign = group.Add(new VocabularyKey(nameof(InvertTotalSign), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey MainAccountId { get; private set; }
         public VocabularyKey ChartOfAccounts { get; private set; }
         public VocabularyKey FromValue { get; private set; }
         public VocabularyKey ToValue { get; private set; }
         public VocabularyKey InvertTotalSign { get; private set; }
-
-
     }
 }

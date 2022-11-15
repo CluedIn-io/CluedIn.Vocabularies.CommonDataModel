@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SubledgerJournalTransferRuleEntityVocabulary()
         {
-            VocabularyName = "SubledgerJournalTransferRuleEntity";
+            VocabularyName = "Subledger Journal Transfer Rule Entity";
             KeyPrefix = "commonDataModel.subledgerjournaltransferruleentity";
             KeySeparator = ".";
             Grouping = "/SubledgerJournalTransferRuleEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SourceDocumentType = group.Add(new VocabularyKey(nameof(SourceDocumentType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransferMode = group.Add(new VocabularyKey(nameof(TransferMode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LegalEntityId = group.Add(new VocabularyKey(nameof(LegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SummarizeAccountingEntries { get; private set; }
         public VocabularyKey Ledger { get; private set; }
         public VocabularyKey NotificationGroup { get; private set; }
         public VocabularyKey SourceDocumentType { get; private set; }
         public VocabularyKey TransferMode { get; private set; }
         public VocabularyKey LegalEntityId { get; private set; }
-
-
     }
 }

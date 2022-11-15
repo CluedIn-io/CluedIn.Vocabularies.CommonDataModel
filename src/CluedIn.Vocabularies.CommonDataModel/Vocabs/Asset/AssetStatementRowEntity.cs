@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetStatementRowEntityVocabulary()
         {
-            VocabularyName = "AssetStatementRowEntity";
+            VocabularyName = "Asset Statement Row Entity";
             KeyPrefix = "commonDataModel.assetstatementrowentity";
             KeySeparator = ".";
             Grouping = "/AssetStatementRowEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AssetIntervalRelation = group.Add(new VocabularyKey(nameof(AssetIntervalRelation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FromFixedAssetNumber = group.Add(new VocabularyKey(nameof(FromFixedAssetNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ToFixedAssetNumber = group.Add(new VocabularyKey(nameof(ToFixedAssetNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LineNumber { get; private set; }
         public VocabularyKey RowName { get; private set; }
         public VocabularyKey RowType { get; private set; }
         public VocabularyKey AssetIntervalRelation { get; private set; }
         public VocabularyKey FromFixedAssetNumber { get; private set; }
         public VocabularyKey ToFixedAssetNumber { get; private set; }
-
-
     }
 }

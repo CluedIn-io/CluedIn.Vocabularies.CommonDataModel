@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseWorkerEntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseWorkerEntity";
+            VocabularyName = "WHS Warehouse Worker Entity";
             KeyPrefix = "commonDataModel.whswarehouseworkerentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseWorkerEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DefaultPackingStationWarehouseId = group.Add(new VocabularyKey(nameof(DefaultPackingStationWarehouseId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultPackingStationWarehouseLocationId = group.Add(new VocabularyKey(nameof(DefaultPackingStationWarehouseLocationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultPackingStationWarehouseSiteId = group.Add(new VocabularyKey(nameof(DefaultPackingStationWarehouseSiteId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DefaultContainerClosingProfileId { get; private set; }
         public VocabularyKey DefaultContainerPackingProfileId { get; private set; }
         public VocabularyKey WarehouseWorkerPersonnelNumber { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DefaultPackingStationWarehouseId { get; private set; }
         public VocabularyKey DefaultPackingStationWarehouseLocationId { get; private set; }
         public VocabularyKey DefaultPackingStationWarehouseSiteId { get; private set; }
-
-
     }
 }

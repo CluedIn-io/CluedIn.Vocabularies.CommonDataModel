@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankBillOfExchangeLayoutEntityVocabulary()
         {
-            VocabularyName = "BankBillOfExchangeLayoutEntity";
+            VocabularyName = "Bank Bill Of Exchange Layout Entity";
             KeyPrefix = "commonDataModel.bankbillofexchangelayoutentity";
             KeySeparator = ".";
             Grouping = "/BankBillOfExchangeLayoutEntity";
@@ -34,10 +34,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PrintSecondSignature = group.Add(new VocabularyKey(nameof(PrintSecondSignature), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SecondSignatureAmountLimit = group.Add(new VocabularyKey(nameof(SecondSignatureAmountLimit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PrintTransactionDate = group.Add(new VocabularyKey(nameof(PrintTransactionDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AmountPrefix { get; private set; }
         public VocabularyKey PrintBankAccount { get; private set; }
         public VocabularyKey BankAccountId { get; private set; }
@@ -59,7 +57,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PrintSecondSignature { get; private set; }
         public VocabularyKey SecondSignatureAmountLimit { get; private set; }
         public VocabularyKey PrintTransactionDate { get; private set; }
-
-
     }
 }

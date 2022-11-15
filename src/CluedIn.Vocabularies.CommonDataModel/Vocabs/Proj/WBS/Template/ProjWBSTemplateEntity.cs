@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjWBSTemplateEntityVocabulary()
         {
-            VocabularyName = "ProjWBSTemplateEntity";
+            VocabularyName = "Proj WBS Template Entity";
             KeyPrefix = "commonDataModel.projwbstemplateentity";
             KeySeparator = ".";
             Grouping = "/ProjWBSTemplateEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 HierarchyType = group.Add(new VocabularyKey(nameof(HierarchyType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsActive = group.Add(new VocabularyKey(nameof(IsActive), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsTemplate = group.Add(new VocabularyKey(nameof(IsTemplate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey HierarchyId { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey HierarchyType { get; private set; }
         public VocabularyKey IsActive { get; private set; }
         public VocabularyKey IsTemplate { get; private set; }
-
-
     }
 }

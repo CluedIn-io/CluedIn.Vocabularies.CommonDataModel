@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public OpResOperationsResourceCapabilityAssignmentEntityVocabulary()
         {
-            VocabularyName = "OpResOperationsResourceCapabilityAssignmentEntity";
+            VocabularyName = "Op Res Operations Resource Capability Assignment Entity";
             KeyPrefix = "commonDataModel.opresoperationsresourcecapabilityassignmententity";
             KeySeparator = ".";
             Grouping = "/OpResOperationsResourceCapabilityAssignmentEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OperationsResourceLegalEntityId = group.Add(new VocabularyKey(nameof(OperationsResourceLegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidFrom = group.Add(new VocabularyKey(nameof(ValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidTo = group.Add(new VocabularyKey(nameof(ValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey OperationsResourceCapabilityName { get; private set; }
         public VocabularyKey Level { get; private set; }
         public VocabularyKey Priority { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OperationsResourceLegalEntityId { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey ValidTo { get; private set; }
-
-
     }
 }

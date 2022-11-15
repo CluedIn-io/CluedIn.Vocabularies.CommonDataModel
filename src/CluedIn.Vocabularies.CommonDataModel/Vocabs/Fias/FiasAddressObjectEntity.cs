@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FiasAddressObjectEntityVocabulary()
         {
-            VocabularyName = "FiasAddressObjectEntity";
+            VocabularyName = "Fias Address Object Entity";
             KeyPrefix = "commonDataModel.fiasaddressobjectentity";
             KeySeparator = ".";
             Grouping = "/FiasAddressObjectEntity";
@@ -37,10 +37,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DivType = group.Add(new VocabularyKey(nameof(DivType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NextId = group.Add(new VocabularyKey(nameof(NextId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PrevId = group.Add(new VocabularyKey(nameof(PrevId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AOId { get; private set; }
         public VocabularyKey AOGuid { get; private set; }
         public VocabularyKey AOLevel { get; private set; }
@@ -65,7 +63,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DivType { get; private set; }
         public VocabularyKey NextId { get; private set; }
         public VocabularyKey PrevId { get; private set; }
-
-
     }
 }

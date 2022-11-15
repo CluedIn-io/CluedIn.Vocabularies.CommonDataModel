@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustCollectionAgencyFeeEntityVocabulary()
         {
-            VocabularyName = "CustCollectionAgencyFeeEntity";
+            VocabularyName = "Cust Collection Agency Fee Entity";
             KeyPrefix = "commonDataModel.custcollectionagencyfeeentity";
             KeySeparator = ".";
             Grouping = "/CustCollectionAgencyFeeEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FromAmount = group.Add(new VocabularyKey(nameof(FromAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ToAmount = group.Add(new VocabularyKey(nameof(ToAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Percent = group.Add(new VocabularyKey(nameof(Percent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CurrencyCode { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey ValidTo { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FromAmount { get; private set; }
         public VocabularyKey ToAmount { get; private set; }
         public VocabularyKey Percent { get; private set; }
-
-
     }
 }

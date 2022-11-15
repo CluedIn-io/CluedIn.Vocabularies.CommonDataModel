@@ -6,62 +6,58 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WebinarConfigurationVocabulary()
         {
-            VocabularyName = "WebinarConfiguration";
+            VocabularyName = "Webinar Configuration";
             KeyPrefix = "commonDataModel.webinarconfiguration";
             KeySeparator = ".";
             Grouping = "/WebinarConfiguration";
 
             AddGroup("WebinarConfiguration Details", group =>
             {
-                createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                createdOnBehalfBy = group.Add(new VocabularyKey(nameof(createdOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                importSequenceNumber = group.Add(new VocabularyKey(nameof(importSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                modifiedOn = group.Add(new VocabularyKey(nameof(modifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                modifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(modifiedOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                accessToken = group.Add(new VocabularyKey(nameof(accessToken), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                accessTokenKey = group.Add(new VocabularyKey(nameof(accessTokenKey), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                accessTokenSecret = group.Add(new VocabularyKey(nameof(accessTokenSecret), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                appURL = group.Add(new VocabularyKey(nameof(appURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                authorized = group.Add(new VocabularyKey(nameof(authorized), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                clientID = group.Add(new VocabularyKey(nameof(clientID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                lastUpdateDateTime = group.Add(new VocabularyKey(nameof(lastUpdateDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                message = group.Add(new VocabularyKey(nameof(message), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                providerServiceStatus = group.Add(new VocabularyKey(nameof(providerServiceStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                updateCredentials = group.Add(new VocabularyKey(nameof(updateCredentials), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                webinarConfigurationId = group.Add(new VocabularyKey(nameof(webinarConfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                overriddenCreatedOn = group.Add(new VocabularyKey(nameof(overriddenCreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                timeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(timeZoneRuleVersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOnBehalfBy = group.Add(new VocabularyKey(nameof(CreatedOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(ModifiedOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AccessToken = group.Add(new VocabularyKey(nameof(AccessToken), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AccessTokenKey = group.Add(new VocabularyKey(nameof(AccessTokenKey), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AccessTokenSecret = group.Add(new VocabularyKey(nameof(AccessTokenSecret), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AppURL = group.Add(new VocabularyKey(nameof(AppURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Authorized = group.Add(new VocabularyKey(nameof(Authorized), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ClientID = group.Add(new VocabularyKey(nameof(ClientID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LastUpdateDateTime = group.Add(new VocabularyKey(nameof(LastUpdateDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Message = group.Add(new VocabularyKey(nameof(Message), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProviderServiceStatus = group.Add(new VocabularyKey(nameof(ProviderServiceStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                UpdateCredentials = group.Add(new VocabularyKey(nameof(UpdateCredentials), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WebinarConfigurationId = group.Add(new VocabularyKey(nameof(WebinarConfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
-        public VocabularyKey createdOn { get; private set; }
-        public VocabularyKey createdOnBehalfBy { get; private set; }
-        public VocabularyKey importSequenceNumber { get; private set; }
-        public VocabularyKey modifiedOn { get; private set; }
-        public VocabularyKey modifiedOnBehalfBy { get; private set; }
-        public VocabularyKey accessToken { get; private set; }
-        public VocabularyKey accessTokenKey { get; private set; }
-        public VocabularyKey accessTokenSecret { get; private set; }
-        public VocabularyKey appURL { get; private set; }
-        public VocabularyKey authorized { get; private set; }
-        public VocabularyKey clientID { get; private set; }
-        public VocabularyKey lastUpdateDateTime { get; private set; }
-        public VocabularyKey message { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey providerServiceStatus { get; private set; }
-        public VocabularyKey updateCredentials { get; private set; }
-        public VocabularyKey webinarConfigurationId { get; private set; }
-        public VocabularyKey overriddenCreatedOn { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-        public VocabularyKey timeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey CreatedOnBehalfBy { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey ModifiedOnBehalfBy { get; private set; }
+        public VocabularyKey AccessToken { get; private set; }
+        public VocabularyKey AccessTokenKey { get; private set; }
+        public VocabularyKey AccessTokenSecret { get; private set; }
+        public VocabularyKey AppURL { get; private set; }
+        public VocabularyKey Authorized { get; private set; }
+        public VocabularyKey ClientID { get; private set; }
+        public VocabularyKey LastUpdateDateTime { get; private set; }
+        public VocabularyKey Message { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey ProviderServiceStatus { get; private set; }
+        public VocabularyKey UpdateCredentials { get; private set; }
+        public VocabularyKey WebinarConfigurationId { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-
-
     }
 }

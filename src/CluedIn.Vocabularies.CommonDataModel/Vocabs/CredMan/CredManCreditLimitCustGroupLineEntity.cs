@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CredManCreditLimitCustGroupLineEntityVocabulary()
         {
-            VocabularyName = "CredManCreditLimitCustGroupLineEntity";
+            VocabularyName = "Cred Man Credit Limit Cust Group Line Entity";
             KeyPrefix = "commonDataModel.credmancreditlimitcustgrouplineentity";
             KeySeparator = ".";
             Grouping = "/CredManCreditLimitCustGroupLineEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Company = group.Add(new VocabularyKey(nameof(Company), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CustAccount = group.Add(new VocabularyKey(nameof(CustAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CreditLimitId = group.Add(new VocabularyKey(nameof(CreditLimitId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Company { get; private set; }
         public VocabularyKey CustAccount { get; private set; }
         public VocabularyKey CreditLimitId { get; private set; }
-
-
     }
 }

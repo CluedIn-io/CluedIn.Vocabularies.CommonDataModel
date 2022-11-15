@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HMIMTransportCategoryEntityVocabulary()
         {
-            VocabularyName = "HMIMTransportCategoryEntity";
+            VocabularyName = "HMIM Transport Category Entity";
             KeyPrefix = "commonDataModel.hmimtransportcategoryentity";
             KeySeparator = ".";
             Grouping = "/HMIMTransportCategoryEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 TransportCategoryCode = group.Add(new VocabularyKey(nameof(TransportCategoryCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TransportCategoryCode { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

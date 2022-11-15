@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvCashAdvanceEntityVocabulary()
         {
-            VocabularyName = "TrvCashAdvanceEntity";
+            VocabularyName = "Trv Cash Advance Entity";
             KeyPrefix = "commonDataModel.trvcashadvanceentity";
             KeySeparator = ".";
             Grouping = "/TrvCashAdvanceEntity";
@@ -42,10 +42,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RequestingWorkerPersonnelNumber = group.Add(new VocabularyKey(nameof(RequestingWorkerPersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DimensionDisplayValue = group.Add(new VocabularyKey(nameof(DimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MainAccountDisplayValue = group.Add(new VocabularyKey(nameof(MainAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountType { get; private set; }
         public VocabularyKey MainAccount { get; private set; }
         public VocabularyKey Balance { get; private set; }
@@ -75,7 +73,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RequestingWorkerPersonnelNumber { get; private set; }
         public VocabularyKey DimensionDisplayValue { get; private set; }
         public VocabularyKey MainAccountDisplayValue { get; private set; }
-
-
     }
 }

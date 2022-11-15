@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchaseMultiLineDiscountAgreementEntityVocabulary()
         {
-            VocabularyName = "PurchaseMultiLineDiscountAgreementEntity";
+            VocabularyName = "Purchase Multi Line Discount Agreement Entity";
             KeyPrefix = "commonDataModel.purchasemultilinediscountagreemententity";
             KeySeparator = ".";
             Grouping = "/PurchaseMultiLineDiscountAgreementEntity";
@@ -32,10 +32,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 VendorAccountNumber = group.Add(new VocabularyKey(nameof(VendorAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MultiLineDiscountVendorGroupCode = group.Add(new VocabularyKey(nameof(MultiLineDiscountVendorGroupCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MultiLineDiscountProductGroupCode = group.Add(new VocabularyKey(nameof(MultiLineDiscountProductGroupCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountCode { get; private set; }
         public VocabularyKey AccountRelation { get; private set; }
         public VocabularyKey DiscountAmount { get; private set; }
@@ -55,7 +53,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey VendorAccountNumber { get; private set; }
         public VocabularyKey MultiLineDiscountVendorGroupCode { get; private set; }
         public VocabularyKey MultiLineDiscountProductGroupCode { get; private set; }
-
-
     }
 }

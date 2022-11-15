@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PCProductConfigurationModelVersionEntityVocabulary()
         {
-            VocabularyName = "PCProductConfigurationModelVersionEntity";
+            VocabularyName = "PC Product Configuration Model Version Entity";
             KeyPrefix = "commonDataModel.pcproductconfigurationmodelversionentity";
             KeySeparator = ".";
             Grouping = "/PCProductConfigurationModelVersionEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsActive = group.Add(new VocabularyKey(nameof(IsActive), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PriceMethod = group.Add(new VocabularyKey(nameof(PriceMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ApproverPersonnelNumber = group.Add(new VocabularyKey(nameof(ApproverPersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ValidFromDate { get; private set; }
         public VocabularyKey ValidToDate { get; private set; }
         public VocabularyKey ProductConfigurationModelName { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsActive { get; private set; }
         public VocabularyKey PriceMethod { get; private set; }
         public VocabularyKey ApproverPersonnelNumber { get; private set; }
-
-
     }
 }

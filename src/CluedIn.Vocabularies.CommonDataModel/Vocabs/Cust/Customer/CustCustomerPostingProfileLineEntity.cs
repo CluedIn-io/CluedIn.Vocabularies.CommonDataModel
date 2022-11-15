@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustCustomerPostingProfileLineEntityVocabulary()
         {
-            VocabularyName = "CustCustomerPostingProfileLineEntity";
+            VocabularyName = "Cust Customer Posting Profile Line Entity";
             KeyPrefix = "commonDataModel.custcustomerpostingprofilelineentity";
             KeySeparator = ".";
             Grouping = "/CustCustomerPostingProfileLineEntity";
@@ -43,10 +43,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 HierarchyName = group.Add(new VocabularyKey(nameof(HierarchyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 HierarchyType = group.Add(new VocabularyKey(nameof(HierarchyType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 HierarchyStatus = group.Add(new VocabularyKey(nameof(HierarchyStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LiabilitiesForDiscountMainAccountId { get; private set; }
         public VocabularyKey SummaryMainAccountId { get; private set; }
         public VocabularyKey SalesTaxPrepaymentsMainAccountId { get; private set; }
@@ -77,7 +75,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey HierarchyName { get; private set; }
         public VocabularyKey HierarchyType { get; private set; }
         public VocabularyKey HierarchyStatus { get; private set; }
-
-
     }
 }

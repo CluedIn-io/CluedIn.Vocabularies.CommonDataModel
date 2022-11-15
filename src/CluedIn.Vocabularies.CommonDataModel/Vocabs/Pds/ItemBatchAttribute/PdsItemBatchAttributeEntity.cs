@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PdsItemBatchAttributeEntityVocabulary()
         {
-            VocabularyName = "PdsItemBatchAttributeEntity";
+            VocabularyName = "Pds Item Batch Attribute Entity";
             KeyPrefix = "commonDataModel.pdsitembatchattributeentity";
             KeySeparator = ".";
             Grouping = "/PdsItemBatchAttributeEntity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MaximumDecimalTolerance = group.Add(new VocabularyKey(nameof(MaximumDecimalTolerance), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DecimalToleranceIncrement = group.Add(new VocabularyKey(nameof(DecimalToleranceIncrement), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OptimalDecimal = group.Add(new VocabularyKey(nameof(OptimalDecimal), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AttributeId { get; private set; }
         public VocabularyKey AttributeDescription { get; private set; }
         public VocabularyKey AttributeType { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey MaximumDecimalTolerance { get; private set; }
         public VocabularyKey DecimalToleranceIncrement { get; private set; }
         public VocabularyKey OptimalDecimal { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public UnitOfMeasureConversionEntityVocabulary()
         {
-            VocabularyName = "UnitOfMeasureConversionEntity";
+            VocabularyName = "Unit Of Measure Conversion Entity";
             KeyPrefix = "commonDataModel.unitofmeasureconversionentity";
             KeySeparator = ".";
             Grouping = "/UnitOfMeasureConversionEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ToUnitOfMeasureRecId = group.Add(new VocabularyKey(nameof(ToUnitOfMeasureRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FromUnitSymbol = group.Add(new VocabularyKey(nameof(FromUnitSymbol), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ToUnitSymbol = group.Add(new VocabularyKey(nameof(ToUnitSymbol), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Denominator { get; private set; }
         public VocabularyKey Factor { get; private set; }
         public VocabularyKey FromUnitOfMeasureRecId { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ToUnitOfMeasureRecId { get; private set; }
         public VocabularyKey FromUnitSymbol { get; private set; }
         public VocabularyKey ToUnitSymbol { get; private set; }
-
-
     }
 }

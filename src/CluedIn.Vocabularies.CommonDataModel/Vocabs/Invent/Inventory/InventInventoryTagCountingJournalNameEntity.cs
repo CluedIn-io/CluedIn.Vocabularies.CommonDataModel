@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventInventoryTagCountingJournalNameEntityVocabulary()
         {
-            VocabularyName = "InventInventoryTagCountingJournalNameEntity";
+            VocabularyName = "Invent Inventory Tag Counting Journal Name Entity";
             KeyPrefix = "commonDataModel.inventinventorytagcountingjournalnameentity";
             KeySeparator = ".";
             Grouping = "/InventInventoryTagCountingJournalNameEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DefaultVoucherNumberSequenceCode = group.Add(new VocabularyKey(nameof(DefaultVoucherNumberSequenceCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NumberSequenceTable_NumberSequenceScope = group.Add(new VocabularyKey(nameof(NumberSequenceTable_NumberSequenceScope), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultVoucherNumberSequenceDataArea = group.Add(new VocabularyKey(nameof(DefaultVoucherNumberSequenceDataArea), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey JournalNameId { get; private set; }
         public VocabularyKey DefaultJournalDescription { get; private set; }
         public VocabularyKey WillPostingDeleteLinesByDefault { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DefaultVoucherNumberSequenceCode { get; private set; }
         public VocabularyKey NumberSequenceTable_NumberSequenceScope { get; private set; }
         public VocabularyKey DefaultVoucherNumberSequenceDataArea { get; private set; }
-
-
     }
 }

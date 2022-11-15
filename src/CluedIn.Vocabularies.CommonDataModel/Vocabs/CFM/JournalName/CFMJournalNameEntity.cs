@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CFMJournalNameEntityVocabulary()
         {
-            VocabularyName = "CFMJournalNameEntity";
+            VocabularyName = "CFM Journal Name Entity";
             KeyPrefix = "commonDataModel.cfmjournalnameentity";
             KeySeparator = ".";
             Grouping = "/CFMJournalNameEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PaymentOnCashDiscountDate = group.Add(new VocabularyKey(nameof(PaymentOnCashDiscountDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkflowActive = group.Add(new VocabularyKey(nameof(WorkflowActive), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkflowID = group.Add(new VocabularyKey(nameof(WorkflowID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey IncludeEmptyPaymentAccount { get; private set; }
         public VocabularyKey OverduePayments { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PaymentOnCashDiscountDate { get; private set; }
         public VocabularyKey WorkflowActive { get; private set; }
         public VocabularyKey WorkflowID { get; private set; }
-
-
     }
 }

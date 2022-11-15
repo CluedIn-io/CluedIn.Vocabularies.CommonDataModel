@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerJournalHeaderCDSEntityVocabulary()
         {
-            VocabularyName = "LedgerJournalHeaderCDSEntity";
+            VocabularyName = "Ledger Journal Header CDS Entity";
             KeyPrefix = "commonDataModel.ledgerjournalheadercdsentity";
             KeySeparator = ".";
             Grouping = "/LedgerJournalHeaderCDSEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 JournalTotalCredit = group.Add(new VocabularyKey(nameof(JournalTotalCredit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IntegrationKey = group.Add(new VocabularyKey(nameof(IntegrationKey), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IntegrationComputedKey = group.Add(new VocabularyKey(nameof(IntegrationComputedKey), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PostingLayer { get; private set; }
         public VocabularyKey JournalName { get; private set; }
         public VocabularyKey JournalBatchNumber { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey JournalTotalCredit { get; private set; }
         public VocabularyKey IntegrationKey { get; private set; }
         public VocabularyKey IntegrationComputedKey { get; private set; }
-
-
     }
 }

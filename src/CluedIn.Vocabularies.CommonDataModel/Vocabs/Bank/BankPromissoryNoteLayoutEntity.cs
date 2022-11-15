@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankPromissoryNoteLayoutEntityVocabulary()
         {
-            VocabularyName = "BankPromissoryNoteLayoutEntity";
+            VocabularyName = "Bank Promissory Note Layout Entity";
             KeyPrefix = "commonDataModel.bankpromissorynotelayoutentity";
             KeySeparator = ".";
             Grouping = "/BankPromissoryNoteLayoutEntity";
@@ -36,10 +36,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PrintSecondSignature = group.Add(new VocabularyKey(nameof(PrintSecondSignature), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SecondSignatureAmountLimit = group.Add(new VocabularyKey(nameof(SecondSignatureAmountLimit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PrintTransactionDate = group.Add(new VocabularyKey(nameof(PrintTransactionDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AmountPrefix { get; private set; }
         public VocabularyKey PrintBankAccount { get; private set; }
         public VocabularyKey BankAccountId { get; private set; }
@@ -63,7 +61,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PrintSecondSignature { get; private set; }
         public VocabularyKey SecondSignatureAmountLimit { get; private set; }
         public VocabularyKey PrintTransactionDate { get; private set; }
-
-
     }
 }

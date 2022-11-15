@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesQuotationLineCDSEntityVocabulary()
         {
-            VocabularyName = "SalesQuotationLineCDSEntity";
+            VocabularyName = "Sales Quotation Line CDS Entity";
             KeyPrefix = "commonDataModel.salesquotationlinecdsentity";
             KeySeparator = ".";
             Grouping = "/SalesQuotationLineCDSEntity";
@@ -77,10 +77,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TotalDiscountAmount = group.Add(new VocabularyKey(nameof(TotalDiscountAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InventoryLotId = group.Add(new VocabularyKey(nameof(InventoryLotId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesProductCategoryHierarchyName = group.Add(new VocabularyKey(nameof(SalesProductCategoryHierarchyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AllowedOverdeliveryPercentage { get; private set; }
         public VocabularyKey AllowedUnderdeliveryPercentage { get; private set; }
         public VocabularyKey AreTotalsCalculated { get; private set; }
@@ -145,7 +143,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TotalDiscountAmount { get; private set; }
         public VocabularyKey InventoryLotId { get; private set; }
         public VocabularyKey SalesProductCategoryHierarchyName { get; private set; }
-
-
     }
 }

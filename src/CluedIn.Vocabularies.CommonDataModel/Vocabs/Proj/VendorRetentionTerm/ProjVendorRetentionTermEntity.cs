@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjVendorRetentionTermEntityVocabulary()
         {
-            VocabularyName = "ProjVendorRetentionTermEntity";
+            VocabularyName = "Proj Vendor Retention Term Entity";
             KeyPrefix = "commonDataModel.projvendorretentiontermentity";
             KeySeparator = ".";
             Grouping = "/ProjVendorRetentionTermEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RuleID = group.Add(new VocabularyKey(nameof(RuleID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey RuleID { get; private set; }
-
-
     }
 }

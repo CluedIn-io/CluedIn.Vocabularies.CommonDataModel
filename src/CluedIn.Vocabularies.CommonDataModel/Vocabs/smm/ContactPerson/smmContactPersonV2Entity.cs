@@ -2,16 +2,16 @@ using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 {
-    public class smmContactPersonV2EntityVocabulary : SimpleVocabulary
+    public class SmmContactPersonV2EntityVocabulary : SimpleVocabulary
     {
-        public smmContactPersonV2EntityVocabulary()
+        public SmmContactPersonV2EntityVocabulary()
         {
-            VocabularyName = "smmContactPersonV2Entity";
+            VocabularyName = "Smm Contact Person V2 Entity";
             KeyPrefix = "commonDataModel.smmcontactpersonv2entity";
             KeySeparator = ".";
-            Grouping = "/smmContactPersonV2Entity";
+            Grouping = "/SmmContactPersonV2Entity";
 
-            AddGroup("smmContactPersonV2Entity Details", group =>
+            AddGroup("SmmContactPersonV2Entity Details", group =>
             {
                 ContactPersonId = group.Add(new VocabularyKey(nameof(ContactPersonId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ContactPersonPartyNumber = group.Add(new VocabularyKey(nameof(ContactPersonPartyNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
@@ -146,10 +146,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PrimaryContactLinkedInRecordId = group.Add(new VocabularyKey(nameof(PrimaryContactLinkedInRecordId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PrimaryAddressLocation = group.Add(new VocabularyKey(nameof(PrimaryAddressLocation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PartyRecordId = group.Add(new VocabularyKey(nameof(PartyRecordId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ContactPersonId { get; private set; }
         public VocabularyKey ContactPersonPartyNumber { get; private set; }
         public VocabularyKey ContactPersonName { get; private set; }
@@ -283,7 +281,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PrimaryContactLinkedInRecordId { get; private set; }
         public VocabularyKey PrimaryAddressLocation { get; private set; }
         public VocabularyKey PartyRecordId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankCodaAccountStatementEntityVocabulary()
         {
-            VocabularyName = "BankCodaAccountStatementEntity";
+            VocabularyName = "Bank Coda Account Statement Entity";
             KeyPrefix = "commonDataModel.bankcodaaccountstatemententity";
             KeySeparator = ".";
             Grouping = "/BankCodaAccountStatementEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Reconciled = group.Add(new VocabularyKey(nameof(Reconciled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TotalAmount = group.Add(new VocabularyKey(nameof(TotalAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsMovementLinesUpdateDelayed = group.Add(new VocabularyKey(nameof(IsMovementLinesUpdateDelayed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BankAccount { get; private set; }
         public VocabularyKey BankStatementDate { get; private set; }
         public VocabularyKey BankStatement { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Reconciled { get; private set; }
         public VocabularyKey TotalAmount { get; private set; }
         public VocabularyKey IsMovementLinesUpdateDelayed { get; private set; }
-
-
     }
 }

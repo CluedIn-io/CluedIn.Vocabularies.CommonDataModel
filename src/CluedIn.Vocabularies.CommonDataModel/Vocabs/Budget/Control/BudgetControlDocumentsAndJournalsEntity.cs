@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetControlDocumentsAndJournalsEntityVocabulary()
         {
-            VocabularyName = "BudgetControlDocumentsAndJournalsEntity";
+            VocabularyName = "Budget Control Documents And Journals Entity";
             KeyPrefix = "commonDataModel.budgetcontroldocumentsandjournalsentity";
             KeySeparator = ".";
             Grouping = "/BudgetControlDocumentsAndJournalsEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DocumentOrJournal = group.Add(new VocabularyKey(nameof(DocumentOrJournal), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsEnabled = group.Add(new VocabularyKey(nameof(IsEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DoBudgetCheckOnEntry = group.Add(new VocabularyKey(nameof(DoBudgetCheckOnEntry), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LegalEntityId { get; private set; }
         public VocabularyKey Status { get; private set; }
         public VocabularyKey InUseBy { get; private set; }
         public VocabularyKey DocumentOrJournal { get; private set; }
         public VocabularyKey IsEnabled { get; private set; }
         public VocabularyKey DoBudgetCheckOnEntry { get; private set; }
-
-
     }
 }

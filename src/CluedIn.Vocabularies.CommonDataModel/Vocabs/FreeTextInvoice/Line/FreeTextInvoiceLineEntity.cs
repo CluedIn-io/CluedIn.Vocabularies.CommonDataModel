@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FreeTextInvoiceLineEntityVocabulary()
         {
-            VocabularyName = "FreeTextInvoiceLineEntity";
+            VocabularyName = "Free Text Invoice Line Entity";
             KeyPrefix = "commonDataModel.freetextinvoicelineentity";
             KeySeparator = ".";
             Grouping = "/FreeTextInvoiceLineEntity";
@@ -58,10 +58,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CountryName = group.Add(new VocabularyKey(nameof(CountryName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InvoiceGTD = group.Add(new VocabularyKey(nameof(InvoiceGTD), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesUnit = group.Add(new VocabularyKey(nameof(SalesUnit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CountryRegionId { get; private set; }
         public VocabularyKey TransactionCurrencyAmount { get; private set; }
         public VocabularyKey AmountDetails { get; private set; }
@@ -107,7 +105,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CountryName { get; private set; }
         public VocabularyKey InvoiceGTD { get; private set; }
         public VocabularyKey SalesUnit { get; private set; }
-
-
     }
 }

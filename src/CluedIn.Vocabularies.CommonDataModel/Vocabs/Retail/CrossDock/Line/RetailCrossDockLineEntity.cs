@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailCrossDockLineEntityVocabulary()
         {
-            VocabularyName = "RetailCrossDockLineEntity";
+            VocabularyName = "Retail Cross Dock Line Entity";
             KeyPrefix = "commonDataModel.retailcrossdocklineentity";
             KeySeparator = ".";
             Grouping = "/RetailCrossDockLineEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 UserSpecified = group.Add(new VocabularyKey(nameof(UserSpecified), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UserSpecifiedQuantity = group.Add(new VocabularyKey(nameof(UserSpecifiedQuantity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PurchaseLineInventoryTransferId = group.Add(new VocabularyKey(nameof(PurchaseLineInventoryTransferId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CrossDockId { get; private set; }
         public VocabularyKey InventoryDimensionId { get; private set; }
         public VocabularyKey ItemId { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey UserSpecified { get; private set; }
         public VocabularyKey UserSpecifiedQuantity { get; private set; }
         public VocabularyKey PurchaseLineInventoryTransferId { get; private set; }
-
-
     }
 }

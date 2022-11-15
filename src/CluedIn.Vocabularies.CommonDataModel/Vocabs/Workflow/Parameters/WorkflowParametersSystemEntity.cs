@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WorkflowParametersSystemEntityVocabulary()
         {
-            VocabularyName = "WorkflowParametersSystemEntity";
+            VocabularyName = "Workflow Parameters System Entity";
             KeyPrefix = "commonDataModel.workflowparameterssystementity";
             KeySeparator = ".";
             Grouping = "/WorkflowParametersSystemEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AddAttachments = group.Add(new VocabularyKey(nameof(AddAttachments), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NumberOfBatchTasks = group.Add(new VocabularyKey(nameof(NumberOfBatchTasks), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DisallowApprovalBySubmitter = group.Add(new VocabularyKey(nameof(DisallowApprovalBySubmitter), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WorkflowExecutionUser { get; private set; }
         public VocabularyKey ID { get; private set; }
         public VocabularyKey WorkflowNotifications { get; private set; }
         public VocabularyKey AddAttachments { get; private set; }
         public VocabularyKey NumberOfBatchTasks { get; private set; }
         public VocabularyKey DisallowApprovalBySubmitter { get; private set; }
-
-
     }
 }

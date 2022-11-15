@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public OfficialsTableDataEntityVocabulary()
         {
-            VocabularyName = "OfficialsTableDataEntity";
+            VocabularyName = "Officials Table Data Entity";
             KeyPrefix = "commonDataModel.officialstabledataentity";
             KeySeparator = ".";
             Grouping = "/OfficialsTableDataEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 JobTitle = group.Add(new VocabularyKey(nameof(JobTitle), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReprReason = group.Add(new VocabularyKey(nameof(ReprReason), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReprTitleName = group.Add(new VocabularyKey(nameof(ReprTitleName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ReportType { get; private set; }
         public VocabularyKey AccountCode { get; private set; }
         public VocabularyKey AccountRelation { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey JobTitle { get; private set; }
         public VocabularyKey ReprReason { get; private set; }
         public VocabularyKey ReprTitleName { get; private set; }
-
-
     }
 }

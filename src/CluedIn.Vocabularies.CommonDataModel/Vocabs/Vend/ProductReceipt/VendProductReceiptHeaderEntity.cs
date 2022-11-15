@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendProductReceiptHeaderEntityVocabulary()
         {
-            VocabularyName = "VendProductReceiptHeaderEntity";
+            VocabularyName = "Vend Product Receipt Header Entity";
             KeyPrefix = "commonDataModel.vendproductreceiptheaderentity";
             KeySeparator = ".";
             Grouping = "/VendProductReceiptHeaderEntity";
@@ -48,10 +48,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DeliveryAddressTimeZone = group.Add(new VocabularyKey(nameof(DeliveryAddressTimeZone), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DeliveryAddressZipCode = group.Add(new VocabularyKey(nameof(DeliveryAddressZipCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RecordId = group.Add(new VocabularyKey(nameof(RecordId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey OrderVendorAccountNumber { get; private set; }
         public VocabularyKey ProductReceiptDate { get; private set; }
         public VocabularyKey DeliveryAddressName { get; private set; }
@@ -87,7 +85,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DeliveryAddressTimeZone { get; private set; }
         public VocabularyKey DeliveryAddressZipCode { get; private set; }
         public VocabularyKey RecordId { get; private set; }
-
-
     }
 }

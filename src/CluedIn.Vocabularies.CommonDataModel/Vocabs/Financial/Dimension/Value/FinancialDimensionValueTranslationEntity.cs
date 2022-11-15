@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FinancialDimensionValueTranslationEntityVocabulary()
         {
-            VocabularyName = "FinancialDimensionValueTranslationEntity";
+            VocabularyName = "Financial Dimension Value Translation Entity";
             KeyPrefix = "commonDataModel.financialdimensionvaluetranslationentity";
             KeySeparator = ".";
             Grouping = "/FinancialDimensionValueTranslationEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LanguageCode = group.Add(new VocabularyKey(nameof(LanguageCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TranslatedDescription = group.Add(new VocabularyKey(nameof(TranslatedDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DimensionFinancialTag = group.Add(new VocabularyKey(nameof(DimensionFinancialTag), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FinancialDimension { get; private set; }
         public VocabularyKey FinancialDimensionValue { get; private set; }
         public VocabularyKey LanguageCode { get; private set; }
         public VocabularyKey TranslatedDescription { get; private set; }
         public VocabularyKey DimensionFinancialTag { get; private set; }
-
-
     }
 }

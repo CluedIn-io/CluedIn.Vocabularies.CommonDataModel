@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxProjTableTransTaxInformationEntityVocabulary()
         {
-            VocabularyName = "TaxProjTableTransTaxInformationEntity";
+            VocabularyName = "Tax Proj Table Trans Tax Information Entity";
             KeyPrefix = "commonDataModel.taxprojtabletranstaxinformationentity";
             KeySeparator = ".";
             Grouping = "/TaxProjTableTransTaxInformationEntity";
@@ -66,10 +66,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 VATTINRegistrationNumber = group.Add(new VocabularyKey(nameof(VATTINRegistrationNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorLocation = group.Add(new VocabularyKey(nameof(VendorLocation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorTaxInformation = group.Add(new VocabularyKey(nameof(VendorTaxInformation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProjId { get; private set; }
         public VocabularyKey BankLocation { get; private set; }
         public VocabularyKey BankTaxInformation { get; private set; }
@@ -123,7 +121,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey VATTINRegistrationNumber { get; private set; }
         public VocabularyKey VendorLocation { get; private set; }
         public VocabularyKey VendorTaxInformation { get; private set; }
-
-
     }
 }

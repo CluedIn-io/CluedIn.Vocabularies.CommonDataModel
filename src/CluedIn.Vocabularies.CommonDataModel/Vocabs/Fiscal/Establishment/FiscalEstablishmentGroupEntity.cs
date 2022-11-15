@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FiscalEstablishmentGroupEntityVocabulary()
         {
-            VocabularyName = "FiscalEstablishmentGroupEntity";
+            VocabularyName = "Fiscal Establishment Group Entity";
             KeyPrefix = "commonDataModel.fiscalestablishmentgroupentity";
             KeySeparator = ".";
             Grouping = "/FiscalEstablishmentGroupEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 FiscalEstablishmentGroup = group.Add(new VocabularyKey(nameof(FiscalEstablishmentGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FiscalEstablishmentGroup { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

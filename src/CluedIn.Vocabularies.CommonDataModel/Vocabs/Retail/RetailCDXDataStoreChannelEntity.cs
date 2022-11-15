@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailCDXDataStoreChannelEntityVocabulary()
         {
-            VocabularyName = "RetailCDXDataStoreChannelEntity";
+            VocabularyName = "Retail CDX Data Store Channel Entity";
             KeyPrefix = "commonDataModel.retailcdxdatastorechannelentity";
             KeySeparator = ".";
             Grouping = "/RetailCDXDataStoreChannelEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 ChannelId = group.Add(new VocabularyKey(nameof(ChannelId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ChannelDatabaseId = group.Add(new VocabularyKey(nameof(ChannelDatabaseId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ChannelId { get; private set; }
         public VocabularyKey ChannelDatabaseId { get; private set; }
-
-
     }
 }

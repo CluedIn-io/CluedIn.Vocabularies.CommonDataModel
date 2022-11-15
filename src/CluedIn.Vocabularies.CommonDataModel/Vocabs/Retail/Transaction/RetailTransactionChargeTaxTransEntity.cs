@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailTransactionChargeTaxTransEntityVocabulary()
         {
-            VocabularyName = "RetailTransactionChargeTaxTransEntity";
+            VocabularyName = "Retail Transaction Charge Tax Trans Entity";
             KeyPrefix = "commonDataModel.retailtransactionchargetaxtransentity";
             KeySeparator = ".";
             Grouping = "/RetailTransactionChargeTaxTransEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RetailChannelTable_OMOperatingUnitID = group.Add(new VocabularyKey(nameof(RetailChannelTable_OMOperatingUnitID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OperatingUnitNumber = group.Add(new VocabularyKey(nameof(OperatingUnitNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsExempt = group.Add(new VocabularyKey(nameof(IsExempt), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Channel { get; private set; }
         public VocabularyKey StoreId { get; private set; }
         public VocabularyKey TerminalId { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RetailChannelTable_OMOperatingUnitID { get; private set; }
         public VocabularyKey OperatingUnitNumber { get; private set; }
         public VocabularyKey IsExempt { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjLedgerPostingDefinitionEntityVocabulary()
         {
-            VocabularyName = "ProjLedgerPostingDefinitionEntity";
+            VocabularyName = "Proj Ledger Posting Definition Entity";
             KeyPrefix = "commonDataModel.projledgerpostingdefinitionentity";
             KeySeparator = ".";
             Grouping = "/ProjLedgerPostingDefinitionEntity";
@@ -30,10 +30,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProjCategoryRelation = group.Add(new VocabularyKey(nameof(ProjCategoryRelation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BorrowingLegalEntity = group.Add(new VocabularyKey(nameof(BorrowingLegalEntity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LendingLegalEntity = group.Add(new VocabularyKey(nameof(LendingLegalEntity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProjectAccountType { get; private set; }
         public VocabularyKey ProjectId { get; private set; }
         public VocabularyKey ProjectGroup { get; private set; }
@@ -51,7 +49,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProjCategoryRelation { get; private set; }
         public VocabularyKey BorrowingLegalEntity { get; private set; }
         public VocabularyKey LendingLegalEntity { get; private set; }
-
-
     }
 }

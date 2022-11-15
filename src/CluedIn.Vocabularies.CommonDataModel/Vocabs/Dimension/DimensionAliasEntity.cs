@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DimensionAliasEntityVocabulary()
         {
-            VocabularyName = "DimensionAliasEntity";
+            VocabularyName = "Dimension Alias Entity";
             KeyPrefix = "commonDataModel.dimensionaliasentity";
             KeySeparator = ".";
             Grouping = "/DimensionAliasEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DimensionAttributeName = group.Add(new VocabularyKey(nameof(DimensionAttributeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DimensionAttributeValueCombinationDisplayValue = group.Add(new VocabularyKey(nameof(DimensionAttributeValueCombinationDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DimensionAttributeValueCombinationAccountStructure = group.Add(new VocabularyKey(nameof(DimensionAttributeValueCombinationAccountStructure), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AliasType { get; private set; }
         public VocabularyKey DimensionAttribute { get; private set; }
         public VocabularyKey DimensionAttributeValueCombination { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DimensionAttributeName { get; private set; }
         public VocabularyKey DimensionAttributeValueCombinationDisplayValue { get; private set; }
         public VocabularyKey DimensionAttributeValueCombinationAccountStructure { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseWorkPoolEntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseWorkPoolEntity";
+            VocabularyName = "WHS Warehouse Work Pool Entity";
             KeyPrefix = "commonDataModel.whswarehouseworkpoolentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseWorkPoolEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 WorkPoolDescription = group.Add(new VocabularyKey(nameof(WorkPoolDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkPoolId = group.Add(new VocabularyKey(nameof(WorkPoolId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WorkPoolDescription { get; private set; }
         public VocabularyKey WorkPoolId { get; private set; }
-
-
     }
 }

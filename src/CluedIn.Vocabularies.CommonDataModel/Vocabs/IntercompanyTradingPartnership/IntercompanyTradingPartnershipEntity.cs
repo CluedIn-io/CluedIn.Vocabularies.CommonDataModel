@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public IntercompanyTradingPartnershipEntityVocabulary()
         {
-            VocabularyName = "IntercompanyTradingPartnershipEntity";
+            VocabularyName = "Intercompany Trading Partnership Entity";
             KeyPrefix = "commonDataModel.intercompanytradingpartnershipentity";
             KeySeparator = ".";
             Grouping = "/IntercompanyTradingPartnershipEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CustomerTradingPartner_TradingPartnerType = group.Add(new VocabularyKey(nameof(CustomerTradingPartner_TradingPartnerType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorTradingPartner_VendorDataAreaId = group.Add(new VocabularyKey(nameof(VendorTradingPartner_VendorDataAreaId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorTradingPartner_TradingPartnerType = group.Add(new VocabularyKey(nameof(VendorTradingPartner_TradingPartnerType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CustomerLegalEntityId { get; private set; }
         public VocabularyKey CustomerAccountNumber { get; private set; }
         public VocabularyKey VendorLegalEntityId { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CustomerTradingPartner_TradingPartnerType { get; private set; }
         public VocabularyKey VendorTradingPartner_VendorDataAreaId { get; private set; }
         public VocabularyKey VendorTradingPartner_TradingPartnerType { get; private set; }
-
-
     }
 }

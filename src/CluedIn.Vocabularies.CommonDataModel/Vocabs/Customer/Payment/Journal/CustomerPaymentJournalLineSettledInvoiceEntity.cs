@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustomerPaymentJournalLineSettledInvoiceEntityVocabulary()
         {
-            VocabularyName = "CustomerPaymentJournalLineSettledInvoiceEntity";
+            VocabularyName = "Customer Payment Journal Line Settled Invoice Entity";
             KeyPrefix = "commonDataModel.customerpaymentjournallinesettledinvoiceentity";
             KeySeparator = ".";
             Grouping = "/CustomerPaymentJournalLineSettledInvoiceEntity";
@@ -25,11 +25,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 InvoiceDueDate = group.Add(new VocabularyKey(nameof(InvoiceDueDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Account = group.Add(new VocabularyKey(nameof(Account), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AccountDisplayValue = group.Add(new VocabularyKey(nameof(AccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                invoiceAccount = group.Add(new VocabularyKey(nameof(invoiceAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                InvoiceAccount = group.Add(new VocabularyKey(nameof(InvoiceAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
         public VocabularyKey SettlementAmountInInvoiceCurrency { get; private set; }
         public VocabularyKey CashDiscountToTakeInInvoiceCurrency { get; private set; }
         public VocabularyKey InvoiceToPaymentCrossRate { get; private set; }
@@ -42,8 +40,6 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey InvoiceDueDate { get; private set; }
         public VocabularyKey Account { get; private set; }
         public VocabularyKey AccountDisplayValue { get; private set; }
-        public VocabularyKey invoiceAccount { get; private set; }
-
-
+        public VocabularyKey InvoiceAccount { get; private set; }
     }
 }

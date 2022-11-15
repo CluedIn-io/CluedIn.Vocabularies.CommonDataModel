@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationEquipmentEntityVocabulary()
         {
-            VocabularyName = "TMSTransportationEquipmentEntity";
+            VocabularyName = "TMS Transportation Equipment Entity";
             KeyPrefix = "commonDataModel.tmstransportationequipmententity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationEquipmentEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsRoundTripRequired = group.Add(new VocabularyKey(nameof(IsRoundTripRequired), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EquipmentTareWeight = group.Add(new VocabularyKey(nameof(EquipmentTareWeight), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EquipmentWidth = group.Add(new VocabularyKey(nameof(EquipmentWidth), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey EquipmentUsageDurationMinutes { get; private set; }
         public VocabularyKey EquipmentCode { get; private set; }
         public VocabularyKey EquipmentHeight { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsRoundTripRequired { get; private set; }
         public VocabularyKey EquipmentTareWeight { get; private set; }
         public VocabularyKey EquipmentWidth { get; private set; }
-
-
     }
 }

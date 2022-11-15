@@ -13,73 +13,69 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Segment Details", group =>
             {
-                islive = group.Add(new VocabularyKey(nameof(islive), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                description = group.Add(new VocabularyKey(nameof(description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                scope = group.Add(new VocabularyKey(nameof(scope), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                segmentactivationstatus = group.Add(new VocabularyKey(nameof(segmentactivationstatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                segmentfilterquery = group.Add(new VocabularyKey(nameof(segmentfilterquery), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                segmentId = group.Add(new VocabularyKey(nameof(segmentId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                segmentmemberids = group.Add(new VocabularyKey(nameof(segmentmemberids), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                segmentName = group.Add(new VocabularyKey(nameof(segmentName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                segmentqueryName = group.Add(new VocabularyKey(nameof(segmentqueryName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                segmentNameview = group.Add(new VocabularyKey(nameof(segmentNameview), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                segmentprovisioningstate = group.Add(new VocabularyKey(nameof(segmentprovisioningstate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                segmentquery = group.Add(new VocabularyKey(nameof(segmentquery), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                segmentType = group.Add(new VocabularyKey(nameof(segmentType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                externalSource = group.Add(new VocabularyKey(nameof(externalSource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                externalSegmentURL = group.Add(new VocabularyKey(nameof(externalSegmentURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                segmentsize = group.Add(new VocabularyKey(nameof(segmentsize), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                queryType = group.Add(new VocabularyKey(nameof(queryType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                segmenttimezone = group.Add(new VocabularyKey(nameof(segmenttimezone), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                segmenttargetprofiletypeName = group.Add(new VocabularyKey(nameof(segmenttargetprofiletypeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                segmentevaluationstate = group.Add(new VocabularyKey(nameof(segmentevaluationstate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                segmentevaluationtype = group.Add(new VocabularyKey(nameof(segmentevaluationtype), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                lastEvaluationTime = group.Add(new VocabularyKey(nameof(lastEvaluationTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                nextevaluation = group.Add(new VocabularyKey(nameof(nextevaluation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                lastUpdatedTime = group.Add(new VocabularyKey(nameof(lastUpdatedTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                segmentevaluationdurationinminutes = group.Add(new VocabularyKey(nameof(segmentevaluationdurationinminutes), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                segmentrefreshrateintervalminutes = group.Add(new VocabularyKey(nameof(segmentrefreshrateintervalminutes), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdName = group.Add(new VocabularyKey(nameof(ownerIdName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdType = group.Add(new VocabularyKey(nameof(ownerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdYomiName = group.Add(new VocabularyKey(nameof(ownerIdYomiName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                Islive = group.Add(new VocabularyKey(nameof(Islive), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Scope = group.Add(new VocabularyKey(nameof(Scope), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Segmentactivationstatus = group.Add(new VocabularyKey(nameof(Segmentactivationstatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Segmentfilterquery = group.Add(new VocabularyKey(nameof(Segmentfilterquery), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SegmentId = group.Add(new VocabularyKey(nameof(SegmentId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Segmentmemberids = group.Add(new VocabularyKey(nameof(Segmentmemberids), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SegmentName = group.Add(new VocabularyKey(nameof(SegmentName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SegmentqueryName = group.Add(new VocabularyKey(nameof(SegmentqueryName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SegmentNameview = group.Add(new VocabularyKey(nameof(SegmentNameview), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Segmentprovisioningstate = group.Add(new VocabularyKey(nameof(Segmentprovisioningstate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Segmentquery = group.Add(new VocabularyKey(nameof(Segmentquery), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SegmentType = group.Add(new VocabularyKey(nameof(SegmentType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExternalSource = group.Add(new VocabularyKey(nameof(ExternalSource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExternalSegmentURL = group.Add(new VocabularyKey(nameof(ExternalSegmentURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Segmentsize = group.Add(new VocabularyKey(nameof(Segmentsize), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                QueryType = group.Add(new VocabularyKey(nameof(QueryType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Segmenttimezone = group.Add(new VocabularyKey(nameof(Segmenttimezone), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SegmenttargetprofiletypeName = group.Add(new VocabularyKey(nameof(SegmenttargetprofiletypeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Segmentevaluationstate = group.Add(new VocabularyKey(nameof(Segmentevaluationstate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Segmentevaluationtype = group.Add(new VocabularyKey(nameof(Segmentevaluationtype), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LastEvaluationTime = group.Add(new VocabularyKey(nameof(LastEvaluationTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Nextevaluation = group.Add(new VocabularyKey(nameof(Nextevaluation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LastUpdatedTime = group.Add(new VocabularyKey(nameof(LastUpdatedTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Segmentevaluationdurationinminutes = group.Add(new VocabularyKey(nameof(Segmentevaluationdurationinminutes), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Segmentrefreshrateintervalminutes = group.Add(new VocabularyKey(nameof(Segmentrefreshrateintervalminutes), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdName = group.Add(new VocabularyKey(nameof(OwnerIdName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdType = group.Add(new VocabularyKey(nameof(OwnerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdYomiName = group.Add(new VocabularyKey(nameof(OwnerIdYomiName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey islive { get; private set; }
-        public VocabularyKey description { get; private set; }
-        public VocabularyKey scope { get; private set; }
-        public VocabularyKey segmentactivationstatus { get; private set; }
-        public VocabularyKey segmentfilterquery { get; private set; }
-        public VocabularyKey segmentId { get; private set; }
-        public VocabularyKey segmentmemberids { get; private set; }
-        public VocabularyKey segmentName { get; private set; }
-        public VocabularyKey segmentqueryName { get; private set; }
-        public VocabularyKey segmentNameview { get; private set; }
-        public VocabularyKey segmentprovisioningstate { get; private set; }
-        public VocabularyKey segmentquery { get; private set; }
-        public VocabularyKey segmentType { get; private set; }
-        public VocabularyKey externalSource { get; private set; }
-        public VocabularyKey externalSegmentURL { get; private set; }
-        public VocabularyKey segmentsize { get; private set; }
-        public VocabularyKey queryType { get; private set; }
-        public VocabularyKey segmenttimezone { get; private set; }
-        public VocabularyKey segmenttargetprofiletypeName { get; private set; }
-        public VocabularyKey segmentevaluationstate { get; private set; }
-        public VocabularyKey segmentevaluationtype { get; private set; }
-        public VocabularyKey lastEvaluationTime { get; private set; }
-        public VocabularyKey nextevaluation { get; private set; }
-        public VocabularyKey lastUpdatedTime { get; private set; }
-        public VocabularyKey segmentevaluationdurationinminutes { get; private set; }
-        public VocabularyKey segmentrefreshrateintervalminutes { get; private set; }
-        public VocabularyKey ownerIdName { get; private set; }
-        public VocabularyKey ownerIdType { get; private set; }
-        public VocabularyKey ownerIdYomiName { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey Islive { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey Scope { get; private set; }
+        public VocabularyKey Segmentactivationstatus { get; private set; }
+        public VocabularyKey Segmentfilterquery { get; private set; }
+        public VocabularyKey SegmentId { get; private set; }
+        public VocabularyKey Segmentmemberids { get; private set; }
+        public VocabularyKey SegmentName { get; private set; }
+        public VocabularyKey SegmentqueryName { get; private set; }
+        public VocabularyKey SegmentNameview { get; private set; }
+        public VocabularyKey Segmentprovisioningstate { get; private set; }
+        public VocabularyKey Segmentquery { get; private set; }
+        public VocabularyKey SegmentType { get; private set; }
+        public VocabularyKey ExternalSource { get; private set; }
+        public VocabularyKey ExternalSegmentURL { get; private set; }
+        public VocabularyKey Segmentsize { get; private set; }
+        public VocabularyKey QueryType { get; private set; }
+        public VocabularyKey Segmenttimezone { get; private set; }
+        public VocabularyKey SegmenttargetprofiletypeName { get; private set; }
+        public VocabularyKey Segmentevaluationstate { get; private set; }
+        public VocabularyKey Segmentevaluationtype { get; private set; }
+        public VocabularyKey LastEvaluationTime { get; private set; }
+        public VocabularyKey Nextevaluation { get; private set; }
+        public VocabularyKey LastUpdatedTime { get; private set; }
+        public VocabularyKey Segmentevaluationdurationinminutes { get; private set; }
+        public VocabularyKey Segmentrefreshrateintervalminutes { get; private set; }
+        public VocabularyKey OwnerIdName { get; private set; }
+        public VocabularyKey OwnerIdType { get; private set; }
+        public VocabularyKey OwnerIdYomiName { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

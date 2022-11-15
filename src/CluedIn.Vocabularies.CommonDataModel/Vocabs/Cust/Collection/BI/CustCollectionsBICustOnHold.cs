@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustCollectionsBICustOnHoldVocabulary()
         {
-            VocabularyName = "CustCollectionsBICustOnHold";
+            VocabularyName = "Cust Collections BI Cust On Hold";
             KeyPrefix = "commonDataModel.custcollectionsbicustonhold";
             KeySeparator = ".";
             Grouping = "/CustCollectionsBICustOnHold";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Blocked = group.Add(new VocabularyKey(nameof(Blocked), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BlockStatus = group.Add(new VocabularyKey(nameof(BlockStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountNum { get; private set; }
         public VocabularyKey Blocked { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey BlockStatus { get; private set; }
-
-
     }
 }

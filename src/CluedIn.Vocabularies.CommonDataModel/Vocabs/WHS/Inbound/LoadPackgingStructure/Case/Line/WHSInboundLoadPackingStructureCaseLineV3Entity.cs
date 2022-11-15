@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSInboundLoadPackingStructureCaseLineV3EntityVocabulary()
         {
-            VocabularyName = "WHSInboundLoadPackingStructureCaseLineV3Entity";
+            VocabularyName = "WHS Inbound Load Packing Structure Case Line V3 Entity";
             KeyPrefix = "commonDataModel.whsinboundloadpackingstructurecaselinev3entity";
             KeySeparator = ".";
             Grouping = "/WHSInboundLoadPackingStructureCaseLineV3Entity";
@@ -30,10 +30,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ItemBatchExpirationDate = group.Add(new VocabularyKey(nameof(ItemBatchExpirationDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ItemSerialNumber = group.Add(new VocabularyKey(nameof(ItemSerialNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PurchaseOrderLineNumber = group.Add(new VocabularyKey(nameof(PurchaseOrderLineNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InboundShipmentId { get; private set; }
         public VocabularyKey PackingStructureLicensePlateNumber { get; private set; }
         public VocabularyKey Description { get; private set; }
@@ -51,7 +49,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ItemBatchExpirationDate { get; private set; }
         public VocabularyKey ItemSerialNumber { get; private set; }
         public VocabularyKey PurchaseOrderLineNumber { get; private set; }
-
-
     }
 }

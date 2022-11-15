@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvCardTypesEntityVocabulary()
         {
-            VocabularyName = "TrvCardTypesEntity";
+            VocabularyName = "Trv Card Types Entity";
             KeyPrefix = "commonDataModel.trvcardtypesentity";
             KeySeparator = ".";
             Grouping = "/TrvCardTypesEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 TrvCreditCardDesc = group.Add(new VocabularyKey(nameof(TrvCreditCardDesc), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TrvCreditCardType = group.Add(new VocabularyKey(nameof(TrvCreditCardType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TrvCreditCardDesc { get; private set; }
         public VocabularyKey TrvCreditCardType { get; private set; }
-
-
     }
 }

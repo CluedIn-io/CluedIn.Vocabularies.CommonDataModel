@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustBillingClassificationEntityVocabulary()
         {
-            VocabularyName = "CustBillingClassificationEntity";
+            VocabularyName = "Cust Billing Classification Entity";
             KeyPrefix = "commonDataModel.custbillingclassificationentity";
             KeySeparator = ".";
             Grouping = "/CustBillingClassificationEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 UseCollectionLetterSequenceFromPostingProfile = group.Add(new VocabularyKey(nameof(UseCollectionLetterSequenceFromPostingProfile), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UseInterestCodeFromPostingProfile = group.Add(new VocabularyKey(nameof(UseInterestCodeFromPostingProfile), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InterestCode = group.Add(new VocabularyKey(nameof(InterestCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InvoiceNumber { get; private set; }
         public VocabularyKey BillingClassification { get; private set; }
         public VocabularyKey CollectionLetterSequence { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey UseCollectionLetterSequenceFromPostingProfile { get; private set; }
         public VocabularyKey UseInterestCodeFromPostingProfile { get; private set; }
         public VocabularyKey InterestCode { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvSharedSubCategoryEntityVocabulary()
         {
-            VocabularyName = "TrvSharedSubCategoryEntity";
+            VocabularyName = "Trv Shared Sub Category Entity";
             KeyPrefix = "commonDataModel.trvsharedsubcategoryentity";
             KeySeparator = ".";
             Grouping = "/TrvSharedSubCategoryEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SharedCategory = group.Add(new VocabularyKey(nameof(SharedCategory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SystemCreated = group.Add(new VocabularyKey(nameof(SystemCreated), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SharedCategoryId = group.Add(new VocabularyKey(nameof(SharedCategoryId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ChargeType { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey ExcludeFromRecovery { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SharedCategory { get; private set; }
         public VocabularyKey SystemCreated { get; private set; }
         public VocabularyKey SharedCategoryId { get; private set; }
-
-
     }
 }

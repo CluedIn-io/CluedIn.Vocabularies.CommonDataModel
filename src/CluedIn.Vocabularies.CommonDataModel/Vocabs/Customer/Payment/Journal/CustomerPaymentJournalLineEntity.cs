@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustomerPaymentJournalLineEntityVocabulary()
         {
-            VocabularyName = "CustomerPaymentJournalLineEntity";
+            VocabularyName = "Customer Payment Journal Line Entity";
             KeyPrefix = "commonDataModel.customerpaymentjournallineentity";
             KeySeparator = ".";
             Grouping = "/CustomerPaymentJournalLineEntity";
@@ -90,10 +90,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ReportingCurrencyExchRate = group.Add(new VocabularyKey(nameof(ReportingCurrencyExchRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReportingCurrencyExchRateSecondary = group.Add(new VocabularyKey(nameof(ReportingCurrencyExchRateSecondary), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UseABankDepositSlip = group.Add(new VocabularyKey(nameof(UseABankDepositSlip), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Company { get; private set; }
         public VocabularyKey AccountType { get; private set; }
         public VocabularyKey CreditAmount { get; private set; }
@@ -171,7 +169,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ReportingCurrencyExchRate { get; private set; }
         public VocabularyKey ReportingCurrencyExchRateSecondary { get; private set; }
         public VocabularyKey UseABankDepositSlip { get; private set; }
-
-
     }
 }

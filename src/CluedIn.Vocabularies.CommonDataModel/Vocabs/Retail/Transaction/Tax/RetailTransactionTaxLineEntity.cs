@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailTransactionTaxLineEntityVocabulary()
         {
-            VocabularyName = "RetailTransactionTaxLineEntity";
+            VocabularyName = "Retail Transaction Tax Line Entity";
             KeyPrefix = "commonDataModel.retailtransactiontaxlineentity";
             KeySeparator = ".";
             Grouping = "/RetailTransactionTaxLineEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OperatingUnitNumber = group.Add(new VocabularyKey(nameof(OperatingUnitNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxPercentage = group.Add(new VocabularyKey(nameof(TaxPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsExempt = group.Add(new VocabularyKey(nameof(IsExempt), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TaxAmount { get; private set; }
         public VocabularyKey Channel { get; private set; }
         public VocabularyKey IsTaxIncludedInPrice { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OperatingUnitNumber { get; private set; }
         public VocabularyKey TaxPercentage { get; private set; }
         public VocabularyKey IsExempt { get; private set; }
-
-
     }
 }

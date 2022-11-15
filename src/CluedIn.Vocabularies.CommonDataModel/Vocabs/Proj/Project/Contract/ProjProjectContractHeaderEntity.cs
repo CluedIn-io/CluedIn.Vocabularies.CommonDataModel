@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjProjectContractHeaderEntityVocabulary()
         {
-            VocabularyName = "ProjProjectContractHeaderEntity";
+            VocabularyName = "Proj Project Contract Header Entity";
             KeyPrefix = "commonDataModel.projprojectcontractheaderentity";
             KeySeparator = ".";
             Grouping = "/ProjProjectContractHeaderEntity";
@@ -44,10 +44,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IntegrationSourceDataId = group.Add(new VocabularyKey(nameof(IntegrationSourceDataId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(DefaultLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CustomerAccountNumber = group.Add(new VocabularyKey(nameof(CustomerAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BankAccountId { get; private set; }
         public VocabularyKey CentralBankPurposeCode { get; private set; }
         public VocabularyKey CentralBankPurposeText { get; private set; }
@@ -79,7 +77,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IntegrationSourceDataId { get; private set; }
         public VocabularyKey DefaultLedgerDimensionDisplayValue { get; private set; }
         public VocabularyKey CustomerAccountNumber { get; private set; }
-
-
     }
 }

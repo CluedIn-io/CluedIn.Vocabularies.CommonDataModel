@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TAMTradeAllowanceAgreementProductV2EntityVocabulary()
         {
-            VocabularyName = "TAMTradeAllowanceAgreementProductV2Entity";
+            VocabularyName = "TAM Trade Allowance Agreement Product V2 Entity";
             KeyPrefix = "commonDataModel.tamtradeallowanceagreementproductv2entity";
             KeySeparator = ".";
             Grouping = "/TAMTradeAllowanceAgreementProductV2Entity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductConfigurationId = group.Add(new VocabularyKey(nameof(ProductConfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TradeAllowanceAgreementId = group.Add(new VocabularyKey(nameof(TradeAllowanceAgreementId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CustomerAccountNumber = group.Add(new VocabularyKey(nameof(CustomerAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ItemNumber { get; private set; }
         public VocabularyKey PromotionalProductUnitSymbol { get; private set; }
         public VocabularyKey WeightingFactor { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProductConfigurationId { get; private set; }
         public VocabularyKey TradeAllowanceAgreementId { get; private set; }
         public VocabularyKey CustomerAccountNumber { get; private set; }
-
-
     }
 }

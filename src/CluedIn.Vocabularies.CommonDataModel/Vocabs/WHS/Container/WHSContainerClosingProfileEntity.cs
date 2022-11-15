@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSContainerClosingProfileEntityVocabulary()
         {
-            VocabularyName = "WHSContainerClosingProfileEntity";
+            VocabularyName = "WHS Container Closing Profile Entity";
             KeyPrefix = "commonDataModel.whscontainerclosingprofileentity";
             KeySeparator = ".";
             Grouping = "/WHSContainerClosingProfileEntity";
@@ -32,10 +32,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DefaultOutboundSortingWarehouseLocationId = group.Add(new VocabularyKey(nameof(DefaultOutboundSortingWarehouseLocationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PrintContainerShippingLabelRule = group.Add(new VocabularyKey(nameof(PrintContainerShippingLabelRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ContainerShippingLabelPrinterName = group.Add(new VocabularyKey(nameof(ContainerShippingLabelPrinterName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProfileId { get; private set; }
         public VocabularyKey FinalShipmentWarehouseLocationId { get; private set; }
         public VocabularyKey ProfileDescription { get; private set; }
@@ -55,7 +53,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DefaultOutboundSortingWarehouseLocationId { get; private set; }
         public VocabularyKey PrintContainerShippingLabelRule { get; private set; }
         public VocabularyKey ContainerShippingLabelPrinterName { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSCustomWarehouseWorkTypeEntityVocabulary()
         {
-            VocabularyName = "WHSCustomWarehouseWorkTypeEntity";
+            VocabularyName = "WHS Custom Warehouse Work Type Entity";
             KeyPrefix = "commonDataModel.whscustomwarehouseworktypeentity";
             KeySeparator = ".";
             Grouping = "/WHSCustomWarehouseWorkTypeEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WorkTypeCode = group.Add(new VocabularyKey(nameof(WorkTypeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkTypeDescription = group.Add(new VocabularyKey(nameof(WorkTypeDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CustomWorkTypeProcessorMethodName = group.Add(new VocabularyKey(nameof(CustomWorkTypeProcessorMethodName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WillCustomWorkRequireDataInput { get; private set; }
         public VocabularyKey MobileDeviceMenuLabel { get; private set; }
         public VocabularyKey WorkTypeCode { get; private set; }
         public VocabularyKey WorkTypeDescription { get; private set; }
         public VocabularyKey CustomWorkTypeProcessorMethodName { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustCollectionsBICustTransVocabulary()
         {
-            VocabularyName = "CustCollectionsBICustTrans";
+            VocabularyName = "Cust Collections BI Cust Trans";
             KeyPrefix = "commonDataModel.custcollectionsbicusttrans";
             KeySeparator = ".";
             Grouping = "/CustCollectionsBICustTrans";
@@ -38,14 +38,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TransDate = group.Add(new VocabularyKey(nameof(TransDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransType = group.Add(new VocabularyKey(nameof(TransType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Voucher = group.Add(new VocabularyKey(nameof(Voucher), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                isDSO30 = group.Add(new VocabularyKey(nameof(isDSO30), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsDSO30 = group.Add(new VocabularyKey(nameof(IsDSO30), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Status = group.Add(new VocabularyKey(nameof(Status), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FollowUpDate = group.Add(new VocabularyKey(nameof(FollowUpDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DisputeStatusTranslated = group.Add(new VocabularyKey(nameof(DisputeStatusTranslated), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountingCurrency { get; private set; }
         public VocabularyKey AccountNum { get; private set; }
         public VocabularyKey CollectionLetter { get; private set; }
@@ -71,11 +69,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TransDate { get; private set; }
         public VocabularyKey TransType { get; private set; }
         public VocabularyKey Voucher { get; private set; }
-        public VocabularyKey isDSO30 { get; private set; }
+        public VocabularyKey IsDSO30 { get; private set; }
         public VocabularyKey Status { get; private set; }
         public VocabularyKey FollowUpDate { get; private set; }
         public VocabularyKey DisputeStatusTranslated { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchProcurementDocumentDefaultsEntityVocabulary()
         {
-            VocabularyName = "PurchProcurementDocumentDefaultsEntity";
+            VocabularyName = "Purch Procurement Document Defaults Entity";
             KeyPrefix = "commonDataModel.purchprocurementdocumentdefaultsentity";
             KeySeparator = ".";
             Grouping = "/PurchProcurementDocumentDefaultsEntity";
@@ -53,10 +53,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsQuotationReplyLineWorkingDaysDisplayedByDefault = group.Add(new VocabularyKey(nameof(IsQuotationReplyLineWorkingDaysDisplayedByDefault), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsRFQValidityPeriodUsingWorkingDays = group.Add(new VocabularyKey(nameof(IsRFQValidityPeriodUsingWorkingDays), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExchangeRateDate = group.Add(new VocabularyKey(nameof(ExchangeRateDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ArePurchaseOrderAmountsPrintedByDefault { get; private set; }
         public VocabularyKey DefaultPurchaseOrderPoolId { get; private set; }
         public VocabularyKey DefaultPurchaseOrderType { get; private set; }
@@ -97,7 +95,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsQuotationReplyLineWorkingDaysDisplayedByDefault { get; private set; }
         public VocabularyKey IsRFQValidityPeriodUsingWorkingDays { get; private set; }
         public VocabularyKey ExchangeRateDate { get; private set; }
-
-
     }
 }

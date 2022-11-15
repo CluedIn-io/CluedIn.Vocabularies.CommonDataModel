@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AdvancedLedgerEntryEntityVocabulary()
         {
-            VocabularyName = "AdvancedLedgerEntryEntity";
+            VocabularyName = "Advanced Ledger Entry Entity";
             KeyPrefix = "commonDataModel.advancedledgerentryentity";
             KeySeparator = ".";
             Grouping = "/AdvancedLedgerEntryEntity";
@@ -58,10 +58,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PSNBankTransactionType = group.Add(new VocabularyKey(nameof(PSNBankTransactionType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PSNDoUpdateBank = group.Add(new VocabularyKey(nameof(PSNDoUpdateBank), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PSNIsCorrection = group.Add(new VocabularyKey(nameof(PSNIsCorrection), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LineCurrency { get; private set; }
         public VocabularyKey HeaderId { get; private set; }
         public VocabularyKey Credit { get; private set; }
@@ -107,7 +105,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PSNBankTransactionType { get; private set; }
         public VocabularyKey PSNDoUpdateBank { get; private set; }
         public VocabularyKey PSNIsCorrection { get; private set; }
-
-
     }
 }

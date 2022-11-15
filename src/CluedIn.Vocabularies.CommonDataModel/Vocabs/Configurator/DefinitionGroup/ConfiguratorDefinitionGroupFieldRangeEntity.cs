@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ConfiguratorDefinitionGroupFieldRangeEntityVocabulary()
         {
-            VocabularyName = "ConfiguratorDefinitionGroupFieldRangeEntity";
+            VocabularyName = "Configurator Definition Group Field Range Entity";
             KeyPrefix = "commonDataModel.configuratordefinitiongroupfieldrangeentity";
             KeySeparator = ".";
             Grouping = "/ConfiguratorDefinitionGroupFieldRangeEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FieldName = group.Add(new VocabularyKey(nameof(FieldName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Range = group.Add(new VocabularyKey(nameof(Range), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TableName = group.Add(new VocabularyKey(nameof(TableName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DefinitionGroupId { get; private set; }
         public VocabularyKey FieldName { get; private set; }
         public VocabularyKey Range { get; private set; }
         public VocabularyKey TableName { get; private set; }
-
-
     }
 }

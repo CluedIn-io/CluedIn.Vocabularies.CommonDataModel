@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjCDSTaskEntityVocabulary()
         {
-            VocabularyName = "ProjCDSTaskEntity";
+            VocabularyName = "Proj CDS Task Entity";
             KeyPrefix = "commonDataModel.projcdstaskentity";
             KeySeparator = ".";
             Grouping = "/ProjCDSTaskEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WorkBreakdownStructureID = group.Add(new VocabularyKey(nameof(WorkBreakdownStructureID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProjectId = group.Add(new VocabularyKey(nameof(ProjectId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Task { get; private set; }
         public VocabularyKey ParentTask { get; private set; }
         public VocabularyKey WorkBreakdownStructureID { get; private set; }
         public VocabularyKey ProjectId { get; private set; }
         public VocabularyKey Name { get; private set; }
-
-
     }
 }

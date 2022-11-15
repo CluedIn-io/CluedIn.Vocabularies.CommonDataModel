@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CFMJournalNamePaymAccountListEntityVocabulary()
         {
-            VocabularyName = "CFMJournalNamePaymAccountListEntity";
+            VocabularyName = "CFM Journal Name Paym Account List Entity";
             KeyPrefix = "commonDataModel.cfmjournalnamepaymaccountlistentity";
             KeySeparator = ".";
             Grouping = "/CFMJournalNamePaymAccountListEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AccountNumber = group.Add(new VocabularyKey(nameof(AccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PaymentAccountType = group.Add(new VocabularyKey(nameof(PaymentAccountType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Name { get; private set; }
         public VocabularyKey AccountNumber { get; private set; }
         public VocabularyKey PaymentAccountType { get; private set; }
-
-
     }
 }

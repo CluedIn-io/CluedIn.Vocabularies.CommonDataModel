@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustInvoiceJournalLineEntityVocabulary()
         {
-            VocabularyName = "CustInvoiceJournalLineEntity";
+            VocabularyName = "Cust Invoice Journal Line Entity";
             KeyPrefix = "commonDataModel.custinvoicejournallineentity";
             KeySeparator = ".";
             Grouping = "/CustInvoiceJournalLineEntity";
@@ -66,10 +66,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ExchRate = group.Add(new VocabularyKey(nameof(ExchRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ExchRateSecondary = group.Add(new VocabularyKey(nameof(ExchRateSecondary), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReportingCurrencyExchRate = group.Add(new VocabularyKey(nameof(ReportingCurrencyExchRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey JournalBatchNumber { get; private set; }
         public VocabularyKey Voucher { get; private set; }
         public VocabularyKey ChineseVoucherTypeRecId { get; private set; }
@@ -123,7 +121,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ExchRate { get; private set; }
         public VocabularyKey ExchRateSecondary { get; private set; }
         public VocabularyKey ReportingCurrencyExchRate { get; private set; }
-
-
     }
 }

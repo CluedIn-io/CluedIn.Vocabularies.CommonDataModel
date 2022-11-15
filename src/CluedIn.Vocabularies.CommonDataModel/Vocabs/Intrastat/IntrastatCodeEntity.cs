@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public IntrastatCodeEntityVocabulary()
         {
-            VocabularyName = "IntrastatCodeEntity";
+            VocabularyName = "Intrastat Code Entity";
             KeyPrefix = "commonDataModel.intrastatcodeentity";
             KeySeparator = ".";
             Grouping = "/IntrastatCodeEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CountryRegionId = group.Add(new VocabularyKey(nameof(CountryRegionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IntrastatCode = group.Add(new VocabularyKey(nameof(IntrastatCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StateId = group.Add(new VocabularyKey(nameof(StateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CountryRegionId { get; private set; }
         public VocabularyKey IntrastatCode { get; private set; }
         public VocabularyKey StateId { get; private set; }
-
-
     }
 }

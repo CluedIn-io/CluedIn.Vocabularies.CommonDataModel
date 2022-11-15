@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventQualityTestInstrumentEntityVocabulary()
         {
-            VocabularyName = "InventQualityTestInstrumentEntity";
+            VocabularyName = "Invent Quality Test Instrument Entity";
             KeyPrefix = "commonDataModel.inventqualitytestinstrumententity";
             KeySeparator = ".";
             Grouping = "/InventQualityTestInstrumentEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 InstrumentDescription = group.Add(new VocabularyKey(nameof(InstrumentDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TestMeasurementUnitSymbol = group.Add(new VocabularyKey(nameof(TestMeasurementUnitSymbol), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 QualityTestInstrumentUnitPrecision = group.Add(new VocabularyKey(nameof(QualityTestInstrumentUnitPrecision), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InstrumentId { get; private set; }
         public VocabularyKey InstrumentDescription { get; private set; }
         public VocabularyKey TestMeasurementUnitSymbol { get; private set; }
         public VocabularyKey QualityTestInstrumentUnitPrecision { get; private set; }
-
-
     }
 }

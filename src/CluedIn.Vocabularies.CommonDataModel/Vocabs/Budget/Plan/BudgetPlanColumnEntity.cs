@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetPlanColumnEntityVocabulary()
         {
-            VocabularyName = "BudgetPlanColumnEntity";
+            VocabularyName = "Budget Plan Column Entity";
             KeyPrefix = "commonDataModel.budgetplancolumnentity";
             KeySeparator = ".";
             Grouping = "/BudgetPlanColumnEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ColumnPeriodLengthValue = group.Add(new VocabularyKey(nameof(ColumnPeriodLengthValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 YearOffset = group.Add(new VocabularyKey(nameof(YearOffset), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Scenario = group.Add(new VocabularyKey(nameof(Scenario), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Name { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey BudgetPlanScenario { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ColumnPeriodLengthValue { get; private set; }
         public VocabularyKey YearOffset { get; private set; }
         public VocabularyKey Scenario { get; private set; }
-
-
     }
 }

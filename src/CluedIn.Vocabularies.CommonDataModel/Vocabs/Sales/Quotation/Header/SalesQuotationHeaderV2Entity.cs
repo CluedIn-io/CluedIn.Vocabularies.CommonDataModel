@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesQuotationHeaderV2EntityVocabulary()
         {
-            VocabularyName = "SalesQuotationHeaderV2Entity";
+            VocabularyName = "Sales Quotation Header V2 Entity";
             KeyPrefix = "commonDataModel.salesquotationheaderv2entity";
             KeySeparator = ".";
             Grouping = "/SalesQuotationHeaderV2Entity";
@@ -151,10 +151,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 InvoiceAddressCountryRegionISOCode = group.Add(new VocabularyKey(nameof(InvoiceAddressCountryRegionISOCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReportingCurrencyFixedExchangeRate = group.Add(new VocabularyKey(nameof(ReportingCurrencyFixedExchangeRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesQuotationCalculatedTotalsRecId = group.Add(new VocabularyKey(nameof(SalesQuotationCalculatedTotalsRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SalesQuotationNumber { get; private set; }
         public VocabularyKey SalesQuotationStatus { get; private set; }
         public VocabularyKey SalesQuotationTypeId { get; private set; }
@@ -293,7 +291,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey InvoiceAddressCountryRegionISOCode { get; private set; }
         public VocabularyKey ReportingCurrencyFixedExchangeRate { get; private set; }
         public VocabularyKey SalesQuotationCalculatedTotalsRecId { get; private set; }
-
-
     }
 }

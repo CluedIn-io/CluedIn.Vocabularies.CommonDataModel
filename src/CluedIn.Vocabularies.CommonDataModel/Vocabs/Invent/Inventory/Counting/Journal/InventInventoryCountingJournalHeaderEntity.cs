@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventInventoryCountingJournalHeaderEntityVocabulary()
         {
-            VocabularyName = "InventInventoryCountingJournalHeaderEntity";
+            VocabularyName = "Invent Inventory Counting Journal Header Entity";
             KeyPrefix = "commonDataModel.inventinventorycountingjournalheaderentity";
             KeySeparator = ".";
             Grouping = "/InventInventoryCountingJournalHeaderEntity";
@@ -38,10 +38,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsCountingItemBatchSpecific = group.Add(new VocabularyKey(nameof(IsCountingItemBatchSpecific), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsCountingItemSerialNumberSpecific = group.Add(new VocabularyKey(nameof(IsCountingItemSerialNumberSpecific), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CountingStatusRegistrationPolicy = group.Add(new VocabularyKey(nameof(CountingStatusRegistrationPolicy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AreLinesDeletedAfterPosting { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey PostingDetailLevel { get; private set; }
@@ -67,7 +65,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsCountingItemBatchSpecific { get; private set; }
         public VocabularyKey IsCountingItemSerialNumberSpecific { get; private set; }
         public VocabularyKey CountingStatusRegistrationPolicy { get; private set; }
-
-
     }
 }

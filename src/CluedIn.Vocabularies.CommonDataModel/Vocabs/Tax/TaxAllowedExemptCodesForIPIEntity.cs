@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxAllowedExemptCodesForIPIEntityVocabulary()
         {
-            VocabularyName = "TaxAllowedExemptCodesForIPIEntity";
+            VocabularyName = "Tax Allowed Exempt Codes For IPI Entity";
             KeyPrefix = "commonDataModel.taxallowedexemptcodesforipientity";
             KeySeparator = ".";
             Grouping = "/TaxAllowedExemptCodesForIPIEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TaxationCode = group.Add(new VocabularyKey(nameof(TaxationCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FiscalValue = group.Add(new VocabularyKey(nameof(FiscalValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxationCodeRecId = group.Add(new VocabularyKey(nameof(TaxationCodeRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ExemptCode { get; private set; }
         public VocabularyKey TaxationCode { get; private set; }
         public VocabularyKey FiscalValue { get; private set; }
         public VocabularyKey TaxationCodeRecId { get; private set; }
-
-
     }
 }

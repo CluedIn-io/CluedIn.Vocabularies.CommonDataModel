@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSAccessorialChargeMasterEntityVocabulary()
         {
-            VocabularyName = "TMSAccessorialChargeMasterEntity";
+            VocabularyName = "TMS Accessorial Charge Master Entity";
             KeyPrefix = "commonDataModel.tmsaccessorialchargemasterentity";
             KeySeparator = ".";
             Grouping = "/TMSAccessorialChargeMasterEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MasterCode = group.Add(new VocabularyKey(nameof(MasterCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ChargeMasterType = group.Add(new VocabularyKey(nameof(ChargeMasterType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MasterDescription = group.Add(new VocabularyKey(nameof(MasterDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey MasterCode { get; private set; }
         public VocabularyKey ChargeMasterType { get; private set; }
         public VocabularyKey MasterDescription { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollWorkerEnrolledBenefitInquiryEntityVocabulary()
         {
-            VocabularyName = "PayrollWorkerEnrolledBenefitInquiryEntity";
+            VocabularyName = "Payroll Worker Enrolled Benefit Inquiry Entity";
             KeyPrefix = "commonDataModel.payrollworkerenrolledbenefitinquiryentity";
             KeySeparator = ".";
             Grouping = "/PayrollWorkerEnrolledBenefitInquiryEntity";
@@ -31,10 +31,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BenefitId = group.Add(new VocabularyKey(nameof(BenefitId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PersonnelNumber = group.Add(new VocabularyKey(nameof(PersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BenefitPlanAndOption = group.Add(new VocabularyKey(nameof(BenefitPlanAndOption), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Worker { get; private set; }
         public VocabularyKey Benefit { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
@@ -53,7 +51,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey BenefitId { get; private set; }
         public VocabularyKey PersonnelNumber { get; private set; }
         public VocabularyKey BenefitPlanAndOption { get; private set; }
-
-
     }
 }

@@ -6,34 +6,30 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LinkedInFormSubmissionVocabulary()
         {
-            VocabularyName = "LinkedInFormSubmission";
+            VocabularyName = "Linked In Form Submission";
             KeyPrefix = "commonDataModel.linkedinformsubmission";
             KeySeparator = ".";
             Grouping = "/LinkedInFormSubmission";
 
             AddGroup("LinkedInFormSubmission Details", group =>
             {
-                answerTextid = group.Add(new VocabularyKey(nameof(answerTextid), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                answerFormat = group.Add(new VocabularyKey(nameof(answerFormat), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                answerText = group.Add(new VocabularyKey(nameof(answerText), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                linkedInFormAnswerId = group.Add(new VocabularyKey(nameof(linkedInFormAnswerId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                linkedInQuestionID = group.Add(new VocabularyKey(nameof(linkedInQuestionID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                AnswerTextid = group.Add(new VocabularyKey(nameof(AnswerTextid), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AnswerFormat = group.Add(new VocabularyKey(nameof(AnswerFormat), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AnswerText = group.Add(new VocabularyKey(nameof(AnswerText), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LinkedInFormAnswerId = group.Add(new VocabularyKey(nameof(LinkedInFormAnswerId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LinkedInQuestionID = group.Add(new VocabularyKey(nameof(LinkedInQuestionID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey answerTextid { get; private set; }
-        public VocabularyKey answerFormat { get; private set; }
-        public VocabularyKey answerText { get; private set; }
-        public VocabularyKey linkedInFormAnswerId { get; private set; }
-        public VocabularyKey linkedInQuestionID { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey AnswerTextid { get; private set; }
+        public VocabularyKey AnswerFormat { get; private set; }
+        public VocabularyKey AnswerText { get; private set; }
+        public VocabularyKey LinkedInFormAnswerId { get; private set; }
+        public VocabularyKey LinkedInQuestionID { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

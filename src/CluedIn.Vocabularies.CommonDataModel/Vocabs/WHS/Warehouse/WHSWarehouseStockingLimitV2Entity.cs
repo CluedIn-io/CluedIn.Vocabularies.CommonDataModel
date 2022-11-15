@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseStockingLimitV2EntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseStockingLimitV2Entity";
+            VocabularyName = "WHS Warehouse Stocking Limit V2 Entity";
             KeyPrefix = "commonDataModel.whswarehousestockinglimitv2entity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseStockingLimitV2Entity";
@@ -31,10 +31,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsUnlimitedQuantityAllowed = group.Add(new VocabularyKey(nameof(IsUnlimitedQuantityAllowed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 QuantityLimit = group.Add(new VocabularyKey(nameof(QuantityLimit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 QuantityLimitUnitSymbol = group.Add(new VocabularyKey(nameof(QuantityLimitUnitSymbol), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WarehouseId { get; private set; }
         public VocabularyKey WarehouseLocationId { get; private set; }
         public VocabularyKey WarehouseLocationProfileId { get; private set; }
@@ -53,7 +51,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsUnlimitedQuantityAllowed { get; private set; }
         public VocabularyKey QuantityLimit { get; private set; }
         public VocabularyKey QuantityLimitUnitSymbol { get; private set; }
-
-
     }
 }

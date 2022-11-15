@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DataManagementTemplateEntityVocabulary()
         {
-            VocabularyName = "DataManagementTemplateEntity";
+            VocabularyName = "Data Management Template Entity";
             KeyPrefix = "commonDataModel.datamanagementtemplateentity";
             KeySeparator = ".";
             Grouping = "/DataManagementTemplateEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 TemplateId = group.Add(new VocabularyKey(nameof(TemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TemplateId { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustCustomerPostingProfileHeaderEntityVocabulary()
         {
-            VocabularyName = "CustCustomerPostingProfileHeaderEntity";
+            VocabularyName = "Cust Customer Posting Profile Header Entity";
             KeyPrefix = "commonDataModel.custcustomerpostingprofileheaderentity";
             KeySeparator = ".";
             Grouping = "/CustCustomerPostingProfileHeaderEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PostingProfileToCloseSettlement = group.Add(new VocabularyKey(nameof(PostingProfileToCloseSettlement), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsTransactionIncludedInAutoSettlement = group.Add(new VocabularyKey(nameof(IsTransactionIncludedInAutoSettlement), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AllowEmptyDimensionValue = group.Add(new VocabularyKey(nameof(AllowEmptyDimensionValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsTransactionIncludedInCollectionLetterGeneration { get; private set; }
         public VocabularyKey IsTransactionIncludedInInterestCalculation { get; private set; }
         public VocabularyKey Description { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PostingProfileToCloseSettlement { get; private set; }
         public VocabularyKey IsTransactionIncludedInAutoSettlement { get; private set; }
         public VocabularyKey AllowEmptyDimensionValue { get; private set; }
-
-
     }
 }

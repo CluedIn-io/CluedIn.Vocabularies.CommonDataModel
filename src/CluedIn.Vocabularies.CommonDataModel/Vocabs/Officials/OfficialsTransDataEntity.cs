@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public OfficialsTransDataEntityVocabulary()
         {
-            VocabularyName = "OfficialsTransDataEntity";
+            VocabularyName = "Officials Trans Data Entity";
             KeyPrefix = "commonDataModel.officialstransdataentity";
             KeySeparator = ".";
             Grouping = "/OfficialsTransDataEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Position = group.Add(new VocabularyKey(nameof(Position), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EmployeeName = group.Add(new VocabularyKey(nameof(EmployeeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Title = group.Add(new VocabularyKey(nameof(Title), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey OfficialSession { get; private set; }
         public VocabularyKey ReportType { get; private set; }
         public VocabularyKey AccountCode { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Position { get; private set; }
         public VocabularyKey EmployeeName { get; private set; }
         public VocabularyKey Title { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustInterestCodeEntityVocabulary()
         {
-            VocabularyName = "CustInterestCodeEntity";
+            VocabularyName = "Cust Interest Code Entity";
             KeyPrefix = "commonDataModel.custinterestcodeentity";
             KeySeparator = ".";
             Grouping = "/CustInterestCodeEntity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 InterestPercent = group.Add(new VocabularyKey(nameof(InterestPercent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LedgerPostingAccount = group.Add(new VocabularyKey(nameof(LedgerPostingAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LedgerPostingAccountDisplayValue = group.Add(new VocabularyKey(nameof(LedgerPostingAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InterestCode { get; private set; }
         public VocabularyKey InterestType { get; private set; }
         public VocabularyKey Description { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey InterestPercent { get; private set; }
         public VocabularyKey LedgerPostingAccount { get; private set; }
         public VocabularyKey LedgerPostingAccountDisplayValue { get; private set; }
-
-
     }
 }

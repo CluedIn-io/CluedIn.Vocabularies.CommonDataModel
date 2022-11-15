@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesOrderLineV2EntityVocabulary()
         {
-            VocabularyName = "SalesOrderLineV2Entity";
+            VocabularyName = "Sales Order Line V2 Entity";
             KeyPrefix = "commonDataModel.salesorderlinev2entity";
             KeySeparator = ".";
             Grouping = "/SalesOrderLineV2Entity";
@@ -163,10 +163,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RevRecContractStartDate = group.Add(new VocabularyKey(nameof(RevRecContractStartDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RevRecSalesDeliverNow = group.Add(new VocabularyKey(nameof(RevRecSalesDeliverNow), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BillSchRevRecArrears = group.Add(new VocabularyKey(nameof(BillSchRevRecArrears), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SalesOrderNumber { get; private set; }
         public VocabularyKey InventoryLotId { get; private set; }
         public VocabularyKey SalesOrderLineStatus { get; private set; }
@@ -317,7 +315,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RevRecContractStartDate { get; private set; }
         public VocabularyKey RevRecSalesDeliverNow { get; private set; }
         public VocabularyKey BillSchRevRecArrears { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventProductSiteSpecificOrderSettingsEntityVocabulary()
         {
-            VocabularyName = "InventProductSiteSpecificOrderSettingsEntity";
+            VocabularyName = "Invent Product Site Specific Order Settings Entity";
             KeyPrefix = "commonDataModel.inventproductsitespecificordersettingsentity";
             KeySeparator = ".";
             Grouping = "/InventProductSiteSpecificOrderSettingsEntity";
@@ -58,10 +58,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SalesLeadTimeDays = group.Add(new VocabularyKey(nameof(SalesLeadTimeDays), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesWarehouseId = group.Add(new VocabularyKey(nameof(SalesWarehouseId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsSalesWarehouseMandatory = group.Add(new VocabularyKey(nameof(IsSalesWarehouseMandatory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ItemNumber { get; private set; }
         public VocabularyKey OperationalSiteId { get; private set; }
         public VocabularyKey AreInventoryDefaultOrderSettingsOverridden { get; private set; }
@@ -107,7 +105,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SalesLeadTimeDays { get; private set; }
         public VocabularyKey SalesWarehouseId { get; private set; }
         public VocabularyKey IsSalesWarehouseMandatory { get; private set; }
-
-
     }
 }

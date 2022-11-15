@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventWarehouseQuarantineZoneEntityVocabulary()
         {
-            VocabularyName = "InventWarehouseQuarantineZoneEntity";
+            VocabularyName = "Invent Warehouse Quarantine Zone Entity";
             KeyPrefix = "commonDataModel.inventwarehousequarantinezoneentity";
             KeySeparator = ".";
             Grouping = "/InventWarehouseQuarantineZoneEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 ZoneDescription = group.Add(new VocabularyKey(nameof(ZoneDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ZoneId = group.Add(new VocabularyKey(nameof(ZoneId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ZoneDescription { get; private set; }
         public VocabularyKey ZoneId { get; private set; }
-
-
     }
 }

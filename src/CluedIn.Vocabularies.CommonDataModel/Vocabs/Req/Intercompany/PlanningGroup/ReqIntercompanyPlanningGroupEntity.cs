@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReqIntercompanyPlanningGroupEntityVocabulary()
         {
-            VocabularyName = "ReqIntercompanyPlanningGroupEntity";
+            VocabularyName = "Req Intercompany Planning Group Entity";
             KeyPrefix = "commonDataModel.reqintercompanyplanninggroupentity";
             KeySeparator = ".";
             Grouping = "/ReqIntercompanyPlanningGroupEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 GroupDescription = group.Add(new VocabularyKey(nameof(GroupDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GroupName = group.Add(new VocabularyKey(nameof(GroupName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey GroupDescription { get; private set; }
         public VocabularyKey GroupName { get; private set; }
-
-
     }
 }

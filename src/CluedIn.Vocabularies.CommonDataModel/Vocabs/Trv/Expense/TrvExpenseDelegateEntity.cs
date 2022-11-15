@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvExpenseDelegateEntityVocabulary()
         {
-            VocabularyName = "TrvExpenseDelegateEntity";
+            VocabularyName = "Trv Expense Delegate Entity";
             KeyPrefix = "commonDataModel.trvexpensedelegateentity";
             KeySeparator = ".";
             Grouping = "/TrvExpenseDelegateEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ToDateUTC = group.Add(new VocabularyKey(nameof(ToDateUTC), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DelegatedPersonnelNumber = group.Add(new VocabularyKey(nameof(DelegatedPersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DelegatingPersonnelNumber = group.Add(new VocabularyKey(nameof(DelegatingPersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DelegatedUser { get; private set; }
         public VocabularyKey DelegatedWorker { get; private set; }
         public VocabularyKey DelegatingWorker { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ToDateUTC { get; private set; }
         public VocabularyKey DelegatedPersonnelNumber { get; private set; }
         public VocabularyKey DelegatingPersonnelNumber { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResReleasedProductMasterV2EntityVocabulary()
         {
-            VocabularyName = "EcoResReleasedProductMasterV2Entity";
+            VocabularyName = "Eco Res Released Product Master V2 Entity";
             KeyPrefix = "commonDataModel.ecoresreleasedproductmasterv2entity";
             KeySeparator = ".";
             Grouping = "/EcoResReleasedProductMasterV2Entity";
@@ -204,10 +204,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 InventoryGSTReliefCategoryCode = group.Add(new VocabularyKey(nameof(InventoryGSTReliefCategoryCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NGPCode = group.Add(new VocabularyKey(nameof(NGPCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CostCalculationBOMLevel = group.Add(new VocabularyKey(nameof(CostCalculationBOMLevel), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductType { get; private set; }
         public VocabularyKey ProductNumber { get; private set; }
         public VocabularyKey ProductSearchName { get; private set; }
@@ -399,7 +397,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey InventoryGSTReliefCategoryCode { get; private set; }
         public VocabularyKey NGPCode { get; private set; }
         public VocabularyKey CostCalculationBOMLevel { get; private set; }
-
-
     }
 }

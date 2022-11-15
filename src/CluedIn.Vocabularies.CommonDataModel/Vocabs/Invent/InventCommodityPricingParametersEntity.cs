@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventCommodityPricingParametersEntityVocabulary()
         {
-            VocabularyName = "InventCommodityPricingParametersEntity";
+            VocabularyName = "Invent Commodity Pricing Parameters Entity";
             KeyPrefix = "commonDataModel.inventcommoditypricingparametersentity";
             KeySeparator = ".";
             Grouping = "/InventCommodityPricingParametersEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TradeAgreementJournalNameId = group.Add(new VocabularyKey(nameof(TradeAgreementJournalNameId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BaseReferenceDepthValue = group.Add(new VocabularyKey(nameof(BaseReferenceDepthValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FinancialDimensionSetName = group.Add(new VocabularyKey(nameof(FinancialDimensionSetName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CommodityCostBasisTypeId { get; private set; }
         public VocabularyKey CommodityPricingTemplateId { get; private set; }
         public VocabularyKey AreBOMFormulaPriceCalculationsPreserved { get; private set; }
         public VocabularyKey TradeAgreementJournalNameId { get; private set; }
         public VocabularyKey BaseReferenceDepthValue { get; private set; }
         public VocabularyKey FinancialDimensionSetName { get; private set; }
-
-
     }
 }

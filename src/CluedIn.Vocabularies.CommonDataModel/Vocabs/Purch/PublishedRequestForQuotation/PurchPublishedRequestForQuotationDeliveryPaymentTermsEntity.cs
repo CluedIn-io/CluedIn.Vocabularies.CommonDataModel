@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPublishedRequestForQuotationDeliveryPaymentTermsEntityVocabulary()
         {
-            VocabularyName = "PurchPublishedRequestForQuotationDeliveryPaymentTermsEntity";
+            VocabularyName = "Purch Published Request For Quotation Delivery Payment Terms Entity";
             KeyPrefix = "commonDataModel.purchpublishedrequestforquotationdeliverypaymenttermsentity";
             KeySeparator = ".";
             Grouping = "/PurchPublishedRequestForQuotationDeliveryPaymentTermsEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DeliveryTermsId = group.Add(new VocabularyKey(nameof(DeliveryTermsId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DeliveryModeId = group.Add(new VocabularyKey(nameof(DeliveryModeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorPaymentMethodName = group.Add(new VocabularyKey(nameof(VendorPaymentMethodName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RFQCaseNumber { get; private set; }
         public VocabularyKey RFQCaseTitle { get; private set; }
         public VocabularyKey RequestedDeliveryDate { get; private set; }
         public VocabularyKey DeliveryTermsId { get; private set; }
         public VocabularyKey DeliveryModeId { get; private set; }
         public VocabularyKey VendorPaymentMethodName { get; private set; }
-
-
     }
 }

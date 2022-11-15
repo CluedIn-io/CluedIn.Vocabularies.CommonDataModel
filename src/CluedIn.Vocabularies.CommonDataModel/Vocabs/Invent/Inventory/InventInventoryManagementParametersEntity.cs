@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventInventoryManagementParametersEntityVocabulary()
         {
-            VocabularyName = "InventInventoryManagementParametersEntity";
+            VocabularyName = "Invent Inventory Management Parameters Entity";
             KeyPrefix = "commonDataModel.inventinventorymanagementparametersentity";
             KeySeparator = ".";
             Grouping = "/InventInventoryManagementParametersEntity";
@@ -53,10 +53,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MassDefinedUnitSymbol = group.Add(new VocabularyKey(nameof(MassDefinedUnitSymbol), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VolumeDefinedUnitSymbol = group.Add(new VocabularyKey(nameof(VolumeDefinedUnitSymbol), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LengthDefinedUnitSymbol = group.Add(new VocabularyKey(nameof(LengthDefinedUnitSymbol), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WillOrderPickingAutomaticallyEndInventoryOutputOrders { get; private set; }
         public VocabularyKey PrintedPickingListPickingRouteIdBarcodeSetupId { get; private set; }
         public VocabularyKey IsOrderedInventoryQuantityReservationAllowed { get; private set; }
@@ -97,7 +95,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey MassDefinedUnitSymbol { get; private set; }
         public VocabularyKey VolumeDefinedUnitSymbol { get; private set; }
         public VocabularyKey LengthDefinedUnitSymbol { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CostOperationalSiteFinancialDimensionLinkPolicyEntityVocabulary()
         {
-            VocabularyName = "CostOperationalSiteFinancialDimensionLinkPolicyEntity";
+            VocabularyName = "Cost Operational Site Financial Dimension Link Policy Entity";
             KeyPrefix = "commonDataModel.costoperationalsitefinancialdimensionlinkpolicyentity";
             KeySeparator = ".";
             Grouping = "/CostOperationalSiteFinancialDimensionLinkPolicyEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LinkedFinancialDimensionRecId = group.Add(new VocabularyKey(nameof(LinkedFinancialDimensionRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LinkedFinancialDimensionName = group.Add(new VocabularyKey(nameof(LinkedFinancialDimensionName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LinkState = group.Add(new VocabularyKey(nameof(LinkState), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LinkedFinancialDimensionRecId { get; private set; }
         public VocabularyKey LinkedFinancialDimensionName { get; private set; }
         public VocabularyKey LinkState { get; private set; }
-
-
     }
 }

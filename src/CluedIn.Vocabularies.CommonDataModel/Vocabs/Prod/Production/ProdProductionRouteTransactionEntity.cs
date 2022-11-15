@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProdProductionRouteTransactionEntityVocabulary()
         {
-            VocabularyName = "ProdProductionRouteTransactionEntity";
+            VocabularyName = "Prod Production Route Transaction Entity";
             KeyPrefix = "commonDataModel.prodproductionroutetransactionentity";
             KeySeparator = ".";
             Grouping = "/ProdProductionRouteTransactionEntity";
@@ -42,10 +42,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OperationResourceId = group.Add(new VocabularyKey(nameof(OperationResourceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RecordId = group.Add(new VocabularyKey(nameof(RecordId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RegisteredHours = group.Add(new VocabularyKey(nameof(RegisteredHours), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CostAmount { get; private set; }
         public VocabularyKey IsCostAccounted { get; private set; }
         public VocabularyKey RouteCostCategoryId { get; private set; }
@@ -75,7 +73,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OperationResourceId { get; private set; }
         public VocabularyKey RecordId { get; private set; }
         public VocabularyKey RegisteredHours { get; private set; }
-
-
     }
 }

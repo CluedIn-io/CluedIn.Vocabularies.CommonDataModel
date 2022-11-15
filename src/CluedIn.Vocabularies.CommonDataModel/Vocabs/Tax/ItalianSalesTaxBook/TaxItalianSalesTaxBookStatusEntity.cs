@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxItalianSalesTaxBookStatusEntityVocabulary()
         {
-            VocabularyName = "TaxItalianSalesTaxBookStatusEntity";
+            VocabularyName = "Tax Italian Sales Tax Book Status Entity";
             KeyPrefix = "commonDataModel.taxitaliansalestaxbookstatusentity";
             KeySeparator = ".";
             Grouping = "/TaxItalianSalesTaxBookStatusEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ChangedTo = group.Add(new VocabularyKey(nameof(ChangedTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Page = group.Add(new VocabularyKey(nameof(Page), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LastPageNumber = group.Add(new VocabularyKey(nameof(LastPageNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey ValidTo { get; private set; }
         public VocabularyKey SettlementPeriod { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ChangedTo { get; private set; }
         public VocabularyKey Page { get; private set; }
         public VocabularyKey LastPageNumber { get; private set; }
-
-
     }
 }

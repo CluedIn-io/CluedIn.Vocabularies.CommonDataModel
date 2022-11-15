@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendChargeVendorGroupEntityVocabulary()
         {
-            VocabularyName = "VendChargeVendorGroupEntity";
+            VocabularyName = "Vend Charge Vendor Group Entity";
             KeyPrefix = "commonDataModel.vendchargevendorgroupentity";
             KeySeparator = ".";
             Grouping = "/VendChargeVendorGroupEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 GroupId = group.Add(new VocabularyKey(nameof(GroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey GroupId { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

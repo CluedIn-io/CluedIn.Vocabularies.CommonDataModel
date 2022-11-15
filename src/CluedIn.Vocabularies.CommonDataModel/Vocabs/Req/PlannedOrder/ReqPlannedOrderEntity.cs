@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReqPlannedOrderEntityVocabulary()
         {
-            VocabularyName = "ReqPlannedOrderEntity";
+            VocabularyName = "Req Planned Order Entity";
             KeyPrefix = "commonDataModel.reqplannedorderentity";
             KeySeparator = ".";
             Grouping = "/ReqPlannedOrderEntity";
@@ -60,10 +60,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductDescription = group.Add(new VocabularyKey(nameof(ProductDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PlannedOrderModifiedDateTime = group.Add(new VocabularyKey(nameof(PlannedOrderModifiedDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BOMId = group.Add(new VocabularyKey(nameof(BOMId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsLeadTimeUsingWorkingDays { get; private set; }
         public VocabularyKey CostAmount { get; private set; }
         public VocabularyKey IsDirectlyDerivedRequirement { get; private set; }
@@ -111,7 +109,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProductDescription { get; private set; }
         public VocabularyKey PlannedOrderModifiedDateTime { get; private set; }
         public VocabularyKey BOMId { get; private set; }
-
-
     }
 }

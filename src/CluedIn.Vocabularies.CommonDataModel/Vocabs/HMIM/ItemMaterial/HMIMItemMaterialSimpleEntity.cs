@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HMIMItemMaterialSimpleEntityVocabulary()
         {
-            VocabularyName = "HMIMItemMaterialSimpleEntity";
+            VocabularyName = "HMIM Item Material Simple Entity";
             KeyPrefix = "commonDataModel.hmimitemmaterialsimpleentity";
             KeySeparator = ".";
             Grouping = "/HMIMItemMaterialSimpleEntity";
@@ -41,10 +41,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AirType = group.Add(new VocabularyKey(nameof(AirType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PackInstCodePassenger = group.Add(new VocabularyKey(nameof(PackInstCodePassenger), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PackInstCodeCargo = group.Add(new VocabularyKey(nameof(PackInstCodeCargo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ItemId { get; private set; }
         public VocabularyKey MaterialCode { get; private set; }
         public VocabularyKey MaterialDescription { get; private set; }
@@ -73,7 +71,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AirType { get; private set; }
         public VocabularyKey PackInstCodePassenger { get; private set; }
         public VocabularyKey PackInstCodeCargo { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventWarehouseCurrentPostalAddressV2EntityVocabulary()
         {
-            VocabularyName = "InventWarehouseCurrentPostalAddressV2Entity";
+            VocabularyName = "Invent Warehouse Current Postal Address V2 Entity";
             KeyPrefix = "commonDataModel.inventwarehousecurrentpostaladdressv2entity";
             KeySeparator = ".";
             Grouping = "/InventWarehouseCurrentPostalAddressV2Entity";
@@ -38,10 +38,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AddressBuildingCompliment = group.Add(new VocabularyKey(nameof(AddressBuildingCompliment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AddressPostBox = group.Add(new VocabularyKey(nameof(AddressPostBox), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AddressLocationRoles = group.Add(new VocabularyKey(nameof(AddressLocationRoles), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsPrimaryAddress { get; private set; }
         public VocabularyKey WarehouseLegalEntityId { get; private set; }
         public VocabularyKey WarehouseId { get; private set; }
@@ -67,7 +65,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AddressBuildingCompliment { get; private set; }
         public VocabularyKey AddressPostBox { get; private set; }
         public VocabularyKey AddressLocationRoles { get; private set; }
-
-
     }
 }

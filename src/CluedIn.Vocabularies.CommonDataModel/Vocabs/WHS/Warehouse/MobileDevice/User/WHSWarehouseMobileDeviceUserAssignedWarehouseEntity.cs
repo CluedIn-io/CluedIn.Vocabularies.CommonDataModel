@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseMobileDeviceUserAssignedWarehouseEntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseMobileDeviceUserAssignedWarehouseEntity";
+            VocabularyName = "WHS Warehouse Mobile Device User Assigned Warehouse Entity";
             KeyPrefix = "commonDataModel.whswarehousemobiledeviceuserassignedwarehouseentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseMobileDeviceUserAssignedWarehouseEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 WarehouseMobileDeviceUserId = group.Add(new VocabularyKey(nameof(WarehouseMobileDeviceUserId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WarehouseId = group.Add(new VocabularyKey(nameof(WarehouseId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WarehouseMobileDeviceUserId { get; private set; }
         public VocabularyKey WarehouseId { get; private set; }
-
-
     }
 }

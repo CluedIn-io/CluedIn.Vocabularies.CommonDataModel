@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReqItemCoverageSettingsV2EntityVocabulary()
         {
-            VocabularyName = "ReqItemCoverageSettingsV2Entity";
+            VocabularyName = "Req Item Coverage Settings V2 Entity";
             KeyPrefix = "commonDataModel.reqitemcoveragesettingsv2entity";
             KeySeparator = ".";
             Grouping = "/ReqItemCoverageSettingsV2Entity";
@@ -64,10 +64,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsTransferLeadTimeOverridden = group.Add(new VocabularyKey(nameof(IsTransferLeadTimeOverridden), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransferLeadTimeDays = group.Add(new VocabularyKey(nameof(TransferLeadTimeDays), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsTransferLeadTimeUsingWorkingDays = group.Add(new VocabularyKey(nameof(IsTransferLeadTimeUsingWorkingDays), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ItemNumber { get; private set; }
         public VocabularyKey CoverageItemBatchNumber { get; private set; }
         public VocabularyKey CoverageProductColorId { get; private set; }
@@ -119,7 +117,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsTransferLeadTimeOverridden { get; private set; }
         public VocabularyKey TransferLeadTimeDays { get; private set; }
         public VocabularyKey IsTransferLeadTimeUsingWorkingDays { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxReportExtraFieldsBEEntityVocabulary()
         {
-            VocabularyName = "TaxReportExtraFieldsBEEntity";
+            VocabularyName = "Tax Report Extra Fields BE Entity";
             KeyPrefix = "commonDataModel.taxreportextrafieldsbeentity";
             KeySeparator = ".";
             Grouping = "/TaxReportExtraFieldsBEEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TaxPeriod = group.Add(new VocabularyKey(nameof(TaxPeriod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VATDisbursement = group.Add(new VocabularyKey(nameof(VATDisbursement), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransDate = group.Add(new VocabularyKey(nameof(TransDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey ValidTo { get; private set; }
         public VocabularyKey Voucher { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TaxPeriod { get; private set; }
         public VocabularyKey VATDisbursement { get; private set; }
         public VocabularyKey TransDate { get; private set; }
-
-
     }
 }

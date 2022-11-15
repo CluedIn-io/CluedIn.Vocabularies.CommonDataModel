@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventOperationalSiteEntityVocabulary()
         {
-            VocabularyName = "InventOperationalSiteEntity";
+            VocabularyName = "Invent Operational Site Entity";
             KeyPrefix = "commonDataModel.inventoperationalsiteentity";
             KeySeparator = ".";
             Grouping = "/InventOperationalSiteEntity";
@@ -47,10 +47,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PrimaryAddressValidTo = group.Add(new VocabularyKey(nameof(PrimaryAddressValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsPrimaryAddressAssigned = group.Add(new VocabularyKey(nameof(IsPrimaryAddressAssigned), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxBranchCode = group.Add(new VocabularyKey(nameof(TaxBranchCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SiteId { get; private set; }
         public VocabularyKey SiteName { get; private set; }
         public VocabularyKey SiteTimezone { get; private set; }
@@ -85,7 +83,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PrimaryAddressValidTo { get; private set; }
         public VocabularyKey IsPrimaryAddressAssigned { get; private set; }
         public VocabularyKey TaxBranchCode { get; private set; }
-
-
     }
 }

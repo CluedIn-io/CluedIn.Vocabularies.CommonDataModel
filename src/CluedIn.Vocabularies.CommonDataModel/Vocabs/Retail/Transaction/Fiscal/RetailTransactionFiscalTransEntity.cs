@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailTransactionFiscalTransEntityVocabulary()
         {
-            VocabularyName = "RetailTransactionFiscalTransEntity";
+            VocabularyName = "Retail Transaction Fiscal Trans Entity";
             KeyPrefix = "commonDataModel.retailtransactionfiscaltransentity";
             KeySeparator = ".";
             Grouping = "/RetailTransactionFiscalTransEntity";
@@ -37,10 +37,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CountryRegion = group.Add(new VocabularyKey(nameof(CountryRegion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RegistrationType = group.Add(new VocabularyKey(nameof(RegistrationType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ServiceName = group.Add(new VocabularyKey(nameof(ServiceName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RecordGuid { get; private set; }
         public VocabularyKey OperatingUnitNumber { get; private set; }
         public VocabularyKey Channel { get; private set; }
@@ -65,7 +63,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CountryRegion { get; private set; }
         public VocabularyKey RegistrationType { get; private set; }
         public VocabularyKey ServiceName { get; private set; }
-
-
     }
 }

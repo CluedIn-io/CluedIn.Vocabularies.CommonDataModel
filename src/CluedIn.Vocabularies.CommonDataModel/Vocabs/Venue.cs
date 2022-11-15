@@ -13,71 +13,67 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Venue Details", group =>
             {
-                exchangeRate = group.Add(new VocabularyKey(nameof(exchangeRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                accessibleToilets = group.Add(new VocabularyKey(nameof(accessibleToilets), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                additionalFacilities = group.Add(new VocabularyKey(nameof(additionalFacilities), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                addressComposite = group.Add(new VocabularyKey(nameof(addressComposite), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                addressLine1 = group.Add(new VocabularyKey(nameof(addressLine1), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                addressLine2 = group.Add(new VocabularyKey(nameof(addressLine2), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                addressLine3 = group.Add(new VocabularyKey(nameof(addressLine3), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                city = group.Add(new VocabularyKey(nameof(city), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                cost = group.Add(new VocabularyKey(nameof(cost), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                costBase = group.Add(new VocabularyKey(nameof(costBase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                country = group.Add(new VocabularyKey(nameof(country), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                description = group.Add(new VocabularyKey(nameof(description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                disabledAccess = group.Add(new VocabularyKey(nameof(disabledAccess), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                disabledParking = group.Add(new VocabularyKey(nameof(disabledParking), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                email = group.Add(new VocabularyKey(nameof(email), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                estCapacity = group.Add(new VocabularyKey(nameof(estCapacity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                postalCode = group.Add(new VocabularyKey(nameof(postalCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                publicTelephoneAvailable = group.Add(new VocabularyKey(nameof(publicTelephoneAvailable), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateProvince = group.Add(new VocabularyKey(nameof(stateProvince), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                telephone1 = group.Add(new VocabularyKey(nameof(telephone1), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                telephone2 = group.Add(new VocabularyKey(nameof(telephone2), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                telephone3 = group.Add(new VocabularyKey(nameof(telephone3), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                venueId = group.Add(new VocabularyKey(nameof(venueId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                website = group.Add(new VocabularyKey(nameof(website), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                wiFiAvailable = group.Add(new VocabularyKey(nameof(wiFiAvailable), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                wiFiPassword = group.Add(new VocabularyKey(nameof(wiFiPassword), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                wiFiSSID = group.Add(new VocabularyKey(nameof(wiFiSSID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AccessibleToilets = group.Add(new VocabularyKey(nameof(AccessibleToilets), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AdditionalFacilities = group.Add(new VocabularyKey(nameof(AdditionalFacilities), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AddressComposite = group.Add(new VocabularyKey(nameof(AddressComposite), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AddressLine1 = group.Add(new VocabularyKey(nameof(AddressLine1), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AddressLine2 = group.Add(new VocabularyKey(nameof(AddressLine2), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AddressLine3 = group.Add(new VocabularyKey(nameof(AddressLine3), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                City = group.Add(new VocabularyKey(nameof(City), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Cost = group.Add(new VocabularyKey(nameof(Cost), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CostBase = group.Add(new VocabularyKey(nameof(CostBase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Country = group.Add(new VocabularyKey(nameof(Country), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DisabledAccess = group.Add(new VocabularyKey(nameof(DisabledAccess), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DisabledParking = group.Add(new VocabularyKey(nameof(DisabledParking), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Email = group.Add(new VocabularyKey(nameof(Email), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EstCapacity = group.Add(new VocabularyKey(nameof(EstCapacity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PostalCode = group.Add(new VocabularyKey(nameof(PostalCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PublicTelephoneAvailable = group.Add(new VocabularyKey(nameof(PublicTelephoneAvailable), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateProvince = group.Add(new VocabularyKey(nameof(StateProvince), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Telephone1 = group.Add(new VocabularyKey(nameof(Telephone1), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Telephone2 = group.Add(new VocabularyKey(nameof(Telephone2), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Telephone3 = group.Add(new VocabularyKey(nameof(Telephone3), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                VenueId = group.Add(new VocabularyKey(nameof(VenueId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Website = group.Add(new VocabularyKey(nameof(Website), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WiFiAvailable = group.Add(new VocabularyKey(nameof(WiFiAvailable), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WiFiPassword = group.Add(new VocabularyKey(nameof(WiFiPassword), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WiFiSSID = group.Add(new VocabularyKey(nameof(WiFiSSID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey exchangeRate { get; private set; }
-        public VocabularyKey accessibleToilets { get; private set; }
-        public VocabularyKey additionalFacilities { get; private set; }
-        public VocabularyKey addressComposite { get; private set; }
-        public VocabularyKey addressLine1 { get; private set; }
-        public VocabularyKey addressLine2 { get; private set; }
-        public VocabularyKey addressLine3 { get; private set; }
-        public VocabularyKey city { get; private set; }
-        public VocabularyKey cost { get; private set; }
-        public VocabularyKey costBase { get; private set; }
-        public VocabularyKey country { get; private set; }
-        public VocabularyKey description { get; private set; }
-        public VocabularyKey disabledAccess { get; private set; }
-        public VocabularyKey disabledParking { get; private set; }
-        public VocabularyKey email { get; private set; }
-        public VocabularyKey estCapacity { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey postalCode { get; private set; }
-        public VocabularyKey publicTelephoneAvailable { get; private set; }
-        public VocabularyKey stateProvince { get; private set; }
-        public VocabularyKey telephone1 { get; private set; }
-        public VocabularyKey telephone2 { get; private set; }
-        public VocabularyKey telephone3 { get; private set; }
-        public VocabularyKey venueId { get; private set; }
-        public VocabularyKey website { get; private set; }
-        public VocabularyKey wiFiAvailable { get; private set; }
-        public VocabularyKey wiFiPassword { get; private set; }
-        public VocabularyKey wiFiSSID { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey AccessibleToilets { get; private set; }
+        public VocabularyKey AdditionalFacilities { get; private set; }
+        public VocabularyKey AddressComposite { get; private set; }
+        public VocabularyKey AddressLine1 { get; private set; }
+        public VocabularyKey AddressLine2 { get; private set; }
+        public VocabularyKey AddressLine3 { get; private set; }
+        public VocabularyKey City { get; private set; }
+        public VocabularyKey Cost { get; private set; }
+        public VocabularyKey CostBase { get; private set; }
+        public VocabularyKey Country { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey DisabledAccess { get; private set; }
+        public VocabularyKey DisabledParking { get; private set; }
+        public VocabularyKey Email { get; private set; }
+        public VocabularyKey EstCapacity { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey PostalCode { get; private set; }
+        public VocabularyKey PublicTelephoneAvailable { get; private set; }
+        public VocabularyKey StateProvince { get; private set; }
+        public VocabularyKey Telephone1 { get; private set; }
+        public VocabularyKey Telephone2 { get; private set; }
+        public VocabularyKey Telephone3 { get; private set; }
+        public VocabularyKey VenueId { get; private set; }
+        public VocabularyKey Website { get; private set; }
+        public VocabularyKey WiFiAvailable { get; private set; }
+        public VocabularyKey WiFiPassword { get; private set; }
+        public VocabularyKey WiFiSSID { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

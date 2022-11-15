@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxIntervatEntityVocabulary()
         {
-            VocabularyName = "TaxIntervatEntity";
+            VocabularyName = "Tax Intervat Entity";
             KeyPrefix = "commonDataModel.taxintervatentity";
             KeySeparator = ".";
             Grouping = "/TaxIntervatEntity";
@@ -33,10 +33,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Location = group.Add(new VocabularyKey(nameof(Location), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesTaxBox = group.Add(new VocabularyKey(nameof(SalesTaxBox), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Amount = group.Add(new VocabularyKey(nameof(Amount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey ValidTo { get; private set; }
         public VocabularyKey IntervatId { get; private set; }
@@ -57,7 +55,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Location { get; private set; }
         public VocabularyKey SalesTaxBox { get; private set; }
         public VocabularyKey Amount { get; private set; }
-
-
     }
 }

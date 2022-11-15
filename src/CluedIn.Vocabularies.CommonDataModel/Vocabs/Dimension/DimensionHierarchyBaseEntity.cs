@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DimensionHierarchyBaseEntityVocabulary()
         {
-            VocabularyName = "DimensionHierarchyBaseEntity";
+            VocabularyName = "Dimension Hierarchy Base Entity";
             KeyPrefix = "commonDataModel.dimensionhierarchybaseentity";
             KeySeparator = ".";
             Grouping = "/DimensionHierarchyBaseEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SegmentName10 = group.Add(new VocabularyKey(nameof(SegmentName10), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SegmentName11 = group.Add(new VocabularyKey(nameof(SegmentName11), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 HierarchyStatus = group.Add(new VocabularyKey(nameof(HierarchyStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey HierarchyName { get; private set; }
         public VocabularyKey HierarchyDescription { get; private set; }
         public VocabularyKey HierarchyType { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SegmentName10 { get; private set; }
         public VocabularyKey SegmentName11 { get; private set; }
         public VocabularyKey HierarchyStatus { get; private set; }
-
-
     }
 }

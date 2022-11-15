@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BLWICountryRegionGroupEntityVocabulary()
         {
-            VocabularyName = "BLWICountryRegionGroupEntity";
+            VocabularyName = "BLWI Country Region Group Entity";
             KeyPrefix = "commonDataModel.blwicountryregiongroupentity";
             KeySeparator = ".";
             Grouping = "/BLWICountryRegionGroupEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RowNum = group.Add(new VocabularyKey(nameof(RowNum), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CountryRegionId = group.Add(new VocabularyKey(nameof(CountryRegionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CountryRegionName = group.Add(new VocabularyKey(nameof(CountryRegionName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Company { get; private set; }
         public VocabularyKey GroupID { get; private set; }
         public VocabularyKey Description { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RowNum { get; private set; }
         public VocabularyKey CountryRegionId { get; private set; }
         public VocabularyKey CountryRegionName { get; private set; }
-
-
     }
 }

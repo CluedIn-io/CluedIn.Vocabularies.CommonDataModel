@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPurchaseOrderLineCDSEntityVocabulary()
         {
-            VocabularyName = "PurchPurchaseOrderLineCDSEntity";
+            VocabularyName = "Purch Purchase Order Line CDS Entity";
             KeyPrefix = "commonDataModel.purchpurchaseorderlinecdsentity";
             KeySeparator = ".";
             Grouping = "/PurchPurchaseOrderLineCDSEntity";
@@ -61,10 +61,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DeliveryAddressDescription = group.Add(new VocabularyKey(nameof(DeliveryAddressDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DeliveryAddressName = group.Add(new VocabularyKey(nameof(DeliveryAddressName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DeliveryAddressLocationId = group.Add(new VocabularyKey(nameof(DeliveryAddressLocationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PurchaseOrderNumber { get; private set; }
         public VocabularyKey ExternalItemNumber { get; private set; }
         public VocabularyKey PurchaseOrderLineStatus { get; private set; }
@@ -113,7 +111,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DeliveryAddressDescription { get; private set; }
         public VocabularyKey DeliveryAddressName { get; private set; }
         public VocabularyKey DeliveryAddressLocationId { get; private set; }
-
-
     }
 }

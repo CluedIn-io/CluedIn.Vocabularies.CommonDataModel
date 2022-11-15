@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxPurchaseTaxTableEntityVocabulary()
         {
-            VocabularyName = "TaxPurchaseTaxTableEntity";
+            VocabularyName = "Tax Purchase Tax Table Entity";
             KeyPrefix = "commonDataModel.taxpurchasetaxtableentity";
             KeySeparator = ".";
             Grouping = "/TaxPurchaseTaxTableEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TaxLimitMin = group.Add(new VocabularyKey(nameof(TaxLimitMin), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxLimitMax = group.Add(new VocabularyKey(nameof(TaxLimitMax), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxCalcMode = group.Add(new VocabularyKey(nameof(TaxCalcMode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey CostAccount { get; private set; }
         public VocabularyKey SettleAccount { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TaxLimitMin { get; private set; }
         public VocabularyKey TaxLimitMax { get; private set; }
         public VocabularyKey TaxCalcMode { get; private set; }
-
-
     }
 }

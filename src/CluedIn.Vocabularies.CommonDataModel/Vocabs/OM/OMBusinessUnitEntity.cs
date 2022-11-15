@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public OMBusinessUnitEntityVocabulary()
         {
-            VocabularyName = "OMBusinessUnitEntity";
+            VocabularyName = "OM Business Unit Entity";
             KeyPrefix = "commonDataModel.ombusinessunitentity";
             KeySeparator = ".";
             Grouping = "/OMBusinessUnitEntity";
@@ -73,10 +73,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ElectronicLocationId = group.Add(new VocabularyKey(nameof(ElectronicLocationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DunsNumber = group.Add(new VocabularyKey(nameof(DunsNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DunsNumberRecId = group.Add(new VocabularyKey(nameof(DunsNumberRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Name { get; private set; }
         public VocabularyKey NameAlias { get; private set; }
         public VocabularyKey PartyNumber { get; private set; }
@@ -137,7 +135,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ElectronicLocationId { get; private set; }
         public VocabularyKey DunsNumber { get; private set; }
         public VocabularyKey DunsNumberRecId { get; private set; }
-
-
     }
 }

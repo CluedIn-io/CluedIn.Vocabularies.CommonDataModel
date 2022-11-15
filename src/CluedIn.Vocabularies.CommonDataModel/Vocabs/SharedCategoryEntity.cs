@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SharedCategoryEntityVocabulary()
         {
-            VocabularyName = "SharedCategoryEntity";
+            VocabularyName = "Shared Category Entity";
             KeyPrefix = "commonDataModel.sharedcategoryentity";
             KeySeparator = ".";
             Grouping = "/SharedCategoryEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 UseInProject = group.Add(new VocabularyKey(nameof(UseInProject), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UseInExpense = group.Add(new VocabularyKey(nameof(UseInExpense), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UseInProduction = group.Add(new VocabularyKey(nameof(UseInProduction), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CategoryId { get; private set; }
         public VocabularyKey CategoryName { get; private set; }
         public VocabularyKey ExpenseType { get; private set; }
         public VocabularyKey UseInProject { get; private set; }
         public VocabularyKey UseInExpense { get; private set; }
         public VocabularyKey UseInProduction { get; private set; }
-
-
     }
 }

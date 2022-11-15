@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EInvoicePropertyTypeApplicabilitySetupEntityVocabulary()
         {
-            VocabularyName = "EInvoicePropertyTypeApplicabilitySetupEntity";
+            VocabularyName = "E Invoice Property Type Applicability Setup Entity";
             KeyPrefix = "commonDataModel.einvoicepropertytypeapplicabilitysetupentity";
             KeySeparator = ".";
             Grouping = "/EInvoicePropertyTypeApplicabilitySetupEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TypeId = group.Add(new VocabularyKey(nameof(TypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PropertyType = group.Add(new VocabularyKey(nameof(PropertyType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TableName = group.Add(new VocabularyKey(nameof(TableName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RefTableId { get; private set; }
         public VocabularyKey TypeId { get; private set; }
         public VocabularyKey PropertyType { get; private set; }
         public VocabularyKey TableName { get; private set; }
-
-
     }
 }

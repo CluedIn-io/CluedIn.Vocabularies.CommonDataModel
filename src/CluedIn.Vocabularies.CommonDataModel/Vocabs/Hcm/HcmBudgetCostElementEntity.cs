@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmBudgetCostElementEntityVocabulary()
         {
-            VocabularyName = "HcmBudgetCostElementEntity";
+            VocabularyName = "Hcm Budget Cost Element Entity";
             KeyPrefix = "commonDataModel.hcmbudgetcostelemententity";
             KeySeparator = ".";
             Grouping = "/HcmBudgetCostElementEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CostElementLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(CostElementLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CostElementLedgerDimension = group.Add(new VocabularyKey(nameof(CostElementLedgerDimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CostElementName = group.Add(new VocabularyKey(nameof(CostElementName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BudgetCostType { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey ForecastPositionOverride { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CostElementLedgerDimensionDisplayValue { get; private set; }
         public VocabularyKey CostElementLedgerDimension { get; private set; }
         public VocabularyKey CostElementName { get; private set; }
-
-
     }
 }

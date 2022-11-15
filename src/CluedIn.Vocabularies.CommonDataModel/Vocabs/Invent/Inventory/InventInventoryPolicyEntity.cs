@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventInventoryPolicyEntityVocabulary()
         {
-            VocabularyName = "InventInventoryPolicyEntity";
+            VocabularyName = "Invent Inventory Policy Entity";
             KeyPrefix = "commonDataModel.inventinventorypolicyentity";
             KeySeparator = ".";
             Grouping = "/InventInventoryPolicyEntity";
@@ -31,10 +31,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BatchDispositionCode = group.Add(new VocabularyKey(nameof(BatchDispositionCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillRegistrationProvideVendorBatchDetails = group.Add(new VocabularyKey(nameof(WillRegistrationProvideVendorBatchDetails), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ApprovedVendorCheckMethod = group.Add(new VocabularyKey(nameof(ApprovedVendorCheckMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PolicyId { get; private set; }
         public VocabularyKey IsNegativePhysicalInventoryAllowed { get; private set; }
         public VocabularyKey IsNegativeFinancialInventoryAllowed { get; private set; }
@@ -53,7 +51,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey BatchDispositionCode { get; private set; }
         public VocabularyKey WillRegistrationProvideVendorBatchDetails { get; private set; }
         public VocabularyKey ApprovedVendorCheckMethod { get; private set; }
-
-
     }
 }

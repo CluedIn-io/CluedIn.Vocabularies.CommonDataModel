@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SystemSecuritySubRoleEntityVocabulary()
         {
-            VocabularyName = "SystemSecuritySubRoleEntity";
+            VocabularyName = "System Security Sub Role Entity";
             KeyPrefix = "commonDataModel.systemsecuritysubroleentity";
             KeySeparator = ".";
             Grouping = "/SystemSecuritySubRoleEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SecurityRoleName = group.Add(new VocabularyKey(nameof(SecurityRoleName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SecuritySubRoleName = group.Add(new VocabularyKey(nameof(SecuritySubRoleName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SecuritySubRoleIdentifier = group.Add(new VocabularyKey(nameof(SecuritySubRoleIdentifier), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SecurityRoleIdentifier { get; private set; }
         public VocabularyKey SecurityRoleName { get; private set; }
         public VocabularyKey SecuritySubRoleName { get; private set; }
         public VocabularyKey SecuritySubRoleIdentifier { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailDefaultReportingHierarchyOrganizationEntityVocabulary()
         {
-            VocabularyName = "RetailDefaultReportingHierarchyOrganizationEntity";
+            VocabularyName = "Retail Default Reporting Hierarchy Organization Entity";
             KeyPrefix = "commonDataModel.retaildefaultreportinghierarchyorganizationentity";
             KeySeparator = ".";
             Grouping = "/RetailDefaultReportingHierarchyOrganizationEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OrganizationRecordId = group.Add(new VocabularyKey(nameof(OrganizationRecordId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidFrom = group.Add(new VocabularyKey(nameof(ValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidTo = group.Add(new VocabularyKey(nameof(ValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey OrganizationName { get; private set; }
         public VocabularyKey OrganizationNumber { get; private set; }
         public VocabularyKey ParentOrganizationRecordId { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OrganizationRecordId { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey ValidTo { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationTransitTimeEngineDetailMetadataEntityVocabulary()
         {
-            VocabularyName = "TMSTransportationTransitTimeEngineDetailMetadataEntity";
+            VocabularyName = "TMS Transportation Transit Time Engine Detail Metadata Entity";
             KeyPrefix = "commonDataModel.tmstransportationtransittimeenginedetailmetadataentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationTransitTimeEngineDetailMetadataEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FieldName = group.Add(new VocabularyKey(nameof(FieldName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FieldSequenceNumber = group.Add(new VocabularyKey(nameof(FieldSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransportationTransitTimeEngineId = group.Add(new VocabularyKey(nameof(TransportationTransitTimeEngineId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FieldLookupType { get; private set; }
         public VocabularyKey IsMandatoryField { get; private set; }
         public VocabularyKey FieldName { get; private set; }
         public VocabularyKey FieldSequenceNumber { get; private set; }
         public VocabularyKey TransportationTransitTimeEngineId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxIntgrExportDocumentConfirmEnityVocabulary()
         {
-            VocabularyName = "TaxIntgrExportDocumentConfirmEnity";
+            VocabularyName = "Tax Intgr Export Document Confirm Enity";
             KeyPrefix = "commonDataModel.taxintgrexportdocumentconfirmenity";
             KeySeparator = ".";
             Grouping = "/TaxIntgrExportDocumentConfirmEnity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ExternalInvoiceId = group.Add(new VocabularyKey(nameof(ExternalInvoiceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BatchName = group.Add(new VocabularyKey(nameof(BatchName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Position = group.Add(new VocabularyKey(nameof(Position), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ExternalInvoiceId { get; private set; }
         public VocabularyKey BatchName { get; private set; }
         public VocabularyKey Position { get; private set; }
-
-
     }
 }

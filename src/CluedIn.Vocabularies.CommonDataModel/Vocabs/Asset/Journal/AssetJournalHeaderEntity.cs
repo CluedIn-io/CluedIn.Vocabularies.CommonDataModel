@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetJournalHeaderEntityVocabulary()
         {
-            VocabularyName = "AssetJournalHeaderEntity";
+            VocabularyName = "Asset Journal Header Entity";
             KeyPrefix = "commonDataModel.assetjournalheaderentity";
             KeySeparator = ".";
             Grouping = "/AssetJournalHeaderEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AccountingCurrency = group.Add(new VocabularyKey(nameof(AccountingCurrency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReportingCurrency = group.Add(new VocabularyKey(nameof(ReportingCurrency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PostingLayer { get; private set; }
         public VocabularyKey JournalNameId { get; private set; }
         public VocabularyKey JournalBatchNumber { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Description { get; private set; }
         public VocabularyKey AccountingCurrency { get; private set; }
         public VocabularyKey ReportingCurrency { get; private set; }
-
-
     }
 }

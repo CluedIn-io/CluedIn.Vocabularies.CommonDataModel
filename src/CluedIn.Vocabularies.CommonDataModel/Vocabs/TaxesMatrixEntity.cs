@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxesMatrixEntityVocabulary()
         {
-            VocabularyName = "TaxesMatrixEntity";
+            VocabularyName = "Taxes Matrix Entity";
             KeyPrefix = "commonDataModel.taxesmatrixentity";
             KeySeparator = ".";
             Grouping = "/TaxesMatrixEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ItemSalesTaxGroup = group.Add(new VocabularyKey(nameof(ItemSalesTaxGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CFOPGroupId = group.Add(new VocabularyKey(nameof(CFOPGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FiscalEstablishmentGroupId = group.Add(new VocabularyKey(nameof(FiscalEstablishmentGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountCode { get; private set; }
         public VocabularyKey AccountRelation { get; private set; }
         public VocabularyKey CFOPGroupRecId { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ItemSalesTaxGroup { get; private set; }
         public VocabularyKey CFOPGroupId { get; private set; }
         public VocabularyKey FiscalEstablishmentGroupId { get; private set; }
-
-
     }
 }

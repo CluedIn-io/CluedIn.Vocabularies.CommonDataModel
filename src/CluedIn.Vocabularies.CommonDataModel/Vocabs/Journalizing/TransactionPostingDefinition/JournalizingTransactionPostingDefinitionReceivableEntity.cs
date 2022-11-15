@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JournalizingTransactionPostingDefinitionReceivableEntityVocabulary()
         {
-            VocabularyName = "JournalizingTransactionPostingDefinitionReceivableEntity";
+            VocabularyName = "Journalizing Transaction Posting Definition Receivable Entity";
             KeyPrefix = "commonDataModel.journalizingtransactionpostingdefinitionreceivableentity";
             KeySeparator = ".";
             Grouping = "/JournalizingTransactionPostingDefinitionReceivableEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PostingDefinition = group.Add(new VocabularyKey(nameof(PostingDefinition), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BillingClassification = group.Add(new VocabularyKey(nameof(BillingClassification), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BillingCode = group.Add(new VocabularyKey(nameof(BillingCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CustBillingClassificationRecId { get; private set; }
         public VocabularyKey CustBillingCodeRecId { get; private set; }
         public VocabularyKey CustomerTransactionType { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PostingDefinition { get; private set; }
         public VocabularyKey BillingClassification { get; private set; }
         public VocabularyKey BillingCode { get; private set; }
-
-
     }
 }

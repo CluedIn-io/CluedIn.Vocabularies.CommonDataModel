@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PSNTreasurerFundReportParametersEntityVocabulary()
         {
-            VocabularyName = "PSNTreasurerFundReportParametersEntity";
+            VocabularyName = "PSN Treasurer Fund Report Parameters Entity";
             KeyPrefix = "commonDataModel.psntreasurerfundreportparametersentity";
             KeySeparator = ".";
             Grouping = "/PSNTreasurerFundReportParametersEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SuppressZeroAmountAccounts = group.Add(new VocabularyKey(nameof(SuppressZeroAmountAccounts), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SuppressMainAccount = group.Add(new VocabularyKey(nameof(SuppressMainAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ID = group.Add(new VocabularyKey(nameof(ID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TreasurerDimensionFocus { get; private set; }
         public VocabularyKey GroupByFundType { get; private set; }
         public VocabularyKey IncludeFundName { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SuppressZeroAmountAccounts { get; private set; }
         public VocabularyKey SuppressMainAccount { get; private set; }
         public VocabularyKey ID { get; private set; }
-
-
     }
 }

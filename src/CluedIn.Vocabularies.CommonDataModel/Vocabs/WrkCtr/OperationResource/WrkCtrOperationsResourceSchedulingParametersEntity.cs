@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WrkCtrOperationsResourceSchedulingParametersEntityVocabulary()
         {
-            VocabularyName = "WrkCtrOperationsResourceSchedulingParametersEntity";
+            VocabularyName = "Wrk Ctr Operations Resource Scheduling Parameters Entity";
             KeyPrefix = "commonDataModel.wrkctroperationsresourceschedulingparametersentity";
             KeySeparator = ".";
             Grouping = "/WrkCtrOperationsResourceSchedulingParametersEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WillReschedulingPreserveProductionUnit = group.Add(new VocabularyKey(nameof(WillReschedulingPreserveProductionUnit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillReschedulingPreserveWarehouse = group.Add(new VocabularyKey(nameof(WillReschedulingPreserveWarehouse), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PrimaryOperationsResourceSelectionMethod = group.Add(new VocabularyKey(nameof(PrimaryOperationsResourceSelectionMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ParameterUsageMethod { get; private set; }
         public VocabularyKey IsSchedulingSequenceTimeoutEnabled { get; private set; }
         public VocabularyKey SchedulingSequenceTimeoutSeconds { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WillReschedulingPreserveProductionUnit { get; private set; }
         public VocabularyKey WillReschedulingPreserveWarehouse { get; private set; }
         public VocabularyKey PrimaryOperationsResourceSelectionMethod { get; private set; }
-
-
     }
 }

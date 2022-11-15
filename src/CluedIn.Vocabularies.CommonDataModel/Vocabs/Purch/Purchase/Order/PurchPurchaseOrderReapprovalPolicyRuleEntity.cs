@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPurchaseOrderReapprovalPolicyRuleEntityVocabulary()
         {
-            VocabularyName = "PurchPurchaseOrderReapprovalPolicyRuleEntity";
+            VocabularyName = "Purch Purchase Order Reapproval Policy Rule Entity";
             KeyPrefix = "commonDataModel.purchpurchaseorderreapprovalpolicyruleentity";
             KeySeparator = ".";
             Grouping = "/PurchPurchaseOrderReapprovalPolicyRuleEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ReapprovalFieldName = group.Add(new VocabularyKey(nameof(ReapprovalFieldName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReapprovalFieldId = group.Add(new VocabularyKey(nameof(ReapprovalFieldId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReapprovalTableId = group.Add(new VocabularyKey(nameof(ReapprovalTableId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey ValidTo { get; private set; }
         public VocabularyKey PurchasingPolicyName { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ReapprovalFieldName { get; private set; }
         public VocabularyKey ReapprovalFieldId { get; private set; }
         public VocabularyKey ReapprovalTableId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResProductEntityIdentifierScopeEntityVocabulary()
         {
-            VocabularyName = "EcoResProductEntityIdentifierScopeEntity";
+            VocabularyName = "Eco Res Product Entity Identifier Scope Entity";
             KeyPrefix = "commonDataModel.ecoresproductentityidentifierscopeentity";
             KeySeparator = ".";
             Grouping = "/EcoResProductEntityIdentifierScopeEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CustomerGroup = group.Add(new VocabularyKey(nameof(CustomerGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorAccount = group.Add(new VocabularyKey(nameof(VendorAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorGroup = group.Add(new VocabularyKey(nameof(VendorGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LegalEntity { get; private set; }
         public VocabularyKey Code { get; private set; }
         public VocabularyKey CodeId { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CustomerGroup { get; private set; }
         public VocabularyKey VendorAccount { get; private set; }
         public VocabularyKey VendorGroup { get; private set; }
-
-
     }
 }

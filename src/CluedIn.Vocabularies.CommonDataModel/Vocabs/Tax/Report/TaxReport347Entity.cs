@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxReport347EntityVocabulary()
         {
-            VocabularyName = "TaxReport347Entity";
+            VocabularyName = "Tax Report 347 Entity";
             KeyPrefix = "commonDataModel.taxreport347entity";
             KeySeparator = ".";
             Grouping = "/TaxReport347Entity";
@@ -71,10 +71,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Tenancy = group.Add(new VocabularyKey(nameof(Tenancy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Representative = group.Add(new VocabularyKey(nameof(Representative), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReverseCharge = group.Add(new VocabularyKey(nameof(ReverseCharge), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Contact { get; private set; }
         public VocabularyKey DocumentNumOfTheDeclaration { get; private set; }
         public VocabularyKey MinimumAmount { get; private set; }
@@ -133,7 +131,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Tenancy { get; private set; }
         public VocabularyKey Representative { get; private set; }
         public VocabularyKey ReverseCharge { get; private set; }
-
-
     }
 }

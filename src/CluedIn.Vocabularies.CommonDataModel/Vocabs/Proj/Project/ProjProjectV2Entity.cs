@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjProjectV2EntityVocabulary()
         {
-            VocabularyName = "ProjProjectV2Entity";
+            VocabularyName = "Proj Project V2 Entity";
             KeyPrefix = "commonDataModel.projprojectv2entity";
             KeySeparator = ".";
             Grouping = "/ProjProjectV2Entity";
@@ -88,10 +88,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SortingField2 = group.Add(new VocabularyKey(nameof(SortingField2), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SortingField3 = group.Add(new VocabularyKey(nameof(SortingField3), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IntegrationSourceDataId = group.Add(new VocabularyKey(nameof(IntegrationSourceDataId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProjectId { get; private set; }
         public VocabularyKey AlternateProjectId { get; private set; }
         public VocabularyKey BankDocumentType { get; private set; }
@@ -167,7 +165,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SortingField2 { get; private set; }
         public VocabularyKey SortingField3 { get; private set; }
         public VocabularyKey IntegrationSourceDataId { get; private set; }
-
-
     }
 }

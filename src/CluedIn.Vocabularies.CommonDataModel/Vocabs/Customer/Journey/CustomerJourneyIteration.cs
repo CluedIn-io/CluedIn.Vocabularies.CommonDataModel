@@ -6,44 +6,40 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustomerJourneyIterationVocabulary()
         {
-            VocabularyName = "CustomerJourneyIteration";
+            VocabularyName = "Customer Journey Iteration";
             KeyPrefix = "commonDataModel.customerjourneyiteration";
             KeySeparator = ".";
             Grouping = "/CustomerJourneyIteration";
 
             AddGroup("CustomerJourneyIteration Details", group =>
             {
-                customerJourneyId = group.Add(new VocabularyKey(nameof(customerJourneyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                customerJourneyIterationId = group.Add(new VocabularyKey(nameof(customerJourneyIterationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                designerState = group.Add(new VocabularyKey(nameof(designerState), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                endDate = group.Add(new VocabularyKey(nameof(endDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                iterationNumber = group.Add(new VocabularyKey(nameof(iterationNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                startDate = group.Add(new VocabularyKey(nameof(startDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                workflowDefinition = group.Add(new VocabularyKey(nameof(workflowDefinition), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdName = group.Add(new VocabularyKey(nameof(ownerIdName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdType = group.Add(new VocabularyKey(nameof(ownerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdYomiName = group.Add(new VocabularyKey(nameof(ownerIdYomiName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                CustomerJourneyId = group.Add(new VocabularyKey(nameof(CustomerJourneyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CustomerJourneyIterationId = group.Add(new VocabularyKey(nameof(CustomerJourneyIterationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DesignerState = group.Add(new VocabularyKey(nameof(DesignerState), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EndDate = group.Add(new VocabularyKey(nameof(EndDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IterationNumber = group.Add(new VocabularyKey(nameof(IterationNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StartDate = group.Add(new VocabularyKey(nameof(StartDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WorkflowDefinition = group.Add(new VocabularyKey(nameof(WorkflowDefinition), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdName = group.Add(new VocabularyKey(nameof(OwnerIdName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdType = group.Add(new VocabularyKey(nameof(OwnerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdYomiName = group.Add(new VocabularyKey(nameof(OwnerIdYomiName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey customerJourneyId { get; private set; }
-        public VocabularyKey customerJourneyIterationId { get; private set; }
-        public VocabularyKey designerState { get; private set; }
-        public VocabularyKey endDate { get; private set; }
-        public VocabularyKey iterationNumber { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey startDate { get; private set; }
-        public VocabularyKey workflowDefinition { get; private set; }
-        public VocabularyKey ownerIdName { get; private set; }
-        public VocabularyKey ownerIdType { get; private set; }
-        public VocabularyKey ownerIdYomiName { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey CustomerJourneyId { get; private set; }
+        public VocabularyKey CustomerJourneyIterationId { get; private set; }
+        public VocabularyKey DesignerState { get; private set; }
+        public VocabularyKey EndDate { get; private set; }
+        public VocabularyKey IterationNumber { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey StartDate { get; private set; }
+        public VocabularyKey WorkflowDefinition { get; private set; }
+        public VocabularyKey OwnerIdName { get; private set; }
+        public VocabularyKey OwnerIdType { get; private set; }
+        public VocabularyKey OwnerIdYomiName { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

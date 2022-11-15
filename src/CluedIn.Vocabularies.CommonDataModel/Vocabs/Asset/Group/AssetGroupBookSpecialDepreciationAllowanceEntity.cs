@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetGroupBookSpecialDepreciationAllowanceEntityVocabulary()
         {
-            VocabularyName = "AssetGroupBookSpecialDepreciationAllowanceEntity";
+            VocabularyName = "Asset Group Book Special Depreciation Allowance Entity";
             KeyPrefix = "commonDataModel.assetgroupbookspecialdepreciationallowanceentity";
             KeySeparator = ".";
             Grouping = "/AssetGroupBookSpecialDepreciationAllowanceEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Priority = group.Add(new VocabularyKey(nameof(Priority), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Amount = group.Add(new VocabularyKey(nameof(Amount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Percentage = group.Add(new VocabularyKey(nameof(Percentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey GroupId { get; private set; }
         public VocabularyKey BookId { get; private set; }
         public VocabularyKey SpecialDepreciationAllowanceId { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Priority { get; private set; }
         public VocabularyKey Amount { get; private set; }
         public VocabularyKey Percentage { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResProductGlobalTradeItemNumberAssignmentV2EntityVocabulary()
         {
-            VocabularyName = "EcoResProductGlobalTradeItemNumberAssignmentV2Entity";
+            VocabularyName = "Eco Res Product Global Trade Item Number Assignment V2 Entity";
             KeyPrefix = "commonDataModel.ecoresproductglobaltradeitemnumberassignmentv2entity";
             KeySeparator = ".";
             Grouping = "/EcoResProductGlobalTradeItemNumberAssignmentV2Entity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 GlobalTradeItemNumberCodeType = group.Add(new VocabularyKey(nameof(GlobalTradeItemNumberCodeType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GlobalTradeItemNumber = group.Add(new VocabularyKey(nameof(GlobalTradeItemNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GlobalTradeItemNumberDescription = group.Add(new VocabularyKey(nameof(GlobalTradeItemNumberDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductNumber { get; private set; }
         public VocabularyKey ProductConfigurationId { get; private set; }
         public VocabularyKey ProductSizeId { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey GlobalTradeItemNumberCodeType { get; private set; }
         public VocabularyKey GlobalTradeItemNumber { get; private set; }
         public VocabularyKey GlobalTradeItemNumberDescription { get; private set; }
-
-
     }
 }

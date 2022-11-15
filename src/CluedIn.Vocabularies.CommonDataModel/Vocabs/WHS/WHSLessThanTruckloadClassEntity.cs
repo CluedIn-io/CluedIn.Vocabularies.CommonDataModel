@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSLessThanTruckloadClassEntityVocabulary()
         {
-            VocabularyName = "WHSLessThanTruckloadClassEntity";
+            VocabularyName = "WHS Less Than Truckload Class Entity";
             KeyPrefix = "commonDataModel.whslessthantruckloadclassentity";
             KeySeparator = ".";
             Grouping = "/WHSLessThanTruckloadClassEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Class = group.Add(new VocabularyKey(nameof(Class), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ClassCode = group.Add(new VocabularyKey(nameof(ClassCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ClassName = group.Add(new VocabularyKey(nameof(ClassName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Class { get; private set; }
         public VocabularyKey ClassCode { get; private set; }
         public VocabularyKey ClassName { get; private set; }
-
-
     }
 }

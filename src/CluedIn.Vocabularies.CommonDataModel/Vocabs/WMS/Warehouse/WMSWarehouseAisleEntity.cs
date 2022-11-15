@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WMSWarehouseAisleEntityVocabulary()
         {
-            VocabularyName = "WMSWarehouseAisleEntity";
+            VocabularyName = "WMS Warehouse Aisle Entity";
             KeyPrefix = "commonDataModel.wmswarehouseaisleentity";
             KeySeparator = ".";
             Grouping = "/WMSWarehouseAisleEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AisleName = group.Add(new VocabularyKey(nameof(AisleName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ManualStartingSortOrderCode = group.Add(new VocabularyKey(nameof(ManualStartingSortOrderCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsSortOrderCodeAssignedDescending = group.Add(new VocabularyKey(nameof(IsSortOrderCodeAssignedDescending), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AisleId { get; private set; }
         public VocabularyKey AisleNumber { get; private set; }
         public VocabularyKey WarehouseId { get; private set; }
         public VocabularyKey AisleName { get; private set; }
         public VocabularyKey ManualStartingSortOrderCode { get; private set; }
         public VocabularyKey IsSortOrderCodeAssignedDescending { get; private set; }
-
-
     }
 }

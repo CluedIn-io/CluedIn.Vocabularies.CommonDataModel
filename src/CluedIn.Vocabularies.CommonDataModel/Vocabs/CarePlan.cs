@@ -6,94 +6,90 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CarePlanVocabulary()
         {
-            VocabularyName = "CarePlan";
+            VocabularyName = "Care Plan";
             KeyPrefix = "commonDataModel.careplan";
             KeySeparator = ".";
             Grouping = "/CarePlan";
 
             AddGroup("CarePlan Details", group =>
             {
-                createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
-                createdBy = group.Add(new VocabularyKey(nameof(createdBy), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                modifiedOn = group.Add(new VocabularyKey(nameof(modifiedOn), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
-                modifiedBy = group.Add(new VocabularyKey(nameof(modifiedBy), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                createdOnBehalfBy = group.Add(new VocabularyKey(nameof(createdOnBehalfBy), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                modifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(modifiedOnBehalfBy), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                overriddenCreatedOn = group.Add(new VocabularyKey(nameof(overriddenCreatedOn), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
-                importSequenceNumber = group.Add(new VocabularyKey(nameof(importSequenceNumber), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
-                ownerId = group.Add(new VocabularyKey(nameof(ownerId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                ownerIdType = group.Add(new VocabularyKey(nameof(ownerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                owningBusinessUnit = group.Add(new VocabularyKey(nameof(owningBusinessUnit), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                owningUser = group.Add(new VocabularyKey(nameof(owningUser), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                owningTeam = group.Add(new VocabularyKey(nameof(owningTeam), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                timeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(timeZoneRuleVersionNumber), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
+                CreatedBy = group.Add(new VocabularyKey(nameof(CreatedBy), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
+                ModifiedBy = group.Add(new VocabularyKey(nameof(ModifiedBy), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                CreatedOnBehalfBy = group.Add(new VocabularyKey(nameof(CreatedOnBehalfBy), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                ModifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(ModifiedOnBehalfBy), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
+                ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                OwnerId = group.Add(new VocabularyKey(nameof(OwnerId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                OwnerIdType = group.Add(new VocabularyKey(nameof(OwnerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwningBusinessUnit = group.Add(new VocabularyKey(nameof(OwningBusinessUnit), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                OwningUser = group.Add(new VocabularyKey(nameof(OwningUser), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                OwningTeam = group.Add(new VocabularyKey(nameof(OwningTeam), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
                 UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
-                versionNumber = group.Add(new VocabularyKey(nameof(versionNumber), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
-                carePlanId = group.Add(new VocabularyKey(nameof(carePlanId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
-                stateCode_display = group.Add(new VocabularyKey(nameof(stateCode_display), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
-                statusCode_display = group.Add(new VocabularyKey(nameof(statusCode_display), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                title = group.Add(new VocabularyKey(nameof(title), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                carePlanIdentifier = group.Add(new VocabularyKey(nameof(carePlanIdentifier), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                contextType = group.Add(new VocabularyKey(nameof(contextType), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
-                contextType_display = group.Add(new VocabularyKey(nameof(contextType_display), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                encounterIdentifier = group.Add(new VocabularyKey(nameof(encounterIdentifier), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                episodeOfCare = group.Add(new VocabularyKey(nameof(episodeOfCare), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                groupIdentifier = group.Add(new VocabularyKey(nameof(groupIdentifier), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                patientIdentifier = group.Add(new VocabularyKey(nameof(patientIdentifier), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
-                planDescription = group.Add(new VocabularyKey(nameof(planDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                planEndDate = group.Add(new VocabularyKey(nameof(planEndDate), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
-                planIntent = group.Add(new VocabularyKey(nameof(planIntent), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
-                planIntent_display = group.Add(new VocabularyKey(nameof(planIntent_display), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                planStartDate = group.Add(new VocabularyKey(nameof(planStartDate), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
-                planStatus = group.Add(new VocabularyKey(nameof(planStatus), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
-                planStatus_display = group.Add(new VocabularyKey(nameof(planStatus_display), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                subjectType = group.Add(new VocabularyKey(nameof(subjectType), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
-                subjectType_display = group.Add(new VocabularyKey(nameof(subjectType_display), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                CarePlanId = group.Add(new VocabularyKey(nameof(CarePlanId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                StateCode_display = group.Add(new VocabularyKey(nameof(StateCode_display), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                StatusCode_display = group.Add(new VocabularyKey(nameof(StatusCode_display), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Title = group.Add(new VocabularyKey(nameof(Title), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CarePlanIdentifier = group.Add(new VocabularyKey(nameof(CarePlanIdentifier), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ContextType = group.Add(new VocabularyKey(nameof(ContextType), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                ContextType_display = group.Add(new VocabularyKey(nameof(ContextType_display), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EncounterIdentifier = group.Add(new VocabularyKey(nameof(EncounterIdentifier), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                EpisodeOfCare = group.Add(new VocabularyKey(nameof(EpisodeOfCare), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                GroupIdentifier = group.Add(new VocabularyKey(nameof(GroupIdentifier), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                PatientIdentifier = group.Add(new VocabularyKey(nameof(PatientIdentifier), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                PlanDescription = group.Add(new VocabularyKey(nameof(PlanDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PlanEndDate = group.Add(new VocabularyKey(nameof(PlanEndDate), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
+                PlanIntent = group.Add(new VocabularyKey(nameof(PlanIntent), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                PlanIntent_display = group.Add(new VocabularyKey(nameof(PlanIntent_display), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PlanStartDate = group.Add(new VocabularyKey(nameof(PlanStartDate), VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
+                PlanStatus = group.Add(new VocabularyKey(nameof(PlanStatus), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                PlanStatus_display = group.Add(new VocabularyKey(nameof(PlanStatus_display), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SubjectType = group.Add(new VocabularyKey(nameof(SubjectType), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                SubjectType_display = group.Add(new VocabularyKey(nameof(SubjectType_display), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey createdOn { get; private set; }
-        public VocabularyKey createdBy { get; private set; }
-        public VocabularyKey modifiedOn { get; private set; }
-        public VocabularyKey modifiedBy { get; private set; }
-        public VocabularyKey createdOnBehalfBy { get; private set; }
-        public VocabularyKey modifiedOnBehalfBy { get; private set; }
-        public VocabularyKey overriddenCreatedOn { get; private set; }
-        public VocabularyKey importSequenceNumber { get; private set; }
-        public VocabularyKey ownerId { get; private set; }
-        public VocabularyKey ownerIdType { get; private set; }
-        public VocabularyKey owningBusinessUnit { get; private set; }
-        public VocabularyKey owningUser { get; private set; }
-        public VocabularyKey owningTeam { get; private set; }
-        public VocabularyKey timeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey CreatedBy { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey ModifiedBy { get; private set; }
+        public VocabularyKey CreatedOnBehalfBy { get; private set; }
+        public VocabularyKey ModifiedOnBehalfBy { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey OwnerId { get; private set; }
+        public VocabularyKey OwnerIdType { get; private set; }
+        public VocabularyKey OwningBusinessUnit { get; private set; }
+        public VocabularyKey OwningUser { get; private set; }
+        public VocabularyKey OwningTeam { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey versionNumber { get; private set; }
-        public VocabularyKey carePlanId { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey stateCode_display { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-        public VocabularyKey statusCode_display { get; private set; }
-        public VocabularyKey title { get; private set; }
-        public VocabularyKey carePlanIdentifier { get; private set; }
-        public VocabularyKey contextType { get; private set; }
-        public VocabularyKey contextType_display { get; private set; }
-        public VocabularyKey encounterIdentifier { get; private set; }
-        public VocabularyKey episodeOfCare { get; private set; }
-        public VocabularyKey groupIdentifier { get; private set; }
-        public VocabularyKey patientIdentifier { get; private set; }
-        public VocabularyKey planDescription { get; private set; }
-        public VocabularyKey planEndDate { get; private set; }
-        public VocabularyKey planIntent { get; private set; }
-        public VocabularyKey planIntent_display { get; private set; }
-        public VocabularyKey planStartDate { get; private set; }
-        public VocabularyKey planStatus { get; private set; }
-        public VocabularyKey planStatus_display { get; private set; }
-        public VocabularyKey subjectType { get; private set; }
-        public VocabularyKey subjectType_display { get; private set; }
-
-
+        public VocabularyKey VersionNumber { get; private set; }
+        public VocabularyKey CarePlanId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StateCode_display { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey StatusCode_display { get; private set; }
+        public VocabularyKey Title { get; private set; }
+        public VocabularyKey CarePlanIdentifier { get; private set; }
+        public VocabularyKey ContextType { get; private set; }
+        public VocabularyKey ContextType_display { get; private set; }
+        public VocabularyKey EncounterIdentifier { get; private set; }
+        public VocabularyKey EpisodeOfCare { get; private set; }
+        public VocabularyKey GroupIdentifier { get; private set; }
+        public VocabularyKey PatientIdentifier { get; private set; }
+        public VocabularyKey PlanDescription { get; private set; }
+        public VocabularyKey PlanEndDate { get; private set; }
+        public VocabularyKey PlanIntent { get; private set; }
+        public VocabularyKey PlanIntent_display { get; private set; }
+        public VocabularyKey PlanStartDate { get; private set; }
+        public VocabularyKey PlanStatus { get; private set; }
+        public VocabularyKey PlanStatus_display { get; private set; }
+        public VocabularyKey SubjectType { get; private set; }
+        public VocabularyKey SubjectType_display { get; private set; }
     }
 }

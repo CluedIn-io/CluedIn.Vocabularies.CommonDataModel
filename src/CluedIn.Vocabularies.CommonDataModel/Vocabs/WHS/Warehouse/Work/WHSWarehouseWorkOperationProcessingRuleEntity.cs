@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseWorkOperationProcessingRuleEntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseWorkOperationProcessingRuleEntity";
+            VocabularyName = "WHS Warehouse Work Operation Processing Rule Entity";
             KeyPrefix = "commonDataModel.whswarehouseworkoperationprocessingruleentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseWorkOperationProcessingRuleEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProcessingMethod = group.Add(new VocabularyKey(nameof(ProcessingMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DeferredProcessingThreshold = group.Add(new VocabularyKey(nameof(DeferredProcessingThreshold), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DeferredProcessingBatchGroupId = group.Add(new VocabularyKey(nameof(DeferredProcessingBatchGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WarehouseWorkProcessingPolicyName { get; private set; }
         public VocabularyKey WorkOrderType { get; private set; }
         public VocabularyKey OperationType { get; private set; }
         public VocabularyKey ProcessingMethod { get; private set; }
         public VocabularyKey DeferredProcessingThreshold { get; private set; }
         public VocabularyKey DeferredProcessingBatchGroupId { get; private set; }
-
-
     }
 }

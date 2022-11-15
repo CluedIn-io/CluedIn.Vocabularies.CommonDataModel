@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetControlRuleEntityVocabulary()
         {
-            VocabularyName = "BudgetControlRuleEntity";
+            VocabularyName = "Budget Control Rule Entity";
             KeyPrefix = "commonDataModel.budgetcontrolruleentity";
             KeySeparator = ".";
             Grouping = "/BudgetControlRuleEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BudgetControlInterval = group.Add(new VocabularyKey(nameof(BudgetControlInterval), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BudgetManager = group.Add(new VocabularyKey(nameof(BudgetManager), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BudgetThresholdPercent = group.Add(new VocabularyKey(nameof(BudgetThresholdPercent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LegalEntityId { get; private set; }
         public VocabularyKey Status { get; private set; }
         public VocabularyKey InUseBy { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey BudgetControlInterval { get; private set; }
         public VocabularyKey BudgetManager { get; private set; }
         public VocabularyKey BudgetThresholdPercent { get; private set; }
-
-
     }
 }

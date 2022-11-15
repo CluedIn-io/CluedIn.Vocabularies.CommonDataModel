@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetReservationTypeEntity_PSNVocabulary()
         {
-            VocabularyName = "BudgetReservationTypeEntity_PSN";
+            VocabularyName = "Budget Reservation Type Entity _PSN";
             KeyPrefix = "commonDataModel.budgetreservationtypeentity_psn";
             KeySeparator = ".";
             Grouping = "/BudgetReservationTypeEntity_PSN";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Workflow = group.Add(new VocabularyKey(nameof(Workflow), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CompanyId = group.Add(new VocabularyKey(nameof(CompanyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NumberSequenceTableRecId = group.Add(new VocabularyKey(nameof(NumberSequenceTableRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey ReservationType { get; private set; }
         public VocabularyKey NumberSequenceCode { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Workflow { get; private set; }
         public VocabularyKey CompanyId { get; private set; }
         public VocabularyKey NumberSequenceTableRecId { get; private set; }
-
-
     }
 }

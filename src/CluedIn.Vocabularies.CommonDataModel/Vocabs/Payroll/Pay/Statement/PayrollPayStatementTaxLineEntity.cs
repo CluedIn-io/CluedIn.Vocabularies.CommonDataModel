@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollPayStatementTaxLineEntityVocabulary()
         {
-            VocabularyName = "PayrollPayStatementTaxLineEntity";
+            VocabularyName = "Payroll Pay Statement Tax Line Entity";
             KeyPrefix = "commonDataModel.payrollpaystatementtaxlineentity";
             KeySeparator = ".";
             Grouping = "/PayrollPayStatementTaxLineEntity";
@@ -37,10 +37,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ReversedPayStatementNumber = group.Add(new VocabularyKey(nameof(ReversedPayStatementNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxCodeId = group.Add(new VocabularyKey(nameof(TaxCodeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxCodeCountryRegionId = group.Add(new VocabularyKey(nameof(TaxCodeCountryRegionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AmountInTransactionCurrency { get; private set; }
         public VocabularyKey AccountingDate { get; private set; }
         public VocabularyKey TemplateId { get; private set; }
@@ -65,7 +63,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ReversedPayStatementNumber { get; private set; }
         public VocabularyKey TaxCodeId { get; private set; }
         public VocabularyKey TaxCodeCountryRegionId { get; private set; }
-
-
     }
 }

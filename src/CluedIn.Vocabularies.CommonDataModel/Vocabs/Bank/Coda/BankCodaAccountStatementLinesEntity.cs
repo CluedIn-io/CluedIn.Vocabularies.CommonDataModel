@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankCodaAccountStatementLinesEntityVocabulary()
         {
-            VocabularyName = "BankCodaAccountStatementLinesEntity";
+            VocabularyName = "Bank Coda Account Statement Lines Entity";
             KeyPrefix = "commonDataModel.bankcodaaccountstatementlinesentity";
             KeySeparator = ".";
             Grouping = "/BankCodaAccountStatementLinesEntity";
@@ -56,10 +56,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BankCodaAccountStatementLines1_LineId = group.Add(new VocabularyKey(nameof(BankCodaAccountStatementLines1_LineId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AccountDisplayValue = group.Add(new VocabularyKey(nameof(AccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GlobalisationId = group.Add(new VocabularyKey(nameof(GlobalisationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BankAccount { get; private set; }
         public VocabularyKey BankStatement { get; private set; }
         public VocabularyKey AccountType { get; private set; }
@@ -103,7 +101,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey BankCodaAccountStatementLines1_LineId { get; private set; }
         public VocabularyKey AccountDisplayValue { get; private set; }
         public VocabularyKey GlobalisationId { get; private set; }
-
-
     }
 }

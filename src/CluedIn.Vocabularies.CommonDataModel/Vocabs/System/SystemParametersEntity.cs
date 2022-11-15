@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SystemParametersEntityVocabulary()
         {
-            VocabularyName = "SystemParametersEntity";
+            VocabularyName = "System Parameters Entity";
             KeyPrefix = "commonDataModel.systemparametersentity";
             KeySeparator = ".";
             Grouping = "/SystemParametersEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SystemCurrencyCode = group.Add(new VocabularyKey(nameof(SystemCurrencyCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SystemExchangeRateType = group.Add(new VocabularyKey(nameof(SystemExchangeRateType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SystemExchangeRateTypeId = group.Add(new VocabularyKey(nameof(SystemExchangeRateTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ID { get; private set; }
         public VocabularyKey MaximumRowsOfSSRSReports { get; private set; }
         public VocabularyKey SystemLanguage { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SystemCurrencyCode { get; private set; }
         public VocabularyKey SystemExchangeRateType { get; private set; }
         public VocabularyKey SystemExchangeRateTypeId { get; private set; }
-
-
     }
 }

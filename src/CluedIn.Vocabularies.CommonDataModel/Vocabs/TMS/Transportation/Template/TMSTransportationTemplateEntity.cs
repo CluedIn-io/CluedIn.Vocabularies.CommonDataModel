@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationTemplateEntityVocabulary()
         {
-            VocabularyName = "TMSTransportationTemplateEntity";
+            VocabularyName = "TMS Transportation Template Entity";
             KeyPrefix = "commonDataModel.tmstransportationtemplateentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationTemplateEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TemplateDescription = group.Add(new VocabularyKey(nameof(TemplateDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ShipperShippingCarrierServiceId = group.Add(new VocabularyKey(nameof(ShipperShippingCarrierServiceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TemplateId = group.Add(new VocabularyKey(nameof(TemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ShipperShippingCarrierId { get; private set; }
         public VocabularyKey ShipperShippingCarrierGroupId { get; private set; }
         public VocabularyKey ShipperTransportationRoutePlanId { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TemplateDescription { get; private set; }
         public VocabularyKey ShipperShippingCarrierServiceId { get; private set; }
         public VocabularyKey TemplateId { get; private set; }
-
-
     }
 }

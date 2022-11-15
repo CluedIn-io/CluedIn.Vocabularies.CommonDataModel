@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesAutomaticSalesDocumentHeaderChargeEntityVocabulary()
         {
-            VocabularyName = "SalesAutomaticSalesDocumentHeaderChargeEntity";
+            VocabularyName = "Sales Automatic Sales Document Header Charge Entity";
             KeyPrefix = "commonDataModel.salesautomaticsalesdocumentheaderchargeentity";
             KeySeparator = ".";
             Grouping = "/SalesAutomaticSalesDocumentHeaderChargeEntity";
@@ -33,10 +33,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AccountRelation = group.Add(new VocabularyKey(nameof(AccountRelation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DlvModeCode = group.Add(new VocabularyKey(nameof(DlvModeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DlvModeRelation = group.Add(new VocabularyKey(nameof(DlvModeRelation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ChargingCustomerAccountNumber { get; private set; }
         public VocabularyKey ChargingChargeCustomerGroupId { get; private set; }
         public VocabularyKey ChargingDeliveryModeCode { get; private set; }
@@ -57,7 +55,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AccountRelation { get; private set; }
         public VocabularyKey DlvModeCode { get; private set; }
         public VocabularyKey DlvModeRelation { get; private set; }
-
-
     }
 }

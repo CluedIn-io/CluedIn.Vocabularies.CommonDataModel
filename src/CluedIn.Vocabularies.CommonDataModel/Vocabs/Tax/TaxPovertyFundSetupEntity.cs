@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxPovertyFundSetupEntityVocabulary()
         {
-            VocabularyName = "TaxPovertyFundSetupEntity";
+            VocabularyName = "Tax Poverty Fund Setup Entity";
             KeyPrefix = "commonDataModel.taxpovertyfundsetupentity";
             KeySeparator = ".";
             Grouping = "/TaxPovertyFundSetupEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OnlyFinalUserTrans = group.Add(new VocabularyKey(nameof(OnlyFinalUserTrans), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CountryRegionId = group.Add(new VocabularyKey(nameof(CountryRegionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StateId = group.Add(new VocabularyKey(nameof(StateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountCode { get; private set; }
         public VocabularyKey AccountRelation { get; private set; }
         public VocabularyKey CustVendType { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OnlyFinalUserTrans { get; private set; }
         public VocabularyKey CountryRegionId { get; private set; }
         public VocabularyKey StateId { get; private set; }
-
-
     }
 }

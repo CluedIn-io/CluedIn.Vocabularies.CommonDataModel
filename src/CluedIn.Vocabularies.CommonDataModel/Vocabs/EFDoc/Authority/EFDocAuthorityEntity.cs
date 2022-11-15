@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EFDocAuthorityEntityVocabulary()
         {
-            VocabularyName = "EFDocAuthorityEntity";
+            VocabularyName = "EF Doc Authority Entity";
             KeyPrefix = "commonDataModel.efdocauthorityentity";
             KeySeparator = ".";
             Grouping = "/EFDocAuthorityEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 NfceMaxAmountWithUnindentifiedCustomer = group.Add(new VocabularyKey(nameof(NfceMaxAmountWithUnindentifiedCustomer), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProcessNfceSynchronous = group.Add(new VocabularyKey(nameof(ProcessNfceSynchronous), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ICMSTaxBaseAmountLimit = group.Add(new VocabularyKey(nameof(ICMSTaxBaseAmountLimit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Authority { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey IgnoreAccents { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey NfceMaxAmountWithUnindentifiedCustomer { get; private set; }
         public VocabularyKey ProcessNfceSynchronous { get; private set; }
         public VocabularyKey ICMSTaxBaseAmountLimit { get; private set; }
-
-
     }
 }

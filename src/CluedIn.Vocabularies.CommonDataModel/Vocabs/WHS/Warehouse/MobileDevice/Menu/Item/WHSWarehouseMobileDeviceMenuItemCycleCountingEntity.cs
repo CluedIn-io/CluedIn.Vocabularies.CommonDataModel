@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseMobileDeviceMenuItemCycleCountingEntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseMobileDeviceMenuItemCycleCountingEntity";
+            VocabularyName = "WHS Warehouse Mobile Device Menu Item Cycle Counting Entity";
             KeyPrefix = "commonDataModel.whswarehousemobiledevicemenuitemcyclecountingentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseMobileDeviceMenuItemCycleCountingEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DefaultCountingReasonCode = group.Add(new VocabularyKey(nameof(DefaultCountingReasonCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsCountingReasonCodeDisplayed = group.Add(new VocabularyKey(nameof(IsCountingReasonCodeDisplayed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsCountingReasonCodeEditable = group.Add(new VocabularyKey(nameof(IsCountingReasonCodeEditable), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WarehouseMobileDeviceMenuItemId { get; private set; }
         public VocabularyKey AttemptsNumber { get; private set; }
         public VocabularyKey IsItemNumberDisplayed { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DefaultCountingReasonCode { get; private set; }
         public VocabularyKey IsCountingReasonCodeDisplayed { get; private set; }
         public VocabularyKey IsCountingReasonCodeEditable { get; private set; }
-
-
     }
 }

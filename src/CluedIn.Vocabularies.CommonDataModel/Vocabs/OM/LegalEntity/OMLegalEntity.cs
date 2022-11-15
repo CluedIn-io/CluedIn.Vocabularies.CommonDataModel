@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public OMLegalEntityVocabulary()
         {
-            VocabularyName = "OMLegalEntity";
+            VocabularyName = "OM Legal Entity";
             KeyPrefix = "commonDataModel.omlegalentity";
             KeySeparator = ".";
             Grouping = "/OMLegalEntity";
@@ -113,10 +113,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProfitMarginScheme = group.Add(new VocabularyKey(nameof(ProfitMarginScheme), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VATRefund = group.Add(new VocabularyKey(nameof(VATRefund), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VATOnCustomerBehalf = group.Add(new VocabularyKey(nameof(VATOnCustomerBehalf), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Name { get; private set; }
         public VocabularyKey NameAlias { get; private set; }
         public VocabularyKey PartyNumber { get; private set; }
@@ -217,7 +215,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProfitMarginScheme { get; private set; }
         public VocabularyKey VATRefund { get; private set; }
         public VocabularyKey VATOnCustomerBehalf { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DeliveryReasonEntityVocabulary()
         {
-            VocabularyName = "DeliveryReasonEntity";
+            VocabularyName = "Delivery Reason Entity";
             KeyPrefix = "commonDataModel.deliveryreasonentity";
             KeySeparator = ".";
             Grouping = "/DeliveryReasonEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Free_IT = group.Add(new VocabularyKey(nameof(Free_IT), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InvoiceAccount_IT = group.Add(new VocabularyKey(nameof(InvoiceAccount_IT), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PaymTermId_IT = group.Add(new VocabularyKey(nameof(PaymTermId_IT), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ReasonCode { get; private set; }
         public VocabularyKey ReasonDescription { get; private set; }
         public VocabularyKey Free_IT { get; private set; }
         public VocabularyKey InvoiceAccount_IT { get; private set; }
         public VocabularyKey PaymTermId_IT { get; private set; }
-
-
     }
 }

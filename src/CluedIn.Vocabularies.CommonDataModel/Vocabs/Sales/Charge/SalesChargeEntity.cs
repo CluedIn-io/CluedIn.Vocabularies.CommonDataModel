@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesChargeEntityVocabulary()
         {
-            VocabularyName = "SalesChargeEntity";
+            VocabularyName = "Sales Charge Entity";
             KeyPrefix = "commonDataModel.saleschargeentity";
             KeySeparator = ".";
             Grouping = "/SalesChargeEntity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WillSalesInvoicingProrateChargeAmounts = group.Add(new VocabularyKey(nameof(WillSalesInvoicingProrateChargeAmounts), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ChargeClassification = group.Add(new VocabularyKey(nameof(ChargeClassification), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxRateTypeName = group.Add(new VocabularyKey(nameof(TaxRateTypeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DebitPostingMainAccountId { get; private set; }
         public VocabularyKey DebitPostingMainAccountIdDisplayValue { get; private set; }
         public VocabularyKey DebitPostingType { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WillSalesInvoicingProrateChargeAmounts { get; private set; }
         public VocabularyKey ChargeClassification { get; private set; }
         public VocabularyKey TaxRateTypeName { get; private set; }
-
-
     }
 }

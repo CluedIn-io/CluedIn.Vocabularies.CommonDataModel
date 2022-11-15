@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerPeriodAllocationCategoryEntityVocabulary()
         {
-            VocabularyName = "LedgerPeriodAllocationCategoryEntity";
+            VocabularyName = "Ledger Period Allocation Category Entity";
             KeyPrefix = "commonDataModel.ledgerperiodallocationcategoryentity";
             KeySeparator = ".";
             Grouping = "/LedgerPeriodAllocationCategoryEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 UnitOfTime = group.Add(new VocabularyKey(nameof(UnitOfTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AllocationPercentage = group.Add(new VocabularyKey(nameof(AllocationPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineNumber = group.Add(new VocabularyKey(nameof(LineNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsFixed { get; private set; }
         public VocabularyKey PeriodKey { get; private set; }
         public VocabularyKey Name { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey UnitOfTime { get; private set; }
         public VocabularyKey AllocationPercentage { get; private set; }
         public VocabularyKey LineNumber { get; private set; }
-
-
     }
 }

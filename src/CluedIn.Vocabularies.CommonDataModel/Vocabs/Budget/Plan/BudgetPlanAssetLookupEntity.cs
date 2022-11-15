@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetPlanAssetLookupEntityVocabulary()
         {
-            VocabularyName = "BudgetPlanAssetLookupEntity";
+            VocabularyName = "Budget Plan Asset Lookup Entity";
             KeyPrefix = "commonDataModel.budgetplanassetlookupentity";
             KeySeparator = ".";
             Grouping = "/BudgetPlanAssetLookupEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 AssetId = group.Add(new VocabularyKey(nameof(AssetId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AssetId { get; private set; }
         public VocabularyKey Name { get; private set; }
-
-
     }
 }

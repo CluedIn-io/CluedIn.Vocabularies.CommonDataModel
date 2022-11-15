@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjRevenueSalesPriceEntityVocabulary()
         {
-            VocabularyName = "ProjRevenueSalesPriceEntity";
+            VocabularyName = "Proj Revenue Sales Price Entity";
             KeyPrefix = "commonDataModel.projrevenuesalespriceentity";
             KeySeparator = ".";
             Grouping = "/ProjRevenueSalesPriceEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 EffectiveDate = group.Add(new VocabularyKey(nameof(EffectiveDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProjValidFor = group.Add(new VocabularyKey(nameof(ProjValidFor), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ResourceId = group.Add(new VocabularyKey(nameof(ResourceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CategoryId { get; private set; }
         public VocabularyKey SalesCurrency { get; private set; }
         public VocabularyKey ProjectID { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey EffectiveDate { get; private set; }
         public VocabularyKey ProjValidFor { get; private set; }
         public VocabularyKey ResourceId { get; private set; }
-
-
     }
 }

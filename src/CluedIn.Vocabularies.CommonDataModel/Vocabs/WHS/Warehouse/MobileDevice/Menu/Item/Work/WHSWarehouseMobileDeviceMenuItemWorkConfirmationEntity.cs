@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseMobileDeviceMenuItemWorkConfirmationEntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseMobileDeviceMenuItemWorkConfirmationEntity";
+            VocabularyName = "WHS Warehouse Mobile Device Menu Item Work Confirmation Entity";
             KeyPrefix = "commonDataModel.whswarehousemobiledevicemenuitemworkconfirmationentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseMobileDeviceMenuItemWorkConfirmationEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsBatchConfirmationUsed = group.Add(new VocabularyKey(nameof(IsBatchConfirmationUsed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsLicensePlateConfirmationUsed = group.Add(new VocabularyKey(nameof(IsLicensePlateConfirmationUsed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsPickDetailsConfirmationShown = group.Add(new VocabularyKey(nameof(IsPickDetailsConfirmationShown), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WarehouseMobileDeviceMenuItemId { get; private set; }
         public VocabularyKey WorkType { get; private set; }
         public VocabularyKey IsAutoConfirmUsed { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsBatchConfirmationUsed { get; private set; }
         public VocabularyKey IsLicensePlateConfirmationUsed { get; private set; }
         public VocabularyKey IsPickDetailsConfirmationShown { get; private set; }
-
-
     }
 }

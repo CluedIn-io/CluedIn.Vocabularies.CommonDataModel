@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public FBFiscalDocumentAdjustmentCodeICMSTaxationCodesEntityVocabulary()
         {
-            VocabularyName = "FBFiscalDocumentAdjustmentCodeICMSTaxationCodesEntity";
+            VocabularyName = "FB Fiscal Document Adjustment Code ICMS Taxation Codes Entity";
             KeyPrefix = "commonDataModel.fbfiscaldocumentadjustmentcodeicmstaxationcodesentity";
             KeySeparator = ".";
             Grouping = "/FBFiscalDocumentAdjustmentCodeICMSTaxationCodesEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 SpedAdjustmentCode = group.Add(new VocabularyKey(nameof(SpedAdjustmentCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxationCode = group.Add(new VocabularyKey(nameof(TaxationCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SpedAdjustmentCode { get; private set; }
         public VocabularyKey TaxationCode { get; private set; }
-
-
     }
 }

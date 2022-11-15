@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerAccountStructureConstraintEntityVocabulary()
         {
-            VocabularyName = "LedgerAccountStructureConstraintEntity";
+            VocabularyName = "Ledger Account Structure Constraint Entity";
             KeyPrefix = "commonDataModel.ledgeraccountstructureconstraintentity";
             KeySeparator = ".";
             Grouping = "/LedgerAccountStructureConstraintEntity";
@@ -30,10 +30,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 SegmentCriteria09 = group.Add(new VocabularyKey(nameof(SegmentCriteria09), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SegmentCriteria10 = group.Add(new VocabularyKey(nameof(SegmentCriteria10), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SegmentCriteria11 = group.Add(new VocabularyKey(nameof(SegmentCriteria11), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountStructure { get; private set; }
         public VocabularyKey ActiveFrom { get; private set; }
         public VocabularyKey ActiveTo { get; private set; }
@@ -51,7 +49,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey SegmentCriteria09 { get; private set; }
         public VocabularyKey SegmentCriteria10 { get; private set; }
         public VocabularyKey SegmentCriteria11 { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRSalesOrderHoldCodeEntityVocabulary()
         {
-            VocabularyName = "MCRSalesOrderHoldCodeEntity";
+            VocabularyName = "MCR Sales Order Hold Code Entity";
             KeyPrefix = "commonDataModel.mcrsalesorderholdcodeentity";
             KeySeparator = ".";
             Grouping = "/MCRSalesOrderHoldCodeEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AssociatedSecurityRoleName = group.Add(new VocabularyKey(nameof(AssociatedSecurityRoleName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsDefaultSalesOrderHoldCode = group.Add(new VocabularyKey(nameof(IsDefaultSalesOrderHoldCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsHoldCodeRemovingInventoryReservations = group.Add(new VocabularyKey(nameof(IsHoldCodeRemovingInventoryReservations), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SalesOrderHoldCode { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey AssociatedSecurityRoleId { get; private set; }
         public VocabularyKey AssociatedSecurityRoleName { get; private set; }
         public VocabularyKey IsDefaultSalesOrderHoldCode { get; private set; }
         public VocabularyKey IsHoldCodeRemovingInventoryReservations { get; private set; }
-
-
     }
 }

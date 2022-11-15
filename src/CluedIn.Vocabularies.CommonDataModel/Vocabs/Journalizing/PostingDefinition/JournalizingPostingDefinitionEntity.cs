@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JournalizingPostingDefinitionEntityVocabulary()
         {
-            VocabularyName = "JournalizingPostingDefinitionEntity";
+            VocabularyName = "Journalizing Posting Definition Entity";
             KeyPrefix = "commonDataModel.journalizingpostingdefinitionentity";
             KeySeparator = ".";
             Grouping = "/JournalizingPostingDefinitionEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Module = group.Add(new VocabularyKey(nameof(Module), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LegalEntityId = group.Add(new VocabularyKey(nameof(LegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 JournalizingDefinitionVersion = group.Add(new VocabularyKey(nameof(JournalizingDefinitionVersion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PostingDefinition { get; private set; }
         public VocabularyKey VersionDescription { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Module { get; private set; }
         public VocabularyKey LegalEntityId { get; private set; }
         public VocabularyKey JournalizingDefinitionVersion { get; private set; }
-
-
     }
 }

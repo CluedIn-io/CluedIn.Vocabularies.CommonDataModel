@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerJournalEntityVocabulary()
         {
-            VocabularyName = "LedgerJournalEntity";
+            VocabularyName = "Ledger Journal Entity";
             KeyPrefix = "commonDataModel.ledgerjournalentity";
             KeySeparator = ".";
             Grouping = "/LedgerJournalEntity";
@@ -75,10 +75,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 InvoiceDate = group.Add(new VocabularyKey(nameof(InvoiceDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InvoiceReceiptDate = group.Add(new VocabularyKey(nameof(InvoiceReceiptDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxInvoiceReceiptDate = group.Add(new VocabularyKey(nameof(TaxInvoiceReceiptDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CreditAmount { get; private set; }
         public VocabularyKey DebitAmount { get; private set; }
         public VocabularyKey JournalBatchNumber { get; private set; }
@@ -141,7 +139,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey InvoiceDate { get; private set; }
         public VocabularyKey InvoiceReceiptDate { get; private set; }
         public VocabularyKey TaxInvoiceReceiptDate { get; private set; }
-
-
     }
 }

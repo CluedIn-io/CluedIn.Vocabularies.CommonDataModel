@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSCycleCountingPlanProductSelectionEntityVocabulary()
         {
-            VocabularyName = "WHSCycleCountingPlanProductSelectionEntity";
+            VocabularyName = "WHS Cycle Counting Plan Product Selection Entity";
             KeyPrefix = "commonDataModel.whscyclecountingplanproductselectionentity";
             KeySeparator = ".";
             Grouping = "/WHSCycleCountingPlanProductSelectionEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductSelectionQueryMode = group.Add(new VocabularyKey(nameof(ProductSelectionQueryMode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductQuery = group.Add(new VocabularyKey(nameof(ProductQuery), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductVariantQuery = group.Add(new VocabularyKey(nameof(ProductVariantQuery), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CycleCountingPlanId { get; private set; }
         public VocabularyKey ProductSelectionSequence { get; private set; }
         public VocabularyKey ProductSelectionQueryDescription { get; private set; }
         public VocabularyKey ProductSelectionQueryMode { get; private set; }
         public VocabularyKey ProductQuery { get; private set; }
         public VocabularyKey ProductVariantQuery { get; private set; }
-
-
     }
 }

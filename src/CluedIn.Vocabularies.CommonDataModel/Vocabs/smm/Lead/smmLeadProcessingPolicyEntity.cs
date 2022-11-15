@@ -2,26 +2,22 @@ using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 {
-    public class smmLeadProcessingPolicyEntityVocabulary : SimpleVocabulary
+    public class SmmLeadProcessingPolicyEntityVocabulary : SimpleVocabulary
     {
-        public smmLeadProcessingPolicyEntityVocabulary()
+        public SmmLeadProcessingPolicyEntityVocabulary()
         {
-            VocabularyName = "smmLeadProcessingPolicyEntity";
+            VocabularyName = "Smm Lead Processing Policy Entity";
             KeyPrefix = "commonDataModel.smmleadprocessingpolicyentity";
             KeySeparator = ".";
-            Grouping = "/smmLeadProcessingPolicyEntity";
+            Grouping = "/SmmLeadProcessingPolicyEntity";
 
-            AddGroup("smmLeadProcessingPolicyEntity Details", group =>
+            AddGroup("SmmLeadProcessingPolicyEntity Details", group =>
             {
                 WillLeadQualificationCreateOpportunity = group.Add(new VocabularyKey(nameof(WillLeadQualificationCreateOpportunity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillLeadQualificationCreateCustomer = group.Add(new VocabularyKey(nameof(WillLeadQualificationCreateCustomer), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WillLeadQualificationCreateOpportunity { get; private set; }
         public VocabularyKey WillLeadQualificationCreateCustomer { get; private set; }
-
-
     }
 }

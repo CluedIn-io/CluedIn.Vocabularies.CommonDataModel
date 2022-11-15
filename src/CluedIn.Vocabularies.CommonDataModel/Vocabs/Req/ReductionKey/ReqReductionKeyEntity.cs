@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReqReductionKeyEntityVocabulary()
         {
-            VocabularyName = "ReqReductionKeyEntity";
+            VocabularyName = "Req Reduction Key Entity";
             KeyPrefix = "commonDataModel.reqreductionkeyentity";
             KeySeparator = ".";
             Grouping = "/ReqReductionKeyEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 EffectiveDate = group.Add(new VocabularyKey(nameof(EffectiveDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 KeyName = group.Add(new VocabularyKey(nameof(KeyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 KeyId = group.Add(new VocabularyKey(nameof(KeyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsEffectiveDateUsed { get; private set; }
         public VocabularyKey EffectiveDate { get; private set; }
         public VocabularyKey KeyName { get; private set; }
         public VocabularyKey KeyId { get; private set; }
-
-
     }
 }

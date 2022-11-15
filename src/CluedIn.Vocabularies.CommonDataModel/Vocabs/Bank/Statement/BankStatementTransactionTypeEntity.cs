@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BankStatementTransactionTypeEntityVocabulary()
         {
-            VocabularyName = "BankStatementTransactionTypeEntity";
+            VocabularyName = "Bank Statement Transaction Type Entity";
             KeyPrefix = "commonDataModel.bankstatementtransactiontypeentity";
             KeySeparator = ".";
             Grouping = "/BankStatementTransactionTypeEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BankAccountID = group.Add(new VocabularyKey(nameof(BankAccountID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BankTransType = group.Add(new VocabularyKey(nameof(BankTransType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StatementTransactionCode = group.Add(new VocabularyKey(nameof(StatementTransactionCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BankAccountID { get; private set; }
         public VocabularyKey BankTransType { get; private set; }
         public VocabularyKey StatementTransactionCode { get; private set; }
-
-
     }
 }

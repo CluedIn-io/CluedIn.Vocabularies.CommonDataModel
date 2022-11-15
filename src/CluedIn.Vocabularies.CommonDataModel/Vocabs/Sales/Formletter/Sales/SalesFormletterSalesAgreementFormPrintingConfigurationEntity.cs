@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesFormletterSalesAgreementFormPrintingConfigurationEntityVocabulary()
         {
-            VocabularyName = "SalesFormletterSalesAgreementFormPrintingConfigurationEntity";
+            VocabularyName = "Sales Formletter Sales Agreement Form Printing Configuration Entity";
             KeyPrefix = "commonDataModel.salesformlettersalesagreementformprintingconfigurationentity";
             KeySeparator = ".";
             Grouping = "/SalesFormletterSalesAgreementFormPrintingConfigurationEntity";
@@ -31,10 +31,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsMaxEnforcedDisplayed = group.Add(new VocabularyKey(nameof(IsMaxEnforcedDisplayed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsDeliveryModeDisplayed = group.Add(new VocabularyKey(nameof(IsDeliveryModeDisplayed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsPaymentTermsDisplayed = group.Add(new VocabularyKey(nameof(IsPaymentTermsDisplayed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsProductColorIdDisplayed { get; private set; }
         public VocabularyKey IsProductConfigurationIdDisplayed { get; private set; }
         public VocabularyKey IsProductSizeIdDisplayed { get; private set; }
@@ -53,7 +51,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsMaxEnforcedDisplayed { get; private set; }
         public VocabularyKey IsDeliveryModeDisplayed { get; private set; }
         public VocabularyKey IsPaymentTermsDisplayed { get; private set; }
-
-
     }
 }

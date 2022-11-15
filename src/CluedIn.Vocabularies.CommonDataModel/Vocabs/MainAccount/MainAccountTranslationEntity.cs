@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MainAccountTranslationEntityVocabulary()
         {
-            VocabularyName = "MainAccountTranslationEntity";
+            VocabularyName = "Main Account Translation Entity";
             KeyPrefix = "commonDataModel.mainaccounttranslationentity";
             KeySeparator = ".";
             Grouping = "/MainAccountTranslationEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ChartOfAccounts = group.Add(new VocabularyKey(nameof(ChartOfAccounts), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MainAccountRecId = group.Add(new VocabularyKey(nameof(MainAccountRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ChartOfAccountsRecId = group.Add(new VocabularyKey(nameof(ChartOfAccountsRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey MainAccount { get; private set; }
         public VocabularyKey OriginalText { get; private set; }
         public VocabularyKey Language { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ChartOfAccounts { get; private set; }
         public VocabularyKey MainAccountRecId { get; private set; }
         public VocabularyKey ChartOfAccountsRecId { get; private set; }
-
-
     }
 }

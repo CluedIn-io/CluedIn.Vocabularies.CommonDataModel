@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetReductionEntryProfileEntityVocabulary()
         {
-            VocabularyName = "AssetReductionEntryProfileEntity";
+            VocabularyName = "Asset Reduction Entry Profile Entity";
             KeyPrefix = "commonDataModel.assetreductionentryprofileentity";
             KeySeparator = ".";
             Grouping = "/AssetReductionEntryProfileEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RetentionStartDate = group.Add(new VocabularyKey(nameof(RetentionStartDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidFrom = group.Add(new VocabularyKey(nameof(ValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ValidTo = group.Add(new VocabularyKey(nameof(ValidTo), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DepreciationConvention { get; private set; }
         public VocabularyKey SubsidiesReason { get; private set; }
         public VocabularyKey MaxAmt { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RetentionStartDate { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey ValidTo { get; private set; }
-
-
     }
 }

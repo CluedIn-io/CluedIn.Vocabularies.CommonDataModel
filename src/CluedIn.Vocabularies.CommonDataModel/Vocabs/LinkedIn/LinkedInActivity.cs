@@ -6,42 +6,38 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LinkedInActivityVocabulary()
         {
-            VocabularyName = "LinkedInActivity";
+            VocabularyName = "Linked In Activity";
             KeyPrefix = "commonDataModel.linkedinactivity";
             KeySeparator = ".";
             Grouping = "/LinkedInActivity";
 
             AddGroup("LinkedInActivity Details", group =>
             {
-                actionStatus = group.Add(new VocabularyKey(nameof(actionStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                activityadditionalparams = group.Add(new VocabularyKey(nameof(activityadditionalparams), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                actualdurationminutes = group.Add(new VocabularyKey(nameof(actualdurationminutes), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                actualEnd = group.Add(new VocabularyKey(nameof(actualEnd), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                actualStart = group.Add(new VocabularyKey(nameof(actualStart), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                description = group.Add(new VocabularyKey(nameof(description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                durationmillisecond = group.Add(new VocabularyKey(nameof(durationmillisecond), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                errorMessage = group.Add(new VocabularyKey(nameof(errorMessage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                linkedInActivityId = group.Add(new VocabularyKey(nameof(linkedInActivityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                ActionStatus = group.Add(new VocabularyKey(nameof(ActionStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Activityadditionalparams = group.Add(new VocabularyKey(nameof(Activityadditionalparams), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Actualdurationminutes = group.Add(new VocabularyKey(nameof(Actualdurationminutes), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ActualEnd = group.Add(new VocabularyKey(nameof(ActualEnd), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ActualStart = group.Add(new VocabularyKey(nameof(ActualStart), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Durationmillisecond = group.Add(new VocabularyKey(nameof(Durationmillisecond), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ErrorMessage = group.Add(new VocabularyKey(nameof(ErrorMessage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LinkedInActivityId = group.Add(new VocabularyKey(nameof(LinkedInActivityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey actionStatus { get; private set; }
-        public VocabularyKey activityadditionalparams { get; private set; }
-        public VocabularyKey actualdurationminutes { get; private set; }
-        public VocabularyKey actualEnd { get; private set; }
-        public VocabularyKey actualStart { get; private set; }
-        public VocabularyKey description { get; private set; }
-        public VocabularyKey durationmillisecond { get; private set; }
-        public VocabularyKey errorMessage { get; private set; }
-        public VocabularyKey linkedInActivityId { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey ActionStatus { get; private set; }
+        public VocabularyKey Activityadditionalparams { get; private set; }
+        public VocabularyKey Actualdurationminutes { get; private set; }
+        public VocabularyKey ActualEnd { get; private set; }
+        public VocabularyKey ActualStart { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey Durationmillisecond { get; private set; }
+        public VocabularyKey ErrorMessage { get; private set; }
+        public VocabularyKey LinkedInActivityId { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

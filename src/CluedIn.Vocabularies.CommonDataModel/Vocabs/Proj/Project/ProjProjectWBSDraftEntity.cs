@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjProjectWBSDraftEntityVocabulary()
         {
-            VocabularyName = "ProjProjectWBSDraftEntity";
+            VocabularyName = "Proj Project WBS Draft Entity";
             KeyPrefix = "commonDataModel.projprojectwbsdraftentity";
             KeySeparator = ".";
             Grouping = "/ProjProjectWBSDraftEntity";
@@ -43,10 +43,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CalendarStandardWorkDayHours = group.Add(new VocabularyKey(nameof(CalendarStandardWorkDayHours), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaskEffortAtComplete = group.Add(new VocabularyKey(nameof(TaskEffortAtComplete), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaskCostAtComplete = group.Add(new VocabularyKey(nameof(TaskCostAtComplete), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProjectId { get; private set; }
         public VocabularyKey HierarchyId { get; private set; }
         public VocabularyKey TaskId { get; private set; }
@@ -77,7 +75,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CalendarStandardWorkDayHours { get; private set; }
         public VocabularyKey TaskEffortAtComplete { get; private set; }
         public VocabularyKey TaskCostAtComplete { get; private set; }
-
-
     }
 }

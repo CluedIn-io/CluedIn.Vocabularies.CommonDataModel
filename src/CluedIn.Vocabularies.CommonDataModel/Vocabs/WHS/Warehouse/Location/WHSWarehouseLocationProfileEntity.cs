@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseLocationProfileEntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseLocationProfileEntity";
+            VocabularyName = "WHS Warehouse Location Profile Entity";
             KeyPrefix = "commonDataModel.whswarehouselocationprofileentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseLocationProfileEntity";
@@ -57,10 +57,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsWarehouseLocationEnablingMixingProductDimensions = group.Add(new VocabularyKey(nameof(IsWarehouseLocationEnablingMixingProductDimensions), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsLocationLicensePlatePositioningEnabled = group.Add(new VocabularyKey(nameof(IsLocationLicensePlatePositioningEnabled), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillMobileDeviceDisplayLicensePlatePosition = group.Add(new VocabularyKey(nameof(WillMobileDeviceDisplayLicensePlatePosition), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsLocationAllowingMixedItemBatches { get; private set; }
         public VocabularyKey IsLocationAllowingMixedItems { get; private set; }
         public VocabularyKey IsLocationAllowingMixedItemStatuses { get; private set; }
@@ -105,7 +103,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsWarehouseLocationEnablingMixingProductDimensions { get; private set; }
         public VocabularyKey IsLocationLicensePlatePositioningEnabled { get; private set; }
         public VocabularyKey WillMobileDeviceDisplayLicensePlatePosition { get; private set; }
-
-
     }
 }

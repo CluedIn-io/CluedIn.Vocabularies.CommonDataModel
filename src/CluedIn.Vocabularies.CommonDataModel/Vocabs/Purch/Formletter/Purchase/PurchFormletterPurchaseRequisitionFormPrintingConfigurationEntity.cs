@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchFormletterPurchaseRequisitionFormPrintingConfigurationEntityVocabulary()
         {
-            VocabularyName = "PurchFormletterPurchaseRequisitionFormPrintingConfigurationEntity";
+            VocabularyName = "Purch Formletter Purchase Requisition Form Printing Configuration Entity";
             KeyPrefix = "commonDataModel.purchformletterpurchaserequisitionformprintingconfigurationentity";
             KeySeparator = ".";
             Grouping = "/PurchFormletterPurchaseRequisitionFormPrintingConfigurationEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 InventDimPurchReq = group.Add(new VocabularyKey(nameof(InventDimPurchReq), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DocumentAttachmentDisplayRule = group.Add(new VocabularyKey(nameof(DocumentAttachmentDisplayRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DisplayedDocumentAttachmentTypeCode = group.Add(new VocabularyKey(nameof(DisplayedDocumentAttachmentTypeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsProductColorIdDisplayed { get; private set; }
         public VocabularyKey IsProductConfigurationIdDisplayed { get; private set; }
         public VocabularyKey IsProductSizeIdDisplayed { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey InventDimPurchReq { get; private set; }
         public VocabularyKey DocumentAttachmentDisplayRule { get; private set; }
         public VocabularyKey DisplayedDocumentAttachmentTypeCode { get; private set; }
-
-
     }
 }

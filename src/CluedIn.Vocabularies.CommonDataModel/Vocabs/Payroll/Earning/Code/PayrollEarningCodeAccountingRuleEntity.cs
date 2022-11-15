@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollEarningCodeAccountingRuleEntityVocabulary()
         {
-            VocabularyName = "PayrollEarningCodeAccountingRuleEntity";
+            VocabularyName = "Payroll Earning Code Accounting Rule Entity";
             KeyPrefix = "commonDataModel.payrollearningcodeaccountingruleentity";
             KeySeparator = ".";
             Grouping = "/PayrollEarningCodeAccountingRuleEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 EarningCodeId = group.Add(new VocabularyKey(nameof(EarningCodeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(LedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DepartmentNumber = group.Add(new VocabularyKey(nameof(DepartmentNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey OMOperatingUnit { get; private set; }
         public VocabularyKey EarningCode { get; private set; }
         public VocabularyKey Job { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey EarningCodeId { get; private set; }
         public VocabularyKey LedgerDimensionDisplayValue { get; private set; }
         public VocabularyKey DepartmentNumber { get; private set; }
-
-
     }
 }

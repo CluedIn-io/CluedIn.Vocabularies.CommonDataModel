@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HMIMClassGroupEntityVocabulary()
         {
-            VocabularyName = "HMIMClassGroupEntity";
+            VocabularyName = "HMIM Class Group Entity";
             KeyPrefix = "commonDataModel.hmimclassgroupentity";
             KeySeparator = ".";
             Grouping = "/HMIMClassGroupEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PackingGroupCode = group.Add(new VocabularyKey(nameof(PackingGroupCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransportCategoryCode = group.Add(new VocabularyKey(nameof(TransportCategoryCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Multiplier = group.Add(new VocabularyKey(nameof(Multiplier), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ClassGroupCode { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey ClassCode { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PackingGroupCode { get; private set; }
         public VocabularyKey TransportCategoryCode { get; private set; }
         public VocabularyKey Multiplier { get; private set; }
-
-
     }
 }

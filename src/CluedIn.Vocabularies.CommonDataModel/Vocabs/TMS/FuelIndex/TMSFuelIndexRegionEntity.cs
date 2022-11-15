@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSFuelIndexRegionEntityVocabulary()
         {
-            VocabularyName = "TMSFuelIndexRegionEntity";
+            VocabularyName = "TMS Fuel Index Region Entity";
             KeyPrefix = "commonDataModel.tmsfuelindexregionentity";
             KeySeparator = ".";
             Grouping = "/TMSFuelIndexRegionEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 RegionId = group.Add(new VocabularyKey(nameof(RegionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RegionName = group.Add(new VocabularyKey(nameof(RegionName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RegionId { get; private set; }
         public VocabularyKey RegionName { get; private set; }
-
-
     }
 }

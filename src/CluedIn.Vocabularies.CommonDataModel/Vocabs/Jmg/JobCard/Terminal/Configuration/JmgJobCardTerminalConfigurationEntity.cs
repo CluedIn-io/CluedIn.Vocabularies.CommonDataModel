@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgJobCardTerminalConfigurationEntityVocabulary()
         {
-            VocabularyName = "JmgJobCardTerminalConfigurationEntity";
+            VocabularyName = "Jmg Job Card Terminal Configuration Entity";
             KeyPrefix = "commonDataModel.jmgjobcardterminalconfigurationentity";
             KeySeparator = ".";
             Grouping = "/JmgJobCardTerminalConfigurationEntity";
@@ -33,10 +33,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 JobCardTerminalIndirectActivitesGridConfigurationId = group.Add(new VocabularyKey(nameof(JobCardTerminalIndirectActivitesGridConfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 JobCardTerminalProductionGridConfigurationId = group.Add(new VocabularyKey(nameof(JobCardTerminalProductionGridConfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 JobCardTerminalProjectGridConfigurationId = group.Add(new VocabularyKey(nameof(JobCardTerminalProjectGridConfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey JobCardTerminalActionPaneConfigurationRecId { get; private set; }
         public VocabularyKey JobCardTerminalIndirectActivitiesGridConfigurationRecId { get; private set; }
         public VocabularyKey IsWorkerIdFieldDisabled { get; private set; }
@@ -57,7 +55,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey JobCardTerminalIndirectActivitesGridConfigurationId { get; private set; }
         public VocabularyKey JobCardTerminalProductionGridConfigurationId { get; private set; }
         public VocabularyKey JobCardTerminalProjectGridConfigurationId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventOrderEntryDeadlineGroupEntityVocabulary()
         {
-            VocabularyName = "InventOrderEntryDeadlineGroupEntity";
+            VocabularyName = "Invent Order Entry Deadline Group Entity";
             KeyPrefix = "commonDataModel.inventorderentrydeadlinegroupentity";
             KeySeparator = ".";
             Grouping = "/InventOrderEntryDeadlineGroupEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 GroupId = group.Add(new VocabularyKey(nameof(GroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GroupDescription = group.Add(new VocabularyKey(nameof(GroupDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey GroupId { get; private set; }
         public VocabularyKey GroupDescription { get; private set; }
-
-
     }
 }

@@ -6,46 +6,42 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustomerInsightsInfoVocabulary()
         {
-            VocabularyName = "CustomerInsightsInfo";
+            VocabularyName = "Customer Insights Info";
             KeyPrefix = "commonDataModel.customerinsightsinfo";
             KeySeparator = ".";
             Grouping = "/CustomerInsightsInfo";
 
             AddGroup("CustomerInsightsInfo Details", group =>
             {
-                audienceType = group.Add(new VocabularyKey(nameof(audienceType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                connectorsSuffix = group.Add(new VocabularyKey(nameof(connectorsSuffix), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                dciwebendpoint = group.Add(new VocabularyKey(nameof(dciwebendpoint), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                usePlanB = group.Add(new VocabularyKey(nameof(usePlanB), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                overrideuiwithdciwebendpoint = group.Add(new VocabularyKey(nameof(overrideuiwithdciwebendpoint), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                uiVersion = group.Add(new VocabularyKey(nameof(uiVersion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                configCacheExpirationDate = group.Add(new VocabularyKey(nameof(configCacheExpirationDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                customerinsightsinfoId = group.Add(new VocabularyKey(nameof(customerinsightsinfoId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdName = group.Add(new VocabularyKey(nameof(ownerIdName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdType = group.Add(new VocabularyKey(nameof(ownerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdYomiName = group.Add(new VocabularyKey(nameof(ownerIdYomiName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                AudienceType = group.Add(new VocabularyKey(nameof(AudienceType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ConnectorsSuffix = group.Add(new VocabularyKey(nameof(ConnectorsSuffix), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Dciwebendpoint = group.Add(new VocabularyKey(nameof(Dciwebendpoint), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                UsePlanB = group.Add(new VocabularyKey(nameof(UsePlanB), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Overrideuiwithdciwebendpoint = group.Add(new VocabularyKey(nameof(Overrideuiwithdciwebendpoint), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                UiVersion = group.Add(new VocabularyKey(nameof(UiVersion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ConfigCacheExpirationDate = group.Add(new VocabularyKey(nameof(ConfigCacheExpirationDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CustomerinsightsinfoId = group.Add(new VocabularyKey(nameof(CustomerinsightsinfoId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdName = group.Add(new VocabularyKey(nameof(OwnerIdName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdType = group.Add(new VocabularyKey(nameof(OwnerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdYomiName = group.Add(new VocabularyKey(nameof(OwnerIdYomiName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey audienceType { get; private set; }
-        public VocabularyKey connectorsSuffix { get; private set; }
-        public VocabularyKey dciwebendpoint { get; private set; }
-        public VocabularyKey usePlanB { get; private set; }
-        public VocabularyKey overrideuiwithdciwebendpoint { get; private set; }
-        public VocabularyKey uiVersion { get; private set; }
-        public VocabularyKey configCacheExpirationDate { get; private set; }
-        public VocabularyKey customerinsightsinfoId { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey ownerIdName { get; private set; }
-        public VocabularyKey ownerIdType { get; private set; }
-        public VocabularyKey ownerIdYomiName { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey AudienceType { get; private set; }
+        public VocabularyKey ConnectorsSuffix { get; private set; }
+        public VocabularyKey Dciwebendpoint { get; private set; }
+        public VocabularyKey UsePlanB { get; private set; }
+        public VocabularyKey Overrideuiwithdciwebendpoint { get; private set; }
+        public VocabularyKey UiVersion { get; private set; }
+        public VocabularyKey ConfigCacheExpirationDate { get; private set; }
+        public VocabularyKey CustomerinsightsinfoId { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OwnerIdName { get; private set; }
+        public VocabularyKey OwnerIdType { get; private set; }
+        public VocabularyKey OwnerIdYomiName { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

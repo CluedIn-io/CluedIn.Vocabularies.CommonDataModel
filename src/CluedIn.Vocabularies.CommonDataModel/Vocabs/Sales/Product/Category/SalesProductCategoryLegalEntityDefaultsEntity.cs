@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesProductCategoryLegalEntityDefaultsEntityVocabulary()
         {
-            VocabularyName = "SalesProductCategoryLegalEntityDefaultsEntity";
+            VocabularyName = "Sales Product Category Legal Entity Defaults Entity";
             KeyPrefix = "commonDataModel.salesproductcategorylegalentitydefaultsentity";
             KeySeparator = ".";
             Grouping = "/SalesProductCategoryLegalEntityDefaultsEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductCategoryName = group.Add(new VocabularyKey(nameof(ProductCategoryName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesLegalEntityId = group.Add(new VocabularyKey(nameof(SalesLegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductSalesTaxGroupId = group.Add(new VocabularyKey(nameof(ProductSalesTaxGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductCategoryHierarchyName { get; private set; }
         public VocabularyKey ProductCategoryName { get; private set; }
         public VocabularyKey SalesLegalEntityId { get; private set; }
         public VocabularyKey ProductSalesTaxGroupId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollRetirementBenefitPlanDetailEntityVocabulary()
         {
-            VocabularyName = "PayrollRetirementBenefitPlanDetailEntity";
+            VocabularyName = "Payroll Retirement Benefit Plan Detail Entity";
             KeyPrefix = "commonDataModel.payrollretirementbenefitplandetailentity";
             KeySeparator = ".";
             Grouping = "/PayrollRetirementBenefitPlanDetailEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ContributionMethod = group.Add(new VocabularyKey(nameof(ContributionMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RetirementType = group.Add(new VocabularyKey(nameof(RetirementType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BenefitPlanID = group.Add(new VocabularyKey(nameof(BenefitPlanID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BenefitPlan { get; private set; }
         public VocabularyKey ContributionLimitMethod { get; private set; }
         public VocabularyKey ContributionMethod { get; private set; }
         public VocabularyKey RetirementType { get; private set; }
         public VocabularyKey BenefitPlanID { get; private set; }
-
-
     }
 }

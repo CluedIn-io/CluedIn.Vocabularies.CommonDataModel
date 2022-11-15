@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxPurchaseRequisitionLineTransTaxInformationEntityVocabulary()
         {
-            VocabularyName = "TaxPurchaseRequisitionLineTransTaxInformationEntity";
+            VocabularyName = "Tax Purchase Requisition Line Trans Tax Information Entity";
             KeyPrefix = "commonDataModel.taxpurchaserequisitionlinetranstaxinformationentity";
             KeySeparator = ".";
             Grouping = "/TaxPurchaseRequisitionLineTransTaxInformationEntity";
@@ -67,10 +67,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 VendorLocation = group.Add(new VocabularyKey(nameof(VendorLocation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PurchReqTable = group.Add(new VocabularyKey(nameof(PurchReqTable), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SequenceNumber = group.Add(new VocabularyKey(nameof(SequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey VendorTaxInformation { get; private set; }
         public VocabularyKey BankLocation { get; private set; }
         public VocabularyKey BankTaxInformation { get; private set; }
@@ -125,7 +123,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey VendorLocation { get; private set; }
         public VocabularyKey PurchReqTable { get; private set; }
         public VocabularyKey SequenceNumber { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendPaymentBIVendorCustomerBalanceEntityV2Vocabulary()
         {
-            VocabularyName = "VendPaymentBIVendorCustomerBalanceEntityV2";
+            VocabularyName = "Vend Payment BI Vendor Customer Balance Entity V2";
             KeyPrefix = "commonDataModel.vendpaymentbivendorcustomerbalanceentityv2";
             KeySeparator = ".";
             Grouping = "/VendPaymentBIVendorCustomerBalanceEntityV2";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CustAccountNum = group.Add(new VocabularyKey(nameof(CustAccountNum), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PartyName = group.Add(new VocabularyKey(nameof(PartyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Company = group.Add(new VocabularyKey(nameof(Company), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountNum { get; private set; }
         public VocabularyKey Party { get; private set; }
         public VocabularyKey TotalCustAmountCur { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CustAccountNum { get; private set; }
         public VocabularyKey PartyName { get; private set; }
         public VocabularyKey Company { get; private set; }
-
-
     }
 }

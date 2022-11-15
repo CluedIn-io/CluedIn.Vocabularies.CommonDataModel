@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxInfoManagementEntityVocabulary()
         {
-            VocabularyName = "TaxInfoManagementEntity";
+            VocabularyName = "Tax Info Management Entity";
             KeyPrefix = "commonDataModel.taxinfomanagemententity";
             KeySeparator = ".";
             Grouping = "/TaxInfoManagementEntity";
@@ -41,10 +41,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TIN = group.Add(new VocabularyKey(nameof(TIN), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TAN = group.Add(new VocabularyKey(nameof(TAN), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Name { get; private set; }
         public VocabularyKey IsPrimary { get; private set; }
         public VocabularyKey GSTNumber { get; private set; }
@@ -73,7 +71,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TIN { get; private set; }
         public VocabularyKey TAN { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

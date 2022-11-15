@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationAppointmentEntityVocabulary()
         {
-            VocabularyName = "TMSTransportationAppointmentEntity";
+            VocabularyName = "TMS Transportation Appointment Entity";
             KeyPrefix = "commonDataModel.tmstransportationappointmententity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationAppointmentEntity";
@@ -35,10 +35,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TransportationBrokerId = group.Add(new VocabularyKey(nameof(TransportationBrokerId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransportationCarrierId = group.Add(new VocabularyKey(nameof(TransportationCarrierId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorAccountNumber = group.Add(new VocabularyKey(nameof(VendorAccountNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AppointmentSiteId { get; private set; }
         public VocabularyKey AppointmentWarehouseId { get; private set; }
         public VocabularyKey AppointmentWarehouseLocationId { get; private set; }
@@ -61,7 +59,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TransportationBrokerId { get; private set; }
         public VocabularyKey TransportationCarrierId { get; private set; }
         public VocabularyKey VendorAccountNumber { get; private set; }
-
-
     }
 }

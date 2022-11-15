@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchRFQVendPostedQuestionAnswerEntityVocabulary()
         {
-            VocabularyName = "PurchRFQVendPostedQuestionAnswerEntity";
+            VocabularyName = "Purch RFQ Vend Posted Question Answer Entity";
             KeyPrefix = "commonDataModel.purchrfqvendpostedquestionanswerentity";
             KeySeparator = ".";
             Grouping = "/PurchRFQVendPostedQuestionAnswerEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 GroupQuestion = group.Add(new VocabularyKey(nameof(GroupQuestion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GroupAnswer = group.Add(new VocabularyKey(nameof(GroupAnswer), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 QuestionNumber = group.Add(new VocabularyKey(nameof(QuestionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RFQNumber { get; private set; }
         public VocabularyKey Question { get; private set; }
         public VocabularyKey CustomerAnswer { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey GroupQuestion { get; private set; }
         public VocabularyKey GroupAnswer { get; private set; }
         public VocabularyKey QuestionNumber { get; private set; }
-
-
     }
 }

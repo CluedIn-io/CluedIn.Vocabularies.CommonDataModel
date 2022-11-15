@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustAgingEntityVocabulary()
         {
-            VocabularyName = "CustAgingEntity";
+            VocabularyName = "Cust Aging Entity";
             KeyPrefix = "commonDataModel.custagingentity";
             KeySeparator = ".";
             Grouping = "/CustAgingEntity";
@@ -43,10 +43,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LastPaymentDate = group.Add(new VocabularyKey(nameof(LastPaymentDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NumOpenInvoices = group.Add(new VocabularyKey(nameof(NumOpenInvoices), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MSTCurrency = group.Add(new VocabularyKey(nameof(MSTCurrency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CustName { get; private set; }
         public VocabularyKey CustAccount { get; private set; }
         public VocabularyKey Company { get; private set; }
@@ -77,7 +75,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LastPaymentDate { get; private set; }
         public VocabularyKey NumOpenInvoices { get; private set; }
         public VocabularyKey MSTCurrency { get; private set; }
-
-
     }
 }

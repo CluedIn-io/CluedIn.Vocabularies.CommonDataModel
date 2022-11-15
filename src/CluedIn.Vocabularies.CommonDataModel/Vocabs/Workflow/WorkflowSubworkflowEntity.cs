@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WorkflowSubworkflowEntityVocabulary()
         {
-            VocabularyName = "WorkflowSubworkflowEntity";
+            VocabularyName = "Workflow Subworkflow Entity";
             KeyPrefix = "commonDataModel.workflowsubworkflowentity";
             KeySeparator = ".";
             Grouping = "/WorkflowSubworkflowEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WaitForComplete = group.Add(new VocabularyKey(nameof(WaitForComplete), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkflowNumber = group.Add(new VocabularyKey(nameof(WorkflowNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkflowId = group.Add(new VocabularyKey(nameof(WorkflowId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DocumentKeyField { get; private set; }
         public VocabularyKey DocumentKeyTable { get; private set; }
         public VocabularyKey ElementId { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WaitForComplete { get; private set; }
         public VocabularyKey WorkflowNumber { get; private set; }
         public VocabularyKey WorkflowId { get; private set; }
-
-
     }
 }

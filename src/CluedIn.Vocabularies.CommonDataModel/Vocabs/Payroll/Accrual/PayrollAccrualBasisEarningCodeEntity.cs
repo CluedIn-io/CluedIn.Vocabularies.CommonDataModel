@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollAccrualBasisEarningCodeEntityVocabulary()
         {
-            VocabularyName = "PayrollAccrualBasisEarningCodeEntity";
+            VocabularyName = "Payroll Accrual Basis Earning Code Entity";
             KeyPrefix = "commonDataModel.payrollaccrualbasisearningcodeentity";
             KeySeparator = ".";
             Grouping = "/PayrollAccrualBasisEarningCodeEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AccrualId = group.Add(new VocabularyKey(nameof(AccrualId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EarningCodeId = group.Add(new VocabularyKey(nameof(EarningCodeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EarningCodeGroupId = group.Add(new VocabularyKey(nameof(EarningCodeGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Accrual { get; private set; }
         public VocabularyKey AccrualRate { get; private set; }
         public VocabularyKey AccrualType { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AccrualId { get; private set; }
         public VocabularyKey EarningCodeId { get; private set; }
         public VocabularyKey EarningCodeGroupId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmPositionDefaultDimensionEntityVocabulary()
         {
-            VocabularyName = "HcmPositionDefaultDimensionEntity";
+            VocabularyName = "Hcm Position Default Dimension Entity";
             KeyPrefix = "commonDataModel.hcmpositiondefaultdimensionentity";
             KeySeparator = ".";
             Grouping = "/HcmPositionDefaultDimensionEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TemplateLegalEntityId = group.Add(new VocabularyKey(nameof(TemplateLegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PositionId = group.Add(new VocabularyKey(nameof(PositionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DimensionDisplayValue = group.Add(new VocabularyKey(nameof(DimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DistributionTemplate { get; private set; }
         public VocabularyKey Dimension { get; private set; }
         public VocabularyKey LegalEntity { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TemplateLegalEntityId { get; private set; }
         public VocabularyKey PositionId { get; private set; }
         public VocabularyKey DimensionDisplayValue { get; private set; }
-
-
     }
 }

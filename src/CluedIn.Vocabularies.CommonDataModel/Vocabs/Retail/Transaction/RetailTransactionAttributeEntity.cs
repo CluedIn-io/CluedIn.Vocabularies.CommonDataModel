@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailTransactionAttributeEntityVocabulary()
         {
-            VocabularyName = "RetailTransactionAttributeEntity";
+            VocabularyName = "Retail Transaction Attribute Entity";
             KeyPrefix = "commonDataModel.retailtransactionattributeentity";
             KeySeparator = ".";
             Grouping = "/RetailTransactionAttributeEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RetailChannelTableOMOperatingUnitId = group.Add(new VocabularyKey(nameof(RetailChannelTableOMOperatingUnitId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OperatingUnitNumber = group.Add(new VocabularyKey(nameof(OperatingUnitNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 HeaderOrLineNum = group.Add(new VocabularyKey(nameof(HeaderOrLineNum), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Channel { get; private set; }
         public VocabularyKey AttributeName { get; private set; }
         public VocabularyKey Terminal { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RetailChannelTableOMOperatingUnitId { get; private set; }
         public VocabularyKey OperatingUnitNumber { get; private set; }
         public VocabularyKey HeaderOrLineNum { get; private set; }
-
-
     }
 }

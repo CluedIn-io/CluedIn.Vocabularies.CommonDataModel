@@ -6,48 +6,44 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LinkedInLeadGenIntegrationConfigurationVocabulary()
         {
-            VocabularyName = "LinkedInLeadGenIntegrationConfiguration";
+            VocabularyName = "Linked In Lead Gen Integration Configuration";
             KeyPrefix = "commonDataModel.linkedinleadgenintegrationconfiguration";
             KeySeparator = ".";
             Grouping = "/LinkedInLeadGenIntegrationConfiguration";
 
             AddGroup("LinkedInLeadGenIntegrationConfiguration Details", group =>
             {
-                authenticationResource = group.Add(new VocabularyKey(nameof(authenticationResource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                authenticationTokenEndpoint = group.Add(new VocabularyKey(nameof(authenticationTokenEndpoint), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                authenticationType = group.Add(new VocabularyKey(nameof(authenticationType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                clientID = group.Add(new VocabularyKey(nameof(clientID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                configcacheexpirationdate = group.Add(new VocabularyKey(nameof(configcacheexpirationdate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                configcacheexpirationperiodinms = group.Add(new VocabularyKey(nameof(configcacheexpirationperiodinms), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                discoveryendpointurl = group.Add(new VocabularyKey(nameof(discoveryendpointurl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                linkedInConfigurationId = group.Add(new VocabularyKey(nameof(linkedInConfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                onMatchingFail = group.Add(new VocabularyKey(nameof(onMatchingFail), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                organizationConfig = group.Add(new VocabularyKey(nameof(organizationConfig), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                redirectURL = group.Add(new VocabularyKey(nameof(redirectURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                s2sinboundconfigurl = group.Add(new VocabularyKey(nameof(s2sinboundconfigurl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                servicePublicId = group.Add(new VocabularyKey(nameof(servicePublicId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                AuthenticationResource = group.Add(new VocabularyKey(nameof(AuthenticationResource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AuthenticationTokenEndpoint = group.Add(new VocabularyKey(nameof(AuthenticationTokenEndpoint), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AuthenticationType = group.Add(new VocabularyKey(nameof(AuthenticationType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ClientID = group.Add(new VocabularyKey(nameof(ClientID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Configcacheexpirationdate = group.Add(new VocabularyKey(nameof(Configcacheexpirationdate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Configcacheexpirationperiodinms = group.Add(new VocabularyKey(nameof(Configcacheexpirationperiodinms), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Discoveryendpointurl = group.Add(new VocabularyKey(nameof(Discoveryendpointurl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LinkedInConfigurationId = group.Add(new VocabularyKey(nameof(LinkedInConfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OnMatchingFail = group.Add(new VocabularyKey(nameof(OnMatchingFail), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OrganizationConfig = group.Add(new VocabularyKey(nameof(OrganizationConfig), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RedirectURL = group.Add(new VocabularyKey(nameof(RedirectURL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                S2sinboundconfigurl = group.Add(new VocabularyKey(nameof(S2sinboundconfigurl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ServicePublicId = group.Add(new VocabularyKey(nameof(ServicePublicId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey authenticationResource { get; private set; }
-        public VocabularyKey authenticationTokenEndpoint { get; private set; }
-        public VocabularyKey authenticationType { get; private set; }
-        public VocabularyKey clientID { get; private set; }
-        public VocabularyKey configcacheexpirationdate { get; private set; }
-        public VocabularyKey configcacheexpirationperiodinms { get; private set; }
-        public VocabularyKey discoveryendpointurl { get; private set; }
-        public VocabularyKey linkedInConfigurationId { get; private set; }
-        public VocabularyKey onMatchingFail { get; private set; }
-        public VocabularyKey organizationConfig { get; private set; }
-        public VocabularyKey redirectURL { get; private set; }
-        public VocabularyKey s2sinboundconfigurl { get; private set; }
-        public VocabularyKey servicePublicId { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey AuthenticationResource { get; private set; }
+        public VocabularyKey AuthenticationTokenEndpoint { get; private set; }
+        public VocabularyKey AuthenticationType { get; private set; }
+        public VocabularyKey ClientID { get; private set; }
+        public VocabularyKey Configcacheexpirationdate { get; private set; }
+        public VocabularyKey Configcacheexpirationperiodinms { get; private set; }
+        public VocabularyKey Discoveryendpointurl { get; private set; }
+        public VocabularyKey LinkedInConfigurationId { get; private set; }
+        public VocabularyKey OnMatchingFail { get; private set; }
+        public VocabularyKey OrganizationConfig { get; private set; }
+        public VocabularyKey RedirectURL { get; private set; }
+        public VocabularyKey S2sinboundconfigurl { get; private set; }
+        public VocabularyKey ServicePublicId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

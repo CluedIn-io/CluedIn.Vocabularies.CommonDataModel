@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RTax25LedgerIntervalEntityVocabulary()
         {
-            VocabularyName = "RTax25LedgerIntervalEntity";
+            VocabularyName = "R Tax 25 Ledger Interval Entity";
             KeyPrefix = "commonDataModel.rtax25ledgerintervalentity";
             KeySeparator = ".";
             Grouping = "/RTax25LedgerIntervalEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FromAccount = group.Add(new VocabularyKey(nameof(FromAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ToLedgerChartOfAccounts = group.Add(new VocabularyKey(nameof(ToLedgerChartOfAccounts), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ToAccount = group.Add(new VocabularyKey(nameof(ToAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IntervalGroup { get; private set; }
         public VocabularyKey FromLedgerChartOfAccounts { get; private set; }
         public VocabularyKey FromAccount { get; private set; }
         public VocabularyKey ToLedgerChartOfAccounts { get; private set; }
         public VocabularyKey ToAccount { get; private set; }
-
-
     }
 }

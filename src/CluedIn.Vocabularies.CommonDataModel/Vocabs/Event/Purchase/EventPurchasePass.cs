@@ -6,26 +6,22 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EventPurchasePassVocabulary()
         {
-            VocabularyName = "EventPurchasePass";
+            VocabularyName = "Event Purchase Pass";
             KeyPrefix = "commonDataModel.eventpurchasepass";
             KeySeparator = ".";
             Grouping = "/EventPurchasePass";
 
             AddGroup("EventPurchasePass Details", group =>
             {
-                eventPurchasePassId = group.Add(new VocabularyKey(nameof(eventPurchasePassId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                EventPurchasePassId = group.Add(new VocabularyKey(nameof(EventPurchasePassId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey eventPurchasePassId { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey EventPurchasePassId { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

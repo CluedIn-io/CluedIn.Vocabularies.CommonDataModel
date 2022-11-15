@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DirNameAffixEntityVocabulary()
         {
-            VocabularyName = "DirNameAffixEntity";
+            VocabularyName = "Dir Name Affix Entity";
             KeyPrefix = "commonDataModel.dirnameaffixentity";
             KeySeparator = ".";
             Grouping = "/DirNameAffixEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Affix = group.Add(new VocabularyKey(nameof(Affix), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Type = group.Add(new VocabularyKey(nameof(Type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Affix { get; private set; }
         public VocabularyKey Type { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

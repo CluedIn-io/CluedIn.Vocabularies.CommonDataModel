@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PaymentDayLineCdsV2EntityVocabulary()
         {
-            VocabularyName = "PaymentDayLineCdsV2Entity";
+            VocabularyName = "Payment Day Line Cds V2 Entity";
             KeyPrefix = "commonDataModel.paymentdaylinecdsv2entity";
             KeySeparator = ".";
             Grouping = "/PaymentDayLineCdsV2Entity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Frequency = group.Add(new VocabularyKey(nameof(Frequency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DayOfMonth = group.Add(new VocabularyKey(nameof(DayOfMonth), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DayOfWeek = group.Add(new VocabularyKey(nameof(DayOfWeek), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Name { get; private set; }
         public VocabularyKey LineNumber { get; private set; }
         public VocabularyKey Frequency { get; private set; }
         public VocabularyKey DayOfMonth { get; private set; }
         public VocabularyKey DayOfWeek { get; private set; }
-
-
     }
 }

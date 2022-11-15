@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendPaymentBIInvoicesPaidVocabulary()
         {
-            VocabularyName = "VendPaymentBIInvoicesPaid";
+            VocabularyName = "Vend Payment BI Invoices Paid";
             KeyPrefix = "commonDataModel.vendpaymentbiinvoicespaid";
             KeySeparator = ".";
             Grouping = "/VendPaymentBIInvoicesPaid";
@@ -31,10 +31,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AmountPaidLateMST = group.Add(new VocabularyKey(nameof(AmountPaidLateMST), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AmountPaidOnTimeCur = group.Add(new VocabularyKey(nameof(AmountPaidOnTimeCur), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AmountPaidOnTimeMST = group.Add(new VocabularyKey(nameof(AmountPaidOnTimeMST), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountNum { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey Invoice { get; private set; }
@@ -53,7 +51,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AmountPaidLateMST { get; private set; }
         public VocabularyKey AmountPaidOnTimeCur { get; private set; }
         public VocabularyKey AmountPaidOnTimeMST { get; private set; }
-
-
     }
 }

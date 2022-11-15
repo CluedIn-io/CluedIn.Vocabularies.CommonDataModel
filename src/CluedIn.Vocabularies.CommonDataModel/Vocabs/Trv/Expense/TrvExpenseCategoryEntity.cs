@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvExpenseCategoryEntityVocabulary()
         {
-            VocabularyName = "TrvExpenseCategoryEntity";
+            VocabularyName = "Trv Expense Category Entity";
             KeyPrefix = "commonDataModel.trvexpensecategoryentity";
             KeySeparator = ".";
             Grouping = "/TrvExpenseCategoryEntity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TaxItemGroupIfBilledToEmployee = group.Add(new VocabularyKey(nameof(TaxItemGroupIfBilledToEmployee), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StatisticsGroup = group.Add(new VocabularyKey(nameof(StatisticsGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(LedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountType { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey ExpenseCategory { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TaxItemGroupIfBilledToEmployee { get; private set; }
         public VocabularyKey StatisticsGroup { get; private set; }
         public VocabularyKey LedgerDimensionDisplayValue { get; private set; }
-
-
     }
 }

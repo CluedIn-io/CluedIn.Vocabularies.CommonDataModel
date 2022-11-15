@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollUSTaxTransactionHistorySummaryEntityVocabulary()
         {
-            VocabularyName = "PayrollUSTaxTransactionHistorySummaryEntity";
+            VocabularyName = "Payroll US Tax Transaction History Summary Entity";
             KeyPrefix = "commonDataModel.payrollustaxtransactionhistorysummaryentity";
             KeySeparator = ".";
             Grouping = "/PayrollUSTaxTransactionHistorySummaryEntity";
@@ -35,10 +35,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ActualCombinedTax = group.Add(new VocabularyKey(nameof(ActualCombinedTax), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SystemCalculatedTax = group.Add(new VocabularyKey(nameof(SystemCalculatedTax), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendInvoice = group.Add(new VocabularyKey(nameof(VendInvoice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Worker { get; private set; }
         public VocabularyKey PersonnelNumber { get; private set; }
         public VocabularyKey PayStatementNumber { get; private set; }
@@ -61,7 +59,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ActualCombinedTax { get; private set; }
         public VocabularyKey SystemCalculatedTax { get; private set; }
         public VocabularyKey VendInvoice { get; private set; }
-
-
     }
 }

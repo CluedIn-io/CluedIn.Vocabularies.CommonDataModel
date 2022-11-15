@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ConfiguratorDefinitionGroupEntityVocabulary()
         {
-            VocabularyName = "ConfiguratorDefinitionGroupEntity";
+            VocabularyName = "Configurator Definition Group Entity";
             KeyPrefix = "commonDataModel.configuratordefinitiongroupentity";
             KeySeparator = ".";
             Grouping = "/ConfiguratorDefinitionGroupEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsQueryBased = group.Add(new VocabularyKey(nameof(IsQueryBased), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 QueryTitle = group.Add(new VocabularyKey(nameof(QueryTitle), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DefinitionGroupId { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey IsQueryBased { get; private set; }
         public VocabularyKey QueryTitle { get; private set; }
-
-
     }
 }

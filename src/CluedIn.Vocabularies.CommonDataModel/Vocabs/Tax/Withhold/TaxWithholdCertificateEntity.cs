@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TaxWithholdCertificateEntityVocabulary()
         {
-            VocabularyName = "TaxWithholdCertificateEntity";
+            VocabularyName = "Tax Withhold Certificate Entity";
             KeyPrefix = "commonDataModel.taxwithholdcertificateentity";
             KeySeparator = ".";
             Grouping = "/TaxWithholdCertificateEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Date = group.Add(new VocabularyKey(nameof(Date), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AccountDisplayValue = group.Add(new VocabularyKey(nameof(AccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Account = group.Add(new VocabularyKey(nameof(Account), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CertificateAmount { get; private set; }
         public VocabularyKey CertificateNumber { get; private set; }
         public VocabularyKey Closed { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Date { get; private set; }
         public VocabularyKey AccountDisplayValue { get; private set; }
         public VocabularyKey Account { get; private set; }
-
-
     }
 }

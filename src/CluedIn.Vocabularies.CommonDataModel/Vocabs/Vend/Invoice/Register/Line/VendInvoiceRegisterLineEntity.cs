@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendInvoiceRegisterLineEntityVocabulary()
         {
-            VocabularyName = "VendInvoiceRegisterLineEntity";
+            VocabularyName = "Vend Invoice Register Line Entity";
             KeyPrefix = "commonDataModel.vendinvoiceregisterlineentity";
             KeySeparator = ".";
             Grouping = "/VendInvoiceRegisterLineEntity";
@@ -77,10 +77,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ChineseVoucherType = group.Add(new VocabularyKey(nameof(ChineseVoucherType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ChineseVoucher = group.Add(new VocabularyKey(nameof(ChineseVoucher), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsWithholdingTaxCalculate = group.Add(new VocabularyKey(nameof(IsWithholdingTaxCalculate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Company { get; private set; }
         public VocabularyKey AccountType { get; private set; }
         public VocabularyKey Credit { get; private set; }
@@ -145,7 +143,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ChineseVoucherType { get; private set; }
         public VocabularyKey ChineseVoucher { get; private set; }
         public VocabularyKey IsWithholdingTaxCalculate { get; private set; }
-
-
     }
 }

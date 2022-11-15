@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerMatrixAccountReportSetupEntityVocabulary()
         {
-            VocabularyName = "LedgerMatrixAccountReportSetupEntity";
+            VocabularyName = "Ledger Matrix Account Report Setup Entity";
             KeyPrefix = "commonDataModel.ledgermatrixaccountreportsetupentity";
             KeySeparator = ".";
             Grouping = "/LedgerMatrixAccountReportSetupEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 MainAccountId = group.Add(new VocabularyKey(nameof(MainAccountId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SubLevelMainAccount = group.Add(new VocabularyKey(nameof(SubLevelMainAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SubLevelMainAccountId = group.Add(new VocabularyKey(nameof(SubLevelMainAccountId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountMatrix { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey Format { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey MainAccountId { get; private set; }
         public VocabularyKey SubLevelMainAccount { get; private set; }
         public VocabularyKey SubLevelMainAccountId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DirExternalRoleEntityVocabulary()
         {
-            VocabularyName = "DirExternalRoleEntity";
+            VocabularyName = "Dir External Role Entity";
             KeyPrefix = "commonDataModel.direxternalroleentity";
             KeySeparator = ".";
             Grouping = "/DirExternalRoleEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 Role = group.Add(new VocabularyKey(nameof(Role), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Type = group.Add(new VocabularyKey(nameof(Type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Role { get; private set; }
         public VocabularyKey Type { get; private set; }
-
-
     }
 }

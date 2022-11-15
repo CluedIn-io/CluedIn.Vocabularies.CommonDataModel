@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustCollectionsBICreditVocabulary()
         {
-            VocabularyName = "CustCollectionsBICredit";
+            VocabularyName = "Cust Collections BI Credit";
             KeyPrefix = "commonDataModel.custcollectionsbicredit";
             KeySeparator = ".";
             Grouping = "/CustCollectionsBICredit";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CreditRemaining = group.Add(new VocabularyKey(nameof(CreditRemaining), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AmountOverCreditLimit = group.Add(new VocabularyKey(nameof(AmountOverCreditLimit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SystemCurrencyCreditMax = group.Add(new VocabularyKey(nameof(SystemCurrencyCreditMax), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountNum { get; private set; }
         public VocabularyKey Company { get; private set; }
         public VocabularyKey CreditRating { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CreditRemaining { get; private set; }
         public VocabularyKey AmountOverCreditLimit { get; private set; }
         public VocabularyKey SystemCurrencyCreditMax { get; private set; }
-
-
     }
 }

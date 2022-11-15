@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PCProductConfigurationModelV2EntityVocabulary()
         {
-            VocabularyName = "PCProductConfigurationModelV2Entity";
+            VocabularyName = "PC Product Configuration Model V2 Entity";
             KeyPrefix = "commonDataModel.pcproductconfigurationmodelv2entity";
             KeySeparator = ".";
             Grouping = "/PCProductConfigurationModelV2Entity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 ModelName = group.Add(new VocabularyKey(nameof(ModelName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ModelXml = group.Add(new VocabularyKey(nameof(ModelXml), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ModelName { get; private set; }
         public VocabularyKey ModelXml { get; private set; }
-
-
     }
 }

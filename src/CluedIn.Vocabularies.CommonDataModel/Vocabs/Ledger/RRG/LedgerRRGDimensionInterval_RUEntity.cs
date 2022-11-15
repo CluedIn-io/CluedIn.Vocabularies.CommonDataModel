@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerRRGDimensionInterval_RUEntityVocabulary()
         {
-            VocabularyName = "LedgerRRGDimensionInterval_RUEntity";
+            VocabularyName = "Ledger RRG Dimension Interval _RU Entity";
             KeyPrefix = "commonDataModel.ledgerrrgdimensioninterval_ruentity";
             KeySeparator = ".";
             Grouping = "/LedgerRRGDimensionInterval_RUEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DimTableID = group.Add(new VocabularyKey(nameof(DimTableID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RefLineId = group.Add(new VocabularyKey(nameof(RefLineId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RefTableName = group.Add(new VocabularyKey(nameof(RefTableName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DimensionAttributeName { get; private set; }
         public VocabularyKey DimensionFromValue { get; private set; }
         public VocabularyKey DimensionToValue { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DimTableID { get; private set; }
         public VocabularyKey RefLineId { get; private set; }
         public VocabularyKey RefTableName { get; private set; }
-
-
     }
 }

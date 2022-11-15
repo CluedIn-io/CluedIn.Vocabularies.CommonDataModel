@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseReplenishmentTemplateEntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseReplenishmentTemplateEntity";
+            VocabularyName = "WHS Warehouse Replenishment Template Entity";
             KeyPrefix = "commonDataModel.whswarehousereplenishmenttemplateentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseReplenishmentTemplateEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WaveStepCode = group.Add(new VocabularyKey(nameof(WaveStepCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillCreatedReplenishmentWorkAllowUsingUnreservedQuantities = group.Add(new VocabularyKey(nameof(WillCreatedReplenishmentWorkAllowUsingUnreservedQuantities), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillDemandCancellationCancelReplenishment = group.Add(new VocabularyKey(nameof(WillDemandCancellationCancelReplenishment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TemplateId { get; private set; }
         public VocabularyKey TemplateDescription { get; private set; }
         public VocabularyKey TemplateType { get; private set; }
         public VocabularyKey WaveStepCode { get; private set; }
         public VocabularyKey WillCreatedReplenishmentWorkAllowUsingUnreservedQuantities { get; private set; }
         public VocabularyKey WillDemandCancellationCancelReplenishment { get; private set; }
-
-
     }
 }

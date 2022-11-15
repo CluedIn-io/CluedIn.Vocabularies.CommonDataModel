@@ -6,18 +6,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProcessSessionVocabulary()
         {
-            VocabularyName = "ProcessSession";
+            VocabularyName = "Process Session";
             KeyPrefix = "commonDataModel.processsession";
             KeySeparator = ".";
             Grouping = "/ProcessSession";
 
             AddGroup("ProcessSession Details", group =>
             {
-
             });
         }
-
-
-
     }
 }

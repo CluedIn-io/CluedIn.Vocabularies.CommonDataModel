@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesPackageAppearanceEntityVocabulary()
         {
-            VocabularyName = "SalesPackageAppearanceEntity";
+            VocabularyName = "Sales Package Appearance Entity";
             KeyPrefix = "commonDataModel.salespackageappearanceentity";
             KeySeparator = ".";
             Grouping = "/SalesPackageAppearanceEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 AppearanceId = group.Add(new VocabularyKey(nameof(AppearanceId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AppearanceDescription = group.Add(new VocabularyKey(nameof(AppearanceDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AppearanceId { get; private set; }
         public VocabularyKey AppearanceDescription { get; private set; }
-
-
     }
 }

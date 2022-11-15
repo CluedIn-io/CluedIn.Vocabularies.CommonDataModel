@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPurchaseAgreementLineFulfillmentEntityVocabulary()
         {
-            VocabularyName = "PurchPurchaseAgreementLineFulfillmentEntity";
+            VocabularyName = "Purch Purchase Agreement Line Fulfillment Entity";
             KeyPrefix = "commonDataModel.purchpurchaseagreementlinefulfillmententity";
             KeySeparator = ".";
             Grouping = "/PurchPurchaseAgreementLineFulfillmentEntity";
@@ -32,10 +32,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ReleasedAmount = group.Add(new VocabularyKey(nameof(ReleasedAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReceivedAmount = group.Add(new VocabularyKey(nameof(ReceivedAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InvoicedAmount = group.Add(new VocabularyKey(nameof(InvoicedAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PurchaseAgreementLegalEntityId { get; private set; }
         public VocabularyKey PurchaseAgreementId { get; private set; }
         public VocabularyKey LineNumber { get; private set; }
@@ -55,7 +53,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ReleasedAmount { get; private set; }
         public VocabularyKey ReceivedAmount { get; private set; }
         public VocabularyKey InvoicedAmount { get; private set; }
-
-
     }
 }

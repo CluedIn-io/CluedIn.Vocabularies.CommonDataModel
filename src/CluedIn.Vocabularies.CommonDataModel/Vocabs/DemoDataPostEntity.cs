@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DemoDataPostEntityVocabulary()
         {
-            VocabularyName = "DemoDataPostEntity";
+            VocabularyName = "Demo Data Post Entity";
             KeyPrefix = "commonDataModel.demodatapostentity";
             KeySeparator = ".";
             Grouping = "/DemoDataPostEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProcessOnImport = group.Add(new VocabularyKey(nameof(ProcessOnImport), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DemoDataJobStatus = group.Add(new VocabularyKey(nameof(DemoDataJobStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DataProjectId = group.Add(new VocabularyKey(nameof(DataProjectId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DemoDataJob { get; private set; }
         public VocabularyKey LineNum { get; private set; }
         public VocabularyKey Document { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProcessOnImport { get; private set; }
         public VocabularyKey DemoDataJobStatus { get; private set; }
         public VocabularyKey DataProjectId { get; private set; }
-
-
     }
 }

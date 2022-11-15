@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmTotalCompStatementSectionBenefitEntityVocabulary()
         {
-            VocabularyName = "HcmTotalCompStatementSectionBenefitEntity";
+            VocabularyName = "Hcm Total Comp Statement Section Benefit Entity";
             KeyPrefix = "commonDataModel.hcmtotalcompstatementsectionbenefitentity";
             KeySeparator = ".";
             Grouping = "/HcmTotalCompStatementSectionBenefitEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 StatementSection = group.Add(new VocabularyKey(nameof(StatementSection), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BenefitId = group.Add(new VocabularyKey(nameof(BenefitId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 StatementSectionId = group.Add(new VocabularyKey(nameof(StatementSectionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Benefit { get; private set; }
         public VocabularyKey StatementSection { get; private set; }
         public VocabularyKey BenefitId { get; private set; }
         public VocabularyKey StatementSectionId { get; private set; }
-
-
     }
 }

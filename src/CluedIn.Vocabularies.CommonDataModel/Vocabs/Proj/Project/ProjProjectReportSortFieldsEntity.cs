@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjProjectReportSortFieldsEntityVocabulary()
         {
-            VocabularyName = "ProjProjectReportSortFieldsEntity";
+            VocabularyName = "Proj Project Report Sort Fields Entity";
             KeyPrefix = "commonDataModel.projprojectreportsortfieldsentity";
             KeySeparator = ".";
             Grouping = "/ProjProjectReportSortFieldsEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SortCode = group.Add(new VocabularyKey(nameof(SortCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SortingId = group.Add(new VocabularyKey(nameof(SortingId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey SortCode { get; private set; }
         public VocabularyKey SortingId { get; private set; }
-
-
     }
 }

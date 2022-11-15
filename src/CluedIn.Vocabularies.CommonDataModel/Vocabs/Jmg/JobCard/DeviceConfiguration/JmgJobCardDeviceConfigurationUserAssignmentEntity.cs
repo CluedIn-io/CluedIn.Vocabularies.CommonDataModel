@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgJobCardDeviceConfigurationUserAssignmentEntityVocabulary()
         {
-            VocabularyName = "JmgJobCardDeviceConfigurationUserAssignmentEntity";
+            VocabularyName = "Jmg Job Card Device Configuration User Assignment Entity";
             KeyPrefix = "commonDataModel.jmgjobcarddeviceconfigurationuserassignmententity";
             KeySeparator = ".";
             Grouping = "/JmgJobCardDeviceConfigurationUserAssignmentEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 JobCardDeviceConfigurationId = group.Add(new VocabularyKey(nameof(JobCardDeviceConfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SystemUserRecId = group.Add(new VocabularyKey(nameof(SystemUserRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SystemUserId = group.Add(new VocabularyKey(nameof(SystemUserId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey JobCardDeviceConfigurationRecId { get; private set; }
         public VocabularyKey JobCardDeviceConfigurationId { get; private set; }
         public VocabularyKey SystemUserRecId { get; private set; }
         public VocabularyKey SystemUserId { get; private set; }
-
-
     }
 }

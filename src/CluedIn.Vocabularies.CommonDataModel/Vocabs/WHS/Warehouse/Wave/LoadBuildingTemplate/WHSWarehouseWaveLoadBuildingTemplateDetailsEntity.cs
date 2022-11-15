@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseWaveLoadBuildingTemplateDetailsEntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseWaveLoadBuildingTemplateDetailsEntity";
+            VocabularyName = "WHS Warehouse Wave Load Building Template Details Entity";
             KeyPrefix = "commonDataModel.whswarehousewaveloadbuildingtemplatedetailsentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseWaveLoadBuildingTemplateDetailsEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LineNumber = group.Add(new VocabularyKey(nameof(LineNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GroupFieldName = group.Add(new VocabularyKey(nameof(GroupFieldName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 GroupTableName = group.Add(new VocabularyKey(nameof(GroupTableName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WarehouseWaveLoadBuildingTemplateName { get; private set; }
         public VocabularyKey BreakBy { get; private set; }
         public VocabularyKey GroupFieldId { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LineNumber { get; private set; }
         public VocabularyKey GroupFieldName { get; private set; }
         public VocabularyKey GroupTableName { get; private set; }
-
-
     }
 }

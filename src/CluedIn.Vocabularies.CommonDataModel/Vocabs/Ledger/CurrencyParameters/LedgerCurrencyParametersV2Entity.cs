@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerCurrencyParametersV2EntityVocabulary()
         {
-            VocabularyName = "LedgerCurrencyParametersV2Entity";
+            VocabularyName = "Ledger Currency Parameters V2 Entity";
             KeyPrefix = "commonDataModel.ledgercurrencyparametersv2entity";
             KeySeparator = ".";
             Grouping = "/LedgerCurrencyParametersV2Entity";
@@ -90,10 +90,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 UnrealizedProfitCustLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(UnrealizedProfitCustLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UnrealizedProfitEmplLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(UnrealizedProfitEmplLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UnrealizedProfitVendLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(UnrealizedProfitVendLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CurConvertLossLedgerDimension { get; private set; }
         public VocabularyKey CurConvertProfitLedgerDimension { get; private set; }
         public VocabularyKey CurrencyCode { get; private set; }
@@ -171,7 +169,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey UnrealizedProfitCustLedgerDimensionDisplayValue { get; private set; }
         public VocabularyKey UnrealizedProfitEmplLedgerDimensionDisplayValue { get; private set; }
         public VocabularyKey UnrealizedProfitVendLedgerDimensionDisplayValue { get; private set; }
-
-
     }
 }

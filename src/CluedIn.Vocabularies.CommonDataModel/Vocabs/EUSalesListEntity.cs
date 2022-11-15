@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EUSalesListEntityVocabulary()
         {
-            VocabularyName = "EUSalesListEntity";
+            VocabularyName = "EU Sales List Entity";
             KeyPrefix = "commonDataModel.eusaleslistentity";
             KeySeparator = ".";
             Grouping = "/EUSalesListEntity";
@@ -54,10 +54,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OriginalSalesListNumber = group.Add(new VocabularyKey(nameof(OriginalSalesListNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CompanyTaxID = group.Add(new VocabularyKey(nameof(CompanyTaxID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxReportingCurrencyCode = group.Add(new VocabularyKey(nameof(TaxReportingCurrencyCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Status { get; private set; }
         public VocabularyKey DispatchId { get; private set; }
         public VocabularyKey Number { get; private set; }
@@ -99,7 +97,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OriginalSalesListNumber { get; private set; }
         public VocabularyKey CompanyTaxID { get; private set; }
         public VocabularyKey TaxReportingCurrencyCode { get; private set; }
-
-
     }
 }

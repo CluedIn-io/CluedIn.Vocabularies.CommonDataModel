@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProductionCostComparisonEntityVocabulary()
         {
-            VocabularyName = "ProductionCostComparisonEntity";
+            VocabularyName = "Production Cost Comparison Entity";
             KeyPrefix = "commonDataModel.productioncostcomparisonentity";
             KeySeparator = ".";
             Grouping = "/ProductionCostComparisonEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 EstimatedProductionCostAmount = group.Add(new VocabularyKey(nameof(EstimatedProductionCostAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RealizedProductionCostAmount = group.Add(new VocabularyKey(nameof(RealizedProductionCostAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductionVarianceAmount = group.Add(new VocabularyKey(nameof(ProductionVarianceAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ManufacturedItemNumber { get; private set; }
         public VocabularyKey ProductionOrderNumber { get; private set; }
         public VocabularyKey ProductionSiteId { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey EstimatedProductionCostAmount { get; private set; }
         public VocabularyKey RealizedProductionCostAmount { get; private set; }
         public VocabularyKey ProductionVarianceAmount { get; private set; }
-
-
     }
 }

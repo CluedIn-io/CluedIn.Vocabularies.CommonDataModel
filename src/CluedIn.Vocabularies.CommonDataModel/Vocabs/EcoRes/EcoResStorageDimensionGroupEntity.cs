@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResStorageDimensionGroupEntityVocabulary()
         {
-            VocabularyName = "EcoResStorageDimensionGroupEntity";
+            VocabularyName = "Eco Res Storage Dimension Group Entity";
             KeyPrefix = "commonDataModel.ecoresstoragedimensiongroupentity";
             KeySeparator = ".";
             Grouping = "/EcoResStorageDimensionGroupEntity";
@@ -33,10 +33,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WillCoveragePlanningUseInventoryStatus = group.Add(new VocabularyKey(nameof(WillCoveragePlanningUseInventoryStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillPurchasePriceSearchUseInventoryStatus = group.Add(new VocabularyKey(nameof(WillPurchasePriceSearchUseInventoryStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillSalesPriceSearchUseInventoryStatus = group.Add(new VocabularyKey(nameof(WillSalesPriceSearchUseInventoryStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey GroupName { get; private set; }
         public VocabularyKey GroupDescription { get; private set; }
         public VocabularyKey IsWarehouseMandatory { get; private set; }
@@ -57,7 +55,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WillCoveragePlanningUseInventoryStatus { get; private set; }
         public VocabularyKey WillPurchasePriceSearchUseInventoryStatus { get; private set; }
         public VocabularyKey WillSalesPriceSearchUseInventoryStatus { get; private set; }
-
-
     }
 }

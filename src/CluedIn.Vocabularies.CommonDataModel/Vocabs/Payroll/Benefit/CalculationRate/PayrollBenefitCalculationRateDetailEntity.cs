@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollBenefitCalculationRateDetailEntityVocabulary()
         {
-            VocabularyName = "PayrollBenefitCalculationRateDetailEntity";
+            VocabularyName = "Payroll Benefit Calculation Rate Detail Entity";
             KeyPrefix = "commonDataModel.payrollbenefitcalculationratedetailentity";
             KeySeparator = ".";
             Grouping = "/PayrollBenefitCalculationRateDetailEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Effective = group.Add(new VocabularyKey(nameof(Effective), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Expiration = group.Add(new VocabularyKey(nameof(Expiration), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BenefitCalculationRateVersion { get; private set; }
         public VocabularyKey ContributionMethod { get; private set; }
         public VocabularyKey WorkerDeduction { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Effective { get; private set; }
         public VocabularyKey Expiration { get; private set; }
         public VocabularyKey Name { get; private set; }
-
-
     }
 }

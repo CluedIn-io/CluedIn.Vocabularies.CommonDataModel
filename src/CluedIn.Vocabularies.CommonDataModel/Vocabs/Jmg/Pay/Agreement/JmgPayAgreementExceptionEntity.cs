@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgPayAgreementExceptionEntityVocabulary()
         {
-            VocabularyName = "JmgPayAgreementExceptionEntity";
+            VocabularyName = "Jmg Pay Agreement Exception Entity";
             KeyPrefix = "commonDataModel.jmgpayagreementexceptionentity";
             KeySeparator = ".";
             Grouping = "/JmgPayAgreementExceptionEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AbsenceCode = group.Add(new VocabularyKey(nameof(AbsenceCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FixedPayRate = group.Add(new VocabularyKey(nameof(FixedPayRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsIncludedInPayAgreement = group.Add(new VocabularyKey(nameof(IsIncludedInPayAgreement), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ExceptionId { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey AbsenceCode { get; private set; }
         public VocabularyKey FixedPayRate { get; private set; }
         public VocabularyKey IsIncludedInPayAgreement { get; private set; }
-
-
     }
 }

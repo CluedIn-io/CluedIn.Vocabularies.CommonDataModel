@@ -6,42 +6,38 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustomChannelActivityVocabulary()
         {
-            VocabularyName = "CustomChannelActivity";
+            VocabularyName = "Custom Channel Activity";
             KeyPrefix = "commonDataModel.customchannelactivity";
             KeySeparator = ".";
             Grouping = "/CustomChannelActivity";
 
             AddGroup("CustomChannelActivity Details", group =>
             {
-                activityID = group.Add(new VocabularyKey(nameof(activityID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                customerJourneyId = group.Add(new VocabularyKey(nameof(customerJourneyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                customerjourneycustomchannelactivityId = group.Add(new VocabularyKey(nameof(customerjourneycustomchannelactivityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                contactId = group.Add(new VocabularyKey(nameof(contactId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                entityID = group.Add(new VocabularyKey(nameof(entityID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                entityType = group.Add(new VocabularyKey(nameof(entityType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdName = group.Add(new VocabularyKey(nameof(ownerIdName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdType = group.Add(new VocabularyKey(nameof(ownerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                ownerIdYomiName = group.Add(new VocabularyKey(nameof(ownerIdYomiName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                ActivityID = group.Add(new VocabularyKey(nameof(ActivityID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CustomerJourneyId = group.Add(new VocabularyKey(nameof(CustomerJourneyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CustomerjourneycustomchannelactivityId = group.Add(new VocabularyKey(nameof(CustomerjourneycustomchannelactivityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ContactId = group.Add(new VocabularyKey(nameof(ContactId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EntityID = group.Add(new VocabularyKey(nameof(EntityID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EntityType = group.Add(new VocabularyKey(nameof(EntityType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdName = group.Add(new VocabularyKey(nameof(OwnerIdName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdType = group.Add(new VocabularyKey(nameof(OwnerIdType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdYomiName = group.Add(new VocabularyKey(nameof(OwnerIdYomiName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey activityID { get; private set; }
-        public VocabularyKey customerJourneyId { get; private set; }
-        public VocabularyKey customerjourneycustomchannelactivityId { get; private set; }
-        public VocabularyKey contactId { get; private set; }
-        public VocabularyKey entityID { get; private set; }
-        public VocabularyKey entityType { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey ownerIdName { get; private set; }
-        public VocabularyKey ownerIdType { get; private set; }
-        public VocabularyKey ownerIdYomiName { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey ActivityID { get; private set; }
+        public VocabularyKey CustomerJourneyId { get; private set; }
+        public VocabularyKey CustomerjourneycustomchannelactivityId { get; private set; }
+        public VocabularyKey ContactId { get; private set; }
+        public VocabularyKey EntityID { get; private set; }
+        public VocabularyKey EntityType { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OwnerIdName { get; private set; }
+        public VocabularyKey OwnerIdType { get; private set; }
+        public VocabularyKey OwnerIdYomiName { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

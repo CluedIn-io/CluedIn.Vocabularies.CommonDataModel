@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerVoucherTypeEntityVocabulary()
         {
-            VocabularyName = "LedgerVoucherTypeEntity";
+            VocabularyName = "Ledger Voucher Type Entity";
             KeyPrefix = "commonDataModel.ledgervouchertypeentity";
             KeySeparator = ".";
             Grouping = "/LedgerVoucherTypeEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LedgerPrintLayoutGroup = group.Add(new VocabularyKey(nameof(LedgerPrintLayoutGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NumberSequenceCode = group.Add(new VocabularyKey(nameof(NumberSequenceCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NumberSequenceScope = group.Add(new VocabularyKey(nameof(NumberSequenceScope), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DefaultApproverRecId { get; private set; }
         public VocabularyKey JournalName { get; private set; }
         public VocabularyKey DefaultPreparedByWorkerRecId { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LedgerPrintLayoutGroup { get; private set; }
         public VocabularyKey NumberSequenceCode { get; private set; }
         public VocabularyKey NumberSequenceScope { get; private set; }
-
-
     }
 }

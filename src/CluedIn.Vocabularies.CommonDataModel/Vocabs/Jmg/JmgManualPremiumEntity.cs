@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgManualPremiumEntityVocabulary()
         {
-            VocabularyName = "JmgManualPremiumEntity";
+            VocabularyName = "Jmg Manual Premium Entity";
             KeyPrefix = "commonDataModel.jmgmanualpremiumentity";
             KeySeparator = ".";
             Grouping = "/JmgManualPremiumEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PayCostType = group.Add(new VocabularyKey(nameof(PayCostType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(DefaultLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DefaultLedgerDimension { get; private set; }
         public VocabularyKey PremiumCode { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey PayCostType { get; private set; }
         public VocabularyKey DefaultLedgerDimensionDisplayValue { get; private set; }
-
-
     }
 }

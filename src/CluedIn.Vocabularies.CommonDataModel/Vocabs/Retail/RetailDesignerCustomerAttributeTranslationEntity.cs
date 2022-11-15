@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailDesignerCustomerAttributeTranslationEntityVocabulary()
         {
-            VocabularyName = "RetailDesignerCustomerAttributeTranslationEntity";
+            VocabularyName = "Retail Designer Customer Attribute Translation Entity";
             KeyPrefix = "commonDataModel.retaildesignercustomerattributetranslationentity";
             KeySeparator = ".";
             Grouping = "/RetailDesignerCustomerAttributeTranslationEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LanguageId = group.Add(new VocabularyKey(nameof(LanguageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TranslatedAttributeFriendlyName = group.Add(new VocabularyKey(nameof(TranslatedAttributeFriendlyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DefaultAttributeFriendlyName = group.Add(new VocabularyKey(nameof(DefaultAttributeFriendlyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AttributeTypeName { get; private set; }
         public VocabularyKey AttributeName { get; private set; }
         public VocabularyKey LanguageId { get; private set; }
         public VocabularyKey TranslatedAttributeFriendlyName { get; private set; }
         public VocabularyKey DefaultAttributeFriendlyName { get; private set; }
-
-
     }
 }

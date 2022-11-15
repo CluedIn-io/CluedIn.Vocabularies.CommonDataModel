@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerBalanceSheetDefinitionEntityVocabulary()
         {
-            VocabularyName = "LedgerBalanceSheetDefinitionEntity";
+            VocabularyName = "Ledger Balance Sheet Definition Entity";
             KeyPrefix = "commonDataModel.ledgerbalancesheetdefinitionentity";
             KeySeparator = ".";
             Grouping = "/LedgerBalanceSheetDefinitionEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AdjustmentGroupOfAccounts = group.Add(new VocabularyKey(nameof(AdjustmentGroupOfAccounts), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AdjustmentMainAccount = group.Add(new VocabularyKey(nameof(AdjustmentMainAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AdjustmentLineId = group.Add(new VocabularyKey(nameof(AdjustmentLineId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LineType { get; private set; }
         public VocabularyKey Line { get; private set; }
         public VocabularyKey Mark { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AdjustmentGroupOfAccounts { get; private set; }
         public VocabularyKey AdjustmentMainAccount { get; private set; }
         public VocabularyKey AdjustmentLineId { get; private set; }
-
-
     }
 }

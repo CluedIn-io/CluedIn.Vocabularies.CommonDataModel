@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseWorkAuditTemplateLineEntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseWorkAuditTemplateLineEntity";
+            VocabularyName = "WHS Warehouse Work Audit Template Line Entity";
             KeyPrefix = "commonDataModel.whswarehouseworkaudittemplatelineentity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseWorkAuditTemplateLineEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LineEventFunctionEvent = group.Add(new VocabularyKey(nameof(LineEventFunctionEvent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WarehouseWorkAuditTemplateId = group.Add(new VocabularyKey(nameof(WarehouseWorkAuditTemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineReportFunctionReportName = group.Add(new VocabularyKey(nameof(LineReportFunctionReportName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LineFunctionType { get; private set; }
         public VocabularyKey MobileDeviceMenuLabel { get; private set; }
         public VocabularyKey LineSequenceNumber { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LineEventFunctionEvent { get; private set; }
         public VocabularyKey WarehouseWorkAuditTemplateId { get; private set; }
         public VocabularyKey LineReportFunctionReportName { get; private set; }
-
-
     }
 }

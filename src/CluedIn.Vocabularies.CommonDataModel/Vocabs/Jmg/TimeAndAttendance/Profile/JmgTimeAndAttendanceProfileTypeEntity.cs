@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgTimeAndAttendanceProfileTypeEntityVocabulary()
         {
-            VocabularyName = "JmgTimeAndAttendanceProfileTypeEntity";
+            VocabularyName = "Jmg Time And Attendance Profile Type Entity";
             KeyPrefix = "commonDataModel.jmgtimeandattendanceprofiletypeentity";
             KeySeparator = ".";
             Grouping = "/JmgTimeAndAttendanceProfileTypeEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProfileTypeId = group.Add(new VocabularyKey(nameof(ProfileTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProfileSpecificationTypeCode = group.Add(new VocabularyKey(nameof(ProfileSpecificationTypeCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProfileTypeId { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey ProfileSpecificationTypeCode { get; private set; }
-
-
     }
 }

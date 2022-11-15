@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSWarehouseWorkLineBIEntityVocabulary()
         {
-            VocabularyName = "WHSWarehouseWorkLineBIEntity";
+            VocabularyName = "WHS Warehouse Work Line BI Entity";
             KeyPrefix = "commonDataModel.whswarehouseworklinebientity";
             KeySeparator = ".";
             Grouping = "/WHSWarehouseWorkLineBIEntity";
@@ -73,10 +73,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WorkStatus = group.Add(new VocabularyKey(nameof(WorkStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkTransactionType = group.Add(new VocabularyKey(nameof(WorkTransactionType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkType = group.Add(new VocabularyKey(nameof(WorkType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ActualWorkLineProcessingTime { get; private set; }
         public VocabularyKey ActualWorkProcessingTime { get; private set; }
         public VocabularyKey ContainerId { get; private set; }
@@ -137,7 +135,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WorkStatus { get; private set; }
         public VocabularyKey WorkTransactionType { get; private set; }
         public VocabularyKey WorkType { get; private set; }
-
-
     }
 }

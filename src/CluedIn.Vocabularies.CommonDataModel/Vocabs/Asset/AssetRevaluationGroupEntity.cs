@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetRevaluationGroupEntityVocabulary()
         {
-            VocabularyName = "AssetRevaluationGroupEntity";
+            VocabularyName = "Asset Revaluation Group Entity";
             KeyPrefix = "commonDataModel.assetrevaluationgroupentity";
             KeySeparator = ".";
             Grouping = "/AssetRevaluationGroupEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Factor = group.Add(new VocabularyKey(nameof(Factor), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransDate = group.Add(new VocabularyKey(nameof(TransDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Id { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey Factor { get; private set; }
         public VocabularyKey TransDate { get; private set; }
-
-
     }
 }

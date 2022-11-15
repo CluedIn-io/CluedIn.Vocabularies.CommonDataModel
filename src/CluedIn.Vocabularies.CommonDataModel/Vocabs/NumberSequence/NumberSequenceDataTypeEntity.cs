@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public NumberSequenceDataTypeEntityVocabulary()
         {
-            VocabularyName = "NumberSequenceDataTypeEntity";
+            VocabularyName = "Number Sequence Data Type Entity";
             KeyPrefix = "commonDataModel.numbersequencedatatypeentity";
             KeySeparator = ".";
             Grouping = "/NumberSequenceDataTypeEntity";
@@ -31,10 +31,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 NumberSequenceArea = group.Add(new VocabularyKey(nameof(NumberSequenceArea), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PartitionKey = group.Add(new VocabularyKey(nameof(PartitionKey), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ID { get; private set; }
         public VocabularyKey DataType { get; private set; }
         public VocabularyKey TypeID { get; private set; }
@@ -53,7 +51,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey NumberSequenceArea { get; private set; }
         public VocabularyKey PartitionKey { get; private set; }
         public VocabularyKey Name { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HMIMPackingInstructionEntityVocabulary()
         {
-            VocabularyName = "HMIMPackingInstructionEntity";
+            VocabularyName = "HMIM Packing Instruction Entity";
             KeyPrefix = "commonDataModel.hmimpackinginstructionentity";
             KeySeparator = ".";
             Grouping = "/HMIMPackingInstructionEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 PackInstCode = group.Add(new VocabularyKey(nameof(PackInstCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PackInstCode { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

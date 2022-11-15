@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResProductAttributeValueTypeEntityVocabulary()
         {
-            VocabularyName = "EcoResProductAttributeValueTypeEntity";
+            VocabularyName = "Eco Res Product Attribute Value Type Entity";
             KeyPrefix = "commonDataModel.ecoresproductattributevaluetypeentity";
             KeySeparator = ".";
             Grouping = "/EcoResProductAttributeValueTypeEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LowerIntegerValue = group.Add(new VocabularyKey(nameof(LowerIntegerValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UpperIntegerValue = group.Add(new VocabularyKey(nameof(UpperIntegerValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AttributeTypeBounded = group.Add(new VocabularyKey(nameof(AttributeTypeBounded), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductAttributeTypeName { get; private set; }
         public VocabularyKey ValueType { get; private set; }
         public VocabularyKey UnitSymbol { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LowerIntegerValue { get; private set; }
         public VocabularyKey UpperIntegerValue { get; private set; }
         public VocabularyKey AttributeTypeBounded { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSShipConsolidationTemplateV2EntityVocabulary()
         {
-            VocabularyName = "WHSShipConsolidationTemplateV2Entity";
+            VocabularyName = "WHS Ship Consolidation Template V2 Entity";
             KeyPrefix = "commonDataModel.whsshipconsolidationtemplatev2entity";
             KeySeparator = ".";
             Grouping = "/WHSShipConsolidationTemplateV2Entity";
@@ -34,10 +34,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ShipmentConsolidationPolicyType = group.Add(new VocabularyKey(nameof(ShipmentConsolidationPolicyType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillConsolidationSplitShipmentByLoadCapacity = group.Add(new VocabularyKey(nameof(WillConsolidationSplitShipmentByLoadCapacity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WillConsolidationUpdateScheduledShipDateTime = group.Add(new VocabularyKey(nameof(WillConsolidationUpdateScheduledShipDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey OrderingCustomerAccountNumber { get; private set; }
         public VocabularyKey TemplateDescription { get; private set; }
         public VocabularyKey DestinationCountryRegionId { get; private set; }
@@ -59,7 +57,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ShipmentConsolidationPolicyType { get; private set; }
         public VocabularyKey WillConsolidationSplitShipmentByLoadCapacity { get; private set; }
         public VocabularyKey WillConsolidationUpdateScheduledShipDateTime { get; private set; }
-
-
     }
 }

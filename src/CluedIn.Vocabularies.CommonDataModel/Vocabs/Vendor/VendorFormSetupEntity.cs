@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendorFormSetupEntityVocabulary()
         {
-            VocabularyName = "VendorFormSetupEntity";
+            VocabularyName = "Vendor Form Setup Entity";
             KeyPrefix = "commonDataModel.vendorformsetupentity";
             KeySeparator = ".";
             Grouping = "/VendorFormSetupEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsSeparateTaxExemptBalanceInForms = group.Add(new VocabularyKey(nameof(IsSeparateTaxExemptBalanceInForms), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesTaxSpecification = group.Add(new VocabularyKey(nameof(SalesTaxSpecification), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Totals = group.Add(new VocabularyKey(nameof(Totals), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InventoryDimensionsForPrintingInvoice { get; private set; }
         public VocabularyKey PrintAmountInEuroCurrency { get; private set; }
         public VocabularyKey PrintTaxExemptNumberOnInvoice { get; private set; }
         public VocabularyKey IsSeparateTaxExemptBalanceInForms { get; private set; }
         public VocabularyKey SalesTaxSpecification { get; private set; }
         public VocabularyKey Totals { get; private set; }
-
-
     }
 }

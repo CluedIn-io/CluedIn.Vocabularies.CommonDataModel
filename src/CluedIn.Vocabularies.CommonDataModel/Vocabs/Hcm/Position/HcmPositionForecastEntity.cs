@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmPositionForecastEntityVocabulary()
         {
-            VocabularyName = "HcmPositionForecastEntity";
+            VocabularyName = "Hcm Position Forecast Entity";
             KeyPrefix = "commonDataModel.hcmpositionforecastentity";
             KeySeparator = ".";
             Grouping = "/HcmPositionForecastEntity";
@@ -18,7 +18,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BudgetCostElement = group.Add(new VocabularyKey(nameof(BudgetCostElement), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CostElementLineStartDate = group.Add(new VocabularyKey(nameof(CostElementLineStartDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CostElementLineEndDate = group.Add(new VocabularyKey(nameof(CostElementLineEndDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                isPercentageBased = group.Add(new VocabularyKey(nameof(isPercentageBased), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsPercentageBased = group.Add(new VocabularyKey(nameof(IsPercentageBased), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CostElementLineMainAccount = group.Add(new VocabularyKey(nameof(CostElementLineMainAccount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Percent = group.Add(new VocabularyKey(nameof(Percent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CostElementSource = group.Add(new VocabularyKey(nameof(CostElementSource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
@@ -65,16 +65,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PositionTypeId = group.Add(new VocabularyKey(nameof(PositionTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TitleId = group.Add(new VocabularyKey(nameof(TitleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CompensationLevelId = group.Add(new VocabularyKey(nameof(CompensationLevelId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AnnualAmount { get; private set; }
         public VocabularyKey BudgetAmount { get; private set; }
         public VocabularyKey BudgetCostElement { get; private set; }
         public VocabularyKey CostElementLineStartDate { get; private set; }
         public VocabularyKey CostElementLineEndDate { get; private set; }
-        public VocabularyKey isPercentageBased { get; private set; }
+        public VocabularyKey IsPercentageBased { get; private set; }
         public VocabularyKey CostElementLineMainAccount { get; private set; }
         public VocabularyKey Percent { get; private set; }
         public VocabularyKey CostElementSource { get; private set; }
@@ -121,7 +119,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PositionTypeId { get; private set; }
         public VocabularyKey TitleId { get; private set; }
         public VocabularyKey CompensationLevelId { get; private set; }
-
-
     }
 }

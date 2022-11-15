@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResProductStyleGroupLineEntityVocabulary()
         {
-            VocabularyName = "EcoResProductStyleGroupLineEntity";
+            VocabularyName = "Eco Res Product Style Group Line Entity";
             KeyPrefix = "commonDataModel.ecoresproductstylegrouplineentity";
             KeySeparator = ".";
             Grouping = "/EcoResProductStyleGroupLineEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DisplayOrder = group.Add(new VocabularyKey(nameof(DisplayOrder), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BarcodeNumber = group.Add(new VocabularyKey(nameof(BarcodeNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReplenishmentWeight = group.Add(new VocabularyKey(nameof(ReplenishmentWeight), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductStyleGroupId { get; private set; }
         public VocabularyKey ProductStyleId { get; private set; }
         public VocabularyKey StyleName { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DisplayOrder { get; private set; }
         public VocabularyKey BarcodeNumber { get; private set; }
         public VocabularyKey ReplenishmentWeight { get; private set; }
-
-
     }
 }

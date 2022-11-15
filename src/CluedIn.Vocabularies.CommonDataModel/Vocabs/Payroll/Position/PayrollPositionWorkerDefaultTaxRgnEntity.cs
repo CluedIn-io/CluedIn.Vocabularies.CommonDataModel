@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollPositionWorkerDefaultTaxRgnEntityVocabulary()
         {
-            VocabularyName = "PayrollPositionWorkerDefaultTaxRgnEntity";
+            VocabularyName = "Payroll Position Worker Default Tax Rgn Entity";
             KeyPrefix = "commonDataModel.payrollpositionworkerdefaulttaxrgnentity";
             KeySeparator = ".";
             Grouping = "/PayrollPositionWorkerDefaultTaxRgnEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LogisticsLocation = group.Add(new VocabularyKey(nameof(LogisticsLocation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LocationId = group.Add(new VocabularyKey(nameof(LocationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PersonnelNumber = group.Add(new VocabularyKey(nameof(PersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Position { get; private set; }
         public VocabularyKey Worker { get; private set; }
         public VocabularyKey WorkerTaxRegion { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LogisticsLocation { get; private set; }
         public VocabularyKey LocationId { get; private set; }
         public VocabularyKey PersonnelNumber { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetDepreciationGroupEntityVocabulary()
         {
-            VocabularyName = "AssetDepreciationGroupEntity";
+            VocabularyName = "Asset Depreciation Group Entity";
             KeyPrefix = "commonDataModel.assetdepreciationgroupentity";
             KeySeparator = ".";
             Grouping = "/AssetDepreciationGroupEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FactorAlt = group.Add(new VocabularyKey(nameof(FactorAlt), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FactorExt = group.Add(new VocabularyKey(nameof(FactorExt), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CostLimit_PL = group.Add(new VocabularyKey(nameof(CostLimit_PL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DepreciationGroup { get; private set; }
         public VocabularyKey StartDate { get; private set; }
         public VocabularyKey Description { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FactorAlt { get; private set; }
         public VocabularyKey FactorExt { get; private set; }
         public VocabularyKey CostLimit_PL { get; private set; }
-
-
     }
 }

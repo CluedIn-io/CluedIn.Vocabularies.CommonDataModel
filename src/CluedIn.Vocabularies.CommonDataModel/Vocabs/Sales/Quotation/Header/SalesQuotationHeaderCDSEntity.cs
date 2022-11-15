@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesQuotationHeaderCDSEntityVocabulary()
         {
-            VocabularyName = "SalesQuotationHeaderCDSEntity";
+            VocabularyName = "Sales Quotation Header CDS Entity";
             KeyPrefix = "commonDataModel.salesquotationheadercdsentity";
             KeySeparator = ".";
             Grouping = "/SalesQuotationHeaderCDSEntity";
@@ -97,10 +97,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TotalDiscountPercentage = group.Add(new VocabularyKey(nameof(TotalDiscountPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 URL = group.Add(new VocabularyKey(nameof(URL), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SalesQuotationCalculatedTotalsRecId = group.Add(new VocabularyKey(nameof(SalesQuotationCalculatedTotalsRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ArePricesIncludingSalesTax { get; private set; }
         public VocabularyKey AreTotalsCalculated { get; private set; }
         public VocabularyKey CashDiscountCode { get; private set; }
@@ -185,7 +183,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TotalDiscountPercentage { get; private set; }
         public VocabularyKey URL { get; private set; }
         public VocabularyKey SalesQuotationCalculatedTotalsRecId { get; private set; }
-
-
     }
 }

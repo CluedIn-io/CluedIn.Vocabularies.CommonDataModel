@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustBillingClassificationCodeEntityVocabulary()
         {
-            VocabularyName = "CustBillingClassificationCodeEntity";
+            VocabularyName = "Cust Billing Classification Code Entity";
             KeyPrefix = "commonDataModel.custbillingclassificationcodeentity";
             KeySeparator = ".";
             Grouping = "/CustBillingClassificationCodeEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Priority = group.Add(new VocabularyKey(nameof(Priority), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BillingClassification = group.Add(new VocabularyKey(nameof(BillingClassification), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BillingCode = group.Add(new VocabularyKey(nameof(BillingCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CustBillingClassification { get; private set; }
         public VocabularyKey CustBillingCode { get; private set; }
         public VocabularyKey Priority { get; private set; }
         public VocabularyKey BillingClassification { get; private set; }
         public VocabularyKey BillingCode { get; private set; }
-
-
     }
 }

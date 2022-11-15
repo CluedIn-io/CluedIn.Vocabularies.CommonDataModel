@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ExpenseJournalLineEntityVocabulary()
         {
-            VocabularyName = "ExpenseJournalLineEntity";
+            VocabularyName = "Expense Journal Line Entity";
             KeyPrefix = "commonDataModel.expensejournallineentity";
             KeySeparator = ".";
             Grouping = "/ExpenseJournalLineEntity";
@@ -81,10 +81,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TransactionType = group.Add(new VocabularyKey(nameof(TransactionType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OffsetDefaultDimension = group.Add(new VocabularyKey(nameof(OffsetDefaultDimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OffsetDefaultDimensionDisplayValue = group.Add(new VocabularyKey(nameof(OffsetDefaultDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountType { get; private set; }
         public VocabularyKey CurrencyCode { get; private set; }
         public VocabularyKey JournalBatchNumber { get; private set; }
@@ -153,7 +151,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TransactionType { get; private set; }
         public VocabularyKey OffsetDefaultDimension { get; private set; }
         public VocabularyKey OffsetDefaultDimensionDisplayValue { get; private set; }
-
-
     }
 }

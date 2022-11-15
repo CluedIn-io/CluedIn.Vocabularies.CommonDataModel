@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchPurchaseRequisitionFormalRequestForQuotationConditionEntityVocabulary()
         {
-            VocabularyName = "PurchPurchaseRequisitionFormalRequestForQuotationConditionEntity";
+            VocabularyName = "Purch Purchase Requisition Formal Request For Quotation Condition Entity";
             KeyPrefix = "commonDataModel.purchpurchaserequisitionformalrequestforquotationconditionentity";
             KeySeparator = ".";
             Grouping = "/PurchPurchaseRequisitionFormalRequestForQuotationConditionEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PurchaseRequisitionRequestForQuotationControlPolicyRuleValidFrom = group.Add(new VocabularyKey(nameof(PurchaseRequisitionRequestForQuotationControlPolicyRuleValidFrom), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PurchasingPolicyName = group.Add(new VocabularyKey(nameof(PurchasingPolicyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProcurementProductCategoryHierarchyName = group.Add(new VocabularyKey(nameof(ProcurementProductCategoryHierarchyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Category { get; private set; }
         public VocabularyKey PurchReqControlRFQRule { get; private set; }
         public VocabularyKey RFQConditionThresholdAmount { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PurchaseRequisitionRequestForQuotationControlPolicyRuleValidFrom { get; private set; }
         public VocabularyKey PurchasingPolicyName { get; private set; }
         public VocabularyKey ProcurementProductCategoryHierarchyName { get; private set; }
-
-
     }
 }

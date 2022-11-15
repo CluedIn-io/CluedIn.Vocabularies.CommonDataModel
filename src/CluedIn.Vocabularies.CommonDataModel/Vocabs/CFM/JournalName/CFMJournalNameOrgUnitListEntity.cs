@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CFMJournalNameOrgUnitListEntityVocabulary()
         {
-            VocabularyName = "CFMJournalNameOrgUnitListEntity";
+            VocabularyName = "CFM Journal Name Org Unit List Entity";
             KeyPrefix = "commonDataModel.cfmjournalnameorgunitlistentity";
             KeySeparator = ".";
             Grouping = "/CFMJournalNameOrgUnitListEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DataArea = group.Add(new VocabularyKey(nameof(DataArea), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Name { get; private set; }
         public VocabularyKey DataArea { get; private set; }
-
-
     }
 }

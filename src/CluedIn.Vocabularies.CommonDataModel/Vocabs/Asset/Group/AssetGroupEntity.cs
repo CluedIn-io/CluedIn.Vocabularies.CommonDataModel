@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetGroupEntityVocabulary()
         {
-            VocabularyName = "AssetGroupEntity";
+            VocabularyName = "Asset Group Entity";
             KeyPrefix = "commonDataModel.assetgroupentity";
             KeySeparator = ".";
             Grouping = "/AssetGroupEntity";
@@ -40,10 +40,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PISCOFINSCreditsInstallments = group.Add(new VocabularyKey(nameof(PISCOFINSCreditsInstallments), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FixedAssetCreditPurpose = group.Add(new VocabularyKey(nameof(FixedAssetCreditPurpose), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TaxationCodeForPIS = group.Add(new VocabularyKey(nameof(TaxationCodeForPIS), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AssetLocationId { get; private set; }
         public VocabularyKey AutonumberFixedAssets { get; private set; }
         public VocabularyKey AutonumberBarCodes { get; private set; }
@@ -71,7 +69,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PISCOFINSCreditsInstallments { get; private set; }
         public VocabularyKey FixedAssetCreditPurpose { get; private set; }
         public VocabularyKey TaxationCodeForPIS { get; private set; }
-
-
     }
 }

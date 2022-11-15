@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailLoyaltyEarnSchemeLineEntityVocabulary()
         {
-            VocabularyName = "RetailLoyaltyEarnSchemeLineEntity";
+            VocabularyName = "Retail Loyalty Earn Scheme Line Entity";
             KeyPrefix = "commonDataModel.retailloyaltyearnschemelineentity";
             KeySeparator = ".";
             Grouping = "/RetailLoyaltyEarnSchemeLineEntity";
@@ -41,10 +41,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RetailFromOtherActivityTypeId = group.Add(new VocabularyKey(nameof(RetailFromOtherActivityTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RetailFromOtherActivityType = group.Add(new VocabularyKey(nameof(RetailFromOtherActivityType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SourceDataAreaId = group.Add(new VocabularyKey(nameof(SourceDataAreaId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FromActivityAmountCurrency { get; private set; }
         public VocabularyKey FromActivityAmountQty { get; private set; }
         public VocabularyKey FromActivityRetailGroupMemberLine { get; private set; }
@@ -73,7 +71,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RetailFromOtherActivityTypeId { get; private set; }
         public VocabularyKey RetailFromOtherActivityType { get; private set; }
         public VocabularyKey SourceDataAreaId { get; private set; }
-
-
     }
 }

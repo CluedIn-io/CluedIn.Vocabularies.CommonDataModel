@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PSNCashControlConfigurationEntityVocabulary()
         {
-            VocabularyName = "PSNCashControlConfigurationEntity";
+            VocabularyName = "PSN Cash Control Configuration Entity";
             KeyPrefix = "commonDataModel.psncashcontrolconfigurationentity";
             KeySeparator = ".";
             Grouping = "/PSNCashControlConfigurationEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ThresholdAmount = group.Add(new VocabularyKey(nameof(ThresholdAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AccountsPayableAccountLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(AccountsPayableAccountLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CashAccountLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(CashAccountLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountsPayableAccountLedgerDimension { get; private set; }
         public VocabularyKey CashAccountLedgerDimension { get; private set; }
         public VocabularyKey ParticipateInCashControl { get; private set; }
         public VocabularyKey ThresholdAmount { get; private set; }
         public VocabularyKey AccountsPayableAccountLedgerDimensionDisplayValue { get; private set; }
         public VocabularyKey CashAccountLedgerDimensionDisplayValue { get; private set; }
-
-
     }
 }

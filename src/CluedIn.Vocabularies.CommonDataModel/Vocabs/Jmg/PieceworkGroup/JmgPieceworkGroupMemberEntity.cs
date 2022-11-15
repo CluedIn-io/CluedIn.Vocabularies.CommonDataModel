@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgPieceworkGroupMemberEntityVocabulary()
         {
-            VocabularyName = "JmgPieceworkGroupMemberEntity";
+            VocabularyName = "Jmg Piecework Group Member Entity";
             KeyPrefix = "commonDataModel.jmgpieceworkgroupmemberentity";
             KeySeparator = ".";
             Grouping = "/JmgPieceworkGroupMemberEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PieceworkGroupId = group.Add(new VocabularyKey(nameof(PieceworkGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Worker = group.Add(new VocabularyKey(nameof(Worker), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PieceworkGroupWorkerPersonnelNumber = group.Add(new VocabularyKey(nameof(PieceworkGroupWorkerPersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PieceworkGroupId { get; private set; }
         public VocabularyKey Worker { get; private set; }
         public VocabularyKey PieceworkGroupWorkerPersonnelNumber { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public JmgManufacturingExecutionProductionOrderDefaultsEntityVocabulary()
         {
-            VocabularyName = "JmgManufacturingExecutionProductionOrderDefaultsEntity";
+            VocabularyName = "Jmg Manufacturing Execution Production Order Defaults Entity";
             KeyPrefix = "commonDataModel.jmgmanufacturingexecutionproductionorderdefaultsentity";
             KeySeparator = ".";
             Grouping = "/JmgManufacturingExecutionProductionOrderDefaultsEntity";
@@ -74,10 +74,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TimeJobCardProductionJournalNameId = group.Add(new VocabularyKey(nameof(TimeJobCardProductionJournalNameId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsOperationFeedbackQuantityValidated = group.Add(new VocabularyKey(nameof(IsOperationFeedbackQuantityValidated), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsProductionstartQuantityValidated = group.Add(new VocabularyKey(nameof(IsProductionstartQuantityValidated), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey BundledJobsTimeAllocationMethod { get; private set; }
         public VocabularyKey ArePieceworkProductionOrdersSpecifiedSeparately { get; private set; }
         public VocabularyKey PieceworkRateCalculationFormula { get; private set; }
@@ -139,7 +137,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TimeJobCardProductionJournalNameId { get; private set; }
         public VocabularyKey IsOperationFeedbackQuantityValidated { get; private set; }
         public VocabularyKey IsProductionstartQuantityValidated { get; private set; }
-
-
     }
 }

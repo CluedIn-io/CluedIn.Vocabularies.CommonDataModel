@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventQualitySamplingEntityVocabulary()
         {
-            VocabularyName = "InventQualitySamplingEntity";
+            VocabularyName = "Invent Quality Sampling Entity";
             KeyPrefix = "commonDataModel.inventqualitysamplingentity";
             KeySeparator = ".";
             Grouping = "/InventQualitySamplingEntity";
@@ -27,10 +27,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TestQtySpecification = group.Add(new VocabularyKey(nameof(TestQtySpecification), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ItemSamplingValue = group.Add(new VocabularyKey(nameof(ItemSamplingValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DiscriminatingInventoryDimensions = group.Add(new VocabularyKey(nameof(DiscriminatingInventoryDimensions), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SamplingId { get; private set; }
         public VocabularyKey SamplingDescription { get; private set; }
         public VocabularyKey FixedInventoryQuantity { get; private set; }
@@ -45,7 +43,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TestQtySpecification { get; private set; }
         public VocabularyKey ItemSamplingValue { get; private set; }
         public VocabularyKey DiscriminatingInventoryDimensions { get; private set; }
-
-
     }
 }

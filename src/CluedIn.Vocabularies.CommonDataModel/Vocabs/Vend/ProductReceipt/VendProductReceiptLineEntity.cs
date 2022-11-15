@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendProductReceiptLineEntityVocabulary()
         {
-            VocabularyName = "VendProductReceiptLineEntity";
+            VocabularyName = "Vend Product Receipt Line Entity";
             KeyPrefix = "commonDataModel.vendproductreceiptlineentity";
             KeySeparator = ".";
             Grouping = "/VendProductReceiptLineEntity";
@@ -50,10 +50,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ProductStyleId = group.Add(new VocabularyKey(nameof(ProductStyleId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductVersionId = group.Add(new VocabularyKey(nameof(ProductVersionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReceivingWarehouseLocationId = group.Add(new VocabularyKey(nameof(ReceivingWarehouseLocationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RecordId { get; private set; }
         public VocabularyKey DeliveryAddressCountryRegionId { get; private set; }
         public VocabularyKey DeliveryAddressCountyId { get; private set; }
@@ -91,7 +89,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ProductStyleId { get; private set; }
         public VocabularyKey ProductVersionId { get; private set; }
         public VocabularyKey ReceivingWarehouseLocationId { get; private set; }
-
-
     }
 }

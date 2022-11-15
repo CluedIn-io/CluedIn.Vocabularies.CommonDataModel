@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSTransportationMileageEngineEntityVocabulary()
         {
-            VocabularyName = "TMSTransportationMileageEngineEntity";
+            VocabularyName = "TMS Transportation Mileage Engine Entity";
             KeyPrefix = "commonDataModel.tmstransportationmileageengineentity";
             KeySeparator = ".";
             Grouping = "/TMSTransportationMileageEngineEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 EngineAssemblyClassName = group.Add(new VocabularyKey(nameof(EngineAssemblyClassName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EngineId = group.Add(new VocabularyKey(nameof(EngineId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 EngineDescription = group.Add(new VocabularyKey(nameof(EngineDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IsDefaultEngine { get; private set; }
         public VocabularyKey EngineAssemblyName { get; private set; }
         public VocabularyKey EngineAssemblyClassName { get; private set; }
         public VocabularyKey EngineId { get; private set; }
         public VocabularyKey EngineDescription { get; private set; }
-
-
     }
 }

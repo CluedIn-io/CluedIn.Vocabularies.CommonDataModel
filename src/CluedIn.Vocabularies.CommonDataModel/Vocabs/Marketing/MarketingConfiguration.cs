@@ -6,70 +6,66 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MarketingConfigurationVocabulary()
         {
-            VocabularyName = "MarketingConfiguration";
+            VocabularyName = "Marketing Configuration";
             KeyPrefix = "commonDataModel.marketingconfiguration";
             KeySeparator = ".";
             Grouping = "/MarketingConfiguration";
 
             AddGroup("MarketingConfiguration Details", group =>
             {
-                createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                createdOnBehalfBy = group.Add(new VocabularyKey(nameof(createdOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                importSequenceNumber = group.Add(new VocabularyKey(nameof(importSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                modifiedOn = group.Add(new VocabularyKey(nameof(modifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                modifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(modifiedOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                configCacheExpirationDate = group.Add(new VocabularyKey(nameof(configCacheExpirationDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                configCacheExpirationPeriodInMs = group.Add(new VocabularyKey(nameof(configCacheExpirationPeriodInMs), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                isInstallComplete = group.Add(new VocabularyKey(nameof(isInstallComplete), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                marketingConfigurationId = group.Add(new VocabularyKey(nameof(marketingConfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                maxretryattempts = group.Add(new VocabularyKey(nameof(maxretryattempts), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                httptimeout = group.Add(new VocabularyKey(nameof(httptimeout), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                mktSvcDiscoveryEndpointUrl = group.Add(new VocabularyKey(nameof(mktSvcDiscoveryEndpointUrl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                @default = group.Add(new VocabularyKey(nameof(@default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                organizationConfig = group.Add(new VocabularyKey(nameof(organizationConfig), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                tokenAuthenticationResource = group.Add(new VocabularyKey(nameof(tokenAuthenticationResource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                useBasicAuth = group.Add(new VocabularyKey(nameof(useBasicAuth), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                isMarketingListAvailableInApp = group.Add(new VocabularyKey(nameof(isMarketingListAvailableInApp), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                overriddenCreatedOn = group.Add(new VocabularyKey(nameof(overriddenCreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                timeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(timeZoneRuleVersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOnBehalfBy = group.Add(new VocabularyKey(nameof(CreatedOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(ModifiedOnBehalfBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ConfigCacheExpirationDate = group.Add(new VocabularyKey(nameof(ConfigCacheExpirationDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ConfigCacheExpirationPeriodInMs = group.Add(new VocabularyKey(nameof(ConfigCacheExpirationPeriodInMs), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsInstallComplete = group.Add(new VocabularyKey(nameof(IsInstallComplete), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MarketingConfigurationId = group.Add(new VocabularyKey(nameof(MarketingConfigurationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Maxretryattempts = group.Add(new VocabularyKey(nameof(Maxretryattempts), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Httptimeout = group.Add(new VocabularyKey(nameof(Httptimeout), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MktSvcDiscoveryEndpointUrl = group.Add(new VocabularyKey(nameof(MktSvcDiscoveryEndpointUrl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                @Default = group.Add(new VocabularyKey(nameof(@Default), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OrganizationConfig = group.Add(new VocabularyKey(nameof(OrganizationConfig), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TokenAuthenticationResource = group.Add(new VocabularyKey(nameof(TokenAuthenticationResource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                UseBasicAuth = group.Add(new VocabularyKey(nameof(UseBasicAuth), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsMarketingListAvailableInApp = group.Add(new VocabularyKey(nameof(IsMarketingListAvailableInApp), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                firstTimeSetupUrl = group.Add(new VocabularyKey(nameof(firstTimeSetupUrl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                setupstatus = group.Add(new VocabularyKey(nameof(setupstatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                isemailtemplatesconsented = group.Add(new VocabularyKey(nameof(isemailtemplatesconsented), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                FirstTimeSetupUrl = group.Add(new VocabularyKey(nameof(FirstTimeSetupUrl), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Setupstatus = group.Add(new VocabularyKey(nameof(Setupstatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Isemailtemplatesconsented = group.Add(new VocabularyKey(nameof(Isemailtemplatesconsented), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey createdOn { get; private set; }
-        public VocabularyKey createdOnBehalfBy { get; private set; }
-        public VocabularyKey importSequenceNumber { get; private set; }
-        public VocabularyKey modifiedOn { get; private set; }
-        public VocabularyKey modifiedOnBehalfBy { get; private set; }
-        public VocabularyKey configCacheExpirationDate { get; private set; }
-        public VocabularyKey configCacheExpirationPeriodInMs { get; private set; }
-        public VocabularyKey isInstallComplete { get; private set; }
-        public VocabularyKey marketingConfigurationId { get; private set; }
-        public VocabularyKey maxretryattempts { get; private set; }
-        public VocabularyKey httptimeout { get; private set; }
-        public VocabularyKey mktSvcDiscoveryEndpointUrl { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey @default { get; private set; }
-        public VocabularyKey organizationConfig { get; private set; }
-        public VocabularyKey tokenAuthenticationResource { get; private set; }
-        public VocabularyKey useBasicAuth { get; private set; }
-        public VocabularyKey isMarketingListAvailableInApp { get; private set; }
-        public VocabularyKey overriddenCreatedOn { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-        public VocabularyKey timeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey CreatedOnBehalfBy { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey ModifiedOnBehalfBy { get; private set; }
+        public VocabularyKey ConfigCacheExpirationDate { get; private set; }
+        public VocabularyKey ConfigCacheExpirationPeriodInMs { get; private set; }
+        public VocabularyKey IsInstallComplete { get; private set; }
+        public VocabularyKey MarketingConfigurationId { get; private set; }
+        public VocabularyKey Maxretryattempts { get; private set; }
+        public VocabularyKey Httptimeout { get; private set; }
+        public VocabularyKey MktSvcDiscoveryEndpointUrl { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey @Default { get; private set; }
+        public VocabularyKey OrganizationConfig { get; private set; }
+        public VocabularyKey TokenAuthenticationResource { get; private set; }
+        public VocabularyKey UseBasicAuth { get; private set; }
+        public VocabularyKey IsMarketingListAvailableInApp { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey firstTimeSetupUrl { get; private set; }
-        public VocabularyKey setupstatus { get; private set; }
-        public VocabularyKey isemailtemplatesconsented { get; private set; }
-
-
+        public VocabularyKey FirstTimeSetupUrl { get; private set; }
+        public VocabularyKey Setupstatus { get; private set; }
+        public VocabularyKey Isemailtemplatesconsented { get; private set; }
     }
 }

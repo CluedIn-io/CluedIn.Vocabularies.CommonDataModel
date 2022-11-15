@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailTenderDiscountEntityVocabulary()
         {
-            VocabularyName = "RetailTenderDiscountEntity";
+            VocabularyName = "Retail Tender Discount Entity";
             KeyPrefix = "commonDataModel.retailtenderdiscountentity";
             KeySeparator = ".";
             Grouping = "/RetailTenderDiscountEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DiscountLedgerDimension = group.Add(new VocabularyKey(nameof(DiscountLedgerDimension), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TenderTypeId = group.Add(new VocabularyKey(nameof(TenderTypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DiscountLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(DiscountLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RetailTenderType { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey OfferId { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DiscountLedgerDimension { get; private set; }
         public VocabularyKey TenderTypeId { get; private set; }
         public VocabularyKey DiscountLedgerDimensionDisplayValue { get; private set; }
-
-
     }
 }

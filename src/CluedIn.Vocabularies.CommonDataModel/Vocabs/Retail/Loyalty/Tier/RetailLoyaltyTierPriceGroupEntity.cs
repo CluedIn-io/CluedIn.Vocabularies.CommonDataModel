@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailLoyaltyTierPriceGroupEntityVocabulary()
         {
-            VocabularyName = "RetailLoyaltyTierPriceGroupEntity";
+            VocabularyName = "Retail Loyalty Tier Price Group Entity";
             KeyPrefix = "commonDataModel.retailloyaltytierpricegroupentity";
             KeySeparator = ".";
             Grouping = "/RetailLoyaltyTierPriceGroupEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LoyaltyTierId = group.Add(new VocabularyKey(nameof(LoyaltyTierId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PriceGroupCompany = group.Add(new VocabularyKey(nameof(PriceGroupCompany), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LoyaltyName = group.Add(new VocabularyKey(nameof(LoyaltyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PriceDiscGroup { get; private set; }
         public VocabularyKey RetailAffiliation { get; private set; }
         public VocabularyKey RetailLoyaltyTier { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LoyaltyTierId { get; private set; }
         public VocabularyKey PriceGroupCompany { get; private set; }
         public VocabularyKey LoyaltyName { get; private set; }
-
-
     }
 }

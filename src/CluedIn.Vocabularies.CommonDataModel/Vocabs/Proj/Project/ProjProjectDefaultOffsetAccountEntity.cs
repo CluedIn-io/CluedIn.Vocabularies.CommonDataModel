@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjProjectDefaultOffsetAccountEntityVocabulary()
         {
-            VocabularyName = "ProjProjectDefaultOffsetAccountEntity";
+            VocabularyName = "Proj Project Default Offset Account Entity";
             KeyPrefix = "commonDataModel.projprojectdefaultoffsetaccountentity";
             KeySeparator = ".";
             Grouping = "/ProjProjectDefaultOffsetAccountEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Resource = group.Add(new VocabularyKey(nameof(Resource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OffsetAccountDisplayValue = group.Add(new VocabularyKey(nameof(OffsetAccountDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ResourcePersonnelNumber = group.Add(new VocabularyKey(nameof(ResourcePersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey OffsetAccount { get; private set; }
         public VocabularyKey Category { get; private set; }
         public VocabularyKey ProjectID { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Resource { get; private set; }
         public VocabularyKey OffsetAccountDisplayValue { get; private set; }
         public VocabularyKey ResourcePersonnelNumber { get; private set; }
-
-
     }
 }

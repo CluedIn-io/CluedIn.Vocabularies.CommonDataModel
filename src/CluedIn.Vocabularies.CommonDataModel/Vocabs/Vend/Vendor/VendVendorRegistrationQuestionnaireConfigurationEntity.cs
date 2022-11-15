@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendVendorRegistrationQuestionnaireConfigurationEntityVocabulary()
         {
-            VocabularyName = "VendVendorRegistrationQuestionnaireConfigurationEntity";
+            VocabularyName = "Vend Vendor Registration Questionnaire Configuration Entity";
             KeyPrefix = "commonDataModel.vendvendorregistrationquestionnaireconfigurationentity";
             KeySeparator = ".";
             Grouping = "/VendVendorRegistrationQuestionnaireConfigurationEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 QuestionnaireId = group.Add(new VocabularyKey(nameof(QuestionnaireId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorRegistrationConfigurationRecId = group.Add(new VocabularyKey(nameof(VendorRegistrationConfigurationRecId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendorRegistrationConfigurationName = group.Add(new VocabularyKey(nameof(VendorRegistrationConfigurationName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey QuestionnaireDataAreaId { get; private set; }
         public VocabularyKey QuestionnaireId { get; private set; }
         public VocabularyKey VendorRegistrationConfigurationRecId { get; private set; }
         public VocabularyKey VendorRegistrationConfigurationName { get; private set; }
-
-
     }
 }

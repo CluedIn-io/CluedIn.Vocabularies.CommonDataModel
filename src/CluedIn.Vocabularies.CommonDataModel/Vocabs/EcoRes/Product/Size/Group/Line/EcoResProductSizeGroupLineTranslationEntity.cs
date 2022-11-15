@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public EcoResProductSizeGroupLineTranslationEntityVocabulary()
         {
-            VocabularyName = "EcoResProductSizeGroupLineTranslationEntity";
+            VocabularyName = "Eco Res Product Size Group Line Translation Entity";
             KeyPrefix = "commonDataModel.ecoresproductsizegrouplinetranslationentity";
             KeySeparator = ".";
             Grouping = "/EcoResProductSizeGroupLineTranslationEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TranslatedSizeName = group.Add(new VocabularyKey(nameof(TranslatedSizeName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TranslatedSizeDescription = group.Add(new VocabularyKey(nameof(TranslatedSizeDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LanguageId = group.Add(new VocabularyKey(nameof(LanguageId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ProductSizeGroupId { get; private set; }
         public VocabularyKey ProductSizeId { get; private set; }
         public VocabularyKey TranslatedSizeName { get; private set; }
         public VocabularyKey TranslatedSizeDescription { get; private set; }
         public VocabularyKey LanguageId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public VendInvoicePolicyRuleTypeEntityVocabulary()
         {
-            VocabularyName = "VendInvoicePolicyRuleTypeEntity";
+            VocabularyName = "Vend Invoice Policy Rule Type Entity";
             KeyPrefix = "commonDataModel.vendinvoicepolicyruletypeentity";
             KeySeparator = ".";
             Grouping = "/VendInvoicePolicyRuleTypeEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PolicyType = group.Add(new VocabularyKey(nameof(PolicyType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsPrecedenceSupported = group.Add(new VocabularyKey(nameof(IsPrecedenceSupported), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IncludeParentRules = group.Add(new VocabularyKey(nameof(IncludeParentRules), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey RuleName { get; private set; }
         public VocabularyKey QueryName { get; private set; }
         public VocabularyKey PolicyType { get; private set; }
         public VocabularyKey IsPrecedenceSupported { get; private set; }
         public VocabularyKey IncludeParentRules { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesProspectRelationTypeEntityVocabulary()
         {
-            VocabularyName = "SalesProspectRelationTypeEntity";
+            VocabularyName = "Sales Prospect Relation Type Entity";
             KeyPrefix = "commonDataModel.salesprospectrelationtypeentity";
             KeySeparator = ".";
             Grouping = "/SalesProspectRelationTypeEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TableSource = group.Add(new VocabularyKey(nameof(TableSource), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TypeDescription = group.Add(new VocabularyKey(nameof(TypeDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TypeId = group.Add(new VocabularyKey(nameof(TypeId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WillProspectConversionDeleteProspects { get; private set; }
         public VocabularyKey TableSource { get; private set; }
         public VocabularyKey TypeDescription { get; private set; }
         public VocabularyKey TypeId { get; private set; }
-
-
     }
 }

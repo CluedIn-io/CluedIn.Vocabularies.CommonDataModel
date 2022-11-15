@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollWorkerEnrolledAccrualInquiryEntityVocabulary()
         {
-            VocabularyName = "PayrollWorkerEnrolledAccrualInquiryEntity";
+            VocabularyName = "Payroll Worker Enrolled Accrual Inquiry Entity";
             KeyPrefix = "commonDataModel.payrollworkerenrolledaccrualinquiryentity";
             KeySeparator = ".";
             Grouping = "/PayrollWorkerEnrolledAccrualInquiryEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TotalAvailableHours = group.Add(new VocabularyKey(nameof(TotalAvailableHours), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Accrual = group.Add(new VocabularyKey(nameof(Accrual), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Worker = group.Add(new VocabularyKey(nameof(Worker), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WorkerName { get; private set; }
         public VocabularyKey AccrualId { get; private set; }
         public VocabularyKey AccrualYearStartDate { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TotalAvailableHours { get; private set; }
         public VocabularyKey Accrual { get; private set; }
         public VocabularyKey Worker { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ConsignmentReplenishmentOrderHeaderEntityVocabulary()
         {
-            VocabularyName = "ConsignmentReplenishmentOrderHeaderEntity";
+            VocabularyName = "Consignment Replenishment Order Header Entity";
             KeyPrefix = "commonDataModel.consignmentreplenishmentorderheaderentity";
             KeySeparator = ".";
             Grouping = "/ConsignmentReplenishmentOrderHeaderEntity";
@@ -47,10 +47,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DeliveryAddressDunsNumber = group.Add(new VocabularyKey(nameof(DeliveryAddressDunsNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DeliveryAddressStreet = group.Add(new VocabularyKey(nameof(DeliveryAddressStreet), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsDeliveryAddressOrderSpecific = group.Add(new VocabularyKey(nameof(IsDeliveryAddressOrderSpecific), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ContactPersonId { get; private set; }
         public VocabularyKey DefaultReceivingSiteId { get; private set; }
         public VocabularyKey DefaultReceivingWarehouseId { get; private set; }
@@ -85,7 +83,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DeliveryAddressDunsNumber { get; private set; }
         public VocabularyKey DeliveryAddressStreet { get; private set; }
         public VocabularyKey IsDeliveryAddressOrderSpecific { get; private set; }
-
-
     }
 }

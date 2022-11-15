@@ -6,30 +6,26 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MarketingFieldSubmissionVocabulary()
         {
-            VocabularyName = "MarketingFieldSubmission";
+            VocabularyName = "Marketing Field Submission";
             KeyPrefix = "commonDataModel.marketingfieldsubmission";
             KeySeparator = ".";
             Grouping = "/MarketingFieldSubmission";
 
             AddGroup("MarketingFieldSubmission Details", group =>
             {
-                fieldName = group.Add(new VocabularyKey(nameof(fieldName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                fieldValue = group.Add(new VocabularyKey(nameof(fieldValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                marketingFieldSubmissionId = group.Add(new VocabularyKey(nameof(marketingFieldSubmissionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                marketingformfieldidValue = group.Add(new VocabularyKey(nameof(marketingformfieldidValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                FieldName = group.Add(new VocabularyKey(nameof(FieldName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FieldValue = group.Add(new VocabularyKey(nameof(FieldValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MarketingFieldSubmissionId = group.Add(new VocabularyKey(nameof(MarketingFieldSubmissionId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MarketingformfieldidValue = group.Add(new VocabularyKey(nameof(MarketingformfieldidValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey fieldName { get; private set; }
-        public VocabularyKey fieldValue { get; private set; }
-        public VocabularyKey marketingFieldSubmissionId { get; private set; }
-        public VocabularyKey marketingformfieldidValue { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey FieldName { get; private set; }
+        public VocabularyKey FieldValue { get; private set; }
+        public VocabularyKey MarketingFieldSubmissionId { get; private set; }
+        public VocabularyKey MarketingformfieldidValue { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

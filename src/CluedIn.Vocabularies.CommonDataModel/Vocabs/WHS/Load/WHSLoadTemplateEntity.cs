@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSLoadTemplateEntityVocabulary()
         {
-            VocabularyName = "WHSLoadTemplateEntity";
+            VocabularyName = "WHS Load Template Entity";
             KeyPrefix = "commonDataModel.whsloadtemplateentity";
             KeySeparator = ".";
             Grouping = "/WHSLoadTemplateEntity";
@@ -26,10 +26,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 IsLoadSplitShipConfirmAllowed = group.Add(new VocabularyKey(nameof(IsLoadSplitShipConfirmAllowed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MaximumQuantity = group.Add(new VocabularyKey(nameof(MaximumQuantity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MaximumQuantityUnitSymbol = group.Add(new VocabularyKey(nameof(MaximumQuantityUnitSymbol), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WarehouseEquipmentCode { get; private set; }
         public VocabularyKey LoadDepth { get; private set; }
         public VocabularyKey IsLoadFloorStacked { get; private set; }
@@ -43,7 +41,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey IsLoadSplitShipConfirmAllowed { get; private set; }
         public VocabularyKey MaximumQuantity { get; private set; }
         public VocabularyKey MaximumQuantityUnitSymbol { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerAllocationEntityVocabulary()
         {
-            VocabularyName = "LedgerAllocationEntity";
+            VocabularyName = "Ledger Allocation Entity";
             KeyPrefix = "commonDataModel.ledgerallocationentity";
             KeySeparator = ".";
             Grouping = "/LedgerAllocationEntity";
@@ -29,10 +29,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DestinationKeepSourceDimensionsDisplayValue = group.Add(new VocabularyKey(nameof(DestinationKeepSourceDimensionsDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DestinationDimensions = group.Add(new VocabularyKey(nameof(DestinationDimensions), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DestinationDimensionsDisplayValue = group.Add(new VocabularyKey(nameof(DestinationDimensionsDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey SourceAccount { get; private set; }
         public VocabularyKey FromMainAccountRecId { get; private set; }
         public VocabularyKey FromMainAccountLedgerChartOfAccountsRecId { get; private set; }
@@ -49,7 +47,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DestinationKeepSourceDimensionsDisplayValue { get; private set; }
         public VocabularyKey DestinationDimensions { get; private set; }
         public VocabularyKey DestinationDimensionsDisplayValue { get; private set; }
-
-
     }
 }

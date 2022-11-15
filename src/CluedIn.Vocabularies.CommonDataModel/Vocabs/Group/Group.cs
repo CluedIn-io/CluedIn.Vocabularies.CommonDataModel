@@ -13,13 +13,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Group Details", group =>
             {
-                groupId = group.Add(new VocabularyKey(nameof(groupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                GroupId = group.Add(new VocabularyKey(nameof(GroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey groupId { get; private set; }
-
-
+        public VocabularyKey GroupId { get; private set; }
     }
 }

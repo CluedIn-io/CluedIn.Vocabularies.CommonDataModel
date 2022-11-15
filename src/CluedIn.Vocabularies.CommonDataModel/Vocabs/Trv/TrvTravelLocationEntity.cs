@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvTravelLocationEntityVocabulary()
         {
-            VocabularyName = "TrvTravelLocationEntity";
+            VocabularyName = "Trv Travel Location Entity";
             KeyPrefix = "commonDataModel.trvtravellocationentity";
             KeySeparator = ".";
             Grouping = "/TrvTravelLocationEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Destination = group.Add(new VocabularyKey(nameof(Destination), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey Destination { get; private set; }
-
-
     }
 }

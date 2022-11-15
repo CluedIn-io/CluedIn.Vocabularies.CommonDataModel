@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetRegisterEntryLineEntityVocabulary()
         {
-            VocabularyName = "BudgetRegisterEntryLineEntity";
+            VocabularyName = "Budget Register Entry Line Entity";
             KeyPrefix = "commonDataModel.budgetregisterentrylineentity";
             KeySeparator = ".";
             Grouping = "/BudgetRegisterEntryLineEntity";
@@ -32,10 +32,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TransactionCurrencyAmount = group.Add(new VocabularyKey(nameof(TransactionCurrencyAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WorkflowStatus = group.Add(new VocabularyKey(nameof(WorkflowStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BudgetCheckResult = group.Add(new VocabularyKey(nameof(BudgetCheckResult), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountingCurrencyAmount { get; private set; }
         public VocabularyKey AmountType { get; private set; }
         public VocabularyKey BudgetTransactionHeaderRecId { get; private set; }
@@ -55,7 +53,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TransactionCurrencyAmount { get; private set; }
         public VocabularyKey WorkflowStatus { get; private set; }
         public VocabularyKey BudgetCheckResult { get; private set; }
-
-
     }
 }

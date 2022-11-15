@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvPolicyViolationsLogEntityVocabulary()
         {
-            VocabularyName = "TrvPolicyViolationsLogEntity";
+            VocabularyName = "Trv Policy Violations Log Entity";
             KeyPrefix = "commonDataModel.trvpolicyviolationslogentity";
             KeySeparator = ".";
             Grouping = "/TrvPolicyViolationsLogEntity";
@@ -32,10 +32,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ViolationDate = group.Add(new VocabularyKey(nameof(ViolationDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Worker = group.Add(new VocabularyKey(nameof(Worker), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PersonnelNumber = group.Add(new VocabularyKey(nameof(PersonnelNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ViolationsLogId { get; private set; }
         public VocabularyKey Action { get; private set; }
         public VocabularyKey Header { get; private set; }
@@ -55,7 +53,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ViolationDate { get; private set; }
         public VocabularyKey Worker { get; private set; }
         public VocabularyKey PersonnelNumber { get; private set; }
-
-
     }
 }

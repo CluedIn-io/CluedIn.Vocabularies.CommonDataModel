@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PurchProcurementDocumentEntryPolicyEntityVocabulary()
         {
-            VocabularyName = "PurchProcurementDocumentEntryPolicyEntity";
+            VocabularyName = "Purch Procurement Document Entry Policy Entity";
             KeyPrefix = "commonDataModel.purchprocurementdocumententrypolicyentity";
             KeySeparator = ".";
             Grouping = "/PurchProcurementDocumentEntryPolicyEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LineLevelDiscountCalculationRule = group.Add(new VocabularyKey(nameof(LineLevelDiscountCalculationRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PriceMarginThresholdRule = group.Add(new VocabularyKey(nameof(PriceMarginThresholdRule), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TradeAgreementSearchDateType = group.Add(new VocabularyKey(nameof(TradeAgreementSearchDateType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AreFactBoxesAutomaticallyRecalculated { get; private set; }
         public VocabularyKey WillDocumentEntryAutomaticallyAllocateHeaderLevelCharges { get; private set; }
         public VocabularyKey WillDocumentEntryAutomaticallyAllocateLineLevelCharges { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LineLevelDiscountCalculationRule { get; private set; }
         public VocabularyKey PriceMarginThresholdRule { get; private set; }
         public VocabularyKey TradeAgreementSearchDateType { get; private set; }
-
-
     }
 }

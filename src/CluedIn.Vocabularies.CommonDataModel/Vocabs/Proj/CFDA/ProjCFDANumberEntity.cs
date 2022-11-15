@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjCFDANumberEntityVocabulary()
         {
-            VocabularyName = "ProjCFDANumberEntity";
+            VocabularyName = "Proj CFDA Number Entity";
             KeyPrefix = "commonDataModel.projcfdanumberentity";
             KeySeparator = ".";
             Grouping = "/ProjCFDANumberEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CFDAClusterName = group.Add(new VocabularyKey(nameof(CFDAClusterName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CFDAID = group.Add(new VocabularyKey(nameof(CFDAID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CFDAClusterName { get; private set; }
         public VocabularyKey CFDAID { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

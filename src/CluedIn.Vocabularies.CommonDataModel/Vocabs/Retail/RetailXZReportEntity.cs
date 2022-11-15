@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailXZReportEntityVocabulary()
         {
-            VocabularyName = "RetailXZReportEntity";
+            VocabularyName = "Retail XZ Report Entity";
             KeyPrefix = "commonDataModel.retailxzreportentity";
             KeySeparator = ".";
             Grouping = "/RetailXZReportEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ReportId = group.Add(new VocabularyKey(nameof(ReportId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReportDateTime = group.Add(new VocabularyKey(nameof(ReportDateTime), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReportValue = group.Add(new VocabularyKey(nameof(ReportValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey StoreId { get; private set; }
         public VocabularyKey TerminalId { get; private set; }
         public VocabularyKey BatchId { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ReportId { get; private set; }
         public VocabularyKey ReportDateTime { get; private set; }
         public VocabularyKey ReportValue { get; private set; }
-
-
     }
 }

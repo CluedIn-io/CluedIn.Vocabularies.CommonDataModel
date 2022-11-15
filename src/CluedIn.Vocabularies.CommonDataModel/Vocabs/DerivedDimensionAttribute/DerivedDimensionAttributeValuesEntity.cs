@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DerivedDimensionAttributeValuesEntityVocabulary()
         {
-            VocabularyName = "DerivedDimensionAttributeValuesEntity";
+            VocabularyName = "Derived Dimension Attribute Values Entity";
             KeyPrefix = "commonDataModel.deriveddimensionattributevaluesentity";
             KeySeparator = ".";
             Grouping = "/DerivedDimensionAttributeValuesEntity";
@@ -47,10 +47,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DerivedDimensionAttributeValueRecId8 = group.Add(new VocabularyKey(nameof(DerivedDimensionAttributeValueRecId8), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DerivedDimensionAttributeValueRecId9 = group.Add(new VocabularyKey(nameof(DerivedDimensionAttributeValueRecId9), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DerivedDimensionAttributeValueRecId10 = group.Add(new VocabularyKey(nameof(DerivedDimensionAttributeValueRecId10), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DrivingDimensionAttributeName { get; private set; }
         public VocabularyKey DrivingDimensionAttributeValue { get; private set; }
         public VocabularyKey DerivedDimensionAttributeName1 { get; private set; }
@@ -85,7 +83,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DerivedDimensionAttributeValueRecId8 { get; private set; }
         public VocabularyKey DerivedDimensionAttributeValueRecId9 { get; private set; }
         public VocabularyKey DerivedDimensionAttributeValueRecId10 { get; private set; }
-
-
     }
 }

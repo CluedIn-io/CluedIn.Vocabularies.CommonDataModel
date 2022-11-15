@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ReturnOrderHeaderEntityVocabulary()
         {
-            VocabularyName = "ReturnOrderHeaderEntity";
+            VocabularyName = "Return Order Header Entity";
             KeyPrefix = "commonDataModel.returnorderheaderentity";
             KeySeparator = ".";
             Grouping = "/ReturnOrderHeaderEntity";
@@ -56,10 +56,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ReturnAddressZipCode = group.Add(new VocabularyKey(nameof(ReturnAddressZipCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReturnAddressCityInKana = group.Add(new VocabularyKey(nameof(ReturnAddressCityInKana), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReturnAddressStreetInKana = group.Add(new VocabularyKey(nameof(ReturnAddressStreetInKana), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ReturnOrderNumber { get; private set; }
         public VocabularyKey ContactPersonId { get; private set; }
         public VocabularyKey CurrencyCode { get; private set; }
@@ -103,7 +101,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ReturnAddressZipCode { get; private set; }
         public VocabularyKey ReturnAddressCityInKana { get; private set; }
         public VocabularyKey ReturnAddressStreetInKana { get; private set; }
-
-
     }
 }

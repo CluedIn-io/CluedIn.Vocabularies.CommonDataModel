@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public OperationTypeEntityVocabulary()
         {
-            VocabularyName = "OperationTypeEntity";
+            VocabularyName = "Operation Type Entity";
             KeyPrefix = "commonDataModel.operationtypeentity";
             KeySeparator = ".";
             Grouping = "/OperationTypeEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 OperationTypeID = group.Add(new VocabularyKey(nameof(OperationTypeID), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VendPostingProfile = group.Add(new VocabularyKey(nameof(VendPostingProfile), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(LedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CreateFinancialTrans { get; private set; }
         public VocabularyKey CreateInventTrans { get; private set; }
         public VocabularyKey CustPostingProfile { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey OperationTypeID { get; private set; }
         public VocabularyKey VendPostingProfile { get; private set; }
         public VocabularyKey LedgerDimensionDisplayValue { get; private set; }
-
-
     }
 }

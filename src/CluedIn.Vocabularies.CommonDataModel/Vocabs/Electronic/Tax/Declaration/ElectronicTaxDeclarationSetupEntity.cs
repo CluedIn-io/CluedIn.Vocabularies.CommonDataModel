@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ElectronicTaxDeclarationSetupEntityVocabulary()
         {
-            VocabularyName = "ElectronicTaxDeclarationSetupEntity";
+            VocabularyName = "Electronic Tax Declaration Setup Entity";
             KeyPrefix = "commonDataModel.electronictaxdeclarationsetupentity";
             KeySeparator = ".";
             Grouping = "/ElectronicTaxDeclarationSetupEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 UseOfProxyServer = group.Add(new VocabularyKey(nameof(UseOfProxyServer), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProxyServerAuthenticationRequired = group.Add(new VocabularyKey(nameof(ProxyServerAuthenticationRequired), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Company = group.Add(new VocabularyKey(nameof(Company), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ID { get; private set; }
         public VocabularyKey Authentication { get; private set; }
         public VocabularyKey ProxyServerIPAddress { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey UseOfProxyServer { get; private set; }
         public VocabularyKey ProxyServerAuthenticationRequired { get; private set; }
         public VocabularyKey Company { get; private set; }
-
-
     }
 }

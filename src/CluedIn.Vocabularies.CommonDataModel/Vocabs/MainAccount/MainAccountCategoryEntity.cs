@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MainAccountCategoryEntityVocabulary()
         {
-            VocabularyName = "MainAccountCategoryEntity";
+            VocabularyName = "Main Account Category Entity";
             KeyPrefix = "commonDataModel.mainaccountcategoryentity";
             KeySeparator = ".";
             Grouping = "/MainAccountCategoryEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Closed = group.Add(new VocabularyKey(nameof(Closed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DisplayOrder = group.Add(new VocabularyKey(nameof(DisplayOrder), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey MainAccountCategory { get; private set; }
         public VocabularyKey ReferenceId { get; private set; }
         public VocabularyKey MainAccountType { get; private set; }
         public VocabularyKey Closed { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey DisplayOrder { get; private set; }
-
-
     }
 }

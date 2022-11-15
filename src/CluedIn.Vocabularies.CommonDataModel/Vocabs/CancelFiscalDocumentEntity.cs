@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CancelFiscalDocumentEntityVocabulary()
         {
-            VocabularyName = "CancelFiscalDocumentEntity";
+            VocabularyName = "Cancel Fiscal Document Entity";
             KeyPrefix = "commonDataModel.cancelfiscaldocumententity";
             KeySeparator = ".";
             Grouping = "/CancelFiscalDocumentEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ThirdPartyCNPJorCPF = group.Add(new VocabularyKey(nameof(ThirdPartyCNPJorCPF), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Voucher = group.Add(new VocabularyKey(nameof(Voucher), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CancelAccountingDate = group.Add(new VocabularyKey(nameof(CancelAccountingDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Direction { get; private set; }
         public VocabularyKey FiscalDocumentNumber { get; private set; }
         public VocabularyKey FiscalEstablishmentId { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ThirdPartyCNPJorCPF { get; private set; }
         public VocabularyKey Voucher { get; private set; }
         public VocabularyKey CancelAccountingDate { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RTax25LedgerIntervalGroupEntityVocabulary()
         {
-            VocabularyName = "RTax25LedgerIntervalGroupEntity";
+            VocabularyName = "R Tax 25 Ledger Interval Group Entity";
             KeyPrefix = "commonDataModel.rtax25ledgerintervalgroupentity";
             KeySeparator = ".";
             Grouping = "/RTax25LedgerIntervalGroupEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 IntervalGroup = group.Add(new VocabularyKey(nameof(IntervalGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey IntervalGroup { get; private set; }
         public VocabularyKey Description { get; private set; }
-
-
     }
 }

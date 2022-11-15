@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TNVEDToCustomsPaymentsRelationsEntityVocabulary()
         {
-            VocabularyName = "TNVEDToCustomsPaymentsRelationsEntity";
+            VocabularyName = "TNVED To Customs Payments Relations Entity";
             KeyPrefix = "commonDataModel.tnvedtocustomspaymentsrelationsentity";
             KeySeparator = ".";
             Grouping = "/TNVEDToCustomsPaymentsRelationsEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FromDate = group.Add(new VocabularyKey(nameof(FromDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Excise = group.Add(new VocabularyKey(nameof(Excise), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 VAT = group.Add(new VocabularyKey(nameof(VAT), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TnVedCode { get; private set; }
         public VocabularyKey CountryRegionId { get; private set; }
         public VocabularyKey Direction { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FromDate { get; private set; }
         public VocabularyKey Excise { get; private set; }
         public VocabularyKey VAT { get; private set; }
-
-
     }
 }

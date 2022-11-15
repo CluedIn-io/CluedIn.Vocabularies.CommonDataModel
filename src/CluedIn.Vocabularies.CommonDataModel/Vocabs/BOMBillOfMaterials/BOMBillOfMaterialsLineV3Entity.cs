@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BOMBillOfMaterialsLineV3EntityVocabulary()
         {
-            VocabularyName = "BOMBillOfMaterialsLineV3Entity";
+            VocabularyName = "BOM Bill Of Materials Line V3 Entity";
             KeyPrefix = "commonDataModel.bombillofmaterialslinev3entity";
             KeySeparator = ".";
             Grouping = "/BOMBillOfMaterialsLineV3Entity";
@@ -55,10 +55,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LineBOMId = group.Add(new VocabularyKey(nameof(LineBOMId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LineCreationSequenceNumber = group.Add(new VocabularyKey(nameof(LineCreationSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ConfigurationGroupId = group.Add(new VocabularyKey(nameof(ConfigurationGroupId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ConsumptionType { get; private set; }
         public VocabularyKey BOMId { get; private set; }
         public VocabularyKey Quantity { get; private set; }
@@ -101,7 +99,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LineBOMId { get; private set; }
         public VocabularyKey LineCreationSequenceNumber { get; private set; }
         public VocabularyKey ConfigurationGroupId { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerDefaultDescriptionParametersEntityVocabulary()
         {
-            VocabularyName = "LedgerDefaultDescriptionParametersEntity";
+            VocabularyName = "Ledger Default Description Parameters Entity";
             KeyPrefix = "commonDataModel.ledgerdefaultdescriptionparametersentity";
             KeySeparator = ".";
             Grouping = "/LedgerDefaultDescriptionParametersEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ReferenceTableName = group.Add(new VocabularyKey(nameof(ReferenceTableName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReferenceFieldName = group.Add(new VocabularyKey(nameof(ReferenceFieldName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TransactText = group.Add(new VocabularyKey(nameof(TransactText), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Language { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey ParameterNumber { get; private set; }
         public VocabularyKey ReferenceTableName { get; private set; }
         public VocabularyKey ReferenceFieldName { get; private set; }
         public VocabularyKey TransactText { get; private set; }
-
-
     }
 }

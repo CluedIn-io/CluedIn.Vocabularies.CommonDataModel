@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public InventWarehouseOnHandCDSEntityVocabulary()
         {
-            VocabularyName = "InventWarehouseOnHandCDSEntity";
+            VocabularyName = "Invent Warehouse On Hand CDS Entity";
             KeyPrefix = "commonDataModel.inventwarehouseonhandcdsentity";
             KeySeparator = ".";
             Grouping = "/InventWarehouseOnHandCDSEntity";
@@ -31,10 +31,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 TotalAvailableQuantity = group.Add(new VocabularyKey(nameof(TotalAvailableQuantity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReservedOrderedQuantity = group.Add(new VocabularyKey(nameof(ReservedOrderedQuantity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReservedOnHandQuantity = group.Add(new VocabularyKey(nameof(ReservedOnHandQuantity), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InventorySiteId { get; private set; }
         public VocabularyKey InventoryWarehouseId { get; private set; }
         public VocabularyKey ItemNumber { get; private set; }
@@ -53,7 +51,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey TotalAvailableQuantity { get; private set; }
         public VocabularyKey ReservedOrderedQuantity { get; private set; }
         public VocabularyKey ReservedOnHandQuantity { get; private set; }
-
-
     }
 }

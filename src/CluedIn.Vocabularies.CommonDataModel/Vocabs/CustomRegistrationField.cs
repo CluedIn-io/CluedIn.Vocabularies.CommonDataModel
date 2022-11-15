@@ -6,32 +6,28 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustomRegistrationFieldVocabulary()
         {
-            VocabularyName = "CustomRegistrationField";
+            VocabularyName = "Custom Registration Field";
             KeyPrefix = "commonDataModel.customregistrationfield";
             KeySeparator = ".";
             Grouping = "/CustomRegistrationField";
 
             AddGroup("CustomRegistrationField Details", group =>
             {
-                choices = group.Add(new VocabularyKey(nameof(choices), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                customRegistrationFieldId = group.Add(new VocabularyKey(nameof(customRegistrationFieldId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                isRequired = group.Add(new VocabularyKey(nameof(isRequired), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                text = group.Add(new VocabularyKey(nameof(text), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                type = group.Add(new VocabularyKey(nameof(type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                stateCode = group.Add(new VocabularyKey(nameof(stateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statusCode = group.Add(new VocabularyKey(nameof(statusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                Choices = group.Add(new VocabularyKey(nameof(Choices), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CustomRegistrationFieldId = group.Add(new VocabularyKey(nameof(CustomRegistrationFieldId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsRequired = group.Add(new VocabularyKey(nameof(IsRequired), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Text = group.Add(new VocabularyKey(nameof(Text), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Type = group.Add(new VocabularyKey(nameof(Type), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey choices { get; private set; }
-        public VocabularyKey customRegistrationFieldId { get; private set; }
-        public VocabularyKey isRequired { get; private set; }
-        public VocabularyKey text { get; private set; }
-        public VocabularyKey type { get; private set; }
-        public VocabularyKey stateCode { get; private set; }
-        public VocabularyKey statusCode { get; private set; }
-
-
+        public VocabularyKey Choices { get; private set; }
+        public VocabularyKey CustomRegistrationFieldId { get; private set; }
+        public VocabularyKey IsRequired { get; private set; }
+        public VocabularyKey Text { get; private set; }
+        public VocabularyKey Type { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public MCRRefundCheckSettlementEntityVocabulary()
         {
-            VocabularyName = "MCRRefundCheckSettlementEntity";
+            VocabularyName = "MCR Refund Check Settlement Entity";
             KeyPrefix = "commonDataModel.mcrrefundchecksettlemententity";
             KeySeparator = ".";
             Grouping = "/MCRRefundCheckSettlementEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LedgerJournalNumber = group.Add(new VocabularyKey(nameof(LedgerJournalNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LedgerJournalVoucher = group.Add(new VocabularyKey(nameof(LedgerJournalVoucher), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 LedgerJournalTransationLineNumber = group.Add(new VocabularyKey(nameof(LedgerJournalTransationLineNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TransactionBatchId { get; private set; }
         public VocabularyKey SettlementStatus { get; private set; }
         public VocabularyKey SettlementAmount { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LedgerJournalNumber { get; private set; }
         public VocabularyKey LedgerJournalVoucher { get; private set; }
         public VocabularyKey LedgerJournalTransationLineNumber { get; private set; }
-
-
     }
 }

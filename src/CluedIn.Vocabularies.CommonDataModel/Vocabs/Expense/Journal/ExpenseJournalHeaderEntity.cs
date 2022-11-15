@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ExpenseJournalHeaderEntityVocabulary()
         {
-            VocabularyName = "ExpenseJournalHeaderEntity";
+            VocabularyName = "Expense Journal Header Entity";
             KeyPrefix = "commonDataModel.expensejournalheaderentity";
             KeySeparator = ".";
             Grouping = "/ExpenseJournalHeaderEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ReportedAsReadyBy = group.Add(new VocabularyKey(nameof(ReportedAsReadyBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RejectedBy = group.Add(new VocabularyKey(nameof(RejectedBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ApprovedBy = group.Add(new VocabularyKey(nameof(ApprovedBy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PostingLayer { get; private set; }
         public VocabularyKey JournalNameId { get; private set; }
         public VocabularyKey JournalBatchNumber { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ReportedAsReadyBy { get; private set; }
         public VocabularyKey RejectedBy { get; private set; }
         public VocabularyKey ApprovedBy { get; private set; }
-
-
     }
 }

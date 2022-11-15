@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvPayMethodEntityVocabulary()
         {
-            VocabularyName = "TrvPayMethodEntity";
+            VocabularyName = "Trv Pay Method Entity";
             KeyPrefix = "commonDataModel.trvpaymethodentity";
             KeySeparator = ".";
             Grouping = "/TrvPayMethodEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PayMethod = group.Add(new VocabularyKey(nameof(PayMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PostMethod = group.Add(new VocabularyKey(nameof(PostMethod), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OffsetLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(OffsetLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AutomaticPayment { get; private set; }
         public VocabularyKey CostOwner { get; private set; }
         public VocabularyKey OffsetLedgerDimension { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PayMethod { get; private set; }
         public VocabularyKey PostMethod { get; private set; }
         public VocabularyKey OffsetLedgerDimensionDisplayValue { get; private set; }
-
-
     }
 }

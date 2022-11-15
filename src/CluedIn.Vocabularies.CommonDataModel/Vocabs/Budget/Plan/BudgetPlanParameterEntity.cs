@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public BudgetPlanParameterEntityVocabulary()
         {
-            VocabularyName = "BudgetPlanParameterEntity";
+            VocabularyName = "Budget Plan Parameter Entity";
             KeyPrefix = "commonDataModel.budgetplanparameterentity";
             KeySeparator = ".";
             Grouping = "/BudgetPlanParameterEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DimensionHierarchy = group.Add(new VocabularyKey(nameof(DimensionHierarchy), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 SkipCurrencyConversion = group.Add(new VocabularyKey(nameof(SkipCurrencyConversion), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DimensionHierarchyName = group.Add(new VocabularyKey(nameof(DimensionHierarchyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Key { get; private set; }
         public VocabularyKey UseBudgetPlanningUserGroups { get; private set; }
         public VocabularyKey SecurityModel { get; private set; }
         public VocabularyKey DimensionHierarchy { get; private set; }
         public VocabularyKey SkipCurrencyConversion { get; private set; }
         public VocabularyKey DimensionHierarchyName { get; private set; }
-
-
     }
 }

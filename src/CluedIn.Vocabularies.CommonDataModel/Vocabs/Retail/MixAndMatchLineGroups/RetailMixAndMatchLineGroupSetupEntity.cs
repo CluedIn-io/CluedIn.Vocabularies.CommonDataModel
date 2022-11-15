@@ -6,24 +6,20 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailMixAndMatchLineGroupSetupEntityVocabulary()
         {
-            VocabularyName = "RetailMixAndMatchLineGroupSetupEntity";
+            VocabularyName = "Retail Mix And Match Line Group Setup Entity";
             KeyPrefix = "commonDataModel.retailmixandmatchlinegroupsetupentity";
             KeySeparator = ".";
             Grouping = "/RetailMixAndMatchLineGroupSetupEntity";
 
             AddGroup("RetailMixAndMatchLineGroupSetupEntity Details", group =>
             {
-                discountLineColorId = group.Add(new VocabularyKey(nameof(discountLineColorId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                mixAndMatchLineGroup = group.Add(new VocabularyKey(nameof(mixAndMatchLineGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                numberOfItemsNeeded = group.Add(new VocabularyKey(nameof(numberOfItemsNeeded), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                DiscountLineColorId = group.Add(new VocabularyKey(nameof(DiscountLineColorId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MixAndMatchLineGroup = group.Add(new VocabularyKey(nameof(MixAndMatchLineGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                NumberOfItemsNeeded = group.Add(new VocabularyKey(nameof(NumberOfItemsNeeded), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey discountLineColorId { get; private set; }
-        public VocabularyKey mixAndMatchLineGroup { get; private set; }
-        public VocabularyKey numberOfItemsNeeded { get; private set; }
-
-
+        public VocabularyKey DiscountLineColorId { get; private set; }
+        public VocabularyKey MixAndMatchLineGroup { get; private set; }
+        public VocabularyKey NumberOfItemsNeeded { get; private set; }
     }
 }

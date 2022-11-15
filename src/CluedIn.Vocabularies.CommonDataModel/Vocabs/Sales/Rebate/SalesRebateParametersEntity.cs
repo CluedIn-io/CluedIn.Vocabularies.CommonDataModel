@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public SalesRebateParametersEntityVocabulary()
         {
-            VocabularyName = "SalesRebateParametersEntity";
+            VocabularyName = "Sales Rebate Parameters Entity";
             KeyPrefix = "commonDataModel.salesrebateparametersentity";
             KeySeparator = ".";
             Grouping = "/SalesRebateParametersEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RebateAccrualProcessingJournalNameId = group.Add(new VocabularyKey(nameof(RebateAccrualProcessingJournalNameId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 TradeSpendingRebateProcessingJournalNameId = group.Add(new VocabularyKey(nameof(TradeSpendingRebateProcessingJournalNameId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 FreightRebateProcessingJournalNameId = group.Add(new VocabularyKey(nameof(FreightRebateProcessingJournalNameId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey WillInvoicingCreateRebateClaim { get; private set; }
         public VocabularyKey RebateWeekStartingDay { get; private set; }
         public VocabularyKey CustomerCreditNoteRebateProcessingJournalNameId { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RebateAccrualProcessingJournalNameId { get; private set; }
         public VocabularyKey TradeSpendingRebateProcessingJournalNameId { get; private set; }
         public VocabularyKey FreightRebateProcessingJournalNameId { get; private set; }
-
-
     }
 }

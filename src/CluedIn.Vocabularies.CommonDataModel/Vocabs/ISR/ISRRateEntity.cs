@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ISRRateEntityVocabulary()
         {
-            VocabularyName = "ISRRateEntity";
+            VocabularyName = "ISR Rate Entity";
             KeyPrefix = "commonDataModel.isrrateentity";
             KeySeparator = ".";
             Grouping = "/ISRRateEntity";
@@ -18,16 +18,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Rate = group.Add(new VocabularyKey(nameof(Rate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MaximumAmount = group.Add(new VocabularyKey(nameof(MaximumAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Year = group.Add(new VocabularyKey(nameof(Year), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FixedAmount { get; private set; }
         public VocabularyKey Month { get; private set; }
         public VocabularyKey Rate { get; private set; }
         public VocabularyKey MaximumAmount { get; private set; }
         public VocabularyKey Year { get; private set; }
-
-
     }
 }

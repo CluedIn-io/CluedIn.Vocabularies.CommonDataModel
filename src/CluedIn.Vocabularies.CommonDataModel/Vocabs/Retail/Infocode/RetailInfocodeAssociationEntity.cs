@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public RetailInfocodeAssociationEntityVocabulary()
         {
-            VocabularyName = "RetailInfocodeAssociationEntity";
+            VocabularyName = "Retail Infocode Association Entity";
             KeyPrefix = "commonDataModel.retailinfocodeassociationentity";
             KeySeparator = ".";
             Grouping = "/RetailInfocodeAssociationEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 RefTableId = group.Add(new VocabularyKey(nameof(RefTableId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Sequence = group.Add(new VocabularyKey(nameof(Sequence), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WhenRequired = group.Add(new VocabularyKey(nameof(WhenRequired), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey InfocodeId { get; private set; }
         public VocabularyKey InputRequired { get; private set; }
         public VocabularyKey RefRelation1 { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey RefTableId { get; private set; }
         public VocabularyKey Sequence { get; private set; }
         public VocabularyKey WhenRequired { get; private set; }
-
-
     }
 }

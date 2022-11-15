@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DimensionEnumerationEntityVocabulary()
         {
-            VocabularyName = "DimensionEnumerationEntity";
+            VocabularyName = "Dimension Enumeration Entity";
             KeyPrefix = "commonDataModel.dimensionenumerationentity";
             KeySeparator = ".";
             Grouping = "/DimensionEnumerationEntity";
@@ -15,13 +15,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
             {
                 RecordId = group.Add(new VocabularyKey(nameof(RecordId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DisplayValue = group.Add(new VocabularyKey(nameof(DisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey RecordId { get; private set; }
         public VocabularyKey DisplayValue { get; private set; }
-
-
     }
 }

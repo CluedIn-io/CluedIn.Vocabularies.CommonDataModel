@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public DirPartyV2EntityVocabulary()
         {
-            VocabularyName = "DirPartyV2Entity";
+            VocabularyName = "Dir Party V2 Entity";
             KeyPrefix = "commonDataModel.dirpartyv2entity";
             KeySeparator = ".";
             Grouping = "/DirPartyV2Entity";
@@ -111,10 +111,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ElectronicLocationId = group.Add(new VocabularyKey(nameof(ElectronicLocationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PrimaryAddressLocation = group.Add(new VocabularyKey(nameof(PrimaryAddressLocation), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IsPrimaryAddressLocationOwner = group.Add(new VocabularyKey(nameof(IsPrimaryAddressLocationOwner), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey PartyNumber { get; private set; }
         public VocabularyKey PartyType { get; private set; }
         public VocabularyKey NameAlias { get; private set; }
@@ -213,7 +211,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ElectronicLocationId { get; private set; }
         public VocabularyKey PrimaryAddressLocation { get; private set; }
         public VocabularyKey IsPrimaryAddressLocationOwner { get; private set; }
-
-
     }
 }

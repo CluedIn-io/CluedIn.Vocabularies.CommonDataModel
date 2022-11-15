@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LogisticsAddressCityEntityVocabulary()
         {
-            VocabularyName = "LogisticsAddressCityEntity";
+            VocabularyName = "Logistics Address City Entity";
             KeyPrefix = "commonDataModel.logisticsaddresscityentity";
             KeySeparator = ".";
             Grouping = "/LogisticsAddressCityEntity";
@@ -21,10 +21,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BrazilCityCode = group.Add(new VocabularyKey(nameof(BrazilCityCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CityInKana = group.Add(new VocabularyKey(nameof(CityInKana), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CityKey { get; private set; }
         public VocabularyKey CountryRegionId { get; private set; }
         public VocabularyKey StateId { get; private set; }
@@ -33,7 +31,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Description { get; private set; }
         public VocabularyKey BrazilCityCode { get; private set; }
         public VocabularyKey CityInKana { get; private set; }
-
-
     }
 }

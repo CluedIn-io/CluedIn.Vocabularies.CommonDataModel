@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CashAccountsEntityVocabulary()
         {
-            VocabularyName = "CashAccountsEntity";
+            VocabularyName = "Cash Accounts Entity";
             KeyPrefix = "commonDataModel.cashaccountsentity";
             KeySeparator = ".";
             Grouping = "/CashAccountsEntity";
@@ -19,17 +19,13 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NegativeCash = group.Add(new VocabularyKey(nameof(NegativeCash), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 NumberSequenceGroup = group.Add(new VocabularyKey(nameof(NumberSequenceGroup), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Cash { get; private set; }
         public VocabularyKey Currency { get; private set; }
         public VocabularyKey MoreCurrencies { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey NegativeCash { get; private set; }
         public VocabularyKey NumberSequenceGroup { get; private set; }
-
-
     }
 }

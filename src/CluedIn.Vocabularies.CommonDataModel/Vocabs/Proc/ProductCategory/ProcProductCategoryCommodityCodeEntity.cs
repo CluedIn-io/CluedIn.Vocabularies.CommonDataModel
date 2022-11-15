@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProcProductCategoryCommodityCodeEntityVocabulary()
         {
-            VocabularyName = "ProcProductCategoryCommodityCodeEntity";
+            VocabularyName = "Proc Product Category Commodity Code Entity";
             KeyPrefix = "commonDataModel.procproductcategorycommoditycodeentity";
             KeySeparator = ".";
             Grouping = "/ProcProductCategoryCommodityCodeEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 CommodityHierarchyName = group.Add(new VocabularyKey(nameof(CommodityHierarchyName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CommodityName = group.Add(new VocabularyKey(nameof(CommodityName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CommodityCode = group.Add(new VocabularyKey(nameof(CommodityCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CommodityRecId { get; private set; }
         public VocabularyKey CommodityHierarchyRecId { get; private set; }
         public VocabularyKey ProductCategoryRecId { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey CommodityHierarchyName { get; private set; }
         public VocabularyKey CommodityName { get; private set; }
         public VocabularyKey CommodityCode { get; private set; }
-
-
     }
 }

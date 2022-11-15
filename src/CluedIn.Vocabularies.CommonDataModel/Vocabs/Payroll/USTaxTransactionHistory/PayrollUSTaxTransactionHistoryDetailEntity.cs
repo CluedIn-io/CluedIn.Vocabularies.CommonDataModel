@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PayrollUSTaxTransactionHistoryDetailEntityVocabulary()
         {
-            VocabularyName = "PayrollUSTaxTransactionHistoryDetailEntity";
+            VocabularyName = "Payroll US Tax Transaction History Detail Entity";
             KeyPrefix = "commonDataModel.payrollustaxtransactionhistorydetailentity";
             KeySeparator = ".";
             Grouping = "/PayrollUSTaxTransactionHistoryDetailEntity";
@@ -31,10 +31,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WageBase = group.Add(new VocabularyKey(nameof(WageBase), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 CalculatedTaxAmount = group.Add(new VocabularyKey(nameof(CalculatedTaxAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Invoice = group.Add(new VocabularyKey(nameof(Invoice), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Worker { get; private set; }
         public VocabularyKey PersonnelNumber { get; private set; }
         public VocabularyKey TransDate { get; private set; }
@@ -53,7 +51,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WageBase { get; private set; }
         public VocabularyKey CalculatedTaxAmount { get; private set; }
         public VocabularyKey Invoice { get; private set; }
-
-
     }
 }

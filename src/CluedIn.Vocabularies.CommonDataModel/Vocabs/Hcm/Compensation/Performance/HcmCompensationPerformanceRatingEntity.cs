@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public HcmCompensationPerformanceRatingEntityVocabulary()
         {
-            VocabularyName = "HcmCompensationPerformanceRatingEntity";
+            VocabularyName = "Hcm Compensation Performance Rating Entity";
             KeyPrefix = "commonDataModel.hcmcompensationperformanceratingentity";
             KeySeparator = ".";
             Grouping = "/HcmCompensationPerformanceRatingEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Rating = group.Add(new VocabularyKey(nameof(Rating), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Effective = group.Add(new VocabularyKey(nameof(Effective), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Expiration = group.Add(new VocabularyKey(nameof(Expiration), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Description { get; private set; }
         public VocabularyKey Rating { get; private set; }
         public VocabularyKey Effective { get; private set; }
         public VocabularyKey Expiration { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerCovForecastActualEntityVocabulary()
         {
-            VocabularyName = "LedgerCovForecastActualEntity";
+            VocabularyName = "Ledger Cov Forecast Actual Entity";
             KeyPrefix = "commonDataModel.ledgercovforecastactualentity";
             KeySeparator = ".";
             Grouping = "/LedgerCovForecastActualEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ActualEnterpriseCurrencyAmount = group.Add(new VocabularyKey(nameof(ActualEnterpriseCurrencyAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ForecastAccountingCurrencyAmount = group.Add(new VocabularyKey(nameof(ForecastAccountingCurrencyAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ActualAccountingCurrencyAmount = group.Add(new VocabularyKey(nameof(ActualAccountingCurrencyAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey TransDate { get; private set; }
         public VocabularyKey BankAccount { get; private set; }
         public VocabularyKey BankAccountCurrencyCode { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ActualEnterpriseCurrencyAmount { get; private set; }
         public VocabularyKey ForecastAccountingCurrencyAmount { get; private set; }
         public VocabularyKey ActualAccountingCurrencyAmount { get; private set; }
-
-
     }
 }

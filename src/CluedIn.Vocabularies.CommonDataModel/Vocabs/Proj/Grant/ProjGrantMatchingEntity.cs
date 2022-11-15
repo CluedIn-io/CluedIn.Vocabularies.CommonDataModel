@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ProjGrantMatchingEntityVocabulary()
         {
-            VocabularyName = "ProjGrantMatchingEntity";
+            VocabularyName = "Proj Grant Matching Entity";
             KeyPrefix = "commonDataModel.projgrantmatchingentity";
             KeySeparator = ".";
             Grouping = "/ProjGrantMatchingEntity";
@@ -17,15 +17,11 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Description = group.Add(new VocabularyKey(nameof(Description), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MatchingPercentage = group.Add(new VocabularyKey(nameof(MatchingPercentage), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 MatchingType = group.Add(new VocabularyKey(nameof(MatchingType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Comments { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey MatchingPercentage { get; private set; }
         public VocabularyKey MatchingType { get; private set; }
-
-
     }
 }

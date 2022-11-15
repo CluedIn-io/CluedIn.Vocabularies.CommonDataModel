@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TMSShippingCarrierPostalAddressEntityVocabulary()
         {
-            VocabularyName = "TMSShippingCarrierPostalAddressEntity";
+            VocabularyName = "TMS Shipping Carrier Postal Address Entity";
             KeyPrefix = "commonDataModel.tmsshippingcarrierpostaladdressentity";
             KeySeparator = ".";
             Grouping = "/TMSShippingCarrierPostalAddressEntity";
@@ -39,10 +39,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FormattedAddress = group.Add(new VocabularyKey(nameof(FormattedAddress), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ShippingCarrierLegalEntityId = group.Add(new VocabularyKey(nameof(ShippingCarrierLegalEntityId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Location = group.Add(new VocabularyKey(nameof(Location), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey ShippingCarrierId { get; private set; }
         public VocabularyKey IsPrimaryAddress { get; private set; }
         public VocabularyKey AddressLocationId { get; private set; }
@@ -69,7 +67,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FormattedAddress { get; private set; }
         public VocabularyKey ShippingCarrierLegalEntityId { get; private set; }
         public VocabularyKey Location { get; private set; }
-
-
     }
 }

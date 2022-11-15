@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public PlSADDocumentLedgerJournalEntityVocabulary()
         {
-            VocabularyName = "PlSADDocumentLedgerJournalEntity";
+            VocabularyName = "Pl SAD Document Ledger Journal Entity";
             KeyPrefix = "commonDataModel.plsaddocumentledgerjournalentity";
             KeySeparator = ".";
             Grouping = "/PlSADDocumentLedgerJournalEntity";
@@ -23,10 +23,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Carrier = group.Add(new VocabularyKey(nameof(Carrier), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Date = group.Add(new VocabularyKey(nameof(Date), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DateOfVATRegister = group.Add(new VocabularyKey(nameof(DateOfVATRegister), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Currency { get; private set; }
         public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey SADDate { get; private set; }
@@ -37,7 +35,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Carrier { get; private set; }
         public VocabularyKey Date { get; private set; }
         public VocabularyKey DateOfVATRegister { get; private set; }
-
-
     }
 }

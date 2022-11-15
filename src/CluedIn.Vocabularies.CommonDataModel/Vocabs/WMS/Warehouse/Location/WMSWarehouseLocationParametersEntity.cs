@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WMSWarehouseLocationParametersEntityVocabulary()
         {
-            VocabularyName = "WMSWarehouseLocationParametersEntity";
+            VocabularyName = "WMS Warehouse Location Parameters Entity";
             KeyPrefix = "commonDataModel.wmswarehouselocationparametersentity";
             KeySeparator = ".";
             Grouping = "/WMSWarehouseLocationParametersEntity";
@@ -20,10 +20,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 AreManualSortOrderCodesUsed = group.Add(new VocabularyKey(nameof(AreManualSortOrderCodesUsed), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ItemArrivalJournalNameId = group.Add(new VocabularyKey(nameof(ItemArrivalJournalNameId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ProductionInputJournalNameId = group.Add(new VocabularyKey(nameof(ProductionInputJournalNameId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey DefaultWarehouseLocationWidth { get; private set; }
         public VocabularyKey DefaultWarehouseLocationDepth { get; private set; }
         public VocabularyKey DefaultWarehouseLocationHeight { get; private set; }
@@ -31,7 +29,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey AreManualSortOrderCodesUsed { get; private set; }
         public VocabularyKey ItemArrivalJournalNameId { get; private set; }
         public VocabularyKey ProductionInputJournalNameId { get; private set; }
-
-
     }
 }

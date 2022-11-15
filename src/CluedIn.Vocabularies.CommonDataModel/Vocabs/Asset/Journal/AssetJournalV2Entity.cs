@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public AssetJournalV2EntityVocabulary()
         {
-            VocabularyName = "AssetJournalV2Entity";
+            VocabularyName = "Asset Journal V2 Entity";
             KeyPrefix = "commonDataModel.assetjournalv2entity";
             KeySeparator = ".";
             Grouping = "/AssetJournalV2Entity";
@@ -46,10 +46,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 DebitAmountReportingCurrency = group.Add(new VocabularyKey(nameof(DebitAmountReportingCurrency), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReportingCurrencyExchRate = group.Add(new VocabularyKey(nameof(ReportingCurrencyExchRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ReportingCurrencyExchRateSecondary = group.Add(new VocabularyKey(nameof(ReportingCurrencyExchRateSecondary), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey CreditAmount { get; private set; }
         public VocabularyKey DebitAmount { get; private set; }
         public VocabularyKey JournalBatchNumber { get; private set; }
@@ -83,7 +81,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey DebitAmountReportingCurrency { get; private set; }
         public VocabularyKey ReportingCurrencyExchRate { get; private set; }
         public VocabularyKey ReportingCurrencyExchRateSecondary { get; private set; }
-
-
     }
 }

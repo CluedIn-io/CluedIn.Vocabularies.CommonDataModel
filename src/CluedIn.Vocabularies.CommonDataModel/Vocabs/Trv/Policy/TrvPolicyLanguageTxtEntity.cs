@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TrvPolicyLanguageTxtEntityVocabulary()
         {
-            VocabularyName = "TrvPolicyLanguageTxtEntity";
+            VocabularyName = "Trv Policy Language Txt Entity";
             KeyPrefix = "commonDataModel.trvpolicylanguagetxtentity";
             KeySeparator = ".";
             Grouping = "/TrvPolicyLanguageTxtEntity";
@@ -25,10 +25,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 PolicyRuleType_Name = group.Add(new VocabularyKey(nameof(PolicyRuleType_Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PolicyRuleType_PolicyType = group.Add(new VocabularyKey(nameof(PolicyRuleType_PolicyType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 PolicyType_PolicyType = group.Add(new VocabularyKey(nameof(PolicyType_PolicyType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey Language { get; private set; }
         public VocabularyKey Reference { get; private set; }
         public VocabularyKey Text { get; private set; }
@@ -41,7 +39,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey PolicyRuleType_Name { get; private set; }
         public VocabularyKey PolicyRuleType_PolicyType { get; private set; }
         public VocabularyKey PolicyType_PolicyType { get; private set; }
-
-
     }
 }

@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerRefinancingRatesEntityVocabulary()
         {
-            VocabularyName = "LedgerRefinancingRatesEntity";
+            VocabularyName = "Ledger Refinancing Rates Entity";
             KeyPrefix = "commonDataModel.ledgerrefinancingratesentity";
             KeySeparator = ".";
             Grouping = "/LedgerRefinancingRatesEntity";
@@ -16,14 +16,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FromDate = group.Add(new VocabularyKey(nameof(FromDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Percent = group.Add(new VocabularyKey(nameof(Percent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Factor = group.Add(new VocabularyKey(nameof(Factor), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey FromDate { get; private set; }
         public VocabularyKey Percent { get; private set; }
         public VocabularyKey Factor { get; private set; }
-
-
     }
 }

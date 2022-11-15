@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public GBTParametersEntityVocabulary()
         {
-            VocabularyName = "GBTParametersEntity";
+            VocabularyName = "GBT Parameters Entity";
             KeyPrefix = "commonDataModel.gbtparametersentity";
             KeySeparator = ".";
             Grouping = "/GBTParametersEntity";
@@ -25,17 +25,15 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 FixedAssetGroupCodeFormat = group.Add(new VocabularyKey(nameof(FixedAssetGroupCodeFormat), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 IncomeSheet = group.Add(new VocabularyKey(nameof(IncomeSheet), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Industry = group.Add(new VocabularyKey(nameof(Industry), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                key = group.Add(new VocabularyKey(nameof(key), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Key = group.Add(new VocabularyKey(nameof(Key), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OrgNumber = group.Add(new VocabularyKey(nameof(OrgNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 OrgType = group.Add(new VocabularyKey(nameof(OrgType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 ERModelName = group.Add(new VocabularyKey(nameof(ERModelName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 AcquisitionLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(AcquisitionLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DepreciationLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(DepreciationLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 DisposalLedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(DisposalLedgerDimensionDisplayValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AcquisitionLedgerDimension { get; private set; }
         public VocabularyKey BalanceSheet { get; private set; }
         public VocabularyKey CashflowAdditional { get; private set; }
@@ -48,14 +46,12 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey FixedAssetGroupCodeFormat { get; private set; }
         public VocabularyKey IncomeSheet { get; private set; }
         public VocabularyKey Industry { get; private set; }
-        public VocabularyKey key { get; private set; }
+        public VocabularyKey Key { get; private set; }
         public VocabularyKey OrgNumber { get; private set; }
         public VocabularyKey OrgType { get; private set; }
         public VocabularyKey ERModelName { get; private set; }
         public VocabularyKey AcquisitionLedgerDimensionDisplayValue { get; private set; }
         public VocabularyKey DepreciationLedgerDimensionDisplayValue { get; private set; }
         public VocabularyKey DisposalLedgerDimensionDisplayValue { get; private set; }
-
-
     }
 }

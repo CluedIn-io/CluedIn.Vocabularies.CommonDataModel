@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustBillingCodeVersionEntityVocabulary()
         {
-            VocabularyName = "CustBillingCodeVersionEntity";
+            VocabularyName = "Cust Billing Code Version Entity";
             KeyPrefix = "commonDataModel.custbillingcodeversionentity";
             KeySeparator = ".";
             Grouping = "/CustBillingCodeVersionEntity";
@@ -31,10 +31,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 BillingCode = group.Add(new VocabularyKey(nameof(BillingCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 BillingCodeDescription = group.Add(new VocabularyKey(nameof(BillingCodeDescription), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 InterestCode = group.Add(new VocabularyKey(nameof(InterestCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AllowChangeAmountOnInvoice { get; private set; }
         public VocabularyKey AllowChangesToLedgerAccounts { get; private set; }
         public VocabularyKey AmountDetails { get; private set; }
@@ -53,7 +51,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey BillingCode { get; private set; }
         public VocabularyKey BillingCodeDescription { get; private set; }
         public VocabularyKey InterestCode { get; private set; }
-
-
     }
 }

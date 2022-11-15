@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public WHSCycleCountingPlanEntityVocabulary()
         {
-            VocabularyName = "WHSCycleCountingPlanEntity";
+            VocabularyName = "WHS Cycle Counting Plan Entity";
             KeyPrefix = "commonDataModel.whscyclecountingplanentity";
             KeySeparator = ".";
             Grouping = "/WHSCycleCountingPlanEntity";
@@ -22,10 +22,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 WarehouseWorkPoolId = group.Add(new VocabularyKey(nameof(WarehouseWorkPoolId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WarehouseWorkTemplateId = group.Add(new VocabularyKey(nameof(WarehouseWorkTemplateId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 WarehouseWorkTemplateWorkOrderType = group.Add(new VocabularyKey(nameof(WarehouseWorkTemplateWorkOrderType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey EmptyLocationCycleCountingRule { get; private set; }
         public VocabularyKey PlanId { get; private set; }
         public VocabularyKey CycleCountingFrequencyInDays { get; private set; }
@@ -35,7 +33,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey WarehouseWorkPoolId { get; private set; }
         public VocabularyKey WarehouseWorkTemplateId { get; private set; }
         public VocabularyKey WarehouseWorkTemplateWorkOrderType { get; private set; }
-
-
     }
 }

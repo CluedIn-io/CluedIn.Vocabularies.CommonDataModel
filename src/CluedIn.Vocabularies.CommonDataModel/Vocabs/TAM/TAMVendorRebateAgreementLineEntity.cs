@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public TAMVendorRebateAgreementLineEntityVocabulary()
         {
-            VocabularyName = "TAMVendorRebateAgreementLineEntity";
+            VocabularyName = "TAM Vendor Rebate Agreement Line Entity";
             KeyPrefix = "commonDataModel.tamvendorrebateagreementlineentity";
             KeySeparator = ".";
             Grouping = "/TAMVendorRebateAgreementLineEntity";
@@ -28,10 +28,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 ToGrossPurchaseAmount = group.Add(new VocabularyKey(nameof(ToGrossPurchaseAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RebateAgreementId = group.Add(new VocabularyKey(nameof(RebateAgreementId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RebateLineBreakType = group.Add(new VocabularyKey(nameof(RebateLineBreakType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey VendorAccountNumber { get; private set; }
         public VocabularyKey CurrencyCode { get; private set; }
         public VocabularyKey LineNumber { get; private set; }
@@ -47,7 +45,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey ToGrossPurchaseAmount { get; private set; }
         public VocabularyKey RebateAgreementId { get; private set; }
         public VocabularyKey RebateLineBreakType { get; private set; }
-
-
     }
 }

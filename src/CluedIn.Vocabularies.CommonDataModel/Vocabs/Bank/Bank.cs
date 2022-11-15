@@ -13,13 +13,9 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
 
             AddGroup("Bank Details", group =>
             {
-                bankId = group.Add(new VocabularyKey(nameof(bankId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                BankId = group.Add(new VocabularyKey(nameof(BankId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey bankId { get; private set; }
-
-
+        public VocabularyKey BankId { get; private set; }
     }
 }

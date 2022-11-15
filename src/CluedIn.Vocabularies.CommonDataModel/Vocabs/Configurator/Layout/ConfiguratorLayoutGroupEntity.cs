@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public ConfiguratorLayoutGroupEntityVocabulary()
         {
-            VocabularyName = "ConfiguratorLayoutGroupEntity";
+            VocabularyName = "Configurator Layout Group Entity";
             KeyPrefix = "commonDataModel.configuratorlayoutgroupentity";
             KeySeparator = ".";
             Grouping = "/ConfiguratorLayoutGroupEntity";
@@ -24,10 +24,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 Export = group.Add(new VocabularyKey(nameof(Export), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 Import = group.Add(new VocabularyKey(nameof(Import), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RegisterType = group.Add(new VocabularyKey(nameof(RegisterType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey LayoutGroupId { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey LayoutType { get; private set; }
@@ -39,7 +37,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey Export { get; private set; }
         public VocabularyKey Import { get; private set; }
         public VocabularyKey RegisterType { get; private set; }
-
-
     }
 }

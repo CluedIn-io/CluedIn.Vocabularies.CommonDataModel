@@ -6,7 +6,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LedgerRRGOperationTable_RUEntityVocabulary()
         {
-            VocabularyName = "LedgerRRGOperationTable_RUEntity";
+            VocabularyName = "Ledger RRG Operation Table _RU Entity";
             KeyPrefix = "commonDataModel.ledgerrrgoperationtable_ruentity";
             KeySeparator = ".";
             Grouping = "/LedgerRRGOperationTable_RUEntity";
@@ -41,10 +41,8 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
                 LedgerRRGEProperties_W_PropertyId = group.Add(new VocabularyKey(nameof(LedgerRRGEProperties_W_PropertyId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RefTableName = group.Add(new VocabularyKey(nameof(RefTableName), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 RefLineId = group.Add(new VocabularyKey(nameof(RefLineId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
             });
         }
-
         public VocabularyKey AccountIntervalType { get; private set; }
         public VocabularyKey AccountNumMask { get; private set; }
         public VocabularyKey BalanceDetail { get; private set; }
@@ -73,7 +71,5 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
         public VocabularyKey LedgerRRGEProperties_W_PropertyId { get; private set; }
         public VocabularyKey RefTableName { get; private set; }
         public VocabularyKey RefLineId { get; private set; }
-
-
     }
 }

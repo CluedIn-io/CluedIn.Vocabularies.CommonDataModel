@@ -6,124 +6,120 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public LoanApplicationVocabulary()
         {
-            VocabularyName = "LoanApplication";
+            VocabularyName = "Loan Application";
             KeyPrefix = "commonDataModel.loanapplication";
             KeySeparator = ".";
             Grouping = "/LoanApplication";
 
             AddGroup("LoanApplication Details", group =>
             {
-                loanApplicationId = group.Add(new VocabularyKey(nameof(loanApplicationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                createdOn = group.Add(new VocabularyKey(nameof(createdOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                modifiedOn = group.Add(new VocabularyKey(nameof(modifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statecode = group.Add(new VocabularyKey(nameof(statecode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                statuscode = group.Add(new VocabularyKey(nameof(statuscode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                importSequenceNumber = group.Add(new VocabularyKey(nameof(importSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                overriddenCreatedOn = group.Add(new VocabularyKey(nameof(overriddenCreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                timeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(timeZoneRuleVersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LoanApplicationId = group.Add(new VocabularyKey(nameof(LoanApplicationId), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Statecode = group.Add(new VocabularyKey(nameof(Statecode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Statuscode = group.Add(new VocabularyKey(nameof(Statuscode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
                 UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                name = group.Add(new VocabularyKey(nameof(name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                amortizationType = group.Add(new VocabularyKey(nameof(amortizationType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                applicationnumber = group.Add(new VocabularyKey(nameof(applicationnumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                balloonAmount = group.Add(new VocabularyKey(nameof(balloonAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                balloonamount_Base = group.Add(new VocabularyKey(nameof(balloonamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                balloonTermCount = group.Add(new VocabularyKey(nameof(balloonTermCount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                costofimprovements = group.Add(new VocabularyKey(nameof(costofimprovements), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                costofimprovements_Base = group.Add(new VocabularyKey(nameof(costofimprovements_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                depositAmount = group.Add(new VocabularyKey(nameof(depositAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                depositamount_Base = group.Add(new VocabularyKey(nameof(depositamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                describeimprovements = group.Add(new VocabularyKey(nameof(describeimprovements), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                discountpointstotalamount = group.Add(new VocabularyKey(nameof(discountpointstotalamount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                discountpointstotalamount_Base = group.Add(new VocabularyKey(nameof(discountpointstotalamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                downPayment = group.Add(new VocabularyKey(nameof(downPayment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                downpayment_Base = group.Add(new VocabularyKey(nameof(downpayment_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                escrowPaymentAmount = group.Add(new VocabularyKey(nameof(escrowPaymentAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                escrowpaymentamount_Base = group.Add(new VocabularyKey(nameof(escrowpaymentamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                financingType = group.Add(new VocabularyKey(nameof(financingType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                firstMonthInterestAmount = group.Add(new VocabularyKey(nameof(firstMonthInterestAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                firstmonthinterestamount_Base = group.Add(new VocabularyKey(nameof(firstmonthinterestamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                integrationKey = group.Add(new VocabularyKey(nameof(integrationKey), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                interestOnlyTermMonthCount = group.Add(new VocabularyKey(nameof(interestOnlyTermMonthCount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                interestRate = group.Add(new VocabularyKey(nameof(interestRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                interestType = group.Add(new VocabularyKey(nameof(interestType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                isBalloonPayment = group.Add(new VocabularyKey(nameof(isBalloonPayment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                isInterestOnly = group.Add(new VocabularyKey(nameof(isInterestOnly), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                isNegativeAmortization = group.Add(new VocabularyKey(nameof(isNegativeAmortization), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                lendingLimit = group.Add(new VocabularyKey(nameof(lendingLimit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                lendinglimit_Base = group.Add(new VocabularyKey(nameof(lendinglimit_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                loanApplicationClosingDate = group.Add(new VocabularyKey(nameof(loanApplicationClosingDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                loanCategory = group.Add(new VocabularyKey(nameof(loanCategory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                loanorrefinancePurpose = group.Add(new VocabularyKey(nameof(loanorrefinancePurpose), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                loanTerm = group.Add(new VocabularyKey(nameof(loanTerm), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                loanToValue = group.Add(new VocabularyKey(nameof(loanToValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                loanType = group.Add(new VocabularyKey(nameof(loanType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                maxLoanToValue = group.Add(new VocabularyKey(nameof(maxLoanToValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                noteAmount = group.Add(new VocabularyKey(nameof(noteAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                noteamount_Base = group.Add(new VocabularyKey(nameof(noteamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                principalAmount = group.Add(new VocabularyKey(nameof(principalAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                principalamount_Base = group.Add(new VocabularyKey(nameof(principalamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                refinanceType = group.Add(new VocabularyKey(nameof(refinanceType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                sourceofDownPayment = group.Add(new VocabularyKey(nameof(sourceofDownPayment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                verificationStatus = group.Add(new VocabularyKey(nameof(verificationStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-                primaryMemberHelper = group.Add(new VocabularyKey(nameof(primaryMemberHelper), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AmortizationType = group.Add(new VocabularyKey(nameof(AmortizationType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Applicationnumber = group.Add(new VocabularyKey(nameof(Applicationnumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BalloonAmount = group.Add(new VocabularyKey(nameof(BalloonAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Balloonamount_Base = group.Add(new VocabularyKey(nameof(Balloonamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BalloonTermCount = group.Add(new VocabularyKey(nameof(BalloonTermCount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Costofimprovements = group.Add(new VocabularyKey(nameof(Costofimprovements), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Costofimprovements_Base = group.Add(new VocabularyKey(nameof(Costofimprovements_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DepositAmount = group.Add(new VocabularyKey(nameof(DepositAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Depositamount_Base = group.Add(new VocabularyKey(nameof(Depositamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Describeimprovements = group.Add(new VocabularyKey(nameof(Describeimprovements), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Discountpointstotalamount = group.Add(new VocabularyKey(nameof(Discountpointstotalamount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Discountpointstotalamount_Base = group.Add(new VocabularyKey(nameof(Discountpointstotalamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DownPayment = group.Add(new VocabularyKey(nameof(DownPayment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Downpayment_Base = group.Add(new VocabularyKey(nameof(Downpayment_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EscrowPaymentAmount = group.Add(new VocabularyKey(nameof(EscrowPaymentAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Escrowpaymentamount_Base = group.Add(new VocabularyKey(nameof(Escrowpaymentamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FinancingType = group.Add(new VocabularyKey(nameof(FinancingType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FirstMonthInterestAmount = group.Add(new VocabularyKey(nameof(FirstMonthInterestAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Firstmonthinterestamount_Base = group.Add(new VocabularyKey(nameof(Firstmonthinterestamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IntegrationKey = group.Add(new VocabularyKey(nameof(IntegrationKey), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InterestOnlyTermMonthCount = group.Add(new VocabularyKey(nameof(InterestOnlyTermMonthCount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InterestRate = group.Add(new VocabularyKey(nameof(InterestRate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InterestType = group.Add(new VocabularyKey(nameof(InterestType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsBalloonPayment = group.Add(new VocabularyKey(nameof(IsBalloonPayment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsInterestOnly = group.Add(new VocabularyKey(nameof(IsInterestOnly), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsNegativeAmortization = group.Add(new VocabularyKey(nameof(IsNegativeAmortization), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LendingLimit = group.Add(new VocabularyKey(nameof(LendingLimit), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Lendinglimit_Base = group.Add(new VocabularyKey(nameof(Lendinglimit_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LoanApplicationClosingDate = group.Add(new VocabularyKey(nameof(LoanApplicationClosingDate), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LoanCategory = group.Add(new VocabularyKey(nameof(LoanCategory), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LoanorrefinancePurpose = group.Add(new VocabularyKey(nameof(LoanorrefinancePurpose), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LoanTerm = group.Add(new VocabularyKey(nameof(LoanTerm), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LoanToValue = group.Add(new VocabularyKey(nameof(LoanToValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LoanType = group.Add(new VocabularyKey(nameof(LoanType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MaxLoanToValue = group.Add(new VocabularyKey(nameof(MaxLoanToValue), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                NoteAmount = group.Add(new VocabularyKey(nameof(NoteAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Noteamount_Base = group.Add(new VocabularyKey(nameof(Noteamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PrincipalAmount = group.Add(new VocabularyKey(nameof(PrincipalAmount), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Principalamount_Base = group.Add(new VocabularyKey(nameof(Principalamount_Base), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RefinanceType = group.Add(new VocabularyKey(nameof(RefinanceType), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SourceofDownPayment = group.Add(new VocabularyKey(nameof(SourceofDownPayment), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                VerificationStatus = group.Add(new VocabularyKey(nameof(VerificationStatus), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PrimaryMemberHelper = group.Add(new VocabularyKey(nameof(PrimaryMemberHelper), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey loanApplicationId { get; private set; }
-        public VocabularyKey createdOn { get; private set; }
-        public VocabularyKey modifiedOn { get; private set; }
-        public VocabularyKey statecode { get; private set; }
-        public VocabularyKey statuscode { get; private set; }
-        public VocabularyKey importSequenceNumber { get; private set; }
-        public VocabularyKey overriddenCreatedOn { get; private set; }
-        public VocabularyKey timeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey LoanApplicationId { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Statecode { get; private set; }
+        public VocabularyKey Statuscode { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey name { get; private set; }
-        public VocabularyKey amortizationType { get; private set; }
-        public VocabularyKey applicationnumber { get; private set; }
-        public VocabularyKey balloonAmount { get; private set; }
-        public VocabularyKey balloonamount_Base { get; private set; }
-        public VocabularyKey balloonTermCount { get; private set; }
-        public VocabularyKey costofimprovements { get; private set; }
-        public VocabularyKey costofimprovements_Base { get; private set; }
-        public VocabularyKey depositAmount { get; private set; }
-        public VocabularyKey depositamount_Base { get; private set; }
-        public VocabularyKey describeimprovements { get; private set; }
-        public VocabularyKey discountpointstotalamount { get; private set; }
-        public VocabularyKey discountpointstotalamount_Base { get; private set; }
-        public VocabularyKey downPayment { get; private set; }
-        public VocabularyKey downpayment_Base { get; private set; }
-        public VocabularyKey escrowPaymentAmount { get; private set; }
-        public VocabularyKey escrowpaymentamount_Base { get; private set; }
-        public VocabularyKey financingType { get; private set; }
-        public VocabularyKey firstMonthInterestAmount { get; private set; }
-        public VocabularyKey firstmonthinterestamount_Base { get; private set; }
-        public VocabularyKey integrationKey { get; private set; }
-        public VocabularyKey interestOnlyTermMonthCount { get; private set; }
-        public VocabularyKey interestRate { get; private set; }
-        public VocabularyKey interestType { get; private set; }
-        public VocabularyKey isBalloonPayment { get; private set; }
-        public VocabularyKey isInterestOnly { get; private set; }
-        public VocabularyKey isNegativeAmortization { get; private set; }
-        public VocabularyKey lendingLimit { get; private set; }
-        public VocabularyKey lendinglimit_Base { get; private set; }
-        public VocabularyKey loanApplicationClosingDate { get; private set; }
-        public VocabularyKey loanCategory { get; private set; }
-        public VocabularyKey loanorrefinancePurpose { get; private set; }
-        public VocabularyKey loanTerm { get; private set; }
-        public VocabularyKey loanToValue { get; private set; }
-        public VocabularyKey loanType { get; private set; }
-        public VocabularyKey maxLoanToValue { get; private set; }
-        public VocabularyKey noteAmount { get; private set; }
-        public VocabularyKey noteamount_Base { get; private set; }
-        public VocabularyKey principalAmount { get; private set; }
-        public VocabularyKey principalamount_Base { get; private set; }
-        public VocabularyKey refinanceType { get; private set; }
-        public VocabularyKey sourceofDownPayment { get; private set; }
-        public VocabularyKey verificationStatus { get; private set; }
-        public VocabularyKey primaryMemberHelper { get; private set; }
-
-
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey AmortizationType { get; private set; }
+        public VocabularyKey Applicationnumber { get; private set; }
+        public VocabularyKey BalloonAmount { get; private set; }
+        public VocabularyKey Balloonamount_Base { get; private set; }
+        public VocabularyKey BalloonTermCount { get; private set; }
+        public VocabularyKey Costofimprovements { get; private set; }
+        public VocabularyKey Costofimprovements_Base { get; private set; }
+        public VocabularyKey DepositAmount { get; private set; }
+        public VocabularyKey Depositamount_Base { get; private set; }
+        public VocabularyKey Describeimprovements { get; private set; }
+        public VocabularyKey Discountpointstotalamount { get; private set; }
+        public VocabularyKey Discountpointstotalamount_Base { get; private set; }
+        public VocabularyKey DownPayment { get; private set; }
+        public VocabularyKey Downpayment_Base { get; private set; }
+        public VocabularyKey EscrowPaymentAmount { get; private set; }
+        public VocabularyKey Escrowpaymentamount_Base { get; private set; }
+        public VocabularyKey FinancingType { get; private set; }
+        public VocabularyKey FirstMonthInterestAmount { get; private set; }
+        public VocabularyKey Firstmonthinterestamount_Base { get; private set; }
+        public VocabularyKey IntegrationKey { get; private set; }
+        public VocabularyKey InterestOnlyTermMonthCount { get; private set; }
+        public VocabularyKey InterestRate { get; private set; }
+        public VocabularyKey InterestType { get; private set; }
+        public VocabularyKey IsBalloonPayment { get; private set; }
+        public VocabularyKey IsInterestOnly { get; private set; }
+        public VocabularyKey IsNegativeAmortization { get; private set; }
+        public VocabularyKey LendingLimit { get; private set; }
+        public VocabularyKey Lendinglimit_Base { get; private set; }
+        public VocabularyKey LoanApplicationClosingDate { get; private set; }
+        public VocabularyKey LoanCategory { get; private set; }
+        public VocabularyKey LoanorrefinancePurpose { get; private set; }
+        public VocabularyKey LoanTerm { get; private set; }
+        public VocabularyKey LoanToValue { get; private set; }
+        public VocabularyKey LoanType { get; private set; }
+        public VocabularyKey MaxLoanToValue { get; private set; }
+        public VocabularyKey NoteAmount { get; private set; }
+        public VocabularyKey Noteamount_Base { get; private set; }
+        public VocabularyKey PrincipalAmount { get; private set; }
+        public VocabularyKey Principalamount_Base { get; private set; }
+        public VocabularyKey RefinanceType { get; private set; }
+        public VocabularyKey SourceofDownPayment { get; private set; }
+        public VocabularyKey VerificationStatus { get; private set; }
+        public VocabularyKey PrimaryMemberHelper { get; private set; }
     }
 }

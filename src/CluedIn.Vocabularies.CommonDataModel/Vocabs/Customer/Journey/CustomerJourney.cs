@@ -6,20 +6,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies
     {
         public CustomerJourneyVocabulary()
         {
-            VocabularyName = "CustomerJourney";
+            VocabularyName = "Customer Journey";
             KeyPrefix = "commonDataModel.customerjourney";
             KeySeparator = ".";
             Grouping = "/CustomerJourney";
 
             AddGroup("CustomerJourney Details", group =>
             {
-                requiredconsent = group.Add(new VocabularyKey(nameof(requiredconsent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
-
+                Requiredconsent = group.Add(new VocabularyKey(nameof(Requiredconsent), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
         }
-
-        public VocabularyKey requiredconsent { get; private set; }
-
-
+        public VocabularyKey Requiredconsent { get; private set; }
     }
 }
