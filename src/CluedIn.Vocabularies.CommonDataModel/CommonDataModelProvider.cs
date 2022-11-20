@@ -14,6 +14,10 @@ namespace CluedIn.Provider.CommonDataModel
 {
     public class CommonDataModelProvider : IProvider, IProviderMetadata, IExtendedProviderMetadata
     {
+        public CommonDataModelProvider()
+        {
+        }
+
         private static IProviderMetadata _providerMetadata;
         private static IProviderMetadata Metadata
         {
