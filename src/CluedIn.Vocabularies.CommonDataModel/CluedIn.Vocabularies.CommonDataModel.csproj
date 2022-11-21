@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Resources\cluedin.png" />
+    <EmbeddedResource Include="Resources\Dataverse.png" />
   </ItemGroup>
 
   <ItemGroup>
