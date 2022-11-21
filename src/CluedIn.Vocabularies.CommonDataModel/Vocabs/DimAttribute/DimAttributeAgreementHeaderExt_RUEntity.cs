@@ -1,0 +1,23 @@
+using CluedIn.Core.Data.Vocabularies;
+
+namespace CluedIn.Crawling.CommonDataModel.Vocabularies
+{
+    public class DimAttributeAgreementHeaderExt_RUEntityVocabulary : SimpleVocabulary
+    {
+        public DimAttributeAgreementHeaderExt_RUEntityVocabulary()
+        {
+            VocabularyName = "Dim Attribute Agreement Header Ext _RU Entity";
+            KeyPrefix = "commonDataModel.dimattributeagreementheaderext_ruentity";
+            KeySeparator = ".";
+            Grouping = "/DimAttributeAgreementHeaderExt_RUEntity";
+
+            AddGroup("DimAttributeAgreementHeaderExt_RUEntity Details", group =>
+            {
+                Value = group.Add(new VocabularyKey(nameof(Value), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+            });
+        }
+        public VocabularyKey Value { get; private set; }
+        public VocabularyKey Name { get; private set; }
+    }
+}

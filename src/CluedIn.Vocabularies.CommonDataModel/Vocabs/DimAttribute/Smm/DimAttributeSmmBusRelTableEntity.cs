@@ -1,0 +1,23 @@
+using CluedIn.Core.Data.Vocabularies;
+
+namespace CluedIn.Crawling.CommonDataModel.Vocabularies
+{
+    public class DimAttributeSmmBusRelTableEntityVocabulary : SimpleVocabulary
+    {
+        public DimAttributeSmmBusRelTableEntityVocabulary()
+        {
+            VocabularyName = "Dim Attribute Smm Bus Rel Table Entity";
+            KeyPrefix = "commonDataModel.dimattributesmmbusreltableentity";
+            KeySeparator = ".";
+            Grouping = "/DimAttributeSmmBusRelTableEntity";
+
+            AddGroup("DimAttributeSmmBusRelTableEntity Details", group =>
+            {
+                Value = group.Add(new VocabularyKey(nameof(Value), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+            });
+        }
+        public VocabularyKey Value { get; private set; }
+        public VocabularyKey Name { get; private set; }
+    }
+}
