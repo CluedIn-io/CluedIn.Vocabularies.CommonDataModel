@@ -70,7 +70,7 @@ namespace CluedIn.Provider.CommonDataModel
 
         public Guid Id => Metadata.Id;
 
-        public string Icon => "Resources.cluedin.png";
+        public string Icon => "Resources.Dataverse.png";
 
         public string Domain => "";
 
