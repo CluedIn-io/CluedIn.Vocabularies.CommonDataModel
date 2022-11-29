@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CluedIn.Vocabularies.CommonDataModel", "src\CluedIn.Vocabularies.CommonDataModel\CluedIn.Vocabularies.CommonDataModel.csproj", "{A6D9DEC0-9539-40FF-B535-C50CA37AFCC8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CluedIn.Vocabulariess.CDM.CLI", "src\CluedIn.Vocabulariess.CDM.CLI\CluedIn.Vocabulariess.CDM.CLI.csproj", "{B26D162A-CE26-4BD0-8D04-AB6378F6F4B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A6D9DEC0-9539-40FF-B535-C50CA37AFCC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6D9DEC0-9539-40FF-B535-C50CA37AFCC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6D9DEC0-9539-40FF-B535-C50CA37AFCC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B26D162A-CE26-4BD0-8D04-AB6378F6F4B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B26D162A-CE26-4BD0-8D04-AB6378F6F4B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B26D162A-CE26-4BD0-8D04-AB6378F6F4B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B26D162A-CE26-4BD0-8D04-AB6378F6F4B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

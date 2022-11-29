@@ -291,3 +291,4 @@ cluedin.host.assets.txt
 *.es
 /.mfractor
 /Code/Server.Host/Server.Host.csproj.devonly
+/src/CluedIn.Vocabularies.CommonDataModel/Sample Data

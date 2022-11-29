@@ -5,6 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Sample Data\**" />
+    <EmbeddedResource Remove="Sample Data\**" />
+    <None Remove="Sample Data\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Include="Resources\cluedin.png" />
     <EmbeddedResource Include="Resources\Dataverse.png" />
   </ItemGroup>

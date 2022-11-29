@@ -1,0 +1,23 @@
+﻿using CluedIn.Core.Data;
+using CluedIn.Core.Data.Vocabularies;
+
+namespace CluedIn.Crawling.CommonDataModel.Vocabularies{{namespace}}
+{
+    public class {{EntityType}}Vocabulary : SimpleVocabulary
+    {
+        public {{EntityType}}Vocabulary()
+        {
+            VocabularyName = "{{EntityTypeName}}";
+            KeyPrefix = "commonDataModel.{{entitytype}}";
+            KeySeparator = ".";
+            Grouping = "/{{EntityType}}";
+
+            AddGroup("{{EntityType}} Details{{Details}}", group =>
+            {
+			    {{Properties}}             
+            });
+        }
+
+        {{Keys}}
+    }
+}

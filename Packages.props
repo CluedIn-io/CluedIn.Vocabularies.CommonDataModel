@@ -1,0 +1,9 @@
+<Project>
+  <PropertyGroup Label="Dependency Versions">
+    <_CluedIn>3.4.0-*</_CluedIn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Update="Microsoft.Extensions.Configuration.Json" Version="3.1.5" />
+  </ItemGroup>
+</Project>

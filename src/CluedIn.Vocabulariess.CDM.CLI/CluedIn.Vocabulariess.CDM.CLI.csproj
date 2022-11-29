@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+	<PackAsTool>true</PackAsTool>
+	<ToolCommandName>cluedin.vocabularies.cdm.cli</ToolCommandName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.9.1" />
+    <PackageReference Include="Microsoft.CommonDataModel.ObjectModel" Version="1.6.4" />
+    <PackageReference Include="Microsoft.CommonDataModel.ObjectModel.Adapter.Adls" Version="1.6.4" />
+    <PackageReference Include="CluedIn.Core" Version="3.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="VocabularyTemplate.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
