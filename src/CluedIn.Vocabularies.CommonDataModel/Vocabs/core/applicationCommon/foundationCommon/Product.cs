@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.FoundationCommon
+namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
 {
     public class ProductVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.FoundationCommon
             VocabularyName = "Product";
             KeyPrefix = "commonDataModel.product.foundationcommon";
             KeySeparator = ".";
-            Grouping = "/Product";
+            Grouping = CommonDataModelEntityTypes.Product;
 
             AddGroup("Product Details for FoundationCommon", group =>
             {
@@ -59,6 +59,101 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.FoundationCommon
 			    CreatedByExternalParty = group.Add(new VocabularyKey(nameof(CreatedByExternalParty), "Created By (External Party)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ModifiedByExternalParty = group.Add(new VocabularyKey(nameof(ModifiedByExternalParty), "Modified By (External Party)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="OrganizationId"/> to Vocab 'Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="OrganizationId"/> to Vocab 'Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="OrganizationId"/> to Vocab 'Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="OrganizationId"/> to Vocab 'Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="OrganizationId"/> to Vocab 'Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="PriceLevelId"/> to Vocab 'PriceList.cdm.json/PriceList' with Property 'PriceLevelId'
+            ///Property <see cref="PriceLevelId"/> to Vocab 'PriceList.cdm.json/PriceList' with Property 'PriceLevelId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="DefaultUoMId"/> to Vocab 'Unit.cdm.json/Unit' with Property 'UoMId'
+            ///Property <see cref="DefaultUoMScheduleId"/> to Vocab 'UnitGroup.cdm.json/UnitGroup' with Property 'UoMScheduleId'
+            ///Property <see cref="ParentProductId"/> to Vocab 'Product.cdm.json/Product' with Property 'ProductId'
+            ///Property <see cref="AssociatedProduct"/> to Vocab 'Product.cdm.json/Product' with Property 'ProductId'
+            ///Property <see cref="ProductId"/> to Vocab 'Product.cdm.json/Product' with Property 'ProductId'
+            ///Property <see cref="ProductId"/> to Vocab 'Product.cdm.json/Product' with Property 'ProductId'
+            ///Property <see cref="SubstitutedProductId"/> to Vocab 'Product.cdm.json/Product' with Property 'ProductId'
+            ///Property <see cref="ProductId"/> to Vocab 'Product.cdm.json/Product' with Property 'ProductId'
+            ///Property <see cref="ProductId"/> to Vocab 'Product.cdm.json/Product' with Property 'ProductId'
+            ///Property <see cref="ProductId"/> to Vocab 'Product.cdm.json/Product' with Property 'ProductId'
+            ///Property <see cref="ProductId"/> to Vocab 'Product.cdm.json/Product' with Property 'ProductId'
+            ///Property <see cref="ProductId"/> to Vocab 'Product.cdm.json/Product' with Property 'ProductId'
+            ///Property <see cref="ProductId"/> to Vocab 'Product.cdm.json/Product' with Property 'ProductId'
+            ///Property <see cref="ProductId"/> to Vocab 'Product.cdm.json/Product' with Property 'ProductId'
+            ///Property <see cref="ProductId"/> to Vocab 'Product.cdm.json/Product' with Property 'ProductId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="UoMId"/> to Vocab 'Unit.cdm.json/Unit' with Property 'UoMId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="ProductAssociationId"/> to Vocab 'ProductAssociation.cdm.json/ProductAssociation' with Property 'ProductAssociationId'
+            ///Property <see cref="ProductAssociationId"/> to Vocab 'ProductAssociation.cdm.json/ProductAssociation' with Property 'ProductAssociationId'
+            ///Property <see cref="ProductAssociationId"/> to Vocab 'ProductAssociation.cdm.json/ProductAssociation' with Property 'ProductAssociationId'
+            ///Property <see cref="ProductAssociationId"/> to Vocab 'ProductAssociation.cdm.json/ProductAssociation' with Property 'ProductAssociationId'
+            ///Property <see cref="ProductAssociationId"/> to Vocab 'ProductAssociation.cdm.json/ProductAssociation' with Property 'ProductAssociationId'
+            ///Property <see cref="ProductAssociationId"/> to Vocab 'ProductAssociation.cdm.json/ProductAssociation' with Property 'ProductAssociationId'
+            ///Property <see cref="ProductAssociationId"/> to Vocab 'ProductAssociation.cdm.json/ProductAssociation' with Property 'ProductAssociationId'
+            ///Property <see cref="ProductAssociationId"/> to Vocab 'ProductAssociation.cdm.json/ProductAssociation' with Property 'ProductAssociationId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="DefaultUoMId"/> to Vocab 'Unit.cdm.json/Unit' with Property 'UoMId'
+            ///Property <see cref="UoMId"/> to Vocab 'Unit.cdm.json/Unit' with Property 'UoMId'
+            ///Property <see cref="UoMId"/> to Vocab 'Unit.cdm.json/Unit' with Property 'UoMId'
+            ///Property <see cref="UoMId"/> to Vocab 'Unit.cdm.json/Unit' with Property 'UoMId'
+            ///Property <see cref="DefaultUoMId"/> to Vocab 'Unit.cdm.json/Unit' with Property 'UoMId'
+            ///Property <see cref="UoMId"/> to Vocab 'Unit.cdm.json/Unit' with Property 'UoMId'
+            ///Property <see cref="UoMId"/> to Vocab 'Unit.cdm.json/Unit' with Property 'UoMId'
+            ///Property <see cref="UoMId"/> to Vocab 'Unit.cdm.json/Unit' with Property 'UoMId'
+            ///Property <see cref="UoMId"/> to Vocab 'Unit.cdm.json/Unit' with Property 'UoMId'
+            ///Property <see cref="UoMId"/> to Vocab 'Unit.cdm.json/Unit' with Property 'UoMId'
+            ///Property <see cref="DefaultUoMScheduleId"/> to Vocab 'UnitGroup.cdm.json/UnitGroup' with Property 'UoMScheduleId'
+            ///Property <see cref="DefaultUoMScheduleId"/> to Vocab 'UnitGroup.cdm.json/UnitGroup' with Property 'UoMScheduleId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="ProductId"/> from Vocab 'PriceListItem.cdm.json/PriceListItem' with Property 'ProductId'
+            ///Property <see cref="ProductId"/> from Vocab 'Product.cdm.json/Product' with Property 'ParentProductId'
+            ///Property <see cref="ProductId"/> from Vocab 'ProductAssociation.cdm.json/ProductAssociation' with Property 'AssociatedProduct'
+            ///Property <see cref="ProductId"/> from Vocab 'ProductAssociation.cdm.json/ProductAssociation' with Property 'ProductId'
+            ///Property <see cref="ProductId"/> from Vocab 'ProductRelationship.cdm.json/ProductRelationship' with Property 'ProductId'
+            ///Property <see cref="ProductId"/> from Vocab 'ProductRelationship.cdm.json/ProductRelationship' with Property 'SubstitutedProductId'
+            ///Property <see cref="ProductId"/> from Vocab 'Property.cdm.json/Property' with Property 'RegardingObjectId'
+            ///Property <see cref="ProductId"/> from Vocab 'PropertyAssociation.cdm.json/PropertyAssociation' with Property 'RegardingObjectId'
+            ///Property <see cref="ProductId"/> from Vocab 'crmCommon/sales/CompetitorProduct.cdm.json/CompetitorProduct' with Property 'ProductId'
+            ///Property <see cref="ProductId"/> from Vocab 'crmCommon/sales/InvoiceProduct.cdm.json/InvoiceProduct' with Property 'ProductId'
+            ///Property <see cref="ProductId"/> from Vocab 'crmCommon/sales/LeadProduct.cdm.json/LeadProduct' with Property 'ProductId'
+            ///Property <see cref="ProductId"/> from Vocab 'crmCommon/sales/OpportunityProduct.cdm.json/OpportunityProduct' with Property 'ProductId'
+            ///Property <see cref="ProductId"/> from Vocab 'crmCommon/sales/OrderProduct.cdm.json/OrderProduct' with Property 'ProductId'
+            ///Property <see cref="ProductId"/> from Vocab 'crmCommon/sales/PriceListItem.cdm.json/PriceListItem' with Property 'ProductId'
+            ///Property <see cref="ProductId"/> from Vocab 'crmCommon/sales/ProductSalesLiterature.cdm.json/ProductSalesLiterature' with Property 'ProductId'
+            ///Property <see cref="ProductId"/> from Vocab 'crmCommon/sales/QuoteProduct.cdm.json/QuoteProduct' with Property 'ProductId'
+            ///Property <see cref="ProductId"/> from Vocab 'crmCommon/service/Case.cdm.json/Case' with Property 'ProductId'
+            ///Property <see cref="ProductId"/> from Vocab 'crmCommon/service/ContractLine.cdm.json/ContractLine' with Property 'ProductId'
+            ///Property <see cref="ProductId"/> from Vocab 'crmCommon/service/EntitlementProduct.cdm.json/EntitlementProduct' with Property 'ProductId'
+            ///Property <see cref="ProductId"/> from Vocab 'crmCommon/solutions/portals/Case.cdm.json/Case' with Property 'ProductId'
+            ///Property <see cref="ProductId"/> from Vocab 'productInsights/Signal.cdm.json/Signal' with Property 'ProductId'
+            ///Property <see cref="ProductAssociationId"/> from Vocab 'Property.cdm.json/Property' with Property 'RegardingObjectId'
+            ///Property <see cref="ProductAssociationId"/> from Vocab 'PropertyAssociation.cdm.json/PropertyAssociation' with Property 'RegardingObjectId'
+            ///Property <see cref="ProductAssociationId"/> from Vocab 'crmCommon/projectCommon/projectServiceAutomation/InvoiceProduct.cdm.json/InvoiceProduct' with Property 'ProductAssociationId'
+            ///Property <see cref="ProductAssociationId"/> from Vocab 'crmCommon/projectCommon/projectServiceAutomation/OpportunityProduct.cdm.json/OpportunityProduct' with Property 'ProductAssociationId'
+            ///Property <see cref="ProductAssociationId"/> from Vocab 'crmCommon/projectCommon/projectServiceAutomation/OrderProduct.cdm.json/OrderProduct' with Property 'ProductAssociationId'
+            ///Property <see cref="ProductAssociationId"/> from Vocab 'crmCommon/projectCommon/projectServiceAutomation/QuoteProduct.cdm.json/QuoteProduct' with Property 'ProductAssociationId'
+            ///Property <see cref="ProductAssociationId"/> from Vocab 'crmCommon/sales/InvoiceProduct.cdm.json/InvoiceProduct' with Property 'ProductAssociationId'
+            ///Property <see cref="ProductAssociationId"/> from Vocab 'crmCommon/sales/OpportunityProduct.cdm.json/OpportunityProduct' with Property 'ProductAssociationId'
+            ///Property <see cref="ProductAssociationId"/> from Vocab 'crmCommon/sales/OrderProduct.cdm.json/OrderProduct' with Property 'ProductAssociationId'
+            ///Property <see cref="ProductAssociationId"/> from Vocab 'crmCommon/sales/QuoteProduct.cdm.json/QuoteProduct' with Property 'ProductAssociationId'
+            #endregion
         }
 
         public VocabularyKey ProductId { get; private set; }

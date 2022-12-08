@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.HigherEducation
+namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
 {
     public class AcademicPeriodVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.HigherEducation
             VocabularyName = "Academic Period";
             KeyPrefix = "commonDataModel.academicperiod.highereducation";
             KeySeparator = ".";
-            Grouping = "/AcademicPeriod";
+            Grouping = CommonDataModelEntityTypes.AcademicPeriod;
 
             AddGroup("AcademicPeriod Details for HigherEducation", group =>
             {
@@ -24,6 +24,39 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.HigherEducation
 			    ExternalSourceSystem = group.Add(new VocabularyKey(nameof(ExternalSourceSystem), "External Source System", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StartDate = group.Add(new VocabularyKey(nameof(StartDate), "Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="StudentId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="AcademicPeriodID"/> to Vocab 'AcademicPeriod.cdm.json/AcademicPeriod' with Property 'AcademicPeriodId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="EducationLevelId"/> to Vocab 'EducationLevel.cdm.json/EducationLevel' with Property 'EducationLevelId'
+            ///Property <see cref="ProgramId"/> to Vocab 'Program.cdm.json/Program' with Property 'ProgramId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="AcademicPeriodId"/> from Vocab 'Contact.cdm.json/Contact' with Property 'CurrentAcademicPeriodId'
+            ///Property <see cref="AcademicPeriodId"/> from Vocab 'AcademicPeriodDetail.cdm.json/AcademicPeriodDetail' with Property 'AcademicPeriodID'
+            ///Property <see cref="AcademicPeriodId"/> from Vocab 'CourseSection.cdm.json/CourseSection' with Property 'AcademicPeriodId'
+            ///Property <see cref="AcademicPeriodId"/> from Vocab 'Scholarship.cdm.json/Scholarship' with Property 'AcademicPeriodId'
+            ///Property <see cref="AcademicPeriodDetailsId"/> from Vocab 'CourseHistory.cdm.json/CourseHistory' with Property 'AcademicPeriodDetailsId'
+            #endregion
         }
 
         public VocabularyKey AcademicPeriodId { get; private set; }

@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Marketing
+namespace CluedIn.Vocabularies.CommonDataModel.Marketing
 {
     public class CustomerJourneyVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Marketing
             VocabularyName = "Customer Journey";
             KeyPrefix = "commonDataModel.customerjourney.marketing";
             KeySeparator = ".";
-            Grouping = "/CustomerJourney";
+            Grouping = CommonDataModelEntityTypes.CustomerJourney;
 
             AddGroup("CustomerJourney Details for Marketing", group =>
             {
@@ -34,6 +34,30 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Marketing
 			    ValidationResults = group.Add(new VocabularyKey(nameof(ValidationResults), "Error check results", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    WorkflowDefinition = group.Add(new VocabularyKey(nameof(WorkflowDefinition), "Workflow definition", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="ContentSettingsId"/> to Vocab 'ContentSettings.cdm.json/ContentSettings' with Property 'ContentSettingsId'
+            ///Property <see cref="ContentSettingsId"/> to Vocab 'ContentSettings.cdm.json/ContentSettings' with Property 'ContentSettingsId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="SuppressionSegmentId"/> to Vocab 'Segment.cdm.json/Segment' with Property 'SegmentId'
+            ///Property <see cref="LinkedInCampaign"/> to Vocab 'LinkedInLeads/LinkedInCampaign.cdm.json/LinkedInCampaign' with Property 'LinkedInCampaignID'
+            ///Property <see cref="SuppressionSegmentId"/> to Vocab 'Segment.cdm.json/Segment' with Property 'SegmentId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="CustomerJourneyId"/> from Vocab 'Contact.cdm.json/Contact' with Property 'SourceCustomerJourney'
+            ///Property <see cref="CustomerJourneyId"/> from Vocab 'GeoPin.cdm.json/GeoPin' with Property 'CustomerJourney'
+            ///Property <see cref="CustomerJourneyId"/> from Vocab 'Lead.cdm.json/Lead' with Property 'SourceCustomerJourney'
+            ///Property <see cref="CustomerJourneyId"/> from Vocab 'LinkedInLeads/LinkedInLeadGenFormSubmission.cdm.json/LinkedInLeadGenFormSubmission' with Property 'CustomerJourney'
+            #endregion
         }
 
         public VocabularyKey CustomerJourneyId { get; private set; }

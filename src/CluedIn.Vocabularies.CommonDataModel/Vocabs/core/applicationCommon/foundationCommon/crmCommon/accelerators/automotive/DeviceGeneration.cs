@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Automotive
+namespace CluedIn.Vocabularies.CommonDataModel.Automotive
 {
     public class DeviceGenerationVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Automotive
             VocabularyName = "Device Generation";
             KeyPrefix = "commonDataModel.devicegeneration.automotive";
             KeySeparator = ".";
-            Grouping = "/DeviceGeneration";
+            Grouping = CommonDataModelEntityTypes.DeviceGeneration;
 
             AddGroup("DeviceGeneration Details for Automotive", group =>
             {
@@ -24,6 +24,32 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Automotive
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="DeviceBrandId"/> to Vocab 'DeviceBrand.cdm.json/DeviceBrand' with Property 'DeviceBrandId'
+            ///Property <see cref="DeviceClassId"/> to Vocab 'DeviceClass.cdm.json/DeviceClass' with Property 'DeviceClassId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="DeviceGenerationId"/> from Vocab 'Device.cdm.json/Device' with Property 'DeviceGenerationId'
+            ///Property <see cref="DeviceGenerationId"/> from Vocab 'DeviceModel.cdm.json/DeviceModel' with Property 'DeviceGenerationId'
+            ///Property <see cref="DeviceGenerationId"/> from Vocab 'DeviceModelCode.cdm.json/DeviceModelCode' with Property 'DeviceGenerationId'
+            ///Property <see cref="DeviceGenerationId"/> from Vocab 'DeviceVariant.cdm.json/DeviceVariant' with Property 'DeviceGenerationId'
+            ///Property <see cref="DeviceGenerationId"/> from Vocab 'LeadDevice.cdm.json/LeadDevice' with Property 'DeviceGenerationId'
+            ///Property <see cref="DeviceGenerationId"/> from Vocab 'TestDrive.cdm.json/TestDrive' with Property 'DeviceGenerationId'
+            #endregion
         }
 
         public VocabularyKey EntityImage { get; private set; }

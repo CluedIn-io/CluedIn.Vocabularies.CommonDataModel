@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Automotive
+namespace CluedIn.Vocabularies.CommonDataModel.Automotive
 {
     public class BusinessOperationVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Automotive
             VocabularyName = "Business Operation";
             KeyPrefix = "commonDataModel.businessoperation.automotive";
             KeySeparator = ".";
-            Grouping = "/BusinessOperation";
+            Grouping = CommonDataModelEntityTypes.BusinessOperation;
 
             AddGroup("BusinessOperation Details for Automotive", group =>
             {
@@ -31,6 +31,52 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Automotive
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="FacilityId"/> to Vocab 'BusinessFacility.cdm.json/BusinessFacility' with Property 'BusinessFacilityId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="AccountId"/> to Vocab '/core/applicationCommon/Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="OperationTypeId"/> to Vocab 'OperationType.cdm.json/OperationType' with Property 'OperationTypeId'
+            ///Property <see cref="BusinessOperationId"/> to Vocab 'BusinessOperation.cdm.json/BusinessOperation' with Property 'BusinessOperationId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="CustomerId"/> to Vocab '/core/applicationCommon/Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="CustomerId"/> to Vocab '/core/applicationCommon/Account.cdm.json/Account' with Property 'AccountId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="BusinessOperationId"/> from Vocab 'AggregateKPIContext.cdm.json/AggregateKPIContext' with Property 'BusinessOperationId'
+            ///Property <see cref="BusinessOperationId"/> from Vocab 'BusinessOperationCustomerPreference.cdm.json/BusinessOperationCustomerPreference' with Property 'BusinessOperationId'
+            ///Property <see cref="BusinessOperationId"/> from Vocab 'Deal.cdm.json/Deal' with Property 'BusinessOperationId'
+            ///Property <see cref="BusinessOperationId"/> from Vocab 'DealerPlate.cdm.json/DealerPlate' with Property 'BusinessOperationId'
+            ///Property <see cref="BusinessOperationId"/> from Vocab 'Device.cdm.json/Device' with Property 'BusinessOperationId'
+            ///Property <see cref="BusinessOperationId"/> from Vocab 'Fleet.cdm.json/Fleet' with Property 'BusinessOperationId'
+            ///Property <see cref="BusinessOperationId"/> from Vocab 'ServiceAppointment.cdm.json/ServiceAppointment' with Property 'BusinessOperationId'
+            ///Property <see cref="BusinessOperationId"/> from Vocab 'ServiceOrder.cdm.json/ServiceOrder' with Property 'BusinessOperationId'
+            ///Property <see cref="BusinessOperationId"/> from Vocab 'ServiceOrderJobDetail.cdm.json/ServiceOrderJobDetail' with Property 'BusinessOperationId'
+            ///Property <see cref="BusinessOperationId"/> from Vocab 'TestDrive.cdm.json/TestDrive' with Property 'BusinessOperationId'
+            #endregion
         }
 
         public VocabularyKey AddressCity { get; private set; }

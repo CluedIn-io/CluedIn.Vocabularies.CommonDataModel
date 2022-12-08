@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Portals
+namespace CluedIn.Vocabularies.CommonDataModel.Portals
 {
     public class ForumPostVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Portals
             VocabularyName = "Forum Post";
             KeyPrefix = "commonDataModel.forumpost.portals";
             KeySeparator = ".";
-            Grouping = "/ForumPost";
+            Grouping = CommonDataModelEntityTypes.ForumPost;
 
             AddGroup("ForumPost Details for Portals", group =>
             {
@@ -23,6 +23,29 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Portals
 			    HelpfulVoteCount = group.Add(new VocabularyKey(nameof(HelpfulVoteCount), "Helpful Vote Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    IsAnswer = group.Add(new VocabularyKey(nameof(IsAnswer), "Answer?", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="AuthorId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="ForumThreadId"/> to Vocab 'ForumThread.cdm.json/ForumThread' with Property 'CommunityForumThreadId'
+            ///Property <see cref="PublishingStateId"/> to Vocab 'PublishingState.cdm.json/PublishingState' with Property 'PublishingStateId'
+            ///Property <see cref="RegardingId"/> to Vocab 'ForumPost.cdm.json/ForumPost' with Property 'CommunityForumPostId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="CommunityForumPostId"/> from Vocab 'Forum.cdm.json/Forum' with Property 'LastPostID'
+            ///Property <see cref="CommunityForumPostId"/> from Vocab 'ForumPost.cdm.json/ForumPost' with Property 'RegardingId'
+            ///Property <see cref="CommunityForumPostId"/> from Vocab 'ForumThread.cdm.json/ForumThread' with Property 'FirstPostId'
+            ///Property <see cref="CommunityForumPostId"/> from Vocab 'ForumThread.cdm.json/ForumThread' with Property 'LastPostId'
+            #endregion
         }
 
         public VocabularyKey CommunityForumPostId { get; private set; }

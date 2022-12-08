@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Banking
+namespace CluedIn.Vocabularies.CommonDataModel.Banking
 {
     public class FinancialProductVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Banking
             VocabularyName = "Financial Product";
             KeyPrefix = "commonDataModel.financialproduct.banking";
             KeySeparator = ".";
-            Grouping = "/FinancialProduct";
+            Grouping = CommonDataModelEntityTypes.FinancialProduct;
 
             AddGroup("FinancialProduct Details for Banking", group =>
             {
@@ -95,6 +95,34 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Banking
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    DeprecatedTraversedPath = group.Add(new VocabularyKey(nameof(DeprecatedTraversedPath), "(Deprecated) Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="CustomerId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="CustomerId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="BranchId"/> to Vocab 'Branch.cdm.json/Branch' with Property 'BranchId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="LimitId"/> to Vocab 'Limit.cdm.json/Limit' with Property 'LimitId'
+            ///Property <see cref="ProductFamilyId"/> to Vocab 'Product.cdm.json/Product' with Property 'ProductId'
+            ///Property <see cref="ProductId"/> to Vocab 'Product.cdm.json/Product' with Property 'ProductId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="FinancialProductId"/> from Vocab 'Contact.cdm.json/Contact' with Property 'DefaultChargeAccountId'
+            ///Property <see cref="FinancialProductId"/> from Vocab 'Collateral.cdm.json/Collateral' with Property 'FinancialProductId'
+            ///Property <see cref="FinancialProductId"/> from Vocab 'Syndicates.cdm.json/Syndicates' with Property 'LoanId'
+            #endregion
         }
 
         public VocabularyKey ExchangeRate { get; private set; }

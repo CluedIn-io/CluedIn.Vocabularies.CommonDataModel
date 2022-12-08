@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -14,6 +15,12 @@ namespace CluedIn.Vocabulariess.CDM.CLI
         public static string CamelCase(this string str)
         {
             return char.ToUpper(str[0]) + str[1..];
+        }
+        public static string TrimTrailingPath(this string str)
+        {
+            return str
+                .TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar)
+                .TrimStart(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
         }
     }
 }

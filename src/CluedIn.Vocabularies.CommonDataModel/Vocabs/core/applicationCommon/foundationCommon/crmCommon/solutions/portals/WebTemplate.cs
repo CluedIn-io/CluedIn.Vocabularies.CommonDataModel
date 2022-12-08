@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Portals
+namespace CluedIn.Vocabularies.CommonDataModel.Portals
 {
     public class WebTemplateVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Portals
             VocabularyName = "Web Template";
             KeyPrefix = "commonDataModel.webtemplate.portals";
             KeySeparator = ".";
-            Grouping = "/WebTemplate";
+            Grouping = CommonDataModelEntityTypes.WebTemplate;
 
             AddGroup("WebTemplate Details for Portals", group =>
             {
@@ -28,6 +28,26 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Portals
 			    MIMEType = group.Add(new VocabularyKey(nameof(MIMEType), "MIME Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Source = group.Add(new VocabularyKey(nameof(Source), "Source", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="WebsiteId"/> to Vocab 'Website.cdm.json/Website' with Property 'WebsiteId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/foundationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="WebTemplateId"/> from Vocab 'Ad.cdm.json/Ad' with Property 'WebTemplateId'
+            ///Property <see cref="WebTemplateId"/> from Vocab 'AdPlacement.cdm.json/AdPlacement' with Property 'WebTemplateId'
+            ///Property <see cref="WebTemplateId"/> from Vocab 'PageTemplate.cdm.json/PageTemplate' with Property 'WebTemplateId'
+            ///Property <see cref="WebTemplateId"/> from Vocab 'Poll.cdm.json/Poll' with Property 'WebTemplateId'
+            ///Property <see cref="WebTemplateId"/> from Vocab 'PollPlacement.cdm.json/PollPlacement' with Property 'WebTemplateId'
+            ///Property <see cref="WebTemplateId"/> from Vocab 'Website.cdm.json/Website' with Property 'FooterTemplateId'
+            ///Property <see cref="WebTemplateId"/> from Vocab 'Website.cdm.json/Website' with Property 'HeaderTemplateId'
+            ///Property <see cref="WebTemplateId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/marketing/MarketingPage.cdm.json/MarketingPage' with Property 'WebTemplate'
+            #endregion
         }
 
         public VocabularyKey WebTemplateId { get; private set; }

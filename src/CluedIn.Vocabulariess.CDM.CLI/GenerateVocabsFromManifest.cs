@@ -16,27 +16,33 @@ namespace CluedIn.Vocabulariess.CDM.CLI
     {
         [Option("path", Default = @"C:\CluedIn\Repository\Microsoft\CDM\schemaDocuments\core\applicationCommon\applicationCommon.manifest.cdm.json", HelpText = "Full Path of manifest file")]
         public string FullPath { get; set; }
+
+        [Option("CICdmProjPath", Default = @"C:\CluedIn\Repository\cluedin-io\CluedIn.Vocabularies.CommonDataModel\src\CluedIn.Vocabularies.CommonDataModel\", HelpText = "Full Path of CluedIn CDM Project")]
+        public string CICdmProjPath { get; set; }
     }
 
-    public class ReadManifest : ManifestBase
+    public class GenerateVocabsFromManifest : ManifestBase
     {
         private static List<string> CdmDataTypes { get; set; }
         private static ReadManifestOption opts { get; set; }
-        private static string pathFromExeToVocabForlder;
-        private static int VocabGeneratedCount = 0;
+        //private static string pathFromExeToVocabForlder;
+        private static int VocabGeneratedCount;
+        private static List<string> EntityCodes;
 
         public static async Task<int> Run(ReadManifestOption _opts)
         {
             opts = _opts;
-            pathFromExeToVocabForlder = "../../../../" + "CluedIn.Vocabularies.CommonDataModel/Vocabs" + 
-                opts.FullPath[(opts.FullPath.IndexOf("schemaDocuments") + "schemaDocuments".Length)..].Replace(Path.GetFileName(_opts.FullPath), "");
 
             Console.WriteLine($"\nReading manifest files from directory {_opts.FullPath} ...");
 
             CdmCorpus.Storage.Mount("local", new LocalAdapter(Path.GetDirectoryName(_opts.FullPath)));
-            
+
             VocabGeneratedCount = 0;
+            EntityCodes = new List<string>();
+
             await ExploreManifest(Path.GetFileName(_opts.FullPath));
+
+            GenerateEntityTypesFile();
 
             Console.WriteLine($"Total Vocabs generated: {VocabGeneratedCount}");
 
@@ -64,7 +70,7 @@ namespace CluedIn.Vocabulariess.CDM.CLI
             foreach (var entity in manifest.Entities)
             {
                 var entitySelected = await CdmCorpus.FetchObjectAsync<CdmEntityDefinition>(entity.EntityPath, manifest);
-                ExportToCluedInVocab(entitySelected);
+                ExportToCluedInVocab(manifest, entitySelected);
             }
 
             //loop through manifest.SubManifest
@@ -74,22 +80,24 @@ namespace CluedIn.Vocabulariess.CDM.CLI
             }
         }
 
-        private static void ExportToCluedInVocab(CdmEntityDefinition entity)
+        private static void ExportToCluedInVocab(CdmManifestDefinition manifest, CdmEntityDefinition entity)
         {
-
             try
             {
                 if (entity == null) return;
+
+                var entityName = entity.EntityName.CamelCase();
+
+                if (entityName.Equals("Account"))
+                {
+
+                }
 
                 Console.Write($"Generating Vocab for : {entity.EntityName}");
 
                 var properties = new StringBuilder();
                 var keys = new StringBuilder();
                 var propList = new List<string>();
-
-                if (entity.EntityName == "Contact")
-                {
-                }
 
                 foreach (var attribute in entity.Attributes)
                 {
@@ -103,39 +111,6 @@ namespace CluedIn.Vocabulariess.CDM.CLI
                         {
                             foreach (var member in (attrb.ExplicitReference as CdmAttributeGroupDefinition).Members)
                             {
-                                foreach (var trait in member.AppliedTraits)
-                                {
-                                    if (trait.NamedReference == "is.linkedEntity.identifier")
-                                    {
-
-                                    }
-                                    //if (trait is CdmTraitReference)
-                                    //{
-                                    //    foreach (var argDef in (trait as CdmTraitReference).Arguments)
-                                    //    {
-                                    //        if (argDef.Value is CdmEntityReference)
-                                    //        {
-                                    //            var contEntDef = argDef.Value.FetchObjectDefinition<CdmConstantEntityDefinition>();
-                                    //            foreach (List<string> constantValueList in contEntDef.ConstantValues)
-                                    //            {
-
-                                    //            }
-                                    //        }
-                                    //        else if (argDef.Value is string)
-                                    //        {
-
-                                    //        }
-                                    //        else
-                                    //        {
-
-                                    //        }
-                                    //    }
-                                    //}
-                                    //else
-                                    //{
-
-                                    //}
-                                }
 
                                 if (member.GetType() == typeof(CdmTypeAttributeDefinition))
                                 {
@@ -170,37 +145,45 @@ namespace CluedIn.Vocabulariess.CDM.CLI
                                 }
                             }
                         }
-                    }
-                    else if (attribute.GetType() == typeof(CdmTypeAttributeDefinition))
-                    {
-                        foreach (var trait in attribute.AppliedTraits)
+                        else if (attribute.GetType() == typeof(CdmTypeAttributeDefinition))
                         {
-                            if (trait.NamedReference == "is.linkedEntity.identifier")
+                            foreach (var trait in attribute.AppliedTraits)
                             {
+                                if (trait.NamedReference == "is.linkedEntity.identifier")
+                                {
 
+                                }
                             }
-                        }
 
-                        var attrbDef = attribute as CdmTypeAttributeDefinition;
-                        attribName = attrbDef.Name;
-                        attribDesc = attrbDef.DisplayName ?? attrbDef.Description;
-                        if (attrbDef.DataFormat.ToString() != "Unknown")
+                            var attrbDef = attribute as CdmTypeAttributeDefinition;
+                            attribName = attrbDef.Name;
+                            attribDesc = attrbDef.DisplayName ?? attrbDef.Description;
+                            if (attrbDef.DataFormat.ToString() != "Unknown")
+                            {
+                                attribType = attrbDef.DataFormat.ToString();
+                            }
+                            else
+                            {
+                                attribType = attrbDef.DataType.NamedReference;
+                            }
+
+                            attribName = attribName.Replace("@", "").CamelCase();
+                            attribDesc = string.IsNullOrEmpty(attribDesc) ? "" : $", \"{attribDesc}\"";
+                            keys.AppendLine("        public VocabularyKey " + attribName + " { get; private set; }");
+                            properties.AppendLine($"			    {attribName} = group.Add(new VocabularyKey(nameof({attribName}){attribDesc}, VocabularyKeyDataType.{MapCDMTypeToCluedInType(attribType)}, VocabularyKeyVisibility.Visible)); ");
+
+                            propList.Add(attribName);
+                        }
+                        else if (attribute.GetType() == typeof(CdmEntityAttributeDefinition))
                         {
-                            attribType = attrbDef.DataFormat.ToString();
+
                         }
                         else
                         {
-                            attribType = attrbDef.DataType.NamedReference;
+
                         }
-
-                        attribName = attribName.Replace("@", "").CamelCase();
-                        attribDesc = string.IsNullOrEmpty(attribDesc) ? "" : $", \"{attribDesc}\"";
-                        keys.AppendLine("        public VocabularyKey " + attribName + " { get; private set; }");
-                        properties.AppendLine($"			    {attribName} = group.Add(new VocabularyKey(nameof({attribName}){attribDesc}, VocabularyKeyDataType.{MapCDMTypeToCluedInType(attribType)}, VocabularyKeyVisibility.Visible)); ");
-
-                        propList.Add(attribName);
                     }
-                    else if (attribute.GetType() == typeof(CdmEntityAttributeDefinition))
+                    else if (attribute.GetType() == typeof(CdmTypeAttributeDefinition))
                     {
 
                     }
@@ -210,83 +193,71 @@ namespace CluedIn.Vocabulariess.CDM.CLI
                     }
                 }
 
-                //var path = Path.Combine(pathFromExeToVocabForlder, entity.AtCorpusPath.Substring(0, entity.AtCorpusPath.IndexOf(entity.EntityName)).Replace("local:/", ""));
-                //var @namespace = Path.GetFileName(path.TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar));
+                GetAllRelationships(manifest, entity, out List<CdmE2ERelationship> relationshipFromList, out List<CdmE2ERelationship> relationshipToList);
 
-                //if (@namespace == "schemaDocuments")
-                //    @namespace = "";
-                //else
-                //    @namespace = "." + @namespace.CamelCase();
+                var corpusPath = entity.AtCorpusPath.Substring(0, entity.AtCorpusPath.IndexOf(entity.EntityName)).Replace("local:/", "").TrimTrailingPath();
+                var cdmSubFolder = opts.FullPath[(opts.FullPath.IndexOf("schemaDocuments") + "schemaDocuments".Length)..].Replace(Path.GetFileName(opts.FullPath), "");
+                var path = opts.CICdmProjPath.TrimTrailingPath() + 
+                    @"\Vocabs\" +
+                    cdmSubFolder.TrimTrailingPath() + "\\" +
+                    (string.IsNullOrEmpty(corpusPath.TrimTrailingPath()) ? "": corpusPath.TrimTrailingPath() + "\\");
 
-                //var template = File.ReadAllText("VocabularyTemplate.txt");
-                //template = template.Replace("{{EntityType}}", entity.EntityName.CamelCase());
-                //template = template.Replace("{{EntityTypeName}}", entity.EntityName.SplitCamelCase());
-                //template = template.Replace("{{entitytype}}", entity.EntityName.ToLowerInvariant() + @namespace.ToLowerInvariant());
-                //template = template.Replace("{{namespace}}", @namespace);
-                //template = template.Replace("{{Properties}}", properties.ToString().Trim());
-                //template = template.Replace("{{Keys}}", keys.ToString().Trim());
-                //template = template.Replace("{{Details}}", @namespace.Replace(".", " for "));
+                var @namespace = Path.GetFileName(path.TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar));
 
-                //if (!Directory.Exists(path))
-                //    Directory.CreateDirectory(path);
+                if (@namespace == "schemaDocuments")
+                    @namespace = "";
+                else
+                    @namespace = "." + @namespace.CamelCase();
 
-                //var file = path + "\\" + entity.EntityName.CamelCase() + ".cs";
-                //if (File.Exists(file))
-                //    File.Delete(file);
+                var template = File.ReadAllText("Templates/VocabularyTemplate.txt");
+                template = template.Replace("{{EntityType}}", entityName);
+                template = template.Replace("{{EntityTypeName}}", entity.EntityName.SplitCamelCase());
+                template = template.Replace("{{entitytype}}", entity.EntityName.ToLowerInvariant() + @namespace.ToLowerInvariant());
+                template = template.Replace("{{namespace}}", @namespace);
+                template = template.Replace("{{Properties}}", properties.ToString().Trim());
+                template = template.Replace("{{Keys}}", keys.ToString().Trim());
+                template = template.Replace("{{Details}}", @namespace.Replace(".", " for "));
 
-                //File.WriteAllText(file, template.ToString());
+                var relStr = new StringBuilder();
+                relationshipFromList.ForEach(relationship => relStr.AppendLine($"            ///Property <see cref=\"{relationship.FromEntityAttribute.CamelCase()}\"/> to Vocab '{relationship.ToEntity}' with Property '{relationship.ToEntityAttribute.CamelCase()}'"));
+                template = template.Replace("{{IncomingRelationships}}", relStr.ToString().Trim());
+                relStr = new StringBuilder();
+                relationshipToList.ForEach(relationship => relStr.AppendLine($"            ///Property <see cref=\"{relationship.ToEntityAttribute.CamelCase()}\"/> from Vocab '{relationship.FromEntity}' with Property '{relationship.FromEntityAttribute.CamelCase()}'"));
+                template = template.Replace("{{OutgoingRelationships}}", relStr.ToString().Trim());
+
+                if (!Directory.Exists(path))
+                    Directory.CreateDirectory(path);
+
+                var file = path + "\\" + entityName + ".cs";
+                if (File.Exists(file))
+                    File.Delete(file);
+
+                File.WriteAllText(file, template.ToString());
 
                 //path = path.Replace("Vocabs", "Sample Data");
                 //if (!Directory.Exists(path))
                 //    Directory.CreateDirectory(path);
 
-                //file = path + "\\" + entity.EntityName.CamelCase() + ".csv";
+                //file = path + "\\" + entityName + ".csv";
                 //if (File.Exists(file))
                 //    File.Delete(file);
 
                 //File.WriteAllText(file, string.Join(",", propList));
 
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine($" => File has been generated - {entity.EntityName.CamelCase()}.cs");
+                Console.WriteLine($" => File has been generated - {entityName}.cs");
                 Console.ForegroundColor = ConsoleColor.White;
 
                 VocabGeneratedCount++;
+
+                if (!EntityCodes.Contains(entityName))
+                    EntityCodes.Add(entityName);
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                Console.WriteLine(ex.StackTrace);
+                Console.Error.WriteLine(ex.ToString());
             }
         }
-
-        //public static async Task<int> Run(ReadManifestOption _opts)
-        //{
-        //    opts = _opts;
-
-        //    Console.WriteLine($"\nReading manifest files from directory {_opts.FullPath} ...");
-
-        //    CdmCorpus.Storage.Mount("local", new LocalAdapter(_opts.FullPath)); //this is the root path
-
-        //    CdmDataTypes = new List<string>();
-        //    var manifestFiles = await GetAppManifestFile(_opts.FullPath);
-
-        //    int total = 0;
-        //    foreach (var manifestFile in manifestFiles)
-        //    {
-        //        Console.WriteLine(manifestFile.Key);
-        //        total += manifestFile.Value.Count;
-        //    }
-
-        //    Console.WriteLine($"Total Manifest Count: {manifestFiles.Count}");
-        //    Console.WriteLine($"Total Entities Count: {total}");
-
-        //    foreach (var dataType in CdmDataTypes.OrderBy(o => o))
-        //        Console.WriteLine($"DataTypes: {dataType}");
-
-        //    Console.WriteLine($"Total DataType: {CdmDataTypes.Count}");
-
-        //    return 0;
-        //}
 
         private static async Task<Dictionary<string, List<string>>> GetAppManifestFile(string directory)
         {
@@ -396,6 +367,60 @@ namespace CluedIn.Vocabulariess.CDM.CLI
             }
 
             return manifestFiles;
+        }
+
+        private static void GetAllRelationships(CdmManifestDefinition manifest, CdmEntityDefinition entity, out List<CdmE2ERelationship> relationshipFromList, out List<CdmE2ERelationship> relationshipToList)
+        {
+            relationshipFromList = new List<CdmE2ERelationship>();
+            relationshipToList = new List<CdmE2ERelationship>();
+            if (manifest.Relationships != null && manifest.Relationships.Count > 0)
+            {
+                foreach (CdmE2ERelationship relationship in manifest.Relationships)
+                {
+                    if (relationship.FromEntity.Contains(entity.EntityName))
+                        relationshipFromList.Add(relationship);
+
+                    if (relationship.ToEntity.Contains(entity.EntityName))
+                        relationshipToList.Add(relationship);
+                }
+            }
+            else
+            {
+                CdmCorpus.CalculateEntityGraphAsync(manifest).Wait();
+                
+                foreach (CdmE2ERelationship relationship in CdmCorpus.FetchIncomingRelationships(entity))
+                    relationshipFromList.Add(relationship);
+
+                foreach (CdmE2ERelationship relationship in CdmCorpus.FetchOutgoingRelationships(entity))
+                    relationshipToList.Add(relationship);
+            }
+        }
+
+        private static void GenerateEntityTypesFile()
+        {
+            try
+            {
+                var entityTypes = new StringBuilder();
+
+                EntityCodes.OrderBy(s => s).ToList().
+                    ForEach(entityCode => entityTypes.AppendLine($"        public const string {entityCode} = \"/{entityCode}\";"));
+
+                var template = File.ReadAllText("Templates/EntityTypesTemplate.txt");
+                template = template.Replace("{{EntityTypes}}", entityTypes.ToString().Trim());
+
+                if (!Directory.Exists(opts.CICdmProjPath))
+                    Directory.CreateDirectory(opts.CICdmProjPath);
+
+                var file = opts.CICdmProjPath + "\\CommonDataModelEntityTypes.cs";
+                if (File.Exists(file))
+                    File.Delete(file);
+
+                File.WriteAllText(file, template.ToString());
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
         }
     }
 }

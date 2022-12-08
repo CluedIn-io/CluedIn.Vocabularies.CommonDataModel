@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.NonProfitIati
+namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
 {
     public class DeliveryFrameworkVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.NonProfitIati
             VocabularyName = "Delivery Framework";
             KeyPrefix = "commonDataModel.deliveryframework.nonprofitiati";
             KeySeparator = ".";
-            Grouping = "/DeliveryFramework";
+            Grouping = CommonDataModelEntityTypes.DeliveryFramework;
 
             AddGroup("DeliveryFramework Details for NonProfitIati", group =>
             {
@@ -61,6 +61,106 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.NonProfitIati
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="AccountId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="DonorId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="AccountId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="DonorId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="Account"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="AccountId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="DonorId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="ContactId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="ContactType"/> to Vocab 'NonEmbeddedCodelist.cdm.json/NonEmbeddedCodelist' with Property 'NonEmbeddedCodelistId'
+            ///Property <see cref="DeliveryFrameworkId"/> to Vocab 'DeliveryFramework.cdm.json/DeliveryFramework' with Property 'DeliveryFrameworkId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="DeliveryFrameworkId"/> to Vocab 'DeliveryFramework.cdm.json/DeliveryFramework' with Property 'DeliveryFrameworkId'
+            ///Property <see cref="TypeId"/> to Vocab 'NonEmbeddedCodelist.cdm.json/NonEmbeddedCodelist' with Property 'NonEmbeddedCodelistId'
+            ///Property <see cref="BudgetNotProvidedId"/> to Vocab 'NonEmbeddedCodelist.cdm.json/NonEmbeddedCodelist' with Property 'NonEmbeddedCodelistId'
+            ///Property <see cref="CollaborationTypeId"/> to Vocab 'NonEmbeddedCodelist.cdm.json/NonEmbeddedCodelist' with Property 'NonEmbeddedCodelistId'
+            ///Property <see cref="LoanRepaymentPeriodId"/> to Vocab 'NonEmbeddedCodelist.cdm.json/NonEmbeddedCodelist' with Property 'NonEmbeddedCodelistId'
+            ///Property <see cref="LoanRepaymentTypeId"/> to Vocab 'NonEmbeddedCodelist.cdm.json/NonEmbeddedCodelist' with Property 'NonEmbeddedCodelistId'
+            ///Property <see cref="DefaultFinanceTypeId"/> to Vocab 'NonEmbeddedCodelist.cdm.json/NonEmbeddedCodelist' with Property 'NonEmbeddedCodelistId'
+            ///Property <see cref="DefaultFlowTypeId"/> to Vocab 'NonEmbeddedCodelist.cdm.json/NonEmbeddedCodelist' with Property 'NonEmbeddedCodelistId'
+            ///Property <see cref="DefaultLanguageId"/> to Vocab 'NonEmbeddedCodelist.cdm.json/NonEmbeddedCodelist' with Property 'NonEmbeddedCodelistId'
+            ///Property <see cref="ScopeId"/> to Vocab 'NonEmbeddedCodelist.cdm.json/NonEmbeddedCodelist' with Property 'NonEmbeddedCodelistId'
+            ///Property <see cref="BudgetIdentifierVocabularyId"/> to Vocab 'NonEmbeddedCodelistVocabulary.cdm.json/NonEmbeddedCodelistVocabulary' with Property 'NonEmbeddedCodelistVocabularyId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="ObjectiveId"/> to Vocab 'Objective.cdm.json/Objective' with Property 'ObjectiveId'
+            ///Property <see cref="ParentDeliveryFrameworkId"/> to Vocab 'DeliveryFramework.cdm.json/DeliveryFramework' with Property 'DeliveryFrameworkId'
+            ///Property <see cref="DefaultCurrencyId"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="ReviewerId"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ParentDeliveryFrameworkId"/> to Vocab 'DeliveryFramework.cdm.json/DeliveryFramework' with Property 'DeliveryFrameworkId'
+            ///Property <see cref="ObjectiveId"/> to Vocab 'Objective.cdm.json/Objective' with Property 'ObjectiveId'
+            ///Property <see cref="ObjectiveId"/> to Vocab 'Objective.cdm.json/Objective' with Property 'ObjectiveId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab 'AidType.cdm.json/AidType' with Property 'DeliveryFramework'
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab 'Condition.cdm.json/Condition' with Property 'DeliveryFramework'
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab 'CrsOtherFlag.cdm.json/CrsOtherFlag' with Property 'DeliveryFramework'
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab 'DeliveryFrameworkContact.cdm.json/DeliveryFrameworkContact' with Property 'DeliveryFrameworkId'
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab 'DeliveryFrameworkDescription.cdm.json/DeliveryFrameworkDescription' with Property 'DeliveryFrameworkId'
+            ///Property <see cref="DeliveryFrameworkDescriptionId"/> from Vocab 'NarrativeTranslation.cdm.json/NarrativeTranslation' with Property 'DeliveryFrameworkDescriptionId'
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab 'Expenditure.cdm.json/Expenditure' with Property 'DeliveryFrameworkId'
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab 'FssForecast.cdm.json/FssForecast' with Property 'DeliveryFrameworkId'
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab 'HumanitarianScope.cdm.json/HumanitarianScope' with Property 'DeliveryFrameworkId'
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab 'Identifier.cdm.json/Identifier' with Property 'DeliveryFrameworkId'
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab 'Location.cdm.json/Location' with Property 'DeliveryFrameworkId'
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab 'NarrativeTranslation.cdm.json/NarrativeTranslation' with Property 'DeliveryFrameworkId'
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab 'ParticipatingOrganization.cdm.json/ParticipatingOrganization' with Property 'DeliveryFrameworkId'
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab 'PolicyMarker.cdm.json/PolicyMarker' with Property 'DeliveryFrameworkId'
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab 'RecipientCountry.cdm.json/RecipientCountry' with Property 'DeliveryFrameworkId'
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab 'RecipientRegion.cdm.json/RecipientRegion' with Property 'DeliveryFrameworkId'
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab 'Sector.cdm.json/Sector' with Property 'DeliveryFrameworkId'
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab 'Tag.cdm.json/Tag' with Property 'DeliveryFrameworkId'
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab 'Budget.cdm.json/Budget' with Property 'DeliveryFrameworkId'
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab 'DeliveryFramework.cdm.json/DeliveryFramework' with Property 'ParentDeliveryFrameworkId'
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/accelerators/nonProfit/nonProfitCore/Budget.cdm.json/Budget' with Property 'DeliveryFrameworkId'
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/accelerators/nonProfit/nonProfitCore/DeliveryFramework.cdm.json/DeliveryFramework' with Property 'ParentDeliveryFrameworkId'
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/accelerators/nonProfit/nonProfitCore/DisbursementDistribution.cdm.json/DisbursementDistribution' with Property 'DeliveryFrameworkId'
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/accelerators/nonProfit/nonProfitCore/ProgramItemRelationship.cdm.json/ProgramItemRelationship' with Property 'DeliveryFrameworkId'
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/accelerators/nonProfit/nonProfitCore/Result.cdm.json/Result' with Property 'DeliveryFrameworkId'
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/accelerators/nonProfit/nonProfitCore/TheoryOfChangeRelationship.cdm.json/TheoryOfChangeRelationship' with Property 'DeliveryFrameworkId'
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/accelerators/nonProfit/nonProfitCore/WorkItem.cdm.json/WorkItem' with Property 'RelatedDeliveryFrameworkId'
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/accelerators/nonProfit/nonProfitForSales/Lead.cdm.json/Lead' with Property 'DeliveryFrameworkId'
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/accelerators/nonProfit/nonProfitVolunteers/Project.cdm.json/Project' with Property 'DeliveryFrameworkId'
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab 'DisbursementDistribution.cdm.json/DisbursementDistribution' with Property 'DeliveryFrameworkId'
+            ///Property <see cref="DeliveryFrameworkId"/> from Vocab 'Result.cdm.json/Result' with Property 'DeliveryFrameworkId'
+            #endregion
         }
 
         public VocabularyKey CreatedOn { get; private set; }

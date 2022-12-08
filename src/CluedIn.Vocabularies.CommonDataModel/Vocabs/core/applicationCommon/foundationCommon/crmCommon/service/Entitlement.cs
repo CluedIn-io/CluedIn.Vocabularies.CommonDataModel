@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Service
+namespace CluedIn.Vocabularies.CommonDataModel.Service
 {
     public class EntitlementVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Service
             VocabularyName = "Entitlement";
             KeyPrefix = "commonDataModel.entitlement.service";
             KeySeparator = ".";
-            Grouping = "/Entitlement";
+            Grouping = CommonDataModelEntityTypes.Entitlement;
 
             AddGroup("Entitlement Details for Service", group =>
             {
@@ -35,6 +35,41 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Service
 			    IsDefault = group.Add(new VocabularyKey(nameof(IsDefault), "Is Default", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="CreatedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="CustomerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="CustomerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="SLAId"/> to Vocab '/core/applicationCommon/SLA.cdm.json/SLA' with Property 'SLAId'
+            ///Property <see cref="AccountId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="ContactId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="EntitlementId"/> to Vocab 'Entitlement.cdm.json/Entitlement' with Property 'EntitlementId'
+            ///Property <see cref="EntitlementId"/> to Vocab 'Entitlement.cdm.json/Entitlement' with Property 'EntitlementId'
+            ///Property <see cref="ContactId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="ProductId"/> to Vocab '/core/applicationCommon/foundationCommon/Product.cdm.json/Product' with Property 'ProductId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="EntitlementId"/> from Vocab 'Case.cdm.json/Case' with Property 'EntitlementId'
+            ///Property <see cref="EntitlementId"/> from Vocab 'CaseResolution.cdm.json/CaseResolution' with Property 'RegardingObjectId'
+            ///Property <see cref="EntitlementId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/sales/OpportunityClose.cdm.json/OpportunityClose' with Property 'RegardingObjectId'
+            ///Property <see cref="EntitlementId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/sales/OrderClose.cdm.json/OrderClose' with Property 'RegardingObjectId'
+            ///Property <see cref="EntitlementId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/sales/QuoteClose.cdm.json/QuoteClose' with Property 'RegardingObjectId'
+            ///Property <see cref="EntitlementId"/> from Vocab 'EntitlementContact.cdm.json/EntitlementContact' with Property 'EntitlementId'
+            ///Property <see cref="EntitlementId"/> from Vocab 'EntitlementProduct.cdm.json/EntitlementProduct' with Property 'EntitlementId'
+            ///Property <see cref="EntitlementId"/> from Vocab 'ServiceActivity.cdm.json/ServiceActivity' with Property 'RegardingObjectId'
+            ///Property <see cref="EntitlementId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/portals/Case.cdm.json/Case' with Property 'EntitlementId'
+            ///Property <see cref="EntitlementId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/portals/InviteRedemption.cdm.json/InviteRedemption' with Property 'RegardingObjectId'
+            #endregion
         }
 
         public VocabularyKey EntitlementId { get; private set; }

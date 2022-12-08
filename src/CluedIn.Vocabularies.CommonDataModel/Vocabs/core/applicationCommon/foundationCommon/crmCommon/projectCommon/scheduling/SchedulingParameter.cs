@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Scheduling
+namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
 {
     public class SchedulingParameterVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Scheduling
             VocabularyName = "Scheduling Parameter";
             KeyPrefix = "commonDataModel.schedulingparameter.scheduling";
             KeySeparator = ".";
-            Grouping = "/SchedulingParameter";
+            Grouping = CommonDataModelEntityTypes.SchedulingParameter;
 
             AddGroup("SchedulingParameter Details for Scheduling", group =>
             {
@@ -44,6 +44,18 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Scheduling
 			    SAAutoFilterServiceTerritory = group.Add(new VocabularyKey(nameof(SAAutoFilterServiceTerritory), "Auto Filter Service Territory", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    ScheduleBoardRefreshIntervalSeconds = group.Add(new VocabularyKey(nameof(ScheduleBoardRefreshIntervalSeconds), "The refresh rate of the schedule board.", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="OrganizationId"/> to Vocab 'Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey SchedulingParameterId { get; private set; }

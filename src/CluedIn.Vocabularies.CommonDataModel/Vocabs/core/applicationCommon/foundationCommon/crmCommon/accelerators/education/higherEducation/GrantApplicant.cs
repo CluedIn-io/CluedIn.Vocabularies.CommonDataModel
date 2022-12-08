@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.HigherEducation
+namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
 {
     public class GrantApplicantVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.HigherEducation
             VocabularyName = "Grant Applicant";
             KeyPrefix = "commonDataModel.grantapplicant.highereducation";
             KeySeparator = ".";
-            Grouping = "/GrantApplicant";
+            Grouping = CommonDataModelEntityTypes.GrantApplicant;
 
             AddGroup("GrantApplicant Details for HigherEducation", group =>
             {
@@ -28,6 +28,25 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.HigherEducation
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    DeprecatedTraversedPath = group.Add(new VocabularyKey(nameof(DeprecatedTraversedPath), "(Deprecated) Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="BusinessPartnerId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="ApplicantId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="GrantId"/> to Vocab 'Grant.cdm.json/Grant' with Property 'GrantId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="GrantApplicantId"/> from Vocab 'GrantApplicationBusinessProcessFlow.cdm.json/GrantApplicationBusinessProcessFlow' with Property 'Mshied_GrantapplicantId'
+            #endregion
         }
 
         public VocabularyKey GrantApplicantId { get; private set; }

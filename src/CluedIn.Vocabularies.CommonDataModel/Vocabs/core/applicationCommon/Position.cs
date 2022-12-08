@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 {
     public class PositionVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
             VocabularyName = "Position";
             KeyPrefix = "commonDataModel.position.applicationcommon";
             KeySeparator = ".";
-            Grouping = "/Position";
+            Grouping = CommonDataModelEntityTypes.Position;
 
             AddGroup("Position Details for ApplicationCommon", group =>
             {
@@ -28,6 +28,27 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
 			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
 			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab 'Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="OrganizationId"/> to Vocab 'Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="CreatedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ParentPositionId"/> to Vocab 'Position.cdm.json/Position' with Property 'PositionId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="PositionId"/> from Vocab 'Connection.cdm.json/Connection' with Property 'Record2Id'
+            ///Property <see cref="PositionId"/> from Vocab 'Connection.cdm.json/Connection' with Property 'Record1Id'
+            ///Property <see cref="PositionId"/> from Vocab 'Position.cdm.json/Position' with Property 'ParentPositionId'
+            ///Property <see cref="PositionId"/> from Vocab 'User.cdm.json/User' with Property 'PositionId'
+            ///Property <see cref="PositionId"/> from Vocab 'foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'PositionId'
+            ///Property <see cref="PositionId"/> from Vocab 'foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'PositionId'
+            ///Property <see cref="PositionId"/> from Vocab 'foundationCommon/crmCommon/solutions/marketing/Connection.cdm.json/Connection' with Property 'Record2Id'
+            ///Property <see cref="PositionId"/> from Vocab 'foundationCommon/crmCommon/solutions/marketing/Connection.cdm.json/Connection' with Property 'Record1Id'
+            #endregion
         }
 
         public VocabularyKey PositionId { get; private set; }

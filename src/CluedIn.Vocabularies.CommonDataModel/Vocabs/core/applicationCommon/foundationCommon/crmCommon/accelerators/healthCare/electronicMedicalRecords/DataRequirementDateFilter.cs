@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 {
     public class DataRequirementDateFilterVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ElectronicMedicalRecords
             VocabularyName = "Data Requirement Date Filter";
             KeyPrefix = "commonDataModel.datarequirementdatefilter.electronicmedicalrecords";
             KeySeparator = ".";
-            Grouping = "/DataRequirementDateFilter";
+            Grouping = CommonDataModelEntityTypes.DataRequirementDateFilter;
 
             AddGroup("DataRequirementDateFilter Details for ElectronicMedicalRecords", group =>
             {
@@ -33,6 +33,17 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ElectronicMedicalRecords
 			    TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), "Time Zone Rule Version Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="DataRequirementId"/> to Vocab 'DataRequirement.cdm.json/DataRequirement' with Property 'DataRequirementId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey CreatedOn { get; private set; }

@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Interactions
+namespace CluedIn.Vocabularies.CommonDataModel.Interactions
 {
     public class EmailSubscriptionSubmitVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Interactions
             VocabularyName = "Email Subscription Submit";
             KeyPrefix = "commonDataModel.emailsubscriptionsubmit.interactions";
             KeySeparator = ".";
-            Grouping = "/EmailSubscriptionSubmit";
+            Grouping = CommonDataModelEntityTypes.EmailSubscriptionSubmit;
 
             AddGroup("EmailSubscriptionSubmit Details for Interactions", group =>
             {
@@ -37,6 +37,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Interactions
 			    DeviceBrand = group.Add(new VocabularyKey(nameof(DeviceBrand), "Device brand", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    DeviceModel = group.Add(new VocabularyKey(nameof(DeviceModel), "Device model", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey InteractionId { get; private set; }

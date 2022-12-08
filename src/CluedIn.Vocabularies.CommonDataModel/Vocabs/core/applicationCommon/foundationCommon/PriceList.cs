@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.FoundationCommon
+namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
 {
     public class PriceListVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.FoundationCommon
             VocabularyName = "Price List";
             KeyPrefix = "commonDataModel.pricelist.foundationcommon";
             KeySeparator = ".";
-            Grouping = "/PriceList";
+            Grouping = CommonDataModelEntityTypes.PriceList;
 
             AddGroup("PriceList Details for FoundationCommon", group =>
             {
@@ -33,6 +33,57 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.FoundationCommon
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="OrganizationId"/> to Vocab 'Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="PriceLevelId"/> to Vocab 'PriceList.cdm.json/PriceList' with Property 'PriceLevelId'
+            ///Property <see cref="PriceLevelId"/> to Vocab 'PriceList.cdm.json/PriceList' with Property 'PriceLevelId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="ProductId"/> to Vocab 'Product.cdm.json/Product' with Property 'ProductId'
+            ///Property <see cref="UoMId"/> to Vocab 'Unit.cdm.json/Unit' with Property 'UoMId'
+            ///Property <see cref="UoMScheduleId"/> to Vocab 'UnitGroup.cdm.json/UnitGroup' with Property 'UoMScheduleId'
+            ///Property <see cref="ProductId"/> to Vocab 'Product.cdm.json/Product' with Property 'ProductId'
+            ///Property <see cref="TimeUnit"/> to Vocab 'Unit.cdm.json/Unit' with Property 'UoMId'
+            ///Property <see cref="UoMId"/> to Vocab 'Unit.cdm.json/Unit' with Property 'UoMId'
+            ///Property <see cref="UoMScheduleId"/> to Vocab 'UnitGroup.cdm.json/UnitGroup' with Property 'UoMScheduleId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="PriceLevelId"/> from Vocab 'Account.cdm.json/Account' with Property 'DefaultPriceLevelId'
+            ///Property <see cref="PriceLevelId"/> from Vocab 'Contact.cdm.json/Contact' with Property 'DefaultPriceLevelId'
+            ///Property <see cref="PriceLevelId"/> from Vocab 'PriceListItem.cdm.json/PriceListItem' with Property 'PriceLevelId'
+            ///Property <see cref="PriceLevelId"/> from Vocab 'Product.cdm.json/Product' with Property 'PriceLevelId'
+            ///Property <see cref="PriceLevelId"/> from Vocab 'crmCommon/Account.cdm.json/Account' with Property 'DefaultPriceLevelId'
+            ///Property <see cref="PriceLevelId"/> from Vocab 'crmCommon/Campaign.cdm.json/Campaign' with Property 'PriceListId'
+            ///Property <see cref="PriceLevelId"/> from Vocab 'crmCommon/Contact.cdm.json/Contact' with Property 'DefaultPriceLevelId'
+            ///Property <see cref="PriceLevelId"/> from Vocab 'crmCommon/accelerators/financialServices/banking/Account.cdm.json/Account' with Property 'DefaultPriceLevelId'
+            ///Property <see cref="PriceLevelId"/> from Vocab 'crmCommon/accelerators/financialServices/banking/Contact.cdm.json/Contact' with Property 'DefaultPriceLevelId'
+            ///Property <see cref="PriceLevelId"/> from Vocab 'crmCommon/accelerators/financialServices/banking/Opportunity.cdm.json/Opportunity' with Property 'PriceLevelId'
+            ///Property <see cref="PriceLevelId"/> from Vocab 'crmCommon/accelerators/financialServices/banking/Product.cdm.json/Product' with Property 'PriceLevelId'
+            ///Property <see cref="PriceLevelId"/> from Vocab 'crmCommon/accelerators/nonProfit/nonProfitForSales/Campaign.cdm.json/Campaign' with Property 'PriceListId'
+            ///Property <see cref="PriceLevelId"/> from Vocab 'crmCommon/accelerators/nonProfit/nonProfitForSales/Opportunity.cdm.json/Opportunity' with Property 'PriceLevelId'
+            ///Property <see cref="PriceLevelId"/> from Vocab 'crmCommon/accelerators/nonProfit/nonProfitIati/Campaign.cdm.json/Campaign' with Property 'PriceListId'
+            ///Property <see cref="PriceLevelId"/> from Vocab 'crmCommon/accelerators/nonProfit/nonProfitIati/Opportunity.cdm.json/Opportunity' with Property 'PriceLevelId'
+            ///Property <see cref="PriceLevelId"/> from Vocab 'crmCommon/sales/Invoice.cdm.json/Invoice' with Property 'PriceLevelId'
+            ///Property <see cref="PriceLevelId"/> from Vocab 'crmCommon/sales/Opportunity.cdm.json/Opportunity' with Property 'PriceLevelId'
+            ///Property <see cref="PriceLevelId"/> from Vocab 'crmCommon/sales/Order.cdm.json/Order' with Property 'PriceLevelId'
+            ///Property <see cref="PriceLevelId"/> from Vocab 'crmCommon/sales/PriceListItem.cdm.json/PriceListItem' with Property 'PriceLevelId'
+            ///Property <see cref="PriceLevelId"/> from Vocab 'crmCommon/sales/Quote.cdm.json/Quote' with Property 'PriceLevelId'
+            ///Property <see cref="PriceLevelId"/> from Vocab 'crmCommon/solutions/marketing/Contact.cdm.json/Contact' with Property 'DefaultPriceLevelId'
+            ///Property <see cref="PriceLevelId"/> from Vocab 'crmCommon/solutions/marketing/eventManagement/Account.cdm.json/Account' with Property 'DefaultPriceLevelId'
+            ///Property <see cref="PriceLevelId"/> from Vocab 'crmCommon/solutions/portals/Account.cdm.json/Account' with Property 'DefaultPriceLevelId'
+            ///Property <see cref="PriceLevelId"/> from Vocab 'crmCommon/solutions/portals/Contact.cdm.json/Contact' with Property 'DefaultPriceLevelId'
+            ///Property <see cref="PriceLevelId"/> from Vocab 'crmCommon/solutions/portals/Opportunity.cdm.json/Opportunity' with Property 'PriceLevelId'
+            #endregion
         }
 
         public VocabularyKey PriceLevelId { get; private set; }

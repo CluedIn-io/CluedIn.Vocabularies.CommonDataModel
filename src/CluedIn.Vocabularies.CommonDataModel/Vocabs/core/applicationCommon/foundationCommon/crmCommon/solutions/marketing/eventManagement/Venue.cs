@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.EventManagement
+namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
 {
     public class VenueVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.EventManagement
             VocabularyName = "Venue";
             KeyPrefix = "commonDataModel.venue.eventmanagement";
             KeySeparator = ".";
-            Grouping = "/Venue";
+            Grouping = CommonDataModelEntityTypes.Venue;
 
             AddGroup("Venue Details for EventManagement", group =>
             {
@@ -46,6 +46,28 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.EventManagement
 			    WifiSSID = group.Add(new VocabularyKey(nameof(WifiSSID), "Wifi SSID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    AddressComposite = group.Add(new VocabularyKey(nameof(AddressComposite), "Address Composite", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="BuildingId"/> to Vocab 'Building.cdm.json/Building' with Property 'BuildingId'
+            ///Property <see cref="RoomId"/> to Vocab 'Room.cdm.json/Room' with Property 'RoomId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="ParentVenueId"/> to Vocab 'Venue.cdm.json/Venue' with Property 'VenueId'
+            ///Property <see cref="PrimaryContact"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/marketing/Contact.cdm.json/Contact' with Property 'ContactId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="VenueId"/> from Vocab 'Event.cdm.json/Event' with Property 'PrimaryVenue'
+            ///Property <see cref="VenueId"/> from Vocab 'Session.cdm.json/Session' with Property 'Venue'
+            ///Property <see cref="VenueId"/> from Vocab 'Venue.cdm.json/Venue' with Property 'ParentVenueId'
+            #endregion
         }
 
         public VocabularyKey VenueId { get; private set; }

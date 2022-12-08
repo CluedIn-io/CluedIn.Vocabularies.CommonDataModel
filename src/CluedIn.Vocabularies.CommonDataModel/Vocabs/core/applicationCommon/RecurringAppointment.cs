@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 {
     public class RecurringAppointmentVocabulary : SimpleVocabulary
     {
@@ -10,14 +10,10 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
             VocabularyName = "Recurring Appointment";
             KeyPrefix = "commonDataModel.recurringappointment.applicationcommon";
             KeySeparator = ".";
-            Grouping = "/RecurringAppointment";
+            Grouping = CommonDataModelEntityTypes.RecurringAppointment;
 
             AddGroup("RecurringAppointment Details for ApplicationCommon", group =>
             {
-			    ScheduledDurationMinutes = group.Add(new VocabularyKey(nameof(ScheduledDurationMinutes), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ActualDurationMinutes = group.Add(new VocabularyKey(nameof(ActualDurationMinutes), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ActualEnd = group.Add(new VocabularyKey(nameof(ActualEnd), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ActualStart = group.Add(new VocabularyKey(nameof(ActualStart), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    IsWeekDayPattern = group.Add(new VocabularyKey(nameof(IsWeekDayPattern), "Every Weekday", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    RuleId = group.Add(new VocabularyKey(nameof(RuleId), "Recurrence Rule", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    IsNthYearly = group.Add(new VocabularyKey(nameof(IsNthYearly), "Nth Yearly", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
@@ -58,12 +54,42 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
 			    TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    IsUnsafe = group.Add(new VocabularyKey(nameof(IsUnsafe), "IsUnsafe", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="RegardingObjectId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab 'BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab 'BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="RegardingObjectId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab 'Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab 'Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="RegardingObjectId"/> to Vocab 'KnowledgeArticle.cdm.json/KnowledgeArticle' with Property 'KnowledgearticleId'
+            ///Property <see cref="RegardingObjectId"/> to Vocab 'KnowledgeBaseRecord.cdm.json/KnowledgeBaseRecord' with Property 'KnowledgeBaseRecordId'
+            ///Property <see cref="RegardingObjectId"/> to Vocab 'KnowledgeBaseRecord.cdm.json/KnowledgeBaseRecord' with Property 'KnowledgeBaseRecordId'
+            ///Property <see cref="CreatedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedBy"/> to Vocab 'foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab 'foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningUser"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningUser"/> to Vocab 'foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwnerId"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningTeam"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="ActivityId"/> from Vocab 'ActivityParty.cdm.json/ActivityParty' with Property 'ActivityId'
+            ///Property <see cref="ActivityId"/> from Vocab 'Appointment.cdm.json/Appointment' with Property 'SeriesId'
+            ///Property <see cref="ActivityId"/> from Vocab 'Connection.cdm.json/Connection' with Property 'Record2Id'
+            ///Property <see cref="ActivityId"/> from Vocab 'Connection.cdm.json/Connection' with Property 'Record1Id'
+            ///Property <see cref="ActivityId"/> from Vocab 'Note.cdm.json/Note' with Property 'ObjectId'
+            ///Property <see cref="ActivityId"/> from Vocab 'QueueItem.cdm.json/QueueItem' with Property 'ObjectId'
+            #endregion
         }
 
-        public VocabularyKey ScheduledDurationMinutes { get; private set; }
-        public VocabularyKey ActualDurationMinutes { get; private set; }
-        public VocabularyKey ActualEnd { get; private set; }
-        public VocabularyKey ActualStart { get; private set; }
         public VocabularyKey IsWeekDayPattern { get; private set; }
         public VocabularyKey RuleId { get; private set; }
         public VocabularyKey IsNthYearly { get; private set; }

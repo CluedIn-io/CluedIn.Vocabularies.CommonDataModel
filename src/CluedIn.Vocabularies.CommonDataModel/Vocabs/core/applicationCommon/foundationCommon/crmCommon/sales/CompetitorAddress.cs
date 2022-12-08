@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Sales
+namespace CluedIn.Vocabularies.CommonDataModel.Sales
 {
     public class CompetitorAddressVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Sales
             VocabularyName = "Competitor Address";
             KeyPrefix = "commonDataModel.competitoraddress.sales";
             KeySeparator = ".";
-            Grouping = "/CompetitorAddress";
+            Grouping = CommonDataModelEntityTypes.CompetitorAddress;
 
             AddGroup("CompetitorAddress Details for Sales", group =>
             {
@@ -45,6 +45,18 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Sales
 			    UPSZone = group.Add(new VocabularyKey(nameof(UPSZone), "UPS Zone", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    UTCOffset = group.Add(new VocabularyKey(nameof(UTCOffset), "UTC Offset", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="ParentId"/> to Vocab 'Competitor.cdm.json/Competitor' with Property 'CompetitorId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey CompetitorAddressId { get; private set; }

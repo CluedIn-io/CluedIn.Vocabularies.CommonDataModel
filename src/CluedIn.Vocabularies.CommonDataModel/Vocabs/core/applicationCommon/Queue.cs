@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 {
     public class QueueVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
             VocabularyName = "Queue";
             KeyPrefix = "commonDataModel.queue.applicationcommon";
             KeySeparator = ".";
-            Grouping = "/Queue";
+            Grouping = CommonDataModelEntityTypes.Queue;
 
             AddGroup("Queue Details for ApplicationCommon", group =>
             {
@@ -46,6 +46,53 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
 			    IsEmailAddressApprovedByO365Admin = group.Add(new VocabularyKey(nameof(IsEmailAddressApprovedByO365Admin), "Email Address O365 Admin Approval Status", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    QueueViewType = group.Add(new VocabularyKey(nameof(QueueViewType), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="ObjectId"/> to Vocab 'Activity.cdm.json/Activity' with Property 'ActivityId'
+            ///Property <see cref="ObjectId"/> to Vocab 'Appointment.cdm.json/Appointment' with Property 'ActivityId'
+            ///Property <see cref="BusinessUnitId"/> to Vocab 'BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab 'BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab 'Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab 'Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="ObjectId"/> to Vocab 'Email.cdm.json/Email' with Property 'ActivityId'
+            ///Property <see cref="ObjectId"/> to Vocab 'Fax.cdm.json/Fax' with Property 'ActivityId'
+            ///Property <see cref="ObjectId"/> to Vocab 'KnowledgeArticle.cdm.json/KnowledgeArticle' with Property 'KnowledgearticleId'
+            ///Property <see cref="ObjectId"/> to Vocab 'Letter.cdm.json/Letter' with Property 'ActivityId'
+            ///Property <see cref="OrganizationId"/> to Vocab 'Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="OrganizationId"/> to Vocab 'Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="ObjectId"/> to Vocab 'PhoneCall.cdm.json/PhoneCall' with Property 'ActivityId'
+            ///Property <see cref="PrimaryUserId"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="QueueId"/> to Vocab 'Queue.cdm.json/Queue' with Property 'QueueId'
+            ///Property <see cref="ObjectId"/> to Vocab 'SocialActivity.cdm.json/SocialActivity' with Property 'ActivityId'
+            ///Property <see cref="ObjectId"/> to Vocab 'RecurringAppointment.cdm.json/RecurringAppointment' with Property 'ActivityId'
+            ///Property <see cref="ObjectId"/> to Vocab 'Task.cdm.json/Task' with Property 'ActivityId'
+            ///Property <see cref="CreatedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="WorkerId"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="WorkerId"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="QueueId"/> from Vocab 'ActivityParty.cdm.json/ActivityParty' with Property 'PartyId'
+            ///Property <see cref="QueueId"/> from Vocab 'Email.cdm.json/Email' with Property 'EmailSender'
+            ///Property <see cref="QueueId"/> from Vocab 'QueueItem.cdm.json/QueueItem' with Property 'QueueId'
+            ///Property <see cref="QueueId"/> from Vocab 'Team.cdm.json/Team' with Property 'QueueId'
+            ///Property <see cref="QueueId"/> from Vocab 'User.cdm.json/User' with Property 'QueueId'
+            ///Property <see cref="QueueId"/> from Vocab 'foundationCommon/crmCommon/Email.cdm.json/Email' with Property 'EmailSender'
+            ///Property <see cref="QueueId"/> from Vocab 'foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'QueueId'
+            ///Property <see cref="QueueId"/> from Vocab 'foundationCommon/crmCommon/service/ActivityParty.cdm.json/ActivityParty' with Property 'PartyId'
+            ///Property <see cref="QueueId"/> from Vocab 'foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'QueueId'
+            #endregion
         }
 
         public VocabularyKey QueueId { get; private set; }

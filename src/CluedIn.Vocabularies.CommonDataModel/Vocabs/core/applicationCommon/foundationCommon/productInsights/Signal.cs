@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ProductInsights
+namespace CluedIn.Vocabularies.CommonDataModel.ProductInsights
 {
     public class SignalVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ProductInsights
             VocabularyName = "Signal";
             KeyPrefix = "commonDataModel.signal.productinsights";
             KeySeparator = ".";
-            Grouping = "/Signal";
+            Grouping = CommonDataModelEntityTypes.Signal;
 
             AddGroup("Signal Details for ProductInsights", group =>
             {
@@ -23,6 +23,15 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ProductInsights
 			    DeviceId = group.Add(new VocabularyKey(nameof(DeviceId), "Device Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    SerialNumber = group.Add(new VocabularyKey(nameof(SerialNumber), "Serial Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="AssetId"/> to Vocab 'Asset.cdm.json/Asset' with Property 'AssetId'
+            ///Property <see cref="ProductId"/> to Vocab '/core/applicationCommon/foundationCommon/Product.cdm.json/Product' with Property 'ProductId'
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey SignalTime { get; private set; }

@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.CrmCommon
+namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
 {
     public class ContactLeadsVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.CrmCommon
             VocabularyName = "Contact Leads";
             KeyPrefix = "commonDataModel.contactleads.crmcommon";
             KeySeparator = ".";
-            Grouping = "/ContactLeads";
+            Grouping = CommonDataModelEntityTypes.ContactLeads;
 
             AddGroup("ContactLeads Details for CrmCommon", group =>
             {
@@ -22,6 +22,15 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.CrmCommon
 			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="ContactId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="LeadId"/> to Vocab 'Lead.cdm.json/Lead' with Property 'LeadId'
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey ContactLeadId { get; private set; }

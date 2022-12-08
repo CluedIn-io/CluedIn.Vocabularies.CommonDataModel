@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.NonProfitCore
+namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
 {
     public class TransactionVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.NonProfitCore
             VocabularyName = "Transaction";
             KeyPrefix = "commonDataModel.transaction.nonprofitcore";
             KeySeparator = ".";
-            Grouping = "/Transaction";
+            Grouping = CommonDataModelEntityTypes.Transaction;
 
             AddGroup("Transaction Details for NonProfitCore", group =>
             {
@@ -35,6 +35,38 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.NonProfitCore
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="TransactionReceiptOnAccountId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="TransactionReceiptOnAccountId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="ReceiptOnContactId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="ReceiptOnContactId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="TransactionPaymentMethodId"/> to Vocab 'PaymentMethod.cdm.json/PaymentMethod' with Property 'PaymentMethodId'
+            ///Property <see cref="TransactionPaymentMethodId"/> to Vocab 'PaymentMethod.cdm.json/PaymentMethod' with Property 'PaymentMethodId'
+            ///Property <see cref="TransactionPaymentScheduleId"/> to Vocab 'PaymentSchedule.cdm.json/PaymentSchedule' with Property 'PaymentScheduleId'
+            ///Property <see cref="TransactionPaymentScheduleId"/> to Vocab 'PaymentSchedule.cdm.json/PaymentSchedule' with Property 'PaymentScheduleId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OriginalTxnAdjustedId"/> to Vocab 'Transaction.cdm.json/Transaction' with Property 'TransactionId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="TransactionId"/> from Vocab 'DesignatedCredit.cdm.json/DesignatedCredit' with Property 'TransactionId'
+            ///Property <see cref="TransactionId"/> from Vocab 'PaymentAsset.cdm.json/PaymentAsset' with Property 'TransferredOnTransactionId'
+            ///Property <see cref="TransactionId"/> from Vocab 'PaymentMethod.cdm.json/PaymentMethod' with Property 'TransactionId'
+            ///Property <see cref="TransactionId"/> from Vocab 'Transaction.cdm.json/Transaction' with Property 'OriginalTxnAdjustedId'
+            #endregion
         }
 
         public VocabularyKey ExchangeRate { get; private set; }

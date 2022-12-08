@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Sales
+namespace CluedIn.Vocabularies.CommonDataModel.Sales
 {
     public class LeadCompetitorsVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Sales
             VocabularyName = "Lead Competitors";
             KeyPrefix = "commonDataModel.leadcompetitors.sales";
             KeySeparator = ".";
-            Grouping = "/LeadCompetitors";
+            Grouping = CommonDataModelEntityTypes.LeadCompetitors;
 
             AddGroup("LeadCompetitors Details for Sales", group =>
             {
@@ -22,6 +22,15 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Sales
 			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="CompetitorId"/> to Vocab 'Competitor.cdm.json/Competitor' with Property 'CompetitorId'
+            ///Property <see cref="LeadId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/Lead.cdm.json/Lead' with Property 'LeadId'
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey LeadCompetitorId { get; private set; }

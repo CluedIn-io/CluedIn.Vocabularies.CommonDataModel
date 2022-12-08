@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 {
     public class ResultCacheVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ProjectServiceAutomation
             VocabularyName = "Result Cache";
             KeyPrefix = "commonDataModel.resultcache.projectserviceautomation";
             KeySeparator = ".";
-            Grouping = "/ResultCache";
+            Grouping = CommonDataModelEntityTypes.ResultCache;
 
             AddGroup("ResultCache Details for ProjectServiceAutomation", group =>
             {
@@ -31,6 +31,18 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ProjectServiceAutomation
 			    PartNumber = group.Add(new VocabularyKey(nameof(PartNumber), "Part Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    UserId = group.Add(new VocabularyKey(nameof(UserId), "User id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/scheduling/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey MlResultCacheId { get; private set; }

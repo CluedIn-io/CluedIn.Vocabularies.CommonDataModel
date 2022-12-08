@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.EventManagement
+namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
 {
     public class SessionTrackVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.EventManagement
             VocabularyName = "Session Track";
             KeyPrefix = "commonDataModel.sessiontrack.eventmanagement";
             KeySeparator = ".";
-            Grouping = "/SessionTrack";
+            Grouping = CommonDataModelEntityTypes.SessionTrack;
 
             AddGroup("SessionTrack Details for EventManagement", group =>
             {
@@ -30,6 +30,23 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.EventManagement
 			    TrackGoal = group.Add(new VocabularyKey(nameof(TrackGoal), "Track goal", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TrackType = group.Add(new VocabularyKey(nameof(TrackType), "Track Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="EventId"/> to Vocab 'Event.cdm.json/Event' with Property 'EventId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="SessionTrackId"/> from Vocab 'Pass.cdm.json/Pass' with Property 'Track'
+            #endregion
         }
 
         public VocabularyKey SessionTrackId { get; private set; }

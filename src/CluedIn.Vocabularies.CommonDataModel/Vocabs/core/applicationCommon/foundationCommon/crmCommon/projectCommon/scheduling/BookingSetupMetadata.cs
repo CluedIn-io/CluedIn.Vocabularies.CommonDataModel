@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Scheduling
+namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
 {
     public class BookingSetupMetadataVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Scheduling
             VocabularyName = "Booking Setup Metadata";
             KeyPrefix = "commonDataModel.bookingsetupmetadata.scheduling";
             KeySeparator = ".";
-            Grouping = "/BookingSetupMetadata";
+            Grouping = CommonDataModelEntityTypes.BookingSetupMetadata;
 
             AddGroup("BookingSetupMetadata Details for Scheduling", group =>
             {
@@ -27,6 +27,31 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Scheduling
 			    RequirementRelationshipLogicalName = group.Add(new VocabularyKey(nameof(RequirementRelationshipLogicalName), "Requirement Relationship Logical Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ResourceAvailabilityRetrievalLimit = group.Add(new VocabularyKey(nameof(ResourceAvailabilityRetrievalLimit), "Resource Availability Retrieval Limit", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="CloneEntityQuery"/> to Vocab 'Configuration.cdm.json/Configuration' with Property 'ConfigurationId'
+            ///Property <see cref="DefaultBookingCanceledStatus"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/BookingStatus.cdm.json/BookingStatus' with Property 'BookingStatusId'
+            ///Property <see cref="DefaultBookingCommittedStatus"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/BookingStatus.cdm.json/BookingStatus' with Property 'BookingStatusId'
+            ///Property <see cref="DefaultRequirementActiveStatus"/> to Vocab 'RequirementStatus.cdm.json/RequirementStatus' with Property 'RequirementStatusId'
+            ///Property <see cref="DefaultRequirementCanceledStatus"/> to Vocab 'RequirementStatus.cdm.json/RequirementStatus' with Property 'RequirementStatusId'
+            ///Property <see cref="DefaultRequirementCompletedStatus"/> to Vocab 'RequirementStatus.cdm.json/RequirementStatus' with Property 'RequirementStatusId'
+            ///Property <see cref="RetrieveConstraintsQuery"/> to Vocab 'Configuration.cdm.json/Configuration' with Property 'ConfigurationId'
+            ///Property <see cref="RetrieveResourcesQuery"/> to Vocab 'Configuration.cdm.json/Configuration' with Property 'ConfigurationId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="BookingSetupMetadataId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/BookableResourceBooking.cdm.json/BookableResourceBooking' with Property 'BookingSetupMetadataId'
+            ///Property <see cref="BookingSetupMetadataId"/> from Vocab 'ResourceRequirement.cdm.json/ResourceRequirement' with Property 'BookingSetupMetadataId'
+            #endregion
         }
 
         public VocabularyKey BookingSetupMetadataId { get; private set; }

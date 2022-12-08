@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Service
+namespace CluedIn.Vocabularies.CommonDataModel.Service
 {
     public class SchedulingGroupVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Service
             VocabularyName = "Scheduling Group";
             KeyPrefix = "commonDataModel.schedulinggroup.service";
             KeySeparator = ".";
-            Grouping = "/SchedulingGroup";
+            Grouping = CommonDataModelEntityTypes.SchedulingGroup;
 
             AddGroup("SchedulingGroup Details for Service", group =>
             {
@@ -23,6 +23,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Service
 			    GroupTypeCode = group.Add(new VocabularyKey(nameof(GroupTypeCode), "Group Type Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ObjectTypeCode = group.Add(new VocabularyKey(nameof(ObjectTypeCode), "Entity", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="ResourceGroupId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="BusinessUnitId"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/foundationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey VersionNumber { get; private set; }

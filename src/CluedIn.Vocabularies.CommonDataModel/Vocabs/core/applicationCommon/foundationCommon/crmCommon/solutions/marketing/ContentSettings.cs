@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Marketing
+namespace CluedIn.Vocabularies.CommonDataModel.Marketing
 {
     public class ContentSettingsVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Marketing
             VocabularyName = "Content Settings";
             KeyPrefix = "commonDataModel.contentsettings.marketing";
             KeySeparator = ".";
-            Grouping = "/ContentSettings";
+            Grouping = CommonDataModelEntityTypes.ContentSettings;
 
             AddGroup("ContentSettings Details for Marketing", group =>
             {
@@ -29,6 +29,23 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Marketing
 			    GooglePlusUrl = group.Add(new VocabularyKey(nameof(GooglePlusUrl), "Google Plus URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
 			    YoutubeUrl = group.Add(new VocabularyKey(nameof(YoutubeUrl), "YouTube URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="ContentSettingsId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/accelerators/financialServices/banking/CustomerJourney.cdm.json/CustomerJourney' with Property 'ContentSettingsId'
+            ///Property <see cref="ContentSettingsId"/> from Vocab 'CustomerJourney.cdm.json/CustomerJourney' with Property 'ContentSettingsId'
+            #endregion
         }
 
         public VocabularyKey ContentSettingsId { get; private set; }

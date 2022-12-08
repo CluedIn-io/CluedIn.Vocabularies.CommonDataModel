@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 {
     public class ConnectionVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
             VocabularyName = "Connection";
             KeyPrefix = "commonDataModel.connection.applicationcommon";
             KeySeparator = ".";
-            Grouping = "/Connection";
+            Grouping = CommonDataModelEntityTypes.Connection;
 
             AddGroup("Connection Details for ApplicationCommon", group =>
             {
@@ -34,6 +34,91 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Connection Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    EntityImageId = group.Add(new VocabularyKey(nameof(EntityImageId), "Entity Image Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="Record2Id"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="Record1Id"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="Record2Id"/> to Vocab 'Activity.cdm.json/Activity' with Property 'ActivityId'
+            ///Property <see cref="Record1Id"/> to Vocab 'Activity.cdm.json/Activity' with Property 'ActivityId'
+            ///Property <see cref="Record2Id"/> to Vocab 'Appointment.cdm.json/Appointment' with Property 'ActivityId'
+            ///Property <see cref="Record1Id"/> to Vocab 'Appointment.cdm.json/Appointment' with Property 'ActivityId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab 'BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab 'BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab 'BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="ModifiedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="RelatedConnectionId"/> to Vocab 'Connection.cdm.json/Connection' with Property 'ConnectionId'
+            ///Property <see cref="Record2Id"/> to Vocab 'SocialActivity.cdm.json/SocialActivity' with Property 'ActivityId'
+            ///Property <see cref="Record2Id"/> to Vocab 'Letter.cdm.json/Letter' with Property 'ActivityId'
+            ///Property <see cref="Record2Id"/> to Vocab 'Email.cdm.json/Email' with Property 'ActivityId'
+            ///Property <see cref="Record2Id"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="Record2Id"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="Record2Id"/> to Vocab 'Task.cdm.json/Task' with Property 'ActivityId'
+            ///Property <see cref="Record2Id"/> to Vocab 'SocialProfile.cdm.json/SocialProfile' with Property 'SocialProfileId'
+            ///Property <see cref="Record2Id"/> to Vocab 'Goal.cdm.json/Goal' with Property 'GoalId'
+            ///Property <see cref="Record2Id"/> to Vocab 'KnowledgeBaseRecord.cdm.json/KnowledgeBaseRecord' with Property 'KnowledgeBaseRecordId'
+            ///Property <see cref="Record2Id"/> to Vocab 'KnowledgeArticle.cdm.json/KnowledgeArticle' with Property 'KnowledgearticleId'
+            ///Property <see cref="Record2Id"/> to Vocab 'Position.cdm.json/Position' with Property 'PositionId'
+            ///Property <see cref="Record2Id"/> to Vocab 'Fax.cdm.json/Fax' with Property 'ActivityId'
+            ///Property <see cref="Record2Id"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="Record2Id"/> to Vocab 'RecurringAppointment.cdm.json/RecurringAppointment' with Property 'ActivityId'
+            ///Property <see cref="Record2Id"/> to Vocab 'PhoneCall.cdm.json/PhoneCall' with Property 'ActivityId'
+            ///Property <see cref="CreatedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="Record2RoleId"/> to Vocab 'ConnectionRole.cdm.json/ConnectionRole' with Property 'ConnectionRoleId'
+            ///Property <see cref="Record1RoleId"/> to Vocab 'ConnectionRole.cdm.json/ConnectionRole' with Property 'ConnectionRoleId'
+            ///Property <see cref="Record1Id"/> to Vocab 'Task.cdm.json/Task' with Property 'ActivityId'
+            ///Property <see cref="Record1Id"/> to Vocab 'RecurringAppointment.cdm.json/RecurringAppointment' with Property 'ActivityId'
+            ///Property <see cref="Record1Id"/> to Vocab 'SocialProfile.cdm.json/SocialProfile' with Property 'SocialProfileId'
+            ///Property <see cref="Record1Id"/> to Vocab 'PhoneCall.cdm.json/PhoneCall' with Property 'ActivityId'
+            ///Property <see cref="Record1Id"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="Record1Id"/> to Vocab 'Fax.cdm.json/Fax' with Property 'ActivityId'
+            ///Property <see cref="Record1Id"/> to Vocab 'KnowledgeArticle.cdm.json/KnowledgeArticle' with Property 'KnowledgearticleId'
+            ///Property <see cref="Record1Id"/> to Vocab 'Letter.cdm.json/Letter' with Property 'ActivityId'
+            ///Property <see cref="Record1Id"/> to Vocab 'Goal.cdm.json/Goal' with Property 'GoalId'
+            ///Property <see cref="Record1Id"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="Record1Id"/> to Vocab 'Email.cdm.json/Email' with Property 'ActivityId'
+            ///Property <see cref="Record1Id"/> to Vocab 'Position.cdm.json/Position' with Property 'PositionId'
+            ///Property <see cref="Record1Id"/> to Vocab 'KnowledgeBaseRecord.cdm.json/KnowledgeBaseRecord' with Property 'KnowledgeBaseRecordId'
+            ///Property <see cref="Record1Id"/> to Vocab 'SocialActivity.cdm.json/SocialActivity' with Property 'ActivityId'
+            ///Property <see cref="Record1Id"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab 'Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="ModifiedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab 'Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="Record2RoleId"/> to Vocab 'ConnectionRole.cdm.json/ConnectionRole' with Property 'ConnectionRoleId'
+            ///Property <see cref="Record1RoleId"/> to Vocab 'ConnectionRole.cdm.json/ConnectionRole' with Property 'ConnectionRoleId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab 'Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="Record2Id"/> to Vocab 'Goal.cdm.json/Goal' with Property 'GoalId'
+            ///Property <see cref="Record1Id"/> to Vocab 'Goal.cdm.json/Goal' with Property 'GoalId'
+            ///Property <see cref="Record2Id"/> to Vocab 'KnowledgeBaseRecord.cdm.json/KnowledgeBaseRecord' with Property 'KnowledgeBaseRecordId'
+            ///Property <see cref="Record1Id"/> to Vocab 'KnowledgeBaseRecord.cdm.json/KnowledgeBaseRecord' with Property 'KnowledgeBaseRecordId'
+            ///Property <see cref="Record2Id"/> to Vocab 'Position.cdm.json/Position' with Property 'PositionId'
+            ///Property <see cref="Record1Id"/> to Vocab 'Position.cdm.json/Position' with Property 'PositionId'
+            ///Property <see cref="Record2Id"/> to Vocab 'SocialActivity.cdm.json/SocialActivity' with Property 'ActivityId'
+            ///Property <see cref="Record1Id"/> to Vocab 'SocialActivity.cdm.json/SocialActivity' with Property 'ActivityId'
+            ///Property <see cref="Record2Id"/> to Vocab 'SocialProfile.cdm.json/SocialProfile' with Property 'SocialProfileId'
+            ///Property <see cref="Record1Id"/> to Vocab 'SocialProfile.cdm.json/SocialProfile' with Property 'SocialProfileId'
+            ///Property <see cref="Record2Id"/> to Vocab 'Task.cdm.json/Task' with Property 'ActivityId'
+            ///Property <see cref="Record1Id"/> to Vocab 'Task.cdm.json/Task' with Property 'ActivityId'
+            ///Property <see cref="OwnerId"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningTeam"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwnerId"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="Record2Id"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="Record1Id"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="ConnectionId"/> from Vocab 'Connection.cdm.json/Connection' with Property 'RelatedConnectionId'
+            ///Property <see cref="ConnectionRoleId"/> from Vocab 'Connection.cdm.json/Connection' with Property 'Record2RoleId'
+            ///Property <see cref="ConnectionRoleId"/> from Vocab 'Connection.cdm.json/Connection' with Property 'Record1RoleId'
+            ///Property <see cref="ConnectionRoleId"/> from Vocab 'foundationCommon/crmCommon/solutions/marketing/Connection.cdm.json/Connection' with Property 'Record2RoleId'
+            ///Property <see cref="ConnectionRoleId"/> from Vocab 'foundationCommon/crmCommon/solutions/marketing/Connection.cdm.json/Connection' with Property 'Record1RoleId'
+            #endregion
         }
 
         public VocabularyKey OwningUser { get; private set; }

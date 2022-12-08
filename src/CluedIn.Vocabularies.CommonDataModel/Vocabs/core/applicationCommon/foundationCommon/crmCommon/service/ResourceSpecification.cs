@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Service
+namespace CluedIn.Vocabularies.CommonDataModel.Service
 {
     public class ResourceSpecificationVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Service
             VocabularyName = "Resource Specification";
             KeyPrefix = "commonDataModel.resourcespecification.service";
             KeySeparator = ".";
-            Grouping = "/ResourceSpecification";
+            Grouping = CommonDataModelEntityTypes.ResourceSpecification;
 
             AddGroup("ResourceSpecification Details for Service", group =>
             {
@@ -31,6 +31,22 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Service
 			    RequiredCount = group.Add(new VocabularyKey(nameof(RequiredCount), "Required Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    SameSite = group.Add(new VocabularyKey(nameof(SameSite), "Same Site", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="CreatedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="BusinessUnitId"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="GroupObjectId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/foundationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="ResourceSpecId"/> from Vocab 'ActivityParty.cdm.json/ActivityParty' with Property 'ResourceSpecId'
+            ///Property <see cref="ResourceSpecId"/> from Vocab 'Resource.cdm.json/Resource' with Property 'ResourceId'
+            ///Property <see cref="ResourceSpecId"/> from Vocab 'Service.cdm.json/Service' with Property 'ResourceSpecId'
+            #endregion
         }
 
         public VocabularyKey ResourceSpecId { get; private set; }

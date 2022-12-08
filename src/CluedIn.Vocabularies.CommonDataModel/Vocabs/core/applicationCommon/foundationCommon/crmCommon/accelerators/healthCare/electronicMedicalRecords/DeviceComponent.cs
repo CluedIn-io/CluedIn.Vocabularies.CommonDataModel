@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 {
     public class DeviceComponentVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ElectronicMedicalRecords
             VocabularyName = "Device Component";
             KeyPrefix = "commonDataModel.devicecomponent.electronicmedicalrecords";
             KeySeparator = ".";
-            Grouping = "/DeviceComponent";
+            Grouping = CommonDataModelEntityTypes.DeviceComponent;
 
             AddGroup("DeviceComponent Details for ElectronicMedicalRecords", group =>
             {
@@ -30,6 +30,34 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ElectronicMedicalRecords
 			    TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), "Time Zone Rule Version Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="LanguageCodeId"/> to Vocab 'CodeableConcept.cdm.json/CodeableConcept' with Property 'CodeableConceptId'
+            ///Property <see cref="ParameterGroupId"/> to Vocab 'CodeableConcept.cdm.json/CodeableConcept' with Property 'CodeableConceptId'
+            ///Property <see cref="TypeId"/> to Vocab 'CodeableConcept.cdm.json/CodeableConcept' with Property 'CodeableConceptId'
+            ///Property <see cref="OperationalStatusId"/> to Vocab 'CodeableConcept.cdm.json/CodeableConcept' with Property 'CodeableConceptId'
+            ///Property <see cref="SpecTypeId"/> to Vocab 'CodeableConcept.cdm.json/CodeableConcept' with Property 'CodeableConceptId'
+            ///Property <see cref="SourceId"/> to Vocab 'Device.cdm.json/Device' with Property 'DeviceId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ParentId"/> to Vocab 'DeviceComponent.cdm.json/DeviceComponent' with Property 'DeviceComponentId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="DeviceComponentId"/> to Vocab 'DeviceComponent.cdm.json/DeviceComponent' with Property 'DeviceComponentId'
+            ///Property <see cref="DeviceComponentId"/> to Vocab 'DeviceComponent.cdm.json/DeviceComponent' with Property 'DeviceComponentId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="DeviceComponentId"/> from Vocab 'DeviceComponent.cdm.json/DeviceComponent' with Property 'ParentId'
+            ///Property <see cref="DeviceComponentId"/> from Vocab 'DeviceComponentOperationalStatus.cdm.json/DeviceComponentOperationalStatus' with Property 'DeviceComponentId'
+            ///Property <see cref="DeviceComponentId"/> from Vocab 'DeviceComponentProductionSpecification.cdm.json/DeviceComponentProductionSpecification' with Property 'DeviceComponentId'
+            ///Property <see cref="DeviceComponentId"/> from Vocab 'DeviceMetric.cdm.json/DeviceMetric' with Property 'ParentId'
+            #endregion
         }
 
         public VocabularyKey CreatedOn { get; private set; }

@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 {
     public class ProjectTeamMemberSignUpVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ProjectServiceAutomation
             VocabularyName = "Project Team Member Sign Up";
             KeyPrefix = "commonDataModel.projectteammembersignup.projectserviceautomation";
             KeySeparator = ".";
-            Grouping = "/ProjectTeamMemberSignUp";
+            Grouping = CommonDataModelEntityTypes.ProjectTeamMemberSignUp;
 
             AddGroup("ProjectTeamMemberSignUp Details for ProjectServiceAutomation", group =>
             {
@@ -27,6 +27,20 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ProjectServiceAutomation
 			    DefaultDescription = group.Add(new VocabularyKey(nameof(DefaultDescription), "Default Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    MembershipStatus = group.Add(new VocabularyKey(nameof(MembershipStatus), "Membership Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="TeamMembership"/> to Vocab 'ProjectTeam.cdm.json/ProjectTeam' with Property 'ProjectTeamId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/scheduling/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="BookableResource"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/BookableResource.cdm.json/BookableResource' with Property 'BookableResourceId'
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey ProjectTeamMemberSignUpId { get; private set; }

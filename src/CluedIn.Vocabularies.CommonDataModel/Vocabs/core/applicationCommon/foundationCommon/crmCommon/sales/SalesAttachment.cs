@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Sales
+namespace CluedIn.Vocabularies.CommonDataModel.Sales
 {
     public class SalesAttachmentVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Sales
             VocabularyName = "Sales Attachment";
             KeyPrefix = "commonDataModel.salesattachment.sales";
             KeySeparator = ".";
-            Grouping = "/SalesAttachment";
+            Grouping = CommonDataModelEntityTypes.SalesAttachment;
 
             AddGroup("SalesAttachment Details for Sales", group =>
             {
@@ -36,6 +36,18 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Sales
 			    OrganizationId = group.Add(new VocabularyKey(nameof(OrganizationId), "Organization ", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
 			    Mode = group.Add(new VocabularyKey(nameof(Mode), "Mode", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="SalesLiteratureId"/> to Vocab 'SalesLiterature.cdm.json/SalesLiterature' with Property 'SalesLiteratureId'
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey SalesLiteratureItemId { get; private set; }

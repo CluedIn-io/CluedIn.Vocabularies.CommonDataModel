@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.NonProfitCore
+namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
 {
     public class PaymentAssetVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.NonProfitCore
             VocabularyName = "Payment Asset";
             KeyPrefix = "commonDataModel.paymentasset.nonprofitcore";
             KeySeparator = ".";
-            Grouping = "/PaymentAsset";
+            Grouping = CommonDataModelEntityTypes.PaymentAsset;
 
             AddGroup("PaymentAsset Details for NonProfitCore", group =>
             {
@@ -29,6 +29,32 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.NonProfitCore
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OriginalAssetAdjustedId"/> to Vocab 'PaymentAsset.cdm.json/PaymentAsset' with Property 'PaymentAssetId'
+            ///Property <see cref="PaymentassetPlannedgivingId"/> to Vocab 'PlannedGiving.cdm.json/PlannedGiving' with Property 'PlannedGivingId'
+            ///Property <see cref="PaymentAssetPledgedAssetId"/> to Vocab 'PaymentAsset.cdm.json/PaymentAsset' with Property 'PaymentAssetId'
+            ///Property <see cref="PledgedOnPaymentScheduleId"/> to Vocab 'PaymentSchedule.cdm.json/PaymentSchedule' with Property 'PaymentScheduleId'
+            ///Property <see cref="TransferredOnTransactionId"/> to Vocab 'Transaction.cdm.json/Transaction' with Property 'TransactionId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="PaymentAssetId"/> from Vocab 'PaymentAsset.cdm.json/PaymentAsset' with Property 'OriginalAssetAdjustedId'
+            ///Property <see cref="PaymentAssetId"/> from Vocab 'PaymentAsset.cdm.json/PaymentAsset' with Property 'PaymentAssetPledgedAssetId'
+            #endregion
         }
 
         public VocabularyKey ExchangeRate { get; private set; }

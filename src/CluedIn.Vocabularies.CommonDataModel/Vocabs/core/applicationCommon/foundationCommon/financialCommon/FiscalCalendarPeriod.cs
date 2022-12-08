@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.FinancialCommon
+namespace CluedIn.Vocabularies.CommonDataModel.FinancialCommon
 {
     public class FiscalCalendarPeriodVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.FinancialCommon
             VocabularyName = "Fiscal Calendar Period";
             KeyPrefix = "commonDataModel.fiscalcalendarperiod.financialcommon";
             KeySeparator = ".";
-            Grouping = "/FiscalCalendarPeriod";
+            Grouping = CommonDataModelEntityTypes.FiscalCalendarPeriod;
 
             AddGroup("FiscalCalendarPeriod Details for FinancialCommon", group =>
             {
@@ -24,6 +24,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.FinancialCommon
 			    QuarterOffset = group.Add(new VocabularyKey(nameof(QuarterOffset), "Quarter Offset", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    Month = group.Add(new VocabularyKey(nameof(Month), "Month", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="FiscalCalendarPeriodId"/> from Vocab 'FinancialActivity.cdm.json/FinancialActivity' with Property 'FiscalCalendarPeriodKey'
+            #endregion
         }
 
         public VocabularyKey FiscalCalendarPeriodId { get; private set; }

@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Marketing
+namespace CluedIn.Vocabularies.CommonDataModel.Marketing
 {
     public class SegmentVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Marketing
             VocabularyName = "Segment";
             KeyPrefix = "commonDataModel.segment.marketing";
             KeySeparator = ".";
-            Grouping = "/Segment";
+            Grouping = CommonDataModelEntityTypes.Segment;
 
             AddGroup("Segment Details for Marketing", group =>
             {
@@ -26,6 +26,23 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Marketing
 			    QueryDefinition = group.Add(new VocabularyKey(nameof(QueryDefinition), "Query definition", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    SegmentType = group.Add(new VocabularyKey(nameof(SegmentType), "Segment type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="SegmentId"/> from Vocab 'CustomerJourney.cdm.json/CustomerJourney' with Property 'SuppressionSegmentId'
+            ///Property <see cref="SegmentId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/accelerators/financialServices/banking/CustomerJourney.cdm.json/CustomerJourney' with Property 'SuppressionSegmentId'
+            #endregion
         }
 
         public VocabularyKey SegmentId { get; private set; }

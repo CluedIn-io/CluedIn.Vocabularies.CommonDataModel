@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Interactions
+namespace CluedIn.Vocabularies.CommonDataModel.Interactions
 {
     public class InvalidSenderAddressVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Interactions
             VocabularyName = "Invalid Sender Address";
             KeyPrefix = "commonDataModel.invalidsenderaddress.interactions";
             KeySeparator = ".";
-            Grouping = "/InvalidSenderAddress";
+            Grouping = CommonDataModelEntityTypes.InvalidSenderAddress;
 
             AddGroup("InvalidSenderAddress Details for Interactions", group =>
             {
@@ -27,6 +27,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Interactions
 			    BlockedReason = group.Add(new VocabularyKey(nameof(BlockedReason), "Blocked reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Timestamp = group.Add(new VocabularyKey(nameof(Timestamp), "Timestamp", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey InteractionId { get; private set; }

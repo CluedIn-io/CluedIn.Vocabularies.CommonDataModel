@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Banking
+namespace CluedIn.Vocabularies.CommonDataModel.Banking
 {
     public class LeadToOpportunitySalesProcessVocabulary : SimpleVocabulary
     {
@@ -10,13 +10,21 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Banking
             VocabularyName = "Lead To Opportunity Sales Process";
             KeyPrefix = "commonDataModel.leadtoopportunitysalesprocess.banking";
             KeySeparator = ".";
-            Grouping = "/LeadToOpportunitySalesProcess";
+            Grouping = CommonDataModelEntityTypes.LeadToOpportunitySalesProcess;
 
             AddGroup("LeadToOpportunitySalesProcess Details for Banking", group =>
             {
 			    LeadId = group.Add(new VocabularyKey(nameof(LeadId), "Lead", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    OpportunityId = group.Add(new VocabularyKey(nameof(OpportunityId), "Opportunity Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="OpportunityId"/> to Vocab 'Opportunity.cdm.json/Opportunity' with Property 'OpportunityId'
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey LeadId { get; private set; }

@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 {
     public class EndpointVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ElectronicMedicalRecords
             VocabularyName = "Endpoint";
             KeyPrefix = "commonDataModel.endpoint.electronicmedicalrecords";
             KeySeparator = ".";
-            Grouping = "/Endpoint";
+            Grouping = CommonDataModelEntityTypes.Endpoint;
 
             AddGroup("Endpoint Details for ElectronicMedicalRecords", group =>
             {
@@ -32,6 +32,46 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ElectronicMedicalRecords
 			    TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), "Time Zone Rule Version Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="ManagingOrganizationId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="PayloadTypeId"/> to Vocab 'CodeableConcept.cdm.json/CodeableConcept' with Property 'CodeableConceptId'
+            ///Property <see cref="PayloadTypeId"/> to Vocab 'CodeableConcept.cdm.json/CodeableConcept' with Property 'CodeableConceptId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="EndpointId"/> to Vocab 'Endpoint.cdm.json/Endpoint' with Property 'EndpointId'
+            ///Property <see cref="EndpointId"/> to Vocab 'Endpoint.cdm.json/Endpoint' with Property 'EndpointId'
+            ///Property <see cref="EndpointId"/> to Vocab 'Endpoint.cdm.json/Endpoint' with Property 'EndpointId'
+            ///Property <see cref="EndpointId"/> to Vocab 'Endpoint.cdm.json/Endpoint' with Property 'EndpointId'
+            ///Property <see cref="EndPointId"/> to Vocab 'Endpoint.cdm.json/Endpoint' with Property 'EndpointId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="HealthcareServiceId"/> to Vocab 'HealthcareService.cdm.json/HealthcareService' with Property 'HealthcareServiceId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="EndpointId"/> from Vocab 'EndpointContact.cdm.json/EndpointContact' with Property 'EndpointId'
+            ///Property <see cref="EndpointId"/> from Vocab 'EndpointHeader.cdm.json/EndpointHeader' with Property 'EndpointId'
+            ///Property <see cref="EndpointId"/> from Vocab 'EndpointPayloadMimeType.cdm.json/EndpointPayloadMimeType' with Property 'EndpointId'
+            ///Property <see cref="EndpointId"/> from Vocab 'EndpointPayloadType.cdm.json/EndpointPayloadType' with Property 'EndpointId'
+            ///Property <see cref="EndpointId"/> from Vocab 'HealthcareServiceEndpoint.cdm.json/HealthcareServiceEndpoint' with Property 'EndPointId'
+            ///Property <see cref="EndpointId"/> from Vocab 'LocationEndPoint.cdm.json/LocationEndPoint' with Property 'LocationEndpointId'
+            ///Property <see cref="EndpointId"/> from Vocab 'PractitionerRoleEndPoint.cdm.json/PractitionerRoleEndPoint' with Property 'EndPointId'
+            #endregion
         }
 
         public VocabularyKey CreatedOn { get; private set; }

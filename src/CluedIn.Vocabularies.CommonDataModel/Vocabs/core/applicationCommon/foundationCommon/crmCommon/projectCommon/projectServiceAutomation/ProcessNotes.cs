@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 {
     public class ProcessNotesVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ProjectServiceAutomation
             VocabularyName = "Process Notes";
             KeyPrefix = "commonDataModel.processnotes.projectserviceautomation";
             KeySeparator = ".";
-            Grouping = "/ProcessNotes";
+            Grouping = CommonDataModelEntityTypes.ProcessNotes;
 
             AddGroup("ProcessNotes Details for ProjectServiceAutomation", group =>
             {
@@ -31,6 +31,18 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ProjectServiceAutomation
 			    Form = group.Add(new VocabularyKey(nameof(Form), "Form", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Message = group.Add(new VocabularyKey(nameof(Message), "Message", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/scheduling/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey ProcessNotesId { get; private set; }

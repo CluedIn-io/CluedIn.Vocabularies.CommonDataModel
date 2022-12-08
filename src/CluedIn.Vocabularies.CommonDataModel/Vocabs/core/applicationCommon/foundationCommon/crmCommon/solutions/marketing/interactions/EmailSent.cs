@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Interactions
+namespace CluedIn.Vocabularies.CommonDataModel.Interactions
 {
     public class EmailSentVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Interactions
             VocabularyName = "Email Sent";
             KeyPrefix = "commonDataModel.emailsent.interactions";
             KeySeparator = ".";
-            Grouping = "/EmailSent";
+            Grouping = CommonDataModelEntityTypes.EmailSent;
 
             AddGroup("EmailSent Details for Interactions", group =>
             {
@@ -29,6 +29,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Interactions
 			    Timestamp = group.Add(new VocabularyKey(nameof(Timestamp), "Timestamp", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ActivityId = group.Add(new VocabularyKey(nameof(ActivityId), "Activity ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey InteractionId { get; private set; }

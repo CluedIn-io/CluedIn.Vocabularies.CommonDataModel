@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Portals
+namespace CluedIn.Vocabularies.CommonDataModel.Portals
 {
     public class PageTemplateVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Portals
             VocabularyName = "Page Template";
             KeyPrefix = "commonDataModel.pagetemplate.portals";
             KeySeparator = ".";
-            Grouping = "/PageTemplate";
+            Grouping = CommonDataModelEntityTypes.PageTemplate;
 
             AddGroup("PageTemplate Details for Portals", group =>
             {
@@ -25,6 +25,30 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Portals
 			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    UseWebsiteHeaderAndFooter = group.Add(new VocabularyKey(nameof(UseWebsiteHeaderAndFooter), "Use Website Header and Footer", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="WebsiteId"/> to Vocab 'Website.cdm.json/Website' with Property 'WebsiteId'
+            ///Property <see cref="WebTemplateId"/> to Vocab 'WebTemplate.cdm.json/WebTemplate' with Property 'WebTemplateId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="PageTemplateId"/> from Vocab 'Blog.cdm.json/Blog' with Property 'ArchiveTemplateId'
+            ///Property <see cref="PageTemplateId"/> from Vocab 'Blog.cdm.json/Blog' with Property 'HomeTemplateId'
+            ///Property <see cref="PageTemplateId"/> from Vocab 'Blog.cdm.json/Blog' with Property 'PostTemplateId'
+            ///Property <see cref="PageTemplateId"/> from Vocab 'Forum.cdm.json/Forum' with Property 'ForumPageTemplateID'
+            ///Property <see cref="PageTemplateId"/> from Vocab 'Forum.cdm.json/Forum' with Property 'ThreadPageTemplateID'
+            ///Property <see cref="PageTemplateId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/marketing/MarketingPage.cdm.json/MarketingPage' with Property 'PageTemplate'
+            ///Property <see cref="PageTemplateId"/> from Vocab 'WebPage.cdm.json/WebPage' with Property 'PageTemplateId'
+            #endregion
         }
 
         public VocabularyKey PageTemplateId { get; private set; }

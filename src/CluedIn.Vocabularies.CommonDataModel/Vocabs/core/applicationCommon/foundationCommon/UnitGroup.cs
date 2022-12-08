@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.FoundationCommon
+namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
 {
     public class UnitGroupVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.FoundationCommon
             VocabularyName = "Unit Group";
             KeyPrefix = "commonDataModel.unitgroup.foundationcommon";
             KeySeparator = ".";
-            Grouping = "/UnitGroup";
+            Grouping = CommonDataModelEntityTypes.UnitGroup;
 
             AddGroup("UnitGroup Details for FoundationCommon", group =>
             {
@@ -30,6 +30,37 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.FoundationCommon
 			    CreatedByExternalParty = group.Add(new VocabularyKey(nameof(CreatedByExternalParty), "Created By (External Party)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ModifiedByExternalParty = group.Add(new VocabularyKey(nameof(ModifiedByExternalParty), "Modified By (External Party)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="OrganizationId"/> to Vocab 'Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="UoMScheduleId"/> from Vocab 'PriceListItem.cdm.json/PriceListItem' with Property 'UoMScheduleId'
+            ///Property <see cref="UoMScheduleId"/> from Vocab 'Product.cdm.json/Product' with Property 'DefaultUoMScheduleId'
+            ///Property <see cref="UoMScheduleId"/> from Vocab 'Unit.cdm.json/Unit' with Property 'UoMScheduleId'
+            ///Property <see cref="UoMScheduleId"/> from Vocab 'crmCommon/accelerators/automotive/Unit.cdm.json/Unit' with Property 'UoMScheduleId'
+            ///Property <see cref="UoMScheduleId"/> from Vocab 'crmCommon/accelerators/financialServices/banking/Product.cdm.json/Product' with Property 'DefaultUoMScheduleId'
+            ///Property <see cref="UoMScheduleId"/> from Vocab 'crmCommon/projectCommon/projectServiceAutomation/EstimateLine.cdm.json/EstimateLine' with Property 'UnitSchedule'
+            ///Property <see cref="UoMScheduleId"/> from Vocab 'crmCommon/projectCommon/projectServiceAutomation/Expense.cdm.json/Expense' with Property 'UnitGroup'
+            ///Property <see cref="UoMScheduleId"/> from Vocab 'crmCommon/projectCommon/projectServiceAutomation/InvoiceLineTransaction.cdm.json/InvoiceLineTransaction' with Property 'UnitSchedule'
+            ///Property <see cref="UoMScheduleId"/> from Vocab 'crmCommon/projectCommon/projectServiceAutomation/JournalLine.cdm.json/JournalLine' with Property 'UnitSchedule'
+            ///Property <see cref="UoMScheduleId"/> from Vocab 'crmCommon/projectCommon/projectServiceAutomation/OpportunityLineTransaction.cdm.json/OpportunityLineTransaction' with Property 'UnitSchedule'
+            ///Property <see cref="UoMScheduleId"/> from Vocab 'crmCommon/projectCommon/projectServiceAutomation/OrderLineTransaction.cdm.json/OrderLineTransaction' with Property 'UnitSchedule'
+            ///Property <see cref="UoMScheduleId"/> from Vocab 'crmCommon/projectCommon/projectServiceAutomation/Product.cdm.json/Product' with Property 'DefaultUoMScheduleId'
+            ///Property <see cref="UoMScheduleId"/> from Vocab 'crmCommon/projectCommon/projectServiceAutomation/QuoteLineTransaction.cdm.json/QuoteLineTransaction' with Property 'UnitSchedule'
+            ///Property <see cref="UoMScheduleId"/> from Vocab 'crmCommon/projectCommon/projectServiceAutomation/ResourceCategoryPriceLevel.cdm.json/ResourceCategoryPriceLevel' with Property 'UnitSchedule'
+            ///Property <see cref="UoMScheduleId"/> from Vocab 'crmCommon/projectCommon/projectServiceAutomation/TransactionCategory.cdm.json/TransactionCategory' with Property 'UnitGroup'
+            ///Property <see cref="UoMScheduleId"/> from Vocab 'crmCommon/projectCommon/projectServiceAutomation/TransactionCategoryPriceLevel.cdm.json/TransactionCategoryPriceLevel' with Property 'UnitSchedule'
+            ///Property <see cref="UoMScheduleId"/> from Vocab 'crmCommon/projectCommon/projectServiceAutomation/TransactionType.cdm.json/TransactionType' with Property 'UnitGroup'
+            ///Property <see cref="UoMScheduleId"/> from Vocab 'crmCommon/projectCommon/scheduling/Actual.cdm.json/Actual' with Property 'UnitSchedule'
+            ///Property <see cref="UoMScheduleId"/> from Vocab 'crmCommon/sales/PriceListItem.cdm.json/PriceListItem' with Property 'UoMScheduleId'
+            ///Property <see cref="UoMScheduleId"/> from Vocab 'crmCommon/service/ContractLine.cdm.json/ContractLine' with Property 'UoMScheduleId'
+            #endregion
         }
 
         public VocabularyKey UoMScheduleId { get; private set; }

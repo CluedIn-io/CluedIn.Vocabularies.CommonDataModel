@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.CrmCommon
+namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
 {
     public class CampaignItemVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.CrmCommon
             VocabularyName = "Campaign Item";
             KeyPrefix = "commonDataModel.campaignitem.crmcommon";
             KeySeparator = ".";
-            Grouping = "/CampaignItem";
+            Grouping = CommonDataModelEntityTypes.CampaignItem;
 
             AddGroup("CampaignItem Details for CrmCommon", group =>
             {
@@ -25,6 +25,16 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.CrmCommon
 			    OwningBusinessUnit = group.Add(new VocabularyKey(nameof(OwningBusinessUnit), "Unique identifier of the business unit that owns the campaign item.", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
 			    OwningUser = group.Add(new VocabularyKey(nameof(OwningUser), "Unique identifier of the user that owns the campaign item.", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="CampaignId"/> to Vocab 'Campaign.cdm.json/Campaign' with Property 'CampaignId'
+            ///Property <see cref="OwnerId"/> to Vocab 'service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey CampaignItemId { get; private set; }

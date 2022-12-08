@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Scheduling
+namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
 {
     public class ScheduleBoardSettingVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Scheduling
             VocabularyName = "Schedule Board Setting";
             KeyPrefix = "commonDataModel.scheduleboardsetting.scheduling";
             KeySeparator = ".";
-            Grouping = "/ScheduleBoardSetting";
+            Grouping = CommonDataModelEntityTypes.ScheduleBoardSetting;
 
             AddGroup("ScheduleBoardSetting Details for Scheduling", group =>
             {
@@ -51,6 +51,25 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Scheduling
 			    UnscheduledWOPageRecCount = group.Add(new VocabularyKey(nameof(UnscheduledWOPageRecCount), "Resource Requirement View Page Record Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    WorkingHoursColor = group.Add(new VocabularyKey(nameof(WorkingHoursColor), "Working Hours Color", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="FilterLayout"/> to Vocab 'Configuration.cdm.json/Configuration' with Property 'ConfigurationId'
+            ///Property <see cref="ResourceCellTemplate"/> to Vocab 'Configuration.cdm.json/Configuration' with Property 'ConfigurationId'
+            ///Property <see cref="RetrieveResourcesQuery"/> to Vocab 'Configuration.cdm.json/Configuration' with Property 'ConfigurationId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="ScheduleBoardSettingId"/> from Vocab 'ClientExtension.cdm.json/ClientExtension' with Property 'ScheduleBoardSettingId'
+            #endregion
         }
 
         public VocabularyKey ScheduleBoardSettingId { get; private set; }

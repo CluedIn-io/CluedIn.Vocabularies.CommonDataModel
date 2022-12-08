@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.CrmCommon
+namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
 {
     public class MarketingListMemberVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.CrmCommon
             VocabularyName = "Marketing List Member";
             KeyPrefix = "commonDataModel.marketinglistmember.crmcommon";
             KeySeparator = ".";
-            Grouping = "/MarketingListMember";
+            Grouping = CommonDataModelEntityTypes.MarketingListMember;
 
             AddGroup("MarketingListMember Details for CrmCommon", group =>
             {
@@ -27,6 +27,23 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.CrmCommon
 			    OwningBusinessUnit = group.Add(new VocabularyKey(nameof(OwningBusinessUnit), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
 			    OwningUser = group.Add(new VocabularyKey(nameof(OwningUser), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="EntityId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="EntityId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="EntityId"/> to Vocab 'Lead.cdm.json/Lead' with Property 'LeadId'
+            ///Property <see cref="ListId"/> to Vocab 'MarketingList.cdm.json/MarketingList' with Property 'ListId'
+            ///Property <see cref="CreatedBy"/> to Vocab 'service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab 'service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab 'service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab 'service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab 'service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey ListMemberId { get; private set; }

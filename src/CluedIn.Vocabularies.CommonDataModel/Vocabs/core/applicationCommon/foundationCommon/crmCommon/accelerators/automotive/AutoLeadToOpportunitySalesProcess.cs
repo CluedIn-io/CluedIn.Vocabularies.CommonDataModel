@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Automotive
+namespace CluedIn.Vocabularies.CommonDataModel.Automotive
 {
     public class AutoLeadToOpportunitySalesProcessVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Automotive
             VocabularyName = "Auto Lead To Opportunity Sales Process";
             KeyPrefix = "commonDataModel.autoleadtoopportunitysalesprocess.automotive";
             KeySeparator = ".";
-            Grouping = "/AutoLeadToOpportunitySalesProcess";
+            Grouping = CommonDataModelEntityTypes.AutoLeadToOpportunitySalesProcess;
 
             AddGroup("AutoLeadToOpportunitySalesProcess Details for Automotive", group =>
             {
@@ -31,6 +31,18 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Automotive
 			    TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="LeadId"/> to Vocab 'Lead.cdm.json/Lead' with Property 'LeadId'
+            ///Property <see cref="OpportunityId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/sales/Opportunity.cdm.json/Opportunity' with Property 'OpportunityId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/foundationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey ActiveStageStartedOn { get; private set; }

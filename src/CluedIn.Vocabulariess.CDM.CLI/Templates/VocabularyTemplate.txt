@@ -1,7 +1,7 @@
 ﻿using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies{{namespace}}
+namespace CluedIn.Vocabularies.CommonDataModel{{namespace}}
 {
     public class {{EntityType}}Vocabulary : SimpleVocabulary
     {
@@ -10,12 +10,20 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies{{namespace}}
             VocabularyName = "{{EntityTypeName}}";
             KeyPrefix = "commonDataModel.{{entitytype}}";
             KeySeparator = ".";
-            Grouping = "/{{EntityType}}";
+            Grouping = CommonDataModelEntityTypes.{{EntityType}};
 
             AddGroup("{{EntityType}} Details{{Details}}", group =>
             {
 			    {{Properties}}             
             });
+            
+            #region Incoming Relationships
+            {{IncomingRelationships}}
+            #endregion
+            
+            #region Outgoing Relationships
+            {{OutgoingRelationships}}
+            #endregion
         }
 
         {{Keys}}

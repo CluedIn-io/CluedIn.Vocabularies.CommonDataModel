@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.FoundationCommon
+namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
 {
     public class ProductRelationshipVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.FoundationCommon
             VocabularyName = "Product Relationship";
             KeyPrefix = "commonDataModel.productrelationship.foundationcommon";
             KeySeparator = ".";
-            Grouping = "/ProductRelationship";
+            Grouping = CommonDataModelEntityTypes.ProductRelationship;
 
             AddGroup("ProductRelationship Details for FoundationCommon", group =>
             {
@@ -29,6 +29,21 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.FoundationCommon
 			    Direction = group.Add(new VocabularyKey(nameof(Direction), "Direction", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="OrganizationId"/> to Vocab 'Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="ProductId"/> to Vocab 'Product.cdm.json/Product' with Property 'ProductId'
+            ///Property <see cref="SubstitutedProductId"/> to Vocab 'Product.cdm.json/Product' with Property 'ProductId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey ProductSubstituteId { get; private set; }

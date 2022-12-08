@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Marketing
+namespace CluedIn.Vocabularies.CommonDataModel.Marketing
 {
     public class GeoPinVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Marketing
             VocabularyName = "Geo Pin";
             KeyPrefix = "commonDataModel.geopin.marketing";
             KeySeparator = ".";
-            Grouping = "/GeoPin";
+            Grouping = CommonDataModelEntityTypes.GeoPin;
 
             AddGroup("GeoPin Details for Marketing", group =>
             {
@@ -40,6 +40,29 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Marketing
 			    SoutheastLongitude = group.Add(new VocabularyKey(nameof(SoutheastLongitude), "Southeast longitude", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
 			    State = group.Add(new VocabularyKey(nameof(State), "State", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="ContactGeoPinsId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="CustomerJourney"/> to Vocab 'CustomerJourney.cdm.json/CustomerJourney' with Property 'CustomerJourneyId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="MarketingformGeoPinsId"/> to Vocab 'MarketingForm.cdm.json/MarketingForm' with Property 'MarketingFormId'
+            ///Property <see cref="LeadGeoPinsId"/> to Vocab 'Lead.cdm.json/Lead' with Property 'LeadId'
+            ///Property <see cref="MarketingEmailGeoPinsId"/> to Vocab 'MarketingEmail.cdm.json/MarketingEmail' with Property 'MarketingEmailId'
+            ///Property <see cref="MarketingPageGeoPinsId"/> to Vocab 'MarketingPage.cdm.json/MarketingPage' with Property 'MarketingPageId'
+            ///Property <see cref="WebsiteGeoPinsId"/> to Vocab 'MarketingWebsite.cdm.json/MarketingWebsite' with Property 'WebsiteId'
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey GeopinId { get; private set; }

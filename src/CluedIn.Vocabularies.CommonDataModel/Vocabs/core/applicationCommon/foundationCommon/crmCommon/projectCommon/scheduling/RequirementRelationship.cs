@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Scheduling
+namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
 {
     public class RequirementRelationshipVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Scheduling
             VocabularyName = "Requirement Relationship";
             KeyPrefix = "commonDataModel.requirementrelationship.scheduling";
             KeySeparator = ".";
-            Grouping = "/RequirementRelationship";
+            Grouping = CommonDataModelEntityTypes.RequirementRelationship;
 
             AddGroup("RequirementRelationship Details for Scheduling", group =>
             {
@@ -23,6 +23,25 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Scheduling
 			    ResourceGroupings = group.Add(new VocabularyKey(nameof(ResourceGroupings), "Part of Same", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    RequirementGroupControlViewId = group.Add(new VocabularyKey(nameof(RequirementGroupControlViewId), "Requirement Group Control View Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="RequirementGroup"/> to Vocab 'RequirementGroup.cdm.json/RequirementGroup' with Property 'RequirementgroupId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="ParentRequirementRelationship"/> to Vocab 'RequirementRelationship.cdm.json/RequirementRelationship' with Property 'RequirementrelationshipId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="RequirementrelationshipId"/> from Vocab 'RequirementRelationship.cdm.json/RequirementRelationship' with Property 'ParentRequirementRelationship'
+            ///Property <see cref="RequirementrelationshipId"/> from Vocab 'ResourceRequirement.cdm.json/ResourceRequirement' with Property 'RequirementRelationship'
+            #endregion
         }
 
         public VocabularyKey RequirementrelationshipId { get; private set; }

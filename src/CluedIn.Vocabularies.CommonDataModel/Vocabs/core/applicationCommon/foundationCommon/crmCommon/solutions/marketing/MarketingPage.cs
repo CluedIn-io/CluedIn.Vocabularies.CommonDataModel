@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Marketing
+namespace CluedIn.Vocabularies.CommonDataModel.Marketing
 {
     public class MarketingPageVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Marketing
             VocabularyName = "Marketing Page";
             KeyPrefix = "commonDataModel.marketingpage.marketing";
             KeySeparator = ".";
-            Grouping = "/MarketingPage";
+            Grouping = CommonDataModelEntityTypes.MarketingPage;
 
             AddGroup("MarketingPage Details for Marketing", group =>
             {
@@ -35,6 +35,32 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Marketing
 			    LastPublishedDate = group.Add(new VocabularyKey(nameof(LastPublishedDate), "Last published date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    LastUnpublishedDate = group.Add(new VocabularyKey(nameof(LastUnpublishedDate), "Last unpublished date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="MarketingWebsite"/> to Vocab 'MarketingWebsite.cdm.json/MarketingWebsite' with Property 'WebsiteId'
+            ///Property <see cref="PageTemplate"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/portals/PageTemplate.cdm.json/PageTemplate' with Property 'PageTemplateId'
+            ///Property <see cref="WebPage"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/portals/WebPage.cdm.json/WebPage' with Property 'WebpageId'
+            ///Property <see cref="WebTemplate"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/portals/WebTemplate.cdm.json/WebTemplate' with Property 'WebTemplateId'
+            ///Property <see cref="Portalswebsite"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/portals/Website.cdm.json/Website' with Property 'WebsiteId'
+            ///Property <see cref="PageLanguage"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/portals/WebsiteLanguage.cdm.json/WebsiteLanguage' with Property 'WebsiteLanguageId'
+            ///Property <see cref="ContainerPage"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/portals/WebPage.cdm.json/WebPage' with Property 'WebpageId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="MarketingPageId"/> from Vocab 'Contact.cdm.json/Contact' with Property 'SourceLandingPage'
+            ///Property <see cref="MarketingPageId"/> from Vocab 'FormPage.cdm.json/FormPage' with Property 'MarketingPage'
+            ///Property <see cref="MarketingPageId"/> from Vocab 'GeoPin.cdm.json/GeoPin' with Property 'MarketingPageGeoPinsId'
+            ///Property <see cref="MarketingPageId"/> from Vocab 'Lead.cdm.json/Lead' with Property 'SourceLandingPage'
+            #endregion
         }
 
         public VocabularyKey MarketingPageId { get; private set; }

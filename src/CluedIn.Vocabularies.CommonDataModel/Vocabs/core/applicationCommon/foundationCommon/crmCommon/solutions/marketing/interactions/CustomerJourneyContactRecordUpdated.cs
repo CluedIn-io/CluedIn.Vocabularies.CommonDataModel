@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Interactions
+namespace CluedIn.Vocabularies.CommonDataModel.Interactions
 {
     public class CustomerJourneyContactRecordUpdatedVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Interactions
             VocabularyName = "Customer Journey Contact Record Updated";
             KeyPrefix = "commonDataModel.customerjourneycontactrecordupdated.interactions";
             KeySeparator = ".";
-            Grouping = "/CustomerJourneyContactRecordUpdated";
+            Grouping = CommonDataModelEntityTypes.CustomerJourneyContactRecordUpdated;
 
             AddGroup("CustomerJourneyContactRecordUpdated Details for Interactions", group =>
             {
@@ -24,6 +24,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Interactions
 			    InteractionType = group.Add(new VocabularyKey(nameof(InteractionType), "Interaction type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Timestamp = group.Add(new VocabularyKey(nameof(Timestamp), "Timestamp", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey InteractionId { get; private set; }

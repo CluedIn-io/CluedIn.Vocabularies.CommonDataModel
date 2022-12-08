@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.FinancialCommon
+namespace CluedIn.Vocabularies.CommonDataModel.FinancialCommon
 {
     public class FinancialActivityVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.FinancialCommon
             VocabularyName = "Financial Activity";
             KeyPrefix = "commonDataModel.financialactivity.financialcommon";
             KeySeparator = ".";
-            Grouping = "/FinancialActivity";
+            Grouping = CommonDataModelEntityTypes.FinancialActivity;
 
             AddGroup("FinancialActivity Details for FinancialCommon", group =>
             {
@@ -20,6 +20,19 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.FinancialCommon
 			    AccountingCurrencyAmount = group.Add(new VocabularyKey(nameof(AccountingCurrencyAmount), "AccountingCurrencyAmount", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
 			    AccountingDate = group.Add(new VocabularyKey(nameof(AccountingDate), "AccountingDate", VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="MainAccountCategoryKey"/> to Vocab 'MainAccountCategory.cdm.json/MainAccountCategory' with Property 'MainAccountCategoryId'
+            ///Property <see cref="MainAccountKey"/> to Vocab 'MainAccount.cdm.json/MainAccount' with Property 'MainAccountId'
+            ///Property <see cref="CompanyKey"/> to Vocab '/core/applicationCommon/foundationCommon/Company.cdm.json/Company' with Property 'CompanyId'
+            ///Property <see cref="TransactionCurrencyKey"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="FiscalCalendarPeriodKey"/> to Vocab 'FiscalCalendarPeriod.cdm.json/FiscalCalendarPeriod' with Property 'FiscalCalendarPeriodId'
+            ///Property <see cref="LedgerId"/> to Vocab 'Ledger.cdm.json/Ledger' with Property 'LedgerId'
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey FinancialActivityId { get; private set; }

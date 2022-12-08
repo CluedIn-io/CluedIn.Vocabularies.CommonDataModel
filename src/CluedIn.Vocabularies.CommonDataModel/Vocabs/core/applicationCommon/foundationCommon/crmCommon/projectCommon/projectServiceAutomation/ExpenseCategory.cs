@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 {
     public class ExpenseCategoryVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ProjectServiceAutomation
             VocabularyName = "Expense Category";
             KeyPrefix = "commonDataModel.expensecategory.projectserviceautomation";
             KeySeparator = ".";
-            Grouping = "/ExpenseCategory";
+            Grouping = CommonDataModelEntityTypes.ExpenseCategory;
 
             AddGroup("ExpenseCategory Details for ProjectServiceAutomation", group =>
             {
@@ -28,6 +28,20 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ProjectServiceAutomation
 			    ExpenseType = group.Add(new VocabularyKey(nameof(ExpenseType), "Expense Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ReceiptRequired = group.Add(new VocabularyKey(nameof(ReceiptRequired), "Receipt Required", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/scheduling/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="ExpenseCategoryuId"/> to Vocab 'TransactionCategory.cdm.json/TransactionCategory' with Property 'TransactionCategoryId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="ExpenseCategoryId"/> from Vocab 'Expense.cdm.json/Expense' with Property 'ExpenseCategory'
+            ///Property <see cref="ExpenseCategoryId"/> from Vocab 'ProjectApproval.cdm.json/ProjectApproval' with Property 'ExpenseCategory'
+            #endregion
         }
 
         public VocabularyKey ExpenseCategoryId { get; private set; }

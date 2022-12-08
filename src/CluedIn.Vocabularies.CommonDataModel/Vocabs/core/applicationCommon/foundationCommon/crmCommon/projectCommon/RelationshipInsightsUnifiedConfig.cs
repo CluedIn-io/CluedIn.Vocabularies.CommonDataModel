@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ProjectCommon
+namespace CluedIn.Vocabularies.CommonDataModel.ProjectCommon
 {
     public class RelationshipInsightsUnifiedConfigVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ProjectCommon
             VocabularyName = "Relationship Insights Unified Config";
             KeyPrefix = "commonDataModel.relationshipinsightsunifiedconfig.projectcommon";
             KeySeparator = ".";
-            Grouping = "/RelationshipInsightsUnifiedConfig";
+            Grouping = CommonDataModelEntityTypes.RelationshipInsightsUnifiedConfig;
 
             AddGroup("RelationshipInsightsUnifiedConfig Details for ProjectCommon", group =>
             {
@@ -20,6 +20,22 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ProjectCommon
 			    NewName = group.Add(new VocabularyKey(nameof(NewName), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    UseNewConfigExperience = group.Add(new VocabularyKey(nameof(UseNewConfigExperience), "msdyn_usenewconfigexperience", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="CreatedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey RelationshipInsightsUnifiedConfigId { get; private set; }

@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.EventManagement
+namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
 {
     public class SponsorshipVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.EventManagement
             VocabularyName = "Sponsorship";
             KeyPrefix = "commonDataModel.sponsorship.eventmanagement";
             KeySeparator = ".";
-            Grouping = "/Sponsorship";
+            Grouping = CommonDataModelEntityTypes.Sponsorship;
 
             AddGroup("Sponsorship Details for EventManagement", group =>
             {
@@ -27,6 +27,24 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.EventManagement
 			    SponsorshipType = group.Add(new VocabularyKey(nameof(SponsorshipType), "Sponsorship Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TransactionCurrencyId = group.Add(new VocabularyKey(nameof(TransactionCurrencyId), "Currency", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="Sponsor"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="Event"/> to Vocab 'Event.cdm.json/Event' with Property 'EventId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="SponsorshipId"/> from Vocab 'SponsorableArticle.cdm.json/SponsorableArticle' with Property 'EventSponsorship'
+            #endregion
         }
 
         public VocabularyKey SponsorshipId { get; private set; }

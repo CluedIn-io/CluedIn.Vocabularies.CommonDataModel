@@ -1,0 +1,7 @@
+﻿namespace CluedIn.Vocabularies.CommonDataModel
+{
+    public class CommonDataModelEntityTypes
+    {
+        {{EntityTypes}}
+    }
+}

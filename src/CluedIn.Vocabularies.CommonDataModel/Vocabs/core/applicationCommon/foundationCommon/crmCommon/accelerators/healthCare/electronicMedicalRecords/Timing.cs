@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 {
     public class TimingVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ElectronicMedicalRecords
             VocabularyName = "Timing";
             KeyPrefix = "commonDataModel.timing.electronicmedicalrecords";
             KeySeparator = ".";
-            Grouping = "/Timing";
+            Grouping = CommonDataModelEntityTypes.Timing;
 
             AddGroup("Timing Details for ElectronicMedicalRecords", group =>
             {
@@ -45,6 +45,46 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ElectronicMedicalRecords
 			    TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), "Time Zone Rule Version Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="TimingId"/> to Vocab 'Timing.cdm.json/Timing' with Property 'TimingId'
+            ///Property <see cref="TimingId"/> to Vocab 'Timing.cdm.json/Timing' with Property 'TimingId'
+            ///Property <see cref="TimingId"/> to Vocab 'Timing.cdm.json/Timing' with Property 'TimingId'
+            ///Property <see cref="TimingId"/> to Vocab 'Timing.cdm.json/Timing' with Property 'TimingId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="TimingId"/> from Vocab 'DeviceMetric.cdm.json/DeviceMetric' with Property 'MeasurementPeriodId'
+            ///Property <see cref="TimingId"/> from Vocab 'DeviceRequest.cdm.json/DeviceRequest' with Property 'OccurrenceTimingId'
+            ///Property <see cref="TimingId"/> from Vocab 'Dosage.cdm.json/Dosage' with Property 'TimingId'
+            ///Property <see cref="TimingId"/> from Vocab 'ActivityDefinition.cdm.json/ActivityDefinition' with Property 'ActivityTimingId'
+            ///Property <see cref="TimingId"/> from Vocab 'NutritionOrderEnteralFormulaAdministration.cdm.json/NutritionOrderEnteralFormulaAdministration' with Property 'AdministrationScheduleId'
+            ///Property <see cref="TimingId"/> from Vocab 'NutritionOrderOralDietSchedule.cdm.json/NutritionOrderOralDietSchedule' with Property 'OralDietScheduleId'
+            ///Property <see cref="TimingId"/> from Vocab 'NutritionOrderSupplementSchedule.cdm.json/NutritionOrderSupplementSchedule' with Property 'ScheduleId'
+            ///Property <see cref="TimingId"/> from Vocab 'PlanDefinitionAction.cdm.json/PlanDefinitionAction' with Property 'TimingtimingId'
+            ///Property <see cref="TimingId"/> from Vocab 'PlanDefinitionActionTriggerDefinition.cdm.json/PlanDefinitionActionTriggerDefinition' with Property 'EventtimingId'
+            ///Property <see cref="TimingId"/> from Vocab 'ProcedureRequest.cdm.json/ProcedureRequest' with Property 'OccurenceTimingId'
+            ///Property <see cref="TimingId"/> from Vocab 'RequestGroupAction.cdm.json/RequestGroupAction' with Property 'ActionTimingId'
+            ///Property <see cref="TimingId"/> from Vocab 'TimingDayOfWeek.cdm.json/TimingDayOfWeek' with Property 'TimingId'
+            ///Property <see cref="TimingId"/> from Vocab 'TimingEvent.cdm.json/TimingEvent' with Property 'TimingId'
+            ///Property <see cref="TimingId"/> from Vocab 'TimingTimeOfDay.cdm.json/TimingTimeOfDay' with Property 'TimingId'
+            ///Property <see cref="TimingId"/> from Vocab 'TimingWhen.cdm.json/TimingWhen' with Property 'TimingId'
+            #endregion
         }
 
         public VocabularyKey CreatedOn { get; private set; }

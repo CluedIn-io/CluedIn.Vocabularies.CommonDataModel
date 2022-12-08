@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Service
+namespace CluedIn.Vocabularies.CommonDataModel.Service
 {
     public class FacilityEquipmentVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Service
             VocabularyName = "Facility Equipment";
             KeyPrefix = "commonDataModel.facilityequipment.service";
             KeySeparator = ".";
-            Grouping = "/FacilityEquipment";
+            Grouping = CommonDataModelEntityTypes.FacilityEquipment;
 
             AddGroup("FacilityEquipment Details for Service", group =>
             {
@@ -32,6 +32,33 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Service
 			    TimeZoneCode = group.Add(new VocabularyKey(nameof(TimeZoneCode), "Time Zone", VocabularyKeyDataType.TimeZone, VocabularyKeyVisibility.Visible)); 
 			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="CreatedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="BusinessUnitId"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="BusinessUnitId"/> to Vocab 'User.cdm.json/User' with Property 'BusinessUnitId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/foundationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="SiteId"/> to Vocab 'Site.cdm.json/Site' with Property 'SiteId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="EquipmentId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/Account.cdm.json/Account' with Property 'PreferredEquipmentId'
+            ///Property <see cref="EquipmentId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/Contact.cdm.json/Contact' with Property 'PreferredEquipmentId'
+            ///Property <see cref="EquipmentId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/Email.cdm.json/Email' with Property 'EmailSender'
+            ///Property <see cref="EquipmentId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/accelerators/financialServices/banking/Account.cdm.json/Account' with Property 'PreferredEquipmentId'
+            ///Property <see cref="EquipmentId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/accelerators/financialServices/banking/Contact.cdm.json/Contact' with Property 'PreferredEquipmentId'
+            ///Property <see cref="EquipmentId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/Contact.cdm.json/Contact' with Property 'PreferredEquipmentId'
+            ///Property <see cref="EquipmentId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/projectServiceAutomation/Account.cdm.json/Account' with Property 'PreferredEquipmentId'
+            ///Property <see cref="EquipmentId"/> from Vocab 'Resource.cdm.json/Resource' with Property 'ResourceId'
+            ///Property <see cref="EquipmentId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/marketing/Contact.cdm.json/Contact' with Property 'PreferredEquipmentId'
+            ///Property <see cref="EquipmentId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/marketing/eventManagement/Account.cdm.json/Account' with Property 'PreferredEquipmentId'
+            ///Property <see cref="EquipmentId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/portals/Account.cdm.json/Account' with Property 'PreferredEquipmentId'
+            ///Property <see cref="EquipmentId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/portals/Contact.cdm.json/Contact' with Property 'PreferredEquipmentId'
+            #endregion
         }
 
         public VocabularyKey EquipmentId { get; private set; }

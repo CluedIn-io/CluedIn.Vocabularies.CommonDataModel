@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 {
     public class GoalMetricVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
             VocabularyName = "Goal Metric";
             KeyPrefix = "commonDataModel.goalmetric.applicationcommon";
             KeySeparator = ".";
-            Grouping = "/GoalMetric";
+            Grouping = CommonDataModelEntityTypes.GoalMetric;
 
             AddGroup("GoalMetric Details for ApplicationCommon", group =>
             {
@@ -30,6 +30,19 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
 			    IsStretchTracked = group.Add(new VocabularyKey(nameof(IsStretchTracked), "Track Stretch Target", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="CreatedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab 'Organization.cdm.json/Organization' with Property 'OrganizationId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="MetricId"/> from Vocab 'Goal.cdm.json/Goal' with Property 'MetricId'
+            ///Property <see cref="MetricId"/> from Vocab 'foundationCommon/crmCommon/accelerators/healthCare/electronicMedicalRecords/Goal.cdm.json/Goal' with Property 'MetricId'
+            #endregion
         }
 
         public VocabularyKey MetricId { get; private set; }

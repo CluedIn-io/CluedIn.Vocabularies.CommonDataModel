@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.HigherEducation
+namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
 {
     public class GrantApplicationBusinessProcessFlowVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.HigherEducation
             VocabularyName = "Grant Application Business Process Flow";
             KeyPrefix = "commonDataModel.grantapplicationbusinessprocessflow.highereducation";
             KeySeparator = ".";
-            Grouping = "/GrantApplicationBusinessProcessFlow";
+            Grouping = CommonDataModelEntityTypes.GrantApplicationBusinessProcessFlow;
 
             AddGroup("GrantApplicationBusinessProcessFlow Details for HigherEducation", group =>
             {
@@ -31,6 +31,17 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.HigherEducation
 			    TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="Mshied_GrantapplicantId"/> to Vocab 'GrantApplicant.cdm.json/GrantApplicant' with Property 'GrantApplicantId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey BusinessProcessFlowInstanceId { get; private set; }

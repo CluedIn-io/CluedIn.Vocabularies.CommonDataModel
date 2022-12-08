@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.EventManagement
+namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
 {
     public class EventVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.EventManagement
             VocabularyName = "Event";
             KeyPrefix = "commonDataModel.event.eventmanagement";
             KeySeparator = ".";
-            Grouping = "/Event";
+            Grouping = CommonDataModelEntityTypes.Event;
 
             AddGroup("Event Details for EventManagement", group =>
             {
@@ -116,6 +116,89 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.EventManagement
 			    PortalBannerImage = group.Add(new VocabularyKey(nameof(PortalBannerImage), "Portal Banner Image", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    EventURL = group.Add(new VocabularyKey(nameof(EventURL), "Portal Event URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="Account"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="CustomRegistrationField"/> to Vocab 'CustomRegistrationField.cdm.json/CustomRegistrationField' with Property 'CustomRegistrationFieldId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="PrimaryVenue"/> to Vocab 'Venue.cdm.json/Venue' with Property 'VenueId'
+            ///Property <see cref="Producer"/> to Vocab 'EventTeamMember.cdm.json/EventTeamMember' with Property 'EventTeamMemberId'
+            ///Property <see cref="Event"/> to Vocab 'Event.cdm.json/Event' with Property 'EventId'
+            ///Property <see cref="EventId"/> to Vocab 'Event.cdm.json/Event' with Property 'EventId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="ContactId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/marketing/Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="Contact"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/marketing/Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="User"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="EventId"/> from Vocab 'AttendeePass.cdm.json/AttendeePass' with Property 'EventId'
+            ///Property <see cref="EventRegistrationId"/> from Vocab 'AttendeePass.cdm.json/AttendeePass' with Property 'EventRegistrationId'
+            ///Property <see cref="EventId"/> from Vocab 'CheckIn.cdm.json/CheckIn' with Property 'Event'
+            ///Property <see cref="EventRegistrationId"/> from Vocab 'CheckIn.cdm.json/CheckIn' with Property 'RegistrationId'
+            ///Property <see cref="EventTeamMemberId"/> from Vocab 'Event.cdm.json/Event' with Property 'Producer'
+            ///Property <see cref="EventId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/marketing/Contact.cdm.json/Contact' with Property 'OriginatingEvent'
+            ///Property <see cref="EventId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/marketing/Lead.cdm.json/Lead' with Property 'OriginatingEvent'
+            ///Property <see cref="EventId"/> from Vocab 'EventCustomRegistrationField.cdm.json/EventCustomRegistrationField' with Property 'Event'
+            ///Property <see cref="EventId"/> from Vocab 'EventRegistration.cdm.json/EventRegistration' with Property 'EventId'
+            ///Property <see cref="EventId"/> from Vocab 'HotelRoomAllocation.cdm.json/HotelRoomAllocation' with Property 'Event'
+            ///Property <see cref="EventId"/> from Vocab 'Pass.cdm.json/Pass' with Property 'EventId'
+            ///Property <see cref="EventId"/> from Vocab 'Session.cdm.json/Session' with Property 'Event'
+            ///Property <see cref="EventId"/> from Vocab 'SessionRegistration.cdm.json/SessionRegistration' with Property 'Event'
+            ///Property <see cref="EventId"/> from Vocab 'SessionTrack.cdm.json/SessionTrack' with Property 'EventId'
+            ///Property <see cref="EventId"/> from Vocab 'Speaker.cdm.json/Speaker' with Property 'EventId'
+            ///Property <see cref="EventId"/> from Vocab 'SpeakerEngagement.cdm.json/SpeakerEngagement' with Property 'Event'
+            ///Property <see cref="EventId"/> from Vocab 'Sponsorship.cdm.json/Sponsorship' with Property 'Event'
+            ///Property <see cref="EventId"/> from Vocab 'WaitlistItem.cdm.json/WaitlistItem' with Property 'Event'
+            ///Property <see cref="EventRegistrationId"/> from Vocab 'HotelRoomReservation.cdm.json/HotelRoomReservation' with Property 'Attendee'
+            ///Property <see cref="EventRegistrationId"/> from Vocab 'RegistrationResponse.cdm.json/RegistrationResponse' with Property 'EventRegistration'
+            ///Property <see cref="EventRegistrationId"/> from Vocab 'SessionRegistration.cdm.json/SessionRegistration' with Property 'RegistrationId'
+            ///Property <see cref="EventTeamMemberId"/> from Vocab 'Session.cdm.json/Session' with Property 'Producer'
+            ///Property <see cref="EventVendorId"/> from Vocab 'Hotel.cdm.json/Hotel' with Property 'HotelGroup'
+            #endregion
         }
 
         public VocabularyKey EventId { get; private set; }

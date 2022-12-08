@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.FoundationCommon
+namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
 {
     public class PropertyOptionSetItemVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.FoundationCommon
             VocabularyName = "Property Option Set Item";
             KeyPrefix = "commonDataModel.propertyoptionsetitem.foundationcommon";
             KeySeparator = ".";
-            Grouping = "/PropertyOptionSetItem";
+            Grouping = CommonDataModelEntityTypes.PropertyOptionSetItem;
 
             AddGroup("PropertyOptionSetItem Details for FoundationCommon", group =>
             {
@@ -28,6 +28,20 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.FoundationCommon
 			    DynamicPropertyOptionSetValueSequenceNumber = group.Add(new VocabularyKey(nameof(DynamicPropertyOptionSetValueSequenceNumber), "Internal Use Only", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="OrganizationId"/> to Vocab 'Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="DynamicPropertyId"/> to Vocab 'Property.cdm.json/Property' with Property 'DynamicPropertyId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="DynamicPropertyOptionSetValueId"/> from Vocab 'Property.cdm.json/Property' with Property 'DefaultValueOptionSet'
+            #endregion
         }
 
         public VocabularyKey DynamicPropertyOptionSetValueId { get; private set; }

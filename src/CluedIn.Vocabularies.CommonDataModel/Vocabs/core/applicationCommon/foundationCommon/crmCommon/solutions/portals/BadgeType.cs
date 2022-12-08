@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Portals
+namespace CluedIn.Vocabularies.CommonDataModel.Portals
 {
     public class BadgeTypeVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Portals
             VocabularyName = "Badge Type";
             KeyPrefix = "commonDataModel.badgetype.portals";
             KeySeparator = ".";
-            Grouping = "/BadgeType";
+            Grouping = CommonDataModelEntityTypes.BadgeType;
 
             AddGroup("BadgeType Details for Portals", group =>
             {
@@ -30,6 +30,18 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Portals
 			    DisplayText = group.Add(new VocabularyKey(nameof(DisplayText), "Display Text", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    IconName = group.Add(new VocabularyKey(nameof(IconName), "Icon Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/foundationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="BadgeTypeId"/> from Vocab 'Badge.cdm.json/Badge' with Property 'BadgeTypeId'
+            #endregion
         }
 
         public VocabularyKey BadgeTypeId { get; private set; }

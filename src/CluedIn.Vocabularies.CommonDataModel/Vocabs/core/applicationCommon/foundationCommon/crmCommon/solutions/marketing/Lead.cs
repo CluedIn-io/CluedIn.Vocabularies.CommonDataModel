@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Marketing
+namespace CluedIn.Vocabularies.CommonDataModel.Marketing
 {
     public class LeadVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Marketing
             VocabularyName = "Lead";
             KeyPrefix = "commonDataModel.lead.marketing";
             KeySeparator = ".";
-            Grouping = "/Lead";
+            Grouping = CommonDataModelEntityTypes.Lead;
 
             AddGroup("Lead Details for Marketing", group =>
             {
@@ -43,6 +43,84 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Marketing
 			    StartDate = group.Add(new VocabularyKey(nameof(StartDate), "Start date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    LinkedInFormSubmissions = group.Add(new VocabularyKey(nameof(LinkedInFormSubmissions), "LinkedIn Form Submissions", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="ContactId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="ParentContactId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="CustomerId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="ParentContactId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="CustomerId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="ContactId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="ParentContactId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="CustomerId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="SourceCustomerJourney"/> to Vocab 'CustomerJourney.cdm.json/CustomerJourney' with Property 'CustomerJourneyId'
+            ///Property <see cref="CustomerJourney"/> to Vocab 'CustomerJourney.cdm.json/CustomerJourney' with Property 'CustomerJourneyId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="ParentAccountId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/portals/Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="CustomerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/portals/Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="MasterId"/> to Vocab 'Lead.cdm.json/Lead' with Property 'LeadId'
+            ///Property <see cref="SLAId"/> to Vocab '/core/applicationCommon/SLA.cdm.json/SLA' with Property 'SLAId'
+            ///Property <see cref="SLAInvokedId"/> to Vocab '/core/applicationCommon/SLA.cdm.json/SLA' with Property 'SLAId'
+            ///Property <see cref="CampaignId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/Campaign.cdm.json/Campaign' with Property 'CampaignId'
+            ///Property <see cref="RelatedObjectId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/CampaignResponse.cdm.json/CampaignResponse' with Property 'ActivityId'
+            ///Property <see cref="OriginatingCaseId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/portals/Case.cdm.json/Case' with Property 'IncidentId'
+            ///Property <see cref="QualifyingOpportunityId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/portals/Opportunity.cdm.json/Opportunity' with Property 'OpportunityId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OriginatingEvent"/> to Vocab 'eventManagement/Event.cdm.json/Event' with Property 'EventId'
+            ///Property <see cref="SourceEmail"/> to Vocab 'MarketingEmail.cdm.json/MarketingEmail' with Property 'MarketingEmailId'
+            ///Property <see cref="SourceForm"/> to Vocab 'MarketingForm.cdm.json/MarketingForm' with Property 'MarketingFormId'
+            ///Property <see cref="SourceLandingPage"/> to Vocab 'MarketingPage.cdm.json/MarketingPage' with Property 'MarketingPageId'
+            ///Property <see cref="LinkedInCampaign"/> to Vocab 'LinkedInLeads/LinkedInCampaign.cdm.json/LinkedInCampaign' with Property 'LinkedInCampaignID'
+            ///Property <see cref="SourceLinkedInForm"/> to Vocab 'LinkedInLeads/LinkedInLeadGenForm.cdm.json/LinkedInLeadGenForm' with Property 'LinkedinformId'
+            ///Property <see cref="LeadId"/> to Vocab 'Lead.cdm.json/Lead' with Property 'LeadId'
+            ///Property <see cref="LeadId"/> to Vocab 'Lead.cdm.json/Lead' with Property 'LeadId'
+            ///Property <see cref="MasterId"/> to Vocab 'Lead.cdm.json/Lead' with Property 'LeadId'
+            ///Property <see cref="ParentId"/> to Vocab 'Lead.cdm.json/Lead' with Property 'LeadId'
+            ///Property <see cref="LeadId"/> to Vocab 'Lead.cdm.json/Lead' with Property 'LeadId'
+            ///Property <see cref="LeadId"/> to Vocab 'Lead.cdm.json/Lead' with Property 'LeadId'
+            ///Property <see cref="Lead"/> to Vocab 'Lead.cdm.json/Lead' with Property 'LeadId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="LeadId"/> from Vocab 'Contact.cdm.json/Contact' with Property 'OriginatingLeadId'
+            ///Property <see cref="LinkedInCampaignID"/> from Vocab 'CustomerJourney.cdm.json/CustomerJourney' with Property 'LinkedInCampaign'
+            ///Property <see cref="LeadId"/> from Vocab 'GeoPin.cdm.json/GeoPin' with Property 'LeadGeoPinsId'
+            ///Property <see cref="LeadId"/> from Vocab 'Lead.cdm.json/Lead' with Property 'MasterId'
+            ///Property <see cref="LinkedInCampaignID"/> from Vocab 'Lead.cdm.json/Lead' with Property 'LinkedInCampaign'
+            ///Property <see cref="LinkedinformId"/> from Vocab 'Lead.cdm.json/Lead' with Property 'SourceLinkedInForm'
+            ///Property <see cref="LeadId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/Account.cdm.json/Account' with Property 'OriginatingLeadId'
+            ///Property <see cref="LeadId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/AccountLeads.cdm.json/AccountLeads' with Property 'LeadId'
+            ///Property <see cref="LeadId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/CampaignResponse.cdm.json/CampaignResponse' with Property 'RegardingObjectId'
+            ///Property <see cref="LeadId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/Contact.cdm.json/Contact' with Property 'OriginatingLeadId'
+            ///Property <see cref="LeadId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/ContactLeads.cdm.json/ContactLeads' with Property 'LeadId'
+            ///Property <see cref="LeadId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/Email.cdm.json/Email' with Property 'EmailSender'
+            ///Property <see cref="LeadId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/Lead.cdm.json/Lead' with Property 'MasterId'
+            ///Property <see cref="LeadId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/LeadAddress.cdm.json/LeadAddress' with Property 'ParentId'
+            ///Property <see cref="LeadId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/MarketingListMember.cdm.json/MarketingListMember' with Property 'EntityId'
+            ///Property <see cref="LeadId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/QuickCampaign.cdm.json/QuickCampaign' with Property 'RegardingObjectId'
+            ///Property <see cref="LeadId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/sales/LeadCompetitors.cdm.json/LeadCompetitors' with Property 'LeadId'
+            ///Property <see cref="LeadId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/sales/LeadProduct.cdm.json/LeadProduct' with Property 'LeadId'
+            ///Property <see cref="LeadId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/sales/Opportunity.cdm.json/Opportunity' with Property 'OriginatingLeadId'
+            ///Property <see cref="LeadId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/sales/OpportunityClose.cdm.json/OpportunityClose' with Property 'RegardingObjectId'
+            ///Property <see cref="LeadId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/sales/OrderClose.cdm.json/OrderClose' with Property 'RegardingObjectId'
+            ///Property <see cref="LeadId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/sales/QuoteClose.cdm.json/QuoteClose' with Property 'RegardingObjectId'
+            ///Property <see cref="LeadId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/CaseResolution.cdm.json/CaseResolution' with Property 'RegardingObjectId'
+            ///Property <see cref="LeadId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/ServiceActivity.cdm.json/ServiceActivity' with Property 'RegardingObjectId'
+            ///Property <see cref="LeadId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/portals/Account.cdm.json/Account' with Property 'OriginatingLeadId'
+            ///Property <see cref="LeadId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/portals/Contact.cdm.json/Contact' with Property 'OriginatingLeadId'
+            ///Property <see cref="LeadId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/portals/InviteRedemption.cdm.json/InviteRedemption' with Property 'RegardingObjectId'
+            ///Property <see cref="LeadId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/portals/Opportunity.cdm.json/Opportunity' with Property 'OriginatingLeadId'
+            ///Property <see cref="LeadId"/> from Vocab 'eventManagement/Account.cdm.json/Account' with Property 'OriginatingLeadId'
+            ///Property <see cref="LeadId"/> from Vocab 'LinkedInLeads/LinkedInLeadGenFormSubmission.cdm.json/LinkedInLeadGenFormSubmission' with Property 'Lead'
+            #endregion
         }
 
         public VocabularyKey LeadSourceCode { get; private set; }

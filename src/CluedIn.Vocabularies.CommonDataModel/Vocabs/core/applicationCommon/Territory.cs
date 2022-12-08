@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 {
     public class TerritoryVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
             VocabularyName = "Territory";
             KeyPrefix = "commonDataModel.territory.applicationcommon";
             KeySeparator = ".";
-            Grouping = "/Territory";
+            Grouping = CommonDataModelEntityTypes.Territory;
 
             AddGroup("Territory Details for ApplicationCommon", group =>
             {
@@ -27,6 +27,33 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
 			    EntityImageId = group.Add(new VocabularyKey(nameof(EntityImageId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
 			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab 'BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab 'Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="OrganizationId"/> to Vocab 'Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="OwnerId"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningTeam"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="CreatedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ManagerId"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="Territory"/> to Vocab 'Territory.cdm.json/Territory' with Property 'TerritoryId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="TerritoryId"/> from Vocab 'User.cdm.json/User' with Property 'TerritoryId'
+            ///Property <see cref="TerritoryId"/> from Vocab 'foundationCommon/crmCommon/Account.cdm.json/Account' with Property 'TerritoryId'
+            ///Property <see cref="TerritoryId"/> from Vocab 'foundationCommon/crmCommon/accelerators/financialServices/banking/Account.cdm.json/Account' with Property 'TerritoryId'
+            ///Property <see cref="TerritoryId"/> from Vocab 'foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'TerritoryId'
+            ///Property <see cref="TerritoryId"/> from Vocab 'foundationCommon/crmCommon/projectCommon/projectServiceAutomation/Account.cdm.json/Account' with Property 'TerritoryId'
+            ///Property <see cref="TerritoryId"/> from Vocab 'foundationCommon/crmCommon/projectCommon/scheduling/ResourceRequirement.cdm.json/ResourceRequirement' with Property 'Territory'
+            ///Property <see cref="TerritoryId"/> from Vocab 'foundationCommon/crmCommon/projectCommon/scheduling/ResourceTerritory.cdm.json/ResourceTerritory' with Property 'Territory'
+            ///Property <see cref="TerritoryId"/> from Vocab 'foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'TerritoryId'
+            ///Property <see cref="TerritoryId"/> from Vocab 'foundationCommon/crmCommon/solutions/marketing/eventManagement/Account.cdm.json/Account' with Property 'TerritoryId'
+            ///Property <see cref="TerritoryId"/> from Vocab 'foundationCommon/crmCommon/solutions/portals/Account.cdm.json/Account' with Property 'TerritoryId'
+            #endregion
         }
 
         public VocabularyKey TerritoryId { get; private set; }

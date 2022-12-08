@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Scheduling
+namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
 {
     public class OrganizationalUnitVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Scheduling
             VocabularyName = "Organizational Unit";
             KeyPrefix = "commonDataModel.organizationalunit.scheduling";
             KeySeparator = ".";
-            Grouping = "/OrganizationalUnit";
+            Grouping = CommonDataModelEntityTypes.OrganizationalUnit;
 
             AddGroup("OrganizationalUnit Details for Scheduling", group =>
             {
@@ -29,6 +29,42 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Scheduling
 			    Longitude = group.Add(new VocabularyKey(nameof(Longitude), "Longitude", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="OrganizationId"/> to Vocab 'Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="Currency"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="OrganizationalUnitId"/> from Vocab 'Actual.cdm.json/Actual' with Property 'ContractingUnit'
+            ///Property <see cref="OrganizationalUnitId"/> from Vocab 'Actual.cdm.json/Actual' with Property 'ResourceOrganizationalUnitId'
+            ///Property <see cref="OrganizationalUnitId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/accelerators/nonProfit/nonProfitVolunteers/Project.cdm.json/Project' with Property 'ContractOrganizationalUnitId'
+            ///Property <see cref="OrganizationalUnitId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/BookableResource.cdm.json/BookableResource' with Property 'OrganizationalUnit'
+            ///Property <see cref="OrganizationalUnitId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/projectServiceAutomation/EstimateLine.cdm.json/EstimateLine' with Property 'ResourceOrganizationalUnitId'
+            ///Property <see cref="OrganizationalUnitId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/projectServiceAutomation/Expense.cdm.json/Expense' with Property 'ResourceOrganizationalUnitId'
+            ///Property <see cref="OrganizationalUnitId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/projectServiceAutomation/InvoiceLineTransaction.cdm.json/InvoiceLineTransaction' with Property 'ContractingUnit'
+            ///Property <see cref="OrganizationalUnitId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/projectServiceAutomation/InvoiceLineTransaction.cdm.json/InvoiceLineTransaction' with Property 'ResourceOrganizationalUnitId'
+            ///Property <see cref="OrganizationalUnitId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/projectServiceAutomation/JournalLine.cdm.json/JournalLine' with Property 'ContractingUnit'
+            ///Property <see cref="OrganizationalUnitId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/projectServiceAutomation/JournalLine.cdm.json/JournalLine' with Property 'ResourceOrganizationalUnitId'
+            ///Property <see cref="OrganizationalUnitId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/projectServiceAutomation/Opportunity.cdm.json/Opportunity' with Property 'ContractOrganizationalUnitId'
+            ///Property <see cref="OrganizationalUnitId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/projectServiceAutomation/OpportunityLineTransaction.cdm.json/OpportunityLineTransaction' with Property 'ResourceOrganizationalUnitId'
+            ///Property <see cref="OrganizationalUnitId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/projectServiceAutomation/Order.cdm.json/Order' with Property 'ContractOrganizationalUnitId'
+            ///Property <see cref="OrganizationalUnitId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/projectServiceAutomation/OrderLineTransaction.cdm.json/OrderLineTransaction' with Property 'ResourceOrganizationalUnitId'
+            ///Property <see cref="OrganizationalUnitId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/projectServiceAutomation/Project.cdm.json/Project' with Property 'ContractOrganizationalUnitId'
+            ///Property <see cref="OrganizationalUnitId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/projectServiceAutomation/ProjectParameter.cdm.json/ProjectParameter' with Property 'DefaultOrganizationalUnit'
+            ///Property <see cref="OrganizationalUnitId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/projectServiceAutomation/ProjectTask.cdm.json/ProjectTask' with Property 'ResourceOrganizationalUnitId'
+            ///Property <see cref="OrganizationalUnitId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/projectServiceAutomation/ProjectTeam.cdm.json/ProjectTeam' with Property 'ResourcingUnit'
+            ///Property <see cref="OrganizationalUnitId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/projectServiceAutomation/Quote.cdm.json/Quote' with Property 'ContractOrganizationalUnitId'
+            ///Property <see cref="OrganizationalUnitId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/projectServiceAutomation/QuoteLineTransaction.cdm.json/QuoteLineTransaction' with Property 'ResourceOrganizationalUnitId'
+            ///Property <see cref="OrganizationalUnitId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/projectServiceAutomation/ResourceCategoryPriceLevel.cdm.json/ResourceCategoryPriceLevel' with Property 'ResourcingUnit'
+            ///Property <see cref="OrganizationalUnitId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/projectServiceAutomation/RolePriceMarkup.cdm.json/RolePriceMarkup' with Property 'ResourcingUnit'
+            ///Property <see cref="OrganizationalUnitId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/projectServiceAutomation/TimeEntry.cdm.json/TimeEntry' with Property 'ResourceOrganizationalUnitId'
+            ///Property <see cref="OrganizationalUnitId"/> from Vocab 'RequirementOrganizationUnit.cdm.json/RequirementOrganizationUnit' with Property 'OrganizationalUnit'
+            #endregion
         }
 
         public VocabularyKey OrganizationalUnitId { get; private set; }

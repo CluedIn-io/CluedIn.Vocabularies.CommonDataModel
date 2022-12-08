@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Service
+namespace CluedIn.Vocabularies.CommonDataModel.Service
 {
     public class ChildIncidentCountVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Service
             VocabularyName = "Child Incident Count";
             KeyPrefix = "commonDataModel.childincidentcount.service";
             KeySeparator = ".";
-            Grouping = "/ChildIncidentCount";
+            Grouping = CommonDataModelEntityTypes.ChildIncidentCount;
 
             AddGroup("ChildIncidentCount Details for Service", group =>
             {
@@ -24,6 +24,15 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Service
 			    ParentCaseId = group.Add(new VocabularyKey(nameof(ParentCaseId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
 			    NumberOfChildIncidents = group.Add(new VocabularyKey(nameof(NumberOfChildIncidents), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="ParentCaseId"/> from Vocab 'Case.cdm.json/Case' with Property 'IncidentId'
+            ///Property <see cref="ParentCaseId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/portals/Case.cdm.json/Case' with Property 'IncidentId'
+            #endregion
         }
 
         public VocabularyKey ChildIncidentCountId { get; private set; }

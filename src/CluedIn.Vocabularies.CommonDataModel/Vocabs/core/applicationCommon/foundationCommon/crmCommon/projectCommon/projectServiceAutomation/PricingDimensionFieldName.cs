@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 {
     public class PricingDimensionFieldNameVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ProjectServiceAutomation
             VocabularyName = "Pricing Dimension Field Name";
             KeyPrefix = "commonDataModel.pricingdimensionfieldname.projectserviceautomation";
             KeySeparator = ".";
-            Grouping = "/PricingDimensionFieldName";
+            Grouping = CommonDataModelEntityTypes.PricingDimensionFieldName;
 
             AddGroup("PricingDimensionFieldName Details for ProjectServiceAutomation", group =>
             {
@@ -28,6 +28,19 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ProjectServiceAutomation
 			    EntityLogicalName = group.Add(new VocabularyKey(nameof(EntityLogicalName), "Entity Logical Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    FieldName = group.Add(new VocabularyKey(nameof(FieldName), "Field Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="DimensionId"/> to Vocab 'PricingDimension.cdm.json/PricingDimension' with Property 'DimensionId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/scheduling/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey DimensionfieldnameId { get; private set; }

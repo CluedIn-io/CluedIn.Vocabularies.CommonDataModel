@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Interactions
+namespace CluedIn.Vocabularies.CommonDataModel.Interactions
 {
     public class SegmentRelationshipEditedVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Interactions
             VocabularyName = "Segment Relationship Edited";
             KeyPrefix = "commonDataModel.segmentrelationshipedited.interactions";
             KeySeparator = ".";
-            Grouping = "/SegmentRelationshipEdited";
+            Grouping = CommonDataModelEntityTypes.SegmentRelationshipEdited;
 
             AddGroup("SegmentRelationshipEdited Details for Interactions", group =>
             {
@@ -39,6 +39,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Interactions
 			    VisitorAnonymousStatus = group.Add(new VocabularyKey(nameof(VisitorAnonymousStatus), "Visitor anonymous status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    LeadId = group.Add(new VocabularyKey(nameof(LeadId), "Lead ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey InteractionId { get; private set; }

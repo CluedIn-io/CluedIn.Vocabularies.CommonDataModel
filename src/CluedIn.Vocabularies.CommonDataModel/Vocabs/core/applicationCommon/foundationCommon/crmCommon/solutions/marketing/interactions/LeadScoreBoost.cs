@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Interactions
+namespace CluedIn.Vocabularies.CommonDataModel.Interactions
 {
     public class LeadScoreBoostVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Interactions
             VocabularyName = "Lead Score Boost";
             KeyPrefix = "commonDataModel.leadscoreboost.interactions";
             KeySeparator = ".";
-            Grouping = "/LeadScoreBoost";
+            Grouping = CommonDataModelEntityTypes.LeadScoreBoost;
 
             AddGroup("LeadScoreBoost Details for Interactions", group =>
             {
@@ -25,6 +25,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Interactions
 			    InteractionType = group.Add(new VocabularyKey(nameof(InteractionType), "Interaction type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Timestamp = group.Add(new VocabularyKey(nameof(Timestamp), "Timestamp", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey InteractionId { get; private set; }

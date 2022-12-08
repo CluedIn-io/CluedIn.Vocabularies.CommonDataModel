@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Interactions
+namespace CluedIn.Vocabularies.CommonDataModel.Interactions
 {
     public class SplitterActivityContactProcessedVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Interactions
             VocabularyName = "Splitter Activity Contact Processed";
             KeyPrefix = "commonDataModel.splitteractivitycontactprocessed.interactions";
             KeySeparator = ".";
-            Grouping = "/SplitterActivityContactProcessed";
+            Grouping = CommonDataModelEntityTypes.SplitterActivityContactProcessed;
 
             AddGroup("SplitterActivityContactProcessed Details for Interactions", group =>
             {
@@ -26,6 +26,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Interactions
 			    Timestamp = group.Add(new VocabularyKey(nameof(Timestamp), "Timestamp", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    NextActivityId = group.Add(new VocabularyKey(nameof(NextActivityId), "Next activity ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey InteractionId { get; private set; }

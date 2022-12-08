@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 {
     public class KnowledgeBaseRecordVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
             VocabularyName = "Knowledge Base Record";
             KeyPrefix = "commonDataModel.knowledgebaserecord.applicationcommon";
             KeySeparator = ".";
-            Grouping = "/KnowledgeBaseRecord";
+            Grouping = CommonDataModelEntityTypes.KnowledgeBaseRecord;
 
             AddGroup("KnowledgeBaseRecord Details for ApplicationCommon", group =>
             {
@@ -25,6 +25,56 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
 			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "ExchangeRate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
 			    UniqueId = group.Add(new VocabularyKey(nameof(UniqueId), "Unique ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab 'Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="CreatedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab 'Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> to Vocab 'KnowledgeBaseRecord.cdm.json/KnowledgeBaseRecord' with Property 'KnowledgeBaseRecordId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'Activity.cdm.json/Activity' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'Appointment.cdm.json/Appointment' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'Connection.cdm.json/Connection' with Property 'Record2Id'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'Connection.cdm.json/Connection' with Property 'Record1Id'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'Email.cdm.json/Email' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'Fax.cdm.json/Fax' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'Letter.cdm.json/Letter' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'Note.cdm.json/Note' with Property 'ObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'PhoneCall.cdm.json/PhoneCall' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'RecurringAppointment.cdm.json/RecurringAppointment' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'SocialActivity.cdm.json/SocialActivity' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'Task.cdm.json/Task' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'foundationCommon/crmCommon/Activity.cdm.json/Activity' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'foundationCommon/crmCommon/Appointment.cdm.json/Appointment' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'foundationCommon/crmCommon/CampaignResponse.cdm.json/CampaignResponse' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'foundationCommon/crmCommon/Email.cdm.json/Email' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'foundationCommon/crmCommon/Fax.cdm.json/Fax' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'foundationCommon/crmCommon/Letter.cdm.json/Letter' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'foundationCommon/crmCommon/PhoneCall.cdm.json/PhoneCall' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'foundationCommon/crmCommon/QuickCampaign.cdm.json/QuickCampaign' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'foundationCommon/crmCommon/RecurringAppointment.cdm.json/RecurringAppointment' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'foundationCommon/crmCommon/SocialActivity.cdm.json/SocialActivity' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'foundationCommon/crmCommon/accelerators/healthCare/electronicMedicalRecords/AppointmentEMR.cdm.json/AppointmentEMR' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'foundationCommon/crmCommon/accelerators/healthCare/electronicMedicalRecords/Task.cdm.json/Task' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'foundationCommon/crmCommon/sales/OpportunityClose.cdm.json/OpportunityClose' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'foundationCommon/crmCommon/sales/OrderClose.cdm.json/OrderClose' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'foundationCommon/crmCommon/sales/QuoteClose.cdm.json/QuoteClose' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'foundationCommon/crmCommon/service/CaseResolution.cdm.json/CaseResolution' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'foundationCommon/crmCommon/service/IncidentKnowledgeBaseRecord.cdm.json/IncidentKnowledgeBaseRecord' with Property 'KnowledgeBaseRecordId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'foundationCommon/crmCommon/service/ServiceActivity.cdm.json/ServiceActivity' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'foundationCommon/crmCommon/service/Task.cdm.json/Task' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'foundationCommon/crmCommon/solutions/marketing/Appointment.cdm.json/Appointment' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'foundationCommon/crmCommon/solutions/marketing/Connection.cdm.json/Connection' with Property 'Record2Id'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'foundationCommon/crmCommon/solutions/marketing/Connection.cdm.json/Connection' with Property 'Record1Id'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'foundationCommon/crmCommon/solutions/marketing/PhoneCall.cdm.json/PhoneCall' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'foundationCommon/crmCommon/solutions/marketing/Task.cdm.json/Task' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgeBaseRecordId"/> from Vocab 'foundationCommon/crmCommon/solutions/portals/InviteRedemption.cdm.json/InviteRedemption' with Property 'RegardingObjectId'
+            #endregion
         }
 
         public VocabularyKey KnowledgeBaseRecordId { get; private set; }

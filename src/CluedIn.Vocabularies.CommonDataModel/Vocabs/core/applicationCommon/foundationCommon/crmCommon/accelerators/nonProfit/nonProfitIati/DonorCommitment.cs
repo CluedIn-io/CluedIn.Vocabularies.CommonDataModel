@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.NonProfitIati
+namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
 {
     public class DonorCommitmentVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.NonProfitIati
             VocabularyName = "Donor Commitment";
             KeyPrefix = "commonDataModel.donorcommitment.nonprofitiati";
             KeySeparator = ".";
-            Grouping = "/DonorCommitment";
+            Grouping = CommonDataModelEntityTypes.DonorCommitment;
 
             AddGroup("DonorCommitment Details for NonProfitIati", group =>
             {
@@ -49,6 +49,64 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.NonProfitIati
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="PledgedByAccountId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="PledgedOnAccountId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="PledgedByAccountId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="PledgedOnAccountId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="PledgedOnAccountId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="ProviderOrganizationId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="RecipientOrganizationId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="PledgedByAccountId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="Commitment_CampaignId"/> to Vocab 'Campaign.cdm.json/Campaign' with Property 'CampaignId'
+            ///Property <see cref="Commitment_CampaignId"/> to Vocab 'Campaign.cdm.json/Campaign' with Property 'CampaignId'
+            ///Property <see cref="PledgedByContactId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="PledgedByContactId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="PledgedByContactId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="DisbursementChannelId"/> to Vocab 'NonEmbeddedCodelist.cdm.json/NonEmbeddedCodelist' with Property 'NonEmbeddedCodelistId'
+            ///Property <see cref="FinanceTypeId"/> to Vocab 'NonEmbeddedCodelist.cdm.json/NonEmbeddedCodelist' with Property 'NonEmbeddedCodelistId'
+            ///Property <see cref="FlowTypeId"/> to Vocab 'NonEmbeddedCodelist.cdm.json/NonEmbeddedCodelist' with Property 'NonEmbeddedCodelistId'
+            ///Property <see cref="RecipientCountryId"/> to Vocab 'NonEmbeddedCodelist.cdm.json/NonEmbeddedCodelist' with Property 'NonEmbeddedCodelistId'
+            ///Property <see cref="RecipientRegionId"/> to Vocab 'NonEmbeddedCodelist.cdm.json/NonEmbeddedCodelist' with Property 'NonEmbeddedCodelistId'
+            ///Property <see cref="TiedStatusId"/> to Vocab 'NonEmbeddedCodelist.cdm.json/NonEmbeddedCodelist' with Property 'NonEmbeddedCodelistId'
+            ///Property <see cref="CommitmentDefaultDesignationId"/> to Vocab 'Designation.cdm.json/Designation' with Property 'DesignationId'
+            ///Property <see cref="CommitmentDefaultDesignationId"/> to Vocab 'Designation.cdm.json/Designation' with Property 'DesignationId'
+            ///Property <see cref="Commitment_DefaultDesignationId"/> to Vocab 'Designation.cdm.json/Designation' with Property 'DesignationId'
+            ///Property <see cref="CommitmentDefaultDesignationId"/> to Vocab 'Designation.cdm.json/Designation' with Property 'DesignationId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="OpportunityId"/> to Vocab 'Opportunity.cdm.json/Opportunity' with Property 'OpportunityId'
+            ///Property <see cref="DonorCommitment_PlannedGivingId"/> to Vocab 'PlannedGiving.cdm.json/PlannedGiving' with Property 'PlannedGivingId'
+            ///Property <see cref="DonorCommitmentPlannedGivingId"/> to Vocab 'PlannedGiving.cdm.json/PlannedGiving' with Property 'PlannedGivingId'
+            ///Property <see cref="DonorCommitmentPlannedGivingId"/> to Vocab 'PlannedGiving.cdm.json/PlannedGiving' with Property 'PlannedGivingId'
+            ///Property <see cref="DonorCommitmentPlannedGivingId"/> to Vocab 'PlannedGiving.cdm.json/PlannedGiving' with Property 'PlannedGivingId'
+            ///Property <see cref="OpportunityId"/> to Vocab 'Opportunity.cdm.json/Opportunity' with Property 'OpportunityId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="DonorCommitmentId"/> from Vocab 'AidType.cdm.json/AidType' with Property 'DonorCommitment'
+            ///Property <see cref="DonorCommitmentId"/> from Vocab 'NarrativeTranslation.cdm.json/NarrativeTranslation' with Property 'DonorCommitment'
+            ///Property <see cref="DonorCommitmentId"/> from Vocab 'Sector.cdm.json/Sector' with Property 'DonorCommitmentId'
+            ///Property <see cref="DonorCommitmentId"/> from Vocab 'DesignationPlan.cdm.json/DesignationPlan' with Property 'DesignationPlanDonorCommitmentId'
+            ///Property <see cref="DonorCommitmentId"/> from Vocab 'DesignationPlan.cdm.json/DesignationPlan' with Property 'DesignationPlan_DonorCommitmentId'
+            ///Property <see cref="DonorCommitmentId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/accelerators/nonProfit/nonProfitForSales/DesignationPlan.cdm.json/DesignationPlan' with Property 'DesignationPlanDonorCommitmentId'
+            ///Property <see cref="DonorCommitmentId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/accelerators/nonProfit/nonProfitForSales/Opportunity.cdm.json/Opportunity' with Property 'PrimaryProposalId'
+            ///Property <see cref="DonorCommitmentId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/accelerators/nonProfit/nonProfitCore/DesignationPlan.cdm.json/DesignationPlan' with Property 'DesignationPlanDonorCommitmentId'
+            ///Property <see cref="DonorCommitmentId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/accelerators/nonProfit/nonProfitCore/PaymentSchedule.cdm.json/PaymentSchedule' with Property 'PaymentScheduleDonorCommitmentId'
+            ///Property <see cref="DonorCommitmentId"/> from Vocab 'PaymentSchedule.cdm.json/PaymentSchedule' with Property 'PaymentScheduleDonorCommitmentId'
+            ///Property <see cref="DonorCommitmentId"/> from Vocab 'PaymentSchedule.cdm.json/PaymentSchedule' with Property 'PaymentSchedule_DonorCommitmentId'
+            ///Property <see cref="DonorCommitmentId"/> from Vocab 'Opportunity.cdm.json/Opportunity' with Property 'PrimaryProposalId'
+            #endregion
         }
 
         public VocabularyKey CreatedOn { get; private set; }

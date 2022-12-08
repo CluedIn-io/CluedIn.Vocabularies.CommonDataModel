@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 {
     public class ArticleVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
             VocabularyName = "Article";
             KeyPrefix = "commonDataModel.article.applicationcommon";
             KeySeparator = ".";
-            Grouping = "/Article";
+            Grouping = CommonDataModelEntityTypes.Article;
 
             AddGroup("Article Details for ApplicationCommon", group =>
             {
@@ -34,6 +34,106 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
 			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
 			    EntityImageId = group.Add(new VocabularyKey(nameof(EntityImageId), "Entity Image Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="KbArticleTemplateId"/> to Vocab 'ArticleTemplate.cdm.json/ArticleTemplate' with Property 'KbArticleTemplateId'
+            ///Property <see cref="OrganizationId"/> to Vocab 'Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="CreatedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab 'Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="KbArticleId"/> to Vocab 'Article.cdm.json/Article' with Property 'KbArticleId'
+            ///Property <see cref="CreatedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab 'Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="CreatedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="KbArticleTemplateId"/> to Vocab 'ArticleTemplate.cdm.json/ArticleTemplate' with Property 'KbArticleTemplateId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab 'BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab 'BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab 'BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab 'BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab 'Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab 'Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab 'Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab 'Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab 'Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab 'Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="CreatedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedBy"/> to Vocab 'foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab 'foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningUser"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningUser"/> to Vocab 'foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="ParentArticleContentId"/> to Vocab 'KnowledgeArticle.cdm.json/KnowledgeArticle' with Property 'KnowledgearticleId'
+            ///Property <see cref="PrimaryAuthorId"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="PreviousArticleContentId"/> to Vocab 'KnowledgeArticle.cdm.json/KnowledgeArticle' with Property 'KnowledgearticleId'
+            ///Property <see cref="RootArticleId"/> to Vocab 'KnowledgeArticle.cdm.json/KnowledgeArticle' with Property 'KnowledgearticleId'
+            ///Property <see cref="KnowledgeArticleId"/> to Vocab 'KnowledgeArticle.cdm.json/KnowledgeArticle' with Property 'KnowledgearticleId'
+            ///Property <see cref="KnowledgearticleId"/> to Vocab 'KnowledgeArticle.cdm.json/KnowledgeArticle' with Property 'KnowledgearticleId'
+            ///Property <see cref="CreatedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwnerId"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningTeam"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwnerId"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningTeam"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwnerId"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningTeam"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwnerId"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="CreatedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningUser"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="PrimaryAuthorId"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="KnowledgearticleId"/> from Vocab 'Activity.cdm.json/Activity' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgearticleId"/> from Vocab 'ActivityParty.cdm.json/ActivityParty' with Property 'PartyId'
+            ///Property <see cref="KnowledgearticleId"/> from Vocab 'Appointment.cdm.json/Appointment' with Property 'RegardingObjectId'
+            ///Property <see cref="KbArticleTemplateId"/> from Vocab 'Article.cdm.json/Article' with Property 'KbArticleTemplateId'
+            ///Property <see cref="KbArticleId"/> from Vocab 'ArticleComment.cdm.json/ArticleComment' with Property 'KbArticleId'
+            ///Property <see cref="KbArticleId"/> from Vocab 'Note.cdm.json/Note' with Property 'ObjectId'
+            ///Property <see cref="KbArticleId"/> from Vocab 'foundationCommon/crmCommon/service/Case.cdm.json/Case' with Property 'KbArticleId'
+            ///Property <see cref="KbArticleId"/> from Vocab 'foundationCommon/crmCommon/solutions/portals/Case.cdm.json/Case' with Property 'KbArticleId'
+            ///Property <see cref="KbArticleTemplateId"/> from Vocab 'foundationCommon/crmCommon/solutions/portals/Article.cdm.json/Article' with Property 'KbArticleTemplateId'
+            ///Property <see cref="KnowledgearticleId"/> from Vocab 'Connection.cdm.json/Connection' with Property 'Record2Id'
+            ///Property <see cref="KnowledgearticleId"/> from Vocab 'Connection.cdm.json/Connection' with Property 'Record1Id'
+            ///Property <see cref="KnowledgearticleId"/> from Vocab 'Email.cdm.json/Email' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgearticleId"/> from Vocab 'Fax.cdm.json/Fax' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgearticleId"/> from Vocab 'Feedback.cdm.json/Feedback' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgearticleId"/> from Vocab 'KnowledgeArticle.cdm.json/KnowledgeArticle' with Property 'ParentArticleContentId'
+            ///Property <see cref="KnowledgearticleId"/> from Vocab 'KnowledgeArticle.cdm.json/KnowledgeArticle' with Property 'PreviousArticleContentId'
+            ///Property <see cref="KnowledgearticleId"/> from Vocab 'KnowledgeArticle.cdm.json/KnowledgeArticle' with Property 'RootArticleId'
+            ///Property <see cref="KnowledgearticleId"/> from Vocab 'KnowledgeArticleCategory.cdm.json/KnowledgeArticleCategory' with Property 'KnowledgeArticleId'
+            ///Property <see cref="KnowledgearticleId"/> from Vocab 'KnowledgeArticleViews.cdm.json/KnowledgeArticleViews' with Property 'KnowledgearticleId'
+            ///Property <see cref="KnowledgearticleId"/> from Vocab 'Letter.cdm.json/Letter' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgearticleId"/> from Vocab 'Note.cdm.json/Note' with Property 'ObjectId'
+            ///Property <see cref="KnowledgearticleId"/> from Vocab 'PhoneCall.cdm.json/PhoneCall' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgearticleId"/> from Vocab 'QueueItem.cdm.json/QueueItem' with Property 'ObjectId'
+            ///Property <see cref="KnowledgearticleId"/> from Vocab 'RecurringAppointment.cdm.json/RecurringAppointment' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgearticleId"/> from Vocab 'SocialActivity.cdm.json/SocialActivity' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgearticleId"/> from Vocab 'Task.cdm.json/Task' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgearticleId"/> from Vocab 'Team.cdm.json/Team' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgearticleId"/> from Vocab 'foundationCommon/crmCommon/accelerators/healthCare/electronicMedicalRecords/AppointmentEMR.cdm.json/AppointmentEMR' with Property 'RegardingObjectId'
+            ///Property <see cref="KnowledgearticleId"/> from Vocab 'foundationCommon/crmCommon/accelerators/healthCare/electronicMedicalRecords/Task.cdm.json/Task' with Property 'RegardingObjectId'
+            #endregion
         }
 
         public VocabularyKey KbArticleId { get; private set; }

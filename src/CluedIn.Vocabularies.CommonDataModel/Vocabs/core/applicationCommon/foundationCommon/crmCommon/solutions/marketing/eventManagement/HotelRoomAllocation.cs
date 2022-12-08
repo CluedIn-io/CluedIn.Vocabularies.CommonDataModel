@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.EventManagement
+namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
 {
     public class HotelRoomAllocationVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.EventManagement
             VocabularyName = "Hotel Room Allocation";
             KeyPrefix = "commonDataModel.hotelroomallocation.eventmanagement";
             KeySeparator = ".";
-            Grouping = "/HotelRoomAllocation";
+            Grouping = CommonDataModelEntityTypes.HotelRoomAllocation;
 
             AddGroup("HotelRoomAllocation Details for EventManagement", group =>
             {
@@ -29,6 +29,26 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.EventManagement
 			    NumberofRoomsReservedDate = group.Add(new VocabularyKey(nameof(NumberofRoomsReservedDate), "Number of rooms reserved (Last Updated On)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    NumberofRoomsReservedState = group.Add(new VocabularyKey(nameof(NumberofRoomsReservedState), "Number of rooms reserved (State)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="Event"/> to Vocab 'Event.cdm.json/Event' with Property 'EventId'
+            ///Property <see cref="HotelProperty"/> to Vocab 'Hotel.cdm.json/Hotel' with Property 'HotelId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="PrimaryContact"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/marketing/Contact.cdm.json/Contact' with Property 'ContactId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="HotelRoomAllocationId"/> from Vocab 'HotelRoomReservation.cdm.json/HotelRoomReservation' with Property 'HotelRoomAllocation'
+            #endregion
         }
 
         public VocabularyKey HotelRoomAllocationId { get; private set; }

@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Service
+namespace CluedIn.Vocabularies.CommonDataModel.Service
 {
     public class ResourceExpansionVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Service
             VocabularyName = "Resource Expansion";
             KeyPrefix = "commonDataModel.resourceexpansion.service";
             KeySeparator = ".";
-            Grouping = "/ResourceExpansion";
+            Grouping = CommonDataModelEntityTypes.ResourceExpansion;
 
             AddGroup("ResourceExpansion Details for Service", group =>
             {
@@ -26,6 +26,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Service
 			    ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ObjectId = group.Add(new VocabularyKey(nameof(ObjectId), "Object", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey ResourceGroupExpansionId { get; private set; }

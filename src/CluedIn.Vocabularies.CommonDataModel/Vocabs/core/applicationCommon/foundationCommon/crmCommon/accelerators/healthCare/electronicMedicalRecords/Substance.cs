@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 {
     public class SubstanceVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ElectronicMedicalRecords
             VocabularyName = "Substance";
             KeyPrefix = "commonDataModel.substance.electronicmedicalrecords";
             KeySeparator = ".";
-            Grouping = "/Substance";
+            Grouping = CommonDataModelEntityTypes.Substance;
 
             AddGroup("Substance Details for ElectronicMedicalRecords", group =>
             {
@@ -30,6 +30,44 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ElectronicMedicalRecords
 			    TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), "Time Zone Rule Version Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="CodeId"/> to Vocab 'CodeableConcept.cdm.json/CodeableConcept' with Property 'CodeableConceptId'
+            ///Property <see cref="CategoryId"/> to Vocab 'CodeableConcept.cdm.json/CodeableConcept' with Property 'CodeableConceptId'
+            ///Property <see cref="IngredientQuantityDenominatorCodeId"/> to Vocab 'CodeableConcept.cdm.json/CodeableConcept' with Property 'CodeableConceptId'
+            ///Property <see cref="IngredientQuantityNumeratorCodeId"/> to Vocab 'CodeableConcept.cdm.json/CodeableConcept' with Property 'CodeableConceptId'
+            ///Property <see cref="IngredientSubstanceCodeableConceptId"/> to Vocab 'CodeableConcept.cdm.json/CodeableConcept' with Property 'CodeableConceptId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="SubstanceId"/> to Vocab 'Substance.cdm.json/Substance' with Property 'SubstanceId'
+            ///Property <see cref="SubstanceId"/> to Vocab 'Substance.cdm.json/Substance' with Property 'SubstanceId'
+            ///Property <see cref="SubstanceReferenceId"/> to Vocab 'Substance.cdm.json/Substance' with Property 'SubstanceId'
+            ///Property <see cref="SubstanceId"/> to Vocab 'Substance.cdm.json/Substance' with Property 'SubstanceId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="SubstanceId"/> from Vocab 'CarePlanActivity.cdm.json/CarePlanActivity' with Property 'ActivityProductReferenceTypeSubstanceId'
+            ///Property <see cref="SubstanceId"/> from Vocab 'ActivityDefinition.cdm.json/ActivityDefinition' with Property 'ProductsubstanceId'
+            ///Property <see cref="SubstanceId"/> from Vocab 'MedicationIngredient.cdm.json/MedicationIngredient' with Property 'IngredientItemSubstanceId'
+            ///Property <see cref="SubstanceId"/> from Vocab 'ProcedureUsedReference.cdm.json/ProcedureUsedReference' with Property 'RefSubstanceId'
+            ///Property <see cref="SubstanceId"/> from Vocab 'Specimen.cdm.json/Specimen' with Property 'SubjectTypeSubstanceId'
+            ///Property <see cref="SubstanceId"/> from Vocab 'SpecimenContainer.cdm.json/SpecimenContainer' with Property 'ContainerAdditiveReferenceId'
+            ///Property <see cref="SubstanceId"/> from Vocab 'SpecimenProcessingAdditive.cdm.json/SpecimenProcessingAdditive' with Property 'ProcessingAdditiveId'
+            ///Property <see cref="SubstanceId"/> from Vocab 'SubstanceCategory.cdm.json/SubstanceCategory' with Property 'SubstanceId'
+            ///Property <see cref="SubstanceId"/> from Vocab 'SubstanceIngredient.cdm.json/SubstanceIngredient' with Property 'SubstanceId'
+            ///Property <see cref="SubstanceId"/> from Vocab 'SubstanceIngredient.cdm.json/SubstanceIngredient' with Property 'SubstanceReferenceId'
+            ///Property <see cref="SubstanceId"/> from Vocab 'SubstanceInstance.cdm.json/SubstanceInstance' with Property 'SubstanceId'
+            #endregion
         }
 
         public VocabularyKey CreatedOn { get; private set; }

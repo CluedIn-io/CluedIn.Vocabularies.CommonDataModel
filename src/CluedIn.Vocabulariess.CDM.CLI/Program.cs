@@ -13,7 +13,7 @@ namespace CluedIn.Vocabulariess.CDM.CLI
 
             var result = Parser.Default.ParseArguments<ReadManifestOption>(args);
 
-            result = await result.WithParsedAsync(ReadManifest.Run);
+            result = await result.WithParsedAsync(GenerateVocabsFromManifest.Run);
             result.WithNotParsed(HandleParseError);
 
             return 0;

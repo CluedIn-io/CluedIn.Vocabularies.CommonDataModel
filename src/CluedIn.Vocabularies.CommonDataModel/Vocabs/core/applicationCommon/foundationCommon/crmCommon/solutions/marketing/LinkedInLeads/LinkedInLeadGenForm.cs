@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.LinkedInLeads
+namespace CluedIn.Vocabularies.CommonDataModel.LinkedInLeads
 {
     public class LinkedInLeadGenFormVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.LinkedInLeads
             VocabularyName = "Linked In Lead Gen Form";
             KeyPrefix = "commonDataModel.linkedinleadgenform.linkedinleads";
             KeySeparator = ".";
-            Grouping = "/LinkedInLeadGenForm";
+            Grouping = CommonDataModelEntityTypes.LinkedInLeadGenForm;
 
             AddGroup("LinkedInLeadGenForm Details for LinkedInLeads", group =>
             {
@@ -32,6 +32,39 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.LinkedInLeads
 			    TotalsubmissionsDate = group.Add(new VocabularyKey(nameof(TotalsubmissionsDate), "Total submissions (Last Updated On)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TotalsubmissionsState = group.Add(new VocabularyKey(nameof(TotalsubmissionsState), "Total submissions (State)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="LinkedInParentAccount"/> to Vocab 'LinkedInAccount.cdm.json/LinkedInAccount' with Property 'LinkedInAccountID'
+            ///Property <see cref="LinkedInCampaign"/> to Vocab 'LinkedInCampaign.cdm.json/LinkedInCampaign' with Property 'LinkedInCampaignID'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="LinkedinformId"/> to Vocab 'LinkedInLeadGenForm.cdm.json/LinkedInLeadGenForm' with Property 'LinkedinformId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="Lead"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/marketing/Lead.cdm.json/Lead' with Property 'LeadId'
+            ///Property <see cref="CustomerJourney"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/marketing/CustomerJourney.cdm.json/CustomerJourney' with Property 'CustomerJourneyId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="LinkedinformId"/> from Vocab 'LinkedInFormQuestion.cdm.json/LinkedInFormQuestion' with Property 'LinkedinForm'
+            ///Property <see cref="LinkedInFormSubmissionId"/> from Vocab 'LinkedInFormSubmissionAnswer.cdm.json/LinkedInFormSubmissionAnswer' with Property 'LinkedInFormSubmissionID'
+            ///Property <see cref="LinkedinformId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/marketing/Lead.cdm.json/Lead' with Property 'SourceLinkedInForm'
+            ///Property <see cref="LinkedinformId"/> from Vocab 'LinkedInLeadGenFormSubmission.cdm.json/LinkedInLeadGenFormSubmission' with Property 'LinkedinformId'
+            #endregion
         }
 
         public VocabularyKey LinkedinformId { get; private set; }

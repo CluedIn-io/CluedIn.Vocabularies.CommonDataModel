@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.FinancialCommon
+namespace CluedIn.Vocabularies.CommonDataModel.FinancialCommon
 {
     public class MainAccountCategoryVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.FinancialCommon
             VocabularyName = "Main Account Category";
             KeyPrefix = "commonDataModel.mainaccountcategory.financialcommon";
             KeySeparator = ".";
-            Grouping = "/MainAccountCategory";
+            Grouping = CommonDataModelEntityTypes.MainAccountCategory;
 
             AddGroup("MainAccountCategory Details for FinancialCommon", group =>
             {
@@ -20,6 +20,15 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.FinancialCommon
 			    IsClosed = group.Add(new VocabularyKey(nameof(IsClosed), "Is Closed", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    AccountType = group.Add(new VocabularyKey(nameof(AccountType), "Account Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="MainAccountCategoryId"/> from Vocab 'FinancialActivity.cdm.json/FinancialActivity' with Property 'MainAccountCategoryKey'
+            ///Property <see cref="MainAccountCategoryId"/> from Vocab 'MainAccount.cdm.json/MainAccount' with Property 'MainAccountCategoryKey'
+            #endregion
         }
 
         public VocabularyKey MainAccountCategoryId { get; private set; }

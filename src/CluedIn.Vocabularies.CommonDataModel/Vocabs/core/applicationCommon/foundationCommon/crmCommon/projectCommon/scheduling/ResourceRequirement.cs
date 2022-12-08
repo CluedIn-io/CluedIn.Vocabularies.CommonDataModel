@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Scheduling
+namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
 {
     public class ResourceRequirementVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Scheduling
             VocabularyName = "Resource Requirement";
             KeyPrefix = "commonDataModel.resourcerequirement.scheduling";
             KeySeparator = ".";
-            Grouping = "/ResourceRequirement";
+            Grouping = CommonDataModelEntityTypes.ResourceRequirement;
 
             AddGroup("ResourceRequirement Details for Scheduling", group =>
             {
@@ -55,6 +55,52 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Scheduling
 			    StateOrProvince = group.Add(new VocabularyKey(nameof(StateOrProvince), "State/Province", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="BookingSetupMetadataId"/> to Vocab 'BookingSetupMetadata.cdm.json/BookingSetupMetadata' with Property 'BookingSetupMetadataId'
+            ///Property <see cref="Priority"/> to Vocab 'Priority.cdm.json/Priority' with Property 'PriorityId'
+            ///Property <see cref="RequirementGroup"/> to Vocab 'RequirementGroup.cdm.json/RequirementGroup' with Property 'RequirementgroupId'
+            ///Property <see cref="RequirementRelationship"/> to Vocab 'RequirementRelationship.cdm.json/RequirementRelationship' with Property 'RequirementrelationshipId'
+            ///Property <see cref="Status"/> to Vocab 'RequirementStatus.cdm.json/RequirementStatus' with Property 'RequirementStatusId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="AppointmentRequirementId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/Appointment.cdm.json/Appointment' with Property 'ActivityId'
+            ///Property <see cref="Territory"/> to Vocab '/core/applicationCommon/Territory.cdm.json/Territory' with Property 'TerritoryId'
+            ///Property <see cref="TimeGroup"/> to Vocab 'TimeGroup.cdm.json/TimeGroup' with Property 'TimeGroupId'
+            ///Property <see cref="WorkHourTemplate"/> to Vocab 'WorkHourTemplate.cdm.json/WorkHourTemplate' with Property 'WorkHourTemplateId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="ProjectId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/projectServiceAutomation/Project.cdm.json/Project' with Property 'ProjectId'
+            ///Property <see cref="DeprecatedRole"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/projectServiceAutomation/BookableResourceCategory.cdm.json/BookableResourceCategory' with Property 'BookableResourceCategoryId'
+            ///Property <see cref="ResourceRequirementId"/> to Vocab 'ResourceRequirement.cdm.json/ResourceRequirement' with Property 'ResourceRequirementId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="ResourceRequirementId"/> from Vocab 'RequirementCharacteristic.cdm.json/RequirementCharacteristic' with Property 'ResourceRequirement'
+            ///Property <see cref="ResourceRequirementId"/> from Vocab 'RequirementOrganizationUnit.cdm.json/RequirementOrganizationUnit' with Property 'ResourceRequirement'
+            ///Property <see cref="ResourceRequirementId"/> from Vocab 'RequirementResourceCategory.cdm.json/RequirementResourceCategory' with Property 'ResourceRequirement'
+            ///Property <see cref="ResourceRequirementId"/> from Vocab 'RequirementResourcePreference.cdm.json/RequirementResourcePreference' with Property 'ResourceRequirement'
+            ///Property <see cref="ResourceRequirementId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/BookableResourceBooking.cdm.json/BookableResourceBooking' with Property 'ResourceRequirement'
+            ///Property <see cref="ResourceRequirementId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/BookableResourceBookingHeader.cdm.json/BookableResourceBookingHeader' with Property 'ResourceRequirement'
+            ///Property <see cref="ResourceRequirementId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/projectServiceAutomation/ProjectTeam.cdm.json/ProjectTeam' with Property 'ResourceRequirementId'
+            ///Property <see cref="ResourceRequirementId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/projectServiceAutomation/ResourceRequest.cdm.json/ResourceRequest' with Property 'ResourceRequirementId'
+            ///Property <see cref="ResourceRequirementId"/> from Vocab 'ResourceRequirementDetail.cdm.json/ResourceRequirementDetail' with Property 'ResourceRequirementId'
+            #endregion
         }
 
         public VocabularyKey ResourceRequirementId { get; private set; }

@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 {
     public class InvoiceFrequencyVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ProjectServiceAutomation
             VocabularyName = "Invoice Frequency";
             KeyPrefix = "commonDataModel.invoicefrequency.projectserviceautomation";
             KeySeparator = ".";
-            Grouping = "/InvoiceFrequency";
+            Grouping = CommonDataModelEntityTypes.InvoiceFrequency;
 
             AddGroup("InvoiceFrequency Details for ProjectServiceAutomation", group =>
             {
@@ -29,6 +29,27 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ProjectServiceAutomation
 			    Period = group.Add(new VocabularyKey(nameof(Period), "Period", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    RunsPerMonth = group.Add(new VocabularyKey(nameof(RunsPerMonth), "Runs per period", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/scheduling/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="InvoiceFrequency"/> to Vocab 'InvoiceFrequency.cdm.json/InvoiceFrequency' with Property 'InvoiceFrequencyId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/scheduling/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="InvoiceFrequencyId"/> from Vocab 'InvoiceFrequencyDetail.cdm.json/InvoiceFrequencyDetail' with Property 'InvoiceFrequency'
+            ///Property <see cref="InvoiceFrequencyId"/> from Vocab 'OrderProduct.cdm.json/OrderProduct' with Property 'InvoiceFrequency'
+            ///Property <see cref="InvoiceFrequencyId"/> from Vocab 'ProjectParameter.cdm.json/ProjectParameter' with Property 'InvoiceFrequency'
+            ///Property <see cref="InvoiceFrequencyId"/> from Vocab 'QuoteProduct.cdm.json/QuoteProduct' with Property 'InvoiceFrequency'
+            #endregion
         }
 
         public VocabularyKey InvoiceFrequencyId { get; private set; }

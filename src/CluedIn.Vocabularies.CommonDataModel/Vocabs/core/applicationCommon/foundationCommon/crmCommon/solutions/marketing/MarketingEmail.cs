@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Marketing
+namespace CluedIn.Vocabularies.CommonDataModel.Marketing
 {
     public class MarketingEmailVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Marketing
             VocabularyName = "Marketing Email";
             KeyPrefix = "commonDataModel.marketingemail.marketing";
             KeySeparator = ".";
-            Grouping = "/MarketingEmail";
+            Grouping = CommonDataModelEntityTypes.MarketingEmail;
 
             AddGroup("MarketingEmail Details for Marketing", group =>
             {
@@ -35,6 +35,26 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Marketing
 			    To = group.Add(new VocabularyKey(nameof(To), "To", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    UICEntityID = group.Add(new VocabularyKey(nameof(UICEntityID), "UIC Entity ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab '/core/applicationCommon/BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="FromUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="MarketingEmailId"/> from Vocab 'Contact.cdm.json/Contact' with Property 'SourceEmail'
+            ///Property <see cref="MarketingEmailId"/> from Vocab 'GeoPin.cdm.json/GeoPin' with Property 'MarketingEmailGeoPinsId'
+            ///Property <see cref="MarketingEmailId"/> from Vocab 'Lead.cdm.json/Lead' with Property 'SourceEmail'
+            ///Property <see cref="MarketingEmailId"/> from Vocab 'interactions/EmailOpened.cdm.json/EmailOpened' with Property 'MarketingEmailId'
+            #endregion
         }
 
         public VocabularyKey MarketingEmailId { get; private set; }

@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Interactions
+namespace CluedIn.Vocabularies.CommonDataModel.Interactions
 {
     public class EmailHardBouncedVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Interactions
             VocabularyName = "Email Hard Bounced";
             KeyPrefix = "commonDataModel.emailhardbounced.interactions";
             KeySeparator = ".";
-            Grouping = "/EmailHardBounced";
+            Grouping = CommonDataModelEntityTypes.EmailHardBounced;
 
             AddGroup("EmailHardBounced Details for Interactions", group =>
             {
@@ -29,6 +29,14 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.Interactions
 			    RemoteBounce = group.Add(new VocabularyKey(nameof(RemoteBounce), "Remote bounce", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ActivityId = group.Add(new VocabularyKey(nameof(ActivityId), "Activity ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey InteractionId { get; private set; }

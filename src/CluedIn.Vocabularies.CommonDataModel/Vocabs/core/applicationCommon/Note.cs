@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 {
     public class NoteVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
             VocabularyName = "Note";
             KeyPrefix = "commonDataModel.note.applicationcommon";
             KeySeparator = ".";
-            Grouping = "/Note";
+            Grouping = CommonDataModelEntityTypes.Note;
 
             AddGroup("Note Details for ApplicationCommon", group =>
             {
@@ -31,6 +31,37 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
 			    OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="ObjectId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="ObjectId"/> to Vocab 'Appointment.cdm.json/Appointment' with Property 'ActivityId'
+            ///Property <see cref="ObjectId"/> to Vocab 'Article.cdm.json/Article' with Property 'KbArticleId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab 'BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="ObjectId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="ObjectId"/> to Vocab 'Email.cdm.json/Email' with Property 'ActivityId'
+            ///Property <see cref="ObjectId"/> to Vocab 'Fax.cdm.json/Fax' with Property 'ActivityId'
+            ///Property <see cref="ObjectId"/> to Vocab 'Goal.cdm.json/Goal' with Property 'GoalId'
+            ///Property <see cref="ObjectId"/> to Vocab 'KnowledgeArticle.cdm.json/KnowledgeArticle' with Property 'KnowledgearticleId'
+            ///Property <see cref="ObjectId"/> to Vocab 'KnowledgeBaseRecord.cdm.json/KnowledgeBaseRecord' with Property 'KnowledgeBaseRecordId'
+            ///Property <see cref="ObjectId"/> to Vocab 'Letter.cdm.json/Letter' with Property 'ActivityId'
+            ///Property <see cref="OwningUser"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ObjectId"/> to Vocab 'Task.cdm.json/Task' with Property 'ActivityId'
+            ///Property <see cref="ObjectId"/> to Vocab 'SocialActivity.cdm.json/SocialActivity' with Property 'ActivityId'
+            ///Property <see cref="ObjectId"/> to Vocab 'SLA.cdm.json/SLA' with Property 'SLAId'
+            ///Property <see cref="ObjectId"/> to Vocab 'PhoneCall.cdm.json/PhoneCall' with Property 'ActivityId'
+            ///Property <see cref="ObjectId"/> to Vocab 'RecurringAppointment.cdm.json/RecurringAppointment' with Property 'ActivityId'
+            ///Property <see cref="CreatedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwningTeam"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey AnnotationId { get; private set; }

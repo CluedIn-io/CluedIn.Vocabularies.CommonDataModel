@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 {
     public class SLAKPIInstanceVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
             VocabularyName = "SLAKPI Instance";
             KeyPrefix = "commonDataModel.slakpiinstance.applicationcommon";
             KeySeparator = ".";
-            Grouping = "/SLAKPIInstance";
+            Grouping = CommonDataModelEntityTypes.SLAKPIInstance;
 
             AddGroup("SLAKPIInstance Details for ApplicationCommon", group =>
             {
@@ -31,6 +31,36 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
 			    VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), "Version Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    WarningTimeReached = group.Add(new VocabularyKey(nameof(WarningTimeReached), "Warning Time Reached", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="Regarding"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
+            ///Property <see cref="Regarding"/> to Vocab 'Activity.cdm.json/Activity' with Property 'ActivityId'
+            ///Property <see cref="Regarding"/> to Vocab 'Appointment.cdm.json/Appointment' with Property 'ActivityId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab 'BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="OwningBusinessUnit"/> to Vocab 'BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
+            ///Property <see cref="Regarding"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab 'Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="TransactionCurrencyId"/> to Vocab 'Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
+            ///Property <see cref="Regarding"/> to Vocab 'Email.cdm.json/Email' with Property 'ActivityId'
+            ///Property <see cref="Regarding"/> to Vocab 'Fax.cdm.json/Fax' with Property 'ActivityId'
+            ///Property <see cref="Regarding"/> to Vocab 'Letter.cdm.json/Letter' with Property 'ActivityId'
+            ///Property <see cref="Regarding"/> to Vocab 'PhoneCall.cdm.json/PhoneCall' with Property 'ActivityId'
+            ///Property <see cref="OwnerId"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OwnerId"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            ///Property <see cref="Regarding"/> to Vocab 'SocialActivity.cdm.json/SocialActivity' with Property 'ActivityId'
+            ///Property <see cref="Regarding"/> to Vocab 'Task.cdm.json/Task' with Property 'ActivityId'
+            ///Property <see cref="CreatedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="Regarding"/> to Vocab 'SocialActivity.cdm.json/SocialActivity' with Property 'ActivityId'
+            ///Property <see cref="Regarding"/> to Vocab 'Task.cdm.json/Task' with Property 'ActivityId'
+            ///Property <see cref="OwnerId"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
+            #endregion
+            
+            #region Outgoing Relationships
+            
+            #endregion
         }
 
         public VocabularyKey SLAKPIInstanceId { get; private set; }

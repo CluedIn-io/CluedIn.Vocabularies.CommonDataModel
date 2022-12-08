@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 {
     public class ActivityDefinitionVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ElectronicMedicalRecords
             VocabularyName = "Activity Definition";
             KeyPrefix = "commonDataModel.activitydefinition.electronicmedicalrecords";
             KeySeparator = ".";
-            Grouping = "/ActivityDefinition";
+            Grouping = CommonDataModelEntityTypes.ActivityDefinition;
 
             AddGroup("ActivityDefinition Details for ElectronicMedicalRecords", group =>
             {
@@ -51,6 +51,102 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ElectronicMedicalRecords
 			    TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), "Time Zone Rule Version Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="ContactId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="ContactId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ActivityDefinitionId"/> to Vocab 'ActivityDefinition.cdm.json/ActivityDefinition' with Property 'IdentifiesspecifictimeswhentheeventoccuId'
+            ///Property <see cref="BodySiteId"/> to Vocab 'CodeableConcept.cdm.json/CodeableConcept' with Property 'CodeableConceptId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ActivityDefinitionId"/> to Vocab 'ActivityDefinition.cdm.json/ActivityDefinition' with Property 'IdentifiesspecifictimeswhentheeventoccuId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ActivityDefinitionId"/> to Vocab 'ActivityDefinition.cdm.json/ActivityDefinition' with Property 'IdentifiesspecifictimeswhentheeventoccuId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="ActivityContributorId"/> to Vocab 'ActivityDefinitionContributor.cdm.json/ActivityDefinitionContributor' with Property 'ActivityDefinitionContributorId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ActivityDefinitionId"/> to Vocab 'ActivityDefinition.cdm.json/ActivityDefinition' with Property 'IdentifiesspecifictimeswhentheeventoccuId'
+            ///Property <see cref="DosageId"/> to Vocab 'Dosage.cdm.json/Dosage' with Property 'DosageId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ActivityDefinitionId"/> to Vocab 'ActivityDefinition.cdm.json/ActivityDefinition' with Property 'IdentifiesspecifictimeswhentheeventoccuId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ActivityDefinitionId"/> to Vocab 'ActivityDefinition.cdm.json/ActivityDefinition' with Property 'IdentifiesspecifictimeswhentheeventoccuId'
+            ///Property <see cref="JurisdictionId"/> to Vocab 'CodeableConcept.cdm.json/CodeableConcept' with Property 'CodeableConceptId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ActivityDefinitionId"/> to Vocab 'ActivityDefinition.cdm.json/ActivityDefinition' with Property 'IdentifiesspecifictimeswhentheeventoccuId'
+            ///Property <see cref="LibraryId"/> to Vocab 'CodeableConcept.cdm.json/CodeableConcept' with Property 'CodeableConceptId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ActivityDefinitionId"/> to Vocab 'ActivityDefinition.cdm.json/ActivityDefinition' with Property 'IdentifiesspecifictimeswhentheeventoccuId'
+            ///Property <see cref="RoleId"/> to Vocab 'CodeableConcept.cdm.json/CodeableConcept' with Property 'CodeableConceptId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ActivityDefinitionId"/> to Vocab 'ActivityDefinition.cdm.json/ActivityDefinition' with Property 'IdentifiesspecifictimeswhentheeventoccuId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ActivityDefinitionId"/> to Vocab 'ActivityDefinition.cdm.json/ActivityDefinition' with Property 'IdentifiesspecifictimeswhentheeventoccuId'
+            ///Property <see cref="TopicId"/> to Vocab 'CodeableConcept.cdm.json/CodeableConcept' with Property 'CodeableConceptId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ActivityDefinitionId"/> to Vocab 'ActivityDefinition.cdm.json/ActivityDefinition' with Property 'IdentifiesspecifictimeswhentheeventoccuId'
+            ///Property <see cref="QuantityCodeId"/> to Vocab 'CodeableConcept.cdm.json/CodeableConcept' with Property 'CodeableConceptId'
+            ///Property <see cref="ValuecodeableconceptId"/> to Vocab 'CodeableConcept.cdm.json/CodeableConcept' with Property 'CodeableConceptId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="KindId"/> to Vocab 'CodeableConcept.cdm.json/CodeableConcept' with Property 'CodeableConceptId'
+            ///Property <see cref="ProductconceptId"/> to Vocab 'CodeableConcept.cdm.json/CodeableConcept' with Property 'CodeableConceptId'
+            ///Property <see cref="TransformId"/> to Vocab 'CodeableConcept.cdm.json/CodeableConcept' with Property 'CodeableConceptId'
+            ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ActivityTimingId"/> to Vocab 'Timing.cdm.json/Timing' with Property 'TimingId'
+            ///Property <see cref="CodeNewId"/> to Vocab 'Medication.cdm.json/Medication' with Property 'MedicationId'
+            ///Property <see cref="LocationId"/> to Vocab 'Location.cdm.json/Location' with Property 'LocationId'
+            ///Property <see cref="MedicationId"/> to Vocab 'Medication.cdm.json/Medication' with Property 'MedicationId'
+            ///Property <see cref="ProductsubstanceId"/> to Vocab 'Substance.cdm.json/Substance' with Property 'SubstanceId'
+            ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="IdentifiesspecifictimeswhentheeventoccuId"/> from Vocab 'ActivityDefinitionBodySite.cdm.json/ActivityDefinitionBodySite' with Property 'ActivityDefinitionId'
+            ///Property <see cref="IdentifiesspecifictimeswhentheeventoccuId"/> from Vocab 'ActivityDefinitionContact.cdm.json/ActivityDefinitionContact' with Property 'ActivityDefinitionId'
+            ///Property <see cref="IdentifiesspecifictimeswhentheeventoccuId"/> from Vocab 'ActivityDefinitionContributor.cdm.json/ActivityDefinitionContributor' with Property 'ActivityDefinitionId'
+            ///Property <see cref="ActivityDefinitionContributorId"/> from Vocab 'ActivityDefinitionContributorContact.cdm.json/ActivityDefinitionContributorContact' with Property 'ActivityContributorId'
+            ///Property <see cref="IdentifiesspecifictimeswhentheeventoccuId"/> from Vocab 'ActivityDefinitionDosage.cdm.json/ActivityDefinitionDosage' with Property 'ActivityDefinitionId'
+            ///Property <see cref="IdentifiesspecifictimeswhentheeventoccuId"/> from Vocab 'ActivityDefinitionDynamicValue.cdm.json/ActivityDefinitionDynamicValue' with Property 'ActivityDefinitionId'
+            ///Property <see cref="IdentifiesspecifictimeswhentheeventoccuId"/> from Vocab 'ActivityDefinitionJurisdiction.cdm.json/ActivityDefinitionJurisdiction' with Property 'ActivityDefinitionId'
+            ///Property <see cref="IdentifiesspecifictimeswhentheeventoccuId"/> from Vocab 'ActivityDefinitionLibrary.cdm.json/ActivityDefinitionLibrary' with Property 'ActivityDefinitionId'
+            ///Property <see cref="IdentifiesspecifictimeswhentheeventoccuId"/> from Vocab 'ActivityDefinitionParticipant.cdm.json/ActivityDefinitionParticipant' with Property 'ActivityDefinitionId'
+            ///Property <see cref="IdentifiesspecifictimeswhentheeventoccuId"/> from Vocab 'ActivityDefinitionRelatedArtifact.cdm.json/ActivityDefinitionRelatedArtifact' with Property 'ActivityDefinitionId'
+            ///Property <see cref="IdentifiesspecifictimeswhentheeventoccuId"/> from Vocab 'ActivityDefinitionTopic.cdm.json/ActivityDefinitionTopic' with Property 'ActivityDefinitionId'
+            ///Property <see cref="IdentifiesspecifictimeswhentheeventoccuId"/> from Vocab 'ActivityDefinitionUseContext.cdm.json/ActivityDefinitionUseContext' with Property 'ActivityDefinitionId'
+            ///Property <see cref="IdentifiesspecifictimeswhentheeventoccuId"/> from Vocab 'CarePlanActivity.cdm.json/CarePlanActivity' with Property 'ActivityDefinitionTypeActivityDefinitionId'
+            ///Property <see cref="IdentifiesspecifictimeswhentheeventoccuId"/> from Vocab 'DeviceRequestDefinition.cdm.json/DeviceRequestDefinition' with Property 'DefinitionTypeActivityDefinitionId'
+            ///Property <see cref="IdentifiesspecifictimeswhentheeventoccuId"/> from Vocab 'MedicationAdministrationDefinition.cdm.json/MedicationAdministrationDefinition' with Property 'DefinitionTypeActivityDefintionId'
+            ///Property <see cref="IdentifiesspecifictimeswhentheeventoccuId"/> from Vocab 'MedicationRequestDefinition.cdm.json/MedicationRequestDefinition' with Property 'MedicationReqDefinitionActivityDefinitionId'
+            ///Property <see cref="IdentifiesspecifictimeswhentheeventoccuId"/> from Vocab 'PlanDefinitionAction.cdm.json/PlanDefinitionAction' with Property 'DefinitionactivityId'
+            ///Property <see cref="IdentifiesspecifictimeswhentheeventoccuId"/> from Vocab 'ProcedureDefinition.cdm.json/ProcedureDefinition' with Property 'ActivityDefinitionId'
+            ///Property <see cref="IdentifiesspecifictimeswhentheeventoccuId"/> from Vocab 'ProcedureRequestDefinition.cdm.json/ProcedureRequestDefinition' with Property 'ActivityDefinitionId'
+            ///Property <see cref="IdentifiesspecifictimeswhentheeventoccuId"/> from Vocab 'ReferralRequestDefinition.cdm.json/ReferralRequestDefinition' with Property 'ActivityDefinitionId'
+            ///Property <see cref="IdentifiesspecifictimeswhentheeventoccuId"/> from Vocab 'Task.cdm.json/Task' with Property 'ReferenceId'
+            #endregion
         }
 
         public VocabularyKey CreatedOn { get; private set; }

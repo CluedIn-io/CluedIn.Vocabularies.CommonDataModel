@@ -1,7 +1,7 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 {
     public class ArticleTemplateVocabulary : SimpleVocabulary
     {
@@ -10,7 +10,7 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
             VocabularyName = "Article Template";
             KeyPrefix = "commonDataModel.articletemplate.applicationcommon";
             KeySeparator = ".";
-            Grouping = "/ArticleTemplate";
+            Grouping = CommonDataModelEntityTypes.ArticleTemplate;
 
             AddGroup("ArticleTemplate Details for ApplicationCommon", group =>
             {
@@ -34,6 +34,19 @@ namespace CluedIn.Crawling.CommonDataModel.Vocabularies.ApplicationCommon
 			    IsCustomizable = group.Add(new VocabularyKey(nameof(IsCustomizable), "Customizable", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    IntroducedVersion = group.Add(new VocabularyKey(nameof(IntroducedVersion), "Introduced Version", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
             });
+            
+            #region Incoming Relationships
+            ///Property <see cref="OrganizationId"/> to Vocab 'Organization.cdm.json/Organization' with Property 'OrganizationId'
+            ///Property <see cref="CreatedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="CreatedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
+            #endregion
+            
+            #region Outgoing Relationships
+            ///Property <see cref="KbArticleTemplateId"/> from Vocab 'Article.cdm.json/Article' with Property 'KbArticleTemplateId'
+            ///Property <see cref="KbArticleTemplateId"/> from Vocab 'foundationCommon/crmCommon/solutions/portals/Article.cdm.json/Article' with Property 'KbArticleTemplateId'
+            #endregion
         }
 
         public VocabularyKey KbArticleTemplateId { get; private set; }
