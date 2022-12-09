@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class EventTeamMemberVocabulary : SimpleVocabulary
     {
         public EventTeamMemberVocabulary()
         {
             VocabularyName = "Event Team Member";
-            KeyPrefix = "commonDataModel.eventteammember.eventmanagement";
+            KeyPrefix = "commonDataModel.eventteammember";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.EventTeamMember;
 
@@ -23,7 +23,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
 			    Email = group.Add(new VocabularyKey(nameof(Email), "Email", VocabularyKeyDataType.Email, VocabularyKeyVisibility.Visible)); 
 			    MemberType = group.Add(new VocabularyKey(nameof(MemberType), "Member Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Phone = group.Add(new VocabularyKey(nameof(Phone), "Phone", VocabularyKeyDataType.PhoneNumber, VocabularyKeyVisibility.Visible)); 
-			    Role = group.Add(new VocabularyKey(nameof(Role), "Role", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Role = group.Add(new VocabularyKey(nameof(Role), "Role", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -46,15 +46,15 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
             #endregion
         }
 
-        public VocabularyKey EventTeamMemberId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey Company { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey Email { get; private set; }
+        public VocabularyKey EventTeamMemberId { get; private set; }
         public VocabularyKey MemberType { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey Phone { get; private set; }
         public VocabularyKey Role { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

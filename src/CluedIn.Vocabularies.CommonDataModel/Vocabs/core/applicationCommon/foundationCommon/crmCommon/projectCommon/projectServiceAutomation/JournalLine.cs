@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class JournalLineVocabulary : SimpleVocabulary
     {
         public JournalLineVocabulary()
         {
             VocabularyName = "Journal Line";
-            KeyPrefix = "commonDataModel.journalline.projectserviceautomation";
+            KeyPrefix = "commonDataModel.journalline";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.JournalLine;
 
@@ -44,7 +44,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    StartDateTime = group.Add(new VocabularyKey(nameof(StartDateTime), "Start Date/Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TransactionClassification = group.Add(new VocabularyKey(nameof(TransactionClassification), "Transaction Class", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TransactionTypeCode = group.Add(new VocabularyKey(nameof(TransactionTypeCode), "Transaction Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    VendorType = group.Add(new VocabularyKey(nameof(VendorType), "Vendor Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    VendorType = group.Add(new VocabularyKey(nameof(VendorType), "Vendor Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -83,13 +83,8 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
-        public VocabularyKey JournalLineId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Description { get; private set; }
         public VocabularyKey AccountingDate { get; private set; }
         public VocabularyKey Amount { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey AmountBase { get; private set; }
         public VocabularyKey AmountMethod { get; private set; }
         public VocabularyKey BasisAmount { get; private set; }
@@ -100,17 +95,22 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
         public VocabularyKey BillingStatus { get; private set; }
         public VocabularyKey BillingType { get; private set; }
         public VocabularyKey CustomerType { get; private set; }
+        public VocabularyKey Description { get; private set; }
         public VocabularyKey DocumentDate { get; private set; }
         public VocabularyKey EndDateTime { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey ExchangeRateDate { get; private set; }
         public VocabularyKey ExternalDescription { get; private set; }
         public VocabularyKey IsPosted { get; private set; }
+        public VocabularyKey JournalLineId { get; private set; }
         public VocabularyKey Percent { get; private set; }
         public VocabularyKey Price { get; private set; }
         public VocabularyKey PriceBase { get; private set; }
         public VocabularyKey Quantity { get; private set; }
         public VocabularyKey SalesContractLine { get; private set; }
         public VocabularyKey StartDateTime { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey TransactionClassification { get; private set; }
         public VocabularyKey TransactionTypeCode { get; private set; }
         public VocabularyKey VendorType { get; private set; }

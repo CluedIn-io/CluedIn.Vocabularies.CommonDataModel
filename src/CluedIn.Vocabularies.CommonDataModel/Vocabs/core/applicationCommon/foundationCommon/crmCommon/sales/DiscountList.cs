@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Sales
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class DiscountListVocabulary : SimpleVocabulary
     {
         public DiscountListVocabulary()
         {
             VocabularyName = "Discount List";
-            KeyPrefix = "commonDataModel.discountlist.sales";
+            KeyPrefix = "commonDataModel.discountlist";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.DiscountList;
 
@@ -26,7 +26,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Sales
 			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    IsAmountType = group.Add(new VocabularyKey(nameof(IsAmountType), "Type", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -44,18 +44,18 @@ namespace CluedIn.Vocabularies.CommonDataModel.Sales
             #endregion
         }
 
-        public VocabularyKey DiscountTypeId { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey Description { get; private set; }
+        public VocabularyKey DiscountTypeId { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
         public VocabularyKey IsAmountType { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

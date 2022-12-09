@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Interactions
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class EmailSubscriptionSubmitVocabulary : SimpleVocabulary
     {
         public EmailSubscriptionSubmitVocabulary()
         {
             VocabularyName = "Email Subscription Submit";
-            KeyPrefix = "commonDataModel.emailsubscriptionsubmit.interactions";
+            KeyPrefix = "commonDataModel.emailsubscriptionsubmit";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.EmailSubscriptionSubmit;
 
@@ -35,7 +35,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Interactions
 			    OperatingSystemVersion = group.Add(new VocabularyKey(nameof(OperatingSystemVersion), "Operating system version", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    DeviceType = group.Add(new VocabularyKey(nameof(DeviceType), "Device type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    DeviceBrand = group.Add(new VocabularyKey(nameof(DeviceBrand), "Device brand", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DeviceModel = group.Add(new VocabularyKey(nameof(DeviceModel), "Device model", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    DeviceModel = group.Add(new VocabularyKey(nameof(DeviceModel), "Device model", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -47,27 +47,27 @@ namespace CluedIn.Vocabularies.CommonDataModel.Interactions
             #endregion
         }
 
-        public VocabularyKey InteractionId { get; private set; }
-        public VocabularyKey OrganizationId { get; private set; }
-        public VocabularyKey SendingId { get; private set; }
-        public VocabularyKey ContactId { get; private set; }
         public VocabularyKey AccountId { get; private set; }
-        public VocabularyKey MessageId { get; private set; }
-        public VocabularyKey CustomerJourneyId { get; private set; }
-        public VocabularyKey CustomerJourneyIterationId { get; private set; }
-        public VocabularyKey UsageType { get; private set; }
-        public VocabularyKey InteractionType { get; private set; }
-        public VocabularyKey Timestamp { get; private set; }
-        public VocabularyKey CountryIsoCode { get; private set; }
-        public VocabularyKey State { get; private set; }
-        public VocabularyKey City { get; private set; }
-        public VocabularyKey PostalCode { get; private set; }
         public VocabularyKey BrowserId { get; private set; }
         public VocabularyKey BrowserVersion { get; private set; }
-        public VocabularyKey OperatingSystemId { get; private set; }
-        public VocabularyKey OperatingSystemVersion { get; private set; }
-        public VocabularyKey DeviceType { get; private set; }
+        public VocabularyKey City { get; private set; }
+        public VocabularyKey ContactId { get; private set; }
+        public VocabularyKey CountryIsoCode { get; private set; }
+        public VocabularyKey CustomerJourneyId { get; private set; }
+        public VocabularyKey CustomerJourneyIterationId { get; private set; }
         public VocabularyKey DeviceBrand { get; private set; }
         public VocabularyKey DeviceModel { get; private set; }
+        public VocabularyKey DeviceType { get; private set; }
+        public VocabularyKey InteractionId { get; private set; }
+        public VocabularyKey InteractionType { get; private set; }
+        public VocabularyKey MessageId { get; private set; }
+        public VocabularyKey OperatingSystemId { get; private set; }
+        public VocabularyKey OperatingSystemVersion { get; private set; }
+        public VocabularyKey OrganizationId { get; private set; }
+        public VocabularyKey PostalCode { get; private set; }
+        public VocabularyKey SendingId { get; private set; }
+        public VocabularyKey State { get; private set; }
+        public VocabularyKey Timestamp { get; private set; }
+        public VocabularyKey UsageType { get; private set; }
     }
 }

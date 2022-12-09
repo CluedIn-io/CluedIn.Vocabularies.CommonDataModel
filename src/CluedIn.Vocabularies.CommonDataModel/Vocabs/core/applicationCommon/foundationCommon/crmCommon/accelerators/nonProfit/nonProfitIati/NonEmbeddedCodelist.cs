@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class NonEmbeddedCodelistVocabulary : SimpleVocabulary
     {
         public NonEmbeddedCodelistVocabulary()
         {
             VocabularyName = "Non Embedded Codelist";
-            KeyPrefix = "commonDataModel.nonembeddedcodelist.nonprofitiati";
+            KeyPrefix = "commonDataModel.nonembeddedcodelist";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.NonEmbeddedCodelist;
 
@@ -22,7 +22,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
 			    NonEmbeddedCodelistId = group.Add(new VocabularyKey(nameof(NonEmbeddedCodelistId), "Non Embedded Codelist", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    NonEmbeddedCodelistVocabularyId = group.Add(new VocabularyKey(nameof(NonEmbeddedCodelistVocabularyId), "Vocabulary", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

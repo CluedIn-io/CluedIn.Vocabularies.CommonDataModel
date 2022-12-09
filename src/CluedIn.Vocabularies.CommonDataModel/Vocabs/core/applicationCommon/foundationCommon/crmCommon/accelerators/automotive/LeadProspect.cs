@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Automotive
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class LeadProspectVocabulary : SimpleVocabulary
     {
         public LeadProspectVocabulary()
         {
             VocabularyName = "Lead Prospect";
-            KeyPrefix = "commonDataModel.leadprospect.automotive";
+            KeyPrefix = "commonDataModel.leadprospect";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.LeadProspect;
 
@@ -21,7 +21,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
 			    LeadProspectId = group.Add(new VocabularyKey(nameof(LeadProspectId), "Lead Prospect", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

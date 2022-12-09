@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Automotive
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ServiceContractVocabulary : SimpleVocabulary
     {
         public ServiceContractVocabulary()
         {
             VocabularyName = "Service Contract";
-            KeyPrefix = "commonDataModel.servicecontract.automotive";
+            KeyPrefix = "commonDataModel.servicecontract";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ServiceContract;
 
@@ -36,7 +36,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
 			    ServiceContractId = group.Add(new VocabularyKey(nameof(ServiceContractId), "Service Contract", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StartDate = group.Add(new VocabularyKey(nameof(StartDate), "Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -105,7 +105,6 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
             #endregion
         }
 
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey ActualCost { get; private set; }
         public VocabularyKey ActualCostBase { get; private set; }
         public VocabularyKey ActualRevenue { get; private set; }
@@ -121,6 +120,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
         public VocabularyKey EstimatedCostBase { get; private set; }
         public VocabularyKey EstimatedRevenue { get; private set; }
         public VocabularyKey EstimatedRevenueBase { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey RetailPrice { get; private set; }
         public VocabularyKey RetailPriceBase { get; private set; }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class TimeGroupVocabulary : SimpleVocabulary
     {
         public TimeGroupVocabulary()
         {
             VocabularyName = "Time Group";
-            KeyPrefix = "commonDataModel.timegroup.scheduling";
+            KeyPrefix = "commonDataModel.timegroup";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.TimeGroup;
 
@@ -26,7 +26,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
 			    Interval = group.Add(new VocabularyKey(nameof(Interval), "Interval", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    IntervalsBegin = group.Add(new VocabularyKey(nameof(IntervalsBegin), "Intervals Begin", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ResetPerTimeGroupDetail = group.Add(new VocabularyKey(nameof(ResetPerTimeGroupDetail), "Reset Per Time Group Detail", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    ResultsPerInterval = group.Add(new VocabularyKey(nameof(ResultsPerInterval), "Results per Interval", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    ResultsPerInterval = group.Add(new VocabularyKey(nameof(ResultsPerInterval), "Results per Interval", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -58,18 +58,18 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
             #endregion
         }
 
-        public VocabularyKey TimeGroupId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey StageId { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
         public VocabularyKey DisplayTopXResultsInSATimeGroup { get; private set; }
         public VocabularyKey HideBookingTimeOnSA { get; private set; }
         public VocabularyKey Interval { get; private set; }
         public VocabularyKey IntervalsBegin { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey ProcessId { get; private set; }
         public VocabularyKey ResetPerTimeGroupDetail { get; private set; }
         public VocabularyKey ResultsPerInterval { get; private set; }
+        public VocabularyKey StageId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TimeGroupId { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
     }
 }

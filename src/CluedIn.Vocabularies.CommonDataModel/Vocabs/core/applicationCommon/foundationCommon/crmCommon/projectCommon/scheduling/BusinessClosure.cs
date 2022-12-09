@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class BusinessClosureVocabulary : SimpleVocabulary
     {
         public BusinessClosureVocabulary()
         {
             VocabularyName = "Business Closure";
-            KeyPrefix = "commonDataModel.businessclosure.scheduling";
+            KeyPrefix = "commonDataModel.businessclosure";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.BusinessClosure;
 
@@ -22,7 +22,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
 			    EndTime = group.Add(new VocabularyKey(nameof(EndTime), "End Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    IsAllDayEvent = group.Add(new VocabularyKey(nameof(IsAllDayEvent), "Is All Day Event", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    SelectedYear = group.Add(new VocabularyKey(nameof(SelectedYear), "Selected Year", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    StartTime = group.Add(new VocabularyKey(nameof(StartTime), "Start Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StartTime = group.Add(new VocabularyKey(nameof(StartTime), "Start Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -43,13 +43,13 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
         }
 
         public VocabularyKey BusinessclosureId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey Duration { get; private set; }
         public VocabularyKey EndTime { get; private set; }
         public VocabularyKey IsAllDayEvent { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey SelectedYear { get; private set; }
         public VocabularyKey StartTime { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

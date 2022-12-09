@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class TaskPartOfVocabulary : SimpleVocabulary
     {
         public TaskPartOfVocabulary()
         {
             VocabularyName = "Task Part Of";
-            KeyPrefix = "commonDataModel.taskpartof.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.taskpartof";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.TaskPartOf;
 
@@ -17,7 +17,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TaskPartOfId = group.Add(new VocabularyKey(nameof(TaskPartOfId), "Task Part Of", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -43,8 +43,8 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
         }
 
         public VocabularyKey Name { get; private set; }
-        public VocabularyKey TaskPartOfId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TaskPartOfId { get; private set; }
     }
 }

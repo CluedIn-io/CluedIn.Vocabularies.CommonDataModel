@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class KnowledgeBaseRecordVocabulary : SimpleVocabulary
     {
         public KnowledgeBaseRecordVocabulary()
         {
             VocabularyName = "Knowledge Base Record";
-            KeyPrefix = "commonDataModel.knowledgebaserecord.applicationcommon";
+            KeyPrefix = "commonDataModel.knowledgebaserecord";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.KnowledgeBaseRecord;
 
@@ -23,7 +23,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    PrivateUrl = group.Add(new VocabularyKey(nameof(PrivateUrl), "Private URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
 			    PublicUrl = group.Add(new VocabularyKey(nameof(PublicUrl), "Public URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
 			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "ExchangeRate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    UniqueId = group.Add(new VocabularyKey(nameof(UniqueId), "Unique ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    UniqueId = group.Add(new VocabularyKey(nameof(UniqueId), "Unique ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -77,15 +77,15 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             #endregion
         }
 
-        public VocabularyKey KnowledgeBaseRecordId { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey KnowledgeBaseRecordId { get; private set; }
         public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey Title { get; private set; }
         public VocabularyKey PrivateUrl { get; private set; }
         public VocabularyKey PublicUrl { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey Title { get; private set; }
         public VocabularyKey UniqueId { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

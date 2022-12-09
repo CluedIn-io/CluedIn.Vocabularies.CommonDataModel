@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class PropertyOptionSetItemVocabulary : SimpleVocabulary
     {
         public PropertyOptionSetItemVocabulary()
         {
             VocabularyName = "Property Option Set Item";
-            KeyPrefix = "commonDataModel.propertyoptionsetitem.foundationcommon";
+            KeyPrefix = "commonDataModel.propertyoptionsetitem";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.PropertyOptionSetItem;
 
@@ -26,7 +26,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
 			    DynamicPropertyOptionValue = group.Add(new VocabularyKey(nameof(DynamicPropertyOptionValue), "Value", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    DynamicPropertyOptionDescription = group.Add(new VocabularyKey(nameof(DynamicPropertyOptionDescription), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    DynamicPropertyOptionSetValueSequenceNumber = group.Add(new VocabularyKey(nameof(DynamicPropertyOptionSetValueSequenceNumber), "Internal Use Only", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));             
+			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -44,18 +44,18 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
             #endregion
         }
 
-        public VocabularyKey DynamicPropertyOptionSetValueId { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
+        public VocabularyKey DynamicPropertyOptionDescription { get; private set; }
+        public VocabularyKey DynamicPropertyOptionName { get; private set; }
+        public VocabularyKey DynamicPropertyOptionSetValueId { get; private set; }
+        public VocabularyKey DynamicPropertyOptionSetValueSequenceNumber { get; private set; }
+        public VocabularyKey DynamicPropertyOptionValue { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
         public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey DynamicPropertyOptionName { get; private set; }
-        public VocabularyKey DynamicPropertyOptionValue { get; private set; }
-        public VocabularyKey DynamicPropertyOptionDescription { get; private set; }
-        public VocabularyKey DynamicPropertyOptionSetValueSequenceNumber { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

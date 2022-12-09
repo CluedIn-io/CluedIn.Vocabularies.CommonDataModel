@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class AccomplishmentsVocabulary : SimpleVocabulary
     {
         public AccomplishmentsVocabulary()
         {
             VocabularyName = "Accomplishments";
-            KeyPrefix = "commonDataModel.accomplishments.highereducation";
+            KeyPrefix = "commonDataModel.accomplishments";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Accomplishments;
 
@@ -19,7 +19,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
 			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Accomplishment Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class RatingValueVocabulary : SimpleVocabulary
     {
         public RatingValueVocabulary()
         {
             VocabularyName = "Rating Value";
-            KeyPrefix = "commonDataModel.ratingvalue.foundationcommon";
+            KeyPrefix = "commonDataModel.ratingvalue";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.RatingValue;
 
@@ -19,7 +19,13 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Value = group.Add(new VocabularyKey(nameof(Value), "Value", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "ExchangeRate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));             
+			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "ExchangeRate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("RatingValue Details for ProjectCommon", group =>
+            {
+			    CreatedOnBehalfBy = group.Add(new VocabularyKey(nameof(CreatedOnBehalfBy), "Created By (Delegate)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    ModifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(ModifiedOnBehalfBy), "Modified By (Delegate)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    IsDefault = group.Add(new VocabularyKey(nameof(IsDefault), "Is Default", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -45,11 +51,14 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
             #endregion
         }
 
-        public VocabularyKey RatingValueId { get; private set; }
+        public VocabularyKey CreatedOnBehalfBy { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey IsDefault { get; private set; }
+        public VocabularyKey ModifiedOnBehalfBy { get; private set; }
         public VocabularyKey Name { get; private set; }
+        public VocabularyKey RatingValueId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey Value { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
     }
 }

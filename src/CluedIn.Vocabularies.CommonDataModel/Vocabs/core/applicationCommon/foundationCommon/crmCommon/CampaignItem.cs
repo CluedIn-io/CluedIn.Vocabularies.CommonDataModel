@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class CampaignItemVocabulary : SimpleVocabulary
     {
         public CampaignItemVocabulary()
         {
             VocabularyName = "Campaign Item";
-            KeyPrefix = "commonDataModel.campaignitem.crmcommon";
+            KeyPrefix = "commonDataModel.campaignitem";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.CampaignItem;
 
@@ -23,7 +23,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
 			    Name = group.Add(new VocabularyKey(nameof(Name), "name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    EntityType = group.Add(new VocabularyKey(nameof(EntityType), "Object type of entity for the campaign item.", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    OwningBusinessUnit = group.Add(new VocabularyKey(nameof(OwningBusinessUnit), "Unique identifier of the business unit that owns the campaign item.", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    OwningUser = group.Add(new VocabularyKey(nameof(OwningUser), "Unique identifier of the user that owns the campaign item.", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));             
+			    OwningUser = group.Add(new VocabularyKey(nameof(OwningUser), "Unique identifier of the user that owns the campaign item.", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -38,14 +38,14 @@ namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
         }
 
         public VocabularyKey CampaignItemId { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey EntityType { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey OwningBusinessUnit { get; private set; }
         public VocabularyKey OwningUser { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class SpecimenProcessingVocabulary : SimpleVocabulary
     {
         public SpecimenProcessingVocabulary()
         {
             VocabularyName = "Specimen Processing";
-            KeyPrefix = "commonDataModel.specimenprocessing.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.specimenprocessing";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.SpecimenProcessing;
 
@@ -22,7 +22,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    ProcessingTimeTypePeriodStartDate = group.Add(new VocabularyKey(nameof(ProcessingTimeTypePeriodStartDate), "Processing Period Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    SpecimenProcessingId = group.Add(new VocabularyKey(nameof(SpecimenProcessingId), "Specimen Processing", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

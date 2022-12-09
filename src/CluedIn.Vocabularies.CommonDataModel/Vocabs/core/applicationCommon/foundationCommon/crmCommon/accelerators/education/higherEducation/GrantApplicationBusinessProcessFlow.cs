@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class GrantApplicationBusinessProcessFlowVocabulary : SimpleVocabulary
     {
         public GrantApplicationBusinessProcessFlowVocabulary()
         {
             VocabularyName = "Grant Application Business Process Flow";
-            KeyPrefix = "commonDataModel.grantapplicationbusinessprocessflow.highereducation";
+            KeyPrefix = "commonDataModel.grantapplicationbusinessprocessflow";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.GrantApplicationBusinessProcessFlow;
 
@@ -29,7 +29,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), "Time Zone Rule Version Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -44,16 +44,16 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
             #endregion
         }
 
-        public VocabularyKey BusinessProcessFlowInstanceId { get; private set; }
         public VocabularyKey ActiveStageStartedOn { get; private set; }
         public VocabularyKey Bpf_Duration { get; private set; }
-        public VocabularyKey Name { get; private set; }
+        public VocabularyKey BusinessProcessFlowInstanceId { get; private set; }
         public VocabularyKey CompletedOn { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
         public VocabularyKey CreatedOnBehalfBy { get; private set; }
         public VocabularyKey ImportSequenceNumber { get; private set; }
         public VocabularyKey ModifiedOn { get; private set; }
         public VocabularyKey ModifiedOnBehalfBy { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }

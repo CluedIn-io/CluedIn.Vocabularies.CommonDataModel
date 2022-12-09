@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class SessionTrackVocabulary : SimpleVocabulary
     {
         public SessionTrackVocabulary()
         {
             VocabularyName = "Session Track";
-            KeyPrefix = "commonDataModel.sessiontrack.eventmanagement";
+            KeyPrefix = "commonDataModel.sessiontrack";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.SessionTrack;
 
@@ -28,7 +28,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
 			    TargetNumberOfSessions = group.Add(new VocabularyKey(nameof(TargetNumberOfSessions), "Target number of sessions", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    TrackCode = group.Add(new VocabularyKey(nameof(TrackCode), "Track code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TrackGoal = group.Add(new VocabularyKey(nameof(TrackGoal), "Track goal", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TrackType = group.Add(new VocabularyKey(nameof(TrackType), "Track Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    TrackType = group.Add(new VocabularyKey(nameof(TrackType), "Track Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -49,17 +49,17 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
             #endregion
         }
 
-        public VocabularyKey SessionTrackId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey AudienceType { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey IndustryType { get; private set; }
         public VocabularyKey Keywords { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey NumberOfRegistrations { get; private set; }
         public VocabularyKey PublishStatus { get; private set; }
         public VocabularyKey SessionsInTrack { get; private set; }
+        public VocabularyKey SessionTrackId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey TargetNumberOfSessions { get; private set; }
         public VocabularyKey TrackCode { get; private set; }
         public VocabularyKey TrackGoal { get; private set; }

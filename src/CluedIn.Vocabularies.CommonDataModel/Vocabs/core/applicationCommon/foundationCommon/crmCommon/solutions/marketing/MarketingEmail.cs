@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Marketing
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class MarketingEmailVocabulary : SimpleVocabulary
     {
         public MarketingEmailVocabulary()
         {
             VocabularyName = "Marketing Email";
-            KeyPrefix = "commonDataModel.marketingemail.marketing";
+            KeyPrefix = "commonDataModel.marketingemail";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.MarketingEmail;
 
@@ -33,7 +33,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Marketing
 			    TemplateId = group.Add(new VocabularyKey(nameof(TemplateId), "Template", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    PlainText = group.Add(new VocabularyKey(nameof(PlainText), "Plain text", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    To = group.Add(new VocabularyKey(nameof(To), "To", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    UICEntityID = group.Add(new VocabularyKey(nameof(UICEntityID), "UIC Entity ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    UICEntityID = group.Add(new VocabularyKey(nameof(UICEntityID), "UIC Entity ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -57,10 +57,6 @@ namespace CluedIn.Vocabularies.CommonDataModel.Marketing
             #endregion
         }
 
-        public VocabularyKey MarketingEmailId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey AutomaticallyGeneratePlainText { get; private set; }
         public VocabularyKey ClickMap { get; private set; }
         public VocabularyKey Description { get; private set; }
@@ -71,10 +67,14 @@ namespace CluedIn.Vocabularies.CommonDataModel.Marketing
         public VocabularyKey InsightsPlaceholder { get; private set; }
         public VocabularyKey Istemplategalleryneeded { get; private set; }
         public VocabularyKey LegalDesignation { get; private set; }
+        public VocabularyKey MarketingEmailId { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey PlainText { get; private set; }
         public VocabularyKey ReplyToEmail { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey Subject { get; private set; }
         public VocabularyKey TemplateId { get; private set; }
-        public VocabularyKey PlainText { get; private set; }
         public VocabularyKey To { get; private set; }
         public VocabularyKey UICEntityID { get; private set; }
     }

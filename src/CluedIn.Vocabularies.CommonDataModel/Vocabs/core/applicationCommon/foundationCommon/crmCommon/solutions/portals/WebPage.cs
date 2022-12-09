@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Portals
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class WebPageVocabulary : SimpleVocabulary
     {
         public WebPageVocabulary()
         {
             VocabularyName = "Web Page";
-            KeyPrefix = "commonDataModel.webpage.portals";
+            KeyPrefix = "commonDataModel.webpage";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.WebPage;
 
@@ -48,7 +48,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
 			    EntityList = group.Add(new VocabularyKey(nameof(EntityList), "Entity List", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    WebForm = group.Add(new VocabularyKey(nameof(WebForm), "Web Form", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    CommentPolicy = group.Add(new VocabularyKey(nameof(CommentPolicy), "Comment Policy", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EnableRatings = group.Add(new VocabularyKey(nameof(EnableRatings), "Enable Ratings", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));             
+			    EnableRatings = group.Add(new VocabularyKey(nameof(EnableRatings), "Enable Ratings", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -98,40 +98,40 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
             #endregion
         }
 
-        public VocabularyKey WebpageId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey Category { get; private set; }
-        public VocabularyKey Copy { get; private set; }
         public VocabularyKey AdxCreatedByIPAddress { get; private set; }
         public VocabularyKey AdxCreatedByUsername { get; private set; }
-        public VocabularyKey DisplayDate { get; private set; }
-        public VocabularyKey DisplayOrder { get; private set; }
-        public VocabularyKey HiddenFromSitemap { get; private set; }
         public VocabularyKey AdxModifiedByIPAddress { get; private set; }
         public VocabularyKey AdxModifiedByUsername { get; private set; }
-        public VocabularyKey PartialURL { get; private set; }
-        public VocabularyKey SubjectId { get; private set; }
-        public VocabularyKey Summary { get; private set; }
-        public VocabularyKey Title { get; private set; }
         public VocabularyKey AllowOrigin { get; private set; }
+        public VocabularyKey Category { get; private set; }
+        public VocabularyKey CommentPolicy { get; private set; }
+        public VocabularyKey Copy { get; private set; }
         public VocabularyKey CustomCSS { get; private set; }
         public VocabularyKey CustomJavaScript { get; private set; }
+        public VocabularyKey DisplayDate { get; private set; }
+        public VocabularyKey DisplayOrder { get; private set; }
         public VocabularyKey EditorialComments { get; private set; }
+        public VocabularyKey EnableRatings { get; private set; }
         public VocabularyKey Enabletracking { get; private set; }
+        public VocabularyKey EntityForm { get; private set; }
+        public VocabularyKey EntityList { get; private set; }
         public VocabularyKey ExcludeFromSearch { get; private set; }
         public VocabularyKey ExpirationDate { get; private set; }
+        public VocabularyKey HiddenFromSitemap { get; private set; }
         public VocabularyKey ImageURL { get; private set; }
         public VocabularyKey IsRoot { get; private set; }
         public VocabularyKey MetaDescription { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey Navigation { get; private set; }
+        public VocabularyKey PartialURL { get; private set; }
         public VocabularyKey ReleaseDate { get; private set; }
         public VocabularyKey SharedPageConfiguration { get; private set; }
-        public VocabularyKey EntityForm { get; private set; }
-        public VocabularyKey EntityList { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey SubjectId { get; private set; }
+        public VocabularyKey Summary { get; private set; }
+        public VocabularyKey Title { get; private set; }
         public VocabularyKey WebForm { get; private set; }
-        public VocabularyKey CommentPolicy { get; private set; }
-        public VocabularyKey EnableRatings { get; private set; }
+        public VocabularyKey WebpageId { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class PriceListItemVocabulary : SimpleVocabulary
     {
         public PriceListItemVocabulary()
         {
             VocabularyName = "Price List Item";
-            KeyPrefix = "commonDataModel.pricelistitem.foundationcommon";
+            KeyPrefix = "commonDataModel.pricelistitem";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.PriceListItem;
 
@@ -36,7 +36,11 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
 			    RoundingOptionAmount = group.Add(new VocabularyKey(nameof(RoundingOptionAmount), "Rounding Amount", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
 			    RoundingOptionAmountBase = group.Add(new VocabularyKey(nameof(RoundingOptionAmountBase), "Rounding Amount (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    RoundingOptionCode = group.Add(new VocabularyKey(nameof(RoundingOptionCode), "Rounding Option", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RoundingPolicyCode = group.Add(new VocabularyKey(nameof(RoundingPolicyCode), "Rounding Policy", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    RoundingPolicyCode = group.Add(new VocabularyKey(nameof(RoundingPolicyCode), "Rounding Policy", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("PriceListItem Details for Sales", group =>
+            {
+
             });
             
             #region Incoming Relationships
@@ -60,28 +64,28 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
             #endregion
         }
 
-        public VocabularyKey ProductPriceLevelId { get; private set; }
-        public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey StageId { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
         public VocabularyKey Amount { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey AmountBase { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
         public VocabularyKey OrganizationId { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey Percentage { get; private set; }
         public VocabularyKey PricingMethodCode { get; private set; }
+        public VocabularyKey ProcessId { get; private set; }
         public VocabularyKey ProductNumber { get; private set; }
+        public VocabularyKey ProductPriceLevelId { get; private set; }
         public VocabularyKey QuantitySellingCode { get; private set; }
         public VocabularyKey RoundingOptionAmount { get; private set; }
         public VocabularyKey RoundingOptionAmountBase { get; private set; }
         public VocabularyKey RoundingOptionCode { get; private set; }
         public VocabularyKey RoundingPolicyCode { get; private set; }
+        public VocabularyKey StageId { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class PlanDefinitionActionVocabulary : SimpleVocabulary
     {
         public PlanDefinitionActionVocabulary()
         {
             VocabularyName = "Plan Definition Action";
-            KeyPrefix = "commonDataModel.plandefinitionaction.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.plandefinitionaction";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.PlanDefinitionAction;
 
@@ -43,7 +43,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), "Time Zone Rule Version Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -129,22 +129,26 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
             #endregion
         }
 
+        public VocabularyKey CardinalityBehavior { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
         public VocabularyKey CreatedOnBehalfBy { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey ModifiedOnBehalfBy { get; private set; }
-        public VocabularyKey CardinalityBehavior { get; private set; }
         public VocabularyKey DefinitionType { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey GroupingBehavior { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
         public VocabularyKey Label { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey ModifiedOnBehalfBy { get; private set; }
         public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey PlanDefinitionActionId { get; private set; }
         public VocabularyKey PreCheckBehavior { get; private set; }
         public VocabularyKey RequiredBehavior { get; private set; }
         public VocabularyKey SelectionBehavior { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey TextEquivalent { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
         public VocabularyKey Timingdatetime { get; private set; }
         public VocabularyKey Timingduration { get; private set; }
         public VocabularyKey Timingenddate { get; private set; }
@@ -154,10 +158,6 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
         public VocabularyKey Timingupperlimit { get; private set; }
         public VocabularyKey Title { get; private set; }
         public VocabularyKey Type { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
     }
 }

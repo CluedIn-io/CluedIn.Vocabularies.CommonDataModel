@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ClinicalImpressionPrognosisVocabulary : SimpleVocabulary
     {
         public ClinicalImpressionPrognosisVocabulary()
         {
             VocabularyName = "Clinical Impression Prognosis";
-            KeyPrefix = "commonDataModel.clinicalimpressionprognosis.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.clinicalimpressionprognosis";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ClinicalImpressionPrognosis;
 
@@ -17,7 +17,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    ClinicalImpressionPrognosisId = group.Add(new VocabularyKey(nameof(ClinicalImpressionPrognosisId), "Clinical Impression Prognosis", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

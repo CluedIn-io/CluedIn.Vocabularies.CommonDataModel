@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ProjectParameterVocabulary : SimpleVocabulary
     {
         public ProjectParameterVocabulary()
         {
             VocabularyName = "Project Parameter";
-            KeyPrefix = "commonDataModel.projectparameter.projectserviceautomation";
+            KeyPrefix = "commonDataModel.projectparameter";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ProjectParameter;
 
@@ -27,7 +27,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    AllowSkillUpdateByResource = group.Add(new VocabularyKey(nameof(AllowSkillUpdateByResource), "Allow skill update by resource (Deprecated in v3.0)", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    ProjectResourceRequirementsVisibleToRe = group.Add(new VocabularyKey(nameof(ProjectResourceRequirementsVisibleToRe), "Resource requirements visible to resources (Deprecated in v3.0)", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    ResourceAllocationMode = group.Add(new VocabularyKey(nameof(ResourceAllocationMode), "Resource allocation mode", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    ResourceAllocationMode = group.Add(new VocabularyKey(nameof(ResourceAllocationMode), "Resource allocation mode", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -55,19 +55,19 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
-        public VocabularyKey ProjectParameterId { get; private set; }
-        public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Description { get; private set; }
         public VocabularyKey AllowSkillUpdateByResource { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey ProjectParameterId { get; private set; }
         public VocabularyKey ProjectResourceRequirementsVisibleToRe { get; private set; }
         public VocabularyKey ResourceAllocationMode { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

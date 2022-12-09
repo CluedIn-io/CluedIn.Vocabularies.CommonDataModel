@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ProjectTransactionCategoryVocabulary : SimpleVocabulary
     {
         public ProjectTransactionCategoryVocabulary()
         {
             VocabularyName = "Project Transaction Category";
-            KeyPrefix = "commonDataModel.projecttransactioncategory.projectserviceautomation";
+            KeyPrefix = "commonDataModel.projecttransactioncategory";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ProjectTransactionCategory;
 
@@ -18,7 +18,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    BillingType = group.Add(new VocabularyKey(nameof(BillingType), "Billing Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    BillingType = group.Add(new VocabularyKey(nameof(BillingType), "Billing Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -40,10 +40,10 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
+        public VocabularyKey BillingType { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey ProjectTransactionCategoryId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey BillingType { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.CustomerInsights
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class MeasureDefinitionVocabulary : SimpleVocabulary
     {
         public MeasureDefinitionVocabulary()
         {
             VocabularyName = "Measure Definition";
-            KeyPrefix = "commonDataModel.measuredefinition.customerinsights";
+            KeyPrefix = "commonDataModel.measuredefinition";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.MeasureDefinition;
 
@@ -22,7 +22,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.CustomerInsights
 			    MeasureType = group.Add(new VocabularyKey(nameof(MeasureType), "Measure Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Version = group.Add(new VocabularyKey(nameof(Version), "Version", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -48,8 +48,8 @@ namespace CluedIn.Vocabularies.CommonDataModel.CustomerInsights
         public VocabularyKey MeasureQuery { get; private set; }
         public VocabularyKey MeasureSubType { get; private set; }
         public VocabularyKey MeasureType { get; private set; }
-        public VocabularyKey Version { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey Version { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class IatiFileGenerationVocabulary : SimpleVocabulary
     {
         public IatiFileGenerationVocabulary()
         {
             VocabularyName = "Iati File Generation";
-            KeyPrefix = "commonDataModel.iatifilegeneration.nonprofitiati";
+            KeyPrefix = "commonDataModel.iatifilegeneration";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.IatiFileGeneration;
 
@@ -17,7 +17,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
 			    IatiFileGenerationId = group.Add(new VocabularyKey(nameof(IatiFileGenerationId), "IATI File Generation", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

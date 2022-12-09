@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class TimeGroupDetailVocabulary : SimpleVocabulary
     {
         public TimeGroupDetailVocabulary()
         {
             VocabularyName = "Time Group Detail";
-            KeyPrefix = "commonDataModel.timegroupdetail.scheduling";
+            KeyPrefix = "commonDataModel.timegroupdetail";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.TimeGroupDetail;
 
@@ -22,7 +22,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
 			    StageId = group.Add(new VocabularyKey(nameof(StageId), "Stage Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
 			    TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    EndTime = group.Add(new VocabularyKey(nameof(EndTime), "End Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StartTime = group.Add(new VocabularyKey(nameof(StartTime), "Start Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StartTime = group.Add(new VocabularyKey(nameof(StartTime), "Start Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -43,14 +43,14 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
             #endregion
         }
 
-        public VocabularyKey TimeGroupDetailId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey EndTime { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey ProcessId { get; private set; }
         public VocabularyKey StageId { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
-        public VocabularyKey EndTime { get; private set; }
         public VocabularyKey StartTime { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TimeGroupDetailId { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
     }
 }

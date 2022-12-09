@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class SectorVocabulary : SimpleVocabulary
     {
         public SectorVocabulary()
         {
             VocabularyName = "Sector";
-            KeyPrefix = "commonDataModel.sector.nonprofitiati";
+            KeyPrefix = "commonDataModel.sector";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Sector;
 
@@ -19,7 +19,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
 			    RelatedTo = group.Add(new VocabularyKey(nameof(RelatedTo), "Related To", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    SectorId = group.Add(new VocabularyKey(nameof(SectorId), "Sector", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

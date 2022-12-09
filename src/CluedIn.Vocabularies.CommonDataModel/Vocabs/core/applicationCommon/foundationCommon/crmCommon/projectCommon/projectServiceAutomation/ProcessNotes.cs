@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ProcessNotesVocabulary : SimpleVocabulary
     {
         public ProcessNotesVocabulary()
         {
             VocabularyName = "Process Notes";
-            KeyPrefix = "commonDataModel.processnotes.projectserviceautomation";
+            KeyPrefix = "commonDataModel.processnotes";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ProcessNotes;
 
@@ -29,7 +29,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    Entity = group.Add(new VocabularyKey(nameof(Entity), "Entity", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    EntityName = group.Add(new VocabularyKey(nameof(EntityName), "Entity Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Form = group.Add(new VocabularyKey(nameof(Form), "Form", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Message = group.Add(new VocabularyKey(nameof(Message), "Message", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Message = group.Add(new VocabularyKey(nameof(Message), "Message", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -45,21 +45,21 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
-        public VocabularyKey ProcessNotesId { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey Details { get; private set; }
         public VocabularyKey Entity { get; private set; }
         public VocabularyKey EntityName { get; private set; }
         public VocabularyKey Form { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
         public VocabularyKey Message { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey ProcessNotesId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

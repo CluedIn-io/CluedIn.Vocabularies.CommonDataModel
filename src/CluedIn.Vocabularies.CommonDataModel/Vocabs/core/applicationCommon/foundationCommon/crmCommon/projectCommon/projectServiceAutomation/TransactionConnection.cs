@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class TransactionConnectionVocabulary : SimpleVocabulary
     {
         public TransactionConnectionVocabulary()
         {
             VocabularyName = "Transaction Connection";
-            KeyPrefix = "commonDataModel.transactionconnection.projectserviceautomation";
+            KeyPrefix = "commonDataModel.transactionconnection";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.TransactionConnection;
 
@@ -23,7 +23,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    Transaction1Type = group.Add(new VocabularyKey(nameof(Transaction1Type), "Transaction 1 Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Transaction2 = group.Add(new VocabularyKey(nameof(Transaction2), "Transaction 2", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Transaction2Role = group.Add(new VocabularyKey(nameof(Transaction2Role), "Transaction 2 Role", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Transaction2Type = group.Add(new VocabularyKey(nameof(Transaction2Type), "Transaction 2 Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Transaction2Type = group.Add(new VocabularyKey(nameof(Transaction2Type), "Transaction 2 Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -43,15 +43,15 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
-        public VocabularyKey TransactionConnectionId { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey Transaction1 { get; private set; }
         public VocabularyKey Transaction1Role { get; private set; }
         public VocabularyKey Transaction1Type { get; private set; }
         public VocabularyKey Transaction2 { get; private set; }
         public VocabularyKey Transaction2Role { get; private set; }
         public VocabularyKey Transaction2Type { get; private set; }
+        public VocabularyKey TransactionConnectionId { get; private set; }
     }
 }

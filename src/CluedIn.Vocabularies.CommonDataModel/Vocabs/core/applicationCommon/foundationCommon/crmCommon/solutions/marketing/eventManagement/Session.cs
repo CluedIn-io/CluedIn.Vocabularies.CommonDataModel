@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class SessionVocabulary : SimpleVocabulary
     {
         public SessionVocabulary()
         {
             VocabularyName = "Session";
-            KeyPrefix = "commonDataModel.session.eventmanagement";
+            KeyPrefix = "commonDataModel.session";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Session;
 
@@ -59,7 +59,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
 			    DurationMins = group.Add(new VocabularyKey(nameof(DurationMins), "Duration (mins)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    TotalNumberOfQuestionsAsked = group.Add(new VocabularyKey(nameof(TotalNumberOfQuestionsAsked), "Total number of questions asked", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    TotalNumberOfQuestionsAskedDate = group.Add(new VocabularyKey(nameof(TotalNumberOfQuestionsAskedDate), "Total number of questions asked (Last Updated On)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TotalNumberOfQuestionsAskedState = group.Add(new VocabularyKey(nameof(TotalNumberOfQuestionsAskedState), "Total number of questions asked (State)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    TotalNumberOfQuestionsAskedState = group.Add(new VocabularyKey(nameof(TotalNumberOfQuestionsAskedState), "Total number of questions asked (State)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -110,16 +110,13 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
             #endregion
         }
 
-        public VocabularyKey SessionId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey AudienceType { get; private set; }
         public VocabularyKey AVSupport { get; private set; }
         public VocabularyKey ByInvitationOnly { get; private set; }
         public VocabularyKey CamerasPermitted { get; private set; }
         public VocabularyKey CheckInCount { get; private set; }
         public VocabularyKey DetailedDescription { get; private set; }
+        public VocabularyKey DurationMins { get; private set; }
         public VocabularyKey EndTime { get; private set; }
         public VocabularyKey EventSpeakerId { get; private set; }
         public VocabularyKey ExternalUrl { get; private set; }
@@ -128,6 +125,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
         public VocabularyKey InternetConnection { get; private set; }
         public VocabularyKey Keywords { get; private set; }
         public VocabularyKey Language { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey NDA { get; private set; }
         public VocabularyKey PresentationManagerUrl { get; private set; }
         public VocabularyKey PublishStatus { get; private set; }
@@ -136,12 +134,18 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
         public VocabularyKey RegistrationCount { get; private set; }
         public VocabularyKey SessionCode { get; private set; }
         public VocabularyKey SessionFormat { get; private set; }
+        public VocabularyKey SessionId { get; private set; }
         public VocabularyKey SessionMaxCapacity { get; private set; }
         public VocabularyKey SessionObjectives { get; private set; }
         public VocabularyKey SessionPreRequisites { get; private set; }
         public VocabularyKey SessionSummary { get; private set; }
         public VocabularyKey SessionType { get; private set; }
         public VocabularyKey StartTime { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TotalNumberOfQuestionsAsked { get; private set; }
+        public VocabularyKey TotalNumberOfQuestionsAskedDate { get; private set; }
+        public VocabularyKey TotalNumberOfQuestionsAskedState { get; private set; }
         public VocabularyKey VideoConferencing { get; private set; }
         public VocabularyKey WebinarConfigurationId { get; private set; }
         public VocabularyKey WebinarID { get; private set; }
@@ -152,9 +156,5 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
         public VocabularyKey WebinarType { get; private set; }
         public VocabularyKey WebinarURL { get; private set; }
         public VocabularyKey WhiteBoard { get; private set; }
-        public VocabularyKey DurationMins { get; private set; }
-        public VocabularyKey TotalNumberOfQuestionsAsked { get; private set; }
-        public VocabularyKey TotalNumberOfQuestionsAskedDate { get; private set; }
-        public VocabularyKey TotalNumberOfQuestionsAskedState { get; private set; }
     }
 }

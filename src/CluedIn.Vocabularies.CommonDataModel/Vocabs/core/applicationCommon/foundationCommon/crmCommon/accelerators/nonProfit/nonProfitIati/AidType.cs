@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class AidTypeVocabulary : SimpleVocabulary
     {
         public AidTypeVocabulary()
         {
             VocabularyName = "Aid Type";
-            KeyPrefix = "commonDataModel.aidtype.nonprofitiati";
+            KeyPrefix = "commonDataModel.aidtype";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.AidType;
 
@@ -17,7 +17,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
 			    AidTypeId = group.Add(new VocabularyKey(nameof(AidTypeId), "Aid Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

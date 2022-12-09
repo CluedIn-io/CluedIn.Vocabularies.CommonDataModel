@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.CustomerInsights
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class CustomerActivityVocabulary : SimpleVocabulary
     {
         public CustomerActivityVocabulary()
         {
             VocabularyName = "Customer Activity";
-            KeyPrefix = "commonDataModel.customeractivity.customerinsights";
+            KeyPrefix = "commonDataModel.customeractivity";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.CustomerActivity;
 
@@ -31,7 +31,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.CustomerInsights
 			    Version = group.Add(new VocabularyKey(nameof(Version), "Version", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    ViralityScore = group.Add(new VocabularyKey(nameof(ViralityScore), "Virality Score", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -64,11 +64,11 @@ namespace CluedIn.Vocabularies.CommonDataModel.CustomerInsights
         public VocabularyKey Message { get; private set; }
         public VocabularyKey NumberOfResponses { get; private set; }
         public VocabularyKey Sentiment { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey Subject { get; private set; }
         public VocabularyKey Url { get; private set; }
         public VocabularyKey Version { get; private set; }
         public VocabularyKey ViralityScore { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
     }
 }

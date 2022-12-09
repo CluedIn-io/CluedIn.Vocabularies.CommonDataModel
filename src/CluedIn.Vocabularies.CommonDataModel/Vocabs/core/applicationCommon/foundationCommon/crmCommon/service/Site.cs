@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Service
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class SiteVocabulary : SimpleVocabulary
     {
         public SiteVocabulary()
         {
             VocabularyName = "Site";
-            KeyPrefix = "commonDataModel.site.service";
+            KeyPrefix = "commonDataModel.site";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Site;
 
@@ -66,7 +66,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
 			    Address2UPSZone = group.Add(new VocabularyKey(nameof(Address2UPSZone), "Address 2: UPS Zone", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Address2UTCOffset = group.Add(new VocabularyKey(nameof(Address2UTCOffset), "Address 2: UTC Offset", VocabularyKeyDataType.TimeZone, VocabularyKeyVisibility.Visible)); 
 			    EmailAddress = group.Add(new VocabularyKey(nameof(EmailAddress), "Email", VocabularyKeyDataType.Email, VocabularyKeyVisibility.Visible)); 
-			    TimeZoneCode = group.Add(new VocabularyKey(nameof(TimeZoneCode), "Time Zone", VocabularyKeyDataType.TimeZone, VocabularyKeyVisibility.Visible));             
+			    TimeZoneCode = group.Add(new VocabularyKey(nameof(TimeZoneCode), "Time Zone", VocabularyKeyDataType.TimeZone, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -143,15 +143,6 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
             #endregion
         }
 
-        public VocabularyKey SiteId { get; private set; }
-        public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey Address1AddressId { get; private set; }
         public VocabularyKey Address1AddressTypeCode { get; private set; }
         public VocabularyKey Address1City { get; private set; }
@@ -194,7 +185,16 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
         public VocabularyKey Address2Telephone3 { get; private set; }
         public VocabularyKey Address2UPSZone { get; private set; }
         public VocabularyKey Address2UTCOffset { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
         public VocabularyKey EmailAddress { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey SiteId { get; private set; }
         public VocabularyKey TimeZoneCode { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Marketing
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class SegmentVocabulary : SimpleVocabulary
     {
         public SegmentVocabulary()
         {
             VocabularyName = "Segment";
-            KeyPrefix = "commonDataModel.segment.marketing";
+            KeyPrefix = "commonDataModel.segment";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Segment;
 
@@ -24,7 +24,14 @@ namespace CluedIn.Vocabularies.CommonDataModel.Marketing
 			    MemberIDs = group.Add(new VocabularyKey(nameof(MemberIDs), "Member IDs", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ProvisioningState = group.Add(new VocabularyKey(nameof(ProvisioningState), "Provisioning state", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    QueryDefinition = group.Add(new VocabularyKey(nameof(QueryDefinition), "Query definition", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SegmentType = group.Add(new VocabularyKey(nameof(SegmentType), "Segment type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    SegmentType = group.Add(new VocabularyKey(nameof(SegmentType), "Segment type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Segment Details for CustomerInsights", group =>
+            {
+			    LastEvaluationDate = group.Add(new VocabularyKey(nameof(LastEvaluationDate), "Last Evaluation Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    MemberCount = group.Add(new VocabularyKey(nameof(MemberCount), "Member Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Version = group.Add(new VocabularyKey(nameof(Version), "Version", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -45,16 +52,20 @@ namespace CluedIn.Vocabularies.CommonDataModel.Marketing
             #endregion
         }
 
-        public VocabularyKey SegmentId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Segmentname { get; private set; }
-        public VocabularyKey Description { get; private set; }
         public VocabularyKey ActivationStatus { get; private set; }
+        public VocabularyKey Description { get; private set; }
         public VocabularyKey FilterQuery { get; private set; }
+        public VocabularyKey LastEvaluationDate { get; private set; }
+        public VocabularyKey MemberCount { get; private set; }
         public VocabularyKey MemberIDs { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey ProvisioningState { get; private set; }
         public VocabularyKey QueryDefinition { get; private set; }
+        public VocabularyKey SegmentId { get; private set; }
+        public VocabularyKey Segmentname { get; private set; }
         public VocabularyKey SegmentType { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey Version { get; private set; }
     }
 }

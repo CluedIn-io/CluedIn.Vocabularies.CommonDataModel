@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class AdditionalNameVocabulary : SimpleVocabulary
     {
         public AdditionalNameVocabulary()
         {
             VocabularyName = "Additional Name";
-            KeyPrefix = "commonDataModel.additionalname.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.additionalname";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.AdditionalName;
 
@@ -25,7 +25,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    StartDate = group.Add(new VocabularyKey(nameof(StartDate), "Name Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Suffix = group.Add(new VocabularyKey(nameof(Suffix), "Suffix", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -58,8 +58,8 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
         public VocabularyKey NameUse { get; private set; }
         public VocabularyKey Prefix { get; private set; }
         public VocabularyKey StartDate { get; private set; }
-        public VocabularyKey Suffix { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey Suffix { get; private set; }
     }
 }

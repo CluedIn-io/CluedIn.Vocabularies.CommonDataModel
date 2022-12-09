@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ProjectApprovalVocabulary : SimpleVocabulary
     {
         public ProjectApprovalVocabulary()
         {
             VocabularyName = "Project Approval";
-            KeyPrefix = "commonDataModel.projectapproval.projectserviceautomation";
+            KeyPrefix = "commonDataModel.projectapproval";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ProjectApproval;
 
@@ -39,7 +39,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    CostAmount = group.Add(new VocabularyKey(nameof(CostAmount), "Cost Amount", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
 			    CostAmountBase = group.Add(new VocabularyKey(nameof(CostAmountBase), "Cost Amount (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    SalesAmount = group.Add(new VocabularyKey(nameof(SalesAmount), "Sales Amount", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    SalesAmountBase = group.Add(new VocabularyKey(nameof(SalesAmountBase), "Sales Amount (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    SalesAmountBase = group.Add(new VocabularyKey(nameof(SalesAmountBase), "Sales Amount (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -72,31 +72,31 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
-        public VocabularyKey ProjectApprovalId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey ApprovedOn { get; private set; }
         public VocabularyKey BillingType { get; private set; }
+        public VocabularyKey CostAmount { get; private set; }
+        public VocabularyKey CostAmountBase { get; private set; }
         public VocabularyKey CostPrice { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey CostPriceBase { get; private set; }
         public VocabularyKey CostQuantity { get; private set; }
         public VocabularyKey Date { get; private set; }
         public VocabularyKey EntryType { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey ExternalComments { get; private set; }
         public VocabularyKey HasReceipt { get; private set; }
         public VocabularyKey InternalComments { get; private set; }
         public VocabularyKey JournalTransaction { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey ProjectApprovalId { get; private set; }
         public VocabularyKey RecordStage { get; private set; }
         public VocabularyKey ReferenceExpenseId { get; private set; }
         public VocabularyKey ReferenceTimeId { get; private set; }
+        public VocabularyKey SalesAmount { get; private set; }
+        public VocabularyKey SalesAmountBase { get; private set; }
         public VocabularyKey SalesPrice { get; private set; }
         public VocabularyKey SalesPriceBase { get; private set; }
         public VocabularyKey SalesQuantity { get; private set; }
-        public VocabularyKey CostAmount { get; private set; }
-        public VocabularyKey CostAmountBase { get; private set; }
-        public VocabularyKey SalesAmount { get; private set; }
-        public VocabularyKey SalesAmountBase { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

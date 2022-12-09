@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class QueueVocabulary : SimpleVocabulary
     {
         public QueueVocabulary()
         {
             VocabularyName = "Queue";
-            KeyPrefix = "commonDataModel.queue.applicationcommon";
+            KeyPrefix = "commonDataModel.queue";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Queue;
 
@@ -44,7 +44,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    DefaultMailbox = group.Add(new VocabularyKey(nameof(DefaultMailbox), "Mailbox", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    EntityImageId = group.Add(new VocabularyKey(nameof(EntityImageId), "Entity Image Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
 			    IsEmailAddressApprovedByO365Admin = group.Add(new VocabularyKey(nameof(IsEmailAddressApprovedByO365Admin), "Email Address O365 Admin Approval Status", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    QueueViewType = group.Add(new VocabularyKey(nameof(QueueViewType), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    QueueViewType = group.Add(new VocabularyKey(nameof(QueueViewType), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -95,36 +95,36 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             #endregion
         }
 
-        public VocabularyKey QueueId { get; private set; }
-        public VocabularyKey EmailAddress { get; private set; }
-        public VocabularyKey QueueTypeCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey Description { get; private set; }
-        public VocabularyKey QueueSemantics { get; private set; }
-        public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey IgnoreUnsolicitedEmail { get; private set; }
-        public VocabularyKey IsFaxQueue { get; private set; }
-        public VocabularyKey EmailPassword { get; private set; }
-        public VocabularyKey IncomingEmailDeliveryMethod { get; private set; }
-        public VocabularyKey EmailUsername { get; private set; }
-        public VocabularyKey OutgoingEmailDeliveryMethod { get; private set; }
         public VocabularyKey AllowEmailCredentials { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey DefaultMailbox { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey EmailAddress { get; private set; }
+        public VocabularyKey EmailPassword { get; private set; }
+        public VocabularyKey EmailRouterAccessApproval { get; private set; }
+        public VocabularyKey EmailUsername { get; private set; }
+        public VocabularyKey EntityImageId { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey IgnoreUnsolicitedEmail { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey IncomingEmailDeliveryMethod { get; private set; }
         public VocabularyKey IncomingEmailFilteringMethod { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey OwningUser { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey IsEmailAddressApprovedByO365Admin { get; private set; }
+        public VocabularyKey IsFaxQueue { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey NumberOfItems { get; private set; }
         public VocabularyKey NumberOfMembers { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey OutgoingEmailDeliveryMethod { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey OwningTeam { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
-        public VocabularyKey EmailRouterAccessApproval { get; private set; }
-        public VocabularyKey DefaultMailbox { get; private set; }
-        public VocabularyKey EntityImageId { get; private set; }
-        public VocabularyKey IsEmailAddressApprovedByO365Admin { get; private set; }
+        public VocabularyKey OwningUser { get; private set; }
+        public VocabularyKey QueueId { get; private set; }
+        public VocabularyKey QueueSemantics { get; private set; }
+        public VocabularyKey QueueTypeCode { get; private set; }
         public VocabularyKey QueueViewType { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

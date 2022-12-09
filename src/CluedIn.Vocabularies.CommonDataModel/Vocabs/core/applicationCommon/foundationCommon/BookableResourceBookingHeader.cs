@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class BookableResourceBookingHeaderVocabulary : SimpleVocabulary
     {
         public BookableResourceBookingHeaderVocabulary()
         {
             VocabularyName = "Bookable Resource Booking Header";
-            KeyPrefix = "commonDataModel.bookableresourcebookingheader.foundationcommon";
+            KeyPrefix = "commonDataModel.bookableresourcebookingheader";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.BookableResourceBookingHeader;
 
@@ -24,7 +24,11 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
 			    StartTime = group.Add(new VocabularyKey(nameof(StartTime), "Start Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "ExchangeRate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));             
+			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "ExchangeRate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("BookableResourceBookingHeader Details for ProjectCommon", group =>
+            {
+			    BookingType = group.Add(new VocabularyKey(nameof(BookingType), "Booking Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -58,15 +62,16 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
         }
 
         public VocabularyKey BookableResourceBookingHeaderId { get; private set; }
+        public VocabularyKey BookingType { get; private set; }
+        public VocabularyKey Duration { get; private set; }
+        public VocabularyKey EndTime { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey ProcessId { get; private set; }
         public VocabularyKey StageId { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
-        public VocabularyKey Duration { get; private set; }
-        public VocabularyKey EndTime { get; private set; }
         public VocabularyKey StartTime { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
     }
 }

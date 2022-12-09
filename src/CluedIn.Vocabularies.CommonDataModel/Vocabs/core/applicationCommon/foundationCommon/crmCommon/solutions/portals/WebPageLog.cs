@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Portals
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class WebPageLogVocabulary : SimpleVocabulary
     {
         public WebPageLogVocabulary()
         {
             VocabularyName = "Web Page Log";
-            KeyPrefix = "commonDataModel.webpagelog.portals";
+            KeyPrefix = "commonDataModel.webpagelog";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.WebPageLog;
 
@@ -19,7 +19,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Date = group.Add(new VocabularyKey(nameof(Date), "Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IpAddress = group.Add(new VocabularyKey(nameof(IpAddress), "IP Address", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    IpAddress = group.Add(new VocabularyKey(nameof(IpAddress), "IP Address", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -41,11 +41,11 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
             #endregion
         }
 
-        public VocabularyKey WebpagelogId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey Date { get; private set; }
         public VocabularyKey IpAddress { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey WebpagelogId { get; private set; }
     }
 }

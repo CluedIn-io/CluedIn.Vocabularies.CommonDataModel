@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class BookingChangeVocabulary : SimpleVocabulary
     {
         public BookingChangeVocabulary()
         {
             VocabularyName = "Booking Change";
-            KeyPrefix = "commonDataModel.bookingchange.scheduling";
+            KeyPrefix = "commonDataModel.bookingchange";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.BookingChange;
 
@@ -18,7 +18,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ChangesJSON = group.Add(new VocabularyKey(nameof(ChangesJSON), "Changes JSON", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    ChangesJSON = group.Add(new VocabularyKey(nameof(ChangesJSON), "Changes JSON", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -39,9 +39,9 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
         }
 
         public VocabularyKey BookingChangeId { get; private set; }
+        public VocabularyKey ChangesJSON { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey ChangesJSON { get; private set; }
     }
 }

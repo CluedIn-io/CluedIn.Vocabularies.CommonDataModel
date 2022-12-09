@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ResourceRequirementDetailVocabulary : SimpleVocabulary
     {
         public ResourceRequirementDetailVocabulary()
         {
             VocabularyName = "Resource Requirement Detail";
-            KeyPrefix = "commonDataModel.resourcerequirementdetail.scheduling";
+            KeyPrefix = "commonDataModel.resourcerequirementdetail";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ResourceRequirementDetail;
 
@@ -21,7 +21,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
 			    Duration = group.Add(new VocabularyKey(nameof(Duration), "Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    From = group.Add(new VocabularyKey(nameof(From), "From", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    To = group.Add(new VocabularyKey(nameof(To), "To", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Hours = group.Add(new VocabularyKey(nameof(Hours), "Hours", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));             
+			    Hours = group.Add(new VocabularyKey(nameof(Hours), "Hours", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -42,13 +42,13 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
             #endregion
         }
 
+        public VocabularyKey Duration { get; private set; }
+        public VocabularyKey From { get; private set; }
+        public VocabularyKey Hours { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey ResourceRequirementDetailId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey Duration { get; private set; }
-        public VocabularyKey From { get; private set; }
         public VocabularyKey To { get; private set; }
-        public VocabularyKey Hours { get; private set; }
     }
 }

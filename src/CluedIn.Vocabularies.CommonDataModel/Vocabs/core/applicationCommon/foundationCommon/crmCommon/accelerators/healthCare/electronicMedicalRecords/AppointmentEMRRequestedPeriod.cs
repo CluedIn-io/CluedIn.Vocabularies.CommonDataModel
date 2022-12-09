@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class AppointmentEMRRequestedPeriodVocabulary : SimpleVocabulary
     {
         public AppointmentEMRRequestedPeriodVocabulary()
         {
             VocabularyName = "Appointment EMR Requested Period";
-            KeyPrefix = "commonDataModel.appointmentemrrequestedperiod.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.appointmentemrrequestedperiod";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.AppointmentEMRRequestedPeriod;
 
@@ -19,7 +19,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    RequestedPeriodEndDate = group.Add(new VocabularyKey(nameof(RequestedPeriodEndDate), "Requested Period End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    RequestedPeriodStartDate = group.Add(new VocabularyKey(nameof(RequestedPeriodStartDate), "Requested Period Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

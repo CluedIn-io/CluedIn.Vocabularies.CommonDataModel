@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class PaymentScheduleVocabulary : SimpleVocabulary
     {
         public PaymentScheduleVocabulary()
         {
             VocabularyName = "Payment Schedule";
-            KeyPrefix = "commonDataModel.paymentschedule.nonprofitcore";
+            KeyPrefix = "commonDataModel.paymentschedule";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.PaymentSchedule;
 
@@ -30,7 +30,11 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
 			    TotalAmount = group.Add(new VocabularyKey(nameof(TotalAmount), "Total Amount", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
 			    TotalAmountBase = group.Add(new VocabularyKey(nameof(TotalAmountBase), "Total Amount (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("PaymentSchedule Details for NonProfitIati", group =>
+            {
+
             });
             
             #region Incoming Relationships
@@ -78,9 +82,9 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
         public VocabularyKey PaymentScheduleId { get; private set; }
         public VocabularyKey RecurringAmount { get; private set; }
         public VocabularyKey RecurringAmountBase { get; private set; }
-        public VocabularyKey TotalAmount { get; private set; }
-        public VocabularyKey TotalAmountBase { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TotalAmount { get; private set; }
+        public VocabularyKey TotalAmountBase { get; private set; }
     }
 }

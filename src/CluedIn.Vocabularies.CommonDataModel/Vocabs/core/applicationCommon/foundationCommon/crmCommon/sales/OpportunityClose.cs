@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Sales
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class OpportunityCloseVocabulary : SimpleVocabulary
     {
         public OpportunityCloseVocabulary()
         {
             VocabularyName = "Opportunity Close";
-            KeyPrefix = "commonDataModel.opportunityclose.sales";
+            KeyPrefix = "commonDataModel.opportunityclose";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.OpportunityClose;
 
@@ -26,7 +26,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Sales
 			    ActualRevenue = group.Add(new VocabularyKey(nameof(ActualRevenue), "Actual Revenue", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
 			    ActualRevenueBase = group.Add(new VocabularyKey(nameof(ActualRevenueBase), "Actual Revenue (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    CreatedByExternalParty = group.Add(new VocabularyKey(nameof(CreatedByExternalParty), "Created By (External Party)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ModifiedByExternalParty = group.Add(new VocabularyKey(nameof(ModifiedByExternalParty), "Modified By (External Party)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    ModifiedByExternalParty = group.Add(new VocabularyKey(nameof(ModifiedByExternalParty), "Modified By (External Party)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -64,18 +64,18 @@ namespace CluedIn.Vocabularies.CommonDataModel.Sales
             #endregion
         }
 
-        public VocabularyKey Description { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
-        public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey StageId { get; private set; }
-        public VocabularyKey OnHoldTime { get; private set; }
-        public VocabularyKey LastOnHoldTime { get; private set; }
         public VocabularyKey ActualRevenue { get; private set; }
         public VocabularyKey ActualRevenueBase { get; private set; }
         public VocabularyKey CreatedByExternalParty { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey LastOnHoldTime { get; private set; }
         public VocabularyKey ModifiedByExternalParty { get; private set; }
+        public VocabularyKey OnHoldTime { get; private set; }
+        public VocabularyKey ProcessId { get; private set; }
+        public VocabularyKey StageId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
     }
 }

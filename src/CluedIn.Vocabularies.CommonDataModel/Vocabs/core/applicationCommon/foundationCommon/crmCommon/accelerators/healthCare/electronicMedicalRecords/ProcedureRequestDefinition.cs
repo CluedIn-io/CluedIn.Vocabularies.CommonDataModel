@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ProcedureRequestDefinitionVocabulary : SimpleVocabulary
     {
         public ProcedureRequestDefinitionVocabulary()
         {
             VocabularyName = "Procedure Request Definition";
-            KeyPrefix = "commonDataModel.procedurerequestdefinition.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.procedurerequestdefinition";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ProcedureRequestDefinition;
 
@@ -18,7 +18,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ProcedureRequestDefinitionId = group.Add(new VocabularyKey(nameof(ProcedureRequestDefinitionId), "Procedure Request Definition", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

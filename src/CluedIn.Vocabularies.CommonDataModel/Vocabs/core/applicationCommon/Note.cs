@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class NoteVocabulary : SimpleVocabulary
     {
         public NoteVocabulary()
         {
             VocabularyName = "Note";
-            KeyPrefix = "commonDataModel.note.applicationcommon";
+            KeyPrefix = "commonDataModel.note";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Note;
 
@@ -29,7 +29,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), "Version Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StepId = group.Add(new VocabularyKey(nameof(StepId), "Step Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -65,20 +65,20 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
         }
 
         public VocabularyKey AnnotationId { get; private set; }
-        public VocabularyKey ObjectTypeCode { get; private set; }
-        public VocabularyKey Subject { get; private set; }
-        public VocabularyKey IsDocument { get; private set; }
-        public VocabularyKey NoteText { get; private set; }
-        public VocabularyKey MimeType { get; private set; }
-        public VocabularyKey LangId { get; private set; }
-        public VocabularyKey DocumentBody { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey FileSize { get; private set; }
+        public VocabularyKey DocumentBody { get; private set; }
         public VocabularyKey FileName { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey StepId { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey FileSize { get; private set; }
         public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey IsDocument { get; private set; }
+        public VocabularyKey LangId { get; private set; }
+        public VocabularyKey MimeType { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey NoteText { get; private set; }
+        public VocabularyKey ObjectTypeCode { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey StepId { get; private set; }
+        public VocabularyKey Subject { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

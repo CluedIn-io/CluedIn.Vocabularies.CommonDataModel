@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class PaymentAssetVocabulary : SimpleVocabulary
     {
         public PaymentAssetVocabulary()
         {
             VocabularyName = "Payment Asset";
-            KeyPrefix = "commonDataModel.paymentasset.nonprofitcore";
+            KeyPrefix = "commonDataModel.paymentasset";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.PaymentAsset;
 
@@ -27,7 +27,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
 			    Quantity = group.Add(new VocabularyKey(nameof(Quantity), "Quantity", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
 			    Symbol = group.Add(new VocabularyKey(nameof(Symbol), "Symbol", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -57,19 +57,19 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
             #endregion
         }
 
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey Amount { get; private set; }
         public VocabularyKey AmountBase { get; private set; }
         public VocabularyKey AssetType { get; private set; }
         public VocabularyKey BookDate { get; private set; }
         public VocabularyKey Description { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey PaymentAssetCategory { get; private set; }
         public VocabularyKey PaymentAssetId { get; private set; }
         public VocabularyKey PaymentAssetSubcategory { get; private set; }
         public VocabularyKey Quantity { get; private set; }
-        public VocabularyKey Symbol { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey Symbol { get; private set; }
     }
 }

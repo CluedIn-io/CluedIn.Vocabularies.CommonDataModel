@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class SiconfigVocabulary : SimpleVocabulary
     {
         public SiconfigVocabulary()
         {
             VocabularyName = "Siconfig";
-            KeyPrefix = "commonDataModel.siconfig.projectcommon";
+            KeyPrefix = "commonDataModel.siconfig";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Siconfig;
 
@@ -17,7 +17,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectCommon
 			    SiConfigId = group.Add(new VocabularyKey(nameof(SiConfigId), "siconfig", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Version = group.Add(new VocabularyKey(nameof(Version), "Version", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Version = group.Add(new VocabularyKey(nameof(Version), "Version", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

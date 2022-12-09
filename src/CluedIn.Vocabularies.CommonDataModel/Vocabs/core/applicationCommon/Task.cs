@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class TaskVocabulary : SimpleVocabulary
     {
         public TaskVocabulary()
         {
             VocabularyName = "Task";
-            KeyPrefix = "commonDataModel.task.applicationcommon";
+            KeyPrefix = "commonDataModel.task";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Task;
 
@@ -24,7 +24,32 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    CrmTaskAssignedUniqueId = group.Add(new VocabularyKey(nameof(CrmTaskAssignedUniqueId), "Assigned Task Unique Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
 			    OnHoldTime = group.Add(new VocabularyKey(nameof(OnHoldTime), "On Hold Time (Minutes)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    LastOnHoldTime = group.Add(new VocabularyKey(nameof(LastOnHoldTime), "Last On Hold Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    LastOnHoldTime = group.Add(new VocabularyKey(nameof(LastOnHoldTime), "Last On Hold Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Task Details for ElectronicMedicalRecords", group =>
+            {
+			    ContextType = group.Add(new VocabularyKey(nameof(ContextType), "Context Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    DefinitionUri = group.Add(new VocabularyKey(nameof(DefinitionUri), "Definition Uri", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    DescriptionFocus = group.Add(new VocabularyKey(nameof(DescriptionFocus), "Description Focus", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    DescriptionFor = group.Add(new VocabularyKey(nameof(DescriptionFor), "Description For", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    GroupIdentifier = group.Add(new VocabularyKey(nameof(GroupIdentifier), "Group Identifier", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Intent = group.Add(new VocabularyKey(nameof(Intent), "Intent", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    PerformerOwnerType = group.Add(new VocabularyKey(nameof(PerformerOwnerType), "Performer type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    RequesterAgent = group.Add(new VocabularyKey(nameof(RequesterAgent), "Requester Agent", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    RestrictionPeriodEndDate = group.Add(new VocabularyKey(nameof(RestrictionPeriodEndDate), "Restriction Period End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    RestrictionPeriodStartDate = group.Add(new VocabularyKey(nameof(RestrictionPeriodStartDate), "Restriction Period Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    RestrictionRepetitions = group.Add(new VocabularyKey(nameof(RestrictionRepetitions), "Restriction Repetitions", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+			    Status = group.Add(new VocabularyKey(nameof(Status), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    TaskNumber = group.Add(new VocabularyKey(nameof(TaskNumber), "Task Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    TaskPriority = group.Add(new VocabularyKey(nameof(TaskPriority), "Task Priority", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Task Details for Service", group =>
+            {
+
+            });
+            AddGroup("Task Details for Marketing", group =>
+            {
+			    CustomerJourneyIteration = group.Add(new VocabularyKey(nameof(CustomerJourneyIteration), "Customer journey iteration", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -164,16 +189,31 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             #endregion
         }
 
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey Description { get; private set; }
-        public VocabularyKey PercentComplete { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
-        public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey StageId { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
+        public VocabularyKey ContextType { get; private set; }
         public VocabularyKey CrmTaskAssignedUniqueId { get; private set; }
-        public VocabularyKey OnHoldTime { get; private set; }
+        public VocabularyKey CustomerJourneyIteration { get; private set; }
+        public VocabularyKey DefinitionUri { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey DescriptionFocus { get; private set; }
+        public VocabularyKey DescriptionFor { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey GroupIdentifier { get; private set; }
+        public VocabularyKey Intent { get; private set; }
         public VocabularyKey LastOnHoldTime { get; private set; }
+        public VocabularyKey OnHoldTime { get; private set; }
+        public VocabularyKey PercentComplete { get; private set; }
+        public VocabularyKey PerformerOwnerType { get; private set; }
+        public VocabularyKey ProcessId { get; private set; }
+        public VocabularyKey RequesterAgent { get; private set; }
+        public VocabularyKey RestrictionPeriodEndDate { get; private set; }
+        public VocabularyKey RestrictionPeriodStartDate { get; private set; }
+        public VocabularyKey RestrictionRepetitions { get; private set; }
+        public VocabularyKey StageId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey Status { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TaskNumber { get; private set; }
+        public VocabularyKey TaskPriority { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
     }
 }

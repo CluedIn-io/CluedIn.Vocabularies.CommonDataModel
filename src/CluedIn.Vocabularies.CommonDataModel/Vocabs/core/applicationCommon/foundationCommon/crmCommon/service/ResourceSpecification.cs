@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Service
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ResourceSpecificationVocabulary : SimpleVocabulary
     {
         public ResourceSpecificationVocabulary()
         {
             VocabularyName = "Resource Specification";
-            KeyPrefix = "commonDataModel.resourcespecification.service";
+            KeyPrefix = "commonDataModel.resourcespecification";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ResourceSpecification;
 
@@ -29,7 +29,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
 			    ObjectiveExpression = group.Add(new VocabularyKey(nameof(ObjectiveExpression), "Objective Expression", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ObjectTypeCode = group.Add(new VocabularyKey(nameof(ObjectTypeCode), "Object Type ", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    RequiredCount = group.Add(new VocabularyKey(nameof(RequiredCount), "Required Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    SameSite = group.Add(new VocabularyKey(nameof(SameSite), "Same Site", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));             
+			    SameSite = group.Add(new VocabularyKey(nameof(SameSite), "Same Site", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -49,21 +49,21 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
             #endregion
         }
 
-        public VocabularyKey ResourceSpecId { get; private set; }
-        public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey Constraints { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey EffortRequired { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey ObjectiveExpression { get; private set; }
         public VocabularyKey ObjectTypeCode { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey RequiredCount { get; private set; }
+        public VocabularyKey ResourceSpecId { get; private set; }
         public VocabularyKey SameSite { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

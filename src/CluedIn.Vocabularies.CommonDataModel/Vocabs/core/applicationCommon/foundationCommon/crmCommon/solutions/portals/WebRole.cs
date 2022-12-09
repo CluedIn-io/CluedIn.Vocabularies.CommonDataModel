@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Portals
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class WebRoleVocabulary : SimpleVocabulary
     {
         public WebRoleVocabulary()
         {
             VocabularyName = "Web Role";
-            KeyPrefix = "commonDataModel.webrole.portals";
+            KeyPrefix = "commonDataModel.webrole";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.WebRole;
 
@@ -21,7 +21,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
 			    AuthenticatedUsersRole = group.Add(new VocabularyKey(nameof(AuthenticatedUsersRole), "Authenticated Users Role", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    AnonymousUsersRole = group.Add(new VocabularyKey(nameof(AnonymousUsersRole), "Anonymous Users Role", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    Key = group.Add(new VocabularyKey(nameof(Key), "Key", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Key = group.Add(new VocabularyKey(nameof(Key), "Key", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -42,13 +42,13 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
             #endregion
         }
 
-        public VocabularyKey WebRoleId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
+        public VocabularyKey AnonymousUsersRole { get; private set; }
         public VocabularyKey AuthenticatedUsersRole { get; private set; }
         public VocabularyKey Description { get; private set; }
-        public VocabularyKey AnonymousUsersRole { get; private set; }
         public VocabularyKey Key { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey WebRoleId { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ResourceCatalogVocabulary : SimpleVocabulary
     {
         public ResourceCatalogVocabulary()
         {
             VocabularyName = "Resource Catalog";
-            KeyPrefix = "commonDataModel.resourcecatalog.nonprofitcore";
+            KeyPrefix = "commonDataModel.resourcecatalog";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ResourceCatalog;
 
@@ -19,7 +19,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
 			    ResourceCatalogId = group.Add(new VocabularyKey(nameof(ResourceCatalogId), "Resource Catalog", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ResourceCatalogType = group.Add(new VocabularyKey(nameof(ResourceCatalogType), "Resource Catalog Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

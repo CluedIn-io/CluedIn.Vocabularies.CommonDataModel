@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ProgramVersionDetailVocabulary : SimpleVocabulary
     {
         public ProgramVersionDetailVocabulary()
         {
             VocabularyName = "Program Version Detail";
-            KeyPrefix = "commonDataModel.programversiondetail.highereducation";
+            KeyPrefix = "commonDataModel.programversiondetail";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ProgramVersionDetail;
 
@@ -24,7 +24,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
 			    ExternalSourceSystem = group.Add(new VocabularyKey(nameof(ExternalSourceSystem), "External Source System", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    MidpointDate = group.Add(new VocabularyKey(nameof(MidpointDate), "Midpoint Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    MustGraduateBefore = group.Add(new VocabularyKey(nameof(MustGraduateBefore), "Must Graduate Before", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StartDate = group.Add(new VocabularyKey(nameof(StartDate), "Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StartDate = group.Add(new VocabularyKey(nameof(StartDate), "Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -45,16 +45,16 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
             #endregion
         }
 
-        public VocabularyKey ProgramVersionDetailId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey Code { get; private set; }
         public VocabularyKey ExpectedGraduationDate { get; private set; }
         public VocabularyKey ExternalIdentifier { get; private set; }
         public VocabularyKey ExternalSourceSystem { get; private set; }
         public VocabularyKey MidpointDate { get; private set; }
         public VocabularyKey MustGraduateBefore { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey ProgramVersionDetailId { get; private set; }
         public VocabularyKey StartDate { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

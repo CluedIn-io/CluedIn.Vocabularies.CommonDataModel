@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ProjectTaskVocabulary : SimpleVocabulary
     {
         public ProjectTaskVocabulary()
         {
             VocabularyName = "Project Task";
-            KeyPrefix = "commonDataModel.projecttask.projectserviceautomation";
+            KeyPrefix = "commonDataModel.projecttask";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ProjectTask;
 
@@ -73,7 +73,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    SalesVariance = group.Add(new VocabularyKey(nameof(SalesVariance), "Sales Variance", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
 			    SalesVarianceBase = group.Add(new VocabularyKey(nameof(SalesVarianceBase), "Sales Variance (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    VarianceOfCost = group.Add(new VocabularyKey(nameof(VarianceOfCost), "Cost Variance", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    VarianceOfCostBase = group.Add(new VocabularyKey(nameof(VarianceOfCostBase), "Cost Variance (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    VarianceOfCostBase = group.Add(new VocabularyKey(nameof(VarianceOfCostBase), "Cost Variance (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -139,12 +139,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
-        public VocabularyKey ProjectTaskId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey ProjectTaskName { get; private set; }
         public VocabularyKey ActualCost { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey ActualCostBase { get; private set; }
         public VocabularyKey ActualDuration { get; private set; }
         public VocabularyKey ActualEffort { get; private set; }
@@ -155,12 +150,17 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
         public VocabularyKey AggregationDirection { get; private set; }
         public VocabularyKey AssignedResources { get; private set; }
         public VocabularyKey AutoScheduling { get; private set; }
+        public VocabularyKey CostAtCompleteEstimate { get; private set; }
+        public VocabularyKey CostAtCompleteEstimateBase { get; private set; }
+        public VocabularyKey CostConsumptionPercentage { get; private set; }
         public VocabularyKey CostEstimateContour { get; private set; }
         public VocabularyKey Description { get; private set; }
+        public VocabularyKey DueDate { get; private set; }
         public VocabularyKey Duration { get; private set; }
         public VocabularyKey Effort { get; private set; }
         public VocabularyKey EffortContour { get; private set; }
         public VocabularyKey EffortEstimateAtComplete { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey IsLineTask { get; private set; }
         public VocabularyKey IsMilestone { get; private set; }
         public VocabularyKey MSProjectClientId { get; private set; }
@@ -170,7 +170,10 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
         public VocabularyKey PlannedSales { get; private set; }
         public VocabularyKey PlannedSalesBase { get; private set; }
         public VocabularyKey PluginProcessingData { get; private set; }
+        public VocabularyKey ProcessId { get; private set; }
         public VocabularyKey Progress { get; private set; }
+        public VocabularyKey ProjectTaskId { get; private set; }
+        public VocabularyKey ProjectTaskName { get; private set; }
         public VocabularyKey RemainingCost { get; private set; }
         public VocabularyKey RemainingCostBase { get; private set; }
         public VocabularyKey RemainingHours { get; private set; }
@@ -178,26 +181,23 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
         public VocabularyKey RemainingSalesBase { get; private set; }
         public VocabularyKey RequestedHours { get; private set; }
         public VocabularyKey ResourceUtilization { get; private set; }
+        public VocabularyKey SalesConsumptionPercentage { get; private set; }
+        public VocabularyKey SalesEstimateAtComplete { get; private set; }
+        public VocabularyKey SalesEstimateAtCompleteBase { get; private set; }
         public VocabularyKey SalesEstimateContour { get; private set; }
+        public VocabularyKey SalesVariance { get; private set; }
+        public VocabularyKey SalesVarianceBase { get; private set; }
         public VocabularyKey ScheduledDurationMinutes { get; private set; }
-        public VocabularyKey DueDate { get; private set; }
         public VocabularyKey ScheduledHours { get; private set; }
         public VocabularyKey ScheduleStartDate { get; private set; }
         public VocabularyKey ScheduleVariance { get; private set; }
         public VocabularyKey SkipUpdateEstimateLine { get; private set; }
-        public VocabularyKey WBSID { get; private set; }
-        public VocabularyKey ProcessId { get; private set; }
         public VocabularyKey StageId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey TraversedPath { get; private set; }
-        public VocabularyKey CostAtCompleteEstimate { get; private set; }
-        public VocabularyKey CostAtCompleteEstimateBase { get; private set; }
-        public VocabularyKey CostConsumptionPercentage { get; private set; }
-        public VocabularyKey SalesConsumptionPercentage { get; private set; }
-        public VocabularyKey SalesEstimateAtComplete { get; private set; }
-        public VocabularyKey SalesEstimateAtCompleteBase { get; private set; }
-        public VocabularyKey SalesVariance { get; private set; }
-        public VocabularyKey SalesVarianceBase { get; private set; }
         public VocabularyKey VarianceOfCost { get; private set; }
         public VocabularyKey VarianceOfCostBase { get; private set; }
+        public VocabularyKey WBSID { get; private set; }
     }
 }

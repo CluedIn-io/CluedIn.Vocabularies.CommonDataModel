@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Automotive
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ServiceContractTypeVocabulary : SimpleVocabulary
     {
         public ServiceContractTypeVocabulary()
         {
             VocabularyName = "Service Contract Type";
-            KeyPrefix = "commonDataModel.servicecontracttype.automotive";
+            KeyPrefix = "commonDataModel.servicecontracttype";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ServiceContractType;
 
@@ -20,7 +20,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ServiceContractTypeId = group.Add(new VocabularyKey(nameof(ServiceContractTypeId), "Service Contract Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

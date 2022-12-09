@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Automotive
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class DeviceVariantVocabulary : SimpleVocabulary
     {
         public DeviceVariantVocabulary()
         {
             VocabularyName = "Device Variant";
-            KeyPrefix = "commonDataModel.devicevariant.automotive";
+            KeyPrefix = "commonDataModel.devicevariant";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.DeviceVariant;
 
@@ -20,7 +20,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
 			    DeviceVariantId = group.Add(new VocabularyKey(nameof(DeviceVariantId), "Device Variant", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -53,10 +53,10 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
             #endregion
         }
 
-        public VocabularyKey EntityImage { get; private set; }
         public VocabularyKey Code { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey DeviceVariantId { get; private set; }
+        public VocabularyKey EntityImage { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }

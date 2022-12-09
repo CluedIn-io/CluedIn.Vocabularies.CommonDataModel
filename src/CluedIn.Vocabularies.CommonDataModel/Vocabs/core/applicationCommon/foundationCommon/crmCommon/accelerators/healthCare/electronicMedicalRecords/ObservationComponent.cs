@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ObservationComponentVocabulary : SimpleVocabulary
     {
         public ObservationComponentVocabulary()
         {
             VocabularyName = "Observation Component";
-            KeyPrefix = "commonDataModel.observationcomponent.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.observationcomponent";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ObservationComponent;
 
@@ -45,7 +45,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    ValueTime = group.Add(new VocabularyKey(nameof(ValueTime), "Component Value Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ValueType = group.Add(new VocabularyKey(nameof(ValueType), "Component Value Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -92,6 +92,8 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 
         public VocabularyKey Name { get; private set; }
         public VocabularyKey ObservationComponentId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey ValueDateTime { get; private set; }
         public VocabularyKey ValuePeriodEndDate { get; private set; }
         public VocabularyKey ValuePeriodStartDate { get; private set; }
@@ -120,7 +122,5 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
         public VocabularyKey ValueString { get; private set; }
         public VocabularyKey ValueTime { get; private set; }
         public VocabularyKey ValueType { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
     }
 }

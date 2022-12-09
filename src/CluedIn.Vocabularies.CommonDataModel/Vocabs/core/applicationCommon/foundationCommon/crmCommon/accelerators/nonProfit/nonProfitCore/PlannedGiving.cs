@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class PlannedGivingVocabulary : SimpleVocabulary
     {
         public PlannedGivingVocabulary()
         {
             VocabularyName = "Planned Giving";
-            KeyPrefix = "commonDataModel.plannedgiving.nonprofitcore";
+            KeyPrefix = "commonDataModel.plannedgiving";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.PlannedGiving;
 
@@ -112,7 +112,40 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
 			    TrustValueDate = group.Add(new VocabularyKey(nameof(TrustValueDate), "Trust Value Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TypeOfManagement = group.Add(new VocabularyKey(nameof(TypeOfManagement), "Type of Management", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("PlannedGiving Details for NonProfitForSales", group =>
+            {
+
+            });
+            AddGroup("PlannedGiving Details for NonProfitIati", group =>
+            {
+			    CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    CreatedOnBehalfBy = group.Add(new VocabularyKey(nameof(CreatedOnBehalfBy), "Created By (Delegate)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+			    ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    ModifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(ModifiedOnBehalfBy), "Modified By (Delegate)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    AmountPerFrequency_Base = group.Add(new VocabularyKey(nameof(AmountPerFrequency_Base), "Amount Per Frequency (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    AnnualMarketvalue_Base = group.Add(new VocabularyKey(nameof(AnnualMarketvalue_Base), "Annual Market Value (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    Annualpayment_Base = group.Add(new VocabularyKey(nameof(Annualpayment_Base), "Annual Payment (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    AnticipatedAnnualpayment_Base = group.Add(new VocabularyKey(nameof(AnticipatedAnnualpayment_Base), "Anticipated Annual Payment (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    AppraisalValue_Base = group.Add(new VocabularyKey(nameof(AppraisalValue_Base), "Appraisal Value (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    CapitalgainIncome_Base = group.Add(new VocabularyKey(nameof(CapitalgainIncome_Base), "Capital Gain Income (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    CashSurrendervalue_Base = group.Add(new VocabularyKey(nameof(CashSurrendervalue_Base), "Cash Surrender Value (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    CharitableDeduction_Base = group.Add(new VocabularyKey(nameof(CharitableDeduction_Base), "Charitable Deduction (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    CostBasis_Base = group.Add(new VocabularyKey(nameof(CostBasis_Base), "Cost Basis (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    DesignatedPrincipleAmount_Base = group.Add(new VocabularyKey(nameof(DesignatedPrincipleAmount_Base), "Designated Principle Amount (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    EstimatedGivingAmount_Base = group.Add(new VocabularyKey(nameof(EstimatedGivingAmount_Base), "Estimated Giving Amount (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    FaceValue_Base = group.Add(new VocabularyKey(nameof(FaceValue_Base), "Face Value (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    InsuranceAnnualPremium_Base = group.Add(new VocabularyKey(nameof(InsuranceAnnualPremium_Base), "Insurance Annual Premium (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    OrdinaryIncome_Base = group.Add(new VocabularyKey(nameof(OrdinaryIncome_Base), "Ordinary Income (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    Presentvalue_Base = group.Add(new VocabularyKey(nameof(Presentvalue_Base), "Present Value (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    RemainderAmount_Base = group.Add(new VocabularyKey(nameof(RemainderAmount_Base), "Remainder Amount (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    SalvageValueOfBuildings_Base = group.Add(new VocabularyKey(nameof(SalvageValueOfBuildings_Base), "Salvage Value of Buildings (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    TaxFreeIncome_Base = group.Add(new VocabularyKey(nameof(TaxFreeIncome_Base), "Tax Free Income (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    Totalestatevalue_Base = group.Add(new VocabularyKey(nameof(Totalestatevalue_Base), "Total Estate Value (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    TrustMarketValue_Base = group.Add(new VocabularyKey(nameof(TrustMarketValue_Base), "Trust Market Value (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -143,33 +176,43 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
             #endregion
         }
 
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey ActualPercentOfEstateRecieved { get; private set; }
         public VocabularyKey Affiliation { get; private set; }
         public VocabularyKey AmountPerFrequency { get; private set; }
+        public VocabularyKey AmountPerFrequency_Base { get; private set; }
         public VocabularyKey AmountPerFrequencyBase { get; private set; }
         public VocabularyKey AnnualMarketValue { get; private set; }
+        public VocabularyKey AnnualMarketvalue_Base { get; private set; }
         public VocabularyKey AnnualMarketValueBase { get; private set; }
         public VocabularyKey AnnualMarketValueDate { get; private set; }
         public VocabularyKey AnnualPayment { get; private set; }
+        public VocabularyKey Annualpayment_Base { get; private set; }
         public VocabularyKey AnnualPaymentBase { get; private set; }
         public VocabularyKey AnticipatedAnnualPayment { get; private set; }
+        public VocabularyKey AnticipatedAnnualpayment_Base { get; private set; }
         public VocabularyKey AnticipatedAnnualPaymentBase { get; private set; }
         public VocabularyKey AnticipatedDistributionDateOfTrust { get; private set; }
         public VocabularyKey AnticipatedPercentOfTrust { get; private set; }
         public VocabularyKey AppraisalDate { get; private set; }
         public VocabularyKey AppraisalValue { get; private set; }
+        public VocabularyKey AppraisalValue_Base { get; private set; }
         public VocabularyKey AppraisalValueBase { get; private set; }
         public VocabularyKey BequestType { get; private set; }
         public VocabularyKey CapitalGainIncome { get; private set; }
+        public VocabularyKey CapitalgainIncome_Base { get; private set; }
         public VocabularyKey CapitalGainIncomeBase { get; private set; }
         public VocabularyKey CashSurrenderValue { get; private set; }
+        public VocabularyKey CashSurrendervalue_Base { get; private set; }
         public VocabularyKey CashSurrenderValueBase { get; private set; }
         public VocabularyKey CharitableDeduction { get; private set; }
+        public VocabularyKey CharitableDeduction_Base { get; private set; }
         public VocabularyKey CharitableDeductionBase { get; private set; }
         public VocabularyKey ContractDate { get; private set; }
         public VocabularyKey CostBasis { get; private set; }
+        public VocabularyKey CostBasis_Base { get; private set; }
         public VocabularyKey CostBasisBase { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey CreatedOnBehalfBy { get; private set; }
         public VocabularyKey DateClaimFormsRecieved { get; private set; }
         public VocabularyKey DateClaimFormsSubmitted { get; private set; }
         public VocabularyKey DateEstateClosed { get; private set; }
@@ -185,6 +228,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
         public VocabularyKey DeferredToDate { get; private set; }
         public VocabularyKey DesignatedOrganizationPercent { get; private set; }
         public VocabularyKey DesignatedPrincipleAmount { get; private set; }
+        public VocabularyKey DesignatedPrincipleAmount_Base { get; private set; }
         public VocabularyKey DesignatedPrincipleAmountBase { get; private set; }
         public VocabularyKey Designation { get; private set; }
         public VocabularyKey DiscountRate { get; private set; }
@@ -192,17 +236,22 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
         public VocabularyKey DiscountRateYear { get; private set; }
         public VocabularyKey EndowmentType { get; private set; }
         public VocabularyKey EstimatedGivingAmount { get; private set; }
+        public VocabularyKey EstimatedGivingAmount_Base { get; private set; }
         public VocabularyKey EstimatedGivingAmountBase { get; private set; }
         public VocabularyKey EstimatedTrustProbateDate { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey ExpectedFinalDistributionDate { get; private set; }
         public VocabularyKey ExpectedFirstDistributionDate { get; private set; }
         public VocabularyKey ExternalID { get; private set; }
         public VocabularyKey FaceValue { get; private set; }
+        public VocabularyKey FaceValue_Base { get; private set; }
         public VocabularyKey FaceValueBase { get; private set; }
         public VocabularyKey GivingAmount { get; private set; }
         public VocabularyKey GivingReceivedDate { get; private set; }
         public VocabularyKey GivingSubtype { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
         public VocabularyKey InsuranceAnnualPremium { get; private set; }
+        public VocabularyKey InsuranceAnnualPremium_Base { get; private set; }
         public VocabularyKey InsuranceAnnualPremiumBase { get; private set; }
         public VocabularyKey InsuranceCompany { get; private set; }
         public VocabularyKey InsuranceDeathBenefitAmount { get; private set; }
@@ -212,35 +261,45 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
         public VocabularyKey InsurancePremiumPaymentAddress { get; private set; }
         public VocabularyKey IsRevocable { get; private set; }
         public VocabularyKey LeadSource { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey ModifiedOnBehalfBy { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey OrdinaryIncome { get; private set; }
+        public VocabularyKey OrdinaryIncome_Base { get; private set; }
         public VocabularyKey OrdinaryIncomeBase { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey PaymentFrequency { get; private set; }
         public VocabularyKey PayoutRate { get; private set; }
         public VocabularyKey PlannedGivingId { get; private set; }
         public VocabularyKey PresentValue { get; private set; }
+        public VocabularyKey Presentvalue_Base { get; private set; }
         public VocabularyKey PresentValueBase { get; private set; }
         public VocabularyKey RecordType { get; private set; }
         public VocabularyKey RemainderAmount { get; private set; }
+        public VocabularyKey RemainderAmount_Base { get; private set; }
         public VocabularyKey RemainderAmountBase { get; private set; }
         public VocabularyKey RollupGiving { get; private set; }
         public VocabularyKey SalvageValueOfBuildings { get; private set; }
+        public VocabularyKey SalvageValueOfBuildings_Base { get; private set; }
         public VocabularyKey SalvageValueOfBuildingsBase { get; private set; }
         public VocabularyKey SeverDate { get; private set; }
         public VocabularyKey Stage { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey TaxFreeIncome { get; private set; }
+        public VocabularyKey TaxFreeIncome_Base { get; private set; }
         public VocabularyKey TaxFreeIncomeBase { get; private set; }
         public VocabularyKey TermEndDate { get; private set; }
         public VocabularyKey TermType { get; private set; }
         public VocabularyKey TermYears { get; private set; }
         public VocabularyKey TotalEstateValue { get; private set; }
+        public VocabularyKey Totalestatevalue_Base { get; private set; }
         public VocabularyKey TotalEstateValueBase { get; private set; }
         public VocabularyKey TrustMarketValue { get; private set; }
+        public VocabularyKey TrustMarketValue_Base { get; private set; }
         public VocabularyKey TrustMarketValueBase { get; private set; }
         public VocabularyKey TrustProbateNoticeDate { get; private set; }
         public VocabularyKey TrustValueDate { get; private set; }
         public VocabularyKey TypeOfManagement { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
     }
 }

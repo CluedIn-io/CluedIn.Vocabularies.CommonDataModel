@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class KnowledgeArticleVocabulary : SimpleVocabulary
     {
         public KnowledgeArticleVocabulary()
         {
             VocabularyName = "Knowledge Article";
-            KeyPrefix = "commonDataModel.knowledgearticle.applicationcommon";
+            KeyPrefix = "commonDataModel.knowledgearticle";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.KnowledgeArticle;
 
@@ -52,7 +52,11 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    RatingCount = group.Add(new VocabularyKey(nameof(RatingCount), "Rating(Count)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    IsInternal = group.Add(new VocabularyKey(nameof(IsInternal), "Internal", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    SetCategoryAssociations = group.Add(new VocabularyKey(nameof(SetCategoryAssociations), "Set Category Associations", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    ExpirationStateId = group.Add(new VocabularyKey(nameof(ExpirationStateId), "Expiration State Id", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    ExpirationStateId = group.Add(new VocabularyKey(nameof(ExpirationStateId), "Expiration State Id", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("KnowledgeArticle Details for FoundationCommon", group =>
+            {
+			    SetProductAssociations = group.Add(new VocabularyKey(nameof(SetProductAssociations), "Set Product Associations", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -128,44 +132,45 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             #endregion
         }
 
-        public VocabularyKey KnowledgearticleId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey StageId { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
-        public VocabularyKey Title { get; private set; }
-        public VocabularyKey Content { get; private set; }
-        public VocabularyKey KeyWords { get; private set; }
-        public VocabularyKey PublishOn { get; private set; }
-        public VocabularyKey ExpirationDate { get; private set; }
-        public VocabularyKey KnowledgeArticleViews { get; private set; }
-        public VocabularyKey Description { get; private set; }
-        public VocabularyKey MajorVersionNumber { get; private set; }
-        public VocabularyKey MinorVersionNumber { get; private set; }
-        public VocabularyKey LanguageLocaleId { get; private set; }
-        public VocabularyKey ScheduledStatusId { get; private set; }
-        public VocabularyKey ExpirationStatusId { get; private set; }
-        public VocabularyKey PublishStatusId { get; private set; }
-        public VocabularyKey IsPrimary { get; private set; }
-        public VocabularyKey ReadyForReview { get; private set; }
-        public VocabularyKey Review { get; private set; }
-        public VocabularyKey UpdateContent { get; private set; }
-        public VocabularyKey ExpiredReviewOptions { get; private set; }
-        public VocabularyKey SubjectId { get; private set; }
-        public VocabularyKey IsRootArticle { get; private set; }
         public VocabularyKey ArticlePublicNumber { get; private set; }
+        public VocabularyKey Content { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey ExpirationDate { get; private set; }
+        public VocabularyKey ExpirationStateId { get; private set; }
+        public VocabularyKey ExpirationStatusId { get; private set; }
+        public VocabularyKey ExpiredReviewOptions { get; private set; }
+        public VocabularyKey IsInternal { get; private set; }
         public VocabularyKey IsLatestVersion { get; private set; }
+        public VocabularyKey IsPrimary { get; private set; }
+        public VocabularyKey IsRootArticle { get; private set; }
+        public VocabularyKey KeyWords { get; private set; }
+        public VocabularyKey KnowledgearticleId { get; private set; }
+        public VocabularyKey KnowledgeArticleViews { get; private set; }
         public VocabularyKey KnowledgeArticleViewsDate { get; private set; }
         public VocabularyKey KnowledgeArticleViewsState { get; private set; }
+        public VocabularyKey LanguageLocaleId { get; private set; }
+        public VocabularyKey MajorVersionNumber { get; private set; }
+        public VocabularyKey MinorVersionNumber { get; private set; }
+        public VocabularyKey ProcessId { get; private set; }
+        public VocabularyKey PublishOn { get; private set; }
+        public VocabularyKey PublishStatusId { get; private set; }
         public VocabularyKey Rating { get; private set; }
+        public VocabularyKey RatingCount { get; private set; }
         public VocabularyKey RatingDate { get; private set; }
         public VocabularyKey RatingState { get; private set; }
         public VocabularyKey RatingSum { get; private set; }
-        public VocabularyKey RatingCount { get; private set; }
-        public VocabularyKey IsInternal { get; private set; }
+        public VocabularyKey ReadyForReview { get; private set; }
+        public VocabularyKey Review { get; private set; }
+        public VocabularyKey ScheduledStatusId { get; private set; }
         public VocabularyKey SetCategoryAssociations { get; private set; }
-        public VocabularyKey ExpirationStateId { get; private set; }
+        public VocabularyKey SetProductAssociations { get; private set; }
+        public VocabularyKey StageId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey SubjectId { get; private set; }
+        public VocabularyKey Title { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
+        public VocabularyKey UpdateContent { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Service
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class FacilityEquipmentVocabulary : SimpleVocabulary
     {
         public FacilityEquipmentVocabulary()
         {
             VocabularyName = "Facility Equipment";
-            KeyPrefix = "commonDataModel.facilityequipment.service";
+            KeyPrefix = "commonDataModel.facilityequipment";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.FacilityEquipment;
 
@@ -30,7 +30,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
 			    IsDisabled = group.Add(new VocabularyKey(nameof(IsDisabled), "Is Disabled", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    Skills = group.Add(new VocabularyKey(nameof(Skills), "Skills", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TimeZoneCode = group.Add(new VocabularyKey(nameof(TimeZoneCode), "Time Zone", VocabularyKeyDataType.TimeZone, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));             
+			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -61,22 +61,22 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
             #endregion
         }
 
-        public VocabularyKey EquipmentId { get; private set; }
-        public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey CalendarId { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey DisplayInServiceViews { get; private set; }
         public VocabularyKey EmailAddress { get; private set; }
+        public VocabularyKey EquipmentId { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
         public VocabularyKey IsDisabled { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey Skills { get; private set; }
         public VocabularyKey TimeZoneCode { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

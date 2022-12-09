@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Banking
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class KYCVocabulary : SimpleVocabulary
     {
         public KYCVocabulary()
         {
             VocabularyName = "KYC";
-            KeyPrefix = "commonDataModel.kyc.banking";
+            KeyPrefix = "commonDataModel.kyc";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.KYC;
 
@@ -43,7 +43,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Banking
 			    DeprecatedStageId = group.Add(new VocabularyKey(nameof(DeprecatedStageId), "(Deprecated) Stage Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DeprecatedTraversedPath = group.Add(new VocabularyKey(nameof(DeprecatedTraversedPath), "(Deprecated) Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    DeprecatedTraversedPath = group.Add(new VocabularyKey(nameof(DeprecatedTraversedPath), "(Deprecated) Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -77,6 +77,8 @@ namespace CluedIn.Vocabularies.CommonDataModel.Banking
         public VocabularyKey CountryOfBirth { get; private set; }
         public VocabularyKey CountryOfResidence { get; private set; }
         public VocabularyKey DateOfBirth { get; private set; }
+        public VocabularyKey DeprecatedStageId { get; private set; }
+        public VocabularyKey DeprecatedTraversedPath { get; private set; }
         public VocabularyKey Email { get; private set; }
         public VocabularyKey FirstName { get; private set; }
         public VocabularyKey IDExpiryDate { get; private set; }
@@ -93,12 +95,10 @@ namespace CluedIn.Vocabularies.CommonDataModel.Banking
         public VocabularyKey NatureOfBusiness { get; private set; }
         public VocabularyKey PhoneNumber { get; private set; }
         public VocabularyKey PlaceOfBirth { get; private set; }
+        public VocabularyKey ProcessId { get; private set; }
         public VocabularyKey ReviewFrequency { get; private set; }
         public VocabularyKey RiskLevel { get; private set; }
-        public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey DeprecatedStageId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey DeprecatedTraversedPath { get; private set; }
     }
 }

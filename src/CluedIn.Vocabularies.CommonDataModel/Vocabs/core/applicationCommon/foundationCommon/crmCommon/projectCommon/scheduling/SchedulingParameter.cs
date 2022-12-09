@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class SchedulingParameterVocabulary : SimpleVocabulary
     {
         public SchedulingParameterVocabulary()
         {
             VocabularyName = "Scheduling Parameter";
-            KeyPrefix = "commonDataModel.schedulingparameter.scheduling";
+            KeyPrefix = "commonDataModel.schedulingparameter";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.SchedulingParameter;
 
@@ -42,7 +42,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
 			    GeoLocationRefreshIntervalSeconds = group.Add(new VocabularyKey(nameof(GeoLocationRefreshIntervalSeconds), "Geo Location Refresh Interval Seconds", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    MapApiKey = group.Add(new VocabularyKey(nameof(MapApiKey), "Map Api Key", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    SAAutoFilterServiceTerritory = group.Add(new VocabularyKey(nameof(SAAutoFilterServiceTerritory), "Auto Filter Service Territory", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    ScheduleBoardRefreshIntervalSeconds = group.Add(new VocabularyKey(nameof(ScheduleBoardRefreshIntervalSeconds), "The refresh rate of the schedule board.", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    ScheduleBoardRefreshIntervalSeconds = group.Add(new VocabularyKey(nameof(ScheduleBoardRefreshIntervalSeconds), "The refresh rate of the schedule board.", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -58,21 +58,10 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
             #endregion
         }
 
-        public VocabularyKey SchedulingParameterId { get; private set; }
-        public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey AdvancedSettings { get; private set; }
         public VocabularyKey BackgroundJobsConfiguration { get; private set; }
-        public VocabularyKey EnableOptimizer { get; private set; }
         public VocabularyKey ConnectToMaps { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
         public VocabularyKey CustomGeoLatitudeField { get; private set; }
         public VocabularyKey CustomGeoLocationEntity { get; private set; }
         public VocabularyKey CustomGeoLongitudeField { get; private set; }
@@ -82,10 +71,21 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
         public VocabularyKey DefaultRadiusValue { get; private set; }
         public VocabularyKey DisableSanitizingHTMLTemplates { get; private set; }
         public VocabularyKey EnableCustomGeoLocation { get; private set; }
+        public VocabularyKey EnableOptimizer { get; private set; }
         public VocabularyKey GeoLocationExpiresAfterXMinutes { get; private set; }
         public VocabularyKey GeoLocationRefreshIntervalSeconds { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
         public VocabularyKey MapApiKey { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey SAAutoFilterServiceTerritory { get; private set; }
         public VocabularyKey ScheduleBoardRefreshIntervalSeconds { get; private set; }
+        public VocabularyKey SchedulingParameterId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class EventRegistrationVocabulary : SimpleVocabulary
     {
         public EventRegistrationVocabulary()
         {
             VocabularyName = "Event Registration";
-            KeyPrefix = "commonDataModel.eventregistration.eventmanagement";
+            KeyPrefix = "commonDataModel.eventregistration";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.EventRegistration;
 
@@ -31,7 +31,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
 			    SyncedWithProvider = group.Add(new VocabularyKey(nameof(SyncedWithProvider), "Synced with Provider", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TimesCheckedIn = group.Add(new VocabularyKey(nameof(TimesCheckedIn), "Times Checked-in", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    WebinarRegistrationID = group.Add(new VocabularyKey(nameof(WebinarRegistrationID), "Webinar Registration ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    YearsInIndustry = group.Add(new VocabularyKey(nameof(YearsInIndustry), "Years in Industry", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    YearsInIndustry = group.Add(new VocabularyKey(nameof(YearsInIndustry), "Years in Industry", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -57,20 +57,20 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
             #endregion
         }
 
-        public VocabularyKey EventRegistrationId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey Area { get; private set; }
         public VocabularyKey CompanySize { get; private set; }
+        public VocabularyKey EventRegistrationId { get; private set; }
         public VocabularyKey Industry { get; private set; }
         public VocabularyKey IsCanceled { get; private set; }
         public VocabularyKey Memo { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey PrimaryRole { get; private set; }
         public VocabularyKey PublishingState { get; private set; }
         public VocabularyKey RegisteredBy { get; private set; }
         public VocabularyKey RegistrationNotificationSeen { get; private set; }
         public VocabularyKey RegistrationStatus { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey SyncedWithProvider { get; private set; }
         public VocabularyKey TimesCheckedIn { get; private set; }
         public VocabularyKey WebinarRegistrationID { get; private set; }

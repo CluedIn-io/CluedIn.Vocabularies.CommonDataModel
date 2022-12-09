@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Interactions
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class EmailClickedVocabulary : SimpleVocabulary
     {
         public EmailClickedVocabulary()
         {
             VocabularyName = "Email Clicked";
-            KeyPrefix = "commonDataModel.emailclicked.interactions";
+            KeyPrefix = "commonDataModel.emailclicked";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.EmailClicked;
 
@@ -43,7 +43,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Interactions
 			    UsageType = group.Add(new VocabularyKey(nameof(UsageType), "Usage type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ActivityId = group.Add(new VocabularyKey(nameof(ActivityId), "Activity ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    VisitorAnonymousStatus = group.Add(new VocabularyKey(nameof(VisitorAnonymousStatus), "Visitor anonymous status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    LeadId = group.Add(new VocabularyKey(nameof(LeadId), "Lead ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    LeadId = group.Add(new VocabularyKey(nameof(LeadId), "Lead ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -55,35 +55,35 @@ namespace CluedIn.Vocabularies.CommonDataModel.Interactions
             #endregion
         }
 
-        public VocabularyKey InteractionId { get; private set; }
-        public VocabularyKey LinkId { get; private set; }
-        public VocabularyKey ContactId { get; private set; }
         public VocabularyKey AccountId { get; private set; }
-        public VocabularyKey LinkFriendlyName { get; private set; }
-        public VocabularyKey OriginalLink { get; private set; }
-        public VocabularyKey OriginalUrl { get; private set; }
-        public VocabularyKey MessageId { get; private set; }
-        public VocabularyKey SendingId { get; private set; }
-        public VocabularyKey EmailDomain { get; private set; }
-        public VocabularyKey EmailAddressUsed { get; private set; }
-        public VocabularyKey InteractionType { get; private set; }
-        public VocabularyKey OrganizationId { get; private set; }
-        public VocabularyKey Timestamp { get; private set; }
-        public VocabularyKey VisitorId { get; private set; }
-        public VocabularyKey SessionId { get; private set; }
-        public VocabularyKey CountryIsoCode { get; private set; }
-        public VocabularyKey State { get; private set; }
-        public VocabularyKey City { get; private set; }
-        public VocabularyKey PostalCode { get; private set; }
+        public VocabularyKey ActivityId { get; private set; }
         public VocabularyKey BrowserId { get; private set; }
         public VocabularyKey BrowserVersion { get; private set; }
-        public VocabularyKey OperatingSystemId { get; private set; }
-        public VocabularyKey OperatingSystemVersion { get; private set; }
+        public VocabularyKey City { get; private set; }
+        public VocabularyKey ContactId { get; private set; }
+        public VocabularyKey CountryIsoCode { get; private set; }
         public VocabularyKey CustomerJourneyId { get; private set; }
         public VocabularyKey CustomerJourneyIterationId { get; private set; }
-        public VocabularyKey UsageType { get; private set; }
-        public VocabularyKey ActivityId { get; private set; }
-        public VocabularyKey VisitorAnonymousStatus { get; private set; }
+        public VocabularyKey EmailAddressUsed { get; private set; }
+        public VocabularyKey EmailDomain { get; private set; }
+        public VocabularyKey InteractionId { get; private set; }
+        public VocabularyKey InteractionType { get; private set; }
         public VocabularyKey LeadId { get; private set; }
+        public VocabularyKey LinkFriendlyName { get; private set; }
+        public VocabularyKey LinkId { get; private set; }
+        public VocabularyKey MessageId { get; private set; }
+        public VocabularyKey OperatingSystemId { get; private set; }
+        public VocabularyKey OperatingSystemVersion { get; private set; }
+        public VocabularyKey OrganizationId { get; private set; }
+        public VocabularyKey OriginalLink { get; private set; }
+        public VocabularyKey OriginalUrl { get; private set; }
+        public VocabularyKey PostalCode { get; private set; }
+        public VocabularyKey SendingId { get; private set; }
+        public VocabularyKey SessionId { get; private set; }
+        public VocabularyKey State { get; private set; }
+        public VocabularyKey Timestamp { get; private set; }
+        public VocabularyKey UsageType { get; private set; }
+        public VocabularyKey VisitorAnonymousStatus { get; private set; }
+        public VocabularyKey VisitorId { get; private set; }
     }
 }

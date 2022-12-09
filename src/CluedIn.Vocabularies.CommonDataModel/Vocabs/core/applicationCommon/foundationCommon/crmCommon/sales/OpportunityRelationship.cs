@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Sales
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class OpportunityRelationshipVocabulary : SimpleVocabulary
     {
         public OpportunityRelationshipVocabulary()
         {
             VocabularyName = "Opportunity Relationship";
-            KeyPrefix = "commonDataModel.opportunityrelationship.sales";
+            KeyPrefix = "commonDataModel.opportunityrelationship";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.OpportunityRelationship;
 
@@ -18,7 +18,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Sales
 			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    OpportunityRoleId = group.Add(new VocabularyKey(nameof(OpportunityRoleId), "Customer Role", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    OpportunityStateCode = group.Add(new VocabularyKey(nameof(OpportunityStateCode), "Opportunity Status", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    OpportunityStatusCode = group.Add(new VocabularyKey(nameof(OpportunityStatusCode), "Opportunity Status Reason", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    OpportunityStatusCode = group.Add(new VocabularyKey(nameof(OpportunityStatusCode), "Opportunity Status Reason", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class SponsorableArticleVocabulary : SimpleVocabulary
     {
         public SponsorableArticleVocabulary()
         {
             VocabularyName = "Sponsorable Article";
-            KeyPrefix = "commonDataModel.sponsorablearticle.eventmanagement";
+            KeyPrefix = "commonDataModel.sponsorablearticle";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.SponsorableArticle;
 
@@ -25,7 +25,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
 			    NumberOfUnits = group.Add(new VocabularyKey(nameof(NumberOfUnits), "Number of units", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    TransactionCurrencyId = group.Add(new VocabularyKey(nameof(TransactionCurrencyId), "Currency", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TotalCost = group.Add(new VocabularyKey(nameof(TotalCost), "Total cost", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    TotalcostBase = group.Add(new VocabularyKey(nameof(TotalcostBase), "Total cost (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    TotalcostBase = group.Add(new VocabularyKey(nameof(TotalcostBase), "Total cost (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -46,17 +46,17 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
             #endregion
         }
 
+        public VocabularyKey CostPerUnit { get; private set; }
+        public VocabularyKey CostPerUnitBase { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey NumberOfUnits { get; private set; }
         public VocabularyKey SponsorableArticleId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey CostPerUnit { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
-        public VocabularyKey CostPerUnitBase { get; private set; }
-        public VocabularyKey Description { get; private set; }
-        public VocabularyKey NumberOfUnits { get; private set; }
-        public VocabularyKey TransactionCurrencyId { get; private set; }
         public VocabularyKey TotalCost { get; private set; }
         public VocabularyKey TotalcostBase { get; private set; }
+        public VocabularyKey TransactionCurrencyId { get; private set; }
     }
 }

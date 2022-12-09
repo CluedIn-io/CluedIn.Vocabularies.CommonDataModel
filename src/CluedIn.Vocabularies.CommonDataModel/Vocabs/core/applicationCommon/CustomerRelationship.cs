@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class CustomerRelationshipVocabulary : SimpleVocabulary
     {
         public CustomerRelationshipVocabulary()
         {
             VocabularyName = "Customer Relationship";
-            KeyPrefix = "commonDataModel.customerrelationship.applicationcommon";
+            KeyPrefix = "commonDataModel.customerrelationship";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.CustomerRelationship;
 
@@ -23,7 +23,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    CustomerRoleDescription = group.Add(new VocabularyKey(nameof(CustomerRoleDescription), "Description 1", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    PartnerRoleDescription = group.Add(new VocabularyKey(nameof(PartnerRoleDescription), "Description 2", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -48,15 +48,15 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             #endregion
         }
 
-        public VocabularyKey VersionNumber { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey CustomerRoleId { get; private set; }
         public VocabularyKey CustomerRelationshipId { get; private set; }
-        public VocabularyKey PartnerRoleId { get; private set; }
         public VocabularyKey CustomerRoleDescription { get; private set; }
-        public VocabularyKey PartnerRoleDescription { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey CustomerRoleId { get; private set; }
         public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey PartnerRoleDescription { get; private set; }
+        public VocabularyKey PartnerRoleId { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

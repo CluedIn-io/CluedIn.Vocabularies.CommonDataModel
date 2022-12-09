@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.LinkedInLeads
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class LinkedInCampaignVocabulary : SimpleVocabulary
     {
         public LinkedInCampaignVocabulary()
         {
             VocabularyName = "Linked In Campaign";
-            KeyPrefix = "commonDataModel.linkedincampaign.linkedinleads";
+            KeyPrefix = "commonDataModel.linkedincampaign";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.LinkedInCampaign;
 
@@ -22,7 +22,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.LinkedInLeads
 			    EndDate = group.Add(new VocabularyKey(nameof(EndDate), "Proposed End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    LinkedInID = group.Add(new VocabularyKey(nameof(LinkedInID), "LinkedIn ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    LinkedInStatus = group.Add(new VocabularyKey(nameof(LinkedInStatus), "LinkedIn Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StartDate = group.Add(new VocabularyKey(nameof(StartDate), "Proposed Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StartDate = group.Add(new VocabularyKey(nameof(StartDate), "Proposed Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -46,14 +46,14 @@ namespace CluedIn.Vocabularies.CommonDataModel.LinkedInLeads
             #endregion
         }
 
-        public VocabularyKey LinkedInCampaignID { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey CampaignType { get; private set; }
         public VocabularyKey EndDate { get; private set; }
+        public VocabularyKey LinkedInCampaignID { get; private set; }
         public VocabularyKey LinkedInID { get; private set; }
         public VocabularyKey LinkedInStatus { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey StartDate { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

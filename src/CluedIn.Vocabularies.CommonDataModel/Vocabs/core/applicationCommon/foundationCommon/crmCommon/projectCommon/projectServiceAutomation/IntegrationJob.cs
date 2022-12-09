@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class IntegrationJobVocabulary : SimpleVocabulary
     {
         public IntegrationJobVocabulary()
         {
             VocabularyName = "Integration Job";
-            KeyPrefix = "commonDataModel.integrationjob.projectserviceautomation";
+            KeyPrefix = "commonDataModel.integrationjob";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.IntegrationJob;
 
@@ -23,7 +23,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    RegardingEntityId = group.Add(new VocabularyKey(nameof(RegardingEntityId), "Regarding Entity Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ResponseJSON = group.Add(new VocabularyKey(nameof(ResponseJSON), "ResponseJSON", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Status = group.Add(new VocabularyKey(nameof(Status), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -54,14 +54,14 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
         }
 
         public VocabularyKey IntegrationJobId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey NumberOfPackets { get; private set; }
         public VocabularyKey RegardingEntity { get; private set; }
         public VocabularyKey RegardingEntityId { get; private set; }
         public VocabularyKey ResponseJSON { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
         public VocabularyKey Status { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey Type { get; private set; }
     }
 }

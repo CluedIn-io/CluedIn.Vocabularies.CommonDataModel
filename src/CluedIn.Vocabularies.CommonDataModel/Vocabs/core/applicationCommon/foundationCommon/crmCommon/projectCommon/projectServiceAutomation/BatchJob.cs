@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class BatchJobVocabulary : SimpleVocabulary
     {
         public BatchJobVocabulary()
         {
             VocabularyName = "Batch Job";
-            KeyPrefix = "commonDataModel.batchjob.projectserviceautomation";
+            KeyPrefix = "commonDataModel.batchjob";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.BatchJob;
 
@@ -31,7 +31,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    IsActive = group.Add(new VocabularyKey(nameof(IsActive), "Is Active", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    JobType = group.Add(new VocabularyKey(nameof(JobType), "Job Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    LastRunDate = group.Add(new VocabularyKey(nameof(LastRunDate), "Last Run Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    OperationType = group.Add(new VocabularyKey(nameof(OperationType), "Operation Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    OperationType = group.Add(new VocabularyKey(nameof(OperationType), "Operation Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -49,21 +49,21 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 
         public VocabularyKey BatchJobId { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey Data { get; private set; }
         public VocabularyKey Data1 { get; private set; }
         public VocabularyKey Frequency { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
         public VocabularyKey IsActive { get; private set; }
         public VocabularyKey JobType { get; private set; }
         public VocabularyKey LastRunDate { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey OperationType { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

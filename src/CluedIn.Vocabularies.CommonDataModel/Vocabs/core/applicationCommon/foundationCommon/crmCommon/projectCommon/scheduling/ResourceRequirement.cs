@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ResourceRequirementVocabulary : SimpleVocabulary
     {
         public ResourceRequirementVocabulary()
         {
             VocabularyName = "Resource Requirement";
-            KeyPrefix = "commonDataModel.resourcerequirement.scheduling";
+            KeyPrefix = "commonDataModel.resourcerequirement";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ResourceRequirement;
 
@@ -53,7 +53,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
 			    Quantity = group.Add(new VocabularyKey(nameof(Quantity), "Quantity (Deprecated in v3.0)", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
 			    RequestStatus = group.Add(new VocabularyKey(nameof(RequestStatus), "Request Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateOrProvince = group.Add(new VocabularyKey(nameof(StateOrProvince), "State/Province", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -103,14 +103,17 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
             #endregion
         }
 
-        public VocabularyKey ResourceRequirementId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey AllocationMethod { get; private set; }
         public VocabularyKey CalendarId { get; private set; }
+        public VocabularyKey City { get; private set; }
+        public VocabularyKey CostPrice { get; private set; }
+        public VocabularyKey CostPriceBase { get; private set; }
+        public VocabularyKey Country { get; private set; }
+        public VocabularyKey DeprecatedFulfilledHours { get; private set; }
+        public VocabularyKey DeprecatedHours { get; private set; }
         public VocabularyKey Duration { get; private set; }
         public VocabularyKey Effort { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey FromDate { get; private set; }
         public VocabularyKey FulfilledDuration { get; private set; }
         public VocabularyKey InternalFlags { get; private set; }
@@ -118,30 +121,27 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
         public VocabularyKey IsTemplate { get; private set; }
         public VocabularyKey Latitude { get; private set; }
         public VocabularyKey Longitude { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey Percentage { get; private set; }
         public VocabularyKey PoolType { get; private set; }
         public VocabularyKey ProposedDuration { get; private set; }
+        public VocabularyKey Quantity { get; private set; }
         public VocabularyKey RemainingDuration { get; private set; }
+        public VocabularyKey RequestStatus { get; private set; }
         public VocabularyKey RequirementGroupControlViewId { get; private set; }
+        public VocabularyKey ResourceRequirementId { get; private set; }
         public VocabularyKey ResourceType { get; private set; }
         public VocabularyKey SortOptions { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StateOrProvince { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey TemplateRequirementId { get; private set; }
         public VocabularyKey TimeFromPromised { get; private set; }
         public VocabularyKey TimeToPromised { get; private set; }
         public VocabularyKey TimeWindowEnd { get; private set; }
         public VocabularyKey TimeWindowStart { get; private set; }
         public VocabularyKey ToDate { get; private set; }
-        public VocabularyKey WorkLocation { get; private set; }
-        public VocabularyKey City { get; private set; }
-        public VocabularyKey CostPrice { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
-        public VocabularyKey CostPriceBase { get; private set; }
-        public VocabularyKey Country { get; private set; }
-        public VocabularyKey DeprecatedFulfilledHours { get; private set; }
-        public VocabularyKey DeprecatedHours { get; private set; }
-        public VocabularyKey Quantity { get; private set; }
-        public VocabularyKey RequestStatus { get; private set; }
-        public VocabularyKey StateOrProvince { get; private set; }
         public VocabularyKey Type { get; private set; }
+        public VocabularyKey WorkLocation { get; private set; }
     }
 }

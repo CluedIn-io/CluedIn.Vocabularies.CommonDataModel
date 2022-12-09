@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class BusinessUnitVocabulary : SimpleVocabulary
     {
         public BusinessUnitVocabulary()
         {
             VocabularyName = "Business Unit";
-            KeyPrefix = "commonDataModel.businessunit.applicationcommon";
+            KeyPrefix = "commonDataModel.businessunit";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.BusinessUnit;
 
@@ -80,7 +80,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    CalendarId = group.Add(new VocabularyKey(nameof(CalendarId), "Calendar", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));             
+			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -889,72 +889,72 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             #endregion
         }
 
-        public VocabularyKey BusinessUnitId { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey Description { get; private set; }
-        public VocabularyKey DivisionName { get; private set; }
-        public VocabularyKey FileAsName { get; private set; }
-        public VocabularyKey TickerSymbol { get; private set; }
-        public VocabularyKey StockExchange { get; private set; }
-        public VocabularyKey UTCOffset { get; private set; }
-        public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey CreditLimit { get; private set; }
-        public VocabularyKey CostCenter { get; private set; }
-        public VocabularyKey WebSiteUrl { get; private set; }
-        public VocabularyKey FtpSiteUrl { get; private set; }
-        public VocabularyKey EmailAddress { get; private set; }
-        public VocabularyKey InheritanceMask { get; private set; }
-        public VocabularyKey WorkflowSuspended { get; private set; }
-        public VocabularyKey IsDisabled { get; private set; }
-        public VocabularyKey DisabledReason { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
         public VocabularyKey Address1AddressId { get; private set; }
         public VocabularyKey Address1AddressTypeCode { get; private set; }
-        public VocabularyKey Address1Name { get; private set; }
+        public VocabularyKey Address1City { get; private set; }
+        public VocabularyKey Address1Country { get; private set; }
+        public VocabularyKey Address1County { get; private set; }
+        public VocabularyKey Address1Fax { get; private set; }
+        public VocabularyKey Address1Latitude { get; private set; }
         public VocabularyKey Address1Line1 { get; private set; }
         public VocabularyKey Address1Line2 { get; private set; }
         public VocabularyKey Address1Line3 { get; private set; }
-        public VocabularyKey Address1City { get; private set; }
-        public VocabularyKey Address1StateOrProvince { get; private set; }
-        public VocabularyKey Address1County { get; private set; }
-        public VocabularyKey Address1Country { get; private set; }
-        public VocabularyKey Address1PostOfficeBox { get; private set; }
-        public VocabularyKey Address1PostalCode { get; private set; }
-        public VocabularyKey Address1UTCOffset { get; private set; }
-        public VocabularyKey Address1UPSZone { get; private set; }
-        public VocabularyKey Address1Latitude { get; private set; }
-        public VocabularyKey Address1Telephone1 { get; private set; }
         public VocabularyKey Address1Longitude { get; private set; }
+        public VocabularyKey Address1Name { get; private set; }
+        public VocabularyKey Address1PostalCode { get; private set; }
+        public VocabularyKey Address1PostOfficeBox { get; private set; }
         public VocabularyKey Address1ShippingMethodCode { get; private set; }
+        public VocabularyKey Address1StateOrProvince { get; private set; }
+        public VocabularyKey Address1Telephone1 { get; private set; }
         public VocabularyKey Address1Telephone2 { get; private set; }
         public VocabularyKey Address1Telephone3 { get; private set; }
-        public VocabularyKey Address1Fax { get; private set; }
+        public VocabularyKey Address1UPSZone { get; private set; }
+        public VocabularyKey Address1UTCOffset { get; private set; }
         public VocabularyKey Address2AddressId { get; private set; }
         public VocabularyKey Address2AddressTypeCode { get; private set; }
-        public VocabularyKey Address2Name { get; private set; }
+        public VocabularyKey Address2City { get; private set; }
+        public VocabularyKey Address2Country { get; private set; }
+        public VocabularyKey Address2County { get; private set; }
+        public VocabularyKey Address2Fax { get; private set; }
+        public VocabularyKey Address2Latitude { get; private set; }
         public VocabularyKey Address2Line1 { get; private set; }
         public VocabularyKey Address2Line2 { get; private set; }
         public VocabularyKey Address2Line3 { get; private set; }
-        public VocabularyKey Address2City { get; private set; }
-        public VocabularyKey Address2StateOrProvince { get; private set; }
-        public VocabularyKey Address2County { get; private set; }
-        public VocabularyKey Address2Country { get; private set; }
-        public VocabularyKey Address2PostOfficeBox { get; private set; }
-        public VocabularyKey Address2PostalCode { get; private set; }
-        public VocabularyKey Address2UTCOffset { get; private set; }
-        public VocabularyKey Address2UPSZone { get; private set; }
-        public VocabularyKey Address2Latitude { get; private set; }
-        public VocabularyKey Address2Telephone1 { get; private set; }
         public VocabularyKey Address2Longitude { get; private set; }
+        public VocabularyKey Address2Name { get; private set; }
+        public VocabularyKey Address2PostalCode { get; private set; }
+        public VocabularyKey Address2PostOfficeBox { get; private set; }
         public VocabularyKey Address2ShippingMethodCode { get; private set; }
+        public VocabularyKey Address2StateOrProvince { get; private set; }
+        public VocabularyKey Address2Telephone1 { get; private set; }
         public VocabularyKey Address2Telephone2 { get; private set; }
         public VocabularyKey Address2Telephone3 { get; private set; }
-        public VocabularyKey Address2Fax { get; private set; }
-        public VocabularyKey Picture { get; private set; }
+        public VocabularyKey Address2UPSZone { get; private set; }
+        public VocabularyKey Address2UTCOffset { get; private set; }
+        public VocabularyKey BusinessUnitId { get; private set; }
         public VocabularyKey CalendarId { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey CostCenter { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey CreditLimit { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey DisabledReason { get; private set; }
+        public VocabularyKey DivisionName { get; private set; }
+        public VocabularyKey EmailAddress { get; private set; }
         public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey FileAsName { get; private set; }
+        public VocabularyKey FtpSiteUrl { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey InheritanceMask { get; private set; }
+        public VocabularyKey IsDisabled { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey Picture { get; private set; }
+        public VocabularyKey StockExchange { get; private set; }
+        public VocabularyKey TickerSymbol { get; private set; }
+        public VocabularyKey UTCOffset { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
+        public VocabularyKey WebSiteUrl { get; private set; }
+        public VocabularyKey WorkflowSuspended { get; private set; }
     }
 }

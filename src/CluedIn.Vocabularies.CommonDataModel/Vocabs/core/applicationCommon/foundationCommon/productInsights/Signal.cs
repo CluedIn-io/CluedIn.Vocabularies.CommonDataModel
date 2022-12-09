@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProductInsights
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class SignalVocabulary : SimpleVocabulary
     {
         public SignalVocabulary()
         {
             VocabularyName = "Signal";
-            KeyPrefix = "commonDataModel.signal.productinsights";
+            KeyPrefix = "commonDataModel.signal";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Signal;
 
@@ -21,7 +21,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProductInsights
 			    ServerTime = group.Add(new VocabularyKey(nameof(ServerTime), "Server Timestamp", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    PartNumber = group.Add(new VocabularyKey(nameof(PartNumber), "Part Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    DeviceId = group.Add(new VocabularyKey(nameof(DeviceId), "Device Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SerialNumber = group.Add(new VocabularyKey(nameof(SerialNumber), "Serial Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    SerialNumber = group.Add(new VocabularyKey(nameof(SerialNumber), "Serial Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -34,13 +34,13 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProductInsights
             #endregion
         }
 
+        public VocabularyKey DeviceId { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey PartNumber { get; private set; }
+        public VocabularyKey SerialNumber { get; private set; }
+        public VocabularyKey ServerTime { get; private set; }
         public VocabularyKey SignalTime { get; private set; }
         public VocabularyKey Timezone { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey Version { get; private set; }
-        public VocabularyKey ServerTime { get; private set; }
-        public VocabularyKey PartNumber { get; private set; }
-        public VocabularyKey DeviceId { get; private set; }
-        public VocabularyKey SerialNumber { get; private set; }
     }
 }

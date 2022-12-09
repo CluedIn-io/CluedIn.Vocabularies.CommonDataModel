@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class SLAKPIInstanceVocabulary : SimpleVocabulary
     {
         public SLAKPIInstanceVocabulary()
         {
             VocabularyName = "SLAKPI Instance";
-            KeyPrefix = "commonDataModel.slakpiinstance.applicationcommon";
+            KeyPrefix = "commonDataModel.slakpiinstance";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.SLAKPIInstance;
 
@@ -29,7 +29,11 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), "Version Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    WarningTimeReached = group.Add(new VocabularyKey(nameof(WarningTimeReached), "Warning Time Reached", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    WarningTimeReached = group.Add(new VocabularyKey(nameof(WarningTimeReached), "Warning Time Reached", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("SLAKPIInstance Details for Service", group =>
+            {
+
             });
             
             #region Incoming Relationships
@@ -63,21 +67,21 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             #endregion
         }
 
-        public VocabularyKey SLAKPIInstanceId { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey ComputedFailureTime { get; private set; }
         public VocabularyKey ComputedWarningTime { get; private set; }
-        public VocabularyKey FailureTime { get; private set; }
-        public VocabularyKey OwningUser { get; private set; }
-        public VocabularyKey OwningTeam { get; private set; }
-        public VocabularyKey Status { get; private set; }
-        public VocabularyKey SucceededOn { get; private set; }
-        public VocabularyKey WarningTime { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
         public VocabularyKey Description { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey FailureTime { get; private set; }
         public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OwningTeam { get; private set; }
+        public VocabularyKey OwningUser { get; private set; }
+        public VocabularyKey SLAKPIInstanceId { get; private set; }
+        public VocabularyKey Status { get; private set; }
+        public VocabularyKey SucceededOn { get; private set; }
         public VocabularyKey VersionNumber { get; private set; }
+        public VocabularyKey WarningTime { get; private set; }
         public VocabularyKey WarningTimeReached { get; private set; }
     }
 }

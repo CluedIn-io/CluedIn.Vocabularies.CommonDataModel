@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class TestTypeVocabulary : SimpleVocabulary
     {
         public TestTypeVocabulary()
         {
             VocabularyName = "Test Type";
-            KeyPrefix = "commonDataModel.testtype.highereducation";
+            KeyPrefix = "commonDataModel.testtype";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.TestType;
 
@@ -17,7 +17,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
 			    TestTypeId = group.Add(new VocabularyKey(nameof(TestTypeId), "Test Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Test Type Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Name = group.Add(new VocabularyKey(nameof(Name), "Test Type Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -37,9 +37,9 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
             #endregion
         }
 
-        public VocabularyKey TestTypeId { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
+        public VocabularyKey TestTypeId { get; private set; }
     }
 }

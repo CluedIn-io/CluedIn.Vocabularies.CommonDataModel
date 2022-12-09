@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class HotelVocabulary : SimpleVocabulary
     {
         public HotelVocabulary()
         {
             VocabularyName = "Hotel";
-            KeyPrefix = "commonDataModel.hotel.eventmanagement";
+            KeyPrefix = "commonDataModel.hotel";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Hotel;
 
@@ -27,7 +27,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
 			    Facilities = group.Add(new VocabularyKey(nameof(Facilities), "Facilities", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateProvince = group.Add(new VocabularyKey(nameof(StateProvince), "State/Province", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Website = group.Add(new VocabularyKey(nameof(Website), "Website", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
-			    ZIPPostalCode = group.Add(new VocabularyKey(nameof(ZIPPostalCode), "ZIP/Postal Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    ZIPPostalCode = group.Add(new VocabularyKey(nameof(ZIPPostalCode), "ZIP/Postal Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -74,10 +74,6 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
             #endregion
         }
 
-        public VocabularyKey HotelId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey AddressLine1 { get; private set; }
         public VocabularyKey AddressLine2 { get; private set; }
         public VocabularyKey AddressLine3 { get; private set; }
@@ -85,7 +81,11 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
         public VocabularyKey Country { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey Facilities { get; private set; }
+        public VocabularyKey HotelId { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StateProvince { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey Website { get; private set; }
         public VocabularyKey ZIPPostalCode { get; private set; }
     }

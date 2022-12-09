@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class EpisodeOfCareVocabulary : SimpleVocabulary
     {
         public EpisodeOfCareVocabulary()
         {
             VocabularyName = "Episode Of Care";
-            KeyPrefix = "commonDataModel.episodeofcare.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.episodeofcare";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.EpisodeOfCare;
 
@@ -21,7 +21,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    StartDateTime = group.Add(new VocabularyKey(nameof(StartDateTime), "Start Date/Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Status = group.Add(new VocabularyKey(nameof(Status), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -174,8 +174,8 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
         public VocabularyKey EpisodeOfCareId { get; private set; }
         public VocabularyKey Identifier { get; private set; }
         public VocabularyKey StartDateTime { get; private set; }
-        public VocabularyKey Status { get; private set; }
         public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey Status { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
     }
 }

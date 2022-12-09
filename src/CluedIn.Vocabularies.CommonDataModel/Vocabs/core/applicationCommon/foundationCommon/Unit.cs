@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class UnitVocabulary : SimpleVocabulary
     {
         public UnitVocabulary()
         {
             VocabularyName = "Unit";
-            KeyPrefix = "commonDataModel.unit.foundationcommon";
+            KeyPrefix = "commonDataModel.unit";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Unit;
 
@@ -27,7 +27,15 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
 			    OrganizationId = group.Add(new VocabularyKey(nameof(OrganizationId), "Organization ", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
 			    Quantity = group.Add(new VocabularyKey(nameof(Quantity), "Quantity", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
 			    CreatedByExternalParty = group.Add(new VocabularyKey(nameof(CreatedByExternalParty), "Created By (External Party)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ModifiedByExternalParty = group.Add(new VocabularyKey(nameof(ModifiedByExternalParty), "Modified By (External Party)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    ModifiedByExternalParty = group.Add(new VocabularyKey(nameof(ModifiedByExternalParty), "Modified By (External Party)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Unit Details for Automotive", group =>
+            {
+			    CreatedOnBehalfBy = group.Add(new VocabularyKey(nameof(CreatedOnBehalfBy), "Created By (Delegate)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    ModifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(ModifiedOnBehalfBy), "Modified By (Delegate)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    UnitId = group.Add(new VocabularyKey(nameof(UnitId), "Unit", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -116,19 +124,24 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
             #endregion
         }
 
-        public VocabularyKey UoMId { get; private set; }
-        public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey IsScheduleBaseUoM { get; private set; }
-        public VocabularyKey OrganizationId { get; private set; }
-        public VocabularyKey Quantity { get; private set; }
         public VocabularyKey CreatedByExternalParty { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey CreatedOnBehalfBy { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey IsScheduleBaseUoM { get; private set; }
         public VocabularyKey ModifiedByExternalParty { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey ModifiedOnBehalfBy { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OrganizationId { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey Quantity { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey UnitId { get; private set; }
+        public VocabularyKey UoMId { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class PricingDimensionVocabulary : SimpleVocabulary
     {
         public PricingDimensionVocabulary()
         {
             VocabularyName = "Pricing Dimension";
-            KeyPrefix = "commonDataModel.pricingdimension.projectserviceautomation";
+            KeyPrefix = "commonDataModel.pricingdimension";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.PricingDimension;
 
@@ -24,7 +24,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    CostPriority = group.Add(new VocabularyKey(nameof(CostPriority), "Cost Priority", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    PurchasePriority = group.Add(new VocabularyKey(nameof(PurchasePriority), "Purchase Priority", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    SalesPriority = group.Add(new VocabularyKey(nameof(SalesPriority), "Sales Priority", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -50,16 +50,16 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
-        public VocabularyKey DimensionId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey ApplicableToCost { get; private set; }
         public VocabularyKey ApplicableToPurchase { get; private set; }
         public VocabularyKey ApplicableToSales { get; private set; }
         public VocabularyKey CostPriority { get; private set; }
+        public VocabularyKey DimensionId { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey PurchasePriority { get; private set; }
         public VocabularyKey SalesPriority { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey Type { get; private set; }
     }
 }

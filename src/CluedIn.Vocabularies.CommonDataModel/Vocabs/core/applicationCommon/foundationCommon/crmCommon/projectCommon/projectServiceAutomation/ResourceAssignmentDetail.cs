@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ResourceAssignmentDetailVocabulary : SimpleVocabulary
     {
         public ResourceAssignmentDetailVocabulary()
         {
             VocabularyName = "Resource Assignment Detail";
-            KeyPrefix = "commonDataModel.resourceassignmentdetail.projectserviceautomation";
+            KeyPrefix = "commonDataModel.resourceassignmentdetail";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ResourceAssignmentDetail;
 
@@ -19,7 +19,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Duration = group.Add(new VocabularyKey(nameof(Duration), "Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    From = group.Add(new VocabularyKey(nameof(From), "From", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    From = group.Add(new VocabularyKey(nameof(From), "From", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -40,11 +40,11 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
+        public VocabularyKey Duration { get; private set; }
+        public VocabularyKey From { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey ResourceAssignmentDetailId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey Duration { get; private set; }
-        public VocabularyKey From { get; private set; }
     }
 }

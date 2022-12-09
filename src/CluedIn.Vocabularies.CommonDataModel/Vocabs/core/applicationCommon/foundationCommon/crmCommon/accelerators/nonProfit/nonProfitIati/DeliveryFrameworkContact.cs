@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class DeliveryFrameworkContactVocabulary : SimpleVocabulary
     {
         public DeliveryFrameworkContactVocabulary()
         {
             VocabularyName = "Delivery Framework Contact";
-            KeyPrefix = "commonDataModel.deliveryframeworkcontact.nonprofitiati";
+            KeyPrefix = "commonDataModel.deliveryframeworkcontact";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.DeliveryFrameworkContact;
 
@@ -17,7 +17,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
 			    DeliveryFrameworkContactId = group.Add(new VocabularyKey(nameof(DeliveryFrameworkContactId), "Delivery Framework Contact", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

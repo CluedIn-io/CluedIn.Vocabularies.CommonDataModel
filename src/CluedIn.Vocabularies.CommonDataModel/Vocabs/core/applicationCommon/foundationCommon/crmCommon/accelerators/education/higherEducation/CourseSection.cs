@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class CourseSectionVocabulary : SimpleVocabulary
     {
         public CourseSectionVocabulary()
         {
             VocabularyName = "Course Section";
-            KeyPrefix = "commonDataModel.coursesection.highereducation";
+            KeyPrefix = "commonDataModel.coursesection";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.CourseSection;
 
@@ -20,7 +20,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Course Section Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    CourseDayTime = group.Add(new VocabularyKey(nameof(CourseDayTime), "Course Day/Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Location = group.Add(new VocabularyKey(nameof(Location), "Location", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Prerequisites = group.Add(new VocabularyKey(nameof(Prerequisites), "Prerequisites", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Prerequisites = group.Add(new VocabularyKey(nameof(Prerequisites), "Prerequisites", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -44,12 +44,12 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
             #endregion
         }
 
+        public VocabularyKey CourseDayTime { get; private set; }
         public VocabularyKey CourseSectionId { get; private set; }
+        public VocabularyKey Location { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey Prerequisites { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey CourseDayTime { get; private set; }
-        public VocabularyKey Location { get; private set; }
-        public VocabularyKey Prerequisites { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Sales
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class SalesAttachmentVocabulary : SimpleVocabulary
     {
         public SalesAttachmentVocabulary()
         {
             VocabularyName = "Sales Attachment";
-            KeyPrefix = "commonDataModel.salesattachment.sales";
+            KeyPrefix = "commonDataModel.salesattachment";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.SalesAttachment;
 
@@ -34,7 +34,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Sales
 			    KeyWords = group.Add(new VocabularyKey(nameof(KeyWords), "Key Words", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    MimeType = group.Add(new VocabularyKey(nameof(MimeType), "Mime Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    OrganizationId = group.Add(new VocabularyKey(nameof(OrganizationId), "Organization ", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    Mode = group.Add(new VocabularyKey(nameof(Mode), "Mode", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Mode = group.Add(new VocabularyKey(nameof(Mode), "Mode", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -50,26 +50,26 @@ namespace CluedIn.Vocabularies.CommonDataModel.Sales
             #endregion
         }
 
-        public VocabularyKey SalesLiteratureItemId { get; private set; }
-        public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Title { get; private set; }
         public VocabularyKey Abstract { get; private set; }
         public VocabularyKey AttachedDocumentUrl { get; private set; }
         public VocabularyKey AuthorName { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
         public VocabularyKey DocumentBody { get; private set; }
         public VocabularyKey FileName { get; private set; }
         public VocabularyKey FileSize { get; private set; }
         public VocabularyKey FileTypeCode { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
         public VocabularyKey IsCustomerViewable { get; private set; }
         public VocabularyKey KeyWords { get; private set; }
         public VocabularyKey MimeType { get; private set; }
-        public VocabularyKey OrganizationId { get; private set; }
         public VocabularyKey Mode { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey OrganizationId { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey SalesLiteratureItemId { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey Title { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

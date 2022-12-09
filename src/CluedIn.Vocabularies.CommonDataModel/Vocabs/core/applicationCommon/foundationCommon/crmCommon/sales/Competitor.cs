@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Sales
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class CompetitorVocabulary : SimpleVocabulary
     {
         public CompetitorVocabulary()
         {
             VocabularyName = "Competitor";
-            KeyPrefix = "commonDataModel.competitor.sales";
+            KeyPrefix = "commonDataModel.competitor";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Competitor;
 
@@ -87,7 +87,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Sales
 			    WebSiteUrl = group.Add(new VocabularyKey(nameof(WebSiteUrl), "Website", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
 			    WinPercentage = group.Add(new VocabularyKey(nameof(WinPercentage), "Win Percentage", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
 			    EntityImageId = group.Add(new VocabularyKey(nameof(EntityImageId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    YomiName = group.Add(new VocabularyKey(nameof(YomiName), "Yomi Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    YomiName = group.Add(new VocabularyKey(nameof(YomiName), "Yomi Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -122,23 +122,11 @@ namespace CluedIn.Vocabularies.CommonDataModel.Sales
             #endregion
         }
 
-        public VocabularyKey CompetitorId { get; private set; }
-        public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey StageId { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
         public VocabularyKey Address1AddressId { get; private set; }
         public VocabularyKey Address1AddressTypeCode { get; private set; }
         public VocabularyKey Address1City { get; private set; }
-        public VocabularyKey Address1Country { get; private set; }
         public VocabularyKey Address1Composite { get; private set; }
+        public VocabularyKey Address1Country { get; private set; }
         public VocabularyKey Address1County { get; private set; }
         public VocabularyKey Address1Fax { get; private set; }
         public VocabularyKey Address1Latitude { get; private set; }
@@ -178,23 +166,35 @@ namespace CluedIn.Vocabularies.CommonDataModel.Sales
         public VocabularyKey Address2Telephone3 { get; private set; }
         public VocabularyKey Address2UPSZone { get; private set; }
         public VocabularyKey Address2UTCOffset { get; private set; }
+        public VocabularyKey CompetitorId { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey EntityImageId { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
         public VocabularyKey KeyProduct { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey Opportunities { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey Overview { get; private set; }
+        public VocabularyKey ProcessId { get; private set; }
         public VocabularyKey ReferenceInfoUrl { get; private set; }
         public VocabularyKey ReportedRevenue { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey ReportedRevenueBase { get; private set; }
         public VocabularyKey ReportingQuarter { get; private set; }
         public VocabularyKey ReportingYear { get; private set; }
+        public VocabularyKey StageId { get; private set; }
         public VocabularyKey StockExchange { get; private set; }
         public VocabularyKey Strengths { get; private set; }
         public VocabularyKey Threats { get; private set; }
         public VocabularyKey TickerSymbol { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
         public VocabularyKey Weaknesses { get; private set; }
         public VocabularyKey WebSiteUrl { get; private set; }
         public VocabularyKey WinPercentage { get; private set; }
-        public VocabularyKey EntityImageId { get; private set; }
         public VocabularyKey YomiName { get; private set; }
     }
 }

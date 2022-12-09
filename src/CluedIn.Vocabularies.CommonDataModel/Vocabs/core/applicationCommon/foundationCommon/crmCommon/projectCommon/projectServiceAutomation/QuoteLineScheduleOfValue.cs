@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class QuoteLineScheduleOfValueVocabulary : SimpleVocabulary
     {
         public QuoteLineScheduleOfValueVocabulary()
         {
             VocabularyName = "Quote Line Schedule Of Value";
-            KeyPrefix = "commonDataModel.quotelinescheduleofvalue.projectserviceautomation";
+            KeyPrefix = "commonDataModel.quotelinescheduleofvalue";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.QuoteLineScheduleOfValue;
 
@@ -28,7 +28,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    Tax = group.Add(new VocabularyKey(nameof(Tax), "tax", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
 			    TaxBase = group.Add(new VocabularyKey(nameof(TaxBase), "tax (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    AmountAfterTax = group.Add(new VocabularyKey(nameof(AmountAfterTax), "Milestone Amount", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    AmountAfterTaxBase = group.Add(new VocabularyKey(nameof(AmountAfterTaxBase), "amount_after_tax (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    AmountAfterTaxBase = group.Add(new VocabularyKey(nameof(AmountAfterTaxBase), "amount_after_tax (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -51,20 +51,20 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
+        public VocabularyKey Amount { get; private set; }
+        public VocabularyKey AmountAfterTax { get; private set; }
+        public VocabularyKey AmountAfterTaxBase { get; private set; }
+        public VocabularyKey AmountBase { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey InvoiceStatus { get; private set; }
+        public VocabularyKey IsDataImport { get; private set; }
+        public VocabularyKey MilestoneDate { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey QuoteLine { get; private set; }
         public VocabularyKey QuoteLineScheduleOfValueId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey Amount { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
-        public VocabularyKey AmountBase { get; private set; }
-        public VocabularyKey MilestoneDate { get; private set; }
-        public VocabularyKey InvoiceStatus { get; private set; }
-        public VocabularyKey IsDataImport { get; private set; }
-        public VocabularyKey QuoteLine { get; private set; }
         public VocabularyKey Tax { get; private set; }
         public VocabularyKey TaxBase { get; private set; }
-        public VocabularyKey AmountAfterTax { get; private set; }
-        public VocabularyKey AmountAfterTaxBase { get; private set; }
     }
 }

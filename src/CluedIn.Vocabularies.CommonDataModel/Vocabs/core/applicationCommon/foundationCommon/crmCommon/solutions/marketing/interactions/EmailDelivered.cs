@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Interactions
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class EmailDeliveredVocabulary : SimpleVocabulary
     {
         public EmailDeliveredVocabulary()
         {
             VocabularyName = "Email Delivered";
-            KeyPrefix = "commonDataModel.emaildelivered.interactions";
+            KeyPrefix = "commonDataModel.emaildelivered";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.EmailDelivered;
 
@@ -25,7 +25,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Interactions
 			    UsageType = group.Add(new VocabularyKey(nameof(UsageType), "Usage type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    InteractionType = group.Add(new VocabularyKey(nameof(InteractionType), "Interaction type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Timestamp = group.Add(new VocabularyKey(nameof(Timestamp), "Timestamp", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ActivityId = group.Add(new VocabularyKey(nameof(ActivityId), "Activity ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    ActivityId = group.Add(new VocabularyKey(nameof(ActivityId), "Activity ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -37,17 +37,17 @@ namespace CluedIn.Vocabularies.CommonDataModel.Interactions
             #endregion
         }
 
-        public VocabularyKey InteractionId { get; private set; }
-        public VocabularyKey OrganizationId { get; private set; }
-        public VocabularyKey SendingId { get; private set; }
-        public VocabularyKey ContactId { get; private set; }
         public VocabularyKey AccountId { get; private set; }
-        public VocabularyKey MessageId { get; private set; }
+        public VocabularyKey ActivityId { get; private set; }
+        public VocabularyKey ContactId { get; private set; }
         public VocabularyKey CustomerJourneyId { get; private set; }
         public VocabularyKey CustomerJourneyIterationId { get; private set; }
-        public VocabularyKey UsageType { get; private set; }
+        public VocabularyKey InteractionId { get; private set; }
         public VocabularyKey InteractionType { get; private set; }
+        public VocabularyKey MessageId { get; private set; }
+        public VocabularyKey OrganizationId { get; private set; }
+        public VocabularyKey SendingId { get; private set; }
         public VocabularyKey Timestamp { get; private set; }
-        public VocabularyKey ActivityId { get; private set; }
+        public VocabularyKey UsageType { get; private set; }
     }
 }

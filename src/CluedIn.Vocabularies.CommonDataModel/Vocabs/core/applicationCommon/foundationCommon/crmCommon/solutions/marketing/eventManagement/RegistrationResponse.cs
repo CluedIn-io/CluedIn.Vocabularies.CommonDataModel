@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class RegistrationResponseVocabulary : SimpleVocabulary
     {
         public RegistrationResponseVocabulary()
         {
             VocabularyName = "Registration Response";
-            KeyPrefix = "commonDataModel.registrationresponse.eventmanagement";
+            KeyPrefix = "commonDataModel.registrationresponse";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.RegistrationResponse;
 
@@ -17,7 +17,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
 			    RegistrationResponseId = group.Add(new VocabularyKey(nameof(RegistrationResponseId), "Registration Response", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Response = group.Add(new VocabularyKey(nameof(Response), "Response", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Response = group.Add(new VocabularyKey(nameof(Response), "Response", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -40,8 +40,8 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
         }
 
         public VocabularyKey RegistrationResponseId { get; private set; }
+        public VocabularyKey Response { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Response { get; private set; }
     }
 }

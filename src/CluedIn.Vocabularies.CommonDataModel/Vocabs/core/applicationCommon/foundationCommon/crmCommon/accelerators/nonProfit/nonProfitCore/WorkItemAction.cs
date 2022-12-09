@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class WorkItemActionVocabulary : SimpleVocabulary
     {
         public WorkItemActionVocabulary()
         {
             VocabularyName = "Work Item Action";
-            KeyPrefix = "commonDataModel.workitemaction.nonprofitcore";
+            KeyPrefix = "commonDataModel.workitemaction";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.WorkItemAction;
 
@@ -20,7 +20,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
 			    WorkItemActionId = group.Add(new VocabularyKey(nameof(WorkItemActionId), "Work Item Action", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    WorkItemActionType = group.Add(new VocabularyKey(nameof(WorkItemActionType), "Work Item Action Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -50,10 +50,10 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
 
         public VocabularyKey Description { get; private set; }
         public VocabularyKey Name { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey WorkItemActionDueDate { get; private set; }
         public VocabularyKey WorkItemActionId { get; private set; }
         public VocabularyKey WorkItemActionType { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
     }
 }

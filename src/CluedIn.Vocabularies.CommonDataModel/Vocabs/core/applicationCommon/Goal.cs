@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class GoalVocabulary : SimpleVocabulary
     {
         public GoalVocabulary()
         {
             VocabularyName = "Goal";
-            KeyPrefix = "commonDataModel.goal.applicationcommon";
+            KeyPrefix = "commonDataModel.goal";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Goal;
 
@@ -74,7 +74,36 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    ComputedTargetAsOfTodayInteger = group.Add(new VocabularyKey(nameof(ComputedTargetAsOfTodayInteger), "Today's Target (Integer)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    IsOverride = group.Add(new VocabularyKey(nameof(IsOverride), "Override", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    IsOverridden = group.Add(new VocabularyKey(nameof(IsOverridden), "Overridden", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    EntityImageId = group.Add(new VocabularyKey(nameof(EntityImageId), "Entity Image Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));             
+			    EntityImageId = group.Add(new VocabularyKey(nameof(EntityImageId), "Entity Image Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Goal Details for ElectronicMedicalRecords", group =>
+            {
+			    CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    CreatedOnBehalfBy = group.Add(new VocabularyKey(nameof(CreatedOnBehalfBy), "Created By (Delegate)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+			    ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    ModifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(ModifiedOnBehalfBy), "Modified By (Delegate)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    GoalExpressedByType = group.Add(new VocabularyKey(nameof(GoalExpressedByType), "Goal Expressed By Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    GoalNumber = group.Add(new VocabularyKey(nameof(GoalNumber), "Goal Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    GoalStartType = group.Add(new VocabularyKey(nameof(GoalStartType), "Starting Method", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    GoalStatus = group.Add(new VocabularyKey(nameof(GoalStatus), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    GoalStatusDate = group.Add(new VocabularyKey(nameof(GoalStatusDate), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    GoalStatusReason = group.Add(new VocabularyKey(nameof(GoalStatusReason), "Modify Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    GoalSubjectType = group.Add(new VocabularyKey(nameof(GoalSubjectType), "Subject Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    GoalTargetDetailLowerValue = group.Add(new VocabularyKey(nameof(GoalTargetDetailLowerValue), "Lower Value", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
+			    GoalTargetDetailQuantityComparator = group.Add(new VocabularyKey(nameof(GoalTargetDetailQuantityComparator), "Quantity Comparator", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    GoalTargetDetailQuantitySystem = group.Add(new VocabularyKey(nameof(GoalTargetDetailQuantitySystem), "Quantity System", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    GoalTargetDetailQuantityUnit = group.Add(new VocabularyKey(nameof(GoalTargetDetailQuantityUnit), "Quantity Unit", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    GoalTargetDetailQuantityValue = group.Add(new VocabularyKey(nameof(GoalTargetDetailQuantityValue), "Quantity Value", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
+			    GoalTargetDetailType = group.Add(new VocabularyKey(nameof(GoalTargetDetailType), "Detail Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    GoalTargetDetailUpperValue = group.Add(new VocabularyKey(nameof(GoalTargetDetailUpperValue), "Upper Value", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
+			    GoalTargetMeasureValueDueDate = group.Add(new VocabularyKey(nameof(GoalTargetMeasureValueDueDate), "Due Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    GoalTargetMeasureValueDueDuration = group.Add(new VocabularyKey(nameof(GoalTargetMeasureValueDueDuration), "Due Duration", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
+			    GoalTargetMeasureValueDueType = group.Add(new VocabularyKey(nameof(GoalTargetMeasureValueDueType), "Measure Due Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), "Time Zone Rule Version Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -214,66 +243,92 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             #endregion
         }
 
-        public VocabularyKey GoalId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Title { get; private set; }
-        public VocabularyKey FiscalPeriod { get; private set; }
-        public VocabularyKey FiscalYear { get; private set; }
-        public VocabularyKey GoalStartDate { get; private set; }
-        public VocabularyKey GoalEndDate { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
-        public VocabularyKey TreeId { get; private set; }
-        public VocabularyKey Depth { get; private set; }
-        public VocabularyKey StretchTargetMoney { get; private set; }
-        public VocabularyKey StretchTargetMoneyBase { get; private set; }
-        public VocabularyKey StretchTargetDecimal { get; private set; }
-        public VocabularyKey StretchTargetInteger { get; private set; }
-        public VocabularyKey TargetMoney { get; private set; }
-        public VocabularyKey TargetMoneyBase { get; private set; }
-        public VocabularyKey TargetDecimal { get; private set; }
-        public VocabularyKey TargetInteger { get; private set; }
+        public VocabularyKey ActualDecimal { get; private set; }
+        public VocabularyKey ActualInteger { get; private set; }
         public VocabularyKey ActualMoney { get; private set; }
         public VocabularyKey ActualMoneyBase { get; private set; }
-        public VocabularyKey CustomRollupFieldMoney { get; private set; }
-        public VocabularyKey CustomRollupFieldMoneyBase { get; private set; }
-        public VocabularyKey InProgressMoney { get; private set; }
-        public VocabularyKey InProgressMoneyBase { get; private set; }
-        public VocabularyKey ActualDecimal { get; private set; }
-        public VocabularyKey CustomRollupFieldDecimal { get; private set; }
-        public VocabularyKey InProgressDecimal { get; private set; }
-        public VocabularyKey ActualInteger { get; private set; }
-        public VocabularyKey CustomRollupFieldInteger { get; private set; }
-        public VocabularyKey InProgressInteger { get; private set; }
-        public VocabularyKey Percentage { get; private set; }
-        public VocabularyKey IsFiscalPeriodGoal { get; private set; }
-        public VocabularyKey ConsiderOnlyGoalOwnersRecords { get; private set; }
-        public VocabularyKey LastRolledupDate { get; private set; }
-        public VocabularyKey TargetString { get; private set; }
-        public VocabularyKey StretchTargetString { get; private set; }
         public VocabularyKey ActualString { get; private set; }
-        public VocabularyKey CustomRollupFieldString { get; private set; }
-        public VocabularyKey InProgressString { get; private set; }
         public VocabularyKey AmountDataType { get; private set; }
-        public VocabularyKey IsAmount { get; private set; }
-        public VocabularyKey RollupQueryActualIntegerId { get; private set; }
-        public VocabularyKey RollUpQueryActualMoneyId { get; private set; }
-        public VocabularyKey RollUpQueryActualDecimalId { get; private set; }
-        public VocabularyKey RollUpQueryCustomIntegerId { get; private set; }
-        public VocabularyKey RollUpQueryCustomMoneyId { get; private set; }
-        public VocabularyKey RollUpQueryCustomDecimalId { get; private set; }
-        public VocabularyKey RollUpQueryInprogressIntegerId { get; private set; }
-        public VocabularyKey RollUpQueryInprogressMoneyId { get; private set; }
-        public VocabularyKey RollUpQueryInprogressDecimalId { get; private set; }
-        public VocabularyKey RollupOnlyFromChildGoals { get; private set; }
-        public VocabularyKey RollupErrorCode { get; private set; }
-        public VocabularyKey ComputedTargetAsOfTodayPercentageAchieved { get; private set; }
-        public VocabularyKey ComputedTargetAsOfTodayMoney { get; private set; }
-        public VocabularyKey ComputedTargetAsOfTodayMoneyBase { get; private set; }
         public VocabularyKey ComputedTargetAsOfTodayDecimal { get; private set; }
         public VocabularyKey ComputedTargetAsOfTodayInteger { get; private set; }
-        public VocabularyKey IsOverride { get; private set; }
-        public VocabularyKey IsOverridden { get; private set; }
+        public VocabularyKey ComputedTargetAsOfTodayMoney { get; private set; }
+        public VocabularyKey ComputedTargetAsOfTodayMoneyBase { get; private set; }
+        public VocabularyKey ComputedTargetAsOfTodayPercentageAchieved { get; private set; }
+        public VocabularyKey ConsiderOnlyGoalOwnersRecords { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey CreatedOnBehalfBy { get; private set; }
+        public VocabularyKey CustomRollupFieldDecimal { get; private set; }
+        public VocabularyKey CustomRollupFieldInteger { get; private set; }
+        public VocabularyKey CustomRollupFieldMoney { get; private set; }
+        public VocabularyKey CustomRollupFieldMoneyBase { get; private set; }
+        public VocabularyKey CustomRollupFieldString { get; private set; }
+        public VocabularyKey Depth { get; private set; }
         public VocabularyKey EntityImageId { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey FiscalPeriod { get; private set; }
+        public VocabularyKey FiscalYear { get; private set; }
+        public VocabularyKey GoalEndDate { get; private set; }
+        public VocabularyKey GoalExpressedByType { get; private set; }
+        public VocabularyKey GoalId { get; private set; }
+        public VocabularyKey GoalNumber { get; private set; }
+        public VocabularyKey GoalStartDate { get; private set; }
+        public VocabularyKey GoalStartType { get; private set; }
+        public VocabularyKey GoalStatus { get; private set; }
+        public VocabularyKey GoalStatusDate { get; private set; }
+        public VocabularyKey GoalStatusReason { get; private set; }
+        public VocabularyKey GoalSubjectType { get; private set; }
+        public VocabularyKey GoalTargetDetailLowerValue { get; private set; }
+        public VocabularyKey GoalTargetDetailQuantityComparator { get; private set; }
+        public VocabularyKey GoalTargetDetailQuantitySystem { get; private set; }
+        public VocabularyKey GoalTargetDetailQuantityUnit { get; private set; }
+        public VocabularyKey GoalTargetDetailQuantityValue { get; private set; }
+        public VocabularyKey GoalTargetDetailType { get; private set; }
+        public VocabularyKey GoalTargetDetailUpperValue { get; private set; }
+        public VocabularyKey GoalTargetMeasureValueDueDate { get; private set; }
+        public VocabularyKey GoalTargetMeasureValueDueDuration { get; private set; }
+        public VocabularyKey GoalTargetMeasureValueDueType { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey InProgressDecimal { get; private set; }
+        public VocabularyKey InProgressInteger { get; private set; }
+        public VocabularyKey InProgressMoney { get; private set; }
+        public VocabularyKey InProgressMoneyBase { get; private set; }
+        public VocabularyKey InProgressString { get; private set; }
+        public VocabularyKey IsAmount { get; private set; }
+        public VocabularyKey IsFiscalPeriodGoal { get; private set; }
+        public VocabularyKey IsOverridden { get; private set; }
+        public VocabularyKey IsOverride { get; private set; }
+        public VocabularyKey LastRolledupDate { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey ModifiedOnBehalfBy { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey Percentage { get; private set; }
+        public VocabularyKey RollupErrorCode { get; private set; }
+        public VocabularyKey RollupOnlyFromChildGoals { get; private set; }
+        public VocabularyKey RollUpQueryActualDecimalId { get; private set; }
+        public VocabularyKey RollupQueryActualIntegerId { get; private set; }
+        public VocabularyKey RollUpQueryActualMoneyId { get; private set; }
+        public VocabularyKey RollUpQueryCustomDecimalId { get; private set; }
+        public VocabularyKey RollUpQueryCustomIntegerId { get; private set; }
+        public VocabularyKey RollUpQueryCustomMoneyId { get; private set; }
+        public VocabularyKey RollUpQueryInprogressDecimalId { get; private set; }
+        public VocabularyKey RollUpQueryInprogressIntegerId { get; private set; }
+        public VocabularyKey RollUpQueryInprogressMoneyId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey StretchTargetDecimal { get; private set; }
+        public VocabularyKey StretchTargetInteger { get; private set; }
+        public VocabularyKey StretchTargetMoney { get; private set; }
+        public VocabularyKey StretchTargetMoneyBase { get; private set; }
+        public VocabularyKey StretchTargetString { get; private set; }
+        public VocabularyKey TargetDecimal { get; private set; }
+        public VocabularyKey TargetInteger { get; private set; }
+        public VocabularyKey TargetMoney { get; private set; }
+        public VocabularyKey TargetMoneyBase { get; private set; }
+        public VocabularyKey TargetString { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey Title { get; private set; }
+        public VocabularyKey TreeId { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class EmailSignatureVocabulary : SimpleVocabulary
     {
         public EmailSignatureVocabulary()
         {
             VocabularyName = "Email Signature";
-            KeyPrefix = "commonDataModel.emailsignature.applicationcommon";
+            KeyPrefix = "commonDataModel.emailsignature";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.EmailSignature;
 
@@ -32,7 +32,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    OwningTeam = group.Add(new VocabularyKey(nameof(OwningTeam), "Owning Team", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    IsCustomizable = group.Add(new VocabularyKey(nameof(IsCustomizable), "Customizable", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IsDefault = group.Add(new VocabularyKey(nameof(IsDefault), "Is Default", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));             
+			    IsDefault = group.Add(new VocabularyKey(nameof(IsDefault), "Is Default", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -50,24 +50,24 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             #endregion
         }
 
-        public VocabularyKey EmailSignatureId { get; private set; }
-        public VocabularyKey IsPersonal { get; private set; }
-        public VocabularyKey MimeType { get; private set; }
         public VocabularyKey Body { get; private set; }
-        public VocabularyKey Title { get; private set; }
+        public VocabularyKey ComponentState { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
         public VocabularyKey Description { get; private set; }
+        public VocabularyKey EmailSignatureId { get; private set; }
+        public VocabularyKey GenerationTypeCode { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey IsCustomizable { get; private set; }
+        public VocabularyKey IsDefault { get; private set; }
+        public VocabularyKey IsPersonal { get; private set; }
+        public VocabularyKey LanguageCode { get; private set; }
+        public VocabularyKey MimeType { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey OverwriteTime { get; private set; }
+        public VocabularyKey OwningTeam { get; private set; }
         public VocabularyKey OwningUser { get; private set; }
         public VocabularyKey PresentationXml { get; private set; }
-        public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey GenerationTypeCode { get; private set; }
-        public VocabularyKey LanguageCode { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverwriteTime { get; private set; }
-        public VocabularyKey ComponentState { get; private set; }
-        public VocabularyKey OwningTeam { get; private set; }
-        public VocabularyKey IsCustomizable { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey IsDefault { get; private set; }
+        public VocabularyKey Title { get; private set; }
     }
 }

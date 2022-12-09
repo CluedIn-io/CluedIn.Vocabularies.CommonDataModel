@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class AppointmentEMRVocabulary : SimpleVocabulary
     {
         public AppointmentEMRVocabulary()
         {
             VocabularyName = "Appointment EMR";
-            KeyPrefix = "commonDataModel.appointmentemr.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.appointmentemr";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.AppointmentEMR;
 
@@ -69,7 +69,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Subject = group.Add(new VocabularyKey(nameof(Subject), "Subject", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    To = group.Add(new VocabularyKey(nameof(To), "To", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -243,11 +243,16 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
         public VocabularyKey ActualDurationMinutes { get; private set; }
         public VocabularyKey ActualEnd { get; private set; }
         public VocabularyKey ActualStart { get; private set; }
+        public VocabularyKey AppointmentCreationDate { get; private set; }
+        public VocabularyKey AppointmentStatus { get; private set; }
         public VocabularyKey BCC { get; private set; }
         public VocabularyKey CC { get; private set; }
+        public VocabularyKey Comment { get; private set; }
         public VocabularyKey Customers { get; private set; }
         public VocabularyKey DeliveryLastAttemptedOn { get; private set; }
         public VocabularyKey Description { get; private set; }
+        public VocabularyKey Emrdescription { get; private set; }
+        public VocabularyKey EndTime { get; private set; }
         public VocabularyKey ExchangeItemID { get; private set; }
         public VocabularyKey ExchangeWebLink { get; private set; }
         public VocabularyKey From { get; private set; }
@@ -258,26 +263,19 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
         public VocabularyKey IsWorkflowCreated { get; private set; }
         public VocabularyKey LastOnHoldTime { get; private set; }
         public VocabularyKey LeftVoiceMail { get; private set; }
-        public VocabularyKey AppointmentCreationDate { get; private set; }
-        public VocabularyKey AppointmentStatus { get; private set; }
-        public VocabularyKey Comment { get; private set; }
-        public VocabularyKey Emrdescription { get; private set; }
-        public VocabularyKey EndTime { get; private set; }
         public VocabularyKey MinutesDuration { get; private set; }
-        public VocabularyKey ParticipantActorType { get; private set; }
-        public VocabularyKey ParticipantStatus { get; private set; }
-        public VocabularyKey PatientInstruction { get; private set; }
-        public VocabularyKey Priority { get; private set; }
-        public VocabularyKey Required { get; private set; }
-        public VocabularyKey StartTime { get; private set; }
-        public VocabularyKey SupportingInformation { get; private set; }
         public VocabularyKey OnHoldTime { get; private set; }
         public VocabularyKey OptionalAttendees { get; private set; }
         public VocabularyKey Organizer { get; private set; }
+        public VocabularyKey ParticipantActorType { get; private set; }
+        public VocabularyKey ParticipantStatus { get; private set; }
         public VocabularyKey Partners { get; private set; }
+        public VocabularyKey PatientInstruction { get; private set; }
         public VocabularyKey PostponeActivityProcessingUntil { get; private set; }
+        public VocabularyKey Priority { get; private set; }
         public VocabularyKey PriorityCode { get; private set; }
         public VocabularyKey ProcessId { get; private set; }
+        public VocabularyKey Required { get; private set; }
         public VocabularyKey RequiredAttendees { get; private set; }
         public VocabularyKey Resources { get; private set; }
         public VocabularyKey ScheduledDurationMinutes { get; private set; }
@@ -289,9 +287,11 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
         public VocabularyKey ServiceId { get; private set; }
         public VocabularyKey SortDate { get; private set; }
         public VocabularyKey StageId { get; private set; }
+        public VocabularyKey StartTime { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey Subject { get; private set; }
+        public VocabularyKey SupportingInformation { get; private set; }
         public VocabularyKey To { get; private set; }
         public VocabularyKey TraversedPath { get; private set; }
     }

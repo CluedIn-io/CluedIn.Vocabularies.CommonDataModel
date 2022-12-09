@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class CarePlanVocabulary : SimpleVocabulary
     {
         public CarePlanVocabulary()
         {
             VocabularyName = "Care Plan";
-            KeyPrefix = "commonDataModel.careplan.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.careplan";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.CarePlan;
 
@@ -25,7 +25,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    SubjectType = group.Add(new VocabularyKey(nameof(SubjectType), "Subject Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Title = group.Add(new VocabularyKey(nameof(Title), "Title", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -391,9 +391,9 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
         public VocabularyKey PlanIntent { get; private set; }
         public VocabularyKey PlanStartDate { get; private set; }
         public VocabularyKey PlanStatus { get; private set; }
-        public VocabularyKey SubjectType { get; private set; }
-        public VocabularyKey Title { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey SubjectType { get; private set; }
+        public VocabularyKey Title { get; private set; }
     }
 }

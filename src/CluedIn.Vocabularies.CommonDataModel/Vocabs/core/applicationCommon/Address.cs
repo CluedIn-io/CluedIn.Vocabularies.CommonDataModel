@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class AddressVocabulary : SimpleVocabulary
     {
         public AddressVocabulary()
         {
             VocabularyName = "Address";
-            KeyPrefix = "commonDataModel.address.applicationcommon";
+            KeyPrefix = "commonDataModel.address";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Address;
 
@@ -49,7 +49,32 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    Composite = group.Add(new VocabularyKey(nameof(Composite), "Address", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Composite = group.Add(new VocabularyKey(nameof(Composite), "Address", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Address Details for HigherEducation", group =>
+            {
+			    EndDate = group.Add(new VocabularyKey(nameof(EndDate), "End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    ExternalIdentifier = group.Add(new VocabularyKey(nameof(ExternalIdentifier), "External Identifier", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    ExternalSourceSystem = group.Add(new VocabularyKey(nameof(ExternalSourceSystem), "External Source System", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    MailType = group.Add(new VocabularyKey(nameof(MailType), "Mail Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    StartDate = group.Add(new VocabularyKey(nameof(StartDate), "Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Address Details for ElectronicMedicalRecords", group =>
+            {
+
+            });
+            AddGroup("Address Details for NonProfitCore", group =>
+            {
+			    IsUspsValidated = group.Add(new VocabularyKey(nameof(IsUspsValidated), "USPS Validated", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
+			    IsValidated = group.Add(new VocabularyKey(nameof(IsValidated), "Validated", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
+			    Region = group.Add(new VocabularyKey(nameof(Region), "Region", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    SeasonalEndDay = group.Add(new VocabularyKey(nameof(SeasonalEndDay), "Seasonal End Day", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    SeasonalEndMonth = group.Add(new VocabularyKey(nameof(SeasonalEndMonth), "Seasonal End Month", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    SeasonalStartDay = group.Add(new VocabularyKey(nameof(SeasonalStartDay), "Seasonal Start Day", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    SeasonalStartMonth = group.Add(new VocabularyKey(nameof(SeasonalStartMonth), "Seasonal Start Month", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Telephone1TypeCode = group.Add(new VocabularyKey(nameof(Telephone1TypeCode), "Telephone 1 Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Telephone2TypeCode = group.Add(new VocabularyKey(nameof(Telephone2TypeCode), "Telephone 2 Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Telephone3TypeCode = group.Add(new VocabularyKey(nameof(Telephone3TypeCode), "Telephone 3 Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -109,41 +134,56 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             #endregion
         }
 
-        public VocabularyKey CustomerAddressId { get; private set; }
         public VocabularyKey AddressNumber { get; private set; }
-        public VocabularyKey ObjectTypeCode { get; private set; }
         public VocabularyKey AddressTypeCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey PrimaryContactName { get; private set; }
+        public VocabularyKey City { get; private set; }
+        public VocabularyKey Composite { get; private set; }
+        public VocabularyKey Country { get; private set; }
+        public VocabularyKey County { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey CustomerAddressId { get; private set; }
+        public VocabularyKey EndDate { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey ExternalIdentifier { get; private set; }
+        public VocabularyKey ExternalSourceSystem { get; private set; }
+        public VocabularyKey Fax { get; private set; }
+        public VocabularyKey FreightTermsCode { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey IsUspsValidated { get; private set; }
+        public VocabularyKey IsValidated { get; private set; }
+        public VocabularyKey Latitude { get; private set; }
         public VocabularyKey Line1 { get; private set; }
         public VocabularyKey Line2 { get; private set; }
         public VocabularyKey Line3 { get; private set; }
-        public VocabularyKey City { get; private set; }
-        public VocabularyKey StateOrProvince { get; private set; }
-        public VocabularyKey County { get; private set; }
-        public VocabularyKey Country { get; private set; }
-        public VocabularyKey PostOfficeBox { get; private set; }
-        public VocabularyKey PostalCode { get; private set; }
-        public VocabularyKey UTCOffset { get; private set; }
-        public VocabularyKey FreightTermsCode { get; private set; }
-        public VocabularyKey UPSZone { get; private set; }
-        public VocabularyKey Latitude { get; private set; }
-        public VocabularyKey Telephone1 { get; private set; }
         public VocabularyKey Longitude { get; private set; }
-        public VocabularyKey ShippingMethodCode { get; private set; }
-        public VocabularyKey Telephone2 { get; private set; }
-        public VocabularyKey Telephone3 { get; private set; }
-        public VocabularyKey Fax { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey MailType { get; private set; }
         public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey ObjectTypeCode { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey OwningBusinessUnit { get; private set; }
         public VocabularyKey OwningUser { get; private set; }
+        public VocabularyKey PostalCode { get; private set; }
+        public VocabularyKey PostOfficeBox { get; private set; }
+        public VocabularyKey PrimaryContactName { get; private set; }
+        public VocabularyKey Region { get; private set; }
+        public VocabularyKey SeasonalEndDay { get; private set; }
+        public VocabularyKey SeasonalEndMonth { get; private set; }
+        public VocabularyKey SeasonalStartDay { get; private set; }
+        public VocabularyKey SeasonalStartMonth { get; private set; }
+        public VocabularyKey ShippingMethodCode { get; private set; }
+        public VocabularyKey StartDate { get; private set; }
+        public VocabularyKey StateOrProvince { get; private set; }
+        public VocabularyKey Telephone1 { get; private set; }
+        public VocabularyKey Telephone1TypeCode { get; private set; }
+        public VocabularyKey Telephone2 { get; private set; }
+        public VocabularyKey Telephone2TypeCode { get; private set; }
+        public VocabularyKey Telephone3 { get; private set; }
+        public VocabularyKey Telephone3TypeCode { get; private set; }
         public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey UPSZone { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
-        public VocabularyKey Composite { get; private set; }
+        public VocabularyKey UTCOffset { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class EmailVocabulary : SimpleVocabulary
     {
         public EmailVocabulary()
         {
             VocabularyName = "Email";
-            KeyPrefix = "commonDataModel.email.applicationcommon";
+            KeyPrefix = "commonDataModel.email";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Email;
 
@@ -57,7 +57,13 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    EmailReminderText = group.Add(new VocabularyKey(nameof(EmailReminderText), "Email Reminder Text", VocabularyKeyDataType.Email, VocabularyKeyVisibility.Visible)); 
 			    TemplateId = group.Add(new VocabularyKey(nameof(TemplateId), "ID for template used.", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ReminderActionCardId = group.Add(new VocabularyKey(nameof(ReminderActionCardId), "Reminder Action Card Id.", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    IsEmailReminderSet = group.Add(new VocabularyKey(nameof(IsEmailReminderSet), "Reminder Set", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));             
+			    IsEmailReminderSet = group.Add(new VocabularyKey(nameof(IsEmailReminderSet), "Reminder Set", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Email Details for CrmCommon", group =>
+            {
+			    To = group.Add(new VocabularyKey(nameof(To), "To", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    BCC = group.Add(new VocabularyKey(nameof(BCC), "Bcc", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    CC = group.Add(new VocabularyKey(nameof(CC), "Cc", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -116,49 +122,52 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             #endregion
         }
 
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey SubmittedBy { get; private set; }
-        public VocabularyKey Description { get; private set; }
-        public VocabularyKey MimeType { get; private set; }
-        public VocabularyKey ReadReceiptRequested { get; private set; }
-        public VocabularyKey TrackingToken { get; private set; }
-        public VocabularyKey Sender { get; private set; }
-        public VocabularyKey ToRecipients { get; private set; }
-        public VocabularyKey DeliveryReceiptRequested { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey MessageId { get; private set; }
-        public VocabularyKey DeliveryAttempts { get; private set; }
-        public VocabularyKey Compressed { get; private set; }
-        public VocabularyKey Notifications { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey AttachmentCount { get; private set; }
-        public VocabularyKey InReplyTo { get; private set; }
-        public VocabularyKey BaseConversationIndexHash { get; private set; }
-        public VocabularyKey ConversationIndex { get; private set; }
-        public VocabularyKey CorrelationMethod { get; private set; }
-        public VocabularyKey PostponeEmailProcessingUntil { get; private set; }
-        public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey StageId { get; private set; }
-        public VocabularyKey IsUnsafe { get; private set; }
-        public VocabularyKey OnHoldTime { get; private set; }
-        public VocabularyKey LastOnHoldTime { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
         public VocabularyKey AttachmentOpenCount { get; private set; }
+        public VocabularyKey BaseConversationIndexHash { get; private set; }
+        public VocabularyKey BCC { get; private set; }
+        public VocabularyKey CC { get; private set; }
+        public VocabularyKey Compressed { get; private set; }
+        public VocabularyKey ConversationIndex { get; private set; }
         public VocabularyKey ConversationTrackingId { get; private set; }
+        public VocabularyKey CorrelationMethod { get; private set; }
         public VocabularyKey DelayedEmailSendTime { get; private set; }
-        public VocabularyKey LastOpenedTime { get; private set; }
-        public VocabularyKey LinksClickedCount { get; private set; }
-        public VocabularyKey OpenCount { get; private set; }
-        public VocabularyKey ReplyCount { get; private set; }
-        public VocabularyKey EmailTrackingId { get; private set; }
-        public VocabularyKey FollowEmailUserPreference { get; private set; }
-        public VocabularyKey IsEmailFollowed { get; private set; }
+        public VocabularyKey DeliveryAttempts { get; private set; }
+        public VocabularyKey DeliveryReceiptRequested { get; private set; }
+        public VocabularyKey Description { get; private set; }
         public VocabularyKey EmailReminderExpiryTime { get; private set; }
-        public VocabularyKey EmailReminderType { get; private set; }
         public VocabularyKey EmailReminderStatus { get; private set; }
         public VocabularyKey EmailReminderText { get; private set; }
-        public VocabularyKey TemplateId { get; private set; }
-        public VocabularyKey ReminderActionCardId { get; private set; }
+        public VocabularyKey EmailReminderType { get; private set; }
+        public VocabularyKey EmailTrackingId { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey FollowEmailUserPreference { get; private set; }
+        public VocabularyKey InReplyTo { get; private set; }
+        public VocabularyKey IsEmailFollowed { get; private set; }
         public VocabularyKey IsEmailReminderSet { get; private set; }
+        public VocabularyKey IsUnsafe { get; private set; }
+        public VocabularyKey LastOnHoldTime { get; private set; }
+        public VocabularyKey LastOpenedTime { get; private set; }
+        public VocabularyKey LinksClickedCount { get; private set; }
+        public VocabularyKey MessageId { get; private set; }
+        public VocabularyKey MimeType { get; private set; }
+        public VocabularyKey Notifications { get; private set; }
+        public VocabularyKey OnHoldTime { get; private set; }
+        public VocabularyKey OpenCount { get; private set; }
+        public VocabularyKey PostponeEmailProcessingUntil { get; private set; }
+        public VocabularyKey ProcessId { get; private set; }
+        public VocabularyKey ReadReceiptRequested { get; private set; }
+        public VocabularyKey ReminderActionCardId { get; private set; }
+        public VocabularyKey ReplyCount { get; private set; }
+        public VocabularyKey Sender { get; private set; }
+        public VocabularyKey StageId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey SubmittedBy { get; private set; }
+        public VocabularyKey TemplateId { get; private set; }
+        public VocabularyKey To { get; private set; }
+        public VocabularyKey ToRecipients { get; private set; }
+        public VocabularyKey TrackingToken { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
     }
 }

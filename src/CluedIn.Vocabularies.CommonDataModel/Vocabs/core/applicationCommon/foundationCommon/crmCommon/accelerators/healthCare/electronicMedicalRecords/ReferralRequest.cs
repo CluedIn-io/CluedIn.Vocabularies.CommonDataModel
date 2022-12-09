@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ReferralRequestVocabulary : SimpleVocabulary
     {
         public ReferralRequestVocabulary()
         {
             VocabularyName = "Referral Request";
-            KeyPrefix = "commonDataModel.referralrequest.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.referralrequest";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ReferralRequest;
 
@@ -31,7 +31,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    Status = group.Add(new VocabularyKey(nameof(Status), "Referral Request Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Subject = group.Add(new VocabularyKey(nameof(Subject), "Referral Request Subject", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Referral Request Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Referral Request Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -276,9 +276,9 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
         public VocabularyKey ReferralRequestId { get; private set; }
         public VocabularyKey ReferralRequestNumber { get; private set; }
         public VocabularyKey RequesterAgent { get; private set; }
-        public VocabularyKey Status { get; private set; }
-        public VocabularyKey Subject { get; private set; }
         public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey Status { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey Subject { get; private set; }
     }
 }

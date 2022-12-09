@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ArticleCommentVocabulary : SimpleVocabulary
     {
         public ArticleCommentVocabulary()
         {
             VocabularyName = "Article Comment";
-            KeyPrefix = "commonDataModel.articlecomment.applicationcommon";
+            KeyPrefix = "commonDataModel.articlecomment";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ArticleComment;
 
@@ -20,7 +20,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    OrganizationId = group.Add(new VocabularyKey(nameof(OrganizationId), "Organization ", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));             
+			    OrganizationId = group.Add(new VocabularyKey(nameof(OrganizationId), "Organization ", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -36,12 +36,12 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             #endregion
         }
 
-        public VocabularyKey KbArticleCommentId { get; private set; }
-        public VocabularyKey Title { get; private set; }
         public VocabularyKey CommentText { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey KbArticleCommentId { get; private set; }
         public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
         public VocabularyKey OrganizationId { get; private set; }
+        public VocabularyKey Title { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

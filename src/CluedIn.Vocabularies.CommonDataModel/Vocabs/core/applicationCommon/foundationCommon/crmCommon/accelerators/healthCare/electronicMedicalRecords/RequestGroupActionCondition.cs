@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class RequestGroupActionConditionVocabulary : SimpleVocabulary
     {
         public RequestGroupActionConditionVocabulary()
         {
             VocabularyName = "Request Group Action Condition";
-            KeyPrefix = "commonDataModel.requestgroupactioncondition.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.requestgroupactioncondition";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.RequestGroupActionCondition;
 
@@ -21,7 +21,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    RequestGroupActionConditionId = group.Add(new VocabularyKey(nameof(RequestGroupActionConditionId), "Request Group Action Condition", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

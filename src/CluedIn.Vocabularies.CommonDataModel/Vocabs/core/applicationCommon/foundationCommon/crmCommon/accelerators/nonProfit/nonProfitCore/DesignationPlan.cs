@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class DesignationPlanVocabulary : SimpleVocabulary
     {
         public DesignationPlanVocabulary()
         {
             VocabularyName = "Designation Plan";
-            KeyPrefix = "commonDataModel.designationplan.nonprofitcore";
+            KeyPrefix = "commonDataModel.designationplan";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.DesignationPlan;
 
@@ -29,7 +29,15 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
 			    ValidFromDate = group.Add(new VocabularyKey(nameof(ValidFromDate), "Valid From Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ValidToDate = group.Add(new VocabularyKey(nameof(ValidToDate), "Valid To Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("DesignationPlan Details for NonProfitForSales", group =>
+            {
+
+            });
+            AddGroup("DesignationPlan Details for NonProfitIati", group =>
+            {
+
             });
             
             #region Incoming Relationships
@@ -58,10 +66,10 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
             #endregion
         }
 
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey AmountOfPledgeMax { get; private set; }
         public VocabularyKey AmountOfPledgeMaxBase { get; private set; }
         public VocabularyKey DesignationPlanId { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey NumberOfPaymentsMax { get; private set; }
         public VocabularyKey PercentageOfPaymentsMax { get; private set; }
@@ -70,9 +78,9 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
         public VocabularyKey PerPaymentMaxAmountBase { get; private set; }
         public VocabularyKey PerPaymentMaxPercent { get; private set; }
         public VocabularyKey PriorityOrder { get; private set; }
-        public VocabularyKey ValidFromDate { get; private set; }
-        public VocabularyKey ValidToDate { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey ValidFromDate { get; private set; }
+        public VocabularyKey ValidToDate { get; private set; }
     }
 }

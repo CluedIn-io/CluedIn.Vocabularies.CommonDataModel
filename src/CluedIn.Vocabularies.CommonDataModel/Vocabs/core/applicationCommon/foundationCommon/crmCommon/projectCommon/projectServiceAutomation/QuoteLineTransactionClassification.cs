@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class QuoteLineTransactionClassificationVocabulary : SimpleVocabulary
     {
         public QuoteLineTransactionClassificationVocabulary()
         {
             VocabularyName = "Quote Line Transaction Classification";
-            KeyPrefix = "commonDataModel.quotelinetransactionclassification.projectserviceautomation";
+            KeyPrefix = "commonDataModel.quotelinetransactionclassification";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.QuoteLineTransactionClassification;
 
@@ -21,7 +21,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    BillingType = group.Add(new VocabularyKey(nameof(BillingType), "Billing Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Include = group.Add(new VocabularyKey(nameof(Include), "Include", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    QuoteLine = group.Add(new VocabularyKey(nameof(QuoteLine), "(Deprecated) Quote Line", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TransactionClassification = group.Add(new VocabularyKey(nameof(TransactionClassification), "Transaction Classification", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    TransactionClassification = group.Add(new VocabularyKey(nameof(TransactionClassification), "Transaction Classification", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -43,13 +43,13 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
+        public VocabularyKey BillingType { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey Include { get; private set; }
+        public VocabularyKey QuoteLine { get; private set; }
         public VocabularyKey QuoteLineTransactionClassificationId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Description { get; private set; }
-        public VocabularyKey BillingType { get; private set; }
-        public VocabularyKey Include { get; private set; }
-        public VocabularyKey QuoteLine { get; private set; }
         public VocabularyKey TransactionClassification { get; private set; }
     }
 }

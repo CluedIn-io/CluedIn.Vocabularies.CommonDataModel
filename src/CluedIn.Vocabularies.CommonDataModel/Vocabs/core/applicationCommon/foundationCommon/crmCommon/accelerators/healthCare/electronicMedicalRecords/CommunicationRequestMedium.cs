@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class CommunicationRequestMediumVocabulary : SimpleVocabulary
     {
         public CommunicationRequestMediumVocabulary()
         {
             VocabularyName = "Communication Request Medium";
-            KeyPrefix = "commonDataModel.communicationrequestmedium.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.communicationrequestmedium";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.CommunicationRequestMedium;
 
@@ -17,7 +17,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    CommunicationRequestMediumId = group.Add(new VocabularyKey(nameof(CommunicationRequestMediumId), "Communication Request Medium", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

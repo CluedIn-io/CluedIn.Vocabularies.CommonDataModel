@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class EducationVocabulary : SimpleVocabulary
     {
         public EducationVocabulary()
         {
             VocabularyName = "Education";
-            KeyPrefix = "commonDataModel.education.nonprofitcore";
+            KeyPrefix = "commonDataModel.education";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Education;
 
@@ -25,7 +25,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
 			    LastYearAttended = group.Add(new VocabularyKey(nameof(LastYearAttended), "Last Year Attended", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

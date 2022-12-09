@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Portals
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class PollVocabulary : SimpleVocabulary
     {
         public PollVocabulary()
         {
             VocabularyName = "Poll";
-            KeyPrefix = "commonDataModel.poll.portals";
+            KeyPrefix = "commonDataModel.poll";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Poll;
 
@@ -23,7 +23,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
 			    ExpirationDate = group.Add(new VocabularyKey(nameof(ExpirationDate), "Expiration Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Question = group.Add(new VocabularyKey(nameof(Question), "Question", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ReleaseDate = group.Add(new VocabularyKey(nameof(ReleaseDate), "Release Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SubmitButtonLabel = group.Add(new VocabularyKey(nameof(SubmitButtonLabel), "Submit Button Label", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    SubmitButtonLabel = group.Add(new VocabularyKey(nameof(SubmitButtonLabel), "Submit Button Label", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -84,15 +84,15 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
             #endregion
         }
 
-        public VocabularyKey PollId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey Active { get; private set; }
         public VocabularyKey CloseVotingDate { get; private set; }
         public VocabularyKey ExpirationDate { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey PollId { get; private set; }
         public VocabularyKey Question { get; private set; }
         public VocabularyKey ReleaseDate { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey SubmitButtonLabel { get; private set; }
     }
 }

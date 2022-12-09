@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Service
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ContractLineVocabulary : SimpleVocabulary
     {
         public ContractLineVocabulary()
         {
             VocabularyName = "Contract Line";
-            KeyPrefix = "commonDataModel.contractline.service";
+            KeyPrefix = "commonDataModel.contractline";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ContractLine;
 
@@ -41,7 +41,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TotalAllotments = group.Add(new VocabularyKey(nameof(TotalAllotments), "Total Allotments", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    AccountId = group.Add(new VocabularyKey(nameof(AccountId), "Account", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ContactId = group.Add(new VocabularyKey(nameof(ContactId), "Contact", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    ContactId = group.Add(new VocabularyKey(nameof(ContactId), "Contact", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -70,18 +70,19 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
             #endregion
         }
 
-        public VocabularyKey ContractDetailId { get; private set; }
-        public VocabularyKey Title { get; private set; }
+        public VocabularyKey AccountId { get; private set; }
         public VocabularyKey ActiveOn { get; private set; }
         public VocabularyKey AllotmentsOverage { get; private set; }
         public VocabularyKey AllotmentsRemaining { get; private set; }
         public VocabularyKey AllotmentsUsed { get; private set; }
+        public VocabularyKey ContactId { get; private set; }
+        public VocabularyKey ContractDetailId { get; private set; }
         public VocabularyKey ContractStateCode { get; private set; }
         public VocabularyKey Discount { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey DiscountBase { get; private set; }
         public VocabularyKey DiscountPercentage { get; private set; }
         public VocabularyKey EffectivityCalendar { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey ExpiresOn { get; private set; }
         public VocabularyKey InitialQuantity { get; private set; }
         public VocabularyKey LineItemOrder { get; private set; }
@@ -95,8 +96,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
         public VocabularyKey ServiceContractUnitsCode { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey Title { get; private set; }
         public VocabularyKey TotalAllotments { get; private set; }
-        public VocabularyKey AccountId { get; private set; }
-        public VocabularyKey ContactId { get; private set; }
     }
 }

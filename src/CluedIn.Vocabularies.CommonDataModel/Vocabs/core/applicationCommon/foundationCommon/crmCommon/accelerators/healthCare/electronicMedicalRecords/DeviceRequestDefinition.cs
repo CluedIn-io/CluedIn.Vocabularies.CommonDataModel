@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class DeviceRequestDefinitionVocabulary : SimpleVocabulary
     {
         public DeviceRequestDefinitionVocabulary()
         {
             VocabularyName = "Device Request Definition";
-            KeyPrefix = "commonDataModel.devicerequestdefinition.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.devicerequestdefinition";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.DeviceRequestDefinition;
 
@@ -18,7 +18,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    DeviceRequestDefinitionId = group.Add(new VocabularyKey(nameof(DeviceRequestDefinitionId), "Device Request Definition", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

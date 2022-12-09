@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Automotive
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class DeviceInspectionChecklistTypeVocabulary : SimpleVocabulary
     {
         public DeviceInspectionChecklistTypeVocabulary()
         {
             VocabularyName = "Device Inspection Checklist Type";
-            KeyPrefix = "commonDataModel.deviceinspectionchecklisttype.automotive";
+            KeyPrefix = "commonDataModel.deviceinspectionchecklisttype";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.DeviceInspectionChecklistType;
 
@@ -18,7 +18,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
 			    DeviceInspectionChecklistTypeId = group.Add(new VocabularyKey(nameof(DeviceInspectionChecklistTypeId), "Device Inspection Checklist Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

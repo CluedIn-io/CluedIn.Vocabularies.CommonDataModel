@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ReferralRequestDefinitionVocabulary : SimpleVocabulary
     {
         public ReferralRequestDefinitionVocabulary()
         {
             VocabularyName = "Referral Request Definition";
-            KeyPrefix = "commonDataModel.referralrequestdefinition.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.referralrequestdefinition";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ReferralRequestDefinition;
 
@@ -18,7 +18,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ReferralRequestDefinitionId = group.Add(new VocabularyKey(nameof(ReferralRequestDefinitionId), "Referral Request Definition", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

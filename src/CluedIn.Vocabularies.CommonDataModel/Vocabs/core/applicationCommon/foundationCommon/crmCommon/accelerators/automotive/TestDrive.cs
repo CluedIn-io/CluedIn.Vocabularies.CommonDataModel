@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Automotive
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class TestDriveVocabulary : SimpleVocabulary
     {
         public TestDriveVocabulary()
         {
             VocabularyName = "Test Drive";
-            KeyPrefix = "commonDataModel.testdrive.automotive";
+            KeyPrefix = "commonDataModel.testdrive";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.TestDrive;
 
@@ -27,7 +27,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
 			    TestDriveId = group.Add(new VocabularyKey(nameof(TestDriveId), "Test Drive", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Year = group.Add(new VocabularyKey(nameof(Year), "Year", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -77,9 +77,9 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
         public VocabularyKey ScheduledDuration { get; private set; }
         public VocabularyKey ScheduledEnd { get; private set; }
         public VocabularyKey ScheduledStart { get; private set; }
-        public VocabularyKey TestDriveId { get; private set; }
-        public VocabularyKey Year { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TestDriveId { get; private set; }
+        public VocabularyKey Year { get; private set; }
     }
 }

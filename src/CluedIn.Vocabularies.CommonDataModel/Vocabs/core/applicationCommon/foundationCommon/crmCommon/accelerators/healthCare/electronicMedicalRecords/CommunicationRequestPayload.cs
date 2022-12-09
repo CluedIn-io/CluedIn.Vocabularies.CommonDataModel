@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class CommunicationRequestPayloadVocabulary : SimpleVocabulary
     {
         public CommunicationRequestPayloadVocabulary()
         {
             VocabularyName = "Communication Request Payload";
-            KeyPrefix = "commonDataModel.communicationrequestpayload.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.communicationrequestpayload";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.CommunicationRequestPayload;
 
@@ -19,7 +19,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    PayloadContentReference = group.Add(new VocabularyKey(nameof(PayloadContentReference), "Payload Content Reference", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    PayloadContentString = group.Add(new VocabularyKey(nameof(PayloadContentString), "Payload Content String", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

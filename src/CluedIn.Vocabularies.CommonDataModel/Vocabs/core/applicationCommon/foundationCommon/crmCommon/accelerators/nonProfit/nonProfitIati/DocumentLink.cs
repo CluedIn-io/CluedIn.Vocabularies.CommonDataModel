@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class DocumentLinkVocabulary : SimpleVocabulary
     {
         public DocumentLinkVocabulary()
         {
             VocabularyName = "Document Link";
-            KeyPrefix = "commonDataModel.documentlink.nonprofitiati";
+            KeyPrefix = "commonDataModel.documentlink";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.DocumentLink;
 
@@ -20,7 +20,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
 			    PublicationDate = group.Add(new VocabularyKey(nameof(PublicationDate), "Publication Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Url = group.Add(new VocabularyKey(nameof(Url), "URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -51,8 +51,8 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
         public VocabularyKey DocumentLinkId { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey PublicationDate { get; private set; }
-        public VocabularyKey Url { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey Url { get; private set; }
     }
 }

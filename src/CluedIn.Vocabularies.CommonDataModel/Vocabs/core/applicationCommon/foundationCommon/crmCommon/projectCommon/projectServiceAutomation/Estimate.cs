@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class EstimateVocabulary : SimpleVocabulary
     {
         public EstimateVocabulary()
         {
             VocabularyName = "Estimate";
-            KeyPrefix = "commonDataModel.estimate.projectserviceautomation";
+            KeyPrefix = "commonDataModel.estimate";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Estimate;
 
@@ -18,7 +18,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EstimateHeaderType = group.Add(new VocabularyKey(nameof(EstimateHeaderType), "Estimate Header Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    EstimateHeaderType = group.Add(new VocabularyKey(nameof(EstimateHeaderType), "Estimate Header Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -66,10 +66,10 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey EstimateHeaderType { get; private set; }
         public VocabularyKey EstimateId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Description { get; private set; }
-        public VocabularyKey EstimateHeaderType { get; private set; }
     }
 }

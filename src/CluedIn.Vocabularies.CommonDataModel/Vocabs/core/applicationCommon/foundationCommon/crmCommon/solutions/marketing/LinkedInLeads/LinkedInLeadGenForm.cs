@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.LinkedInLeads
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class LinkedInLeadGenFormVocabulary : SimpleVocabulary
     {
         public LinkedInLeadGenFormVocabulary()
         {
             VocabularyName = "Linked In Lead Gen Form";
-            KeyPrefix = "commonDataModel.linkedinleadgenform.linkedinleads";
+            KeyPrefix = "commonDataModel.linkedinleadgenform";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.LinkedInLeadGenForm;
 
@@ -30,7 +30,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.LinkedInLeads
 			    Thankyoumessage = group.Add(new VocabularyKey(nameof(Thankyoumessage), "Thank you message", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TotalSubmissions = group.Add(new VocabularyKey(nameof(TotalSubmissions), "Total submissions", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    TotalsubmissionsDate = group.Add(new VocabularyKey(nameof(TotalsubmissionsDate), "Total submissions (Last Updated On)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TotalsubmissionsState = group.Add(new VocabularyKey(nameof(TotalsubmissionsState), "Total submissions (State)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    TotalsubmissionsState = group.Add(new VocabularyKey(nameof(TotalsubmissionsState), "Total submissions (State)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -67,18 +67,18 @@ namespace CluedIn.Vocabularies.CommonDataModel.LinkedInLeads
             #endregion
         }
 
-        public VocabularyKey LinkedinformId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey Headline { get; private set; }
         public VocabularyKey LandingpageURL { get; private set; }
         public VocabularyKey LastSyncDate { get; private set; }
+        public VocabularyKey LinkedinformId { get; private set; }
         public VocabularyKey LinkedInID { get; private set; }
         public VocabularyKey LocaleCountry { get; private set; }
         public VocabularyKey LocaleLanguage { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey PrivacyPolicyURL { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey SyncStatus { get; private set; }
         public VocabularyKey Thankyoumessage { get; private set; }
         public VocabularyKey TotalSubmissions { get; private set; }

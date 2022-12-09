@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Automotive
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class SalesContractDetailVocabulary : SimpleVocabulary
     {
         public SalesContractDetailVocabulary()
         {
             VocabularyName = "Sales Contract Detail";
-            KeyPrefix = "commonDataModel.salescontractdetail.automotive";
+            KeyPrefix = "commonDataModel.salescontractdetail";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.SalesContractDetail;
 
@@ -21,7 +21,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    SalesContractDetailId = group.Add(new VocabularyKey(nameof(SalesContractDetailId), "Sales Contract Detail", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -47,10 +47,10 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
             #endregion
         }
 
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey BuybackDate { get; private set; }
         public VocabularyKey BuybackValue { get; private set; }
         public VocabularyKey BuybackValueBase { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey SalesContractDetailId { get; private set; }
         public VocabularyKey StateCode { get; private set; }

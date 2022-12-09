@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class SponsorshipVocabulary : SimpleVocabulary
     {
         public SponsorshipVocabulary()
         {
             VocabularyName = "Sponsorship";
-            KeyPrefix = "commonDataModel.sponsorship.eventmanagement";
+            KeyPrefix = "commonDataModel.sponsorship";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Sponsorship;
 
@@ -25,7 +25,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
 			    SponsorshipAmountBase = group.Add(new VocabularyKey(nameof(SponsorshipAmountBase), "Sponsorship Amount (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    SponsorshipCategory = group.Add(new VocabularyKey(nameof(SponsorshipCategory), "Sponsorship Category", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    SponsorshipType = group.Add(new VocabularyKey(nameof(SponsorshipType), "Sponsorship Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TransactionCurrencyId = group.Add(new VocabularyKey(nameof(TransactionCurrencyId), "Currency", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    TransactionCurrencyId = group.Add(new VocabularyKey(nameof(TransactionCurrencyId), "Currency", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -47,17 +47,17 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
             #endregion
         }
 
-        public VocabularyKey SponsorshipId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey EntityImageId { get; private set; }
         public VocabularyKey Description { get; private set; }
-        public VocabularyKey SponsorshipAmount { get; private set; }
+        public VocabularyKey EntityImageId { get; private set; }
         public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey SponsorshipAmount { get; private set; }
         public VocabularyKey SponsorshipAmountBase { get; private set; }
         public VocabularyKey SponsorshipCategory { get; private set; }
+        public VocabularyKey SponsorshipId { get; private set; }
         public VocabularyKey SponsorshipType { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey TransactionCurrencyId { get; private set; }
     }
 }

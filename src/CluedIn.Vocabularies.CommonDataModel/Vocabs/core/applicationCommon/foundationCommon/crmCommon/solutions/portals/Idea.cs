@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Portals
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class IdeaVocabulary : SimpleVocabulary
     {
         public IdeaVocabulary()
         {
             VocabularyName = "Idea";
-            KeyPrefix = "commonDataModel.idea.portals";
+            KeyPrefix = "commonDataModel.idea";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Idea;
 
@@ -39,7 +39,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
 			    TotalVotesState = group.Add(new VocabularyKey(nameof(TotalVotesState), "Total Votes (State)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    VotesSum = group.Add(new VocabularyKey(nameof(VotesSum), "Vote Sum", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    VotesSumDate = group.Add(new VocabularyKey(nameof(VotesSumDate), "Vote Sum (Last Updated On)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    VotesSumState = group.Add(new VocabularyKey(nameof(VotesSumState), "Vote Sum (State)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    VotesSumState = group.Add(new VocabularyKey(nameof(VotesSumState), "Vote Sum (State)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -74,31 +74,31 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
             #endregion
         }
 
-        public VocabularyKey IdeaId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
+        public VocabularyKey AdxCreatedByIPAddress { get; private set; }
+        public VocabularyKey AdxCreatedByUsername { get; private set; }
         public VocabularyKey Approved { get; private set; }
         public VocabularyKey AuthorEmail { get; private set; }
         public VocabularyKey AuthorName { get; private set; }
         public VocabularyKey CommentPolicy { get; private set; }
         public VocabularyKey Copy { get; private set; }
-        public VocabularyKey AdxCreatedByIPAddress { get; private set; }
-        public VocabularyKey AdxCreatedByUsername { get; private set; }
-        public VocabularyKey SubmittedOn { get; private set; }
+        public VocabularyKey IdeaId { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey PartialURL { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey StatusComment { get; private set; }
+        public VocabularyKey SubmittedOn { get; private set; }
         public VocabularyKey Summary { get; private set; }
-        public VocabularyKey VotersTotalNumberOf { get; private set; }
-        public VocabularyKey VotesDown { get; private set; }
-        public VocabularyKey VotesTotalNumberOf { get; private set; }
-        public VocabularyKey VoteSum { get; private set; }
-        public VocabularyKey VotesUp { get; private set; }
         public VocabularyKey TotalVotes { get; private set; }
         public VocabularyKey TotalVotesDate { get; private set; }
         public VocabularyKey TotalVotesState { get; private set; }
+        public VocabularyKey VotersTotalNumberOf { get; private set; }
+        public VocabularyKey VotesDown { get; private set; }
         public VocabularyKey VotesSum { get; private set; }
         public VocabularyKey VotesSumDate { get; private set; }
         public VocabularyKey VotesSumState { get; private set; }
+        public VocabularyKey VotesTotalNumberOf { get; private set; }
+        public VocabularyKey VoteSum { get; private set; }
+        public VocabularyKey VotesUp { get; private set; }
     }
 }

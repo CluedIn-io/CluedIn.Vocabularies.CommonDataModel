@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class RoomVocabulary : SimpleVocabulary
     {
         public RoomVocabulary()
         {
             VocabularyName = "Room";
-            KeyPrefix = "commonDataModel.room.eventmanagement";
+            KeyPrefix = "commonDataModel.room";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Room;
 
@@ -25,7 +25,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
 			    InternetConnection = group.Add(new VocabularyKey(nameof(InternetConnection), "Internet connection", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Other = group.Add(new VocabularyKey(nameof(Other), "Other", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    VideoConferencing = group.Add(new VocabularyKey(nameof(VideoConferencing), "Video conferencing", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    WhiteBoard = group.Add(new VocabularyKey(nameof(WhiteBoard), "Whiteboard", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    WhiteBoard = group.Add(new VocabularyKey(nameof(WhiteBoard), "Whiteboard", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -73,16 +73,16 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
             #endregion
         }
 
-        public VocabularyKey RoomId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey AVSupport { get; private set; }
         public VocabularyKey Capacity { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey DisabledAccess { get; private set; }
         public VocabularyKey InternetConnection { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey Other { get; private set; }
+        public VocabularyKey RoomId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey VideoConferencing { get; private set; }
         public VocabularyKey WhiteBoard { get; private set; }
     }

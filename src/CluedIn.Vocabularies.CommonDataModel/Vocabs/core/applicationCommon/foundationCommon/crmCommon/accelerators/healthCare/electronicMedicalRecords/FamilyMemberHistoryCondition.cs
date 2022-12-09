@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class FamilyMemberHistoryConditionVocabulary : SimpleVocabulary
     {
         public FamilyMemberHistoryConditionVocabulary()
         {
             VocabularyName = "Family Member History Condition";
-            KeyPrefix = "commonDataModel.familymemberhistorycondition.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.familymemberhistorycondition";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.FamilyMemberHistoryCondition;
 
@@ -24,7 +24,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    FamilyMemberHistoryConditionId = group.Add(new VocabularyKey(nameof(FamilyMemberHistoryConditionId), "Family Member History Condition", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

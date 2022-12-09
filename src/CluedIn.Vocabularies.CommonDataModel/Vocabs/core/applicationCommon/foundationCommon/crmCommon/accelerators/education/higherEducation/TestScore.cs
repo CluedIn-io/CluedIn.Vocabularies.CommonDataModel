@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class TestScoreVocabulary : SimpleVocabulary
     {
         public TestScoreVocabulary()
         {
             VocabularyName = "Test Score";
-            KeyPrefix = "commonDataModel.testscore.highereducation";
+            KeyPrefix = "commonDataModel.testscore";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.TestScore;
 
@@ -57,7 +57,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
 			    TOEFLReadingSection = group.Add(new VocabularyKey(nameof(TOEFLReadingSection), "TOEFL - Reading Section", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    TOEFLSpeakingSection = group.Add(new VocabularyKey(nameof(TOEFLSpeakingSection), "TOEFL - Speaking Section", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    TOEFLTotalScore = group.Add(new VocabularyKey(nameof(TOEFLTotalScore), "TOEFL - Total Score", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    TOEFLWritingSection = group.Add(new VocabularyKey(nameof(TOEFLWritingSection), "TOEFL - Writing Section", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    TOEFLWritingSection = group.Add(new VocabularyKey(nameof(TOEFLWritingSection), "TOEFL - Writing Section", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -79,10 +79,6 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
             #endregion
         }
 
-        public VocabularyKey TestScoreId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey ACTComposite { get; private set; }
         public VocabularyKey ACTELA { get; private set; }
         public VocabularyKey ACTEnglish { get; private set; }
@@ -108,14 +104,18 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
         public VocabularyKey IELTSReading { get; private set; }
         public VocabularyKey IELTSSpeakingScore { get; private set; }
         public VocabularyKey IELTSWriting { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey SATEssayAnalysis { get; private set; }
         public VocabularyKey SATEssayReading { get; private set; }
         public VocabularyKey SATEssayWriting { get; private set; }
         public VocabularyKey SATEvidenceBasedReadingandWritingSection { get; private set; }
         public VocabularyKey SATMathSection { get; private set; }
         public VocabularyKey SATTotalScore { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey TestDate { get; private set; }
         public VocabularyKey TestLocation { get; private set; }
+        public VocabularyKey TestScoreId { get; private set; }
         public VocabularyKey TestScoreValue { get; private set; }
         public VocabularyKey TestSource { get; private set; }
         public VocabularyKey TOEFLListeningSection { get; private set; }

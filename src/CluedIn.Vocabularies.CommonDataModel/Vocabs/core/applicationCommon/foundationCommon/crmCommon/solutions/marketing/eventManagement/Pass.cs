@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class PassVocabulary : SimpleVocabulary
     {
         public PassVocabulary()
         {
             VocabularyName = "Pass";
-            KeyPrefix = "commonDataModel.pass.eventmanagement";
+            KeyPrefix = "commonDataModel.pass";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Pass;
 
@@ -27,7 +27,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
 			    PassPriceBase = group.Add(new VocabularyKey(nameof(PassPriceBase), "Pass Price (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    NoOfPassesLeft = group.Add(new VocabularyKey(nameof(NoOfPassesLeft), "No of passes left", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    TotalCost = group.Add(new VocabularyKey(nameof(TotalCost), "Total cost", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    TotalcostBase = group.Add(new VocabularyKey(nameof(TotalcostBase), "Total cost (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    TotalcostBase = group.Add(new VocabularyKey(nameof(TotalcostBase), "Total cost (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -65,18 +65,18 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
             #endregion
         }
 
-        public VocabularyKey PassId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey CostPerUnit { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey CostPerUnitBase { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey NoOfPassesAllocated { get; private set; }
+        public VocabularyKey NoOfPassesLeft { get; private set; }
         public VocabularyKey NoOfPassesSold { get; private set; }
+        public VocabularyKey PassId { get; private set; }
         public VocabularyKey PassPrice { get; private set; }
         public VocabularyKey PassPriceBase { get; private set; }
-        public VocabularyKey NoOfPassesLeft { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey TotalCost { get; private set; }
         public VocabularyKey TotalcostBase { get; private set; }
     }

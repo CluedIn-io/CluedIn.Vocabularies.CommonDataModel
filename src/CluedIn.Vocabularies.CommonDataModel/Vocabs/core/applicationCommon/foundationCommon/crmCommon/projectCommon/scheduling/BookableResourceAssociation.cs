@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class BookableResourceAssociationVocabulary : SimpleVocabulary
     {
         public BookableResourceAssociationVocabulary()
         {
             VocabularyName = "Bookable Resource Association";
-            KeyPrefix = "commonDataModel.bookableresourceassociation.scheduling";
+            KeyPrefix = "commonDataModel.bookableresourceassociation";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.BookableResourceAssociation;
 
@@ -20,7 +20,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    FromDate = group.Add(new VocabularyKey(nameof(FromDate), "From Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ToDate = group.Add(new VocabularyKey(nameof(ToDate), "To Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -43,10 +43,10 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
         }
 
         public VocabularyKey BookableresourceassociationId { get; private set; }
+        public VocabularyKey FromDate { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey FromDate { get; private set; }
         public VocabularyKey ToDate { get; private set; }
         public VocabularyKey Type { get; private set; }
     }

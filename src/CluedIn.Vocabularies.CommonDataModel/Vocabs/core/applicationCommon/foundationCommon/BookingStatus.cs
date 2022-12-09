@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class BookingStatusVocabulary : SimpleVocabulary
     {
         public BookingStatusVocabulary()
         {
             VocabularyName = "Booking Status";
-            KeyPrefix = "commonDataModel.bookingstatus.foundationcommon";
+            KeyPrefix = "commonDataModel.bookingstatus";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.BookingStatus;
 
@@ -20,7 +20,13 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Status = group.Add(new VocabularyKey(nameof(Status), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "ExchangeRate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));             
+			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "ExchangeRate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("BookingStatus Details for ProjectCommon", group =>
+            {
+			    ImageURL = group.Add(new VocabularyKey(nameof(ImageURL), "Image Url", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
+			    StatusColor = group.Add(new VocabularyKey(nameof(StatusColor), "Status Color", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    CommitType = group.Add(new VocabularyKey(nameof(CommitType), "Commit Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -45,11 +51,14 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
         }
 
         public VocabularyKey BookingStatusId { get; private set; }
-        public VocabularyKey Name { get; private set; }
+        public VocabularyKey CommitType { get; private set; }
         public VocabularyKey Description { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey ImageURL { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey Status { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey StatusColor { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class IndicatorValueVocabulary : SimpleVocabulary
     {
         public IndicatorValueVocabulary()
         {
             VocabularyName = "Indicator Value";
-            KeyPrefix = "commonDataModel.indicatorvalue.nonprofitcore";
+            KeyPrefix = "commonDataModel.indicatorvalue";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.IndicatorValue;
 
@@ -27,7 +27,18 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
 			    StartDate = group.Add(new VocabularyKey(nameof(StartDate), "Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ValueType = group.Add(new VocabularyKey(nameof(ValueType), "Value Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("IndicatorValue Details for NonProfitIati", group =>
+            {
+			    CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    CreatedOnBehalfBy = group.Add(new VocabularyKey(nameof(CreatedOnBehalfBy), "Created By (Delegate)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+			    ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    ModifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(ModifiedOnBehalfBy), "Modified By (Delegate)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Year = group.Add(new VocabularyKey(nameof(Year), "Year", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+			    Amount_Base = group.Add(new VocabularyKey(nameof(Amount_Base), "Amount (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -70,19 +81,27 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
             #endregion
         }
 
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey Amount { get; private set; }
+        public VocabularyKey Amount_Base { get; private set; }
         public VocabularyKey AmountBase { get; private set; }
         public VocabularyKey BaselineValue { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey CreatedOnBehalfBy { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey EndDate { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
         public VocabularyKey IndicatorValueId { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey ModifiedOnBehalfBy { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey Number { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey Percentage { get; private set; }
         public VocabularyKey StartDate { get; private set; }
-        public VocabularyKey ValueType { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey ValueType { get; private set; }
+        public VocabularyKey Year { get; private set; }
     }
 }

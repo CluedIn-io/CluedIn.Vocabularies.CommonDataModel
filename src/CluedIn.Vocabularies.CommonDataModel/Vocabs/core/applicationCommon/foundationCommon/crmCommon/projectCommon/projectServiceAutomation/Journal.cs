@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class JournalVocabulary : SimpleVocabulary
     {
         public JournalVocabulary()
         {
             VocabularyName = "Journal";
-            KeyPrefix = "commonDataModel.journal.projectserviceautomation";
+            KeyPrefix = "commonDataModel.journal";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Journal;
 
@@ -21,7 +21,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    ProcessId = group.Add(new VocabularyKey(nameof(ProcessId), "Process Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
 			    StageId = group.Add(new VocabularyKey(nameof(StageId), "Stage Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
 			    TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IsPosted = group.Add(new VocabularyKey(nameof(IsPosted), "Is Submitted", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));             
+			    IsPosted = group.Add(new VocabularyKey(nameof(IsPosted), "Is Submitted", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -71,13 +71,13 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
-        public VocabularyKey JournalId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey Description { get; private set; }
+        public VocabularyKey IsPosted { get; private set; }
+        public VocabularyKey JournalId { get; private set; }
         public VocabularyKey ProcessId { get; private set; }
         public VocabularyKey StageId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey TraversedPath { get; private set; }
-        public VocabularyKey IsPosted { get; private set; }
     }
 }

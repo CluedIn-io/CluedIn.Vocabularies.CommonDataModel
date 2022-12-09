@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ExpenseVocabulary : SimpleVocabulary
     {
         public ExpenseVocabulary()
         {
             VocabularyName = "Expense";
-            KeyPrefix = "commonDataModel.expense.projectserviceautomation";
+            KeyPrefix = "commonDataModel.expense";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Expense;
 
@@ -34,7 +34,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    Price = group.Add(new VocabularyKey(nameof(Price), "Price", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
 			    PriceBase = group.Add(new VocabularyKey(nameof(PriceBase), "Price (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TotalAmount = group.Add(new VocabularyKey(nameof(TotalAmount), "Total Amount", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    TotalAmountBase = group.Add(new VocabularyKey(nameof(TotalAmountBase), "Total Amount (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    TotalAmountBase = group.Add(new VocabularyKey(nameof(TotalAmountBase), "Total Amount (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -81,26 +81,26 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
-        public VocabularyKey ExpenseId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey ExpensePurpose { get; private set; }
-        public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey StageId { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
         public VocabularyKey Amount { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey AmountBase { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey ExpenseId { get; private set; }
+        public VocabularyKey ExpensePurpose { get; private set; }
         public VocabularyKey ExpenseStatus { get; private set; }
         public VocabularyKey ExternalComments { get; private set; }
+        public VocabularyKey Price { get; private set; }
+        public VocabularyKey PriceBase { get; private set; }
+        public VocabularyKey ProcessId { get; private set; }
         public VocabularyKey Quantity { get; private set; }
         public VocabularyKey SalesTaxAmount { get; private set; }
         public VocabularyKey SalesTaxAmountBase { get; private set; }
+        public VocabularyKey StageId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey TargetExpenseStatus { get; private set; }
-        public VocabularyKey TransactionDate { get; private set; }
-        public VocabularyKey Price { get; private set; }
-        public VocabularyKey PriceBase { get; private set; }
         public VocabularyKey TotalAmount { get; private set; }
         public VocabularyKey TotalAmountBase { get; private set; }
+        public VocabularyKey TransactionDate { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
     }
 }

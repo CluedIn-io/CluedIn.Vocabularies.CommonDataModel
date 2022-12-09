@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class NarrativeTranslationVocabulary : SimpleVocabulary
     {
         public NarrativeTranslationVocabulary()
         {
             VocabularyName = "Narrative Translation";
-            KeyPrefix = "commonDataModel.narrativetranslation.nonprofitiati";
+            KeyPrefix = "commonDataModel.narrativetranslation";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.NarrativeTranslation;
 
@@ -20,7 +20,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
 			    NarrativeTranslationId = group.Add(new VocabularyKey(nameof(NarrativeTranslationId), "Narrative Translation", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Translation = group.Add(new VocabularyKey(nameof(Translation), "Translation", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -70,8 +70,8 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
         public VocabularyKey EntityName { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey NarrativeTranslationId { get; private set; }
-        public VocabularyKey Translation { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey Translation { get; private set; }
     }
 }

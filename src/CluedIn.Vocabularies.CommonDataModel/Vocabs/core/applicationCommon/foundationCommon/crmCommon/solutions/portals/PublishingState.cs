@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Portals
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class PublishingStateVocabulary : SimpleVocabulary
     {
         public PublishingStateVocabulary()
         {
             VocabularyName = "Publishing State";
-            KeyPrefix = "commonDataModel.publishingstate.portals";
+            KeyPrefix = "commonDataModel.publishingstate";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.PublishingState;
 
@@ -20,7 +20,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    DisplayOrder = group.Add(new VocabularyKey(nameof(DisplayOrder), "Display Order", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    IsDefault = group.Add(new VocabularyKey(nameof(IsDefault), "Is Default", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    IsVisible = group.Add(new VocabularyKey(nameof(IsVisible), "Select whether the publishing state is visible.", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));             
+			    IsVisible = group.Add(new VocabularyKey(nameof(IsVisible), "Select whether the publishing state is visible.", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -47,12 +47,12 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
             #endregion
         }
 
-        public VocabularyKey PublishingStateId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey DisplayOrder { get; private set; }
         public VocabularyKey IsDefault { get; private set; }
         public VocabularyKey IsVisible { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey PublishingStateId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

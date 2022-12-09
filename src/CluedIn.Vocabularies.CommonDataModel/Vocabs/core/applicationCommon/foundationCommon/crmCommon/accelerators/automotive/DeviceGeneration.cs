@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Automotive
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class DeviceGenerationVocabulary : SimpleVocabulary
     {
         public DeviceGenerationVocabulary()
         {
             VocabularyName = "Device Generation";
-            KeyPrefix = "commonDataModel.devicegeneration.automotive";
+            KeyPrefix = "commonDataModel.devicegeneration";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.DeviceGeneration;
 
@@ -22,7 +22,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ToYear = group.Add(new VocabularyKey(nameof(ToYear), "To Year", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -52,14 +52,14 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
             #endregion
         }
 
-        public VocabularyKey EntityImage { get; private set; }
         public VocabularyKey Code { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey DeviceGenerationId { get; private set; }
+        public VocabularyKey EntityImage { get; private set; }
         public VocabularyKey FromYear { get; private set; }
         public VocabularyKey Name { get; private set; }
-        public VocabularyKey ToYear { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey ToYear { get; private set; }
     }
 }

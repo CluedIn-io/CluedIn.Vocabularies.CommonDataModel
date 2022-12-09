@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Portals
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class BadgeVocabulary : SimpleVocabulary
     {
         public BadgeVocabulary()
         {
             VocabularyName = "Badge";
-            KeyPrefix = "commonDataModel.badge.portals";
+            KeyPrefix = "commonDataModel.badge";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Badge;
 
@@ -26,7 +26,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
 			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ExpiryDate = group.Add(new VocabularyKey(nameof(ExpiryDate), "Expiration Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IssuedDate = group.Add(new VocabularyKey(nameof(IssuedDate), "Issued Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    IssuedDate = group.Add(new VocabularyKey(nameof(IssuedDate), "Issued Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -52,16 +52,16 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
 
         public VocabularyKey BadgeId { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey ExpiryDate { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey IssuedDate { get; private set; }
         public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey ExpiryDate { get; private set; }
-        public VocabularyKey IssuedDate { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class HotelRoomReservationVocabulary : SimpleVocabulary
     {
         public HotelRoomReservationVocabulary()
         {
             VocabularyName = "Hotel Room Reservation";
-            KeyPrefix = "commonDataModel.hotelroomreservation.eventmanagement";
+            KeyPrefix = "commonDataModel.hotelroomreservation";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.HotelRoomReservation;
 
@@ -19,7 +19,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Reservation Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    RewardsProgramNumber = group.Add(new VocabularyKey(nameof(RewardsProgramNumber), "Rewards Program Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SpecialRequests = group.Add(new VocabularyKey(nameof(SpecialRequests), "Special Requests", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    SpecialRequests = group.Add(new VocabularyKey(nameof(SpecialRequests), "Special Requests", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -42,10 +42,10 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
         }
 
         public VocabularyKey HotelRoomReservationId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey RewardsProgramNumber { get; private set; }
         public VocabularyKey SpecialRequests { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

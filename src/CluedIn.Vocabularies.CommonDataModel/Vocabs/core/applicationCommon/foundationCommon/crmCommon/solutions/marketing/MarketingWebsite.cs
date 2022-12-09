@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Marketing
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class MarketingWebsiteVocabulary : SimpleVocabulary
     {
         public MarketingWebsiteVocabulary()
         {
             VocabularyName = "Marketing Website";
-            KeyPrefix = "commonDataModel.marketingwebsite.marketing";
+            KeyPrefix = "commonDataModel.marketingwebsite";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.MarketingWebsite;
 
@@ -25,7 +25,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Marketing
 			    ShouldBeRemoved = group.Add(new VocabularyKey(nameof(ShouldBeRemoved), "Should be removed", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    Timeout = group.Add(new VocabularyKey(nameof(Timeout), "Timeout", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    Url = group.Add(new VocabularyKey(nameof(Url), "URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
-			    Purpose = group.Add(new VocabularyKey(nameof(Purpose), "Purpose", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Purpose = group.Add(new VocabularyKey(nameof(Purpose), "Purpose", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -47,17 +47,17 @@ namespace CluedIn.Vocabularies.CommonDataModel.Marketing
             #endregion
         }
 
-        public VocabularyKey WebsiteId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey InsightsPlaceholder { get; private set; }
         public VocabularyKey Javascriptcode { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey Purpose { get; private set; }
         public VocabularyKey RemoteWebsiteID { get; private set; }
         public VocabularyKey ShouldBeRemoved { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey Timeout { get; private set; }
         public VocabularyKey Url { get; private set; }
-        public VocabularyKey Purpose { get; private set; }
+        public VocabularyKey WebsiteId { get; private set; }
     }
 }

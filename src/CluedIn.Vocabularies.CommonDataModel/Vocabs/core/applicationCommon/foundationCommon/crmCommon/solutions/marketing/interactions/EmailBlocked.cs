@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Interactions
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class EmailBlockedVocabulary : SimpleVocabulary
     {
         public EmailBlockedVocabulary()
         {
             VocabularyName = "Email Blocked";
-            KeyPrefix = "commonDataModel.emailblocked.interactions";
+            KeyPrefix = "commonDataModel.emailblocked";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.EmailBlocked;
 
@@ -26,7 +26,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Interactions
 			    Timestamp = group.Add(new VocabularyKey(nameof(Timestamp), "Timestamp", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    BlockedReason = group.Add(new VocabularyKey(nameof(BlockedReason), "Blocked reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    CustomerJourneyIterationId = group.Add(new VocabularyKey(nameof(CustomerJourneyIterationId), "Customer journey iteration ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ActivityId = group.Add(new VocabularyKey(nameof(ActivityId), "Activity ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    ActivityId = group.Add(new VocabularyKey(nameof(ActivityId), "Activity ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -38,18 +38,18 @@ namespace CluedIn.Vocabularies.CommonDataModel.Interactions
             #endregion
         }
 
+        public VocabularyKey AccountId { get; private set; }
+        public VocabularyKey ActivityId { get; private set; }
+        public VocabularyKey BlockedReason { get; private set; }
+        public VocabularyKey ContactId { get; private set; }
+        public VocabularyKey CustomerJourneyId { get; private set; }
+        public VocabularyKey CustomerJourneyIterationId { get; private set; }
         public VocabularyKey InteractionId { get; private set; }
+        public VocabularyKey InteractionType { get; private set; }
+        public VocabularyKey MessageId { get; private set; }
         public VocabularyKey OrganizationId { get; private set; }
         public VocabularyKey SendingId { get; private set; }
-        public VocabularyKey ContactId { get; private set; }
-        public VocabularyKey AccountId { get; private set; }
-        public VocabularyKey MessageId { get; private set; }
-        public VocabularyKey CustomerJourneyId { get; private set; }
-        public VocabularyKey UsageType { get; private set; }
-        public VocabularyKey InteractionType { get; private set; }
         public VocabularyKey Timestamp { get; private set; }
-        public VocabularyKey BlockedReason { get; private set; }
-        public VocabularyKey CustomerJourneyIterationId { get; private set; }
-        public VocabularyKey ActivityId { get; private set; }
+        public VocabularyKey UsageType { get; private set; }
     }
 }

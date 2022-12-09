@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class GrantVocabulary : SimpleVocabulary
     {
         public GrantVocabulary()
         {
             VocabularyName = "Grant";
-            KeyPrefix = "commonDataModel.grant.highereducation";
+            KeyPrefix = "commonDataModel.grant";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Grant;
 
@@ -27,7 +27,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
 			    WebsiteURL = group.Add(new VocabularyKey(nameof(WebsiteURL), "Website URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
 			    WorkDescription = group.Add(new VocabularyKey(nameof(WorkDescription), "Work Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -69,19 +69,19 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
             #endregion
         }
 
-        public VocabularyKey GrantId { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey Amount { get; private set; }
         public VocabularyKey Amount_Base { get; private set; }
         public VocabularyKey ApplicationDeadlineDate { get; private set; }
         public VocabularyKey Description { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey GrantId { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey Qualifications { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey ValidTo { get; private set; }
         public VocabularyKey WebsiteURL { get; private set; }
         public VocabularyKey WorkDescription { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
     }
 }

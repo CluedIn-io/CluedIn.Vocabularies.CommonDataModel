@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Portals
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ForumPostVocabulary : SimpleVocabulary
     {
         public ForumPostVocabulary()
         {
             VocabularyName = "Forum Post";
-            KeyPrefix = "commonDataModel.forumpost.portals";
+            KeyPrefix = "commonDataModel.forumpost";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ForumPost;
 
@@ -21,7 +21,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
 			    Content = group.Add(new VocabularyKey(nameof(Content), "Content", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Date = group.Add(new VocabularyKey(nameof(Date), "Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    HelpfulVoteCount = group.Add(new VocabularyKey(nameof(HelpfulVoteCount), "Helpful Vote Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    IsAnswer = group.Add(new VocabularyKey(nameof(IsAnswer), "Answer?", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));             
+			    IsAnswer = group.Add(new VocabularyKey(nameof(IsAnswer), "Answer?", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -49,12 +49,12 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
         }
 
         public VocabularyKey CommunityForumPostId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey Content { get; private set; }
         public VocabularyKey Date { get; private set; }
         public VocabularyKey HelpfulVoteCount { get; private set; }
         public VocabularyKey IsAnswer { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

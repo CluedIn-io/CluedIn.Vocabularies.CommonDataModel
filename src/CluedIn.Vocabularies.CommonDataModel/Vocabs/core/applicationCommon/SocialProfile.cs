@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class SocialProfileVocabulary : SimpleVocabulary
     {
         public SocialProfileVocabulary()
         {
             VocabularyName = "Social Profile";
-            KeyPrefix = "commonDataModel.socialprofile.applicationcommon";
+            KeyPrefix = "commonDataModel.socialprofile";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.SocialProfile;
 
@@ -24,7 +24,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    InfluenceScore = group.Add(new VocabularyKey(nameof(InfluenceScore), "Influence Score", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
 			    ProfileLink = group.Add(new VocabularyKey(nameof(ProfileLink), "Profile Link", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
 			    UniqueProfileID = group.Add(new VocabularyKey(nameof(UniqueProfileID), "Unique Profile ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));             
+			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -54,16 +54,16 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             #endregion
         }
 
-        public VocabularyKey SocialProfileId { get; private set; }
-        public VocabularyKey ProfileName { get; private set; }
-        public VocabularyKey ProfileFullName { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey Blocked { get; private set; }
         public VocabularyKey Community { get; private set; }
-        public VocabularyKey InfluenceScore { get; private set; }
-        public VocabularyKey ProfileLink { get; private set; }
-        public VocabularyKey UniqueProfileID { get; private set; }
         public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey InfluenceScore { get; private set; }
+        public VocabularyKey ProfileFullName { get; private set; }
+        public VocabularyKey ProfileLink { get; private set; }
+        public VocabularyKey ProfileName { get; private set; }
+        public VocabularyKey SocialProfileId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey UniqueProfileID { get; private set; }
     }
 }

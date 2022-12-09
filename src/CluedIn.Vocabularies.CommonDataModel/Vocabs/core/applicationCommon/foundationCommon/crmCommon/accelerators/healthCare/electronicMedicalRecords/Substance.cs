@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class SubstanceVocabulary : SimpleVocabulary
     {
         public SubstanceVocabulary()
         {
             VocabularyName = "Substance";
-            KeyPrefix = "commonDataModel.substance.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.substance";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Substance;
 
@@ -28,7 +28,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), "Time Zone Rule Version Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -72,17 +72,17 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 
         public VocabularyKey CreatedOn { get; private set; }
         public VocabularyKey CreatedOnBehalfBy { get; private set; }
+        public VocabularyKey Description { get; private set; }
         public VocabularyKey ImportSequenceNumber { get; private set; }
         public VocabularyKey ModifiedOn { get; private set; }
         public VocabularyKey ModifiedOnBehalfBy { get; private set; }
-        public VocabularyKey Description { get; private set; }
         public VocabularyKey Name { get; private set; }
-        public VocabularyKey Status { get; private set; }
-        public VocabularyKey SubstanceId { get; private set; }
-        public VocabularyKey SubstanceNumber { get; private set; }
         public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey Status { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey SubstanceId { get; private set; }
+        public VocabularyKey SubstanceNumber { get; private set; }
         public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
     }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class BookableResourceCategoryAssnVocabulary : SimpleVocabulary
     {
         public BookableResourceCategoryAssnVocabulary()
         {
             VocabularyName = "Bookable Resource Category Assn";
-            KeyPrefix = "commonDataModel.bookableresourcecategoryassn.foundationcommon";
+            KeyPrefix = "commonDataModel.bookableresourcecategoryassn";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.BookableResourceCategoryAssn;
 
@@ -18,7 +18,11 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "ExchangeRate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));             
+			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "ExchangeRate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("BookableResourceCategoryAssn Details for ProjectServiceAutomation", group =>
+            {
+			    IsDefault = group.Add(new VocabularyKey(nameof(IsDefault), "Is Default", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -45,9 +49,10 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
         }
 
         public VocabularyKey BookableResourceCategoryAssnId { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey IsDefault { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
     }
 }

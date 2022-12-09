@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Automotive
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class DeviceBrandVocabulary : SimpleVocabulary
     {
         public DeviceBrandVocabulary()
         {
             VocabularyName = "Device Brand";
-            KeyPrefix = "commonDataModel.devicebrand.automotive";
+            KeyPrefix = "commonDataModel.devicebrand";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.DeviceBrand;
 
@@ -20,7 +20,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
 			    DeviceBrandId = group.Add(new VocabularyKey(nameof(DeviceBrandId), "Device Brand", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -50,10 +50,10 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
             #endregion
         }
 
-        public VocabularyKey EntityImage { get; private set; }
         public VocabularyKey Code { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey DeviceBrandId { get; private set; }
+        public VocabularyKey EntityImage { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }

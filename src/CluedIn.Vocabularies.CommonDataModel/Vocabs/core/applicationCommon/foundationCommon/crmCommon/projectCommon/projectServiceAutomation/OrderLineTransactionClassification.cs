@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class OrderLineTransactionClassificationVocabulary : SimpleVocabulary
     {
         public OrderLineTransactionClassificationVocabulary()
         {
             VocabularyName = "Order Line Transaction Classification";
-            KeyPrefix = "commonDataModel.orderlinetransactionclassification.projectserviceautomation";
+            KeyPrefix = "commonDataModel.orderlinetransactionclassification";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.OrderLineTransactionClassification;
 
@@ -21,7 +21,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    BillingType = group.Add(new VocabularyKey(nameof(BillingType), "Billing Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ContractLine = group.Add(new VocabularyKey(nameof(ContractLine), "(Deprecated) Contract Line", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Include = group.Add(new VocabularyKey(nameof(Include), "Map for Costs calculation?", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    TransactionClassification = group.Add(new VocabularyKey(nameof(TransactionClassification), "Transaction Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    TransactionClassification = group.Add(new VocabularyKey(nameof(TransactionClassification), "Transaction Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -43,13 +43,13 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
+        public VocabularyKey BillingType { get; private set; }
+        public VocabularyKey ContractLine { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey Include { get; private set; }
         public VocabularyKey OrderLineTransactionClassificationId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Description { get; private set; }
-        public VocabularyKey BillingType { get; private set; }
-        public VocabularyKey ContractLine { get; private set; }
-        public VocabularyKey Include { get; private set; }
         public VocabularyKey TransactionClassification { get; private set; }
     }
 }

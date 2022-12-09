@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class PractitionerRoleSpecialtyVocabulary : SimpleVocabulary
     {
         public PractitionerRoleSpecialtyVocabulary()
         {
             VocabularyName = "Practitioner Role Specialty";
-            KeyPrefix = "commonDataModel.practitionerrolespecialty.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.practitionerrolespecialty";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.PractitionerRoleSpecialty;
 
@@ -17,7 +17,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    PractitionerRoleSpecialtyId = group.Add(new VocabularyKey(nameof(PractitionerRoleSpecialtyId), "Practitioner Role Specialty", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

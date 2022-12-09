@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Banking
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class FinancialProductVocabulary : SimpleVocabulary
     {
         public FinancialProductVocabulary()
         {
             VocabularyName = "Financial Product";
-            KeyPrefix = "commonDataModel.financialproduct.banking";
+            KeyPrefix = "commonDataModel.financialproduct";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.FinancialProduct;
 
@@ -93,7 +93,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Banking
 			    DeprecatedStageId = group.Add(new VocabularyKey(nameof(DeprecatedStageId), "(Deprecated) Stage Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DeprecatedTraversedPath = group.Add(new VocabularyKey(nameof(DeprecatedTraversedPath), "(Deprecated) Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    DeprecatedTraversedPath = group.Add(new VocabularyKey(nameof(DeprecatedTraversedPath), "(Deprecated) Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -125,7 +125,6 @@ namespace CluedIn.Vocabularies.CommonDataModel.Banking
             #endregion
         }
 
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey AvailableBalance { get; private set; }
         public VocabularyKey AvailableBalanceBase { get; private set; }
         public VocabularyKey AverageBalance { get; private set; }
@@ -142,9 +141,12 @@ namespace CluedIn.Vocabularies.CommonDataModel.Banking
         public VocabularyKey DaysPastDue { get; private set; }
         public VocabularyKey DebtType { get; private set; }
         public VocabularyKey DelinquencyStatus { get; private set; }
+        public VocabularyKey DeprecatedStageId { get; private set; }
+        public VocabularyKey DeprecatedTraversedPath { get; private set; }
         public VocabularyKey DisbursedAmount { get; private set; }
         public VocabularyKey DisbursedAmountBase { get; private set; }
         public VocabularyKey DisbursementDate { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey FinancialProductId { get; private set; }
         public VocabularyKey InitialDeposit { get; private set; }
         public VocabularyKey InitialDepositBase { get; private set; }
@@ -186,11 +188,14 @@ namespace CluedIn.Vocabularies.CommonDataModel.Banking
         public VocabularyKey OverdueInstallmentAmountBase { get; private set; }
         public VocabularyKey PrincipalAmount { get; private set; }
         public VocabularyKey PrincipalAmountBase { get; private set; }
+        public VocabularyKey ProcessId { get; private set; }
         public VocabularyKey ProjectedInterestAmount { get; private set; }
         public VocabularyKey ProjectedInterestAmountBase { get; private set; }
         public VocabularyKey PurposeOfLoan { get; private set; }
         public VocabularyKey Rate { get; private set; }
         public VocabularyKey SourceOfFunds { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey Term { get; private set; }
         public VocabularyKey TotalArrear { get; private set; }
         public VocabularyKey TotalArrearBase { get; private set; }
@@ -200,10 +205,5 @@ namespace CluedIn.Vocabularies.CommonDataModel.Banking
         public VocabularyKey UnclearedBalanceBase { get; private set; }
         public VocabularyKey UnsecuredAmount { get; private set; }
         public VocabularyKey UnsecuredAmountBase { get; private set; }
-        public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey DeprecatedStageId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey DeprecatedTraversedPath { get; private set; }
     }
 }

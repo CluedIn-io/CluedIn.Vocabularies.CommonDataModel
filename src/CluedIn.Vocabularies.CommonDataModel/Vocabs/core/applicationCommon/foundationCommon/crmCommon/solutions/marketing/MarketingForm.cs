@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Marketing
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class MarketingFormVocabulary : SimpleVocabulary
     {
         public MarketingFormVocabulary()
         {
             VocabularyName = "Marketing Form";
-            KeyPrefix = "commonDataModel.marketingform.marketing";
+            KeyPrefix = "commonDataModel.marketingform";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.MarketingForm;
 
@@ -28,7 +28,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Marketing
 			    LeadMatchingStrategy = group.Add(new VocabularyKey(nameof(LeadMatchingStrategy), "Lead matching strategy", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ValidForPageType = group.Add(new VocabularyKey(nameof(ValidForPageType), "Form type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Purpose = group.Add(new VocabularyKey(nameof(Purpose), "Purpose", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    VisualStyle = group.Add(new VocabularyKey(nameof(VisualStyle), "Visual style", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    VisualStyle = group.Add(new VocabularyKey(nameof(VisualStyle), "Visual style", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -52,20 +52,20 @@ namespace CluedIn.Vocabularies.CommonDataModel.Marketing
             #endregion
         }
 
-        public VocabularyKey MarketingFormId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey AllowPrefill { get; private set; }
         public VocabularyKey ContactMatchingStrategy { get; private set; }
-        public VocabularyKey UpdateContactsLeads { get; private set; }
-        public VocabularyKey MarketingFormTemplate { get; private set; }
         public VocabularyKey FormControlMapping { get; private set; }
         public VocabularyKey FormDefinition { get; private set; }
         public VocabularyKey InsightsPlaceholder { get; private set; }
         public VocabularyKey LeadMatchingStrategy { get; private set; }
-        public VocabularyKey ValidForPageType { get; private set; }
+        public VocabularyKey MarketingFormId { get; private set; }
+        public VocabularyKey MarketingFormTemplate { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey Purpose { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey UpdateContactsLeads { get; private set; }
+        public VocabularyKey ValidForPageType { get; private set; }
         public VocabularyKey VisualStyle { get; private set; }
     }
 }

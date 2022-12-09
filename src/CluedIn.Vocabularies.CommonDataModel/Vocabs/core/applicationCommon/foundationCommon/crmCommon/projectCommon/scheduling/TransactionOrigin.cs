@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class TransactionOriginVocabulary : SimpleVocabulary
     {
         public TransactionOriginVocabulary()
         {
             VocabularyName = "Transaction Origin";
-            KeyPrefix = "commonDataModel.transactionorigin.scheduling";
+            KeyPrefix = "commonDataModel.transactionorigin";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.TransactionOrigin;
 
@@ -21,7 +21,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
 			    Origin = group.Add(new VocabularyKey(nameof(Origin), "Origin", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    OriginType = group.Add(new VocabularyKey(nameof(OriginType), "Origin Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Transaction = group.Add(new VocabularyKey(nameof(Transaction), "Transaction", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TransactionType = group.Add(new VocabularyKey(nameof(TransactionType), "Transaction Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    TransactionType = group.Add(new VocabularyKey(nameof(TransactionType), "Transaction Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -41,13 +41,13 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
             #endregion
         }
 
-        public VocabularyKey TransactionOriginId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey Origin { get; private set; }
         public VocabularyKey OriginType { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey Transaction { get; private set; }
+        public VocabularyKey TransactionOriginId { get; private set; }
         public VocabularyKey TransactionType { get; private set; }
     }
 }

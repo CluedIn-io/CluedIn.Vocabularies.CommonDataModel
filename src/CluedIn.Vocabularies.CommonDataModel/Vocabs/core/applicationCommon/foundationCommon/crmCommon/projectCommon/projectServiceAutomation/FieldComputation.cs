@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class FieldComputationVocabulary : SimpleVocabulary
     {
         public FieldComputationVocabulary()
         {
             VocabularyName = "Field Computation";
-            KeyPrefix = "commonDataModel.fieldcomputation.projectserviceautomation";
+            KeyPrefix = "commonDataModel.fieldcomputation";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.FieldComputation;
 
@@ -18,7 +18,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ComputedField = group.Add(new VocabularyKey(nameof(ComputedField), "Computed Transaction Field", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    ComputedField = group.Add(new VocabularyKey(nameof(ComputedField), "Computed Transaction Field", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -40,10 +40,10 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
+        public VocabularyKey ComputedField { get; private set; }
         public VocabularyKey FieldComputationId { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey ComputedField { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class NutritionOrderVocabulary : SimpleVocabulary
     {
         public NutritionOrderVocabulary()
         {
             VocabularyName = "Nutrition Order";
-            KeyPrefix = "commonDataModel.nutritionorder.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.nutritionorder";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.NutritionOrder;
 
@@ -26,7 +26,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    OralDietInstruction = group.Add(new VocabularyKey(nameof(OralDietInstruction), "Instruction", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Status = group.Add(new VocabularyKey(nameof(Status), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -235,8 +235,8 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
         public VocabularyKey NutritionOrderId { get; private set; }
         public VocabularyKey NutritionOrderNumber { get; private set; }
         public VocabularyKey OralDietInstruction { get; private set; }
-        public VocabularyKey Status { get; private set; }
         public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey Status { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
     }
 }

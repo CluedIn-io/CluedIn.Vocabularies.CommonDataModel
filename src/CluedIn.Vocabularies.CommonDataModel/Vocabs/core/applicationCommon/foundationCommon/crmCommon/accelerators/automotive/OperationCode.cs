@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Automotive
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class OperationCodeVocabulary : SimpleVocabulary
     {
         public OperationCodeVocabulary()
         {
             VocabularyName = "Operation Code";
-            KeyPrefix = "commonDataModel.operationcode.automotive";
+            KeyPrefix = "commonDataModel.operationcode";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.OperationCode;
 
@@ -21,7 +21,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
 			    OperationCodeId = group.Add(new VocabularyKey(nameof(OperationCodeId), "Operation Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StandardHours = group.Add(new VocabularyKey(nameof(StandardHours), "Standard Hours", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

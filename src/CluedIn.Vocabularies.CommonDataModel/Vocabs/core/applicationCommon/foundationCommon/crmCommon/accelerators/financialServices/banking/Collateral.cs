@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Banking
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class CollateralVocabulary : SimpleVocabulary
     {
         public CollateralVocabulary()
         {
             VocabularyName = "Collateral";
-            KeyPrefix = "commonDataModel.collateral.banking";
+            KeyPrefix = "commonDataModel.collateral";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Collateral;
 
@@ -29,7 +29,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Banking
 			    DeprecatedStageId = group.Add(new VocabularyKey(nameof(DeprecatedStageId), "(Deprecated) Stage Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DeprecatedTraversedPath = group.Add(new VocabularyKey(nameof(DeprecatedTraversedPath), "(Deprecated) Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    DeprecatedTraversedPath = group.Add(new VocabularyKey(nameof(DeprecatedTraversedPath), "(Deprecated) Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -54,21 +54,21 @@ namespace CluedIn.Vocabularies.CommonDataModel.Banking
             #endregion
         }
 
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey CollateralId { get; private set; }
         public VocabularyKey CollateralType { get; private set; }
         public VocabularyKey CollateralValue { get; private set; }
         public VocabularyKey CollateralValueBase { get; private set; }
         public VocabularyKey Coverage { get; private set; }
         public VocabularyKey DateOfValuation { get; private set; }
+        public VocabularyKey DeprecatedStageId { get; private set; }
+        public VocabularyKey DeprecatedTraversedPath { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey EvaluatedBy { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey NextDateOfValuation { get; private set; }
         public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey DeprecatedStageId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey DeprecatedTraversedPath { get; private set; }
     }
 }

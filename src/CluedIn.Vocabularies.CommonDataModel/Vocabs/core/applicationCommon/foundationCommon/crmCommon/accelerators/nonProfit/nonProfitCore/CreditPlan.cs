@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class CreditPlanVocabulary : SimpleVocabulary
     {
         public CreditPlanVocabulary()
         {
             VocabularyName = "Credit Plan";
-            KeyPrefix = "commonDataModel.creditplan.nonprofitcore";
+            KeyPrefix = "commonDataModel.creditplan";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.CreditPlan;
 
@@ -19,7 +19,11 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ValidToDate = group.Add(new VocabularyKey(nameof(ValidToDate), "Valid To Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("CreditPlan Details for NonProfitForSales", group =>
+            {
+
             });
             
             #region Incoming Relationships
@@ -64,8 +68,8 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
         public VocabularyKey CreditPlanId { get; private set; }
         public VocabularyKey CreditType { get; private set; }
         public VocabularyKey Name { get; private set; }
-        public VocabularyKey ValidToDate { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey ValidToDate { get; private set; }
     }
 }

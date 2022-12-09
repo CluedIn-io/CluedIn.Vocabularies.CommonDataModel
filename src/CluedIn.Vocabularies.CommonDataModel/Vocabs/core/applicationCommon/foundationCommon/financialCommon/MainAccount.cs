@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.FinancialCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class MainAccountVocabulary : SimpleVocabulary
     {
         public MainAccountVocabulary()
         {
             VocabularyName = "Main Account";
-            KeyPrefix = "commonDataModel.mainaccount.financialcommon";
+            KeyPrefix = "commonDataModel.mainaccount";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.MainAccount;
 
@@ -16,7 +16,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.FinancialCommon
             {
 			    MainAccountId = group.Add(new VocabularyKey(nameof(MainAccountId), "MainAccountId", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Number = group.Add(new VocabularyKey(nameof(Number), "Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Number = group.Add(new VocabularyKey(nameof(Number), "Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

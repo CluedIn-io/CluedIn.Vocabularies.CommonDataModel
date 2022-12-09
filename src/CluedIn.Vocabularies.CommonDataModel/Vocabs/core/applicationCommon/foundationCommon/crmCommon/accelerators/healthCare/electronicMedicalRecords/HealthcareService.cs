@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class HealthcareServiceVocabulary : SimpleVocabulary
     {
         public HealthcareServiceVocabulary()
         {
             VocabularyName = "Healthcare Service";
-            KeyPrefix = "commonDataModel.healthcareservice.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.healthcareservice";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.HealthcareService;
 
@@ -34,7 +34,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), "Time Zone Rule Version Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -135,18 +135,18 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
             #endregion
         }
 
-        public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey CreatedOnBehalfBy { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey ModifiedOnBehalfBy { get; private set; }
         public VocabularyKey AppointmentRequired { get; private set; }
         public VocabularyKey AvailabilityExceptions { get; private set; }
         public VocabularyKey Comment { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey CreatedOnBehalfBy { get; private set; }
         public VocabularyKey EligibilityNote { get; private set; }
         public VocabularyKey ExtraDetails { get; private set; }
         public VocabularyKey HealthcareService { get; private set; }
         public VocabularyKey HealthcareServiceId { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey ModifiedOnBehalfBy { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey NotAvailableDescription { get; private set; }
         public VocabularyKey NotAvailableDuringEndDateTime { get; private set; }

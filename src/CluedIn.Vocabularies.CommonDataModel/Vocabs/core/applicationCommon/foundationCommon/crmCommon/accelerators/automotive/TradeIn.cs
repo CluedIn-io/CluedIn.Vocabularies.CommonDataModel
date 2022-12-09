@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Automotive
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class TradeInVocabulary : SimpleVocabulary
     {
         public TradeInVocabulary()
         {
             VocabularyName = "Trade In";
-            KeyPrefix = "commonDataModel.tradein.automotive";
+            KeyPrefix = "commonDataModel.tradein";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.TradeIn;
 
@@ -24,7 +24,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
 			    OfferPriceBase = group.Add(new VocabularyKey(nameof(OfferPriceBase), "Offer Price (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
 			    TradeInId = group.Add(new VocabularyKey(nameof(TradeInId), "Trade In", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -53,16 +53,16 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
             #endregion
         }
 
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey AppraisalSource { get; private set; }
         public VocabularyKey AppraisedValue { get; private set; }
         public VocabularyKey AppraisedValueBase { get; private set; }
         public VocabularyKey Description { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey OfferPrice { get; private set; }
         public VocabularyKey OfferPriceBase { get; private set; }
-        public VocabularyKey TradeInId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TradeInId { get; private set; }
     }
 }

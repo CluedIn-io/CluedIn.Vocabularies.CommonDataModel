@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class PriceListVocabulary : SimpleVocabulary
     {
         public PriceListVocabulary()
         {
             VocabularyName = "Price List";
-            KeyPrefix = "commonDataModel.pricelist.foundationcommon";
+            KeyPrefix = "commonDataModel.pricelist";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.PriceList;
 
@@ -31,7 +31,12 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
 			    ShippingMethodCode = group.Add(new VocabularyKey(nameof(ShippingMethodCode), "Shipping Method", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status ", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));             
+			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("PriceList Details for ProjectServiceAutomation", group =>
+            {
+			    Entity = group.Add(new VocabularyKey(nameof(Entity), "Entity", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Module = group.Add(new VocabularyKey(nameof(Module), "Context", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -86,23 +91,25 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
             #endregion
         }
 
-        public VocabularyKey PriceLevelId { get; private set; }
-        public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey BeginDate { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey EndDate { get; private set; }
+        public VocabularyKey Entity { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey FreightTermsCode { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Module { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey PaymentMethodCode { get; private set; }
+        public VocabularyKey PriceLevelId { get; private set; }
         public VocabularyKey ShippingMethodCode { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

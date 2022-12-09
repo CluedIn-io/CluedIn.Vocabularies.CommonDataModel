@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Portals
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class PollSubmissionVocabulary : SimpleVocabulary
     {
         public PollSubmissionVocabulary()
         {
             VocabularyName = "Poll Submission";
-            KeyPrefix = "commonDataModel.pollsubmission.portals";
+            KeyPrefix = "commonDataModel.pollsubmission";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.PollSubmission;
 
@@ -18,7 +18,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    VisitorID = group.Add(new VocabularyKey(nameof(VisitorID), "Visitor ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    VisitorID = group.Add(new VocabularyKey(nameof(VisitorID), "Visitor ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -41,10 +41,10 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
             #endregion
         }
 
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey PollSubmissionId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey VisitorID { get; private set; }
     }
 }

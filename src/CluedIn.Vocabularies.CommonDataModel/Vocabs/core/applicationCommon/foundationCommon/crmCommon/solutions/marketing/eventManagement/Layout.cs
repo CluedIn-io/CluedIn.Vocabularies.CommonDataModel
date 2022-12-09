@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class LayoutVocabulary : SimpleVocabulary
     {
         public LayoutVocabulary()
         {
             VocabularyName = "Layout";
-            KeyPrefix = "commonDataModel.layout.eventmanagement";
+            KeyPrefix = "commonDataModel.layout";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Layout;
 
@@ -24,7 +24,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
 			    DisabledCapacity = group.Add(new VocabularyKey(nameof(DisabledCapacity), "Disabled capacity", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    FloorPlan = group.Add(new VocabularyKey(nameof(FloorPlan), "Floor Plan", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Units = group.Add(new VocabularyKey(nameof(Units), "Units", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    UsableArea = group.Add(new VocabularyKey(nameof(UsableArea), "Usable area", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    UsableArea = group.Add(new VocabularyKey(nameof(UsableArea), "Usable area", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -45,15 +45,15 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
             #endregion
         }
 
-        public VocabularyKey LayoutId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey Capacity { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey DisabledAccess { get; private set; }
         public VocabularyKey DisabledCapacity { get; private set; }
         public VocabularyKey FloorPlan { get; private set; }
+        public VocabularyKey LayoutId { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey Units { get; private set; }
         public VocabularyKey UsableArea { get; private set; }
     }

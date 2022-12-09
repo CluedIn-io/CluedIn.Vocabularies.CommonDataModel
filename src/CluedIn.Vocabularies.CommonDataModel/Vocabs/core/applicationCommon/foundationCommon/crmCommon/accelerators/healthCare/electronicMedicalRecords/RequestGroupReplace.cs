@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class RequestGroupReplaceVocabulary : SimpleVocabulary
     {
         public RequestGroupReplaceVocabulary()
         {
             VocabularyName = "Request Group Replace";
-            KeyPrefix = "commonDataModel.requestgroupreplace.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.requestgroupreplace";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.RequestGroupReplace;
 
@@ -18,7 +18,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    Replaces = group.Add(new VocabularyKey(nameof(Replaces), "Replaces", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    RequestGroupReplaceId = group.Add(new VocabularyKey(nameof(RequestGroupReplaceId), "Request Group Replace", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

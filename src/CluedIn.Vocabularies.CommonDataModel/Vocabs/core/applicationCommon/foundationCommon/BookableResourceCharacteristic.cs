@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class BookableResourceCharacteristicVocabulary : SimpleVocabulary
     {
         public BookableResourceCharacteristicVocabulary()
         {
             VocabularyName = "Bookable Resource Characteristic";
-            KeyPrefix = "commonDataModel.bookableresourcecharacteristic.foundationcommon";
+            KeyPrefix = "commonDataModel.bookableresourcecharacteristic";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.BookableResourceCharacteristic;
 
@@ -21,7 +21,11 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
 			    TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "ExchangeRate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));             
+			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "ExchangeRate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("BookableResourceCharacteristic Details for ProjectServiceAutomation", group =>
+            {
+			    ApprovalStatus = group.Add(new VocabularyKey(nameof(ApprovalStatus), "Approval status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -48,13 +52,14 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
             #endregion
         }
 
+        public VocabularyKey ApprovalStatus { get; private set; }
         public VocabularyKey BookableResourceCharacteristicId { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey ProcessId { get; private set; }
         public VocabularyKey StageId { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
     }
 }

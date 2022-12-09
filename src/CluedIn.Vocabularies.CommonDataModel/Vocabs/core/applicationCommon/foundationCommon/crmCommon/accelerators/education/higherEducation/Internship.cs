@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class InternshipVocabulary : SimpleVocabulary
     {
         public InternshipVocabulary()
         {
             VocabularyName = "Internship";
-            KeyPrefix = "commonDataModel.internship.highereducation";
+            KeyPrefix = "commonDataModel.internship";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Internship;
 
@@ -26,7 +26,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
 			    ValidTo = group.Add(new VocabularyKey(nameof(ValidTo), "ValidTo", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    WebsiteURL = group.Add(new VocabularyKey(nameof(WebsiteURL), "Website URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -65,18 +65,18 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
             #endregion
         }
 
-        public VocabularyKey InternshipId { get; private set; }
         public VocabularyKey ApplicationDeadlineDate { get; private set; }
         public VocabularyKey Description { get; private set; }
+        public VocabularyKey InternshipId { get; private set; }
         public VocabularyKey IsPaid { get; private set; }
         public VocabularyKey LocationDescription { get; private set; }
         public VocabularyKey PostedDate { get; private set; }
         public VocabularyKey Qualifications { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey Title { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey ValidTo { get; private set; }
         public VocabularyKey WebsiteURL { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class AcademicPeriodVocabulary : SimpleVocabulary
     {
         public AcademicPeriodVocabulary()
         {
             VocabularyName = "Academic Period";
-            KeyPrefix = "commonDataModel.academicperiod.highereducation";
+            KeyPrefix = "commonDataModel.academicperiod";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.AcademicPeriod;
 
@@ -22,7 +22,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
 			    EndDate = group.Add(new VocabularyKey(nameof(EndDate), "End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ExternalIdentifier = group.Add(new VocabularyKey(nameof(ExternalIdentifier), "External Identifier", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ExternalSourceSystem = group.Add(new VocabularyKey(nameof(ExternalSourceSystem), "External Source System", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StartDate = group.Add(new VocabularyKey(nameof(StartDate), "Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StartDate = group.Add(new VocabularyKey(nameof(StartDate), "Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -60,13 +60,13 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
         }
 
         public VocabularyKey AcademicPeriodId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey Code { get; private set; }
         public VocabularyKey EndDate { get; private set; }
         public VocabularyKey ExternalIdentifier { get; private set; }
         public VocabularyKey ExternalSourceSystem { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey StartDate { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

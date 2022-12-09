@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Automotive
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class DeviceMeasureVocabulary : SimpleVocabulary
     {
         public DeviceMeasureVocabulary()
         {
             VocabularyName = "Device Measure";
-            KeyPrefix = "commonDataModel.devicemeasure.automotive";
+            KeyPrefix = "commonDataModel.devicemeasure";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.DeviceMeasure;
 
@@ -19,7 +19,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
 			    DisplayNumberOfDecimals = group.Add(new VocabularyKey(nameof(DisplayNumberOfDecimals), "Display Number of Decimals", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

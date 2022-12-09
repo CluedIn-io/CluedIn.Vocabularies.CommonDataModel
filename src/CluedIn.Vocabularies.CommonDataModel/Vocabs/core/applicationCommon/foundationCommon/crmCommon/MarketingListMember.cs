@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class MarketingListMemberVocabulary : SimpleVocabulary
     {
         public MarketingListMemberVocabulary()
         {
             VocabularyName = "Marketing List Member";
-            KeyPrefix = "commonDataModel.marketinglistmember.crmcommon";
+            KeyPrefix = "commonDataModel.marketinglistmember";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.MarketingListMember;
 
@@ -25,7 +25,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
 			    Name = group.Add(new VocabularyKey(nameof(Name), "name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    EntityType = group.Add(new VocabularyKey(nameof(EntityType), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    OwningBusinessUnit = group.Add(new VocabularyKey(nameof(OwningBusinessUnit), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    OwningUser = group.Add(new VocabularyKey(nameof(OwningUser), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));             
+			    OwningUser = group.Add(new VocabularyKey(nameof(OwningUser), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -46,17 +46,17 @@ namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
             #endregion
         }
 
-        public VocabularyKey ListMemberId { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey EntityType { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey ListMemberId { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey OwningBusinessUnit { get; private set; }
         public VocabularyKey OwningUser { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class OfacMatchVocabulary : SimpleVocabulary
     {
         public OfacMatchVocabulary()
         {
             VocabularyName = "Ofac Match";
-            KeyPrefix = "commonDataModel.ofacmatch.nonprofitcore";
+            KeyPrefix = "commonDataModel.ofacmatch";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.OfacMatch;
 
@@ -22,7 +22,11 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
 			    SDNNumber = group.Add(new VocabularyKey(nameof(SDNNumber), "SDN Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Title = group.Add(new VocabularyKey(nameof(Title), "Title", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("OfacMatch Details for NonProfitForSales", group =>
+            {
+
             });
             
             #region Incoming Relationships
@@ -56,8 +60,8 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
         public VocabularyKey ReportDate { get; private set; }
         public VocabularyKey SDNName { get; private set; }
         public VocabularyKey SDNNumber { get; private set; }
-        public VocabularyKey Title { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey Title { get; private set; }
     }
 }

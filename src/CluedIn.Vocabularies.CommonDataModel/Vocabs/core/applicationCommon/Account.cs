@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class AccountVocabulary : SimpleVocabulary
     {
         public AccountVocabulary()
         {
             VocabularyName = "Account";
-            KeyPrefix = "commonDataModel.account.applicationcommon";
+            KeyPrefix = "commonDataModel.account";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Account;
 
@@ -85,7 +85,113 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    OnHoldTime = group.Add(new VocabularyKey(nameof(OnHoldTime), "On Hold Time (Minutes)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    LastOnHoldTime = group.Add(new VocabularyKey(nameof(LastOnHoldTime), "Last On Hold Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    FollowEmail = group.Add(new VocabularyKey(nameof(FollowEmail), "Follow Email Activity", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    MarketingOnly = group.Add(new VocabularyKey(nameof(MarketingOnly), "Marketing Only", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));             
+			    MarketingOnly = group.Add(new VocabularyKey(nameof(MarketingOnly), "Marketing Only", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Account Details for FoundationCommon", group =>
+            {
+
+            });
+            AddGroup("Account Details for CrmCommon", group =>
+            {
+			    OpenDeals = group.Add(new VocabularyKey(nameof(OpenDeals), "Open Deals", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+			    OpenDealsDate = group.Add(new VocabularyKey(nameof(OpenDealsDate), "Open Deals (Last Updated On)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    OpenDealsState = group.Add(new VocabularyKey(nameof(OpenDealsState), "Open Deals (State)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+			    OpenRevenue = group.Add(new VocabularyKey(nameof(OpenRevenue), "Open Revenue", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    OpenRevenueBase = group.Add(new VocabularyKey(nameof(OpenRevenueBase), "Open Revenue (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    OpenRevenueDate = group.Add(new VocabularyKey(nameof(OpenRevenueDate), "Open Revenue (Last Updated On)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    OpenRevenueState = group.Add(new VocabularyKey(nameof(OpenRevenueState), "Open Revenue (State)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Account Details for HigherEducation", group =>
+            {
+			    AccountType = group.Add(new VocabularyKey(nameof(AccountType), "Account Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    ExternalIdentifier = group.Add(new VocabularyKey(nameof(ExternalIdentifier), "External Identifier", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    ExternalSourceSystem = group.Add(new VocabularyKey(nameof(ExternalSourceSystem), "External Source System", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    NumberofContacts = group.Add(new VocabularyKey(nameof(NumberofContacts), "# of Contacts", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Account Details for Banking", group =>
+            {
+			    AnnualReviewDate = group.Add(new VocabularyKey(nameof(AnnualReviewDate), "Annual Review Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    AvailableLimit = group.Add(new VocabularyKey(nameof(AvailableLimit), "Available Limit", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    AvailableLimitBase = group.Add(new VocabularyKey(nameof(AvailableLimitBase), "Available Limit (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    BanksYTDRevenue = group.Add(new VocabularyKey(nameof(BanksYTDRevenue), "Bank’s YTD Revenue", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    BanksYTDRevenueBase = group.Add(new VocabularyKey(nameof(BanksYTDRevenueBase), "Bank’s YTD Revenue (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    CompanysProfitInTheLastYear = group.Add(new VocabularyKey(nameof(CompanysProfitInTheLastYear), "Company’s Profit in the Last Year", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    CompanysProfitInTheLastYearBase = group.Add(new VocabularyKey(nameof(CompanysProfitInTheLastYearBase), "Company’s Profit in the Last Year (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    CompanyTurnoverInTheLastYear = group.Add(new VocabularyKey(nameof(CompanyTurnoverInTheLastYear), "Company Turnover in the last Year", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    CompanyTurnoverInTheLastYearBase = group.Add(new VocabularyKey(nameof(CompanyTurnoverInTheLastYearBase), "Company Turnover in the last Year (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    DaysPastDue = group.Add(new VocabularyKey(nameof(DaysPastDue), "Days Past Due", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+			    ImplementedLimit = group.Add(new VocabularyKey(nameof(ImplementedLimit), "Implemented Limit", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    ImplementedLimitBase = group.Add(new VocabularyKey(nameof(ImplementedLimitBase), "Implemented Limit (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    LimitReviewDate = group.Add(new VocabularyKey(nameof(LimitReviewDate), "Limit Review Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    PastDueSince = group.Add(new VocabularyKey(nameof(PastDueSince), "Past Due Since", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    ProfitTier = group.Add(new VocabularyKey(nameof(ProfitTier), "Profit Tier", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    ReturnOnCapital = group.Add(new VocabularyKey(nameof(ReturnOnCapital), "Return on Capital", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
+			    RiskRating = group.Add(new VocabularyKey(nameof(RiskRating), "Risk Rating", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    TotalDeposits = group.Add(new VocabularyKey(nameof(TotalDeposits), "Total Deposits", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    TotalDepositsBase = group.Add(new VocabularyKey(nameof(TotalDepositsBase), "Total Deposits (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    TotalLimit = group.Add(new VocabularyKey(nameof(TotalLimit), "Total Limit", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    TotalLimitBase = group.Add(new VocabularyKey(nameof(TotalLimitBase), "Total Limit (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    TotalLoans = group.Add(new VocabularyKey(nameof(TotalLoans), "Total Loans", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    TotalLoansBase = group.Add(new VocabularyKey(nameof(TotalLoansBase), "Total Loans (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    TotalPastDue = group.Add(new VocabularyKey(nameof(TotalPastDue), "Total Past Due", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    TotalPastDueBase = group.Add(new VocabularyKey(nameof(TotalPastDueBase), "Total Past Due (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    UtilizedLimit = group.Add(new VocabularyKey(nameof(UtilizedLimit), "Utilized Limit", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    UtilizedLimitBase = group.Add(new VocabularyKey(nameof(UtilizedLimitBase), "Utilized Limit (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Account Details for ElectronicMedicalRecords", group =>
+            {
+			    Address1PeriodEndDate = group.Add(new VocabularyKey(nameof(Address1PeriodEndDate), "Primary - Primary End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Address1PeriodStartDate = group.Add(new VocabularyKey(nameof(Address1PeriodStartDate), "Primary - Address Period Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Address2PeriodEndDate = group.Add(new VocabularyKey(nameof(Address2PeriodEndDate), "Secondary  - Address Period End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Address2PeriodStartDate = group.Add(new VocabularyKey(nameof(Address2PeriodStartDate), "Secondary  - Address Period Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Alias = group.Add(new VocabularyKey(nameof(Alias), "DBA", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Telecom1EndDate = group.Add(new VocabularyKey(nameof(Telecom1EndDate), "Primary Phone End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Telecom1Rank = group.Add(new VocabularyKey(nameof(Telecom1Rank), "Rank Of Contact", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+			    Telecom1StartDate = group.Add(new VocabularyKey(nameof(Telecom1StartDate), "Primary Phone Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Telecom1System = group.Add(new VocabularyKey(nameof(Telecom1System), "Telecom System", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Telecom1Use = group.Add(new VocabularyKey(nameof(Telecom1Use), "Use Of Contact Point", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Telecom2EndDate = group.Add(new VocabularyKey(nameof(Telecom2EndDate), "Secondary Phone End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Telecom2Rank = group.Add(new VocabularyKey(nameof(Telecom2Rank), "Rank Of Contact", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+			    Telecom2StartDate = group.Add(new VocabularyKey(nameof(Telecom2StartDate), "Secondary Phone Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Telecom2System = group.Add(new VocabularyKey(nameof(Telecom2System), "Telecom System", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Telecom2Use = group.Add(new VocabularyKey(nameof(Telecom2Use), "Use Of Contact Point", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Telecom3EndDate = group.Add(new VocabularyKey(nameof(Telecom3EndDate), "Primary Email End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Telecom3Rank = group.Add(new VocabularyKey(nameof(Telecom3Rank), "Rank Of Contact", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+			    Telecom3StartDate = group.Add(new VocabularyKey(nameof(Telecom3StartDate), "Primary Email Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Telecom3System = group.Add(new VocabularyKey(nameof(Telecom3System), "Telecom System", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Telecom3Use = group.Add(new VocabularyKey(nameof(Telecom3Use), "Use Of Contact Point", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Account Details for NonProfitCore", group =>
+            {
+			    AcquisitionDate = group.Add(new VocabularyKey(nameof(AcquisitionDate), "Acquisition Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    AcquisitionSource = group.Add(new VocabularyKey(nameof(AcquisitionSource), "Acquisition Source", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    PrimaryConstituentType = group.Add(new VocabularyKey(nameof(PrimaryConstituentType), "Primary Constituent Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Account Details for NonProfitIati", group =>
+            {
+			    IatiOrganizationIdentifier = group.Add(new VocabularyKey(nameof(IatiOrganizationIdentifier), "IATI Organization Identifier", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    SecondaryReporter = group.Add(new VocabularyKey(nameof(SecondaryReporter), "Secondary Reporter", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Account Details for NonProfitVolunteers", group =>
+            {
+
+            });
+            AddGroup("Account Details for ProjectServiceAutomation", group =>
+            {
+			    DefaultPriceLevelId = group.Add(new VocabularyKey(nameof(DefaultPriceLevelId), "Product Price List", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    ExternalID = group.Add(new VocabularyKey(nameof(ExternalID), "External ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Account Details for EventManagement", group =>
+            {
+			    HotelGroup = group.Add(new VocabularyKey(nameof(HotelGroup), "Hotel Group", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    RentalCarProvider = group.Add(new VocabularyKey(nameof(RentalCarProvider), "Rental Car Provider", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Account Details for Portals", group =>
+            {
+			    AdxCreatedByIPAddress = group.Add(new VocabularyKey(nameof(AdxCreatedByIPAddress), "Created By (IP Address)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    AdxCreatedByUsername = group.Add(new VocabularyKey(nameof(AdxCreatedByUsername), "Created By (User Name)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    AdxModifiedByIPAddress = group.Add(new VocabularyKey(nameof(AdxModifiedByIPAddress), "Modified By (IP Address)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    AdxModifiedByUsername = group.Add(new VocabularyKey(nameof(AdxModifiedByUsername), "Modified By (User Name)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -310,77 +416,148 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             #endregion
         }
 
-        public VocabularyKey AccountId { get; private set; }
         public VocabularyKey AccountCategoryCode { get; private set; }
-        public VocabularyKey CustomerSizeCode { get; private set; }
-        public VocabularyKey PreferredContactMethodCode { get; private set; }
-        public VocabularyKey CustomerTypeCode { get; private set; }
-        public VocabularyKey AccountRatingCode { get; private set; }
-        public VocabularyKey IndustryCode { get; private set; }
-        public VocabularyKey TerritoryCode { get; private set; }
         public VocabularyKey AccountClassificationCode { get; private set; }
-        public VocabularyKey BusinessTypeCode { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
-        public VocabularyKey PaymentTermsCode { get; private set; }
-        public VocabularyKey ShippingMethodCode { get; private set; }
-        public VocabularyKey ParticipatesInWorkflow { get; private set; }
-        public VocabularyKey Name { get; private set; }
+        public VocabularyKey AccountId { get; private set; }
         public VocabularyKey AccountNumber { get; private set; }
-        public VocabularyKey Revenue { get; private set; }
-        public VocabularyKey NumberOfEmployees { get; private set; }
+        public VocabularyKey AccountRatingCode { get; private set; }
+        public VocabularyKey AccountType { get; private set; }
+        public VocabularyKey AcquisitionDate { get; private set; }
+        public VocabularyKey AcquisitionSource { get; private set; }
+        public VocabularyKey Address1PeriodEndDate { get; private set; }
+        public VocabularyKey Address1PeriodStartDate { get; private set; }
+        public VocabularyKey Address2PeriodEndDate { get; private set; }
+        public VocabularyKey Address2PeriodStartDate { get; private set; }
+        public VocabularyKey AdxCreatedByIPAddress { get; private set; }
+        public VocabularyKey AdxCreatedByUsername { get; private set; }
+        public VocabularyKey AdxModifiedByIPAddress { get; private set; }
+        public VocabularyKey AdxModifiedByUsername { get; private set; }
+        public VocabularyKey Aging30 { get; private set; }
+        public VocabularyKey Aging30Base { get; private set; }
+        public VocabularyKey Aging60 { get; private set; }
+        public VocabularyKey Aging60Base { get; private set; }
+        public VocabularyKey Aging90 { get; private set; }
+        public VocabularyKey Aging90Base { get; private set; }
+        public VocabularyKey Alias { get; private set; }
+        public VocabularyKey AnnualReviewDate { get; private set; }
+        public VocabularyKey AvailableLimit { get; private set; }
+        public VocabularyKey AvailableLimitBase { get; private set; }
+        public VocabularyKey BanksYTDRevenue { get; private set; }
+        public VocabularyKey BanksYTDRevenueBase { get; private set; }
+        public VocabularyKey BusinessTypeCode { get; private set; }
+        public VocabularyKey CompanysProfitInTheLastYear { get; private set; }
+        public VocabularyKey CompanysProfitInTheLastYearBase { get; private set; }
+        public VocabularyKey CompanyTurnoverInTheLastYear { get; private set; }
+        public VocabularyKey CompanyTurnoverInTheLastYearBase { get; private set; }
+        public VocabularyKey CreatedByExternalParty { get; private set; }
+        public VocabularyKey CreditLimit { get; private set; }
+        public VocabularyKey CreditLimitBase { get; private set; }
+        public VocabularyKey CreditOnHold { get; private set; }
+        public VocabularyKey CustomerSizeCode { get; private set; }
+        public VocabularyKey CustomerTypeCode { get; private set; }
+        public VocabularyKey DaysPastDue { get; private set; }
+        public VocabularyKey DefaultPriceLevelId { get; private set; }
         public VocabularyKey Description { get; private set; }
-        public VocabularyKey SIC { get; private set; }
-        public VocabularyKey OwnershipCode { get; private set; }
-        public VocabularyKey MarketCap { get; private set; }
-        public VocabularyKey SharesOutstanding { get; private set; }
-        public VocabularyKey TickerSymbol { get; private set; }
-        public VocabularyKey StockExchange { get; private set; }
-        public VocabularyKey WebSiteUrl { get; private set; }
-        public VocabularyKey FtpSiteUrl { get; private set; }
+        public VocabularyKey DoNotBulkEMail { get; private set; }
+        public VocabularyKey DoNotBulkPostalMail { get; private set; }
+        public VocabularyKey DoNotEMail { get; private set; }
+        public VocabularyKey DoNotFax { get; private set; }
+        public VocabularyKey DoNotPhone { get; private set; }
+        public VocabularyKey DoNotPostalMail { get; private set; }
+        public VocabularyKey DoNotSendMM { get; private set; }
         public VocabularyKey EMailAddress1 { get; private set; }
         public VocabularyKey EMailAddress2 { get; private set; }
         public VocabularyKey EMailAddress3 { get; private set; }
-        public VocabularyKey DoNotPhone { get; private set; }
-        public VocabularyKey DoNotFax { get; private set; }
-        public VocabularyKey Telephone1 { get; private set; }
-        public VocabularyKey DoNotEMail { get; private set; }
-        public VocabularyKey Telephone2 { get; private set; }
+        public VocabularyKey EntityImageId { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey ExternalID { get; private set; }
+        public VocabularyKey ExternalIdentifier { get; private set; }
+        public VocabularyKey ExternalSourceSystem { get; private set; }
         public VocabularyKey Fax { get; private set; }
-        public VocabularyKey Telephone3 { get; private set; }
-        public VocabularyKey DoNotPostalMail { get; private set; }
-        public VocabularyKey DoNotBulkEMail { get; private set; }
-        public VocabularyKey DoNotBulkPostalMail { get; private set; }
-        public VocabularyKey CreditLimit { get; private set; }
-        public VocabularyKey CreditOnHold { get; private set; }
-        public VocabularyKey Aging30 { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey Aging60 { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Aging90 { get; private set; }
+        public VocabularyKey FollowEmail { get; private set; }
+        public VocabularyKey FtpSiteUrl { get; private set; }
+        public VocabularyKey HotelGroup { get; private set; }
+        public VocabularyKey IatiOrganizationIdentifier { get; private set; }
+        public VocabularyKey ImplementedLimit { get; private set; }
+        public VocabularyKey ImplementedLimitBase { get; private set; }
+        public VocabularyKey IndustryCode { get; private set; }
+        public VocabularyKey LastOnHoldTime { get; private set; }
+        public VocabularyKey LastUsedInCampaign { get; private set; }
+        public VocabularyKey LimitReviewDate { get; private set; }
+        public VocabularyKey MarketCap { get; private set; }
+        public VocabularyKey MarketCapBase { get; private set; }
+        public VocabularyKey MarketingOnly { get; private set; }
+        public VocabularyKey Merged { get; private set; }
+        public VocabularyKey ModifiedByExternalParty { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey NumberofContacts { get; private set; }
+        public VocabularyKey NumberOfEmployees { get; private set; }
+        public VocabularyKey OnHoldTime { get; private set; }
+        public VocabularyKey OpenDeals { get; private set; }
+        public VocabularyKey OpenDealsDate { get; private set; }
+        public VocabularyKey OpenDealsState { get; private set; }
+        public VocabularyKey OpenRevenue { get; private set; }
+        public VocabularyKey OpenRevenueBase { get; private set; }
+        public VocabularyKey OpenRevenueDate { get; private set; }
+        public VocabularyKey OpenRevenueState { get; private set; }
+        public VocabularyKey OwnershipCode { get; private set; }
+        public VocabularyKey ParticipatesInWorkflow { get; private set; }
+        public VocabularyKey PastDueSince { get; private set; }
+        public VocabularyKey PaymentTermsCode { get; private set; }
         public VocabularyKey PreferredAppointmentDayCode { get; private set; }
         public VocabularyKey PreferredAppointmentTimeCode { get; private set; }
-        public VocabularyKey Merged { get; private set; }
-        public VocabularyKey DoNotSendMM { get; private set; }
-        public VocabularyKey LastUsedInCampaign { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
-        public VocabularyKey CreditLimitBase { get; private set; }
-        public VocabularyKey Aging30Base { get; private set; }
-        public VocabularyKey RevenueBase { get; private set; }
-        public VocabularyKey Aging90Base { get; private set; }
-        public VocabularyKey MarketCapBase { get; private set; }
-        public VocabularyKey Aging60Base { get; private set; }
-        public VocabularyKey YomiName { get; private set; }
-        public VocabularyKey StageId { get; private set; }
-        public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey EntityImageId { get; private set; }
-        public VocabularyKey TimeSpentByMeOnEmailAndMeetings { get; private set; }
-        public VocabularyKey CreatedByExternalParty { get; private set; }
-        public VocabularyKey ModifiedByExternalParty { get; private set; }
+        public VocabularyKey PreferredContactMethodCode { get; private set; }
+        public VocabularyKey PrimaryConstituentType { get; private set; }
         public VocabularyKey PrimarySatoriId { get; private set; }
         public VocabularyKey PrimaryTwitterId { get; private set; }
-        public VocabularyKey OnHoldTime { get; private set; }
-        public VocabularyKey LastOnHoldTime { get; private set; }
-        public VocabularyKey FollowEmail { get; private set; }
-        public VocabularyKey MarketingOnly { get; private set; }
+        public VocabularyKey ProcessId { get; private set; }
+        public VocabularyKey ProfitTier { get; private set; }
+        public VocabularyKey RentalCarProvider { get; private set; }
+        public VocabularyKey ReturnOnCapital { get; private set; }
+        public VocabularyKey Revenue { get; private set; }
+        public VocabularyKey RevenueBase { get; private set; }
+        public VocabularyKey RiskRating { get; private set; }
+        public VocabularyKey SecondaryReporter { get; private set; }
+        public VocabularyKey SharesOutstanding { get; private set; }
+        public VocabularyKey ShippingMethodCode { get; private set; }
+        public VocabularyKey SIC { get; private set; }
+        public VocabularyKey StageId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey StockExchange { get; private set; }
+        public VocabularyKey Telecom1EndDate { get; private set; }
+        public VocabularyKey Telecom1Rank { get; private set; }
+        public VocabularyKey Telecom1StartDate { get; private set; }
+        public VocabularyKey Telecom1System { get; private set; }
+        public VocabularyKey Telecom1Use { get; private set; }
+        public VocabularyKey Telecom2EndDate { get; private set; }
+        public VocabularyKey Telecom2Rank { get; private set; }
+        public VocabularyKey Telecom2StartDate { get; private set; }
+        public VocabularyKey Telecom2System { get; private set; }
+        public VocabularyKey Telecom2Use { get; private set; }
+        public VocabularyKey Telecom3EndDate { get; private set; }
+        public VocabularyKey Telecom3Rank { get; private set; }
+        public VocabularyKey Telecom3StartDate { get; private set; }
+        public VocabularyKey Telecom3System { get; private set; }
+        public VocabularyKey Telecom3Use { get; private set; }
+        public VocabularyKey Telephone1 { get; private set; }
+        public VocabularyKey Telephone2 { get; private set; }
+        public VocabularyKey Telephone3 { get; private set; }
+        public VocabularyKey TerritoryCode { get; private set; }
+        public VocabularyKey TickerSymbol { get; private set; }
+        public VocabularyKey TimeSpentByMeOnEmailAndMeetings { get; private set; }
+        public VocabularyKey TotalDeposits { get; private set; }
+        public VocabularyKey TotalDepositsBase { get; private set; }
+        public VocabularyKey TotalLimit { get; private set; }
+        public VocabularyKey TotalLimitBase { get; private set; }
+        public VocabularyKey TotalLoans { get; private set; }
+        public VocabularyKey TotalLoansBase { get; private set; }
+        public VocabularyKey TotalPastDue { get; private set; }
+        public VocabularyKey TotalPastDueBase { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
+        public VocabularyKey UtilizedLimit { get; private set; }
+        public VocabularyKey UtilizedLimitBase { get; private set; }
+        public VocabularyKey WebSiteUrl { get; private set; }
+        public VocabularyKey YomiName { get; private set; }
     }
 }

@@ -1,20 +1,20 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class TeamMembershipVocabulary : SimpleVocabulary
     {
         public TeamMembershipVocabulary()
         {
             VocabularyName = "Team Membership";
-            KeyPrefix = "commonDataModel.teammembership.applicationcommon";
+            KeyPrefix = "commonDataModel.teammembership";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.TeamMembership;
 
             AddGroup("TeamMembership Details for ApplicationCommon", group =>
             {
-			    TeamMembershipId = group.Add(new VocabularyKey(nameof(TeamMembershipId), "Team Membership Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    TeamMembershipId = group.Add(new VocabularyKey(nameof(TeamMembershipId), "Team Membership Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

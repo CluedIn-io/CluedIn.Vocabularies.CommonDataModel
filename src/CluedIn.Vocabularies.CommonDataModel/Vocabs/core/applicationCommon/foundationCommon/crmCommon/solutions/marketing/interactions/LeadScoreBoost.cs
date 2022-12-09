@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Interactions
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class LeadScoreBoostVocabulary : SimpleVocabulary
     {
         public LeadScoreBoostVocabulary()
         {
             VocabularyName = "Lead Score Boost";
-            KeyPrefix = "commonDataModel.leadscoreboost.interactions";
+            KeyPrefix = "commonDataModel.leadscoreboost";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.LeadScoreBoost;
 
@@ -23,7 +23,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Interactions
 			    AccountId = group.Add(new VocabularyKey(nameof(AccountId), "Account ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    BoostValue = group.Add(new VocabularyKey(nameof(BoostValue), "Boost value", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    InteractionType = group.Add(new VocabularyKey(nameof(InteractionType), "Interaction type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Timestamp = group.Add(new VocabularyKey(nameof(Timestamp), "Timestamp", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Timestamp = group.Add(new VocabularyKey(nameof(Timestamp), "Timestamp", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -35,15 +35,15 @@ namespace CluedIn.Vocabularies.CommonDataModel.Interactions
             #endregion
         }
 
-        public VocabularyKey InteractionId { get; private set; }
-        public VocabularyKey OrganizationId { get; private set; }
+        public VocabularyKey AccountId { get; private set; }
         public VocabularyKey ActivityId { get; private set; }
+        public VocabularyKey BoostValue { get; private set; }
+        public VocabularyKey ContactId { get; private set; }
         public VocabularyKey CustomerJourneyId { get; private set; }
         public VocabularyKey CustomerJourneyIterationId { get; private set; }
-        public VocabularyKey ContactId { get; private set; }
-        public VocabularyKey AccountId { get; private set; }
-        public VocabularyKey BoostValue { get; private set; }
+        public VocabularyKey InteractionId { get; private set; }
         public VocabularyKey InteractionType { get; private set; }
+        public VocabularyKey OrganizationId { get; private set; }
         public VocabularyKey Timestamp { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class IndicatorValueUsageVocabulary : SimpleVocabulary
     {
         public IndicatorValueUsageVocabulary()
         {
             VocabularyName = "Indicator Value Usage";
-            KeyPrefix = "commonDataModel.indicatorvalueusage.nonprofitcore";
+            KeyPrefix = "commonDataModel.indicatorvalueusage";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.IndicatorValueUsage;
 
@@ -18,7 +18,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Usage Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    UsageType = group.Add(new VocabularyKey(nameof(UsageType), "Usage Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -47,8 +47,8 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
 
         public VocabularyKey IndicatorValueUsageId { get; private set; }
         public VocabularyKey Name { get; private set; }
-        public VocabularyKey UsageType { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey UsageType { get; private set; }
     }
 }

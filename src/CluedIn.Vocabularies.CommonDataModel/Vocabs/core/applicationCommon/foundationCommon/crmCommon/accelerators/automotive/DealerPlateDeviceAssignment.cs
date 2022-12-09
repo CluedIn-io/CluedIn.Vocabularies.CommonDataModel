@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Automotive
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class DealerPlateDeviceAssignmentVocabulary : SimpleVocabulary
     {
         public DealerPlateDeviceAssignmentVocabulary()
         {
             VocabularyName = "Dealer Plate Device Assignment";
-            KeyPrefix = "commonDataModel.dealerplatedeviceassignment.automotive";
+            KeyPrefix = "commonDataModel.dealerplatedeviceassignment";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.DealerPlateDeviceAssignment;
 
@@ -20,7 +20,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
 			    ValidFrom = group.Add(new VocabularyKey(nameof(ValidFrom), "Valid From", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ValidTo = group.Add(new VocabularyKey(nameof(ValidTo), "Valid To", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -49,9 +49,9 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
         public VocabularyKey Comments { get; private set; }
         public VocabularyKey DealerPlateDeviceAssignmentId { get; private set; }
         public VocabularyKey Name { get; private set; }
-        public VocabularyKey ValidFrom { get; private set; }
-        public VocabularyKey ValidTo { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey ValidFrom { get; private set; }
+        public VocabularyKey ValidTo { get; private set; }
     }
 }

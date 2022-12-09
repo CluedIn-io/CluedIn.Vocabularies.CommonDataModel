@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class RatingModelVocabulary : SimpleVocabulary
     {
         public RatingModelVocabulary()
         {
             VocabularyName = "Rating Model";
-            KeyPrefix = "commonDataModel.ratingmodel.foundationcommon";
+            KeyPrefix = "commonDataModel.ratingmodel";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.RatingModel;
 
@@ -20,7 +20,11 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
 			    MinRatingValue = group.Add(new VocabularyKey(nameof(MinRatingValue), "Min Rating Value", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "ExchangeRate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));             
+			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "ExchangeRate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("RatingModel Details for ProjectServiceAutomation", group =>
+            {
+			    RatableEntity = group.Add(new VocabularyKey(nameof(RatableEntity), "Ratable Entity", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -45,12 +49,13 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
             #endregion
         }
 
-        public VocabularyKey RatingModelId { get; private set; }
-        public VocabularyKey Name { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey MaxRatingValue { get; private set; }
         public VocabularyKey MinRatingValue { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey RatableEntity { get; private set; }
+        public VocabularyKey RatingModelId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
     }
 }

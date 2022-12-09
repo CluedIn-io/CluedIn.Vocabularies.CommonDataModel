@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Service
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class CaseVocabulary : SimpleVocabulary
     {
         public CaseVocabulary()
         {
             VocabularyName = "Case";
-            KeyPrefix = "commonDataModel.case.service";
+            KeyPrefix = "commonDataModel.case";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Case;
 
@@ -63,7 +63,18 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
 			    ContactId = group.Add(new VocabularyKey(nameof(ContactId), "Contact", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
 			    CreatedByExternalParty = group.Add(new VocabularyKey(nameof(CreatedByExternalParty), "Created By (External Party)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ModifiedByExternalParty = group.Add(new VocabularyKey(nameof(ModifiedByExternalParty), "Modified By (External Party)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    ModifiedByExternalParty = group.Add(new VocabularyKey(nameof(ModifiedByExternalParty), "Modified By (External Party)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Case Details for Portals", group =>
+            {
+			    AdxCreatedByIPAddress = group.Add(new VocabularyKey(nameof(AdxCreatedByIPAddress), "Created By IP Address", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    AdxCreatedByUsername = group.Add(new VocabularyKey(nameof(AdxCreatedByUsername), "Created By Username", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    AdxModifiedByIPAddress = group.Add(new VocabularyKey(nameof(AdxModifiedByIPAddress), "Modified By IP Address", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    AdxModifiedByUsername = group.Add(new VocabularyKey(nameof(AdxModifiedByUsername), "Modified By Username", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    PublishToWeb = group.Add(new VocabularyKey(nameof(PublishToWeb), "Publish to Web", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
+			    Resolution = group.Add(new VocabularyKey(nameof(Resolution), "Resolution", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    ResolutionDate = group.Add(new VocabularyKey(nameof(ResolutionDate), "Resolution Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    StepsToReproduce = group.Add(new VocabularyKey(nameof(StepsToReproduce), "Steps to Reproduce", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -169,55 +180,63 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
             #endregion
         }
 
-        public VocabularyKey EmailAddress { get; private set; }
-        public VocabularyKey Title { get; private set; }
-        public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey StageId { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
+        public VocabularyKey AccountId { get; private set; }
         public VocabularyKey ActivitiesComplete { get; private set; }
         public VocabularyKey ActualServiceUnits { get; private set; }
+        public VocabularyKey AdxCreatedByIPAddress { get; private set; }
+        public VocabularyKey AdxCreatedByUsername { get; private set; }
+        public VocabularyKey AdxModifiedByIPAddress { get; private set; }
+        public VocabularyKey AdxModifiedByUsername { get; private set; }
         public VocabularyKey BilledServiceUnits { get; private set; }
         public VocabularyKey BlockedProfile { get; private set; }
         public VocabularyKey CaseOriginCode { get; private set; }
         public VocabularyKey CaseTypeCode { get; private set; }
         public VocabularyKey CheckEmail { get; private set; }
+        public VocabularyKey ContactId { get; private set; }
         public VocabularyKey ContractServiceLevelCode { get; private set; }
+        public VocabularyKey CreatedByExternalParty { get; private set; }
+        public VocabularyKey CustomerContacted { get; private set; }
         public VocabularyKey CustomerSatisfactionCode { get; private set; }
+        public VocabularyKey DecrementEntitlementTerm { get; private set; }
         public VocabularyKey Description { get; private set; }
+        public VocabularyKey EmailAddress { get; private set; }
+        public VocabularyKey EntityImageId { get; private set; }
+        public VocabularyKey EscalatedOn { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey FirstResponseSent { get; private set; }
         public VocabularyKey FirstResponseSLAStatus { get; private set; }
         public VocabularyKey FollowupBy { get; private set; }
         public VocabularyKey FollowUpTaskCreated { get; private set; }
         public VocabularyKey IncidentStageCode { get; private set; }
-        public VocabularyKey IsDecrementing { get; private set; }
-        public VocabularyKey MessageTypeCode { get; private set; }
-        public VocabularyKey PriorityCode { get; private set; }
-        public VocabularyKey ProductSerialNumber { get; private set; }
-        public VocabularyKey ResolveBySLAStatus { get; private set; }
-        public VocabularyKey SentimentValue { get; private set; }
         public VocabularyKey InfluenceScore { get; private set; }
+        public VocabularyKey IsDecrementing { get; private set; }
+        public VocabularyKey IsEscalated { get; private set; }
+        public VocabularyKey LastOnHoldTime { get; private set; }
+        public VocabularyKey Merged { get; private set; }
+        public VocabularyKey MessageTypeCode { get; private set; }
+        public VocabularyKey ModifiedByExternalParty { get; private set; }
+        public VocabularyKey NumberOfChildIncidents { get; private set; }
+        public VocabularyKey OnHoldTime { get; private set; }
+        public VocabularyKey PriorityCode { get; private set; }
+        public VocabularyKey ProcessId { get; private set; }
+        public VocabularyKey ProductSerialNumber { get; private set; }
+        public VocabularyKey PublishToWeb { get; private set; }
+        public VocabularyKey Resolution { get; private set; }
+        public VocabularyKey ResolutionDate { get; private set; }
+        public VocabularyKey ResolveBy { get; private set; }
+        public VocabularyKey ResolveBySLAStatus { get; private set; }
+        public VocabularyKey ResponseBy { get; private set; }
+        public VocabularyKey RouteCase { get; private set; }
+        public VocabularyKey SentimentValue { get; private set; }
         public VocabularyKey ServiceStage { get; private set; }
         public VocabularyKey SeverityCode { get; private set; }
+        public VocabularyKey StageId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey StepsToReproduce { get; private set; }
         public VocabularyKey SubjectId { get; private set; }
         public VocabularyKey TicketNumber { get; private set; }
-        public VocabularyKey NumberOfChildIncidents { get; private set; }
-        public VocabularyKey Merged { get; private set; }
-        public VocabularyKey RouteCase { get; private set; }
-        public VocabularyKey ResolveBy { get; private set; }
-        public VocabularyKey ResponseBy { get; private set; }
-        public VocabularyKey CustomerContacted { get; private set; }
-        public VocabularyKey FirstResponseSent { get; private set; }
-        public VocabularyKey IsEscalated { get; private set; }
-        public VocabularyKey EscalatedOn { get; private set; }
-        public VocabularyKey OnHoldTime { get; private set; }
-        public VocabularyKey LastOnHoldTime { get; private set; }
-        public VocabularyKey DecrementEntitlementTerm { get; private set; }
-        public VocabularyKey EntityImageId { get; private set; }
-        public VocabularyKey AccountId { get; private set; }
-        public VocabularyKey ContactId { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
-        public VocabularyKey CreatedByExternalParty { get; private set; }
-        public VocabularyKey ModifiedByExternalParty { get; private set; }
+        public VocabularyKey Title { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
     }
 }

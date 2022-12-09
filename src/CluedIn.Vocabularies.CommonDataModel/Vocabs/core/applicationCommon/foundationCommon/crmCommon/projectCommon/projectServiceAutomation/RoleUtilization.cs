@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class RoleUtilizationVocabulary : SimpleVocabulary
     {
         public RoleUtilizationVocabulary()
         {
             VocabularyName = "Role Utilization";
-            KeyPrefix = "commonDataModel.roleutilization.projectserviceautomation";
+            KeyPrefix = "commonDataModel.roleutilization";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.RoleUtilization;
 
@@ -20,7 +20,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TargetUtilizationPercent = group.Add(new VocabularyKey(nameof(TargetUtilizationPercent), "Target Utilization Percent", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    UtilizationPercent = group.Add(new VocabularyKey(nameof(UtilizationPercent), "Utilization Percent", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    UtilizationPercentDifference = group.Add(new VocabularyKey(nameof(UtilizationPercentDifference), "Utilization Percent Difference", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    UtilizationPercentDifference = group.Add(new VocabularyKey(nameof(UtilizationPercentDifference), "Utilization Percent Difference", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -41,10 +41,10 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey RoleUtilizationId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey TargetUtilizationPercent { get; private set; }
         public VocabularyKey UtilizationPercent { get; private set; }
         public VocabularyKey UtilizationPercentDifference { get; private set; }

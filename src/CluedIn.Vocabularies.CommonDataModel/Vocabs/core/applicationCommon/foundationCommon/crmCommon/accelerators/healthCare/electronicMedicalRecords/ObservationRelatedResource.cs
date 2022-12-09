@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ObservationRelatedResourceVocabulary : SimpleVocabulary
     {
         public ObservationRelatedResourceVocabulary()
         {
             VocabularyName = "Observation Related Resource";
-            KeyPrefix = "commonDataModel.observationrelatedresource.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.observationrelatedresource";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ObservationRelatedResource;
 
@@ -19,7 +19,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    ObsRelatedResourceTargetType = group.Add(new VocabularyKey(nameof(ObsRelatedResourceTargetType), "Target Resource Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ObsRelatedResourceType = group.Add(new VocabularyKey(nameof(ObsRelatedResourceType), "Related Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class EventVocabulary : SimpleVocabulary
     {
         public EventVocabulary()
         {
             VocabularyName = "Event";
-            KeyPrefix = "commonDataModel.event.eventmanagement";
+            KeyPrefix = "commonDataModel.event";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Event;
 
@@ -114,7 +114,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
 			    SessionsCountState = group.Add(new VocabularyKey(nameof(SessionsCountState), "Session count (State)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    AllowAnonymousRegistrations = group.Add(new VocabularyKey(nameof(AllowAnonymousRegistrations), "Allow Anonymous Registrations", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    PortalBannerImage = group.Add(new VocabularyKey(nameof(PortalBannerImage), "Portal Banner Image", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EventURL = group.Add(new VocabularyKey(nameof(EventURL), "Portal Event URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible));             
+			    EventURL = group.Add(new VocabularyKey(nameof(EventURL), "Portal Event URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -201,19 +201,11 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
             #endregion
         }
 
-        public VocabularyKey EventId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey StageId { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
-        public VocabularyKey EntityImageId { get; private set; }
+        public VocabularyKey AllowAnonymousRegistrations { get; private set; }
         public VocabularyKey BaseRecurrentEventID { get; private set; }
         public VocabularyKey BookedFlightReservations { get; private set; }
         public VocabularyKey BookRooms { get; private set; }
         public VocabularyKey BudgetAllocated { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey BudgetAllocatedBase { get; private set; }
         public VocabularyKey CateringRequired { get; private set; }
         public VocabularyKey CheckInCount { get; private set; }
@@ -226,15 +218,20 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
         public VocabularyKey Description { get; private set; }
         public VocabularyKey DevelopMarketingPlan { get; private set; }
         public VocabularyKey EarlyBirdCutOffDate { get; private set; }
+        public VocabularyKey EntityImageId { get; private set; }
         public VocabularyKey EventDebriefing { get; private set; }
         public VocabularyKey EventEndDate { get; private set; }
         public VocabularyKey EventFormat { get; private set; }
+        public VocabularyKey EventId { get; private set; }
         public VocabularyKey EventStartDate { get; private set; }
         public VocabularyKey EventTimeZone { get; private set; }
         public VocabularyKey EventTimeZoneName { get; private set; }
         public VocabularyKey EventType { get; private set; }
+        public VocabularyKey EventURL { get; private set; }
+        public VocabularyKey EventURLspecified { get; private set; }
         public VocabularyKey EventVenueCost { get; private set; }
         public VocabularyKey EventVenueCostBase { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey ExpectedOutcome { get; private set; }
         public VocabularyKey FollowUpOnLeads { get; private set; }
         public VocabularyKey GuestLogistics { get; private set; }
@@ -249,10 +246,13 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
         public VocabularyKey MaxNumberOfRegistrations { get; private set; }
         public VocabularyKey MiscellaneousCosts { get; private set; }
         public VocabularyKey MiscellaneousCostsBase { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey NotifyAuthoritiesOfEvent { get; private set; }
         public VocabularyKey PlanRegistration { get; private set; }
+        public VocabularyKey PortalBannerImage { get; private set; }
         public VocabularyKey PresentationManagerUrl { get; private set; }
         public VocabularyKey PrimaryGoal { get; private set; }
+        public VocabularyKey ProcessId { get; private set; }
         public VocabularyKey PublicEventURL { get; private set; }
         public VocabularyKey PublishStatus { get; private set; }
         public VocabularyKey ReadableEventID { get; private set; }
@@ -270,8 +270,15 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
         public VocabularyKey SendEventInvitation { get; private set; }
         public VocabularyKey SendMarketingMaterial { get; private set; }
         public VocabularyKey SendPreEventReminders { get; private set; }
+        public VocabularyKey SendSurveys { get; private set; }
         public VocabularyKey SendThankYouEmails { get; private set; }
+        public VocabularyKey SessionsCount { get; private set; }
+        public VocabularyKey SessionsCountDate { get; private set; }
+        public VocabularyKey SessionsCountState { get; private set; }
         public VocabularyKey ShowWaitlist { get; private set; }
+        public VocabularyKey StageId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey TargetRevenue { get; private set; }
         public VocabularyKey TargetRevenueBase { get; private set; }
         public VocabularyKey TeamDebriefing { get; private set; }
@@ -284,6 +291,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
         public VocabularyKey TotalRevenueFromTheEvent { get; private set; }
         public VocabularyKey TotalRevenueFromTheEventBase { get; private set; }
         public VocabularyKey TransactionCurrencyId { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
         public VocabularyKey WaitlistStartingPoint { get; private set; }
         public VocabularyKey WaitlistthisEvent { get; private set; }
         public VocabularyKey WebinarConfigurationId { get; private set; }
@@ -294,13 +302,5 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
         public VocabularyKey WebinarStatusReason { get; private set; }
         public VocabularyKey WebinarType { get; private set; }
         public VocabularyKey WebinarURL { get; private set; }
-        public VocabularyKey SendSurveys { get; private set; }
-        public VocabularyKey EventURLspecified { get; private set; }
-        public VocabularyKey SessionsCount { get; private set; }
-        public VocabularyKey SessionsCountDate { get; private set; }
-        public VocabularyKey SessionsCountState { get; private set; }
-        public VocabularyKey AllowAnonymousRegistrations { get; private set; }
-        public VocabularyKey PortalBannerImage { get; private set; }
-        public VocabularyKey EventURL { get; private set; }
     }
 }

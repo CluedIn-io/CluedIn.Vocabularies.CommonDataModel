@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class CrsOtherFlagVocabulary : SimpleVocabulary
     {
         public CrsOtherFlagVocabulary()
         {
             VocabularyName = "Crs Other Flag";
-            KeyPrefix = "commonDataModel.crsotherflag.nonprofitiati";
+            KeyPrefix = "commonDataModel.crsotherflag";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.CrsOtherFlag;
 
@@ -19,7 +19,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
 			    FlagApplies = group.Add(new VocabularyKey(nameof(FlagApplies), "Flag Applies", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class PhoneCallVocabulary : SimpleVocabulary
     {
         public PhoneCallVocabulary()
         {
             VocabularyName = "Phone Call";
-            KeyPrefix = "commonDataModel.phonecall.applicationcommon";
+            KeyPrefix = "commonDataModel.phonecall";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.PhoneCall;
 
@@ -24,7 +24,15 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    StageId = group.Add(new VocabularyKey(nameof(StageId), "Process Stage", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
 			    TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    OnHoldTime = group.Add(new VocabularyKey(nameof(OnHoldTime), "On Hold Time (Minutes)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    LastOnHoldTime = group.Add(new VocabularyKey(nameof(LastOnHoldTime), "Last On Hold Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    LastOnHoldTime = group.Add(new VocabularyKey(nameof(LastOnHoldTime), "Last On Hold Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("PhoneCall Details for CrmCommon", group =>
+            {
+			    From = group.Add(new VocabularyKey(nameof(From), "Call From", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("PhoneCall Details for Marketing", group =>
+            {
+			    CustomerJourneyIteration = group.Add(new VocabularyKey(nameof(CustomerJourneyIteration), "Customer journey iteration", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -73,16 +81,18 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             #endregion
         }
 
-        public VocabularyKey To { get; private set; }
-        public VocabularyKey PhoneNumber { get; private set; }
+        public VocabularyKey CustomerJourneyIteration { get; private set; }
         public VocabularyKey Description { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey From { get; private set; }
+        public VocabularyKey LastOnHoldTime { get; private set; }
+        public VocabularyKey OnHoldTime { get; private set; }
+        public VocabularyKey PhoneNumber { get; private set; }
         public VocabularyKey ProcessId { get; private set; }
         public VocabularyKey StageId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey To { get; private set; }
         public VocabularyKey TraversedPath { get; private set; }
-        public VocabularyKey OnHoldTime { get; private set; }
-        public VocabularyKey LastOnHoldTime { get; private set; }
     }
 }

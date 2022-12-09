@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ProductAssociationVocabulary : SimpleVocabulary
     {
         public ProductAssociationVocabulary()
         {
             VocabularyName = "Product Association";
-            KeyPrefix = "commonDataModel.productassociation.foundationcommon";
+            KeyPrefix = "commonDataModel.productassociation";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ProductAssociation;
 
@@ -27,7 +27,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    PropertyCustomizationStatus = group.Add(new VocabularyKey(nameof(PropertyCustomizationStatus), "Property Customization", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));             
+			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -56,19 +56,19 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
             #endregion
         }
 
-        public VocabularyKey ProductAssociationId { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
         public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Quantity { get; private set; }
+        public VocabularyKey ProductAssociationId { get; private set; }
         public VocabularyKey ProductIsRequired { get; private set; }
+        public VocabularyKey PropertyCustomizationStatus { get; private set; }
+        public VocabularyKey Quantity { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey PropertyCustomizationStatus { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class RolePriceMarkupVocabulary : SimpleVocabulary
     {
         public RolePriceMarkupVocabulary()
         {
             VocabularyName = "Role Price Markup";
-            KeyPrefix = "commonDataModel.rolepricemarkup.projectserviceautomation";
+            KeyPrefix = "commonDataModel.rolepricemarkup";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.RolePriceMarkup;
 
@@ -26,7 +26,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    Description = group.Add(new VocabularyKey(nameof(Description), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Percent = group.Add(new VocabularyKey(nameof(Percent), "Percent", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    PriceCalculation = group.Add(new VocabularyKey(nameof(PriceCalculation), "Price Calculation", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    PriceCalculation = group.Add(new VocabularyKey(nameof(PriceCalculation), "Price Calculation", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -47,18 +47,18 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
-        public VocabularyKey ResourcecategorymarkuppricelevelId { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
         public VocabularyKey Description { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey Percent { get; private set; }
         public VocabularyKey PriceCalculation { get; private set; }
+        public VocabularyKey ResourcecategorymarkuppricelevelId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

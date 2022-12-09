@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Automotive
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class LeadDeviceVocabulary : SimpleVocabulary
     {
         public LeadDeviceVocabulary()
         {
             VocabularyName = "Lead Device";
-            KeyPrefix = "commonDataModel.leaddevice.automotive";
+            KeyPrefix = "commonDataModel.leaddevice";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.LeadDevice;
 
@@ -26,7 +26,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
 			    State = group.Add(new VocabularyKey(nameof(State), "State", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    URL = group.Add(new VocabularyKey(nameof(URL), "URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -75,18 +75,18 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
             #endregion
         }
 
-        public VocabularyKey EntityImage { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey Comments { get; private set; }
         public VocabularyKey DeviceYear { get; private set; }
+        public VocabularyKey EntityImage { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey LeadDeviceId { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey Price { get; private set; }
         public VocabularyKey PriceBase { get; private set; }
         public VocabularyKey PriceComments { get; private set; }
         public VocabularyKey State { get; private set; }
-        public VocabularyKey URL { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey URL { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class IntegrationJobDetailVocabulary : SimpleVocabulary
     {
         public IntegrationJobDetailVocabulary()
         {
             VocabularyName = "Integration Job Detail";
-            KeyPrefix = "commonDataModel.integrationjobdetail.projectserviceautomation";
+            KeyPrefix = "commonDataModel.integrationjobdetail";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.IntegrationJobDetail;
 
@@ -20,7 +20,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ChangesJSON = group.Add(new VocabularyKey(nameof(ChangesJSON), "Changes JSON", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    FullJSON = group.Add(new VocabularyKey(nameof(FullJSON), "Full JSON", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SequenceNumber = group.Add(new VocabularyKey(nameof(SequenceNumber), "Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    SequenceNumber = group.Add(new VocabularyKey(nameof(SequenceNumber), "Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -41,12 +41,12 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
-        public VocabularyKey IntegrationJobDetailId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey ChangesJSON { get; private set; }
         public VocabularyKey FullJSON { get; private set; }
+        public VocabularyKey IntegrationJobDetailId { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey SequenceNumber { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

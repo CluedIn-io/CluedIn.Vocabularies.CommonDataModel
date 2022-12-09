@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Service
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class CaseResolutionVocabulary : SimpleVocabulary
     {
         public CaseResolutionVocabulary()
         {
             VocabularyName = "Case Resolution";
-            KeyPrefix = "commonDataModel.caseresolution.service";
+            KeyPrefix = "commonDataModel.caseresolution";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.CaseResolution;
 
@@ -25,7 +25,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
 			    TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TimeSpent = group.Add(new VocabularyKey(nameof(TimeSpent), "Time Spent", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    CreatedByExternalParty = group.Add(new VocabularyKey(nameof(CreatedByExternalParty), "Created By (External Party)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ModifiedByExternalParty = group.Add(new VocabularyKey(nameof(ModifiedByExternalParty), "Modified By (External Party)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    ModifiedByExternalParty = group.Add(new VocabularyKey(nameof(ModifiedByExternalParty), "Modified By (External Party)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -71,17 +71,17 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
             #endregion
         }
 
+        public VocabularyKey CreatedByExternalParty { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey LastOnHoldTime { get; private set; }
+        public VocabularyKey ModifiedByExternalParty { get; private set; }
         public VocabularyKey OnHoldTime { get; private set; }
         public VocabularyKey ProcessId { get; private set; }
         public VocabularyKey StageId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
         public VocabularyKey TimeSpent { get; private set; }
-        public VocabularyKey CreatedByExternalParty { get; private set; }
-        public VocabularyKey ModifiedByExternalParty { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
     }
 }

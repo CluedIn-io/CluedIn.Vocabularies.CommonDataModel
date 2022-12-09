@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class CampaignResponseVocabulary : SimpleVocabulary
     {
         public CampaignResponseVocabulary()
         {
             VocabularyName = "Campaign Response";
-            KeyPrefix = "commonDataModel.campaignresponse.crmcommon";
+            KeyPrefix = "commonDataModel.campaignresponse";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.CampaignResponse;
 
@@ -38,7 +38,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
 			    YomiCompanyName = group.Add(new VocabularyKey(nameof(YomiCompanyName), "Yomi Company Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    YomiFirstName = group.Add(new VocabularyKey(nameof(YomiFirstName), "Yomi First Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    YomiLastName = group.Add(new VocabularyKey(nameof(YomiLastName), "Yomi Last Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ServiceId = group.Add(new VocabularyKey(nameof(ServiceId), "Service", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    ServiceId = group.Add(new VocabularyKey(nameof(ServiceId), "Service", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -83,30 +83,30 @@ namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
             #endregion
         }
 
-        public VocabularyKey Description { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
-        public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey StageId { get; private set; }
-        public VocabularyKey OnHoldTime { get; private set; }
-        public VocabularyKey LastOnHoldTime { get; private set; }
         public VocabularyKey ChannelTypeCode { get; private set; }
         public VocabularyKey CompanyName { get; private set; }
         public VocabularyKey Customer { get; private set; }
+        public VocabularyKey Description { get; private set; }
         public VocabularyKey EmailAddress { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey Fax { get; private set; }
         public VocabularyKey FirstName { get; private set; }
         public VocabularyKey LastName { get; private set; }
+        public VocabularyKey LastOnHoldTime { get; private set; }
+        public VocabularyKey OnHoldTime { get; private set; }
         public VocabularyKey Partner { get; private set; }
+        public VocabularyKey ProcessId { get; private set; }
         public VocabularyKey PromotionCodeName { get; private set; }
         public VocabularyKey ReceivedOn { get; private set; }
         public VocabularyKey ResponseCode { get; private set; }
+        public VocabularyKey ServiceId { get; private set; }
+        public VocabularyKey StageId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey Telephone { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
         public VocabularyKey YomiCompanyName { get; private set; }
         public VocabularyKey YomiFirstName { get; private set; }
         public VocabularyKey YomiLastName { get; private set; }
-        public VocabularyKey ServiceId { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Automotive
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ServiceOrderJobDetailVocabulary : SimpleVocabulary
     {
         public ServiceOrderJobDetailVocabulary()
         {
             VocabularyName = "Service Order Job Detail";
-            KeyPrefix = "commonDataModel.serviceorderjobdetail.automotive";
+            KeyPrefix = "commonDataModel.serviceorderjobdetail";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ServiceOrderJobDetail;
 
@@ -35,7 +35,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
 			    SubcontractorPurchaseOrder = group.Add(new VocabularyKey(nameof(SubcontractorPurchaseOrder), "Subcontractor Purchase Order", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -67,7 +67,6 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
             #endregion
         }
 
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey ActualQuantity { get; private set; }
         public VocabularyKey Amount { get; private set; }
         public VocabularyKey AmountBase { get; private set; }
@@ -76,6 +75,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
         public VocabularyKey DiscountBase { get; private set; }
         public VocabularyKey EstimatedAmount { get; private set; }
         public VocabularyKey EstimatedAmountBase { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey ExpectedQuantity { get; private set; }
         public VocabularyKey ItemName { get; private set; }
         public VocabularyKey Name { get; private set; }
@@ -85,9 +85,9 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
         public VocabularyKey SalesPrice { get; private set; }
         public VocabularyKey SalesPriceBase { get; private set; }
         public VocabularyKey ServiceOrderJobDetailId { get; private set; }
-        public VocabularyKey SubcontractorPurchaseOrder { get; private set; }
-        public VocabularyKey Type { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey SubcontractorPurchaseOrder { get; private set; }
+        public VocabularyKey Type { get; private set; }
     }
 }

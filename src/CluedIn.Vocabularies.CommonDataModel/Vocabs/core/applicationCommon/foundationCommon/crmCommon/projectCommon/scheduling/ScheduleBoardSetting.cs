@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ScheduleBoardSettingVocabulary : SimpleVocabulary
     {
         public ScheduleBoardSettingVocabulary()
         {
             VocabularyName = "Schedule Board Setting";
-            KeyPrefix = "commonDataModel.scheduleboardsetting.scheduling";
+            KeyPrefix = "commonDataModel.scheduleboardsetting";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ScheduleBoardSetting;
 
@@ -49,7 +49,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
 			    ShareType = group.Add(new VocabularyKey(nameof(ShareType), "Share Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    UnscheduledRequirementsViewId = group.Add(new VocabularyKey(nameof(UnscheduledRequirementsViewId), "Requirements View Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    UnscheduledWOPageRecCount = group.Add(new VocabularyKey(nameof(UnscheduledWOPageRecCount), "Resource Requirement View Page Record Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    WorkingHoursColor = group.Add(new VocabularyKey(nameof(WorkingHoursColor), "Working Hours Color", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    WorkingHoursColor = group.Add(new VocabularyKey(nameof(WorkingHoursColor), "Working Hours Color", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -72,10 +72,6 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
             #endregion
         }
 
-        public VocabularyKey ScheduleBoardSettingId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey TabName { get; private set; }
         public VocabularyKey BookBasedOn { get; private set; }
         public VocabularyKey CustomTabName { get; private set; }
         public VocabularyKey CustomTabWebResource { get; private set; }
@@ -100,11 +96,15 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
         public VocabularyKey SAUnavailableColor { get; private set; }
         public VocabularyKey SAUnavailableIcon { get; private set; }
         public VocabularyKey SAUnavailableIconDefault { get; private set; }
+        public VocabularyKey ScheduleBoardSettingId { get; private set; }
         public VocabularyKey SchedulerAlertsView { get; private set; }
         public VocabularyKey SchedulerResourceDetailsView { get; private set; }
         public VocabularyKey SchedulerResourceTooltipView { get; private set; }
         public VocabularyKey Settings { get; private set; }
         public VocabularyKey ShareType { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TabName { get; private set; }
         public VocabularyKey UnscheduledRequirementsViewId { get; private set; }
         public VocabularyKey UnscheduledWOPageRecCount { get; private set; }
         public VocabularyKey WorkingHoursColor { get; private set; }

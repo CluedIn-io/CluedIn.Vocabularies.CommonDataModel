@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class RecipientRegionVocabulary : SimpleVocabulary
     {
         public RecipientRegionVocabulary()
         {
             VocabularyName = "Recipient Region";
-            KeyPrefix = "commonDataModel.recipientregion.nonprofitiati";
+            KeyPrefix = "commonDataModel.recipientregion";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.RecipientRegion;
 
@@ -18,7 +18,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
 			    Percentage = group.Add(new VocabularyKey(nameof(Percentage), "Percentage", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
 			    RecipientRegionId = group.Add(new VocabularyKey(nameof(RecipientRegionId), "Recipient Region", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

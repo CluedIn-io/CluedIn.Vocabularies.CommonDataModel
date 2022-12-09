@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Sales
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class OrderCloseVocabulary : SimpleVocabulary
     {
         public OrderCloseVocabulary()
         {
             VocabularyName = "Order Close";
-            KeyPrefix = "commonDataModel.orderclose.sales";
+            KeyPrefix = "commonDataModel.orderclose";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.OrderClose;
 
@@ -26,7 +26,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Sales
 			    OrderNumber = group.Add(new VocabularyKey(nameof(OrderNumber), "Order Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Revision = group.Add(new VocabularyKey(nameof(Revision), "Revision", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    CreatedByExternalParty = group.Add(new VocabularyKey(nameof(CreatedByExternalParty), "Created By (External Party)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ModifiedByExternalParty = group.Add(new VocabularyKey(nameof(ModifiedByExternalParty), "Modified By (External Party)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    ModifiedByExternalParty = group.Add(new VocabularyKey(nameof(ModifiedByExternalParty), "Modified By (External Party)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -63,18 +63,18 @@ namespace CluedIn.Vocabularies.CommonDataModel.Sales
             #endregion
         }
 
+        public VocabularyKey CreatedByExternalParty { get; private set; }
         public VocabularyKey Description { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey LastOnHoldTime { get; private set; }
+        public VocabularyKey ModifiedByExternalParty { get; private set; }
+        public VocabularyKey OnHoldTime { get; private set; }
+        public VocabularyKey OrderNumber { get; private set; }
+        public VocabularyKey ProcessId { get; private set; }
+        public VocabularyKey Revision { get; private set; }
+        public VocabularyKey StageId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey TraversedPath { get; private set; }
-        public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey StageId { get; private set; }
-        public VocabularyKey OnHoldTime { get; private set; }
-        public VocabularyKey LastOnHoldTime { get; private set; }
-        public VocabularyKey OrderNumber { get; private set; }
-        public VocabularyKey Revision { get; private set; }
-        public VocabularyKey CreatedByExternalParty { get; private set; }
-        public VocabularyKey ModifiedByExternalParty { get; private set; }
     }
 }

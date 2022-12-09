@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ConnectionRoleVocabulary : SimpleVocabulary
     {
         public ConnectionRoleVocabulary()
         {
             VocabularyName = "Connection Role";
-            KeyPrefix = "commonDataModel.connectionrole.applicationcommon";
+            KeyPrefix = "commonDataModel.connectionrole";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ConnectionRole;
 
@@ -30,7 +30,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    ConnectionRoleIdUnique = group.Add(new VocabularyKey(nameof(ConnectionRoleIdUnique), "Unique ID", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
 			    IsManaged = group.Add(new VocabularyKey(nameof(IsManaged), "State", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    IsCustomizable = group.Add(new VocabularyKey(nameof(IsCustomizable), "Customizable", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    IntroducedVersion = group.Add(new VocabularyKey(nameof(IntroducedVersion), "Introduced Version", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    IntroducedVersion = group.Add(new VocabularyKey(nameof(IntroducedVersion), "Introduced Version", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -49,22 +49,22 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             #endregion
         }
 
+        public VocabularyKey Category { get; private set; }
+        public VocabularyKey ComponentState { get; private set; }
         public VocabularyKey ConnectionRoleId { get; private set; }
+        public VocabularyKey ConnectionRoleIdUnique { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey IntroducedVersion { get; private set; }
+        public VocabularyKey IsCustomizable { get; private set; }
+        public VocabularyKey IsManaged { get; private set; }
         public VocabularyKey ModifiedOn { get; private set; }
         public VocabularyKey Name { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey OverwriteTime { get; private set; }
+        public VocabularyKey SolutionId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Category { get; private set; }
-        public VocabularyKey Description { get; private set; }
-        public VocabularyKey CreatedOn { get; private set; }
         public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey SolutionId { get; private set; }
-        public VocabularyKey ComponentState { get; private set; }
-        public VocabularyKey OverwriteTime { get; private set; }
-        public VocabularyKey ConnectionRoleIdUnique { get; private set; }
-        public VocabularyKey IsManaged { get; private set; }
-        public VocabularyKey IsCustomizable { get; private set; }
-        public VocabularyKey IntroducedVersion { get; private set; }
     }
 }

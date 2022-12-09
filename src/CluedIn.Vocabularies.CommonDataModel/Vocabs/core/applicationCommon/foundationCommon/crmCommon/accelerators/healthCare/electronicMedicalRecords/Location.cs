@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class LocationVocabulary : SimpleVocabulary
     {
         public LocationVocabulary()
         {
             VocabularyName = "Location";
-            KeyPrefix = "commonDataModel.location.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.location";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Location;
 
@@ -49,7 +49,17 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), "Time Zone Rule Version Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Location Details for NonProfitIati", group =>
+            {
+			    ActivityLocationDescription = group.Add(new VocabularyKey(nameof(ActivityLocationDescription), "Activity Location Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Latitude = group.Add(new VocabularyKey(nameof(Latitude), "Latitude", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Level = group.Add(new VocabularyKey(nameof(Level), "Level", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+			    Longitude = group.Add(new VocabularyKey(nameof(Longitude), "Longitude", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Pos = group.Add(new VocabularyKey(nameof(Pos), "Position", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Reference = group.Add(new VocabularyKey(nameof(Reference), "Reference", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -137,11 +147,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
             #endregion
         }
 
-        public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey CreatedOnBehalfBy { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey ModifiedOnBehalfBy { get; private set; }
+        public VocabularyKey ActivityLocationDescription { get; private set; }
         public VocabularyKey AddressCity { get; private set; }
         public VocabularyKey AddressCountry { get; private set; }
         public VocabularyKey AddressDistinct { get; private set; }
@@ -155,7 +161,12 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
         public VocabularyKey AddressText { get; private set; }
         public VocabularyKey AddressType { get; private set; }
         public VocabularyKey AddressUse { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey CreatedOnBehalfBy { get; private set; }
         public VocabularyKey Description { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey Latitude { get; private set; }
+        public VocabularyKey Level { get; private set; }
         public VocabularyKey LocationAlias1 { get; private set; }
         public VocabularyKey LocationAlias2 { get; private set; }
         public VocabularyKey LocationAlias3 { get; private set; }
@@ -164,14 +175,20 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
         public VocabularyKey LocationPositionAltitude { get; private set; }
         public VocabularyKey LocationPositionLatitude { get; private set; }
         public VocabularyKey LocationPositionLongitude { get; private set; }
+        public VocabularyKey Longitude { get; private set; }
         public VocabularyKey Mode { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey ModifiedOnBehalfBy { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey OperationalStatus { get; private set; }
-        public VocabularyKey Status { get; private set; }
         public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey Pos { get; private set; }
+        public VocabularyKey Reference { get; private set; }
         public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey Status { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey Type { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
     }
 }

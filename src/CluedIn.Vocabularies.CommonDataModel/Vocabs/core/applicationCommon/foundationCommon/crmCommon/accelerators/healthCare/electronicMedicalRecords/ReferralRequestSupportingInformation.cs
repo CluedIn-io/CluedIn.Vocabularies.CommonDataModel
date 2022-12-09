@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ReferralRequestSupportingInformationVocabulary : SimpleVocabulary
     {
         public ReferralRequestSupportingInformationVocabulary()
         {
             VocabularyName = "Referral Request Supporting Information";
-            KeyPrefix = "commonDataModel.referralrequestsupportinginformation.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.referralrequestsupportinginformation";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ReferralRequestSupportingInformation;
 
@@ -18,7 +18,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    ReferralRequestSupportingInformationId = group.Add(new VocabularyKey(nameof(ReferralRequestSupportingInformationId), "Referral Request Supporting Information", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    SupportingInfo = group.Add(new VocabularyKey(nameof(SupportingInfo), "Supporting Info", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -44,8 +44,8 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 
         public VocabularyKey Name { get; private set; }
         public VocabularyKey ReferralRequestSupportingInformationId { get; private set; }
-        public VocabularyKey SupportingInfo { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey SupportingInfo { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Portals
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class BlogPostVocabulary : SimpleVocabulary
     {
         public BlogPostVocabulary()
         {
             VocabularyName = "Blog Post";
-            KeyPrefix = "commonDataModel.blogpost.portals";
+            KeyPrefix = "commonDataModel.blogpost";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.BlogPost;
 
@@ -28,7 +28,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
 			    AdxModifiedByUsername = group.Add(new VocabularyKey(nameof(AdxModifiedByUsername), "Modified By (Username)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    PartialURL = group.Add(new VocabularyKey(nameof(PartialURL), "Partial URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
 			    Published = group.Add(new VocabularyKey(nameof(Published), "Published", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    Summary = group.Add(new VocabularyKey(nameof(Summary), "Summary", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Summary = group.Add(new VocabularyKey(nameof(Summary), "Summary", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -51,20 +51,20 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
             #endregion
         }
 
-        public VocabularyKey BlogPostId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey CommentPolicy { get; private set; }
-        public VocabularyKey Copy { get; private set; }
         public VocabularyKey AdxCreatedByIPAddress { get; private set; }
         public VocabularyKey AdxCreatedByUsername { get; private set; }
-        public VocabularyKey Date { get; private set; }
-        public VocabularyKey EnableRatings { get; private set; }
         public VocabularyKey AdxModifiedByIPAddress { get; private set; }
         public VocabularyKey AdxModifiedByUsername { get; private set; }
+        public VocabularyKey BlogPostId { get; private set; }
+        public VocabularyKey CommentPolicy { get; private set; }
+        public VocabularyKey Copy { get; private set; }
+        public VocabularyKey Date { get; private set; }
+        public VocabularyKey EnableRatings { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey PartialURL { get; private set; }
         public VocabularyKey Published { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey Summary { get; private set; }
     }
 }

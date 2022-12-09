@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class VisionPrescriptionDispenseVocabulary : SimpleVocabulary
     {
         public VisionPrescriptionDispenseVocabulary()
         {
             VocabularyName = "Vision Prescription Dispense";
-            KeyPrefix = "commonDataModel.visionprescriptiondispense.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.visionprescriptiondispense";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.VisionPrescriptionDispense;
 
@@ -30,7 +30,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    VisionprescriptiondispensId = group.Add(new VocabularyKey(nameof(VisionprescriptiondispensId), "Vision Prescription Dispense", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -69,8 +69,8 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
         public VocabularyKey DispensePrism { get; private set; }
         public VocabularyKey DispenseSphere { get; private set; }
         public VocabularyKey Name { get; private set; }
-        public VocabularyKey VisionprescriptiondispensId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey VisionprescriptiondispensId { get; private set; }
     }
 }

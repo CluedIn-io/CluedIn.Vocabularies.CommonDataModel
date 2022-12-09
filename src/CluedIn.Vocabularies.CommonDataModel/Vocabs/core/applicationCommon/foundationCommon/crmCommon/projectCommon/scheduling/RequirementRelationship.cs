@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class RequirementRelationshipVocabulary : SimpleVocabulary
     {
         public RequirementRelationshipVocabulary()
         {
             VocabularyName = "Requirement Relationship";
-            KeyPrefix = "commonDataModel.requirementrelationship.scheduling";
+            KeyPrefix = "commonDataModel.requirementrelationship";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.RequirementRelationship;
 
@@ -21,7 +21,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
 			    MinConditionCount = group.Add(new VocabularyKey(nameof(MinConditionCount), "Min Condition Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    Operator = group.Add(new VocabularyKey(nameof(Operator), "Operator", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ResourceGroupings = group.Add(new VocabularyKey(nameof(ResourceGroupings), "Part of Same", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RequirementGroupControlViewId = group.Add(new VocabularyKey(nameof(RequirementGroupControlViewId), "Requirement Group Control View Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    RequirementGroupControlViewId = group.Add(new VocabularyKey(nameof(RequirementGroupControlViewId), "Requirement Group Control View Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -44,13 +44,13 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
             #endregion
         }
 
+        public VocabularyKey MinConditionCount { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey Operator { get; private set; }
+        public VocabularyKey RequirementGroupControlViewId { get; private set; }
         public VocabularyKey RequirementrelationshipId { get; private set; }
+        public VocabularyKey ResourceGroupings { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey MinConditionCount { get; private set; }
-        public VocabularyKey Operator { get; private set; }
-        public VocabularyKey ResourceGroupings { get; private set; }
-        public VocabularyKey RequirementGroupControlViewId { get; private set; }
     }
 }

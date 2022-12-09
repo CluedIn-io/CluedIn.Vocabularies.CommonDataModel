@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class TaskRelevantHistoryVocabulary : SimpleVocabulary
     {
         public TaskRelevantHistoryVocabulary()
         {
             VocabularyName = "Task Relevant History";
-            KeyPrefix = "commonDataModel.taskrelevanthistory.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.taskrelevanthistory";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.TaskRelevantHistory;
 
@@ -17,7 +17,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TaskRelevantHistoryId = group.Add(new VocabularyKey(nameof(TaskRelevantHistoryId), "Task Relevant History", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -43,8 +43,8 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
         }
 
         public VocabularyKey Name { get; private set; }
-        public VocabularyKey TaskRelevantHistoryId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TaskRelevantHistoryId { get; private set; }
     }
 }

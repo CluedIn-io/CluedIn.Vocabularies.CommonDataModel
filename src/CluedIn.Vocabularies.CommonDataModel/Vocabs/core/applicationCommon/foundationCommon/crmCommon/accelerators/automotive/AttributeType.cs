@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Automotive
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class AttributeTypeVocabulary : SimpleVocabulary
     {
         public AttributeTypeVocabulary()
         {
             VocabularyName = "Attribute Type";
-            KeyPrefix = "commonDataModel.attributetype.automotive";
+            KeyPrefix = "commonDataModel.attributetype";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.AttributeType;
 
@@ -20,7 +20,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -49,8 +49,8 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
         public VocabularyKey Description { get; private set; }
         public VocabularyKey LineNumber { get; private set; }
         public VocabularyKey Name { get; private set; }
-        public VocabularyKey Type { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey Type { get; private set; }
     }
 }

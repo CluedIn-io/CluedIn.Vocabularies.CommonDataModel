@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class NutritionOrderOralDietTypeVocabulary : SimpleVocabulary
     {
         public NutritionOrderOralDietTypeVocabulary()
         {
             VocabularyName = "Nutrition Order Oral Diet Type";
-            KeyPrefix = "commonDataModel.nutritionorderoraldiettype.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.nutritionorderoraldiettype";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.NutritionOrderOralDietType;
 
@@ -17,7 +17,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    NutritionOrderOralDietTypeId = group.Add(new VocabularyKey(nameof(NutritionOrderOralDietTypeId), "Nutrition Order Oral Diet Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

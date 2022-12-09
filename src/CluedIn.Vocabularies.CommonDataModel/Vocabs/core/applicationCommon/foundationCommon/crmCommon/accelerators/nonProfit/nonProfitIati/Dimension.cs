@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class DimensionVocabulary : SimpleVocabulary
     {
         public DimensionVocabulary()
         {
             VocabularyName = "Dimension";
-            KeyPrefix = "commonDataModel.dimension.nonprofitiati";
+            KeyPrefix = "commonDataModel.dimension";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Dimension;
 
@@ -18,7 +18,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Value = group.Add(new VocabularyKey(nameof(Value), "Value", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -44,8 +44,8 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
 
         public VocabularyKey DimensionId { get; private set; }
         public VocabularyKey Name { get; private set; }
-        public VocabularyKey Value { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey Value { get; private set; }
     }
 }

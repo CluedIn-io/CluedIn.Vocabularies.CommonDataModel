@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Interactions
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ContactRegisteredToEventVocabulary : SimpleVocabulary
     {
         public ContactRegisteredToEventVocabulary()
         {
             VocabularyName = "Contact Registered To Event";
-            KeyPrefix = "commonDataModel.contactregisteredtoevent.interactions";
+            KeyPrefix = "commonDataModel.contactregisteredtoevent";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ContactRegisteredToEvent;
 
@@ -22,7 +22,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Interactions
 			    AccountId = group.Add(new VocabularyKey(nameof(AccountId), "Account ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    InteractionType = group.Add(new VocabularyKey(nameof(InteractionType), "Interaction type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Timestamp = group.Add(new VocabularyKey(nameof(Timestamp), "Timestamp", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CustomerJourneyId = group.Add(new VocabularyKey(nameof(CustomerJourneyId), "Customer Journey ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    CustomerJourneyId = group.Add(new VocabularyKey(nameof(CustomerJourneyId), "Customer Journey ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -34,14 +34,14 @@ namespace CluedIn.Vocabularies.CommonDataModel.Interactions
             #endregion
         }
 
-        public VocabularyKey InteractionId { get; private set; }
-        public VocabularyKey OrganizationId { get; private set; }
+        public VocabularyKey AccountId { get; private set; }
+        public VocabularyKey ContactId { get; private set; }
+        public VocabularyKey CustomerJourneyId { get; private set; }
         public VocabularyKey EventId { get; private set; }
         public VocabularyKey EventRegistrationId { get; private set; }
-        public VocabularyKey ContactId { get; private set; }
-        public VocabularyKey AccountId { get; private set; }
+        public VocabularyKey InteractionId { get; private set; }
         public VocabularyKey InteractionType { get; private set; }
+        public VocabularyKey OrganizationId { get; private set; }
         public VocabularyKey Timestamp { get; private set; }
-        public VocabularyKey CustomerJourneyId { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ScholarshipVocabulary : SimpleVocabulary
     {
         public ScholarshipVocabulary()
         {
             VocabularyName = "Scholarship";
-            KeyPrefix = "commonDataModel.scholarship.highereducation";
+            KeyPrefix = "commonDataModel.scholarship";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Scholarship;
 
@@ -26,7 +26,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
 			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    WebsiteURL = group.Add(new VocabularyKey(nameof(WebsiteURL), "Website URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -67,18 +67,18 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
             #endregion
         }
 
-        public VocabularyKey ScholarshipId { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey Amount { get; private set; }
         public VocabularyKey Amount_Base { get; private set; }
         public VocabularyKey ApplicationDeadlineDate { get; private set; }
         public VocabularyKey Description { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey PostedDate { get; private set; }
         public VocabularyKey Qualifications { get; private set; }
-        public VocabularyKey Type { get; private set; }
-        public VocabularyKey WebsiteURL { get; private set; }
+        public VocabularyKey ScholarshipId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey Type { get; private set; }
+        public VocabularyKey WebsiteURL { get; private set; }
     }
 }

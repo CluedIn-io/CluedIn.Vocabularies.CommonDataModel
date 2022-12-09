@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class CampaignActivityVocabulary : SimpleVocabulary
     {
         public CampaignActivityVocabulary()
         {
             VocabularyName = "Campaign Activity";
-            KeyPrefix = "commonDataModel.campaignactivity.crmcommon";
+            KeyPrefix = "commonDataModel.campaignactivity";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.CampaignActivity;
 
@@ -32,7 +32,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
 			    ExcludeIfContactedInXDays = group.Add(new VocabularyKey(nameof(ExcludeIfContactedInXDays), "No. of Days", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    IgnoreInactiveListMembers = group.Add(new VocabularyKey(nameof(IgnoreInactiveListMembers), "Ignore Inactive Marketing List Members", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    TypeCode = group.Add(new VocabularyKey(nameof(TypeCode), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ServiceId = group.Add(new VocabularyKey(nameof(ServiceId), "Service", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    ServiceId = group.Add(new VocabularyKey(nameof(ServiceId), "Service", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -71,24 +71,24 @@ namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
             #endregion
         }
 
-        public VocabularyKey Description { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
-        public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey StageId { get; private set; }
-        public VocabularyKey OnHoldTime { get; private set; }
-        public VocabularyKey LastOnHoldTime { get; private set; }
         public VocabularyKey ActualCost { get; private set; }
         public VocabularyKey ActualCostBase { get; private set; }
         public VocabularyKey BudgetedCost { get; private set; }
         public VocabularyKey BudgetedCostBase { get; private set; }
         public VocabularyKey ChannelTypeCode { get; private set; }
+        public VocabularyKey Description { get; private set; }
         public VocabularyKey DoNotSendOnOptOut { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey ExcludeIfContactedInXDays { get; private set; }
         public VocabularyKey IgnoreInactiveListMembers { get; private set; }
-        public VocabularyKey TypeCode { get; private set; }
+        public VocabularyKey LastOnHoldTime { get; private set; }
+        public VocabularyKey OnHoldTime { get; private set; }
+        public VocabularyKey ProcessId { get; private set; }
         public VocabularyKey ServiceId { get; private set; }
+        public VocabularyKey StageId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
+        public VocabularyKey TypeCode { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Portals
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class IdeaForumVocabulary : SimpleVocabulary
     {
         public IdeaForumVocabulary()
         {
             VocabularyName = "Idea Forum";
-            KeyPrefix = "commonDataModel.ideaforum.portals";
+            KeyPrefix = "commonDataModel.ideaforum";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.IdeaForum;
 
@@ -25,7 +25,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
 			    VotesPerIdea = group.Add(new VocabularyKey(nameof(VotesPerIdea), "Votes Per Idea", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    VotesPerUser = group.Add(new VocabularyKey(nameof(VotesPerUser), "Votes Per User", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    VotingPolicy = group.Add(new VocabularyKey(nameof(VotingPolicy), "Voting Policy", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    VotingType = group.Add(new VocabularyKey(nameof(VotingType), "Voting Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    VotingType = group.Add(new VocabularyKey(nameof(VotingType), "Voting Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -47,13 +47,13 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
             #endregion
         }
 
+        public VocabularyKey CommentPolicy { get; private set; }
         public VocabularyKey IdeaForumId { get; private set; }
+        public VocabularyKey IdeaSubmissionPolicy { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey PartialURL { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey CommentPolicy { get; private set; }
-        public VocabularyKey IdeaSubmissionPolicy { get; private set; }
-        public VocabularyKey PartialURL { get; private set; }
         public VocabularyKey Summary { get; private set; }
         public VocabularyKey VotesPerIdea { get; private set; }
         public VocabularyKey VotesPerUser { get; private set; }

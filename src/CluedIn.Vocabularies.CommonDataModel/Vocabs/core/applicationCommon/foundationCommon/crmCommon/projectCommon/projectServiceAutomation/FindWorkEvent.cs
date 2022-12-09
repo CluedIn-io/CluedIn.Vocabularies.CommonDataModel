@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class FindWorkEventVocabulary : SimpleVocabulary
     {
         public FindWorkEventVocabulary()
         {
             VocabularyName = "Find Work Event";
-            KeyPrefix = "commonDataModel.findworkevent.projectserviceautomation";
+            KeyPrefix = "commonDataModel.findworkevent";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.FindWorkEvent;
 
@@ -20,7 +20,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Timestamp = group.Add(new VocabularyKey(nameof(Timestamp), "Timestamp", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Value = group.Add(new VocabularyKey(nameof(Value), "Value", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Value = group.Add(new VocabularyKey(nameof(Value), "Value", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -43,9 +43,9 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
         }
 
         public VocabularyKey FindWorkEventId { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey Timestamp { get; private set; }
         public VocabularyKey Type { get; private set; }
         public VocabularyKey Value { get; private set; }

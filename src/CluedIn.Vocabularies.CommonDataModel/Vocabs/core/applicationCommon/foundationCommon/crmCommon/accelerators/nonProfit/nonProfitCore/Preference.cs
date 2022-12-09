@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class PreferenceVocabulary : SimpleVocabulary
     {
         public PreferenceVocabulary()
         {
             VocabularyName = "Preference";
-            KeyPrefix = "commonDataModel.preference.nonprofitcore";
+            KeyPrefix = "commonDataModel.preference";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Preference;
 
@@ -24,7 +24,11 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
 			    Value = group.Add(new VocabularyKey(nameof(Value), "Value", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Weight = group.Add(new VocabularyKey(nameof(Weight), "Weight", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Preference Details for NonProfitForSales", group =>
+            {
+
             });
             
             #region Incoming Relationships
@@ -60,9 +64,9 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
         public VocabularyKey PreferenceId { get; private set; }
         public VocabularyKey Priority { get; private set; }
         public VocabularyKey StartDate { get; private set; }
-        public VocabularyKey Value { get; private set; }
-        public VocabularyKey Weight { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey Value { get; private set; }
+        public VocabularyKey Weight { get; private set; }
     }
 }

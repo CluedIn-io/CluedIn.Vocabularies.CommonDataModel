@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class DesignatedCreditVocabulary : SimpleVocabulary
     {
         public DesignatedCreditVocabulary()
         {
             VocabularyName = "Designated Credit";
-            KeyPrefix = "commonDataModel.designatedcredit.nonprofitcore";
+            KeyPrefix = "commonDataModel.designatedcredit";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.DesignatedCredit;
 
@@ -33,7 +33,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
 			    PostedDate = group.Add(new VocabularyKey(nameof(PostedDate), "Posted Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ReceivedDate = group.Add(new VocabularyKey(nameof(ReceivedDate), "Received Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -59,7 +59,6 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
             #endregion
         }
 
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey AdjustmentComment { get; private set; }
         public VocabularyKey AdjustmentReason { get; private set; }
         public VocabularyKey AdjustmentType { get; private set; }
@@ -72,6 +71,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
         public VocabularyKey DataEntryReference { get; private set; }
         public VocabularyKey DataEntrySource { get; private set; }
         public VocabularyKey DesignatedCreditId { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey ExchangeRateDate { get; private set; }
         public VocabularyKey IsAdjusted { get; private set; }
         public VocabularyKey Name { get; private set; }

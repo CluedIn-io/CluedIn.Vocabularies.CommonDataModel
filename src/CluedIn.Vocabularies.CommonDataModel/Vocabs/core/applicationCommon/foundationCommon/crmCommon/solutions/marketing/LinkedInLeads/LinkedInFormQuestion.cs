@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.LinkedInLeads
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class LinkedInFormQuestionVocabulary : SimpleVocabulary
     {
         public LinkedInFormQuestionVocabulary()
         {
             VocabularyName = "Linked In Form Question";
-            KeyPrefix = "commonDataModel.linkedinformquestion.linkedinleads";
+            KeyPrefix = "commonDataModel.linkedinformquestion";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.LinkedInFormQuestion;
 
@@ -23,7 +23,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.LinkedInLeads
 			    LinkedInID = group.Add(new VocabularyKey(nameof(LinkedInID), "LinkedIn ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    LinkedInPredefinedField = group.Add(new VocabularyKey(nameof(LinkedInPredefinedField), "LinkedIn Predefined Field", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ResponseEditable = group.Add(new VocabularyKey(nameof(ResponseEditable), "Response editable", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    ResponseType = group.Add(new VocabularyKey(nameof(ResponseType), "Response type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    ResponseType = group.Add(new VocabularyKey(nameof(ResponseType), "Response type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -44,15 +44,15 @@ namespace CluedIn.Vocabularies.CommonDataModel.LinkedInLeads
             #endregion
         }
 
-        public VocabularyKey LinkedInFormQuestionId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey DisplayName { get; private set; }
         public VocabularyKey IsCustomQuestion { get; private set; }
+        public VocabularyKey LinkedInFormQuestionId { get; private set; }
         public VocabularyKey LinkedInID { get; private set; }
         public VocabularyKey LinkedInPredefinedField { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey ResponseEditable { get; private set; }
         public VocabularyKey ResponseType { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

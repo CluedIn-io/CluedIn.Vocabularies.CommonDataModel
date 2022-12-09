@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class TransactionCategoryPriceLevelVocabulary : SimpleVocabulary
     {
         public TransactionCategoryPriceLevelVocabulary()
         {
             VocabularyName = "Transaction Category Price Level";
-            KeyPrefix = "commonDataModel.transactioncategorypricelevel.projectserviceautomation";
+            KeyPrefix = "commonDataModel.transactioncategorypricelevel";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.TransactionCategoryPriceLevel;
 
@@ -29,7 +29,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    Price = group.Add(new VocabularyKey(nameof(Price), "Price", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
 			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
 			    PriceBase = group.Add(new VocabularyKey(nameof(PriceBase), "Price (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PriceCalculation = group.Add(new VocabularyKey(nameof(PriceCalculation), "Price Calculation", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    PriceCalculation = group.Add(new VocabularyKey(nameof(PriceCalculation), "Price Calculation", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -50,21 +50,21 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
-        public VocabularyKey TransactionCategoryPriceLevelId { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
         public VocabularyKey Description { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey Percent { get; private set; }
         public VocabularyKey Price { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey PriceBase { get; private set; }
         public VocabularyKey PriceCalculation { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey TransactionCategoryPriceLevelId { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class RelationshipInsightsUnifiedConfigVocabulary : SimpleVocabulary
     {
         public RelationshipInsightsUnifiedConfigVocabulary()
         {
             VocabularyName = "Relationship Insights Unified Config";
-            KeyPrefix = "commonDataModel.relationshipinsightsunifiedconfig.projectcommon";
+            KeyPrefix = "commonDataModel.relationshipinsightsunifiedconfig";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.RelationshipInsightsUnifiedConfig;
 
@@ -18,7 +18,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectCommon
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    NewName = group.Add(new VocabularyKey(nameof(NewName), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    UseNewConfigExperience = group.Add(new VocabularyKey(nameof(UseNewConfigExperience), "msdyn_usenewconfigexperience", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));             
+			    UseNewConfigExperience = group.Add(new VocabularyKey(nameof(UseNewConfigExperience), "msdyn_usenewconfigexperience", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -38,10 +38,10 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectCommon
             #endregion
         }
 
+        public VocabularyKey NewName { get; private set; }
         public VocabularyKey RelationshipInsightsUnifiedConfigId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey NewName { get; private set; }
         public VocabularyKey UseNewConfigExperience { get; private set; }
     }
 }

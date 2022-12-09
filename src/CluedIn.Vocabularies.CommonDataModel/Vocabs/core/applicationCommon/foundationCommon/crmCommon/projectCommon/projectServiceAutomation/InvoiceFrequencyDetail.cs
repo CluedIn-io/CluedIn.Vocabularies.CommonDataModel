@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class InvoiceFrequencyDetailVocabulary : SimpleVocabulary
     {
         public InvoiceFrequencyDetailVocabulary()
         {
             VocabularyName = "Invoice Frequency Detail";
-            KeyPrefix = "commonDataModel.invoicefrequencydetail.projectserviceautomation";
+            KeyPrefix = "commonDataModel.invoicefrequencydetail";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.InvoiceFrequencyDetail;
 
@@ -27,7 +27,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    DayOfMonth = group.Add(new VocabularyKey(nameof(DayOfMonth), "Day of month", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    OccurrenceOfWeekday = group.Add(new VocabularyKey(nameof(OccurrenceOfWeekday), "Occurrence of weekday", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Weekday = group.Add(new VocabularyKey(nameof(Weekday), "Weekday", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Weekday = group.Add(new VocabularyKey(nameof(Weekday), "Weekday", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -44,19 +44,19 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
-        public VocabularyKey InvoiceFrequencyDetailId { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey DayOfMonth { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey InvoiceFrequencyDetailId { get; private set; }
         public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OccurrenceOfWeekday { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey DayOfMonth { get; private set; }
-        public VocabularyKey OccurrenceOfWeekday { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
         public VocabularyKey Weekday { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class AcademicPeriodDetailVocabulary : SimpleVocabulary
     {
         public AcademicPeriodDetailVocabulary()
         {
             VocabularyName = "Academic Period Detail";
-            KeyPrefix = "commonDataModel.academicperioddetail.highereducation";
+            KeyPrefix = "commonDataModel.academicperioddetail";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.AcademicPeriodDetail;
 
@@ -30,7 +30,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
 			    MajorGPA = group.Add(new VocabularyKey(nameof(MajorGPA), "Major GPA", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
 			    MidTermDeficiency = group.Add(new VocabularyKey(nameof(MidTermDeficiency), "Mid-Term Deficiency", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    TermCreditsEarned = group.Add(new VocabularyKey(nameof(TermCreditsEarned), "Term Credits Earned", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    TermGPA = group.Add(new VocabularyKey(nameof(TermGPA), "Term GPA", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));             
+			    TermGPA = group.Add(new VocabularyKey(nameof(TermGPA), "Term GPA", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -55,9 +55,6 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
         }
 
         public VocabularyKey AcademicPeriodDetailsId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey AttendanceType { get; private set; }
         public VocabularyKey CreditLoad { get; private set; }
         public VocabularyKey EmployedHoursPerWeek { get; private set; }
@@ -69,6 +66,9 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
         public VocabularyKey MajorCreditEarned { get; private set; }
         public VocabularyKey MajorGPA { get; private set; }
         public VocabularyKey MidTermDeficiency { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey TermCreditsEarned { get; private set; }
         public VocabularyKey TermGPA { get; private set; }
     }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class CreditPlanRecipientVocabulary : SimpleVocabulary
     {
         public CreditPlanRecipientVocabulary()
         {
             VocabularyName = "Credit Plan Recipient";
-            KeyPrefix = "commonDataModel.creditplanrecipient.nonprofitcore";
+            KeyPrefix = "commonDataModel.creditplanrecipient";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.CreditPlanRecipient;
 
@@ -19,7 +19,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
 			    PercentageOfPayment = group.Add(new VocabularyKey(nameof(PercentageOfPayment), "Percentage of Payment", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
 			    SoftCreditReason = group.Add(new VocabularyKey(nameof(SoftCreditReason), "Soft Credit Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

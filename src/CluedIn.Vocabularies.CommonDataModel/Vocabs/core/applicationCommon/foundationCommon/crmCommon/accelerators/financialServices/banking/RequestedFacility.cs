@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Banking
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class RequestedFacilityVocabulary : SimpleVocabulary
     {
         public RequestedFacilityVocabulary()
         {
             VocabularyName = "Requested Facility";
-            KeyPrefix = "commonDataModel.requestedfacility.banking";
+            KeyPrefix = "commonDataModel.requestedfacility";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.RequestedFacility;
 
@@ -27,7 +27,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Banking
 			    DeprecatedStageId = group.Add(new VocabularyKey(nameof(DeprecatedStageId), "(Deprecated) Stage Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DeprecatedTraversedPath = group.Add(new VocabularyKey(nameof(DeprecatedTraversedPath), "(Deprecated) Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    DeprecatedTraversedPath = group.Add(new VocabularyKey(nameof(DeprecatedTraversedPath), "(Deprecated) Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -54,19 +54,19 @@ namespace CluedIn.Vocabularies.CommonDataModel.Banking
             #endregion
         }
 
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey Amount { get; private set; }
         public VocabularyKey AmountBase { get; private set; }
+        public VocabularyKey DeprecatedStageId { get; private set; }
+        public VocabularyKey DeprecatedTraversedPath { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey FundingEvent { get; private set; }
         public VocabularyKey InterestRate { get; private set; }
         public VocabularyKey Name { get; private set; }
+        public VocabularyKey ProcessId { get; private set; }
         public VocabularyKey ProcessingCharges { get; private set; }
         public VocabularyKey Purpose { get; private set; }
         public VocabularyKey RequestedFacilityId { get; private set; }
-        public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey DeprecatedStageId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey DeprecatedTraversedPath { get; private set; }
     }
 }

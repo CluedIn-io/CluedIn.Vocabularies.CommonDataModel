@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class RecurringAppointmentVocabulary : SimpleVocabulary
     {
         public RecurringAppointmentVocabulary()
         {
             VocabularyName = "Recurring Appointment";
-            KeyPrefix = "commonDataModel.recurringappointment.applicationcommon";
+            KeyPrefix = "commonDataModel.recurringappointment";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.RecurringAppointment;
 
@@ -52,7 +52,12 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    ProcessId = group.Add(new VocabularyKey(nameof(ProcessId), "Process", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
 			    StageId = group.Add(new VocabularyKey(nameof(StageId), "Process Stage", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
 			    TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IsUnsafe = group.Add(new VocabularyKey(nameof(IsUnsafe), "IsUnsafe", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    IsUnsafe = group.Add(new VocabularyKey(nameof(IsUnsafe), "IsUnsafe", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("RecurringAppointment Details for CrmCommon", group =>
+            {
+			    OptionalAttendees = group.Add(new VocabularyKey(nameof(OptionalAttendees), "Optional Attendees", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    RequiredAttendees = group.Add(new VocabularyKey(nameof(RequiredAttendees), "Required Attendees", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -90,44 +95,46 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             #endregion
         }
 
-        public VocabularyKey IsWeekDayPattern { get; private set; }
-        public VocabularyKey RuleId { get; private set; }
-        public VocabularyKey IsNthYearly { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey GroupId { get; private set; }
-        public VocabularyKey LastExpandedInstanceDate { get; private set; }
-        public VocabularyKey EffectiveEndDate { get; private set; }
-        public VocabularyKey PatternStartDate { get; private set; }
-        public VocabularyKey IsRegenerate { get; private set; }
-        public VocabularyKey FirstDayOfWeek { get; private set; }
-        public VocabularyKey OutlookOwnerApptId { get; private set; }
-        public VocabularyKey RecurrencePatternType { get; private set; }
-        public VocabularyKey NextExpansionInstanceDate { get; private set; }
-        public VocabularyKey ExpansionStateCode { get; private set; }
-        public VocabularyKey PatternEndDate { get; private set; }
-        public VocabularyKey GlobalObjectId { get; private set; }
-        public VocabularyKey EffectiveStartDate { get; private set; }
         public VocabularyKey DayOfMonth { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey StartTime { get; private set; }
-        public VocabularyKey Occurrences { get; private set; }
-        public VocabularyKey IsAllDayEvent { get; private set; }
-        public VocabularyKey SeriesStatus { get; private set; }
-        public VocabularyKey IsNthMonthly { get; private set; }
-        public VocabularyKey EndTime { get; private set; }
         public VocabularyKey DaysOfWeekMask { get; private set; }
-        public VocabularyKey Description { get; private set; }
-        public VocabularyKey Instance { get; private set; }
         public VocabularyKey DeletedExceptionsList { get; private set; }
-        public VocabularyKey Interval { get; private set; }
+        public VocabularyKey Description { get; private set; }
         public VocabularyKey Duration { get; private set; }
-        public VocabularyKey MonthOfYear { get; private set; }
-        public VocabularyKey Location { get; private set; }
-        public VocabularyKey PatternEndType { get; private set; }
+        public VocabularyKey EffectiveEndDate { get; private set; }
+        public VocabularyKey EffectiveStartDate { get; private set; }
+        public VocabularyKey EndTime { get; private set; }
         public VocabularyKey ExchangeRate { get; private set; }
-        public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey StageId { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
+        public VocabularyKey ExpansionStateCode { get; private set; }
+        public VocabularyKey FirstDayOfWeek { get; private set; }
+        public VocabularyKey GlobalObjectId { get; private set; }
+        public VocabularyKey GroupId { get; private set; }
+        public VocabularyKey Instance { get; private set; }
+        public VocabularyKey Interval { get; private set; }
+        public VocabularyKey IsAllDayEvent { get; private set; }
+        public VocabularyKey IsNthMonthly { get; private set; }
+        public VocabularyKey IsNthYearly { get; private set; }
+        public VocabularyKey IsRegenerate { get; private set; }
         public VocabularyKey IsUnsafe { get; private set; }
+        public VocabularyKey IsWeekDayPattern { get; private set; }
+        public VocabularyKey LastExpandedInstanceDate { get; private set; }
+        public VocabularyKey Location { get; private set; }
+        public VocabularyKey MonthOfYear { get; private set; }
+        public VocabularyKey NextExpansionInstanceDate { get; private set; }
+        public VocabularyKey Occurrences { get; private set; }
+        public VocabularyKey OptionalAttendees { get; private set; }
+        public VocabularyKey OutlookOwnerApptId { get; private set; }
+        public VocabularyKey PatternEndDate { get; private set; }
+        public VocabularyKey PatternEndType { get; private set; }
+        public VocabularyKey PatternStartDate { get; private set; }
+        public VocabularyKey ProcessId { get; private set; }
+        public VocabularyKey RecurrencePatternType { get; private set; }
+        public VocabularyKey RequiredAttendees { get; private set; }
+        public VocabularyKey RuleId { get; private set; }
+        public VocabularyKey SeriesStatus { get; private set; }
+        public VocabularyKey StageId { get; private set; }
+        public VocabularyKey StartTime { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
     }
 }

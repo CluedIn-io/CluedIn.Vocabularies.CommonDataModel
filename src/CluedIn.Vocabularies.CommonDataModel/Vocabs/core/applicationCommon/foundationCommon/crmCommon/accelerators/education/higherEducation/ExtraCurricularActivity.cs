@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ExtraCurricularActivityVocabulary : SimpleVocabulary
     {
         public ExtraCurricularActivityVocabulary()
         {
             VocabularyName = "Extra Curricular Activity";
-            KeyPrefix = "commonDataModel.extracurricularactivity.highereducation";
+            KeyPrefix = "commonDataModel.extracurricularactivity";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ExtraCurricularActivity;
 
@@ -26,7 +26,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
 			    GeneralEmail = group.Add(new VocabularyKey(nameof(GeneralEmail), "General Email", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
 			    OrganizationMissionStatement = group.Add(new VocabularyKey(nameof(OrganizationMissionStatement), "Organization Mission Statement", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    PrimaryPurpose = group.Add(new VocabularyKey(nameof(PrimaryPurpose), "Primary Purpose", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Website = group.Add(new VocabularyKey(nameof(Website), "Website", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible));             
+			    Website = group.Add(new VocabularyKey(nameof(Website), "Website", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -48,18 +48,18 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
             #endregion
         }
 
-        public VocabularyKey ExtracurricularActivitiesId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey Code { get; private set; }
         public VocabularyKey DateofOrganizationFormed { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey ExternalIdentifier { get; private set; }
         public VocabularyKey ExternalSourceSystem { get; private set; }
+        public VocabularyKey ExtracurricularActivitiesId { get; private set; }
         public VocabularyKey GeneralEmail { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey OrganizationMissionStatement { get; private set; }
         public VocabularyKey PrimaryPurpose { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey Website { get; private set; }
     }
 }

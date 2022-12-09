@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class InvoiceFrequencyVocabulary : SimpleVocabulary
     {
         public InvoiceFrequencyVocabulary()
         {
             VocabularyName = "Invoice Frequency";
-            KeyPrefix = "commonDataModel.invoicefrequency.projectserviceautomation";
+            KeyPrefix = "commonDataModel.invoicefrequency";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.InvoiceFrequency;
 
@@ -27,7 +27,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    DaysOfRun = group.Add(new VocabularyKey(nameof(DaysOfRun), "Setup of runs", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Period = group.Add(new VocabularyKey(nameof(Period), "Period", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RunsPerMonth = group.Add(new VocabularyKey(nameof(RunsPerMonth), "Runs per period", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    RunsPerMonth = group.Add(new VocabularyKey(nameof(RunsPerMonth), "Runs per period", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -52,19 +52,19 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
-        public VocabularyKey InvoiceFrequencyId { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey DaysOfRun { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey InvoiceFrequencyId { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey Period { get; private set; }
         public VocabularyKey RunsPerMonth { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

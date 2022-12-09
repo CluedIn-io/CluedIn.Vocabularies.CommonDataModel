@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class CampaignVocabulary : SimpleVocabulary
     {
         public CampaignVocabulary()
         {
             VocabularyName = "Campaign";
-            KeyPrefix = "commonDataModel.campaign.crmcommon";
+            KeyPrefix = "commonDataModel.campaign";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Campaign;
 
@@ -45,7 +45,26 @@ namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
 			    TotalCampaignActivityActualCost = group.Add(new VocabularyKey(nameof(TotalCampaignActivityActualCost), "Total Cost of Campaign Activities", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
 			    TotalCampaignActivityActualCostBase = group.Add(new VocabularyKey(nameof(TotalCampaignActivityActualCostBase), "Total Cost of Campaign Activities (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TypeCode = group.Add(new VocabularyKey(nameof(TypeCode), "Campaign Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EntityImageId = group.Add(new VocabularyKey(nameof(EntityImageId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));             
+			    EntityImageId = group.Add(new VocabularyKey(nameof(EntityImageId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Campaign Details for NonProfitForSales", group =>
+            {
+			    EntityImage = group.Add(new VocabularyKey(nameof(EntityImage), "Entity Image", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    AppealSegment = group.Add(new VocabularyKey(nameof(AppealSegment), "Appeal Segment", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    AquisitionSource = group.Add(new VocabularyKey(nameof(AquisitionSource), "Acquisition Source", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    CampaignCategory = group.Add(new VocabularyKey(nameof(CampaignCategory), "Campaign Category", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    CampaignType = group.Add(new VocabularyKey(nameof(CampaignType), "Campaign Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Channel = group.Add(new VocabularyKey(nameof(Channel), "Channel", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Effort = group.Add(new VocabularyKey(nameof(Effort), "Effort", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    FirstResponseDate = group.Add(new VocabularyKey(nameof(FirstResponseDate), "First Response Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    LastResponseDate = group.Add(new VocabularyKey(nameof(LastResponseDate), "Last Response Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    SourceCode = group.Add(new VocabularyKey(nameof(SourceCode), "Source Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    StartDate = group.Add(new VocabularyKey(nameof(StartDate), "Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    SubChannel = group.Add(new VocabularyKey(nameof(SubChannel), "SubChannel", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Campaign Details for NonProfitIati", group =>
+            {
+
             });
             
             #region Incoming Relationships
@@ -183,37 +202,49 @@ namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
             #endregion
         }
 
-        public VocabularyKey CampaignId { get; private set; }
-        public VocabularyKey EmailAddress { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey StageId { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
         public VocabularyKey ActualEnd { get; private set; }
         public VocabularyKey ActualStart { get; private set; }
+        public VocabularyKey AppealSegment { get; private set; }
+        public VocabularyKey AquisitionSource { get; private set; }
         public VocabularyKey BudgetedCost { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey BudgetedCostBase { get; private set; }
+        public VocabularyKey CampaignCategory { get; private set; }
+        public VocabularyKey CampaignId { get; private set; }
+        public VocabularyKey CampaignType { get; private set; }
+        public VocabularyKey Channel { get; private set; }
         public VocabularyKey CodeName { get; private set; }
         public VocabularyKey Description { get; private set; }
+        public VocabularyKey Effort { get; private set; }
+        public VocabularyKey EmailAddress { get; private set; }
+        public VocabularyKey EntityImage { get; private set; }
+        public VocabularyKey EntityImageId { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey ExpectedResponse { get; private set; }
         public VocabularyKey ExpectedRevenue { get; private set; }
         public VocabularyKey ExpectedRevenueBase { get; private set; }
+        public VocabularyKey FirstResponseDate { get; private set; }
         public VocabularyKey IsTemplate { get; private set; }
+        public VocabularyKey LastResponseDate { get; private set; }
         public VocabularyKey Message { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey Objective { get; private set; }
         public VocabularyKey OtherCost { get; private set; }
         public VocabularyKey OtherCostBase { get; private set; }
+        public VocabularyKey ProcessId { get; private set; }
         public VocabularyKey PromotionCodeName { get; private set; }
         public VocabularyKey ProposedEnd { get; private set; }
         public VocabularyKey ProposedStart { get; private set; }
+        public VocabularyKey SourceCode { get; private set; }
+        public VocabularyKey StageId { get; private set; }
+        public VocabularyKey StartDate { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey SubChannel { get; private set; }
         public VocabularyKey TotalActualCost { get; private set; }
         public VocabularyKey TotalActualCostBase { get; private set; }
         public VocabularyKey TotalCampaignActivityActualCost { get; private set; }
         public VocabularyKey TotalCampaignActivityActualCostBase { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
         public VocabularyKey TypeCode { get; private set; }
-        public VocabularyKey EntityImageId { get; private set; }
     }
 }

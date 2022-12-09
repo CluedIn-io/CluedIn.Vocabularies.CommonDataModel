@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Service
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ServiceVocabulary : SimpleVocabulary
     {
         public ServiceVocabulary()
         {
             VocabularyName = "Service";
-            KeyPrefix = "commonDataModel.service.service";
+            KeyPrefix = "commonDataModel.service";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Service;
 
@@ -32,7 +32,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
 			    IsSchedulable = group.Add(new VocabularyKey(nameof(IsSchedulable), "Status", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    IsVisible = group.Add(new VocabularyKey(nameof(IsVisible), "Is Visible", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    ShowResources = group.Add(new VocabularyKey(nameof(ShowResources), "Show Resources", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    StrategyId = group.Add(new VocabularyKey(nameof(StrategyId), "Strategy", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StrategyId = group.Add(new VocabularyKey(nameof(StrategyId), "Strategy", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -635,24 +635,24 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
             #endregion
         }
 
-        public VocabularyKey ServiceId { get; private set; }
-        public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey AnchorOffset { get; private set; }
         public VocabularyKey CalendarId { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey Duration { get; private set; }
         public VocabularyKey Granularity { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
         public VocabularyKey InitialStatusCode { get; private set; }
         public VocabularyKey IsSchedulable { get; private set; }
         public VocabularyKey IsVisible { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey ServiceId { get; private set; }
         public VocabularyKey ShowResources { get; private set; }
         public VocabularyKey StrategyId { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

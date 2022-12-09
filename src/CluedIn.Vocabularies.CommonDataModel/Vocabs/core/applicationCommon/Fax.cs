@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class FaxVocabulary : SimpleVocabulary
     {
         public FaxVocabulary()
         {
             VocabularyName = "Fax";
-            KeyPrefix = "commonDataModel.fax.applicationcommon";
+            KeyPrefix = "commonDataModel.fax";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Fax;
 
@@ -28,7 +28,12 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    StageId = group.Add(new VocabularyKey(nameof(StageId), "Process Stage", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
 			    TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    OnHoldTime = group.Add(new VocabularyKey(nameof(OnHoldTime), "On Hold Time (Minutes)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    LastOnHoldTime = group.Add(new VocabularyKey(nameof(LastOnHoldTime), "Last On Hold Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    LastOnHoldTime = group.Add(new VocabularyKey(nameof(LastOnHoldTime), "Last On Hold Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Fax Details for CrmCommon", group =>
+            {
+			    To = group.Add(new VocabularyKey(nameof(To), "To", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    From = group.Add(new VocabularyKey(nameof(From), "From", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -70,20 +75,22 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             #endregion
         }
 
-        public VocabularyKey CoverPageName { get; private set; }
         public VocabularyKey BillingCode { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey NumberOfPages { get; private set; }
+        public VocabularyKey CoverPageName { get; private set; }
         public VocabularyKey Description { get; private set; }
-        public VocabularyKey FaxNumber { get; private set; }
-        public VocabularyKey Tsid { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey IsBilled { get; private set; }
         public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey FaxNumber { get; private set; }
+        public VocabularyKey From { get; private set; }
+        public VocabularyKey IsBilled { get; private set; }
+        public VocabularyKey LastOnHoldTime { get; private set; }
+        public VocabularyKey NumberOfPages { get; private set; }
+        public VocabularyKey OnHoldTime { get; private set; }
         public VocabularyKey ProcessId { get; private set; }
         public VocabularyKey StageId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey To { get; private set; }
         public VocabularyKey TraversedPath { get; private set; }
-        public VocabularyKey OnHoldTime { get; private set; }
-        public VocabularyKey LastOnHoldTime { get; private set; }
+        public VocabularyKey Tsid { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class QuoteLineInvoiceScheduleVocabulary : SimpleVocabulary
     {
         public QuoteLineInvoiceScheduleVocabulary()
         {
             VocabularyName = "Quote Line Invoice Schedule";
-            KeyPrefix = "commonDataModel.quotelineinvoiceschedule.projectserviceautomation";
+            KeyPrefix = "commonDataModel.quotelineinvoiceschedule";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.QuoteLineInvoiceSchedule;
 
@@ -27,7 +27,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    InvoiceRunDate = group.Add(new VocabularyKey(nameof(InvoiceRunDate), "Invoice Run Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    QuoteLine = group.Add(new VocabularyKey(nameof(QuoteLine), "(Deprecated) Quote Line", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TransactionCutOffDate = group.Add(new VocabularyKey(nameof(TransactionCutOffDate), "Transaction Cut Off Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    TransactionCutOffDate = group.Add(new VocabularyKey(nameof(TransactionCutOffDate), "Transaction Cut Off Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -44,19 +44,19 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
-        public VocabularyKey QuoteLineInvoiceScheduleId { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey InvoiceRunDate { get; private set; }
         public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey QuoteLine { get; private set; }
+        public VocabularyKey QuoteLineInvoiceScheduleId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey InvoiceRunDate { get; private set; }
-        public VocabularyKey QuoteLine { get; private set; }
         public VocabularyKey TransactionCutOffDate { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

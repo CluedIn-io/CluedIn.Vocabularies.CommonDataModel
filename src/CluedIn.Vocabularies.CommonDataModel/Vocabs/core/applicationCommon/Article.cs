@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ArticleVocabulary : SimpleVocabulary
     {
         public ArticleVocabulary()
         {
             VocabularyName = "Article";
-            KeyPrefix = "commonDataModel.article.applicationcommon";
+            KeyPrefix = "commonDataModel.article";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Article;
 
@@ -32,7 +32,17 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    LanguageCode = group.Add(new VocabularyKey(nameof(LanguageCode), "Language", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    EntityImageId = group.Add(new VocabularyKey(nameof(EntityImageId), "Entity Image Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));             
+			    EntityImageId = group.Add(new VocabularyKey(nameof(EntityImageId), "Entity Image Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Article Details for Portals", group =>
+            {
+			    PublishToWeb = group.Add(new VocabularyKey(nameof(PublishToWeb), "Publish to Web", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
+			    AverageRating = group.Add(new VocabularyKey(nameof(AverageRating), "Average Rating", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
+			    AverageRatingWholeNumber = group.Add(new VocabularyKey(nameof(AverageRatingWholeNumber), "Average Rating (Whole Number)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+			    Downvotes = group.Add(new VocabularyKey(nameof(Downvotes), "Downvotes", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+			    RatingCount = group.Add(new VocabularyKey(nameof(RatingCount), "Rating Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+			    RatingSum = group.Add(new VocabularyKey(nameof(RatingSum), "Rating Sum", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+			    Upvotes = group.Add(new VocabularyKey(nameof(Upvotes), "Upvotes", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -136,24 +146,31 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             #endregion
         }
 
-        public VocabularyKey KbArticleId { get; private set; }
-        public VocabularyKey SubjectId { get; private set; }
         public VocabularyKey ArticleXml { get; private set; }
-        public VocabularyKey Title { get; private set; }
-        public VocabularyKey Number { get; private set; }
-        public VocabularyKey Content { get; private set; }
-        public VocabularyKey Description { get; private set; }
+        public VocabularyKey AverageRating { get; private set; }
+        public VocabularyKey AverageRatingWholeNumber { get; private set; }
         public VocabularyKey Comments { get; private set; }
+        public VocabularyKey Content { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey Downvotes { get; private set; }
+        public VocabularyKey EntityImageId { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey KbArticleId { get; private set; }
+        public VocabularyKey KeyWords { get; private set; }
+        public VocabularyKey LanguageCode { get; private set; }
         public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Number { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey PublishToWeb { get; private set; }
+        public VocabularyKey RatingCount { get; private set; }
+        public VocabularyKey RatingSum { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey SubjectId { get; private set; }
+        public VocabularyKey Title { get; private set; }
+        public VocabularyKey Upvotes { get; private set; }
         public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey KeyWords { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey LanguageCode { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
-        public VocabularyKey EntityImageId { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class AppointmentVocabulary : SimpleVocabulary
     {
         public AppointmentVocabulary()
         {
             VocabularyName = "Appointment";
-            KeyPrefix = "commonDataModel.appointment.applicationcommon";
+            KeyPrefix = "commonDataModel.appointment";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Appointment;
 
@@ -32,7 +32,16 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    OnHoldTime = group.Add(new VocabularyKey(nameof(OnHoldTime), "On Hold Time (Minutes)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    LastOnHoldTime = group.Add(new VocabularyKey(nameof(LastOnHoldTime), "Last On Hold Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    IsUnsafe = group.Add(new VocabularyKey(nameof(IsUnsafe), "IsUnsafe", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    IsDraft = group.Add(new VocabularyKey(nameof(IsDraft), "IsDraft", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));             
+			    IsDraft = group.Add(new VocabularyKey(nameof(IsDraft), "IsDraft", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Appointment Details for CrmCommon", group =>
+            {
+			    OptionalAttendees = group.Add(new VocabularyKey(nameof(OptionalAttendees), "Optional Attendees", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    RequiredAttendees = group.Add(new VocabularyKey(nameof(RequiredAttendees), "Required Attendees", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Appointment Details for Marketing", group =>
+            {
+			    CustomerJourneyIteration = group.Add(new VocabularyKey(nameof(CustomerJourneyIteration), "Customer journey iteration", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -225,24 +234,27 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             #endregion
         }
 
-        public VocabularyKey IsAllDayEvent { get; private set; }
-        public VocabularyKey Description { get; private set; }
-        public VocabularyKey GlobalObjectId { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey OutlookOwnerApptId { get; private set; }
-        public VocabularyKey Location { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
-        public VocabularyKey ModifiedFieldsMask { get; private set; }
-        public VocabularyKey OriginalStartDate { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
-        public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey StageId { get; private set; }
-        public VocabularyKey AttachmentErrors { get; private set; }
         public VocabularyKey AttachmentCount { get; private set; }
-        public VocabularyKey OnHoldTime { get; private set; }
-        public VocabularyKey LastOnHoldTime { get; private set; }
-        public VocabularyKey IsUnsafe { get; private set; }
+        public VocabularyKey AttachmentErrors { get; private set; }
+        public VocabularyKey CustomerJourneyIteration { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey GlobalObjectId { get; private set; }
+        public VocabularyKey IsAllDayEvent { get; private set; }
         public VocabularyKey IsDraft { get; private set; }
+        public VocabularyKey IsUnsafe { get; private set; }
+        public VocabularyKey LastOnHoldTime { get; private set; }
+        public VocabularyKey Location { get; private set; }
+        public VocabularyKey ModifiedFieldsMask { get; private set; }
+        public VocabularyKey OnHoldTime { get; private set; }
+        public VocabularyKey OptionalAttendees { get; private set; }
+        public VocabularyKey OriginalStartDate { get; private set; }
+        public VocabularyKey OutlookOwnerApptId { get; private set; }
+        public VocabularyKey ProcessId { get; private set; }
+        public VocabularyKey RequiredAttendees { get; private set; }
+        public VocabularyKey StageId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
     }
 }

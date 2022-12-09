@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Automotive
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class DeviceTypeVocabulary : SimpleVocabulary
     {
         public DeviceTypeVocabulary()
         {
             VocabularyName = "Device Type";
-            KeyPrefix = "commonDataModel.devicetype.automotive";
+            KeyPrefix = "commonDataModel.devicetype";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.DeviceType;
 
@@ -20,7 +20,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
 			    DeviceTypeId = group.Add(new VocabularyKey(nameof(DeviceTypeId), "Device Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -49,10 +49,10 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
             #endregion
         }
 
-        public VocabularyKey EntityImage { get; private set; }
         public VocabularyKey Code { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey DeviceTypeId { get; private set; }
+        public VocabularyKey EntityImage { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }

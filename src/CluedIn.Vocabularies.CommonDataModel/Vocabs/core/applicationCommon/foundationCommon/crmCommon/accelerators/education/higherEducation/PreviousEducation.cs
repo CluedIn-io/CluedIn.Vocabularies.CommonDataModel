@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class PreviousEducationVocabulary : SimpleVocabulary
     {
         public PreviousEducationVocabulary()
         {
             VocabularyName = "Previous Education";
-            KeyPrefix = "commonDataModel.previouseducation.highereducation";
+            KeyPrefix = "commonDataModel.previouseducation";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.PreviousEducation;
 
@@ -25,7 +25,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
 			    GraduationDate = group.Add(new VocabularyKey(nameof(GraduationDate), "Graduation Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    LastDateofAttendance = group.Add(new VocabularyKey(nameof(LastDateofAttendance), "Last Date of Attendance", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Major = group.Add(new VocabularyKey(nameof(Major), "Major", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Rank = group.Add(new VocabularyKey(nameof(Rank), "Rank", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    Rank = group.Add(new VocabularyKey(nameof(Rank), "Rank", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -49,10 +49,6 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
             #endregion
         }
 
-        public VocabularyKey PreviousEducationId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey ClassSize { get; private set; }
         public VocabularyKey DateofEnrollment { get; private set; }
         public VocabularyKey GPA { get; private set; }
@@ -60,6 +56,10 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
         public VocabularyKey GraduationDate { get; private set; }
         public VocabularyKey LastDateofAttendance { get; private set; }
         public VocabularyKey Major { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey PreviousEducationId { get; private set; }
         public VocabularyKey Rank { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

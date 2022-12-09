@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Service
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ContractVocabulary : SimpleVocabulary
     {
         public ContractVocabulary()
         {
             VocabularyName = "Contract";
-            KeyPrefix = "commonDataModel.contract.service";
+            KeyPrefix = "commonDataModel.contract";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Contract;
 
@@ -45,7 +45,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
 			    AccountId = group.Add(new VocabularyKey(nameof(AccountId), "Account", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    BillingAccountId = group.Add(new VocabularyKey(nameof(BillingAccountId), "Billing Account", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    BillingContactId = group.Add(new VocabularyKey(nameof(BillingContactId), "Billing Contact", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ContactId = group.Add(new VocabularyKey(nameof(ContactId), "Contact", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    ContactId = group.Add(new VocabularyKey(nameof(ContactId), "Contact", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -208,15 +208,17 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
             #endregion
         }
 
-        public VocabularyKey ContractId { get; private set; }
-        public VocabularyKey EmailAddress { get; private set; }
-        public VocabularyKey Title { get; private set; }
+        public VocabularyKey AccountId { get; private set; }
         public VocabularyKey ActiveOn { get; private set; }
         public VocabularyKey AllotmentTypeCode { get; private set; }
+        public VocabularyKey BillingAccountId { get; private set; }
+        public VocabularyKey BillingContactId { get; private set; }
         public VocabularyKey BillingEndOn { get; private set; }
         public VocabularyKey BillingFrequencyCode { get; private set; }
         public VocabularyKey BillingStartOn { get; private set; }
         public VocabularyKey CancelOn { get; private set; }
+        public VocabularyKey ContactId { get; private set; }
+        public VocabularyKey ContractId { get; private set; }
         public VocabularyKey ContractLanguage { get; private set; }
         public VocabularyKey ContractNumber { get; private set; }
         public VocabularyKey ContractServiceLevelCode { get; private set; }
@@ -224,21 +226,19 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
         public VocabularyKey ContractTemplateId { get; private set; }
         public VocabularyKey Duration { get; private set; }
         public VocabularyKey EffectivityCalendar { get; private set; }
+        public VocabularyKey EmailAddress { get; private set; }
+        public VocabularyKey EntityImageId { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey ExpiresOn { get; private set; }
         public VocabularyKey NetPrice { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey NetPriceBase { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey Title { get; private set; }
         public VocabularyKey TotalDiscount { get; private set; }
         public VocabularyKey TotalDiscountBase { get; private set; }
         public VocabularyKey TotalPrice { get; private set; }
         public VocabularyKey TotalPriceBase { get; private set; }
         public VocabularyKey UseDiscountAsPercentage { get; private set; }
-        public VocabularyKey EntityImageId { get; private set; }
-        public VocabularyKey AccountId { get; private set; }
-        public VocabularyKey BillingAccountId { get; private set; }
-        public VocabularyKey BillingContactId { get; private set; }
-        public VocabularyKey ContactId { get; private set; }
     }
 }

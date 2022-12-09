@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Banking
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class BranchVocabulary : SimpleVocabulary
     {
         public BranchVocabulary()
         {
             VocabularyName = "Branch";
-            KeyPrefix = "commonDataModel.branch.banking";
+            KeyPrefix = "commonDataModel.branch";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Branch;
 
@@ -25,7 +25,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Banking
 			    TelephoneNo = group.Add(new VocabularyKey(nameof(TelephoneNo), "Telephone No.", VocabularyKeyDataType.PhoneNumber, VocabularyKeyVisibility.Visible)); 
 			    ZipCodes = group.Add(new VocabularyKey(nameof(ZipCodes), "Zip Codes", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -61,9 +61,9 @@ namespace CluedIn.Vocabularies.CommonDataModel.Banking
         public VocabularyKey BranchName { get; private set; }
         public VocabularyKey Country { get; private set; }
         public VocabularyKey State { get; private set; }
-        public VocabularyKey TelephoneNo { get; private set; }
-        public VocabularyKey ZipCodes { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TelephoneNo { get; private set; }
+        public VocabularyKey ZipCodes { get; private set; }
     }
 }

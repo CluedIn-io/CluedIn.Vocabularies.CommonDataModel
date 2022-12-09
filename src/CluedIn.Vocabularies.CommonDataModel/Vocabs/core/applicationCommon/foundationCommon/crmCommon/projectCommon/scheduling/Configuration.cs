@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ConfigurationVocabulary : SimpleVocabulary
     {
         public ConfigurationVocabulary()
         {
             VocabularyName = "Configuration";
-            KeyPrefix = "commonDataModel.configuration.scheduling";
+            KeyPrefix = "commonDataModel.configuration";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Configuration;
 
@@ -19,7 +19,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Value = group.Add(new VocabularyKey(nameof(Value), "Value", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Value = group.Add(new VocabularyKey(nameof(Value), "Value", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -45,9 +45,9 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
         }
 
         public VocabularyKey ConfigurationId { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey Type { get; private set; }
         public VocabularyKey Value { get; private set; }
     }

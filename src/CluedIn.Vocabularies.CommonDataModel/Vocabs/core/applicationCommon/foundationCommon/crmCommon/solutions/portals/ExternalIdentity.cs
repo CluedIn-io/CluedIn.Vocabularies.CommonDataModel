@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Portals
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ExternalIdentityVocabulary : SimpleVocabulary
     {
         public ExternalIdentityVocabulary()
         {
             VocabularyName = "External Identity";
-            KeyPrefix = "commonDataModel.externalidentity.portals";
+            KeyPrefix = "commonDataModel.externalidentity";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ExternalIdentity;
 
@@ -25,7 +25,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
 			    TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), "Time Zone Rule Version Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    UserName = group.Add(new VocabularyKey(nameof(UserName), "User Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IdentityProviderName = group.Add(new VocabularyKey(nameof(IdentityProviderName), "Identity Provider", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    IdentityProviderName = group.Add(new VocabularyKey(nameof(IdentityProviderName), "Identity Provider", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -42,17 +42,17 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
             #endregion
         }
 
-        public VocabularyKey ExternalIdentityId { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey ExternalIdentityId { get; private set; }
+        public VocabularyKey IdentityProviderName { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
         public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
         public VocabularyKey UserName { get; private set; }
-        public VocabularyKey IdentityProviderName { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ContractLineInvoiceScheduleVocabulary : SimpleVocabulary
     {
         public ContractLineInvoiceScheduleVocabulary()
         {
             VocabularyName = "Contract Line Invoice Schedule";
-            KeyPrefix = "commonDataModel.contractlineinvoiceschedule.projectserviceautomation";
+            KeyPrefix = "commonDataModel.contractlineinvoiceschedule";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ContractLineInvoiceSchedule;
 
@@ -28,7 +28,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    ContractLine = group.Add(new VocabularyKey(nameof(ContractLine), "(Deprecated) Project Contract Line", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    InvoiceRunDate = group.Add(new VocabularyKey(nameof(InvoiceRunDate), "Invoice Run Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    InvoiceRunStatus = group.Add(new VocabularyKey(nameof(InvoiceRunStatus), "Invoice Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TransactionCutOffDate = group.Add(new VocabularyKey(nameof(TransactionCutOffDate), "Transaction Cut Off Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    TransactionCutOffDate = group.Add(new VocabularyKey(nameof(TransactionCutOffDate), "Transaction Cut Off Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -47,20 +47,20 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
+        public VocabularyKey ContractLine { get; private set; }
         public VocabularyKey ContractLineInvoiceScheduleId { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
         public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey ContractLine { get; private set; }
         public VocabularyKey InvoiceRunDate { get; private set; }
         public VocabularyKey InvoiceRunStatus { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
         public VocabularyKey TransactionCutOffDate { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

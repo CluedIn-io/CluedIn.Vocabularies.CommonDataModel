@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Automotive
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class AggregateKPIVocabulary : SimpleVocabulary
     {
         public AggregateKPIVocabulary()
         {
             VocabularyName = "Aggregate KPI";
-            KeyPrefix = "commonDataModel.aggregatekpi.automotive";
+            KeyPrefix = "commonDataModel.aggregatekpi";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.AggregateKPI;
 
@@ -21,7 +21,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    UsageDescription = group.Add(new VocabularyKey(nameof(UsageDescription), "Usage Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -83,8 +83,8 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
         public VocabularyKey FormulaDescription { get; private set; }
         public VocabularyKey MeasurementType { get; private set; }
         public VocabularyKey Name { get; private set; }
-        public VocabularyKey UsageDescription { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey UsageDescription { get; private set; }
     }
 }

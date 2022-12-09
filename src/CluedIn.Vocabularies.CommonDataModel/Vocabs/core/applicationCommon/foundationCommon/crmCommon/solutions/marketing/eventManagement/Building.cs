@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class BuildingVocabulary : SimpleVocabulary
     {
         public BuildingVocabulary()
         {
             VocabularyName = "Building";
-            KeyPrefix = "commonDataModel.building.eventmanagement";
+            KeyPrefix = "commonDataModel.building";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Building;
 
@@ -46,7 +46,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
 			    AddressComposite = group.Add(new VocabularyKey(nameof(AddressComposite), "Address Composite", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    NumberOfRooms = group.Add(new VocabularyKey(nameof(NumberOfRooms), "Number of Rooms", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    NumberOfRoomsDate = group.Add(new VocabularyKey(nameof(NumberOfRoomsDate), "Number of Rooms (Last Updated On)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    NumberOfRoomsState = group.Add(new VocabularyKey(nameof(NumberOfRoomsState), "Number of Rooms (State)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    NumberOfRoomsState = group.Add(new VocabularyKey(nameof(NumberOfRoomsState), "Number of Rooms (State)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -69,18 +69,15 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
             #endregion
         }
 
-        public VocabularyKey BuildingId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey AccessibleToilets { get; private set; }
         public VocabularyKey AdditionalFacilities { get; private set; }
+        public VocabularyKey AddressComposite { get; private set; }
         public VocabularyKey AddressLine1 { get; private set; }
         public VocabularyKey AddressLine2 { get; private set; }
         public VocabularyKey AddressLine3 { get; private set; }
+        public VocabularyKey BuildingId { get; private set; }
         public VocabularyKey City { get; private set; }
         public VocabularyKey Cost { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey CostBase { get; private set; }
         public VocabularyKey Country { get; private set; }
         public VocabularyKey Description { get; private set; }
@@ -88,9 +85,16 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
         public VocabularyKey DisabledParking { get; private set; }
         public VocabularyKey Email { get; private set; }
         public VocabularyKey EstimatedCapacity { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey NumberOfRooms { get; private set; }
+        public VocabularyKey NumberOfRoomsDate { get; private set; }
+        public VocabularyKey NumberOfRoomsState { get; private set; }
         public VocabularyKey PostalCode { get; private set; }
         public VocabularyKey PublicTelephoneAvailable { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StateProvince { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey Telephone1 { get; private set; }
         public VocabularyKey Telephone2 { get; private set; }
         public VocabularyKey Telephone3 { get; private set; }
@@ -98,9 +102,5 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
         public VocabularyKey WifiAvailable { get; private set; }
         public VocabularyKey WifiPassword { get; private set; }
         public VocabularyKey WifiSSID { get; private set; }
-        public VocabularyKey AddressComposite { get; private set; }
-        public VocabularyKey NumberOfRooms { get; private set; }
-        public VocabularyKey NumberOfRoomsDate { get; private set; }
-        public VocabularyKey NumberOfRoomsState { get; private set; }
     }
 }

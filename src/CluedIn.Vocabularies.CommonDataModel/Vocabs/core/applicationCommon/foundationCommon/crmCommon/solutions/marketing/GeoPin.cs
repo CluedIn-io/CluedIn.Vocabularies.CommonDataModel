@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Marketing
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class GeoPinVocabulary : SimpleVocabulary
     {
         public GeoPinVocabulary()
         {
             VocabularyName = "Geo Pin";
-            KeyPrefix = "commonDataModel.geopin.marketing";
+            KeyPrefix = "commonDataModel.geopin";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.GeoPin;
 
@@ -38,7 +38,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Marketing
 			    ServerIdMarketing = group.Add(new VocabularyKey(nameof(ServerIdMarketing), "serverId_marketing", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    SoutheastLatitude = group.Add(new VocabularyKey(nameof(SoutheastLatitude), "Southeast latitude", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
 			    SoutheastLongitude = group.Add(new VocabularyKey(nameof(SoutheastLongitude), "Southeast longitude", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    State = group.Add(new VocabularyKey(nameof(State), "State", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    State = group.Add(new VocabularyKey(nameof(State), "State", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -65,21 +65,19 @@ namespace CluedIn.Vocabularies.CommonDataModel.Marketing
             #endregion
         }
 
-        public VocabularyKey GeopinId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey CampaignGeoPinsId { get; private set; }
         public VocabularyKey CenterLatitude { get; private set; }
         public VocabularyKey CenterLongitude { get; private set; }
         public VocabularyKey City { get; private set; }
         public VocabularyKey Country { get; private set; }
+        public VocabularyKey GeopinId { get; private set; }
         public VocabularyKey KPIEmailClickedCount { get; private set; }
         public VocabularyKey KPIEmailOpenedCount { get; private set; }
+        public VocabularyKey KpiFormSubmittedCount { get; private set; }
         public VocabularyKey KPIRedirectLinkClickedCount { get; private set; }
         public VocabularyKey KPIWebsiteClickedCount { get; private set; }
         public VocabularyKey KPIWebsiteVisitedCount { get; private set; }
-        public VocabularyKey KpiFormSubmittedCount { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey NorthwestLatitude { get; private set; }
         public VocabularyKey NorthwestLongitude { get; private set; }
         public VocabularyKey PostalCode { get; private set; }
@@ -90,5 +88,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Marketing
         public VocabularyKey SoutheastLatitude { get; private set; }
         public VocabularyKey SoutheastLongitude { get; private set; }
         public VocabularyKey State { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

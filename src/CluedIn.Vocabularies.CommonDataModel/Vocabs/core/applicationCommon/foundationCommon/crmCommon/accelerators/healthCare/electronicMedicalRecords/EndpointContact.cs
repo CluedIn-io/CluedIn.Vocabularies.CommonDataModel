@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class EndpointContactVocabulary : SimpleVocabulary
     {
         public EndpointContactVocabulary()
         {
             VocabularyName = "Endpoint Contact";
-            KeyPrefix = "commonDataModel.endpointcontact.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.endpointcontact";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.EndpointContact;
 
@@ -31,7 +31,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), "Time Zone Rule Version Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -46,23 +46,23 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
             #endregion
         }
 
+        public VocabularyKey ContactSystem { get; private set; }
+        public VocabularyKey Contactvalue { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
         public VocabularyKey CreatedOnBehalfBy { get; private set; }
+        public VocabularyKey EndpointContactId { get; private set; }
         public VocabularyKey ImportSequenceNumber { get; private set; }
         public VocabularyKey ModifiedOn { get; private set; }
         public VocabularyKey ModifiedOnBehalfBy { get; private set; }
-        public VocabularyKey ContactSystem { get; private set; }
-        public VocabularyKey Contactvalue { get; private set; }
-        public VocabularyKey EndpointContactId { get; private set; }
         public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey PeriodEndDate { get; private set; }
         public VocabularyKey PeriodStartDate { get; private set; }
         public VocabularyKey Rank { get; private set; }
-        public VocabularyKey Use { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey Use { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
     }
 }

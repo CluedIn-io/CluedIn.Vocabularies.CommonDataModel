@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class CheckInVocabulary : SimpleVocabulary
     {
         public CheckInVocabulary()
         {
             VocabularyName = "Check In";
-            KeyPrefix = "commonDataModel.checkin.eventmanagement";
+            KeyPrefix = "commonDataModel.checkin";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.CheckIn;
 
@@ -26,7 +26,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
 			    SessionCode = group.Add(new VocabularyKey(nameof(SessionCode), "Session Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    SessionType = group.Add(new VocabularyKey(nameof(SessionType), "Session Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TransactionCurrencyId = group.Add(new VocabularyKey(nameof(TransactionCurrencyId), "Currency", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ViewingDurationInMins = group.Add(new VocabularyKey(nameof(ViewingDurationInMins), "Viewing Duration in mins", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    ViewingDurationInMins = group.Add(new VocabularyKey(nameof(ViewingDurationInMins), "Viewing Duration in mins", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -52,17 +52,17 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
             #endregion
         }
 
-        public VocabularyKey CheckInId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey AudienceType { get; private set; }
+        public VocabularyKey CheckInId { get; private set; }
         public VocabularyKey Checkintime { get; private set; }
         public VocabularyKey CheckInType { get; private set; }
         public VocabularyKey CheckOutTime { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey NumberOfQuestionsAsked { get; private set; }
         public VocabularyKey SessionCode { get; private set; }
         public VocabularyKey SessionType { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey TransactionCurrencyId { get; private set; }
         public VocabularyKey ViewingDurationInMins { get; private set; }
     }

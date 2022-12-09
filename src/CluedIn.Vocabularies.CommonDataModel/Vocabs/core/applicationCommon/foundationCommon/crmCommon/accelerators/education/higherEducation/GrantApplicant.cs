@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class GrantApplicantVocabulary : SimpleVocabulary
     {
         public GrantApplicantVocabulary()
         {
             VocabularyName = "Grant Applicant";
-            KeyPrefix = "commonDataModel.grantapplicant.highereducation";
+            KeyPrefix = "commonDataModel.grantapplicant";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.GrantApplicant;
 
@@ -26,7 +26,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
 			    DeprecatedStageId = group.Add(new VocabularyKey(nameof(DeprecatedStageId), "(Deprecated) Stage Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DeprecatedTraversedPath = group.Add(new VocabularyKey(nameof(DeprecatedTraversedPath), "(Deprecated) Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    DeprecatedTraversedPath = group.Add(new VocabularyKey(nameof(DeprecatedTraversedPath), "(Deprecated) Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -49,18 +49,18 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
             #endregion
         }
 
-        public VocabularyKey GrantApplicantId { get; private set; }
         public VocabularyKey ApplicationStateCode { get; private set; }
+        public VocabularyKey DeprecatedStageId { get; private set; }
+        public VocabularyKey DeprecatedTraversedPath { get; private set; }
+        public VocabularyKey GrantApplicantId { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey OfferAcceptedDate { get; private set; }
         public VocabularyKey OfferDeadlineDate { get; private set; }
         public VocabularyKey OfferMadeDate { get; private set; }
-        public VocabularyKey QualificationDescription { get; private set; }
-        public VocabularyKey SubmissionDate { get; private set; }
         public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey DeprecatedStageId { get; private set; }
+        public VocabularyKey QualificationDescription { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey DeprecatedTraversedPath { get; private set; }
+        public VocabularyKey SubmissionDate { get; private set; }
     }
 }

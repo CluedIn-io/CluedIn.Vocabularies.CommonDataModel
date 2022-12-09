@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ExpenditureVocabulary : SimpleVocabulary
     {
         public ExpenditureVocabulary()
         {
             VocabularyName = "Expenditure";
-            KeyPrefix = "commonDataModel.expenditure.nonprofitiati";
+            KeyPrefix = "commonDataModel.expenditure";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Expenditure;
 
@@ -32,7 +32,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
 			    Totalexpenditure_Base = group.Add(new VocabularyKey(nameof(Totalexpenditure_Base), "Total Expenditure (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
 			    TransactionType = group.Add(new VocabularyKey(nameof(TransactionType), "Transaction Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -70,10 +70,10 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
             #endregion
         }
 
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey CurrencyValueDate { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey EndDate { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey ExpenditureId { get; private set; }
         public VocabularyKey Humanitarian { get; private set; }
         public VocabularyKey Name { get; private set; }
@@ -84,10 +84,10 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
         public VocabularyKey Reference { get; private set; }
         public VocabularyKey RelatedTo { get; private set; }
         public VocabularyKey StartDate { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey TotalExpenditure { get; private set; }
         public VocabularyKey Totalexpenditure_Base { get; private set; }
         public VocabularyKey TransactionType { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
     }
 }

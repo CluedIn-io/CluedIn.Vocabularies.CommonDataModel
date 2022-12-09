@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ResultCacheVocabulary : SimpleVocabulary
     {
         public ResultCacheVocabulary()
         {
             VocabularyName = "Result Cache";
-            KeyPrefix = "commonDataModel.resultcache.projectserviceautomation";
+            KeyPrefix = "commonDataModel.resultcache";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ResultCache;
 
@@ -29,7 +29,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    EntityDescription = group.Add(new VocabularyKey(nameof(EntityDescription), "Entity description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Expiration = group.Add(new VocabularyKey(nameof(Expiration), "Expiration", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    PartNumber = group.Add(new VocabularyKey(nameof(PartNumber), "Part Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    UserId = group.Add(new VocabularyKey(nameof(UserId), "User id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    UserId = group.Add(new VocabularyKey(nameof(UserId), "User id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -45,21 +45,21 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
-        public VocabularyKey MlResultCacheId { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey Data { get; private set; }
         public VocabularyKey EntityDescription { get; private set; }
         public VocabularyKey Expiration { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey MlResultCacheId { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey PartNumber { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
         public VocabularyKey UserId { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

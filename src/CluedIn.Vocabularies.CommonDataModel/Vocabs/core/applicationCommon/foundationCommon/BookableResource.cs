@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class BookableResourceVocabulary : SimpleVocabulary
     {
         public BookableResourceVocabulary()
         {
             VocabularyName = "Bookable Resource";
-            KeyPrefix = "commonDataModel.bookableresource.foundationcommon";
+            KeyPrefix = "commonDataModel.bookableresource";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.BookableResource;
 
@@ -24,7 +24,20 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TimeZone = group.Add(new VocabularyKey(nameof(TimeZone), "Time Zone", VocabularyKeyDataType.TimeZone, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "ExchangeRate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));             
+			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "ExchangeRate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("BookableResource Details for ProjectCommon", group =>
+            {
+			    PoolType = group.Add(new VocabularyKey(nameof(PoolType), "Pool Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    DeriveCapacity = group.Add(new VocabularyKey(nameof(DeriveCapacity), "Derive Capacity From Group Members", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
+			    DisplayOnScheduleAssistant = group.Add(new VocabularyKey(nameof(DisplayOnScheduleAssistant), "Enable for Availability Search", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
+			    DisplayOnScheduleBoard = group.Add(new VocabularyKey(nameof(DisplayOnScheduleBoard), "Display On Schedule Board", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
+			    EndLocation = group.Add(new VocabularyKey(nameof(EndLocation), "End Location", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    GenericType = group.Add(new VocabularyKey(nameof(GenericType), "Generic Type (Deprecated)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    PrimaryEMail = group.Add(new VocabularyKey(nameof(PrimaryEMail), "Primary Email", VocabularyKeyDataType.Email, VocabularyKeyVisibility.Visible)); 
+			    StartLocation = group.Add(new VocabularyKey(nameof(StartLocation), "Start Location", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    TargetUtilization = group.Add(new VocabularyKey(nameof(TargetUtilization), "Target Utilization", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+			    IsDefault = group.Add(new VocabularyKey(nameof(IsDefault), "Is Default", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -165,15 +178,25 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
         }
 
         public VocabularyKey BookableResourceId { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey StageId { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
         public VocabularyKey CalendarId { get; private set; }
+        public VocabularyKey DeriveCapacity { get; private set; }
+        public VocabularyKey DisplayOnScheduleAssistant { get; private set; }
+        public VocabularyKey DisplayOnScheduleBoard { get; private set; }
+        public VocabularyKey EndLocation { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey GenericType { get; private set; }
+        public VocabularyKey IsDefault { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey PoolType { get; private set; }
+        public VocabularyKey PrimaryEMail { get; private set; }
+        public VocabularyKey ProcessId { get; private set; }
         public VocabularyKey ResourceType { get; private set; }
+        public VocabularyKey StageId { get; private set; }
+        public VocabularyKey StartLocation { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TargetUtilization { get; private set; }
         public VocabularyKey TimeZone { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
     }
 }

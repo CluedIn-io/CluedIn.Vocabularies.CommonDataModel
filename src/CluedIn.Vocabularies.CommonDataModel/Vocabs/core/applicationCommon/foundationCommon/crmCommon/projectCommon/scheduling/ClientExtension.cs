@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ClientExtensionVocabulary : SimpleVocabulary
     {
         public ClientExtensionVocabulary()
         {
             VocabularyName = "Client Extension";
-            KeyPrefix = "commonDataModel.clientextension.scheduling";
+            KeyPrefix = "commonDataModel.clientextension";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ClientExtension;
 
@@ -20,7 +20,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ExtensionType = group.Add(new VocabularyKey(nameof(ExtensionType), "Extension Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Rank = group.Add(new VocabularyKey(nameof(Rank), "Rank", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    WebResource = group.Add(new VocabularyKey(nameof(WebResource), "Web Resource", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    WebResource = group.Add(new VocabularyKey(nameof(WebResource), "Web Resource", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -42,11 +42,11 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
         }
 
         public VocabularyKey ClientextensionId { get; private set; }
+        public VocabularyKey ExtensionType { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey Rank { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey ExtensionType { get; private set; }
-        public VocabularyKey Rank { get; private set; }
         public VocabularyKey WebResource { get; private set; }
     }
 }

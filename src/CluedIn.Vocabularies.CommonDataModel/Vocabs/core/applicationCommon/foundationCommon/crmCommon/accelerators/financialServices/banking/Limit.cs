@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Banking
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class LimitVocabulary : SimpleVocabulary
     {
         public LimitVocabulary()
         {
             VocabularyName = "Limit";
-            KeyPrefix = "commonDataModel.limit.banking";
+            KeyPrefix = "commonDataModel.limit";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Limit;
 
@@ -26,7 +26,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Banking
 			    UtilizedLimit = group.Add(new VocabularyKey(nameof(UtilizedLimit), "Utilized Limit", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
 			    UtilizedLimitBase = group.Add(new VocabularyKey(nameof(UtilizedLimitBase), "Utilized Amount (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -52,18 +52,18 @@ namespace CluedIn.Vocabularies.CommonDataModel.Banking
             #endregion
         }
 
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey AvailableLimit { get; private set; }
         public VocabularyKey AvailableLimitBase { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey ImplementedLimit { get; private set; }
         public VocabularyKey ImplementedLimitBase { get; private set; }
         public VocabularyKey LimitExpiry { get; private set; }
         public VocabularyKey LimitId { get; private set; }
         public VocabularyKey LimitName { get; private set; }
         public VocabularyKey LimitType { get; private set; }
-        public VocabularyKey UtilizedLimit { get; private set; }
-        public VocabularyKey UtilizedLimitBase { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey UtilizedLimit { get; private set; }
+        public VocabularyKey UtilizedLimitBase { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ResourceAssignmentVocabulary : SimpleVocabulary
     {
         public ResourceAssignmentVocabulary()
         {
             VocabularyName = "Resource Assignment";
-            KeyPrefix = "commonDataModel.resourceassignment.projectserviceautomation";
+            KeyPrefix = "commonDataModel.resourceassignment";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ResourceAssignment;
 
@@ -31,7 +31,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    PlannedSalesContour = group.Add(new VocabularyKey(nameof(PlannedSalesContour), "Planned Sales Contour", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    PlannedWork = group.Add(new VocabularyKey(nameof(PlannedWork), "Planned Work", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ToDate = group.Add(new VocabularyKey(nameof(ToDate), "To Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    UserResourceId = group.Add(new VocabularyKey(nameof(UserResourceId), "Resource", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    UserResourceId = group.Add(new VocabularyKey(nameof(UserResourceId), "Resource", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -67,22 +67,22 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
-        public VocabularyKey ResourceAssignmentId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey CommitType { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey FromDate { get; private set; }
         public VocabularyKey Hours { get; private set; }
         public VocabularyKey MSProjectClientId { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey PlannedCost { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey PlannedcostBase { get; private set; }
         public VocabularyKey PlannedCostContour { get; private set; }
         public VocabularyKey PlannedSales { get; private set; }
         public VocabularyKey PlannedSalesBase { get; private set; }
         public VocabularyKey PlannedSalesContour { get; private set; }
         public VocabularyKey PlannedWork { get; private set; }
+        public VocabularyKey ResourceAssignmentId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey ToDate { get; private set; }
         public VocabularyKey UserResourceId { get; private set; }
     }

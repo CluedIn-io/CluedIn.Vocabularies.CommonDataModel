@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class SpeakerVocabulary : SimpleVocabulary
     {
         public SpeakerVocabulary()
         {
             VocabularyName = "Speaker";
-            KeyPrefix = "commonDataModel.speaker.eventmanagement";
+            KeyPrefix = "commonDataModel.speaker";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Speaker;
 
@@ -36,7 +36,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
 			    TransactionCurrencyId = group.Add(new VocabularyKey(nameof(TransactionCurrencyId), "Currency", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Twitter = group.Add(new VocabularyKey(nameof(Twitter), "Twitter", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
 			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Website = group.Add(new VocabularyKey(nameof(Website), "Website", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible));             
+			    Website = group.Add(new VocabularyKey(nameof(Website), "Website", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -71,26 +71,26 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
             #endregion
         }
 
-        public VocabularyKey SpeakerId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey StageId { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
-        public VocabularyKey EntityImageId { get; private set; }
         public VocabularyKey About { get; private set; }
         public VocabularyKey Accomplishments { get; private set; }
         public VocabularyKey Blog { get; private set; }
         public VocabularyKey Email { get; private set; }
+        public VocabularyKey EntityImageId { get; private set; }
         public VocabularyKey EventRegistration { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey LinkedIn { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey ProcessId { get; private set; }
         public VocabularyKey Publications { get; private set; }
         public VocabularyKey Speakercost { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey SpeakercostBase { get; private set; }
+        public VocabularyKey SpeakerId { get; private set; }
+        public VocabularyKey StageId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey Title { get; private set; }
         public VocabularyKey TransactionCurrencyId { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
         public VocabularyKey Twitter { get; private set; }
         public VocabularyKey Type { get; private set; }
         public VocabularyKey Website { get; private set; }

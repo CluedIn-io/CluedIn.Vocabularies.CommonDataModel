@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ProcedureVocabulary : SimpleVocabulary
     {
         public ProcedureVocabulary()
         {
             VocabularyName = "Procedure";
-            KeyPrefix = "commonDataModel.procedure.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.procedure";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Procedure;
 
@@ -24,7 +24,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    Status = group.Add(new VocabularyKey(nameof(Status), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    SubjectType = group.Add(new VocabularyKey(nameof(SubjectType), "Subject Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -492,9 +492,9 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
         public VocabularyKey PerformedStartDate { get; private set; }
         public VocabularyKey ProcedureId { get; private set; }
         public VocabularyKey ProcedureIdentifier { get; private set; }
-        public VocabularyKey Status { get; private set; }
-        public VocabularyKey SubjectType { get; private set; }
         public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey Status { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey SubjectType { get; private set; }
     }
 }

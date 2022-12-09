@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Automotive
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class BusinessOperationCustomerPreferenceVocabulary : SimpleVocabulary
     {
         public BusinessOperationCustomerPreferenceVocabulary()
         {
             VocabularyName = "Business Operation Customer Preference";
-            KeyPrefix = "commonDataModel.businessoperationcustomerpreference.automotive";
+            KeyPrefix = "commonDataModel.businessoperationcustomerpreference";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.BusinessOperationCustomerPreference;
 
@@ -19,7 +19,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
 			    ValidFrom = group.Add(new VocabularyKey(nameof(ValidFrom), "Valid From", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ValidTo = group.Add(new VocabularyKey(nameof(ValidTo), "Valid To", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -47,9 +47,9 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
 
         public VocabularyKey BusinessOperationCustomerPreferenceId { get; private set; }
         public VocabularyKey Name { get; private set; }
-        public VocabularyKey ValidFrom { get; private set; }
-        public VocabularyKey ValidTo { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey ValidFrom { get; private set; }
+        public VocabularyKey ValidTo { get; private set; }
     }
 }

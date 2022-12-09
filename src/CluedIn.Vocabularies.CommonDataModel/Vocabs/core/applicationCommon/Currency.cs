@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class CurrencyVocabulary : SimpleVocabulary
     {
         public CurrencyVocabulary()
         {
             VocabularyName = "Currency";
-            KeyPrefix = "commonDataModel.currency.applicationcommon";
+            KeyPrefix = "commonDataModel.currency";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Currency;
 
@@ -27,7 +27,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    CurrencyName = group.Add(new VocabularyKey(nameof(CurrencyName), "Currency Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ISOCurrencyCode = group.Add(new VocabularyKey(nameof(ISOCurrencyCode), "Currency Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    CurrencyPrecision = group.Add(new VocabularyKey(nameof(CurrencyPrecision), "Currency Precision", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    EntityImageId = group.Add(new VocabularyKey(nameof(EntityImageId), "Entity Image Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));             
+			    EntityImageId = group.Add(new VocabularyKey(nameof(EntityImageId), "Entity Image Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -297,19 +297,19 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             #endregion
         }
 
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey TransactionCurrencyId { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
-        public VocabularyKey CurrencySymbol { get; private set; }
         public VocabularyKey CurrencyName { get; private set; }
-        public VocabularyKey ISOCurrencyCode { get; private set; }
         public VocabularyKey CurrencyPrecision { get; private set; }
+        public VocabularyKey CurrencySymbol { get; private set; }
         public VocabularyKey EntityImageId { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey ISOCurrencyCode { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TransactionCurrencyId { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

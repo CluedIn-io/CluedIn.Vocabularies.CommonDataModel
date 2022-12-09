@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class DesignationVocabulary : SimpleVocabulary
     {
         public DesignationVocabulary()
         {
             VocabularyName = "Designation";
-            KeyPrefix = "commonDataModel.designation.nonprofitcore";
+            KeyPrefix = "commonDataModel.designation";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Designation;
 
@@ -33,7 +33,19 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
 			    TotalDisbursed = group.Add(new VocabularyKey(nameof(TotalDisbursed), "Total Disbursed", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
 			    TotalDisbursedBase = group.Add(new VocabularyKey(nameof(TotalDisbursedBase), "Total Disbursed (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Designation Details for NonProfitIati", group =>
+            {
+			    CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    CreatedOnBehalfBy = group.Add(new VocabularyKey(nameof(CreatedOnBehalfBy), "Created By (Delegate)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+			    ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    ModifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(ModifiedOnBehalfBy), "Modified By (Delegate)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    GlCreditAccount = group.Add(new VocabularyKey(nameof(GlCreditAccount), "GL Credit Account", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    GlDebitAccount = group.Add(new VocabularyKey(nameof(GlDebitAccount), "GL Debit Account", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    TotalDisbursed_Base = group.Add(new VocabularyKey(nameof(TotalDisbursed_Base), "Total Disbursed (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
+			    OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -83,25 +95,34 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
             #endregion
         }
 
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey AcknowledgementName { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey CreatedOnBehalfBy { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey DesignationCode { get; private set; }
         public VocabularyKey DesignationGroup { get; private set; }
         public VocabularyKey DesignationId { get; private set; }
         public VocabularyKey EndDate { get; private set; }
         public VocabularyKey EndowmentType { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey GlCreditAccount { get; private set; }
         public VocabularyKey GLCreditAccount { get; private set; }
+        public VocabularyKey GlDebitAccount { get; private set; }
         public VocabularyKey GLDebitAccount { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
         public VocabularyKey Initiative { get; private set; }
         public VocabularyKey IsActive { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey ModifiedOnBehalfBy { get; private set; }
         public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey Program { get; private set; }
         public VocabularyKey RestrictionType { get; private set; }
         public VocabularyKey StartDate { get; private set; }
-        public VocabularyKey TotalDisbursed { get; private set; }
-        public VocabularyKey TotalDisbursedBase { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TotalDisbursed { get; private set; }
+        public VocabularyKey TotalDisbursed_Base { get; private set; }
+        public VocabularyKey TotalDisbursedBase { get; private set; }
     }
 }

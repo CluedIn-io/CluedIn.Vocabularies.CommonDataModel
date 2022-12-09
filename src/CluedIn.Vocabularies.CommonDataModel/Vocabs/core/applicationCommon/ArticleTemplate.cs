@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ArticleTemplateVocabulary : SimpleVocabulary
     {
         public ArticleTemplateVocabulary()
         {
             VocabularyName = "Article Template";
-            KeyPrefix = "commonDataModel.articletemplate.applicationcommon";
+            KeyPrefix = "commonDataModel.articletemplate";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ArticleTemplate;
 
@@ -32,7 +32,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    OverwriteTime = group.Add(new VocabularyKey(nameof(OverwriteTime), "Record Overwrite Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    IsManaged = group.Add(new VocabularyKey(nameof(IsManaged), VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    IsCustomizable = group.Add(new VocabularyKey(nameof(IsCustomizable), "Customizable", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    IntroducedVersion = group.Add(new VocabularyKey(nameof(IntroducedVersion), "Introduced Version", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    IntroducedVersion = group.Add(new VocabularyKey(nameof(IntroducedVersion), "Introduced Version", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -49,24 +49,24 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             #endregion
         }
 
-        public VocabularyKey KbArticleTemplateId { get; private set; }
-        public VocabularyKey StructureXml { get; private set; }
-        public VocabularyKey FormatXml { get; private set; }
-        public VocabularyKey Title { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey Description { get; private set; }
-        public VocabularyKey IsActive { get; private set; }
+        public VocabularyKey ComponentState { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey FormatXml { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey IntroducedVersion { get; private set; }
+        public VocabularyKey IsActive { get; private set; }
+        public VocabularyKey IsCustomizable { get; private set; }
+        public VocabularyKey IsManaged { get; private set; }
+        public VocabularyKey KbArticleTemplateId { get; private set; }
+        public VocabularyKey KbArticleTemplateIdUnique { get; private set; }
+        public VocabularyKey LanguageCode { get; private set; }
         public VocabularyKey ModifiedOn { get; private set; }
         public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey LanguageCode { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey KbArticleTemplateIdUnique { get; private set; }
-        public VocabularyKey ComponentState { get; private set; }
-        public VocabularyKey SolutionId { get; private set; }
         public VocabularyKey OverwriteTime { get; private set; }
-        public VocabularyKey IsManaged { get; private set; }
-        public VocabularyKey IsCustomizable { get; private set; }
-        public VocabularyKey IntroducedVersion { get; private set; }
+        public VocabularyKey SolutionId { get; private set; }
+        public VocabularyKey StructureXml { get; private set; }
+        public VocabularyKey Title { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

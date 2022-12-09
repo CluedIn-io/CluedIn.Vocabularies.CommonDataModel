@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Portals
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class BadgeTypeVocabulary : SimpleVocabulary
     {
         public BadgeTypeVocabulary()
         {
             VocabularyName = "Badge Type";
-            KeyPrefix = "commonDataModel.badgetype.portals";
+            KeyPrefix = "commonDataModel.badgetype";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.BadgeType;
 
@@ -28,7 +28,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
 			    BackgroundColor = group.Add(new VocabularyKey(nameof(BackgroundColor), "Background Color", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    DisplayText = group.Add(new VocabularyKey(nameof(DisplayText), "Display Text", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IconName = group.Add(new VocabularyKey(nameof(IconName), "Icon Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    IconName = group.Add(new VocabularyKey(nameof(IconName), "Icon Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -44,20 +44,20 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
             #endregion
         }
 
+        public VocabularyKey BackgroundColor { get; private set; }
         public VocabularyKey BadgeTypeId { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey BackgroundColor { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey DisplayText { get; private set; }
         public VocabularyKey IconName { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

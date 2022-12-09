@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class PlanDefinitionGoalTargetVocabulary : SimpleVocabulary
     {
         public PlanDefinitionGoalTargetVocabulary()
         {
             VocabularyName = "Plan Definition Goal Target";
-            KeyPrefix = "commonDataModel.plandefinitiongoaltarget.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.plandefinitiongoaltarget";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.PlanDefinitionGoalTarget;
 
@@ -33,7 +33,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), "Time Zone Rule Version Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -53,23 +53,23 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 
         public VocabularyKey CreatedOn { get; private set; }
         public VocabularyKey CreatedOnBehalfBy { get; private set; }
+        public VocabularyKey Duration { get; private set; }
         public VocabularyKey ImportSequenceNumber { get; private set; }
         public VocabularyKey ModifiedOn { get; private set; }
         public VocabularyKey ModifiedOnBehalfBy { get; private set; }
-        public VocabularyKey Duration { get; private set; }
         public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey PlanDefinitionGoalTargetId { get; private set; }
         public VocabularyKey QuantityComparator { get; private set; }
         public VocabularyKey QuantitySystem { get; private set; }
         public VocabularyKey QuantityUnit { get; private set; }
         public VocabularyKey QuantityValue { get; private set; }
-        public VocabularyKey ValueLowerLimit { get; private set; }
-        public VocabularyKey ValueType { get; private set; }
-        public VocabularyKey Valueupperlimit { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey ValueLowerLimit { get; private set; }
+        public VocabularyKey ValueType { get; private set; }
+        public VocabularyKey Valueupperlimit { get; private set; }
     }
 }

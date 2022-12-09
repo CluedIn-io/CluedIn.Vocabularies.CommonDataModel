@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Service
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ResourceExpansionVocabulary : SimpleVocabulary
     {
         public ResourceExpansionVocabulary()
         {
             VocabularyName = "Resource Expansion";
-            KeyPrefix = "commonDataModel.resourceexpansion.service";
+            KeyPrefix = "commonDataModel.resourceexpansion";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ResourceExpansion;
 
@@ -24,7 +24,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
 			    ItemId = group.Add(new VocabularyKey(nameof(ItemId), "Item", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
 			    MethodCode = group.Add(new VocabularyKey(nameof(MethodCode), "Method", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ObjectId = group.Add(new VocabularyKey(nameof(ObjectId), "Object", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));             
+			    ObjectId = group.Add(new VocabularyKey(nameof(ObjectId), "Object", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -36,16 +36,16 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
             #endregion
         }
 
-        public VocabularyKey ResourceGroupExpansionId { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
         public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey ItemId { get; private set; }
         public VocabularyKey MethodCode { get; private set; }
         public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey ObjectId { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey ResourceGroupExpansionId { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

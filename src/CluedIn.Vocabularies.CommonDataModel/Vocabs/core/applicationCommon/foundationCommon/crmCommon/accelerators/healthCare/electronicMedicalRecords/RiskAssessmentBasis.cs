@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class RiskAssessmentBasisVocabulary : SimpleVocabulary
     {
         public RiskAssessmentBasisVocabulary()
         {
             VocabularyName = "Risk Assessment Basis";
-            KeyPrefix = "commonDataModel.riskassessmentbasis.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.riskassessmentbasis";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.RiskAssessmentBasis;
 
@@ -18,7 +18,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    RiskAssessmentBasis = group.Add(new VocabularyKey(nameof(RiskAssessmentBasis), "Basis", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    RiskAssessmentBasisId = group.Add(new VocabularyKey(nameof(RiskAssessmentBasisId), "Risk Assessment Basis", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Portals
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class PortalLanguageVocabulary : SimpleVocabulary
     {
         public PortalLanguageVocabulary()
         {
             VocabularyName = "Portal Language";
-            KeyPrefix = "commonDataModel.portallanguage.portals";
+            KeyPrefix = "commonDataModel.portallanguage";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.PortalLanguage;
 
@@ -22,7 +22,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
 			    SystemLanguage = group.Add(new VocabularyKey(nameof(SystemLanguage), "System Language", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    PortalDisplayName = group.Add(new VocabularyKey(nameof(PortalDisplayName), "Portal Display Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Lcid = group.Add(new VocabularyKey(nameof(Lcid), "LCID", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    Lcid = group.Add(new VocabularyKey(nameof(Lcid), "LCID", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -44,14 +44,14 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
             #endregion
         }
 
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey LanguageCode { get; private set; }
+        public VocabularyKey Lcid { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey PortalDisplayName { get; private set; }
         public VocabularyKey PortalLanguageId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey LanguageCode { get; private set; }
         public VocabularyKey SystemLanguage { get; private set; }
-        public VocabularyKey Description { get; private set; }
-        public VocabularyKey PortalDisplayName { get; private set; }
-        public VocabularyKey Lcid { get; private set; }
     }
 }

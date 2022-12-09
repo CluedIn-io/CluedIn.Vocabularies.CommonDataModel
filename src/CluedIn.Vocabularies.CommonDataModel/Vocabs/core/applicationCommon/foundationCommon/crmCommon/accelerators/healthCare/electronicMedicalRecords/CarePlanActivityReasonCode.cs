@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class CarePlanActivityReasonCodeVocabulary : SimpleVocabulary
     {
         public CarePlanActivityReasonCodeVocabulary()
         {
             VocabularyName = "Care Plan Activity Reason Code";
-            KeyPrefix = "commonDataModel.careplanactivityreasoncode.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.careplanactivityreasoncode";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.CarePlanActivityReasonCode;
 
@@ -19,7 +19,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    Display = group.Add(new VocabularyKey(nameof(Display), "Display", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    System = group.Add(new VocabularyKey(nameof(System), "System", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -46,8 +46,8 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
         public VocabularyKey CarePlanActivityReasonCodeId { get; private set; }
         public VocabularyKey Code { get; private set; }
         public VocabularyKey Display { get; private set; }
-        public VocabularyKey System { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey System { get; private set; }
     }
 }

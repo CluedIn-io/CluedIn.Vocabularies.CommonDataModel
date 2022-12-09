@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Automotive
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class SalesContractVocabulary : SimpleVocabulary
     {
         public SalesContractVocabulary()
         {
             VocabularyName = "Sales Contract";
-            KeyPrefix = "commonDataModel.salescontract.automotive";
+            KeyPrefix = "commonDataModel.salescontract";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.SalesContract;
 
@@ -44,7 +44,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
 			    TotalTradeIn = group.Add(new VocabularyKey(nameof(TotalTradeIn), "Total Trade In", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
 			    TotalTradeInBase = group.Add(new VocabularyKey(nameof(TotalTradeInBase), "Total Trade In (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -130,10 +130,10 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
             #endregion
         }
 
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey ContractDate { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey EndDate { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey FinalBalloonPayment { get; private set; }
         public VocabularyKey FinalBalloonPaymentBase { get; private set; }
         public VocabularyKey Name { get; private set; }
@@ -143,6 +143,8 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
         public VocabularyKey SellingPrice { get; private set; }
         public VocabularyKey SellingPriceBase { get; private set; }
         public VocabularyKey StartDate { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey TotalAdd { get; private set; }
         public VocabularyKey TotalAddBase { get; private set; }
         public VocabularyKey TotalAddOnsCost { get; private set; }
@@ -159,7 +161,5 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
         public VocabularyKey TotalTaxesAndFeesBase { get; private set; }
         public VocabularyKey TotalTradeIn { get; private set; }
         public VocabularyKey TotalTradeInBase { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
     }
 }

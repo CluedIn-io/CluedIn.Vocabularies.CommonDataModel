@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Service
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class SchedulingGroupVocabulary : SimpleVocabulary
     {
         public SchedulingGroupVocabulary()
         {
             VocabularyName = "Scheduling Group";
-            KeyPrefix = "commonDataModel.schedulinggroup.service";
+            KeyPrefix = "commonDataModel.schedulinggroup";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.SchedulingGroup;
 
@@ -21,7 +21,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
 			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    GroupTypeCode = group.Add(new VocabularyKey(nameof(GroupTypeCode), "Group Type Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ObjectTypeCode = group.Add(new VocabularyKey(nameof(ObjectTypeCode), "Entity", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    ObjectTypeCode = group.Add(new VocabularyKey(nameof(ObjectTypeCode), "Entity", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -35,13 +35,13 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
             #endregion
         }
 
-        public VocabularyKey VersionNumber { get; private set; }
+        public VocabularyKey GroupTypeCode { get; private set; }
         public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey ObjectTypeCode { get; private set; }
         public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey GroupTypeCode { get; private set; }
-        public VocabularyKey ObjectTypeCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

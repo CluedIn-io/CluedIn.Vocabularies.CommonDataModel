@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ObservationComponentReferenceRangeVocabulary : SimpleVocabulary
     {
         public ObservationComponentReferenceRangeVocabulary()
         {
             VocabularyName = "Observation Component Reference Range";
-            KeyPrefix = "commonDataModel.observationcomponentreferencerange.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.observationcomponentreferencerange";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ObservationComponentReferenceRange;
 
@@ -17,7 +17,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ObservationcompreferencerangeId = group.Add(new VocabularyKey(nameof(ObservationcompreferencerangeId), "Observation Component Reference Range", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Portals
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class WebFileVocabulary : SimpleVocabulary
     {
         public WebFileVocabulary()
         {
             VocabularyName = "Web File";
-            KeyPrefix = "commonDataModel.webfile.portals";
+            KeyPrefix = "commonDataModel.webfile";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.WebFile;
 
@@ -35,7 +35,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
 			    ExcludeFromSearch = group.Add(new VocabularyKey(nameof(ExcludeFromSearch), "Exclude From Search", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    ExpirationDate = group.Add(new VocabularyKey(nameof(ExpirationDate), "Expiration Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ReleaseDate = group.Add(new VocabularyKey(nameof(ReleaseDate), "Release Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Title = group.Add(new VocabularyKey(nameof(Title), "Title", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Title = group.Add(new VocabularyKey(nameof(Title), "Title", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -76,27 +76,27 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
             #endregion
         }
 
-        public VocabularyKey WebFileId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey AdxCreatedByIPAddress { get; private set; }
         public VocabularyKey AdxCreatedByUsername { get; private set; }
-        public VocabularyKey DisplayDate { get; private set; }
-        public VocabularyKey DisplayOrder { get; private set; }
-        public VocabularyKey HiddenFromSitemap { get; private set; }
         public VocabularyKey AdxModifiedByIPAddress { get; private set; }
         public VocabularyKey AdxModifiedByUsername { get; private set; }
-        public VocabularyKey PartialURL { get; private set; }
-        public VocabularyKey SubjectId { get; private set; }
-        public VocabularyKey Summary { get; private set; }
         public VocabularyKey AllowOrigin { get; private set; }
         public VocabularyKey CloudBlobAddress { get; private set; }
         public VocabularyKey ContentDisposition { get; private set; }
+        public VocabularyKey DisplayDate { get; private set; }
+        public VocabularyKey DisplayOrder { get; private set; }
         public VocabularyKey EnableTracking { get; private set; }
         public VocabularyKey ExcludeFromSearch { get; private set; }
         public VocabularyKey ExpirationDate { get; private set; }
+        public VocabularyKey HiddenFromSitemap { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey PartialURL { get; private set; }
         public VocabularyKey ReleaseDate { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey SubjectId { get; private set; }
+        public VocabularyKey Summary { get; private set; }
         public VocabularyKey Title { get; private set; }
+        public VocabularyKey WebFileId { get; private set; }
     }
 }

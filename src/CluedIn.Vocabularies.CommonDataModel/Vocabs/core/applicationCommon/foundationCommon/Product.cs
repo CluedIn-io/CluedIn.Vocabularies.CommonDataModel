@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ProductVocabulary : SimpleVocabulary
     {
         public ProductVocabulary()
         {
             VocabularyName = "Product";
-            KeyPrefix = "commonDataModel.product.foundationcommon";
+            KeyPrefix = "commonDataModel.product";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Product;
 
@@ -57,7 +57,15 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
 			    SubjectId = group.Add(new VocabularyKey(nameof(SubjectId), "Subject", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    EntityImageId = group.Add(new VocabularyKey(nameof(EntityImageId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
 			    CreatedByExternalParty = group.Add(new VocabularyKey(nameof(CreatedByExternalParty), "Created By (External Party)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ModifiedByExternalParty = group.Add(new VocabularyKey(nameof(ModifiedByExternalParty), "Modified By (External Party)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    ModifiedByExternalParty = group.Add(new VocabularyKey(nameof(ModifiedByExternalParty), "Modified By (External Party)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Product Details for Banking", group =>
+            {
+			    EntityImage = group.Add(new VocabularyKey(nameof(EntityImage), "Entity Image", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Product Details for ProjectServiceAutomation", group =>
+            {
+
             });
             
             #region Incoming Relationships
@@ -156,49 +164,50 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
             #endregion
         }
 
-        public VocabularyKey ProductId { get; private set; }
+        public VocabularyKey CreatedByExternalParty { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey StageId { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
-        public VocabularyKey VendorID { get; private set; }
-        public VocabularyKey ValidFromDate { get; private set; }
-        public VocabularyKey ValidToDate { get; private set; }
         public VocabularyKey CurrentCost { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey CurrentCostBase { get; private set; }
         public VocabularyKey Description { get; private set; }
+        public VocabularyKey EntityImage { get; private set; }
+        public VocabularyKey EntityImageId { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey HierarchyPath { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
         public VocabularyKey IsKit { get; private set; }
         public VocabularyKey IsStockItem { get; private set; }
+        public VocabularyKey ModifiedByExternalParty { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey Price { get; private set; }
         public VocabularyKey PriceBase { get; private set; }
-        public VocabularyKey ProductStructure { get; private set; }
+        public VocabularyKey ProcessId { get; private set; }
+        public VocabularyKey ProductId { get; private set; }
         public VocabularyKey ProductNumber { get; private set; }
+        public VocabularyKey ProductStructure { get; private set; }
         public VocabularyKey ProductTypeCode { get; private set; }
         public VocabularyKey ProductUrl { get; private set; }
         public VocabularyKey QuantityDecimal { get; private set; }
         public VocabularyKey QuantityOnHand { get; private set; }
         public VocabularyKey Size { get; private set; }
+        public VocabularyKey StageId { get; private set; }
         public VocabularyKey StandardCost { get; private set; }
         public VocabularyKey StandardCostBase { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey StockVolume { get; private set; }
         public VocabularyKey StockWeight { get; private set; }
+        public VocabularyKey SubjectId { get; private set; }
         public VocabularyKey SupplierName { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey ValidFromDate { get; private set; }
+        public VocabularyKey ValidToDate { get; private set; }
+        public VocabularyKey VendorID { get; private set; }
         public VocabularyKey VendorName { get; private set; }
         public VocabularyKey VendorPartNumber { get; private set; }
-        public VocabularyKey HierarchyPath { get; private set; }
-        public VocabularyKey SubjectId { get; private set; }
-        public VocabularyKey EntityImageId { get; private set; }
-        public VocabularyKey CreatedByExternalParty { get; private set; }
-        public VocabularyKey ModifiedByExternalParty { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.LinkedInLeads
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class LinkedInLeadGenFormSubmissionVocabulary : SimpleVocabulary
     {
         public LinkedInLeadGenFormSubmissionVocabulary()
         {
             VocabularyName = "Linked In Lead Gen Form Submission";
-            KeyPrefix = "commonDataModel.linkedinleadgenformsubmission.linkedinleads";
+            KeyPrefix = "commonDataModel.linkedinleadgenformsubmission";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.LinkedInLeadGenFormSubmission;
 
@@ -27,7 +27,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.LinkedInLeads
 			    ProcessingState = group.Add(new VocabularyKey(nameof(ProcessingState), "Processing State", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    SubmissionDate = group.Add(new VocabularyKey(nameof(SubmissionDate), "Submission date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    LinkedInFormName = group.Add(new VocabularyKey(nameof(LinkedInFormName), "Source Form", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    LinkedInFormName = group.Add(new VocabularyKey(nameof(LinkedInFormName), "Source Form", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -51,19 +51,19 @@ namespace CluedIn.Vocabularies.CommonDataModel.LinkedInLeads
             #endregion
         }
 
-        public VocabularyKey LinkedInFormSubmissionId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey LinkedInAccountID { get; private set; }
         public VocabularyKey LinkedInCampaignID { get; private set; }
         public VocabularyKey LinkedInCreativeID { get; private set; }
+        public VocabularyKey LinkedInFormName { get; private set; }
+        public VocabularyKey LinkedInFormSubmissionId { get; private set; }
         public VocabularyKey LinkedInLeadGenFormSubmissionTextId { get; private set; }
         public VocabularyKey LinkedInUserProfileID { get; private set; }
         public VocabularyKey MatchingStatus { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey ProcessingState { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey SubmissionDate { get; private set; }
         public VocabularyKey Type { get; private set; }
-        public VocabularyKey LinkedInFormName { get; private set; }
     }
 }

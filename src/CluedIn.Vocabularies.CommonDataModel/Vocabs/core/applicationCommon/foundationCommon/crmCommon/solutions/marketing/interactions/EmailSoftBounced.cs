@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Interactions
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class EmailSoftBouncedVocabulary : SimpleVocabulary
     {
         public EmailSoftBouncedVocabulary()
         {
             VocabularyName = "Email Soft Bounced";
-            KeyPrefix = "commonDataModel.emailsoftbounced.interactions";
+            KeyPrefix = "commonDataModel.emailsoftbounced";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.EmailSoftBounced;
 
@@ -27,7 +27,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Interactions
 			    Timestamp = group.Add(new VocabularyKey(nameof(Timestamp), "Timestamp", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    BounceCategory = group.Add(new VocabularyKey(nameof(BounceCategory), "Bounce category", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    RemoteBounce = group.Add(new VocabularyKey(nameof(RemoteBounce), "Remote bounce", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ActivityId = group.Add(new VocabularyKey(nameof(ActivityId), "Activity ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    ActivityId = group.Add(new VocabularyKey(nameof(ActivityId), "Activity ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -39,19 +39,19 @@ namespace CluedIn.Vocabularies.CommonDataModel.Interactions
             #endregion
         }
 
-        public VocabularyKey InteractionId { get; private set; }
-        public VocabularyKey OrganizationId { get; private set; }
-        public VocabularyKey SendingId { get; private set; }
-        public VocabularyKey ContactId { get; private set; }
         public VocabularyKey AccountId { get; private set; }
-        public VocabularyKey MessageId { get; private set; }
+        public VocabularyKey ActivityId { get; private set; }
+        public VocabularyKey BounceCategory { get; private set; }
+        public VocabularyKey ContactId { get; private set; }
         public VocabularyKey CustomerJourneyId { get; private set; }
         public VocabularyKey CustomerJourneyIterationId { get; private set; }
-        public VocabularyKey UsageType { get; private set; }
+        public VocabularyKey InteractionId { get; private set; }
         public VocabularyKey InteractionType { get; private set; }
-        public VocabularyKey Timestamp { get; private set; }
-        public VocabularyKey BounceCategory { get; private set; }
+        public VocabularyKey MessageId { get; private set; }
+        public VocabularyKey OrganizationId { get; private set; }
         public VocabularyKey RemoteBounce { get; private set; }
-        public VocabularyKey ActivityId { get; private set; }
+        public VocabularyKey SendingId { get; private set; }
+        public VocabularyKey Timestamp { get; private set; }
+        public VocabularyKey UsageType { get; private set; }
     }
 }

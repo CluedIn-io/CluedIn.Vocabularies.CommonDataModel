@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class EncounterParticipantTypeVocabulary : SimpleVocabulary
     {
         public EncounterParticipantTypeVocabulary()
         {
             VocabularyName = "Encounter Participant Type";
-            KeyPrefix = "commonDataModel.encounterparticipanttype.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.encounterparticipanttype";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.EncounterParticipantType;
 
@@ -17,7 +17,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    EncounterParticipantTypeId = group.Add(new VocabularyKey(nameof(EncounterParticipantTypeId), "Encounter Participant Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

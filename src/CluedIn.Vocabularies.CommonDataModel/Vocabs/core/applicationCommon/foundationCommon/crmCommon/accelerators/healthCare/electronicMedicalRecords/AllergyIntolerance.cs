@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class AllergyIntoleranceVocabulary : SimpleVocabulary
     {
         public AllergyIntoleranceVocabulary()
         {
             VocabularyName = "Allergy Intolerance";
-            KeyPrefix = "commonDataModel.allergyintolerance.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.allergyintolerance";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.AllergyIntolerance;
 
@@ -21,7 +21,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    VerificationStatus = group.Add(new VocabularyKey(nameof(VerificationStatus), "Verification Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -64,9 +64,9 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
         public VocabularyKey Code { get; private set; }
         public VocabularyKey Criticality { get; private set; }
         public VocabularyKey Name { get; private set; }
-        public VocabularyKey Type { get; private set; }
-        public VocabularyKey VerificationStatus { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey Type { get; private set; }
+        public VocabularyKey VerificationStatus { get; private set; }
     }
 }

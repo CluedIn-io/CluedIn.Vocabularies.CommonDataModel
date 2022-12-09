@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class PropertyVocabulary : SimpleVocabulary
     {
         public PropertyVocabulary()
         {
             VocabularyName = "Property";
-            KeyPrefix = "commonDataModel.property.foundationcommon";
+            KeyPrefix = "commonDataModel.property";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Property;
 
@@ -43,7 +43,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
 			    IsReadOnly = group.Add(new VocabularyKey(nameof(IsReadOnly), "Read-Only", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    IsHidden = group.Add(new VocabularyKey(nameof(IsHidden), "Hidden", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    IsRequired = group.Add(new VocabularyKey(nameof(IsRequired), "Required", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    MaxLengthString = group.Add(new VocabularyKey(nameof(MaxLengthString), "Maximum String Length", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    MaxLengthString = group.Add(new VocabularyKey(nameof(MaxLengthString), "Maximum String Length", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -101,35 +101,35 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
             #endregion
         }
 
-        public VocabularyKey DynamicPropertyId { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey Description { get; private set; }
         public VocabularyKey DataType { get; private set; }
+        public VocabularyKey DefaultValueDecimal { get; private set; }
+        public VocabularyKey DefaultValueDouble { get; private set; }
         public VocabularyKey DefaultValueInteger { get; private set; }
         public VocabularyKey DefaultValueString { get; private set; }
-        public VocabularyKey DefaultValueDecimal { get; private set; }
-        public VocabularyKey OverwrittenDynamicPropertyId { get; private set; }
-        public VocabularyKey RootDynamicPropertyId { get; private set; }
-        public VocabularyKey MinValueDecimal { get; private set; }
-        public VocabularyKey MaxValueDecimal { get; private set; }
-        public VocabularyKey Precision { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey DefaultValueDouble { get; private set; }
-        public VocabularyKey MinValueDouble { get; private set; }
-        public VocabularyKey MaxValueDouble { get; private set; }
-        public VocabularyKey MinValueInteger { get; private set; }
-        public VocabularyKey MaxValueInteger { get; private set; }
-        public VocabularyKey IsReadOnly { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey DynamicPropertyId { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
         public VocabularyKey IsHidden { get; private set; }
+        public VocabularyKey IsReadOnly { get; private set; }
         public VocabularyKey IsRequired { get; private set; }
         public VocabularyKey MaxLengthString { get; private set; }
+        public VocabularyKey MaxValueDecimal { get; private set; }
+        public VocabularyKey MaxValueDouble { get; private set; }
+        public VocabularyKey MaxValueInteger { get; private set; }
+        public VocabularyKey MinValueDecimal { get; private set; }
+        public VocabularyKey MinValueDouble { get; private set; }
+        public VocabularyKey MinValueInteger { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey OverwrittenDynamicPropertyId { get; private set; }
+        public VocabularyKey Precision { get; private set; }
+        public VocabularyKey RootDynamicPropertyId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class MarketingListVocabulary : SimpleVocabulary
     {
         public MarketingListVocabulary()
         {
             VocabularyName = "Marketing List";
-            KeyPrefix = "commonDataModel.marketinglist.crmcommon";
+            KeyPrefix = "commonDataModel.marketinglist";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.MarketingList;
 
@@ -35,7 +35,11 @@ namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
 			    Source = group.Add(new VocabularyKey(nameof(Source), "Source", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));             
+			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("MarketingList Details for Marketing", group =>
+            {
+			    Issubscription = group.Add(new VocabularyKey(nameof(Issubscription), "Subscription", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -68,27 +72,28 @@ namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
             #endregion
         }
 
-        public VocabularyKey ListId { get; private set; }
-        public VocabularyKey ListName { get; private set; }
-        public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey StageId { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
         public VocabularyKey Cost { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey CostBase { get; private set; }
         public VocabularyKey CreatedFromCode { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey DoNotSendOnOptOut { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey IgnoreInactiveListMembers { get; private set; }
+        public VocabularyKey Issubscription { get; private set; }
         public VocabularyKey LastUsedOn { get; private set; }
+        public VocabularyKey ListId { get; private set; }
+        public VocabularyKey ListName { get; private set; }
         public VocabularyKey LockStatus { get; private set; }
         public VocabularyKey MemberCount { get; private set; }
         public VocabularyKey MemberType { get; private set; }
+        public VocabularyKey ProcessId { get; private set; }
         public VocabularyKey Purpose { get; private set; }
         public VocabularyKey Query { get; private set; }
         public VocabularyKey Source { get; private set; }
+        public VocabularyKey StageId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
         public VocabularyKey Type { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.LinkedInLeads
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class LinkedInAccountVocabulary : SimpleVocabulary
     {
         public LinkedInAccountVocabulary()
         {
             VocabularyName = "Linked In Account";
-            KeyPrefix = "commonDataModel.linkedinaccount.linkedinleads";
+            KeyPrefix = "commonDataModel.linkedinaccount";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.LinkedInAccount;
 
@@ -27,7 +27,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.LinkedInLeads
 			    FormSyncStatus = group.Add(new VocabularyKey(nameof(FormSyncStatus), "Form sync status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    LastSync = group.Add(new VocabularyKey(nameof(LastSync), "Last sync", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    LastsynctimestamprollupDate = group.Add(new VocabularyKey(nameof(LastsynctimestamprollupDate), "Last sync (Last Updated On)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    LastsynctimestamprollupState = group.Add(new VocabularyKey(nameof(LastsynctimestamprollupState), "Last sync (State)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    LastsynctimestamprollupState = group.Add(new VocabularyKey(nameof(LastsynctimestamprollupState), "Last sync (State)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -49,19 +49,19 @@ namespace CluedIn.Vocabularies.CommonDataModel.LinkedInLeads
             #endregion
         }
 
-        public VocabularyKey LinkedInAccountID { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey CampaignSyncStatus { get; private set; }
-        public VocabularyKey SyncEnabled { get; private set; }
+        public VocabularyKey FormSyncStatus { get; private set; }
         public VocabularyKey LastCampaignSyncDate { get; private set; }
         public VocabularyKey LastFormSyncDate { get; private set; }
-        public VocabularyKey LinkedInAccountTextID { get; private set; }
-        public VocabularyKey StatusDetails { get; private set; }
-        public VocabularyKey FormSyncStatus { get; private set; }
         public VocabularyKey LastSync { get; private set; }
         public VocabularyKey LastsynctimestamprollupDate { get; private set; }
         public VocabularyKey LastsynctimestamprollupState { get; private set; }
+        public VocabularyKey LinkedInAccountID { get; private set; }
+        public VocabularyKey LinkedInAccountTextID { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey StatusDetails { get; private set; }
+        public VocabularyKey SyncEnabled { get; private set; }
     }
 }

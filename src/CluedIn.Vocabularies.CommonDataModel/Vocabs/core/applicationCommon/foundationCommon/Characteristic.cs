@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class CharacteristicVocabulary : SimpleVocabulary
     {
         public CharacteristicVocabulary()
         {
             VocabularyName = "Characteristic";
-            KeyPrefix = "commonDataModel.characteristic.foundationcommon";
+            KeyPrefix = "commonDataModel.characteristic";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Characteristic;
 
@@ -20,7 +20,11 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
 			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "ExchangeRate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));             
+			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "ExchangeRate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Characteristic Details for ProjectServiceAutomation", group =>
+            {
+			    RequireApproval = group.Add(new VocabularyKey(nameof(RequireApproval), "Require Approval", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -62,11 +66,12 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
         }
 
         public VocabularyKey CharacteristicId { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey CharacteristicType { get; private set; }
         public VocabularyKey Description { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey RequireApproval { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
     }
 }

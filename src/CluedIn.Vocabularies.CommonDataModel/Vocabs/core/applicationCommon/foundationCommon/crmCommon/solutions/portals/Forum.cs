@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Portals
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ForumVocabulary : SimpleVocabulary
     {
         public ForumVocabulary()
         {
             VocabularyName = "Forum";
-            KeyPrefix = "commonDataModel.forum.portals";
+            KeyPrefix = "commonDataModel.forum";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Forum;
 
@@ -24,7 +24,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
 			    HiddenFromSitemap = group.Add(new VocabularyKey(nameof(HiddenFromSitemap), "Hidden From Sitemap", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    PartialURL = group.Add(new VocabularyKey(nameof(PartialURL), "Partial Url", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
 			    PostCount = group.Add(new VocabularyKey(nameof(PostCount), "Post Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    ThreadCount = group.Add(new VocabularyKey(nameof(ThreadCount), "Thread Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    ThreadCount = group.Add(new VocabularyKey(nameof(ThreadCount), "Thread Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -107,15 +107,15 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
         }
 
         public VocabularyKey CommunityForumId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey DisplayOrder { get; private set; }
         public VocabularyKey EnableQueuedPosts { get; private set; }
         public VocabularyKey HiddenFromSitemap { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey PartialURL { get; private set; }
         public VocabularyKey PostCount { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey ThreadCount { get; private set; }
     }
 }

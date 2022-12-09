@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ConnectionVocabulary : SimpleVocabulary
     {
         public ConnectionVocabulary()
         {
             VocabularyName = "Connection";
-            KeyPrefix = "commonDataModel.connection.applicationcommon";
+            KeyPrefix = "commonDataModel.connection";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Connection;
 
@@ -32,7 +32,11 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    Record2ObjectTypeCode = group.Add(new VocabularyKey(nameof(Record2ObjectTypeCode), "Type (To)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Record1ObjectTypeCode = group.Add(new VocabularyKey(nameof(Record1ObjectTypeCode), "Type (From)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Connection Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EntityImageId = group.Add(new VocabularyKey(nameof(EntityImageId), "Entity Image Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));             
+			    EntityImageId = group.Add(new VocabularyKey(nameof(EntityImageId), "Entity Image Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Connection Details for Marketing", group =>
+            {
+
             });
             
             #region Incoming Relationships
@@ -121,24 +125,24 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             #endregion
         }
 
-        public VocabularyKey OwningUser { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
         public VocabularyKey ConnectionId { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey EffectiveStart { get; private set; }
-        public VocabularyKey IsMaster { get; private set; }
-        public VocabularyKey Description { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey EffectiveEnd { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey OwningTeam { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
-        public VocabularyKey Record2ObjectTypeCode { get; private set; }
-        public VocabularyKey Record1ObjectTypeCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey EffectiveEnd { get; private set; }
+        public VocabularyKey EffectiveStart { get; private set; }
         public VocabularyKey EntityImageId { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey IsMaster { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey OwningTeam { get; private set; }
+        public VocabularyKey OwningUser { get; private set; }
+        public VocabularyKey Record1ObjectTypeCode { get; private set; }
+        public VocabularyKey Record2ObjectTypeCode { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

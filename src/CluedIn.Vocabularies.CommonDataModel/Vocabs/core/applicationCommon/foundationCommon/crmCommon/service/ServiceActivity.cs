@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Service
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ServiceActivityVocabulary : SimpleVocabulary
     {
         public ServiceActivityVocabulary()
         {
             VocabularyName = "Service Activity";
-            KeyPrefix = "commonDataModel.serviceactivity.service";
+            KeyPrefix = "commonDataModel.serviceactivity";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ServiceActivity;
 
@@ -24,7 +24,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    IsAllDayEvent = group.Add(new VocabularyKey(nameof(IsAllDayEvent), "All Day Event", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    Location = group.Add(new VocabularyKey(nameof(Location), "Delivery Location", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Location = group.Add(new VocabularyKey(nameof(Location), "Delivery Location", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -77,14 +77,14 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
 
         public VocabularyKey Description { get; private set; }
         public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey IsAllDayEvent { get; private set; }
         public VocabularyKey LastOnHoldTime { get; private set; }
+        public VocabularyKey Location { get; private set; }
         public VocabularyKey OnHoldTime { get; private set; }
         public VocabularyKey ProcessId { get; private set; }
         public VocabularyKey StageId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey TraversedPath { get; private set; }
-        public VocabularyKey IsAllDayEvent { get; private set; }
-        public VocabularyKey Location { get; private set; }
     }
 }

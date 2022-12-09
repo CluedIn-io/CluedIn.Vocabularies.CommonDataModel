@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class PropertyInstanceVocabulary : SimpleVocabulary
     {
         public PropertyInstanceVocabulary()
         {
             VocabularyName = "Property Instance";
-            KeyPrefix = "commonDataModel.propertyinstance.foundationcommon";
+            KeyPrefix = "commonDataModel.propertyinstance";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.PropertyInstance;
 
@@ -21,7 +21,11 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
 			    ValueString = group.Add(new VocabularyKey(nameof(ValueString), "String Value", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    IsValid = group.Add(new VocabularyKey(nameof(IsValid), "Is Valid", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    TransactionCurrencyId = group.Add(new VocabularyKey(nameof(TransactionCurrencyId), "Currency", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));             
+			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("PropertyInstance Details for Sales", group =>
+            {
+
             });
             
             #region Incoming Relationships
@@ -48,13 +52,13 @@ namespace CluedIn.Vocabularies.CommonDataModel.FoundationCommon
             #endregion
         }
 
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey IsValid { get; private set; }
         public VocabularyKey Name { get; private set; }
-        public VocabularyKey ValueInteger { get; private set; }
+        public VocabularyKey TransactionCurrencyId { get; private set; }
         public VocabularyKey ValueDecimal { get; private set; }
         public VocabularyKey ValueDouble { get; private set; }
+        public VocabularyKey ValueInteger { get; private set; }
         public VocabularyKey ValueString { get; private set; }
-        public VocabularyKey IsValid { get; private set; }
-        public VocabularyKey TransactionCurrencyId { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
     }
 }

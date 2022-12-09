@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class CustomRegistrationFieldVocabulary : SimpleVocabulary
     {
         public CustomRegistrationFieldVocabulary()
         {
             VocabularyName = "Custom Registration Field";
-            KeyPrefix = "commonDataModel.customregistrationfield.eventmanagement";
+            KeyPrefix = "commonDataModel.customregistrationfield";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.CustomRegistrationField;
 
@@ -20,7 +20,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
 			    Text = group.Add(new VocabularyKey(nameof(Text), "Text", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Choices = group.Add(new VocabularyKey(nameof(Choices), "Choices", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    IsRequired = group.Add(new VocabularyKey(nameof(IsRequired), "Is Required", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -52,12 +52,12 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
             #endregion
         }
 
+        public VocabularyKey Choices { get; private set; }
         public VocabularyKey CustomRegistrationFieldId { get; private set; }
+        public VocabularyKey IsRequired { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey Text { get; private set; }
-        public VocabularyKey Choices { get; private set; }
-        public VocabularyKey IsRequired { get; private set; }
         public VocabularyKey Type { get; private set; }
     }
 }

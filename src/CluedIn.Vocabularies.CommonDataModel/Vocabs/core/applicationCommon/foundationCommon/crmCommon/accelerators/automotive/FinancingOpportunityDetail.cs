@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Automotive
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class FinancingOpportunityDetailVocabulary : SimpleVocabulary
     {
         public FinancingOpportunityDetailVocabulary()
         {
             VocabularyName = "Financing Opportunity Detail";
-            KeyPrefix = "commonDataModel.financingopportunitydetail.automotive";
+            KeyPrefix = "commonDataModel.financingopportunitydetail";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.FinancingOpportunityDetail;
 
@@ -23,7 +23,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
 			    Value = group.Add(new VocabularyKey(nameof(Value), "Value", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
 			    ValueBase = group.Add(new VocabularyKey(nameof(ValueBase), "Value (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -48,15 +48,15 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
             #endregion
         }
 
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey AmountLimit { get; private set; }
         public VocabularyKey AmountType { get; private set; }
         public VocabularyKey BalanceType { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey FinancingOpportunityDetailId { get; private set; }
         public VocabularyKey Name { get; private set; }
-        public VocabularyKey Value { get; private set; }
-        public VocabularyKey ValueBase { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey Value { get; private set; }
+        public VocabularyKey ValueBase { get; private set; }
     }
 }

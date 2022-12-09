@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Banking
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class CompanyOnboardingVocabulary : SimpleVocabulary
     {
         public CompanyOnboardingVocabulary()
         {
             VocabularyName = "Company Onboarding";
-            KeyPrefix = "commonDataModel.companyonboarding.banking";
+            KeyPrefix = "commonDataModel.companyonboarding";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.CompanyOnboarding;
 
@@ -29,7 +29,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Banking
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), "Time Zone Rule Version Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -48,7 +48,6 @@ namespace CluedIn.Vocabularies.CommonDataModel.Banking
 
         public VocabularyKey ActiveStageStartedOn { get; private set; }
         public VocabularyKey BpfDuration { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey BusinessProcessFlowInstanceId { get; private set; }
         public VocabularyKey CompletedOn { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
@@ -56,6 +55,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Banking
         public VocabularyKey ImportSequenceNumber { get; private set; }
         public VocabularyKey ModifiedOn { get; private set; }
         public VocabularyKey ModifiedOnBehalfBy { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }

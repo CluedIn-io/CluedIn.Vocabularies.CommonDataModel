@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class AppointmentServiceCategoryVocabulary : SimpleVocabulary
     {
         public AppointmentServiceCategoryVocabulary()
         {
             VocabularyName = "Appointment Service Category";
-            KeyPrefix = "commonDataModel.appointmentservicecategory.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.appointmentservicecategory";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.AppointmentServiceCategory;
 
@@ -17,7 +17,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    AppointmentServiceCategoryId = group.Add(new VocabularyKey(nameof(AppointmentServiceCategoryId), "Appointment Service Category", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

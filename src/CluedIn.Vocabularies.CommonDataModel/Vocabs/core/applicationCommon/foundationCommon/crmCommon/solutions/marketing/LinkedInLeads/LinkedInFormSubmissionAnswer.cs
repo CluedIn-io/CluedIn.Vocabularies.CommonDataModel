@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.LinkedInLeads
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class LinkedInFormSubmissionAnswerVocabulary : SimpleVocabulary
     {
         public LinkedInFormSubmissionAnswerVocabulary()
         {
             VocabularyName = "Linked In Form Submission Answer";
-            KeyPrefix = "commonDataModel.linkedinformsubmissionanswer.linkedinleads";
+            KeyPrefix = "commonDataModel.linkedinformsubmissionanswer";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.LinkedInFormSubmissionAnswer;
 
@@ -21,7 +21,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.LinkedInLeads
 			    AnswerId = group.Add(new VocabularyKey(nameof(AnswerId), "Answer Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    AnswerFormat = group.Add(new VocabularyKey(nameof(AnswerFormat), "Answer format", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    AnswerText = group.Add(new VocabularyKey(nameof(AnswerText), "Answer text", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    LinkedInQuestionID = group.Add(new VocabularyKey(nameof(LinkedInQuestionID), "LinkedIn question ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    LinkedInQuestionID = group.Add(new VocabularyKey(nameof(LinkedInQuestionID), "LinkedIn question ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -43,13 +43,13 @@ namespace CluedIn.Vocabularies.CommonDataModel.LinkedInLeads
             #endregion
         }
 
+        public VocabularyKey AnswerFormat { get; private set; }
+        public VocabularyKey AnswerId { get; private set; }
+        public VocabularyKey AnswerText { get; private set; }
         public VocabularyKey LinkedInFormAnswerId { get; private set; }
+        public VocabularyKey LinkedInQuestionID { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey AnswerId { get; private set; }
-        public VocabularyKey AnswerFormat { get; private set; }
-        public VocabularyKey AnswerText { get; private set; }
-        public VocabularyKey LinkedInQuestionID { get; private set; }
     }
 }

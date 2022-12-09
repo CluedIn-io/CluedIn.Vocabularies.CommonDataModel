@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class BookingAlertStatusVocabulary : SimpleVocabulary
     {
         public BookingAlertStatusVocabulary()
         {
             VocabularyName = "Booking Alert Status";
-            KeyPrefix = "commonDataModel.bookingalertstatus.scheduling";
+            KeyPrefix = "commonDataModel.bookingalertstatus";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.BookingAlertStatus;
 
@@ -20,7 +20,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    InternalFlags = group.Add(new VocabularyKey(nameof(InternalFlags), "Internal Flags", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    NextTimeToShow = group.Add(new VocabularyKey(nameof(NextTimeToShow), "Next Time To Show", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Status = group.Add(new VocabularyKey(nameof(Status), "Alert Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Status = group.Add(new VocabularyKey(nameof(Status), "Alert Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -42,11 +42,11 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
         }
 
         public VocabularyKey BookingAlertStatusId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey InternalFlags { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey NextTimeToShow { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
         public VocabularyKey Status { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ParticipatingOrganizationVocabulary : SimpleVocabulary
     {
         public ParticipatingOrganizationVocabulary()
         {
             VocabularyName = "Participating Organization";
-            KeyPrefix = "commonDataModel.participatingorganization.nonprofitiati";
+            KeyPrefix = "commonDataModel.participatingorganization";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ParticipatingOrganization;
 
@@ -19,7 +19,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
 			    ParticipatingOrganizationId = group.Add(new VocabularyKey(nameof(ParticipatingOrganizationId), "Participating Organization", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    OrganizationRole = group.Add(new VocabularyKey(nameof(OrganizationRole), "Organization Role", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -46,9 +46,9 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
         }
 
         public VocabularyKey Name { get; private set; }
+        public VocabularyKey OrganizationRole { get; private set; }
         public VocabularyKey ParticipatingOrganizationActivityId { get; private set; }
         public VocabularyKey ParticipatingOrganizationId { get; private set; }
-        public VocabularyKey OrganizationRole { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
     }

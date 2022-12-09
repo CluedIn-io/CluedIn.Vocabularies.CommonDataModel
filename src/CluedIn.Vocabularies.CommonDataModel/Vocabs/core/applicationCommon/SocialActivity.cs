@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class SocialActivityVocabulary : SimpleVocabulary
     {
         public SocialActivityVocabulary()
         {
             VocabularyName = "Social Activity";
-            KeyPrefix = "commonDataModel.socialactivity.applicationcommon";
+            KeyPrefix = "commonDataModel.socialactivity";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.SocialActivity;
 
@@ -31,7 +31,13 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    PostToProfileId = group.Add(new VocabularyKey(nameof(PostToProfileId), "Posted To", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    SocialAdditionalParams = group.Add(new VocabularyKey(nameof(SocialAdditionalParams), "Social Additional Parameters", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    OnHoldTime = group.Add(new VocabularyKey(nameof(OnHoldTime), "On Hold Time (Minutes)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    LastOnHoldTime = group.Add(new VocabularyKey(nameof(LastOnHoldTime), "Last On Hold Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    LastOnHoldTime = group.Add(new VocabularyKey(nameof(LastOnHoldTime), "Last On Hold Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("SocialActivity Details for CrmCommon", group =>
+            {
+			    From = group.Add(new VocabularyKey(nameof(From), "From", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Resources = group.Add(new VocabularyKey(nameof(Resources), "Resources", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    To = group.Add(new VocabularyKey(nameof(To), "To", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -84,22 +90,25 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
         }
 
         public VocabularyKey Description { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey From { get; private set; }
+        public VocabularyKey InResponseTo { get; private set; }
+        public VocabularyKey LastOnHoldTime { get; private set; }
+        public VocabularyKey OnHoldTime { get; private set; }
+        public VocabularyKey PostedOn { get; private set; }
+        public VocabularyKey PostId { get; private set; }
+        public VocabularyKey PostMessageType { get; private set; }
+        public VocabularyKey PostToProfileId { get; private set; }
+        public VocabularyKey PostURL { get; private set; }
         public VocabularyKey ProcessId { get; private set; }
+        public VocabularyKey Resources { get; private set; }
+        public VocabularyKey SentimentValue { get; private set; }
+        public VocabularyKey SocialAdditionalParams { get; private set; }
         public VocabularyKey StageId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
-        public VocabularyKey SentimentValue { get; private set; }
-        public VocabularyKey PostedOn { get; private set; }
-        public VocabularyKey PostURL { get; private set; }
-        public VocabularyKey InResponseTo { get; private set; }
-        public VocabularyKey PostMessageType { get; private set; }
-        public VocabularyKey PostId { get; private set; }
         public VocabularyKey ThreadId { get; private set; }
-        public VocabularyKey PostToProfileId { get; private set; }
-        public VocabularyKey SocialAdditionalParams { get; private set; }
-        public VocabularyKey OnHoldTime { get; private set; }
-        public VocabularyKey LastOnHoldTime { get; private set; }
+        public VocabularyKey To { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class PricingDimensionFieldNameVocabulary : SimpleVocabulary
     {
         public PricingDimensionFieldNameVocabulary()
         {
             VocabularyName = "Pricing Dimension Field Name";
-            KeyPrefix = "commonDataModel.pricingdimensionfieldname.projectserviceautomation";
+            KeyPrefix = "commonDataModel.pricingdimensionfieldname";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.PricingDimensionFieldName;
 
@@ -26,7 +26,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    EntityLogicalName = group.Add(new VocabularyKey(nameof(EntityLogicalName), "Entity Logical Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    FieldName = group.Add(new VocabularyKey(nameof(FieldName), "Field Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    FieldName = group.Add(new VocabularyKey(nameof(FieldName), "Field Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -43,18 +43,18 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
-        public VocabularyKey DimensionfieldnameId { get; private set; }
         public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
         public VocabularyKey Description { get; private set; }
+        public VocabularyKey DimensionfieldnameId { get; private set; }
         public VocabularyKey EntityLogicalName { get; private set; }
         public VocabularyKey FieldName { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

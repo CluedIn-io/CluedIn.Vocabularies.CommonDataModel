@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class UserVocabulary : SimpleVocabulary
     {
         public UserVocabulary()
         {
             VocabularyName = "User";
-            KeyPrefix = "commonDataModel.user.applicationcommon";
+            KeyPrefix = "commonDataModel.user";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.User;
 
@@ -125,7 +125,15 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    ApplicationId = group.Add(new VocabularyKey(nameof(ApplicationId), "Application ID", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
 			    ApplicationIdUri = group.Add(new VocabularyKey(nameof(ApplicationIdUri), "Application ID URI", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    AzureActiveDirectoryObjectId = group.Add(new VocabularyKey(nameof(AzureActiveDirectoryObjectId), "Azure AD Object ID", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    IdentityId = group.Add(new VocabularyKey(nameof(IdentityId), "Unique user identity id", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    IdentityId = group.Add(new VocabularyKey(nameof(IdentityId), "Unique user identity id", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("User Details for ProjectCommon", group =>
+            {
+			    GDPROptOut = group.Add(new VocabularyKey(nameof(GDPROptOut), "GDPR Optout", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("User Details for Service", group =>
+            {
+
             });
             
             #region Incoming Relationships
@@ -3722,117 +3730,118 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             #endregion
         }
 
-        public VocabularyKey SystemUserId { get; private set; }
-        public VocabularyKey FirstName { get; private set; }
-        public VocabularyKey Salutation { get; private set; }
-        public VocabularyKey MiddleName { get; private set; }
-        public VocabularyKey LastName { get; private set; }
-        public VocabularyKey PersonalEMailAddress { get; private set; }
-        public VocabularyKey FullName { get; private set; }
-        public VocabularyKey NickName { get; private set; }
-        public VocabularyKey Title { get; private set; }
-        public VocabularyKey InternalEMailAddress { get; private set; }
-        public VocabularyKey JobTitle { get; private set; }
-        public VocabularyKey MobileAlertEMail { get; private set; }
-        public VocabularyKey PreferredEmailCode { get; private set; }
-        public VocabularyKey HomePhone { get; private set; }
-        public VocabularyKey MobilePhone { get; private set; }
-        public VocabularyKey PreferredPhoneCode { get; private set; }
-        public VocabularyKey PreferredAddressCode { get; private set; }
-        public VocabularyKey PhotoUrl { get; private set; }
-        public VocabularyKey DomainName { get; private set; }
-        public VocabularyKey PassportLo { get; private set; }
-        public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey PassportHi { get; private set; }
-        public VocabularyKey DisabledReason { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey EmployeeId { get; private set; }
-        public VocabularyKey IsDisabled { get; private set; }
-        public VocabularyKey GovernmentId { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
+        public VocabularyKey AccessMode { get; private set; }
         public VocabularyKey Address1AddressId { get; private set; }
         public VocabularyKey Address1AddressTypeCode { get; private set; }
-        public VocabularyKey Address1Name { get; private set; }
+        public VocabularyKey Address1City { get; private set; }
+        public VocabularyKey Address1Composite { get; private set; }
+        public VocabularyKey Address1Country { get; private set; }
+        public VocabularyKey Address1County { get; private set; }
+        public VocabularyKey Address1Fax { get; private set; }
+        public VocabularyKey Address1Latitude { get; private set; }
         public VocabularyKey Address1Line1 { get; private set; }
         public VocabularyKey Address1Line2 { get; private set; }
         public VocabularyKey Address1Line3 { get; private set; }
-        public VocabularyKey Address1City { get; private set; }
-        public VocabularyKey Address1StateOrProvince { get; private set; }
-        public VocabularyKey Address1County { get; private set; }
-        public VocabularyKey Address1Country { get; private set; }
-        public VocabularyKey Address1PostOfficeBox { get; private set; }
-        public VocabularyKey Address1PostalCode { get; private set; }
-        public VocabularyKey Address1UTCOffset { get; private set; }
-        public VocabularyKey Address1UPSZone { get; private set; }
-        public VocabularyKey Address1Latitude { get; private set; }
-        public VocabularyKey Address1Telephone1 { get; private set; }
         public VocabularyKey Address1Longitude { get; private set; }
+        public VocabularyKey Address1Name { get; private set; }
+        public VocabularyKey Address1PostalCode { get; private set; }
+        public VocabularyKey Address1PostOfficeBox { get; private set; }
         public VocabularyKey Address1ShippingMethodCode { get; private set; }
+        public VocabularyKey Address1StateOrProvince { get; private set; }
+        public VocabularyKey Address1Telephone1 { get; private set; }
         public VocabularyKey Address1Telephone2 { get; private set; }
         public VocabularyKey Address1Telephone3 { get; private set; }
-        public VocabularyKey Address1Fax { get; private set; }
+        public VocabularyKey Address1UPSZone { get; private set; }
+        public VocabularyKey Address1UTCOffset { get; private set; }
         public VocabularyKey Address2AddressId { get; private set; }
         public VocabularyKey Address2AddressTypeCode { get; private set; }
-        public VocabularyKey Address2Name { get; private set; }
+        public VocabularyKey Address2City { get; private set; }
+        public VocabularyKey Address2Composite { get; private set; }
+        public VocabularyKey Address2Country { get; private set; }
+        public VocabularyKey Address2County { get; private set; }
+        public VocabularyKey Address2Fax { get; private set; }
+        public VocabularyKey Address2Latitude { get; private set; }
         public VocabularyKey Address2Line1 { get; private set; }
         public VocabularyKey Address2Line2 { get; private set; }
         public VocabularyKey Address2Line3 { get; private set; }
-        public VocabularyKey Address2City { get; private set; }
-        public VocabularyKey Address2StateOrProvince { get; private set; }
-        public VocabularyKey Address2County { get; private set; }
-        public VocabularyKey Address2Country { get; private set; }
-        public VocabularyKey Address2PostOfficeBox { get; private set; }
-        public VocabularyKey Address2PostalCode { get; private set; }
-        public VocabularyKey Address2UTCOffset { get; private set; }
-        public VocabularyKey Address2UPSZone { get; private set; }
-        public VocabularyKey Address2Latitude { get; private set; }
-        public VocabularyKey Address2Telephone1 { get; private set; }
         public VocabularyKey Address2Longitude { get; private set; }
+        public VocabularyKey Address2Name { get; private set; }
+        public VocabularyKey Address2PostalCode { get; private set; }
+        public VocabularyKey Address2PostOfficeBox { get; private set; }
         public VocabularyKey Address2ShippingMethodCode { get; private set; }
+        public VocabularyKey Address2StateOrProvince { get; private set; }
+        public VocabularyKey Address2Telephone1 { get; private set; }
         public VocabularyKey Address2Telephone2 { get; private set; }
         public VocabularyKey Address2Telephone3 { get; private set; }
-        public VocabularyKey Address2Fax { get; private set; }
-        public VocabularyKey Skills { get; private set; }
-        public VocabularyKey DisplayInServiceViews { get; private set; }
-        public VocabularyKey CalendarId { get; private set; }
-        public VocabularyKey SetupUser { get; private set; }
-        public VocabularyKey WindowsLiveID { get; private set; }
-        public VocabularyKey IncomingEmailDeliveryMethod { get; private set; }
-        public VocabularyKey OutgoingEmailDeliveryMethod { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey AccessMode { get; private set; }
-        public VocabularyKey InviteStatusCode { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey YomiFullName { get; private set; }
-        public VocabularyKey YomiLastName { get; private set; }
-        public VocabularyKey YomiMiddleName { get; private set; }
-        public VocabularyKey YomiFirstName { get; private set; }
-        public VocabularyKey IsIntegrationUser { get; private set; }
-        public VocabularyKey DefaultFiltersPopulated { get; private set; }
-        public VocabularyKey EmailRouterAccessApproval { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
-        public VocabularyKey CALType { get; private set; }
-        public VocabularyKey IsLicensed { get; private set; }
-        public VocabularyKey IsSyncWithDirectory { get; private set; }
-        public VocabularyKey YammerEmailAddress { get; private set; }
-        public VocabularyKey YammerUserId { get; private set; }
-        public VocabularyKey DefaultMailbox { get; private set; }
-        public VocabularyKey UserLicenseType { get; private set; }
-        public VocabularyKey EntityImageId { get; private set; }
-        public VocabularyKey Address2Composite { get; private set; }
-        public VocabularyKey Address1Composite { get; private set; }
-        public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey StageId { get; private set; }
-        public VocabularyKey IsEmailAddressApprovedByO365Admin { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
-        public VocabularyKey SharePointEmailAddress { get; private set; }
-        public VocabularyKey MobileOfflineProfileId { get; private set; }
-        public VocabularyKey DefaultOdbFolderName { get; private set; }
+        public VocabularyKey Address2UPSZone { get; private set; }
+        public VocabularyKey Address2UTCOffset { get; private set; }
         public VocabularyKey ApplicationId { get; private set; }
         public VocabularyKey ApplicationIdUri { get; private set; }
         public VocabularyKey AzureActiveDirectoryObjectId { get; private set; }
+        public VocabularyKey CalendarId { get; private set; }
+        public VocabularyKey CALType { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey DefaultFiltersPopulated { get; private set; }
+        public VocabularyKey DefaultMailbox { get; private set; }
+        public VocabularyKey DefaultOdbFolderName { get; private set; }
+        public VocabularyKey DisabledReason { get; private set; }
+        public VocabularyKey DisplayInServiceViews { get; private set; }
+        public VocabularyKey DomainName { get; private set; }
+        public VocabularyKey EmailRouterAccessApproval { get; private set; }
+        public VocabularyKey EmployeeId { get; private set; }
+        public VocabularyKey EntityImageId { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey FirstName { get; private set; }
+        public VocabularyKey FullName { get; private set; }
+        public VocabularyKey GDPROptOut { get; private set; }
+        public VocabularyKey GovernmentId { get; private set; }
+        public VocabularyKey HomePhone { get; private set; }
         public VocabularyKey IdentityId { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey IncomingEmailDeliveryMethod { get; private set; }
+        public VocabularyKey InternalEMailAddress { get; private set; }
+        public VocabularyKey InviteStatusCode { get; private set; }
+        public VocabularyKey IsDisabled { get; private set; }
+        public VocabularyKey IsEmailAddressApprovedByO365Admin { get; private set; }
+        public VocabularyKey IsIntegrationUser { get; private set; }
+        public VocabularyKey IsLicensed { get; private set; }
+        public VocabularyKey IsSyncWithDirectory { get; private set; }
+        public VocabularyKey JobTitle { get; private set; }
+        public VocabularyKey LastName { get; private set; }
+        public VocabularyKey MiddleName { get; private set; }
+        public VocabularyKey MobileAlertEMail { get; private set; }
+        public VocabularyKey MobileOfflineProfileId { get; private set; }
+        public VocabularyKey MobilePhone { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey NickName { get; private set; }
+        public VocabularyKey OutgoingEmailDeliveryMethod { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey PassportHi { get; private set; }
+        public VocabularyKey PassportLo { get; private set; }
+        public VocabularyKey PersonalEMailAddress { get; private set; }
+        public VocabularyKey PhotoUrl { get; private set; }
+        public VocabularyKey PreferredAddressCode { get; private set; }
+        public VocabularyKey PreferredEmailCode { get; private set; }
+        public VocabularyKey PreferredPhoneCode { get; private set; }
+        public VocabularyKey ProcessId { get; private set; }
+        public VocabularyKey Salutation { get; private set; }
+        public VocabularyKey SetupUser { get; private set; }
+        public VocabularyKey SharePointEmailAddress { get; private set; }
+        public VocabularyKey Skills { get; private set; }
+        public VocabularyKey StageId { get; private set; }
+        public VocabularyKey SystemUserId { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey Title { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
+        public VocabularyKey UserLicenseType { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
+        public VocabularyKey WindowsLiveID { get; private set; }
+        public VocabularyKey YammerEmailAddress { get; private set; }
+        public VocabularyKey YammerUserId { get; private set; }
+        public VocabularyKey YomiFirstName { get; private set; }
+        public VocabularyKey YomiFullName { get; private set; }
+        public VocabularyKey YomiLastName { get; private set; }
+        public VocabularyKey YomiMiddleName { get; private set; }
     }
 }

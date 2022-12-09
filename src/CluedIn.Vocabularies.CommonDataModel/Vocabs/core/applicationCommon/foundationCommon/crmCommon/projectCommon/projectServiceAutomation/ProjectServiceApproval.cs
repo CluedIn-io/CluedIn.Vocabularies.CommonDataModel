@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ProjectServiceApprovalVocabulary : SimpleVocabulary
     {
         public ProjectServiceApprovalVocabulary()
         {
             VocabularyName = "Project Service Approval";
-            KeyPrefix = "commonDataModel.projectserviceapproval.projectserviceautomation";
+            KeyPrefix = "commonDataModel.projectserviceapproval";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ProjectServiceApproval;
 
@@ -59,7 +59,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    Resources = group.Add(new VocabularyKey(nameof(Resources), "Resources", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Customers = group.Add(new VocabularyKey(nameof(Customers), "Customers", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Partners = group.Add(new VocabularyKey(nameof(Partners), "Outsource Vendors", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ApprovalStatus = group.Add(new VocabularyKey(nameof(ApprovalStatus), "Approval Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    ApprovalStatus = group.Add(new VocabularyKey(nameof(ApprovalStatus), "Approval Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -85,51 +85,51 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
-        public VocabularyKey ActualEnd { get; private set; }
-        public VocabularyKey IsBilled { get; private set; }
-        public VocabularyKey Description { get; private set; }
-        public VocabularyKey ActivityTypeCode { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey ScheduledEnd { get; private set; }
-        public VocabularyKey ScheduledDurationMinutes { get; private set; }
-        public VocabularyKey ActualDurationMinutes { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey ActualStart { get; private set; }
-        public VocabularyKey PriorityCode { get; private set; }
-        public VocabularyKey Subject { get; private set; }
-        public VocabularyKey IsWorkflowCreated { get; private set; }
-        public VocabularyKey ScheduledStart { get; private set; }
-        public VocabularyKey InstanceTypeCode { get; private set; }
-        public VocabularyKey SeriesId { get; private set; }
-        public VocabularyKey IsRegularActivity { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
-        public VocabularyKey LeftVoiceMail { get; private set; }
-        public VocabularyKey Community { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
-        public VocabularyKey IsMapiPrivate { get; private set; }
-        public VocabularyKey ExchangeWebLink { get; private set; }
-        public VocabularyKey ExchangeItemId { get; private set; }
-        public VocabularyKey DeliveryPriorityCode { get; private set; }
-        public VocabularyKey SentOn { get; private set; }
-        public VocabularyKey DeliveryLastAttemptedOn { get; private set; }
-        public VocabularyKey SenderMailboxId { get; private set; }
-        public VocabularyKey PostponeActivityProcessingUntil { get; private set; }
-        public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey StageId { get; private set; }
         public VocabularyKey ActivityAdditionalParams { get; private set; }
-        public VocabularyKey OnHoldTime { get; private set; }
-        public VocabularyKey LastOnHoldTime { get; private set; }
-        public VocabularyKey SortDate { get; private set; }
-        public VocabularyKey From { get; private set; }
-        public VocabularyKey To { get; private set; }
-        public VocabularyKey CC { get; private set; }
+        public VocabularyKey ActivityTypeCode { get; private set; }
+        public VocabularyKey ActualDurationMinutes { get; private set; }
+        public VocabularyKey ActualEnd { get; private set; }
+        public VocabularyKey ActualStart { get; private set; }
+        public VocabularyKey ApprovalStatus { get; private set; }
         public VocabularyKey BCC { get; private set; }
-        public VocabularyKey RequiredAttendees { get; private set; }
+        public VocabularyKey CC { get; private set; }
+        public VocabularyKey Community { get; private set; }
+        public VocabularyKey Customers { get; private set; }
+        public VocabularyKey DeliveryLastAttemptedOn { get; private set; }
+        public VocabularyKey DeliveryPriorityCode { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey ExchangeItemId { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey ExchangeWebLink { get; private set; }
+        public VocabularyKey From { get; private set; }
+        public VocabularyKey InstanceTypeCode { get; private set; }
+        public VocabularyKey IsBilled { get; private set; }
+        public VocabularyKey IsMapiPrivate { get; private set; }
+        public VocabularyKey IsRegularActivity { get; private set; }
+        public VocabularyKey IsWorkflowCreated { get; private set; }
+        public VocabularyKey LastOnHoldTime { get; private set; }
+        public VocabularyKey LeftVoiceMail { get; private set; }
+        public VocabularyKey OnHoldTime { get; private set; }
         public VocabularyKey OptionalAttendees { get; private set; }
         public VocabularyKey Organizer { get; private set; }
-        public VocabularyKey Resources { get; private set; }
-        public VocabularyKey Customers { get; private set; }
         public VocabularyKey Partners { get; private set; }
-        public VocabularyKey ApprovalStatus { get; private set; }
+        public VocabularyKey PostponeActivityProcessingUntil { get; private set; }
+        public VocabularyKey PriorityCode { get; private set; }
+        public VocabularyKey ProcessId { get; private set; }
+        public VocabularyKey RequiredAttendees { get; private set; }
+        public VocabularyKey Resources { get; private set; }
+        public VocabularyKey ScheduledDurationMinutes { get; private set; }
+        public VocabularyKey ScheduledEnd { get; private set; }
+        public VocabularyKey ScheduledStart { get; private set; }
+        public VocabularyKey SenderMailboxId { get; private set; }
+        public VocabularyKey SentOn { get; private set; }
+        public VocabularyKey SeriesId { get; private set; }
+        public VocabularyKey SortDate { get; private set; }
+        public VocabularyKey StageId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey Subject { get; private set; }
+        public VocabularyKey To { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
     }
 }

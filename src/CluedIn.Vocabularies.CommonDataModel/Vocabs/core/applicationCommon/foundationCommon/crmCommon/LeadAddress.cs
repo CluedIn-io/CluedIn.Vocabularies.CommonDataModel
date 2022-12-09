@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class LeadAddressVocabulary : SimpleVocabulary
     {
         public LeadAddressVocabulary()
         {
             VocabularyName = "Lead Address";
-            KeyPrefix = "commonDataModel.leadaddress.crmcommon";
+            KeyPrefix = "commonDataModel.leadaddress";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.LeadAddress;
 
@@ -44,7 +44,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
 			    Telephone3 = group.Add(new VocabularyKey(nameof(Telephone3), "Telephone 3", VocabularyKeyDataType.PhoneNumber, VocabularyKeyVisibility.Visible)); 
 			    UPSZone = group.Add(new VocabularyKey(nameof(UPSZone), "UPS Zone", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    UTCOffset = group.Add(new VocabularyKey(nameof(UTCOffset), "UTC Offset", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));             
+			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -61,27 +61,25 @@ namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
             #endregion
         }
 
-        public VocabularyKey LeadAddressId { get; private set; }
-        public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey AddressNumber { get; private set; }
         public VocabularyKey AddressTypeCode { get; private set; }
         public VocabularyKey City { get; private set; }
         public VocabularyKey Composite { get; private set; }
         public VocabularyKey Country { get; private set; }
         public VocabularyKey County { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey Fax { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
         public VocabularyKey Latitude { get; private set; }
+        public VocabularyKey LeadAddressId { get; private set; }
         public VocabularyKey Line1 { get; private set; }
         public VocabularyKey Line2 { get; private set; }
         public VocabularyKey Line3 { get; private set; }
         public VocabularyKey Longitude { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey PostalCode { get; private set; }
         public VocabularyKey PostOfficeBox { get; private set; }
         public VocabularyKey ShippingMethodCode { get; private set; }
@@ -89,8 +87,10 @@ namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
         public VocabularyKey Telephone1 { get; private set; }
         public VocabularyKey Telephone2 { get; private set; }
         public VocabularyKey Telephone3 { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
         public VocabularyKey UPSZone { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
         public VocabularyKey UTCOffset { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

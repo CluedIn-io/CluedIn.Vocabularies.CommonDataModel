@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class SLAItemVocabulary : SimpleVocabulary
     {
         public SLAItemVocabulary()
         {
             VocabularyName = "SLA Item";
-            KeyPrefix = "commonDataModel.slaitem.applicationcommon";
+            KeyPrefix = "commonDataModel.slaitem";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.SLAItem;
 
@@ -34,7 +34,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    FailureAfter = group.Add(new VocabularyKey(nameof(FailureAfter), "Failure After", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    WarnAfter = group.Add(new VocabularyKey(nameof(WarnAfter), "Warn After", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    OwningUser = group.Add(new VocabularyKey(nameof(OwningUser), "Owning User", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    WorkflowId = group.Add(new VocabularyKey(nameof(WorkflowId), "Workflow ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    WorkflowId = group.Add(new VocabularyKey(nameof(WorkflowId), "Workflow ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -53,26 +53,26 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             #endregion
         }
 
-        public VocabularyKey SLAItemId { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey OwningBusinessUnit { get; private set; }
-        public VocabularyKey Description { get; private set; }
-        public VocabularyKey RelatedField { get; private set; }
-        public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
         public VocabularyKey ApplicableWhenXml { get; private set; }
-        public VocabularyKey SuccessConditionsXml { get; private set; }
-        public VocabularyKey SolutionId { get; private set; }
         public VocabularyKey ComponentState { get; private set; }
-        public VocabularyKey OverwriteTime { get; private set; }
-        public VocabularyKey IsManaged { get; private set; }
-        public VocabularyKey SLAItemIdUnique { get; private set; }
-        public VocabularyKey SequenceNumber { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey FailureAfter { get; private set; }
-        public VocabularyKey WarnAfter { get; private set; }
+        public VocabularyKey IsManaged { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverwriteTime { get; private set; }
+        public VocabularyKey OwningBusinessUnit { get; private set; }
         public VocabularyKey OwningUser { get; private set; }
+        public VocabularyKey RelatedField { get; private set; }
+        public VocabularyKey SequenceNumber { get; private set; }
+        public VocabularyKey SLAItemId { get; private set; }
+        public VocabularyKey SLAItemIdUnique { get; private set; }
+        public VocabularyKey SolutionId { get; private set; }
+        public VocabularyKey SuccessConditionsXml { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
+        public VocabularyKey WarnAfter { get; private set; }
         public VocabularyKey WorkflowId { get; private set; }
     }
 }

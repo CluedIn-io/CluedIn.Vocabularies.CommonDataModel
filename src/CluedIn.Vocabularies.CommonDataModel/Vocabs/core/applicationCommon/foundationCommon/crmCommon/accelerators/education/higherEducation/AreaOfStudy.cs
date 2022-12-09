@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class AreaOfStudyVocabulary : SimpleVocabulary
     {
         public AreaOfStudyVocabulary()
         {
             VocabularyName = "Area Of Study";
-            KeyPrefix = "commonDataModel.areaofstudy.highereducation";
+            KeyPrefix = "commonDataModel.areaofstudy";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.AreaOfStudy;
 
@@ -22,7 +22,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
 			    ExternalIdentifier = group.Add(new VocabularyKey(nameof(ExternalIdentifier), "External Identifier", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ExternalSourceSystem = group.Add(new VocabularyKey(nameof(ExternalSourceSystem), "External Source System", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    MinimumRequiredGPA = group.Add(new VocabularyKey(nameof(MinimumRequiredGPA), "Minimum Required GPA", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    RequiredCredits = group.Add(new VocabularyKey(nameof(RequiredCredits), "Required Credits", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));             
+			    RequiredCredits = group.Add(new VocabularyKey(nameof(RequiredCredits), "Required Credits", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -44,13 +44,13 @@ namespace CluedIn.Vocabularies.CommonDataModel.HigherEducation
         }
 
         public VocabularyKey AreaOfStudyId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey Code { get; private set; }
         public VocabularyKey ExternalIdentifier { get; private set; }
         public VocabularyKey ExternalSourceSystem { get; private set; }
         public VocabularyKey MinimumRequiredGPA { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey RequiredCredits { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

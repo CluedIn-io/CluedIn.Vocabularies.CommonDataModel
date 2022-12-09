@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Service
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class EntitlementVocabulary : SimpleVocabulary
     {
         public EntitlementVocabulary()
         {
             VocabularyName = "Entitlement";
-            KeyPrefix = "commonDataModel.entitlement.service";
+            KeyPrefix = "commonDataModel.entitlement";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Entitlement;
 
@@ -33,7 +33,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TotalTerms = group.Add(new VocabularyKey(nameof(TotalTerms), "Total Terms", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
 			    IsDefault = group.Add(new VocabularyKey(nameof(IsDefault), "Is Default", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));             
+			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -72,25 +72,25 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
             #endregion
         }
 
-        public VocabularyKey EntitlementId { get; private set; }
+        public VocabularyKey AllocationTypeCode { get; private set; }
+        public VocabularyKey DecreaseRemainingOn { get; private set; }
+        public VocabularyKey Description { get; private set; }
         public VocabularyKey EmailAddress { get; private set; }
+        public VocabularyKey EndDate { get; private set; }
+        public VocabularyKey EntitlementId { get; private set; }
+        public VocabularyKey EntitlementTemplateId { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey IsDefault { get; private set; }
+        public VocabularyKey KbAccessLevel { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey StageId { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
-        public VocabularyKey AllocationTypeCode { get; private set; }
-        public VocabularyKey Description { get; private set; }
-        public VocabularyKey DecreaseRemainingOn { get; private set; }
-        public VocabularyKey EndDate { get; private set; }
-        public VocabularyKey EntitlementTemplateId { get; private set; }
-        public VocabularyKey KbAccessLevel { get; private set; }
         public VocabularyKey RemainingTerms { get; private set; }
         public VocabularyKey RestrictCaseCreation { get; private set; }
+        public VocabularyKey StageId { get; private set; }
         public VocabularyKey StartDate { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey TotalTerms { get; private set; }
-        public VocabularyKey IsDefault { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
     }
 }

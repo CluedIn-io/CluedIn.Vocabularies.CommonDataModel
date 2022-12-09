@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ProjectTaskStatusUserVocabulary : SimpleVocabulary
     {
         public ProjectTaskStatusUserVocabulary()
         {
             VocabularyName = "Project Task Status User";
-            KeyPrefix = "commonDataModel.projecttaskstatususer.projectserviceautomation";
+            KeyPrefix = "commonDataModel.projecttaskstatususer";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ProjectTaskStatusUser;
 
@@ -23,7 +23,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    ExpectedHoursToComplete = group.Add(new VocabularyKey(nameof(ExpectedHoursToComplete), "Expected Hours To Complete", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
 			    IsCompleted = group.Add(new VocabularyKey(nameof(IsCompleted), "Is Completed", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    PercentComplete = group.Add(new VocabularyKey(nameof(PercentComplete), "Percent Complete", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    ProjectTaskStatusIndicator = group.Add(new VocabularyKey(nameof(ProjectTaskStatusIndicator), "Project Task Status Indicator", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    ProjectTaskStatusIndicator = group.Add(new VocabularyKey(nameof(ProjectTaskStatusIndicator), "Project Task Status Indicator", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -45,15 +45,15 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
-        public VocabularyKey ProjectTaskStatusUserId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey ExpectedCompletionDate { get; private set; }
         public VocabularyKey ExpectedHoursToComplete { get; private set; }
         public VocabularyKey IsCompleted { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey PercentComplete { get; private set; }
         public VocabularyKey ProjectTaskStatusIndicator { get; private set; }
+        public VocabularyKey ProjectTaskStatusUserId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

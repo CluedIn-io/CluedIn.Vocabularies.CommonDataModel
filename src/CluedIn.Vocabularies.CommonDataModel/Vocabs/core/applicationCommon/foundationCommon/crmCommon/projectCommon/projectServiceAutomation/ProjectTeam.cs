@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ProjectTeamVocabulary : SimpleVocabulary
     {
         public ProjectTeamVocabulary()
         {
             VocabularyName = "Project Team";
-            KeyPrefix = "commonDataModel.projectteam.projectserviceautomation";
+            KeyPrefix = "commonDataModel.projectteam";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ProjectTeam;
 
@@ -39,7 +39,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    ApplicantCount = group.Add(new VocabularyKey(nameof(ApplicantCount), "Applicant count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    ApplicantCountDate = group.Add(new VocabularyKey(nameof(ApplicantCountDate), "Applicant count (Last Updated On)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ApplicantCountState = group.Add(new VocabularyKey(nameof(ApplicantCountState), "Applicant count (State)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    ApplicantsAvailable = group.Add(new VocabularyKey(nameof(ApplicantsAvailable), "Applicants available (Deprecated in v3.0)", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));             
+			    ApplicantsAvailable = group.Add(new VocabularyKey(nameof(ApplicantsAvailable), "Applicants available (Deprecated in v3.0)", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -78,11 +78,11 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
-        public VocabularyKey ProjectTeamId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey PositionName { get; private set; }
         public VocabularyKey AllocationMethod { get; private set; }
+        public VocabularyKey ApplicantCount { get; private set; }
+        public VocabularyKey ApplicantCountDate { get; private set; }
+        public VocabularyKey ApplicantCountState { get; private set; }
+        public VocabularyKey ApplicantsAvailable { get; private set; }
         public VocabularyKey AssignedHours { get; private set; }
         public VocabularyKey BillingType { get; private set; }
         public VocabularyKey CalendarId { get; private set; }
@@ -95,14 +95,14 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
         public VocabularyKey MSProjectClientId { get; private set; }
         public VocabularyKey Number { get; private set; }
         public VocabularyKey Percentage { get; private set; }
+        public VocabularyKey PositionName { get; private set; }
         public VocabularyKey ProjectApprover { get; private set; }
+        public VocabularyKey ProjectTeamId { get; private set; }
         public VocabularyKey RequiredHours { get; private set; }
         public VocabularyKey RoleDescription { get; private set; }
         public VocabularyKey SoftBookedHours { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey To { get; private set; }
-        public VocabularyKey ApplicantCount { get; private set; }
-        public VocabularyKey ApplicantCountDate { get; private set; }
-        public VocabularyKey ApplicantCountState { get; private set; }
-        public VocabularyKey ApplicantsAvailable { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Marketing
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class MarketingPageVocabulary : SimpleVocabulary
     {
         public MarketingPageVocabulary()
         {
             VocabularyName = "Marketing Page";
-            KeyPrefix = "commonDataModel.marketingpage.marketing";
+            KeyPrefix = "commonDataModel.marketingpage";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.MarketingPage;
 
@@ -33,7 +33,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Marketing
 			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    VisualStyle = group.Add(new VocabularyKey(nameof(VisualStyle), "Visual style", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    LastPublishedDate = group.Add(new VocabularyKey(nameof(LastPublishedDate), "Last published date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    LastUnpublishedDate = group.Add(new VocabularyKey(nameof(LastUnpublishedDate), "Last unpublished date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    LastUnpublishedDate = group.Add(new VocabularyKey(nameof(LastUnpublishedDate), "Last unpublished date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -63,25 +63,25 @@ namespace CluedIn.Vocabularies.CommonDataModel.Marketing
             #endregion
         }
 
-        public VocabularyKey MarketingPageId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey Content { get; private set; }
         public VocabularyKey ContentType { get; private set; }
         public VocabularyKey FormPageMapping { get; private set; }
-        public VocabularyKey KnownDomains { get; private set; }
         public VocabularyKey FullPageURL { get; private set; }
         public VocabularyKey InsightsPlaceholder { get; private set; }
+        public VocabularyKey KnownDomains { get; private set; }
+        public VocabularyKey LastPublishedDate { get; private set; }
+        public VocabularyKey LastUnpublishedDate { get; private set; }
+        public VocabularyKey MarketingPageId { get; private set; }
         public VocabularyKey MarketingPageTemplate { get; private set; }
         public VocabularyKey MarketType { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey OptimizedFor { get; private set; }
         public VocabularyKey PartialURL { get; private set; }
         public VocabularyKey Purpose { get; private set; }
         public VocabularyKey RemoteWebsiteID { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey Type { get; private set; }
         public VocabularyKey VisualStyle { get; private set; }
-        public VocabularyKey LastPublishedDate { get; private set; }
-        public VocabularyKey LastUnpublishedDate { get; private set; }
     }
 }

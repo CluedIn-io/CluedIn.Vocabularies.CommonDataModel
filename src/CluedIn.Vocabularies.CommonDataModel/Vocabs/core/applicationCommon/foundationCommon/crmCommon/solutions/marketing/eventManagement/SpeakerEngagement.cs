@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class SpeakerEngagementVocabulary : SimpleVocabulary
     {
         public SpeakerEngagementVocabulary()
         {
             VocabularyName = "Speaker Engagement";
-            KeyPrefix = "commonDataModel.speakerengagement.eventmanagement";
+            KeyPrefix = "commonDataModel.speakerengagement";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.SpeakerEngagement;
 
@@ -21,7 +21,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
 			    EntityImageId = group.Add(new VocabularyKey(nameof(EntityImageId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
 			    Speakercost = group.Add(new VocabularyKey(nameof(Speakercost), "Speaker cost", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
 			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    SpeakercostBase = group.Add(new VocabularyKey(nameof(SpeakercostBase), "Speaker cost (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    SpeakercostBase = group.Add(new VocabularyKey(nameof(SpeakercostBase), "Speaker cost (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -45,13 +45,13 @@ namespace CluedIn.Vocabularies.CommonDataModel.EventManagement
             #endregion
         }
 
+        public VocabularyKey EntityImageId { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey Speakercost { get; private set; }
+        public VocabularyKey SpeakercostBase { get; private set; }
         public VocabularyKey SpeakerEngagementId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey EntityImageId { get; private set; }
-        public VocabularyKey Speakercost { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
-        public VocabularyKey SpeakercostBase { get; private set; }
     }
 }

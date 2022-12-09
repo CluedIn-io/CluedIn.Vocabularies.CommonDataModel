@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class EmploymentHistoryVocabulary : SimpleVocabulary
     {
         public EmploymentHistoryVocabulary()
         {
             VocabularyName = "Employment History";
-            KeyPrefix = "commonDataModel.employmenthistory.nonprofitcore";
+            KeyPrefix = "commonDataModel.employmenthistory";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.EmploymentHistory;
 
@@ -24,7 +24,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
 			    Occupation = group.Add(new VocabularyKey(nameof(Occupation), "Occupation", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Title = group.Add(new VocabularyKey(nameof(Title), "Title", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -57,8 +57,8 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
         public VocabularyKey Industry { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey Occupation { get; private set; }
-        public VocabularyKey Title { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey Title { get; private set; }
     }
 }

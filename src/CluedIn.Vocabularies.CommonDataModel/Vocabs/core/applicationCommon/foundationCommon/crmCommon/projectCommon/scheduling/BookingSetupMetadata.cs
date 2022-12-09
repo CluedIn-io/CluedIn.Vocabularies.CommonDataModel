@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class BookingSetupMetadataVocabulary : SimpleVocabulary
     {
         public BookingSetupMetadataVocabulary()
         {
             VocabularyName = "Booking Setup Metadata";
-            KeyPrefix = "commonDataModel.bookingsetupmetadata.scheduling";
+            KeyPrefix = "commonDataModel.bookingsetupmetadata";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.BookingSetupMetadata;
 
@@ -25,7 +25,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
 			    DefaultBookingDuration = group.Add(new VocabularyKey(nameof(DefaultBookingDuration), "Default Booking Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    DisableRequirementAutoCreation = group.Add(new VocabularyKey(nameof(DisableRequirementAutoCreation), "Disable Requirement Auto Creation for Bookings", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    RequirementRelationshipLogicalName = group.Add(new VocabularyKey(nameof(RequirementRelationshipLogicalName), "Requirement Relationship Logical Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ResourceAvailabilityRetrievalLimit = group.Add(new VocabularyKey(nameof(ResourceAvailabilityRetrievalLimit), "Resource Availability Retrieval Limit", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    ResourceAvailabilityRetrievalLimit = group.Add(new VocabularyKey(nameof(ResourceAvailabilityRetrievalLimit), "Resource Availability Retrieval Limit", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -54,17 +54,17 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
             #endregion
         }
 
-        public VocabularyKey BookingSetupMetadataId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey EntityLogicalName { get; private set; }
         public VocabularyKey AvailableDurationMinimumPercentage { get; private set; }
         public VocabularyKey BookingRelationshipLogicalName { get; private set; }
+        public VocabularyKey BookingSetupMetadataId { get; private set; }
         public VocabularyKey BookingStatusFieldLogicalName { get; private set; }
         public VocabularyKey CancelBookingsWhenMoving { get; private set; }
         public VocabularyKey DefaultBookingDuration { get; private set; }
         public VocabularyKey DisableRequirementAutoCreation { get; private set; }
+        public VocabularyKey EntityLogicalName { get; private set; }
         public VocabularyKey RequirementRelationshipLogicalName { get; private set; }
         public VocabularyKey ResourceAvailabilityRetrievalLimit { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

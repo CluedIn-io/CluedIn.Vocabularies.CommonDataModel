@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class RequirementGroupVocabulary : SimpleVocabulary
     {
         public RequirementGroupVocabulary()
         {
             VocabularyName = "Requirement Group";
-            KeyPrefix = "commonDataModel.requirementgroup.scheduling";
+            KeyPrefix = "commonDataModel.requirementgroup";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.RequirementGroup;
 
@@ -19,7 +19,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    IsTemplate = group.Add(new VocabularyKey(nameof(IsTemplate), "Is Template", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    AutoGroupType = group.Add(new VocabularyKey(nameof(AutoGroupType), "Auto Group Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    AutoGroupType = group.Add(new VocabularyKey(nameof(AutoGroupType), "Auto Group Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -43,11 +43,11 @@ namespace CluedIn.Vocabularies.CommonDataModel.Scheduling
             #endregion
         }
 
+        public VocabularyKey AutoGroupType { get; private set; }
+        public VocabularyKey IsTemplate { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey RequirementgroupId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey IsTemplate { get; private set; }
-        public VocabularyKey AutoGroupType { get; private set; }
     }
 }

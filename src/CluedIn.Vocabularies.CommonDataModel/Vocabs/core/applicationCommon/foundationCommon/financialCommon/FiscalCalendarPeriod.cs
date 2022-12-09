@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.FinancialCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class FiscalCalendarPeriodVocabulary : SimpleVocabulary
     {
         public FiscalCalendarPeriodVocabulary()
         {
             VocabularyName = "Fiscal Calendar Period";
-            KeyPrefix = "commonDataModel.fiscalcalendarperiod.financialcommon";
+            KeyPrefix = "commonDataModel.fiscalcalendarperiod";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.FiscalCalendarPeriod;
 
@@ -22,7 +22,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.FinancialCommon
 			    YearOffset = group.Add(new VocabularyKey(nameof(YearOffset), "Year Offset", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    Quarter = group.Add(new VocabularyKey(nameof(Quarter), "Quarter", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    QuarterOffset = group.Add(new VocabularyKey(nameof(QuarterOffset), "Quarter Offset", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    Month = group.Add(new VocabularyKey(nameof(Month), "Month", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Month = group.Add(new VocabularyKey(nameof(Month), "Month", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -34,14 +34,14 @@ namespace CluedIn.Vocabularies.CommonDataModel.FinancialCommon
             #endregion
         }
 
-        public VocabularyKey FiscalCalendarPeriodId { get; private set; }
         public VocabularyKey FiscalCalendarName { get; private set; }
+        public VocabularyKey FiscalCalendarPeriodId { get; private set; }
+        public VocabularyKey Month { get; private set; }
         public VocabularyKey PeriodName { get; private set; }
         public VocabularyKey PeriodOffset { get; private set; }
-        public VocabularyKey YearName { get; private set; }
-        public VocabularyKey YearOffset { get; private set; }
         public VocabularyKey Quarter { get; private set; }
         public VocabularyKey QuarterOffset { get; private set; }
-        public VocabularyKey Month { get; private set; }
+        public VocabularyKey YearName { get; private set; }
+        public VocabularyKey YearOffset { get; private set; }
     }
 }

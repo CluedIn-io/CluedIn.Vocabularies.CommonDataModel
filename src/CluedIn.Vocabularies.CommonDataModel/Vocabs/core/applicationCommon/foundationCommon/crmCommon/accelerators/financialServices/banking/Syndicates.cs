@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Banking
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class SyndicatesVocabulary : SimpleVocabulary
     {
         public SyndicatesVocabulary()
         {
             VocabularyName = "Syndicates";
-            KeyPrefix = "commonDataModel.syndicates.banking";
+            KeyPrefix = "commonDataModel.syndicates";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Syndicates;
 
@@ -21,7 +21,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Banking
 			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    SyndicatesId = group.Add(new VocabularyKey(nameof(SyndicatesId), "Syndicates", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -47,13 +47,13 @@ namespace CluedIn.Vocabularies.CommonDataModel.Banking
             #endregion
         }
 
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey Amount { get; private set; }
         public VocabularyKey AmountBase { get; private set; }
         public VocabularyKey Contribution { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey Name { get; private set; }
-        public VocabularyKey SyndicatesId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey SyndicatesId { get; private set; }
     }
 }

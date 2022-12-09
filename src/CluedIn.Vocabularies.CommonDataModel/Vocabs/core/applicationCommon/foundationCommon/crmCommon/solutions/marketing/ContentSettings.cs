@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Marketing
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ContentSettingsVocabulary : SimpleVocabulary
     {
         public ContentSettingsVocabulary()
         {
             VocabularyName = "Content Settings";
-            KeyPrefix = "commonDataModel.contentsettings.marketing";
+            KeyPrefix = "commonDataModel.contentsettings";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ContentSettings;
 
@@ -27,7 +27,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Marketing
 			    SubscriptionCenter = group.Add(new VocabularyKey(nameof(SubscriptionCenter), "Subscription center", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TwitterUrl = group.Add(new VocabularyKey(nameof(TwitterUrl), "Twitter URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
 			    GooglePlusUrl = group.Add(new VocabularyKey(nameof(GooglePlusUrl), "Google Plus URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
-			    YoutubeUrl = group.Add(new VocabularyKey(nameof(YoutubeUrl), "YouTube URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible));             
+			    YoutubeUrl = group.Add(new VocabularyKey(nameof(YoutubeUrl), "YouTube URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -48,19 +48,19 @@ namespace CluedIn.Vocabularies.CommonDataModel.Marketing
             #endregion
         }
 
-        public VocabularyKey ContentSettingsId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey AddressLine2 { get; private set; }
         public VocabularyKey AddressMain { get; private set; }
+        public VocabularyKey ContentSettingsId { get; private set; }
         public VocabularyKey Default { get; private set; }
         public VocabularyKey FacebookUrl { get; private set; }
         public VocabularyKey ForwardToAFriend { get; private set; }
+        public VocabularyKey GooglePlusUrl { get; private set; }
         public VocabularyKey LinkedInUrl { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey SubscriptionCenter { get; private set; }
         public VocabularyKey TwitterUrl { get; private set; }
-        public VocabularyKey GooglePlusUrl { get; private set; }
         public VocabularyKey YoutubeUrl { get; private set; }
     }
 }

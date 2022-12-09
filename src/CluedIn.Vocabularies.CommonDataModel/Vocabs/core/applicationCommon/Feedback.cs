@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class FeedbackVocabulary : SimpleVocabulary
     {
         public FeedbackVocabulary()
         {
             VocabularyName = "Feedback";
-            KeyPrefix = "commonDataModel.feedback.applicationcommon";
+            KeyPrefix = "commonDataModel.feedback";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Feedback;
 
@@ -32,7 +32,15 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    Title = group.Add(new VocabularyKey(nameof(Title), "Title", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Title = group.Add(new VocabularyKey(nameof(Title), "Title", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Feedback Details for Portals", group =>
+            {
+			    PublishedToWeb = group.Add(new VocabularyKey(nameof(PublishedToWeb), "Published To Web", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
+			    AuthorURL = group.Add(new VocabularyKey(nameof(AuthorURL), "Author URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
+			    AdxContactEmail = group.Add(new VocabularyKey(nameof(AdxContactEmail), "Email", VocabularyKeyDataType.Email, VocabularyKeyVisibility.Visible)); 
+			    AdxContactUsername = group.Add(new VocabularyKey(nameof(AdxContactUsername), "Username", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    AdxCreatedByContact = group.Add(new VocabularyKey(nameof(AdxCreatedByContact), "Created By Name (Contact)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -60,24 +68,29 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             #endregion
         }
 
-        public VocabularyKey FeedbackId { get; private set; }
-        public VocabularyKey Rating { get; private set; }
-        public VocabularyKey MinRating { get; private set; }
-        public VocabularyKey MaxRating { get; private set; }
-        public VocabularyKey NormalizedRating { get; private set; }
+        public VocabularyKey AdxContactEmail { get; private set; }
+        public VocabularyKey AdxContactUsername { get; private set; }
+        public VocabularyKey AdxCreatedByContact { get; private set; }
+        public VocabularyKey AuthorURL { get; private set; }
+        public VocabularyKey ClosedOn { get; private set; }
         public VocabularyKey Comments { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey FeedbackId { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey MaxRating { get; private set; }
+        public VocabularyKey MinRating { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey NormalizedRating { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey OwningTeam { get; private set; }
+        public VocabularyKey OwningUser { get; private set; }
+        public VocabularyKey PublishedToWeb { get; private set; }
+        public VocabularyKey Rating { get; private set; }
         public VocabularyKey Source { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey OwningUser { get; private set; }
-        public VocabularyKey OwningTeam { get; private set; }
-        public VocabularyKey ClosedOn { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey Title { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

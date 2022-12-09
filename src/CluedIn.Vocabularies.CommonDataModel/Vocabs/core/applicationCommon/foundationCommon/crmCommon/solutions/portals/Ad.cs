@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Portals
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class AdVocabulary : SimpleVocabulary
     {
         public AdVocabulary()
         {
             VocabularyName = "Ad";
-            KeyPrefix = "commonDataModel.ad.portals";
+            KeyPrefix = "commonDataModel.ad";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Ad;
 
@@ -27,7 +27,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
 			    OpenInNewWindow = group.Add(new VocabularyKey(nameof(OpenInNewWindow), "Open In New Window", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    ReleaseDate = group.Add(new VocabularyKey(nameof(ReleaseDate), "Release Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Title = group.Add(new VocabularyKey(nameof(Title), "Title", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    URL = group.Add(new VocabularyKey(nameof(URL), "Redirect URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible));             
+			    URL = group.Add(new VocabularyKey(nameof(URL), "Redirect URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -68,17 +68,17 @@ namespace CluedIn.Vocabularies.CommonDataModel.Portals
         }
 
         public VocabularyKey AdId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey Copy { get; private set; }
         public VocabularyKey ExpirationDate { get; private set; }
         public VocabularyKey Image { get; private set; }
         public VocabularyKey ImageAltText { get; private set; }
         public VocabularyKey ImageHeight { get; private set; }
         public VocabularyKey ImageWidth { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey OpenInNewWindow { get; private set; }
         public VocabularyKey ReleaseDate { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey Title { get; private set; }
         public VocabularyKey URL { get; private set; }
     }

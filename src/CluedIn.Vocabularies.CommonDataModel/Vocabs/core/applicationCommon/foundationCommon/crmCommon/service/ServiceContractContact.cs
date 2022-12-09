@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Service
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ServiceContractContactVocabulary : SimpleVocabulary
     {
         public ServiceContractContactVocabulary()
         {
             VocabularyName = "Service Contract Contact";
-            KeyPrefix = "commonDataModel.servicecontractcontact.service";
+            KeyPrefix = "commonDataModel.servicecontractcontact";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ServiceContractContact;
 
@@ -21,7 +21,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
 			    TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), "Time Zone Rule Version Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    Name = group.Add(new VocabularyKey(nameof(Name), "name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ServiceLevel = group.Add(new VocabularyKey(nameof(ServiceLevel), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));             
+			    ServiceLevel = group.Add(new VocabularyKey(nameof(ServiceLevel), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -34,13 +34,13 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
             #endregion
         }
 
-        public VocabularyKey ServiceContractContactId { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
         public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey Name { get; private set; }
         public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey ServiceContractContactId { get; private set; }
+        public VocabularyKey ServiceLevel { get; private set; }
         public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey ServiceLevel { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

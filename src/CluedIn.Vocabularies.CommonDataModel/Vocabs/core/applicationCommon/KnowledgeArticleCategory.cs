@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class KnowledgeArticleCategoryVocabulary : SimpleVocabulary
     {
         public KnowledgeArticleCategoryVocabulary()
         {
             VocabularyName = "Knowledge Article Category";
-            KeyPrefix = "commonDataModel.knowledgearticlecategory.applicationcommon";
+            KeyPrefix = "commonDataModel.knowledgearticlecategory";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.KnowledgeArticleCategory;
 
@@ -16,7 +16,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             {
 			    CategoryId = group.Add(new VocabularyKey(nameof(CategoryId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
 			    KnowledgeArticleCategoryId = group.Add(new VocabularyKey(nameof(KnowledgeArticleCategoryId), "Unique identifier of the Category for the knowledge article.", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships

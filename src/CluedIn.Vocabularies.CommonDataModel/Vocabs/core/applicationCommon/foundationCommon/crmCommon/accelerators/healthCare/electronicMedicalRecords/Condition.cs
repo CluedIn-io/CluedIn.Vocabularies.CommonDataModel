@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ConditionVocabulary : SimpleVocabulary
     {
         public ConditionVocabulary()
         {
             VocabularyName = "Condition";
-            KeyPrefix = "commonDataModel.condition.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.condition";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Condition;
 
@@ -39,7 +39,11 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    SubjectType = group.Add(new VocabularyKey(nameof(SubjectType), "Subject Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    VerificationStatus = group.Add(new VocabularyKey(nameof(VerificationStatus), "Verification Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Condition Details for NonProfitIati", group =>
+            {
+
             });
             
             #region Incoming Relationships
@@ -211,9 +215,9 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
         public VocabularyKey OnsetRangeLow { get; private set; }
         public VocabularyKey OnsetString { get; private set; }
         public VocabularyKey OnsetType { get; private set; }
-        public VocabularyKey SubjectType { get; private set; }
-        public VocabularyKey VerificationStatus { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey SubjectType { get; private set; }
+        public VocabularyKey VerificationStatus { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Marketing
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class FormPageVocabulary : SimpleVocabulary
     {
         public FormPageVocabulary()
         {
             VocabularyName = "Form Page";
-            KeyPrefix = "commonDataModel.formpage.marketing";
+            KeyPrefix = "commonDataModel.formpage";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.FormPage;
 
@@ -22,7 +22,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Marketing
 			    ErrorMessage = group.Add(new VocabularyKey(nameof(ErrorMessage), "Error message", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    LimitExceededMessage = group.Add(new VocabularyKey(nameof(LimitExceededMessage), "Limit exceeded message", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    RedirectURL = group.Add(new VocabularyKey(nameof(RedirectURL), "Redirect URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
-			    Javascriptcode = group.Add(new VocabularyKey(nameof(Javascriptcode), "Javascript code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Javascriptcode = group.Add(new VocabularyKey(nameof(Javascriptcode), "Javascript code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -45,14 +45,14 @@ namespace CluedIn.Vocabularies.CommonDataModel.Marketing
             #endregion
         }
 
-        public VocabularyKey FormpageId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey ConfirmationMessage { get; private set; }
         public VocabularyKey ErrorMessage { get; private set; }
-        public VocabularyKey LimitExceededMessage { get; private set; }
-        public VocabularyKey RedirectURL { get; private set; }
+        public VocabularyKey FormpageId { get; private set; }
         public VocabularyKey Javascriptcode { get; private set; }
+        public VocabularyKey LimitExceededMessage { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey RedirectURL { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
     }
 }

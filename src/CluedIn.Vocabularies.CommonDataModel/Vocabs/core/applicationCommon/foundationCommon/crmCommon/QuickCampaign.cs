@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class QuickCampaignVocabulary : SimpleVocabulary
     {
         public QuickCampaignVocabulary()
         {
             VocabularyName = "Quick Campaign";
-            KeyPrefix = "commonDataModel.quickcampaign.crmcommon";
+            KeyPrefix = "commonDataModel.quickcampaign";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.QuickCampaign;
 
@@ -33,7 +33,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
 			    SuccessCount = group.Add(new VocabularyKey(nameof(SuccessCount), "No. of Successes", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
 			    TargetedRecordTypeCode = group.Add(new VocabularyKey(nameof(TargetedRecordTypeCode), "Members Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TargetMembersCount = group.Add(new VocabularyKey(nameof(TargetMembersCount), "Total Members", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    ServiceId = group.Add(new VocabularyKey(nameof(ServiceId), "Service", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    ServiceId = group.Add(new VocabularyKey(nameof(ServiceId), "Service", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -71,25 +71,25 @@ namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
             #endregion
         }
 
-        public VocabularyKey Description { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
-        public VocabularyKey ProcessId { get; private set; }
-        public VocabularyKey StageId { get; private set; }
-        public VocabularyKey OnHoldTime { get; private set; }
-        public VocabularyKey LastOnHoldTime { get; private set; }
         public VocabularyKey BulkOperationNumber { get; private set; }
         public VocabularyKey CreatedRecordTypeCode { get; private set; }
+        public VocabularyKey Description { get; private set; }
         public VocabularyKey ErrorNumber { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey FailureCount { get; private set; }
+        public VocabularyKey LastOnHoldTime { get; private set; }
+        public VocabularyKey OnHoldTime { get; private set; }
         public VocabularyKey OperationTypeCode { get; private set; }
-        public VocabularyKey WorkflowInfo { get; private set; }
         public VocabularyKey Parameters { get; private set; }
+        public VocabularyKey ProcessId { get; private set; }
+        public VocabularyKey ServiceId { get; private set; }
+        public VocabularyKey StageId { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey SuccessCount { get; private set; }
         public VocabularyKey TargetedRecordTypeCode { get; private set; }
         public VocabularyKey TargetMembersCount { get; private set; }
-        public VocabularyKey ServiceId { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
+        public VocabularyKey WorkflowInfo { get; private set; }
     }
 }

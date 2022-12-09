@@ -1,20 +1,20 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProductInsights
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class AssetVocabulary : SimpleVocabulary
     {
         public AssetVocabulary()
         {
             VocabularyName = "Asset";
-            KeyPrefix = "commonDataModel.asset.productinsights";
+            KeyPrefix = "commonDataModel.asset";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Asset;
 
             AddGroup("Asset Details for ProductInsights", group =>
             {
-			                 
+
             });
             
             #region Incoming Relationships

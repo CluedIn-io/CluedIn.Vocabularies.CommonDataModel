@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class FactVocabulary : SimpleVocabulary
     {
         public FactVocabulary()
         {
             VocabularyName = "Fact";
-            KeyPrefix = "commonDataModel.fact.projectserviceautomation";
+            KeyPrefix = "commonDataModel.fact";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Fact;
 
@@ -81,7 +81,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    GrossMarginBase = group.Add(new VocabularyKey(nameof(GrossMarginBase), "Gross Margin (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TotalCost = group.Add(new VocabularyKey(nameof(TotalCost), "Total Cost", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
 			    TotalCostBase = group.Add(new VocabularyKey(nameof(TotalCostBase), "Total Cost (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TotalHours = group.Add(new VocabularyKey(nameof(TotalHours), "Total Hours", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));             
+			    TotalHours = group.Add(new VocabularyKey(nameof(TotalHours), "Total Hours", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -116,12 +116,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
-        public VocabularyKey FactId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey ActChargeableBilledSalesAmount { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey ActChargeableBilledSalesAmountBase { get; private set; }
         public VocabularyKey ActChargeableBilledSalesQuantity { get; private set; }
         public VocabularyKey ActChargeableCostAmount { get; private set; }
@@ -147,6 +142,8 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
         public VocabularyKey ActNonChargeableUnbilledSalesQuantity { get; private set; }
         public VocabularyKey CustomerType { get; private set; }
         public VocabularyKey DocumentDate { get; private set; }
+        public VocabularyKey EarnedRevenue { get; private set; }
+        public VocabularyKey EarnedRevenueBase { get; private set; }
         public VocabularyKey EndDate { get; private set; }
         public VocabularyKey EstChargeableBilledSalesAmount { get; private set; }
         public VocabularyKey EstChargeableBilledSalesAmountBase { get; private set; }
@@ -172,17 +169,20 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
         public VocabularyKey EstNonChargeableUnbilledSalesAmount { get; private set; }
         public VocabularyKey EstNonChargeableUnbilledSalesAmountBase { get; private set; }
         public VocabularyKey EstNonChargeableUnbilledSalesQuantity { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
+        public VocabularyKey FactId { get; private set; }
         public VocabularyKey FactType { get; private set; }
-        public VocabularyKey SalesContractLine { get; private set; }
-        public VocabularyKey StartDate { get; private set; }
-        public VocabularyKey TransactionClassification { get; private set; }
-        public VocabularyKey VendorType { get; private set; }
-        public VocabularyKey EarnedRevenue { get; private set; }
-        public VocabularyKey EarnedRevenueBase { get; private set; }
         public VocabularyKey GrossMargin { get; private set; }
         public VocabularyKey GrossMarginBase { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey SalesContractLine { get; private set; }
+        public VocabularyKey StartDate { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey TotalCost { get; private set; }
         public VocabularyKey TotalCostBase { get; private set; }
         public VocabularyKey TotalHours { get; private set; }
+        public VocabularyKey TransactionClassification { get; private set; }
+        public VocabularyKey VendorType { get; private set; }
     }
 }

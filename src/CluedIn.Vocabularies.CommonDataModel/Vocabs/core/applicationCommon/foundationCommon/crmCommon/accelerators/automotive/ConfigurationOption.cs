@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Automotive
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ConfigurationOptionVocabulary : SimpleVocabulary
     {
         public ConfigurationOptionVocabulary()
         {
             VocabularyName = "Configuration Option";
-            KeyPrefix = "commonDataModel.configurationoption.automotive";
+            KeyPrefix = "commonDataModel.configurationoption";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ConfigurationOption;
 
@@ -24,7 +24,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
 			    SalesPrice = group.Add(new VocabularyKey(nameof(SalesPrice), "Sales Price", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
 			    SalesPriceBase = group.Add(new VocabularyKey(nameof(SalesPriceBase), "Sales Price (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -49,10 +49,10 @@ namespace CluedIn.Vocabularies.CommonDataModel.Automotive
             #endregion
         }
 
-        public VocabularyKey EntityImage { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey ConfigurationOptionId { get; private set; }
         public VocabularyKey Description { get; private set; }
+        public VocabularyKey EntityImage { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey ExternalCode { get; private set; }
         public VocabularyKey Name { get; private set; }
         public VocabularyKey Quantity { get; private set; }

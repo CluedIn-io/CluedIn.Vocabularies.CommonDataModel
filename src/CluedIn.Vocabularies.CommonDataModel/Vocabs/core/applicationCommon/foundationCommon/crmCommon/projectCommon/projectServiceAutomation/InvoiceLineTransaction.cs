@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class InvoiceLineTransactionVocabulary : SimpleVocabulary
     {
         public InvoiceLineTransactionVocabulary()
         {
             VocabularyName = "Invoice Line Transaction";
-            KeyPrefix = "commonDataModel.invoicelinetransaction.projectserviceautomation";
+            KeyPrefix = "commonDataModel.invoicelinetransaction";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.InvoiceLineTransaction;
 
@@ -48,7 +48,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
 			    TransactionTypeCode = group.Add(new VocabularyKey(nameof(TransactionTypeCode), "Transaction Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    VendorType = group.Add(new VocabularyKey(nameof(VendorType), "Vendor Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    InvoiceAmount = group.Add(new VocabularyKey(nameof(InvoiceAmount), "Invoice Amount", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    InvoiceamountBase = group.Add(new VocabularyKey(nameof(InvoiceamountBase), "Invoice Amount (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    InvoiceamountBase = group.Add(new VocabularyKey(nameof(InvoiceamountBase), "Invoice Amount (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -89,13 +89,8 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
             #endregion
         }
 
-        public VocabularyKey InvoiceLineTransactionId { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey Description { get; private set; }
         public VocabularyKey AccountingDate { get; private set; }
         public VocabularyKey Amount { get; private set; }
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey AmountBase { get; private set; }
         public VocabularyKey AmountMethod { get; private set; }
         public VocabularyKey BasisAmount { get; private set; }
@@ -106,11 +101,16 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
         public VocabularyKey BillingType { get; private set; }
         public VocabularyKey Correction { get; private set; }
         public VocabularyKey CustomerType { get; private set; }
+        public VocabularyKey Description { get; private set; }
         public VocabularyKey DocumentDate { get; private set; }
         public VocabularyKey EndDateTime { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey ExchangeRateDate { get; private set; }
         public VocabularyKey ExternalDescription { get; private set; }
+        public VocabularyKey InvoiceAmount { get; private set; }
+        public VocabularyKey InvoiceamountBase { get; private set; }
         public VocabularyKey InvoiceLine { get; private set; }
+        public VocabularyKey InvoiceLineTransactionId { get; private set; }
         public VocabularyKey Percent { get; private set; }
         public VocabularyKey PreviousAmount { get; private set; }
         public VocabularyKey PreviousamountBase { get; private set; }
@@ -119,10 +119,10 @@ namespace CluedIn.Vocabularies.CommonDataModel.ProjectServiceAutomation
         public VocabularyKey Quantity { get; private set; }
         public VocabularyKey SalesContractLine { get; private set; }
         public VocabularyKey StartDateTime { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey TransactionClassification { get; private set; }
         public VocabularyKey TransactionTypeCode { get; private set; }
         public VocabularyKey VendorType { get; private set; }
-        public VocabularyKey InvoiceAmount { get; private set; }
-        public VocabularyKey InvoiceamountBase { get; private set; }
     }
 }

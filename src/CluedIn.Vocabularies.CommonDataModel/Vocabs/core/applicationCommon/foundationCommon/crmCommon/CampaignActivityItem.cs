@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class CampaignActivityItemVocabulary : SimpleVocabulary
     {
         public CampaignActivityItemVocabulary()
         {
             VocabularyName = "Campaign Activity Item";
-            KeyPrefix = "commonDataModel.campaignactivityitem.crmcommon";
+            KeyPrefix = "commonDataModel.campaignactivityitem";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.CampaignActivityItem;
 
@@ -23,7 +23,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
 			    Name = group.Add(new VocabularyKey(nameof(Name), "name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ItemObjectTypeCode = group.Add(new VocabularyKey(nameof(ItemObjectTypeCode), "Identification of the type of the campaign activity item.", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    OwningBusinessUnit = group.Add(new VocabularyKey(nameof(OwningBusinessUnit), "Unique identifier of the business unit that owns the campaign activity item.", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    OwningUser = group.Add(new VocabularyKey(nameof(OwningUser), "Unique identifier of the user that owns the campaign activity item.", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));             
+			    OwningUser = group.Add(new VocabularyKey(nameof(OwningUser), "Unique identifier of the user that owns the campaign activity item.", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -40,14 +40,14 @@ namespace CluedIn.Vocabularies.CommonDataModel.CrmCommon
         }
 
         public VocabularyKey CampaignActivityItemId { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
         public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey ItemObjectTypeCode { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey OwningBusinessUnit { get; private set; }
         public VocabularyKey OwningUser { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

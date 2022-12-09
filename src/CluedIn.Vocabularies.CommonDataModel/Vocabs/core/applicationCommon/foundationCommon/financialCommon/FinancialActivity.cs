@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.FinancialCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class FinancialActivityVocabulary : SimpleVocabulary
     {
         public FinancialActivityVocabulary()
         {
             VocabularyName = "Financial Activity";
-            KeyPrefix = "commonDataModel.financialactivity.financialcommon";
+            KeyPrefix = "commonDataModel.financialactivity";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.FinancialActivity;
 
@@ -18,7 +18,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.FinancialCommon
 			    LedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(LedgerDimensionDisplayValue), "Ledger Dimension Display Value", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TransactionCurrencyCode = group.Add(new VocabularyKey(nameof(TransactionCurrencyCode), "Transaction Currency Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    AccountingCurrencyAmount = group.Add(new VocabularyKey(nameof(AccountingCurrencyAmount), "AccountingCurrencyAmount", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    AccountingDate = group.Add(new VocabularyKey(nameof(AccountingDate), "AccountingDate", VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));             
+			    AccountingDate = group.Add(new VocabularyKey(nameof(AccountingDate), "AccountingDate", VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -35,10 +35,10 @@ namespace CluedIn.Vocabularies.CommonDataModel.FinancialCommon
             #endregion
         }
 
+        public VocabularyKey AccountingCurrencyAmount { get; private set; }
+        public VocabularyKey AccountingDate { get; private set; }
         public VocabularyKey FinancialActivityId { get; private set; }
         public VocabularyKey LedgerDimensionDisplayValue { get; private set; }
         public VocabularyKey TransactionCurrencyCode { get; private set; }
-        public VocabularyKey AccountingCurrencyAmount { get; private set; }
-        public VocabularyKey AccountingDate { get; private set; }
     }
 }

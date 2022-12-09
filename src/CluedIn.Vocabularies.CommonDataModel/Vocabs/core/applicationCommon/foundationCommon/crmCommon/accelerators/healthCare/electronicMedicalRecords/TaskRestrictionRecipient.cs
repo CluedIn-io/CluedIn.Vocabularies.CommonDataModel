@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class TaskRestrictionRecipientVocabulary : SimpleVocabulary
     {
         public TaskRestrictionRecipientVocabulary()
         {
             VocabularyName = "Task Restriction Recipient";
-            KeyPrefix = "commonDataModel.taskrestrictionrecipient.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.taskrestrictionrecipient";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.TaskRestrictionRecipient;
 
@@ -18,7 +18,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    RestrictionRecipientType = group.Add(new VocabularyKey(nameof(RestrictionRecipientType), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TaskRestrictionRecipientId = group.Add(new VocabularyKey(nameof(TaskRestrictionRecipientId), "Task Restriction Recipient", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -49,8 +49,8 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 
         public VocabularyKey Name { get; private set; }
         public VocabularyKey RestrictionRecipientType { get; private set; }
-        public VocabularyKey TaskRestrictionRecipientId { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TaskRestrictionRecipientId { get; private set; }
     }
 }

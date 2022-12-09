@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class TeamVocabulary : SimpleVocabulary
     {
         public TeamVocabulary()
         {
             VocabularyName = "Team";
-            KeyPrefix = "commonDataModel.team.applicationcommon";
+            KeyPrefix = "commonDataModel.team";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Team;
 
@@ -31,7 +31,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    TeamTemplateId = group.Add(new VocabularyKey(nameof(TeamTemplateId), "Team Template Identifier", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    SystemManaged = group.Add(new VocabularyKey(nameof(SystemManaged), "Is System Managed", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    StageId = group.Add(new VocabularyKey(nameof(StageId), "Process Stage", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    ProcessId = group.Add(new VocabularyKey(nameof(ProcessId), "Process", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));             
+			    ProcessId = group.Add(new VocabularyKey(nameof(ProcessId), "Process", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -1721,23 +1721,23 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             #endregion
         }
 
-        public VocabularyKey TeamId { get; private set; }
-        public VocabularyKey Name { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
         public VocabularyKey Description { get; private set; }
         public VocabularyKey EmailAddress { get; private set; }
-        public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey IsDefault { get; private set; }
-        public VocabularyKey YomiName { get; private set; }
-        public VocabularyKey TraversedPath { get; private set; }
         public VocabularyKey ExchangeRate { get; private set; }
-        public VocabularyKey TeamType { get; private set; }
-        public VocabularyKey TeamTemplateId { get; private set; }
-        public VocabularyKey SystemManaged { get; private set; }
-        public VocabularyKey StageId { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey IsDefault { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey ProcessId { get; private set; }
+        public VocabularyKey StageId { get; private set; }
+        public VocabularyKey SystemManaged { get; private set; }
+        public VocabularyKey TeamId { get; private set; }
+        public VocabularyKey TeamTemplateId { get; private set; }
+        public VocabularyKey TeamType { get; private set; }
+        public VocabularyKey TraversedPath { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
+        public VocabularyKey YomiName { get; private set; }
     }
 }

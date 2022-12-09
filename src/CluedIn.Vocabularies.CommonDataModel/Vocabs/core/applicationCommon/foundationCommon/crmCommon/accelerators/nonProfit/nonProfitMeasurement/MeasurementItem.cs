@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitMeasurement
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class MeasurementItemVocabulary : SimpleVocabulary
     {
         public MeasurementItemVocabulary()
         {
             VocabularyName = "Measurement Item";
-            KeyPrefix = "commonDataModel.measurementitem.nonprofitmeasurement";
+            KeyPrefix = "commonDataModel.measurementitem";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.MeasurementItem;
 
@@ -30,7 +30,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitMeasurement
 			    ValidFrom = group.Add(new VocabularyKey(nameof(ValidFrom), "Valid From", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ValidTo = group.Add(new VocabularyKey(nameof(ValidTo), "Valid To", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -86,11 +86,11 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitMeasurement
             #endregion
         }
 
-        public VocabularyKey EntityImage { get; private set; }
         public VocabularyKey Code { get; private set; }
         public VocabularyKey DataCollectionMethod { get; private set; }
         public VocabularyKey Denominator { get; private set; }
         public VocabularyKey Description { get; private set; }
+        public VocabularyKey EntityImage { get; private set; }
         public VocabularyKey LibraryType { get; private set; }
         public VocabularyKey MeasurementItemId { get; private set; }
         public VocabularyKey MeasurementType { get; private set; }
@@ -98,10 +98,10 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitMeasurement
         public VocabularyKey Numerator { get; private set; }
         public VocabularyKey Source { get; private set; }
         public VocabularyKey SourceType { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey Type { get; private set; }
         public VocabularyKey ValidFrom { get; private set; }
         public VocabularyKey ValidTo { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
     }
 }

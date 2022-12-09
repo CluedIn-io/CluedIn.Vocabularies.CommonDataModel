@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ProgramItemRelationshipVocabulary : SimpleVocabulary
     {
         public ProgramItemRelationshipVocabulary()
         {
             VocabularyName = "Program Item Relationship";
-            KeyPrefix = "commonDataModel.programitemrelationship.nonprofitcore";
+            KeyPrefix = "commonDataModel.programitemrelationship";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ProgramItemRelationship;
 
@@ -18,7 +18,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
 			    ProgramItemRelationshipId = group.Add(new VocabularyKey(nameof(ProgramItemRelationshipId), "Program Item Relationship", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -50,8 +50,8 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitCore
 
         public VocabularyKey Name { get; private set; }
         public VocabularyKey ProgramItemRelationshipId { get; private set; }
-        public VocabularyKey Type { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey Type { get; private set; }
     }
 }

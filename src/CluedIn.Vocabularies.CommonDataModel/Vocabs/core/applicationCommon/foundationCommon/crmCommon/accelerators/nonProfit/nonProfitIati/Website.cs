@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class WebsiteVocabulary : SimpleVocabulary
     {
         public WebsiteVocabulary()
         {
             VocabularyName = "Website";
-            KeyPrefix = "commonDataModel.website.nonprofitiati";
+            KeyPrefix = "commonDataModel.website";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Website;
 
@@ -18,7 +18,13 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
 			    Url = group.Add(new VocabularyKey(nameof(Url), "URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
 			    WebsiteId = group.Add(new VocabularyKey(nameof(WebsiteId), "Website", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("Website Details for Portals", group =>
+            {
+			    PartialURL = group.Add(new VocabularyKey(nameof(PartialURL), "Partial URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
+			    PrimaryDomainName = group.Add(new VocabularyKey(nameof(PrimaryDomainName), "Primary Domain Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    WebsiteLanguage = group.Add(new VocabularyKey(nameof(WebsiteLanguage), "Language", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -43,9 +49,12 @@ namespace CluedIn.Vocabularies.CommonDataModel.NonProfitIati
         }
 
         public VocabularyKey Name { get; private set; }
-        public VocabularyKey Url { get; private set; }
-        public VocabularyKey WebsiteId { get; private set; }
+        public VocabularyKey PartialURL { get; private set; }
+        public VocabularyKey PrimaryDomainName { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey Url { get; private set; }
+        public VocabularyKey WebsiteId { get; private set; }
+        public VocabularyKey WebsiteLanguage { get; private set; }
     }
 }

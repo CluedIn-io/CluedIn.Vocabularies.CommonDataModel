@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class GoalMetricVocabulary : SimpleVocabulary
     {
         public GoalMetricVocabulary()
         {
             VocabularyName = "Goal Metric";
-            KeyPrefix = "commonDataModel.goalmetric.applicationcommon";
+            KeyPrefix = "commonDataModel.goalmetric";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.GoalMetric;
 
@@ -28,7 +28,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    AmountDataType = group.Add(new VocabularyKey(nameof(AmountDataType), "Amount Data Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    IsAmount = group.Add(new VocabularyKey(nameof(IsAmount), "Metric Type", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    IsStretchTracked = group.Add(new VocabularyKey(nameof(IsStretchTracked), "Track Stretch Target", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -45,20 +45,20 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             #endregion
         }
 
-        public VocabularyKey MetricId { get; private set; }
-        public VocabularyKey CreatedOn { get; private set; }
-        public VocabularyKey ModifiedOn { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
-        public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
-        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
         public VocabularyKey AmountDataType { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey Description { get; private set; }
+        public VocabularyKey ImportSequenceNumber { get; private set; }
         public VocabularyKey IsAmount { get; private set; }
         public VocabularyKey IsStretchTracked { get; private set; }
-        public VocabularyKey Description { get; private set; }
+        public VocabularyKey MetricId { get; private set; }
+        public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class KnowledgeArticleViewsVocabulary : SimpleVocabulary
     {
         public KnowledgeArticleViewsVocabulary()
         {
             VocabularyName = "Knowledge Article Views";
-            KeyPrefix = "commonDataModel.knowledgearticleviews.applicationcommon";
+            KeyPrefix = "commonDataModel.knowledgearticleviews";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.KnowledgeArticleViews;
 
@@ -29,7 +29,12 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    Location = group.Add(new VocabularyKey(nameof(Location), "Location", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Location = group.Add(new VocabularyKey(nameof(Location), "Location", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+            });
+            AddGroup("KnowledgeArticleViews Details for Portals", group =>
+            {
+			    DomainName = group.Add(new VocabularyKey(nameof(DomainName), "Domain Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+			    Referrer = group.Add(new VocabularyKey(nameof(Referrer), "Referrer", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -50,21 +55,23 @@ namespace CluedIn.Vocabularies.CommonDataModel.ApplicationCommon
             #endregion
         }
 
-        public VocabularyKey KnowledgeArticleViewsId { get; private set; }
-        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
+        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey DomainName { get; private set; }
         public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey ImportSequenceNumber { get; private set; }
-        public VocabularyKey OverriddenCreatedOn { get; private set; }
-        public VocabularyKey VersionNumber { get; private set; }
         public VocabularyKey KnowledgeArticleView { get; private set; }
-        public VocabularyKey ViewDate { get; private set; }
-        public VocabularyKey CreatedOn { get; private set; }
+        public VocabularyKey KnowledgeArticleViewsId { get; private set; }
+        public VocabularyKey Location { get; private set; }
         public VocabularyKey ModifiedOn { get; private set; }
+        public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey OwningBusinessUnit { get; private set; }
         public VocabularyKey OwningUser { get; private set; }
+        public VocabularyKey Referrer { get; private set; }
         public VocabularyKey StateCode { get; private set; }
         public VocabularyKey StatusCode { get; private set; }
+        public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Location { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
+        public VocabularyKey ViewDate { get; private set; }
     }
 }

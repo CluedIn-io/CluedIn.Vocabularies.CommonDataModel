@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Service
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ResourceVocabulary : SimpleVocabulary
     {
         public ResourceVocabulary()
         {
             VocabularyName = "Resource";
-            KeyPrefix = "commonDataModel.resource.service";
+            KeyPrefix = "commonDataModel.resource";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.Resource;
 
@@ -24,7 +24,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
 			    DisplayInServiceViews = group.Add(new VocabularyKey(nameof(DisplayInServiceViews), "Display in Service Views", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    IsDisabled = group.Add(new VocabularyKey(nameof(IsDisabled), "Is Disabled", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
 			    ObjectTypeCode = group.Add(new VocabularyKey(nameof(ObjectTypeCode), "Object Type ", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EntityImageId = group.Add(new VocabularyKey(nameof(EntityImageId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));             
+			    EntityImageId = group.Add(new VocabularyKey(nameof(EntityImageId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -188,16 +188,16 @@ namespace CluedIn.Vocabularies.CommonDataModel.Service
             #endregion
         }
 
-        public VocabularyKey VersionNumber { get; private set; }
+        public VocabularyKey CalendarId { get; private set; }
+        public VocabularyKey DisplayInServiceViews { get; private set; }
+        public VocabularyKey EntityImageId { get; private set; }
         public VocabularyKey ImportSequenceNumber { get; private set; }
+        public VocabularyKey IsDisabled { get; private set; }
+        public VocabularyKey Name { get; private set; }
+        public VocabularyKey ObjectTypeCode { get; private set; }
         public VocabularyKey OverriddenCreatedOn { get; private set; }
         public VocabularyKey TimeZoneRuleVersionNumber { get; private set; }
         public VocabularyKey UTCConversionTimeZoneCode { get; private set; }
-        public VocabularyKey Name { get; private set; }
-        public VocabularyKey CalendarId { get; private set; }
-        public VocabularyKey DisplayInServiceViews { get; private set; }
-        public VocabularyKey IsDisabled { get; private set; }
-        public VocabularyKey ObjectTypeCode { get; private set; }
-        public VocabularyKey EntityImageId { get; private set; }
+        public VocabularyKey VersionNumber { get; private set; }
     }
 }

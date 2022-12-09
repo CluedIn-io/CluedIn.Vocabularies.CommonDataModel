@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.Interactions
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class CustomChannelResponseVocabulary : SimpleVocabulary
     {
         public CustomChannelResponseVocabulary()
         {
             VocabularyName = "Custom Channel Response";
-            KeyPrefix = "commonDataModel.customchannelresponse.interactions";
+            KeyPrefix = "commonDataModel.customchannelresponse";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.CustomChannelResponse;
 
@@ -27,7 +27,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Interactions
 			    ResponseType = group.Add(new VocabularyKey(nameof(ResponseType), "Response type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    TriggerKeyword = group.Add(new VocabularyKey(nameof(TriggerKeyword), "Trigger keyword", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    InteractionType = group.Add(new VocabularyKey(nameof(InteractionType), "Interaction type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Timestamp = group.Add(new VocabularyKey(nameof(Timestamp), "Timestamp", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    Timestamp = group.Add(new VocabularyKey(nameof(Timestamp), "Timestamp", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -39,19 +39,19 @@ namespace CluedIn.Vocabularies.CommonDataModel.Interactions
             #endregion
         }
 
-        public VocabularyKey InteractionId { get; private set; }
-        public VocabularyKey OrganizationId { get; private set; }
+        public VocabularyKey AccountId { get; private set; }
         public VocabularyKey ActivityId { get; private set; }
+        public VocabularyKey ContactId { get; private set; }
         public VocabularyKey CustomerJourneyId { get; private set; }
         public VocabularyKey CustomerJourneyIterationId { get; private set; }
-        public VocabularyKey ContactId { get; private set; }
-        public VocabularyKey AccountId { get; private set; }
         public VocabularyKey EntityId { get; private set; }
         public VocabularyKey EntityType { get; private set; }
-        public VocabularyKey WorkflowId { get; private set; }
-        public VocabularyKey ResponseType { get; private set; }
-        public VocabularyKey TriggerKeyword { get; private set; }
+        public VocabularyKey InteractionId { get; private set; }
         public VocabularyKey InteractionType { get; private set; }
+        public VocabularyKey OrganizationId { get; private set; }
+        public VocabularyKey ResponseType { get; private set; }
         public VocabularyKey Timestamp { get; private set; }
+        public VocabularyKey TriggerKeyword { get; private set; }
+        public VocabularyKey WorkflowId { get; private set; }
     }
 }

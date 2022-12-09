@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.CustomerInsights
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class CustomerProfileVocabulary : SimpleVocabulary
     {
         public CustomerProfileVocabulary()
         {
             VocabularyName = "Customer Profile";
-            KeyPrefix = "commonDataModel.customerprofile.customerinsights";
+            KeyPrefix = "commonDataModel.customerprofile";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.CustomerProfile;
 
@@ -110,7 +110,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.CustomerInsights
 			    WorkAddress = group.Add(new VocabularyKey(nameof(WorkAddress), "Work Address", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    WorkPhone = group.Add(new VocabularyKey(nameof(WorkPhone), "Work Phone", VocabularyKeyDataType.PhoneNumber, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -134,7 +134,6 @@ namespace CluedIn.Vocabularies.CommonDataModel.CustomerInsights
             #endregion
         }
 
-        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey AccountNumber { get; private set; }
         public VocabularyKey Affiliations { get; private set; }
         public VocabularyKey AlumniOf { get; private set; }
@@ -163,6 +162,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.CustomerInsights
         public VocabularyKey EmployeeIdentifier { get; private set; }
         public VocabularyKey EmploymentStartDate { get; private set; }
         public VocabularyKey EngagementScore { get; private set; }
+        public VocabularyKey ExchangeRate { get; private set; }
         public VocabularyKey FacebookProfile { get; private set; }
         public VocabularyKey FamilyStatus { get; private set; }
         public VocabularyKey Fax { get; private set; }
@@ -219,6 +219,8 @@ namespace CluedIn.Vocabularies.CommonDataModel.CustomerInsights
         public VocabularyKey SentimentScore { get; private set; }
         public VocabularyKey ShippingAddress { get; private set; }
         public VocabularyKey SpouseName { get; private set; }
+        public VocabularyKey StateCode { get; private set; }
+        public VocabularyKey StatusCode { get; private set; }
         public VocabularyKey SystemOfOrigin { get; private set; }
         public VocabularyKey Tags { get; private set; }
         public VocabularyKey TotalLifetimeSpendAmount { get; private set; }
@@ -229,7 +231,5 @@ namespace CluedIn.Vocabularies.CommonDataModel.CustomerInsights
         public VocabularyKey WebsiteUrl { get; private set; }
         public VocabularyKey WorkAddress { get; private set; }
         public VocabularyKey WorkPhone { get; private set; }
-        public VocabularyKey StateCode { get; private set; }
-        public VocabularyKey StatusCode { get; private set; }
     }
 }

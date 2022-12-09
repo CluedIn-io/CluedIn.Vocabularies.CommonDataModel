@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class CareTeamParticipantVocabulary : SimpleVocabulary
     {
         public CareTeamParticipantVocabulary()
         {
             VocabularyName = "Care Team Participant";
-            KeyPrefix = "commonDataModel.careteamparticipant.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.careteamparticipant";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.CareTeamParticipant;
 
@@ -21,7 +21,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    PeriodEnd = group.Add(new VocabularyKey(nameof(PeriodEnd), "Period End", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    PeriodStart = group.Add(new VocabularyKey(nameof(PeriodStart), "Period Start", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
@@ -64,9 +64,9 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
             #endregion
         }
 
-        public VocabularyKey EntityImage { get; private set; }
         public VocabularyKey CareTeamParticipantId { get; private set; }
         public VocabularyKey Description { get; private set; }
+        public VocabularyKey EntityImage { get; private set; }
         public VocabularyKey MemberType { get; private set; }
         public VocabularyKey PeriodEnd { get; private set; }
         public VocabularyKey PeriodStart { get; private set; }

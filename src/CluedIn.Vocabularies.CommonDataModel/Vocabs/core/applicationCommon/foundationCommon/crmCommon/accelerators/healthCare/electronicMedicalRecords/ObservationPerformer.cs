@@ -1,14 +1,14 @@
 using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
-namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
+namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class ObservationPerformerVocabulary : SimpleVocabulary
     {
         public ObservationPerformerVocabulary()
         {
             VocabularyName = "Observation Performer";
-            KeyPrefix = "commonDataModel.observationperformer.electronicmedicalrecords";
+            KeyPrefix = "commonDataModel.observationperformer";
             KeySeparator = ".";
             Grouping = CommonDataModelEntityTypes.ObservationPerformer;
 
@@ -18,7 +18,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.ElectronicMedicalRecords
 			    ObservationPerformerId = group.Add(new VocabularyKey(nameof(ObservationPerformerId), "Observation Performer", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    ObsPerformerType = group.Add(new VocabularyKey(nameof(ObsPerformerType), "Performer Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
 			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));             
+			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
             });
             
             #region Incoming Relationships
