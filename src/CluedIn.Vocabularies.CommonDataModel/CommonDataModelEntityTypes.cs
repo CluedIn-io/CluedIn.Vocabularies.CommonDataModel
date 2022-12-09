@@ -1,19 +1,7 @@
-using System.Collections.Generic;
-
 namespace CluedIn.Vocabularies.CommonDataModel
 {
     public class CommonDataModelEntityTypes
     {
-        public Dictionary<string, Dictionary<string, string>> GetEntityDetails()
-        {
-            return new Dictionary<string, Dictionary<string, string>>
-            {
-                { "/Account", new Dictionary<string, string> {
-                    { "", "" } }
-                }
-            };
-        }
-
         public const string AcademicPeriod = "/AcademicPeriod";
         public const string AcademicPeriodDetail = "/AcademicPeriodDetail";
         public const string Accomplishments = "/Accomplishments";

@@ -1,4 +1,5 @@
-﻿using CommandLine;
+﻿using CluedIn.Vocabulariess.CDM.CLI.Model;
+using CommandLine;
 using Microsoft.CommonDataModel.ObjectModel.Cdm;
 using Microsoft.CommonDataModel.ObjectModel.Storage;
 using Microsoft.CommonDataModel.ObjectModel.Utilities;
@@ -25,9 +26,8 @@ namespace CluedIn.Vocabulariess.CDM.CLI
     {
         private static List<string> CdmDataTypes { get; set; }
         private static ReadManifestOption opts { get; set; }
-        //private static string pathFromExeToVocabForlder;
-        private static int VocabGeneratedCount;
-        private static List<string> EntityCodes;
+        private static List<VocabInfo> VocabInfos;
+
 
         public static async Task<int> Run(ReadManifestOption _opts)
         {
@@ -37,14 +37,12 @@ namespace CluedIn.Vocabulariess.CDM.CLI
 
             CdmCorpus.Storage.Mount("local", new LocalAdapter(Path.GetDirectoryName(_opts.FullPath)));
 
-            VocabGeneratedCount = 0;
-            EntityCodes = new List<string>();
+            VocabInfos = new List<VocabInfo>();
 
             await ExploreManifest(Path.GetFileName(_opts.FullPath));
 
+            GenerateVocabFiles();
             GenerateEntityTypesFile();
-
-            Console.WriteLine($"Total Vocabs generated: {VocabGeneratedCount}");
 
             return 0;
         }
@@ -70,7 +68,7 @@ namespace CluedIn.Vocabulariess.CDM.CLI
             foreach (var entity in manifest.Entities)
             {
                 var entitySelected = await CdmCorpus.FetchObjectAsync<CdmEntityDefinition>(entity.EntityPath, manifest);
-                ExportToCluedInVocab(manifest, entitySelected);
+                GenerateVocabInformation(manifest, entitySelected);
             }
 
             //loop through manifest.SubManifest
@@ -80,7 +78,7 @@ namespace CluedIn.Vocabulariess.CDM.CLI
             }
         }
 
-        private static void ExportToCluedInVocab(CdmManifestDefinition manifest, CdmEntityDefinition entity)
+        private static void GenerateVocabInformation(CdmManifestDefinition manifest, CdmEntityDefinition entity)
         {
             try
             {
@@ -88,16 +86,12 @@ namespace CluedIn.Vocabulariess.CDM.CLI
 
                 var entityName = entity.EntityName.CamelCase();
 
-                if (entityName.Equals("Account"))
-                {
+                Console.Write($"Generating Vocab Info for : ");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.Write($"{entity.AtCorpusPath}");
 
-                }
-
-                Console.Write($"Generating Vocab for : {entity.EntityName}");
-
-                var properties = new StringBuilder();
-                var keys = new StringBuilder();
-                var propList = new List<string>();
+                var properties = new List<string>();
+                var keys = new List<string>();
 
                 foreach (var attribute in entity.Attributes)
                 {
@@ -111,7 +105,6 @@ namespace CluedIn.Vocabulariess.CDM.CLI
                         {
                             foreach (var member in (attrb.ExplicitReference as CdmAttributeGroupDefinition).Members)
                             {
-
                                 if (member.GetType() == typeof(CdmTypeAttributeDefinition))
                                 {
                                     var attrbDef = member as CdmTypeAttributeDefinition;
@@ -128,10 +121,8 @@ namespace CluedIn.Vocabulariess.CDM.CLI
 
                                     attribName = attribName.Replace("@", "").CamelCase();
                                     attribDesc = string.IsNullOrEmpty(attribDesc) ? "" : $", \"{attribDesc}\"";
-                                    keys.AppendLine("        public VocabularyKey " + attribName + " { get; private set; }");
-                                    properties.AppendLine($"			    {attribName} = group.Add(new VocabularyKey(nameof({attribName}){attribDesc}, VocabularyKeyDataType.{MapCDMTypeToCluedInType(attribType)}, VocabularyKeyVisibility.Visible)); ");
-
-                                    propList.Add(attribName);
+                                    keys.Add("        public VocabularyKey " + attribName + " { get; private set; }");
+                                    properties.Add($"			    {attribName} = group.Add(new VocabularyKey(nameof({attribName}){attribDesc}, VocabularyKeyDataType.{MapCDMTypeToCluedInType(attribType)}, VocabularyKeyVisibility.Visible)); ");
                                 }
                                 else if (member.GetType() == typeof(CdmAttributeGroupReference))
                                 {
@@ -169,10 +160,8 @@ namespace CluedIn.Vocabulariess.CDM.CLI
 
                             attribName = attribName.Replace("@", "").CamelCase();
                             attribDesc = string.IsNullOrEmpty(attribDesc) ? "" : $", \"{attribDesc}\"";
-                            keys.AppendLine("        public VocabularyKey " + attribName + " { get; private set; }");
-                            properties.AppendLine($"			    {attribName} = group.Add(new VocabularyKey(nameof({attribName}){attribDesc}, VocabularyKeyDataType.{MapCDMTypeToCluedInType(attribType)}, VocabularyKeyVisibility.Visible)); ");
-
-                            propList.Add(attribName);
+                            keys.Add("        public VocabularyKey " + attribName + " { get; private set; }");
+                            properties.Add($"			    {attribName} = group.Add(new VocabularyKey(nameof({attribName}){attribDesc}, VocabularyKeyDataType.{MapCDMTypeToCluedInType(attribType)}, VocabularyKeyVisibility.Visible)); ");
                         }
                         else if (attribute.GetType() == typeof(CdmEntityAttributeDefinition))
                         {
@@ -195,68 +184,123 @@ namespace CluedIn.Vocabulariess.CDM.CLI
 
                 GetAllRelationships(manifest, entity, out List<CdmE2ERelationship> relationshipFromList, out List<CdmE2ERelationship> relationshipToList);
 
-                var corpusPath = entity.AtCorpusPath.Substring(0, entity.AtCorpusPath.IndexOf(entity.EntityName)).Replace("local:/", "").TrimTrailingPath();
-                var cdmSubFolder = opts.FullPath[(opts.FullPath.IndexOf("schemaDocuments") + "schemaDocuments".Length)..].Replace(Path.GetFileName(opts.FullPath), "");
-                var path = opts.CICdmProjPath.TrimTrailingPath() + 
-                    @"\Vocabs\" +
-                    cdmSubFolder.TrimTrailingPath() + "\\" +
-                    (string.IsNullOrEmpty(corpusPath.TrimTrailingPath()) ? "": corpusPath.TrimTrailingPath() + "\\");
-
-                var @namespace = Path.GetFileName(path.TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar));
-
-                if (@namespace == "schemaDocuments")
-                    @namespace = "";
+                VocabInfo vocabInfo = new VocabInfo();
+                if (VocabInfos.Any(a => a.EntityType == entityName))
+                    vocabInfo = VocabInfos.SingleOrDefault(s => s.EntityType == entityName);
                 else
-                    @namespace = "." + @namespace.CamelCase();
+                {
+                    vocabInfo.AtCorpusPath = entity.AtCorpusPath;
+                    vocabInfo.EntityType = entityName;
+                    vocabInfo.EntityTypeName = entity.EntityName.SplitCamelCase();
 
-                var template = File.ReadAllText("Templates/VocabularyTemplate.txt");
-                template = template.Replace("{{EntityType}}", entityName);
-                template = template.Replace("{{EntityTypeName}}", entity.EntityName.SplitCamelCase());
-                template = template.Replace("{{entitytype}}", entity.EntityName.ToLowerInvariant() + @namespace.ToLowerInvariant());
-                template = template.Replace("{{namespace}}", @namespace);
-                template = template.Replace("{{Properties}}", properties.ToString().Trim());
-                template = template.Replace("{{Keys}}", keys.ToString().Trim());
-                template = template.Replace("{{Details}}", @namespace.Replace(".", " for "));
+                    if (vocabInfo.IncomingRelationships == null)
+                    {
+                        var relStr = new StringBuilder();
+                        relationshipFromList.ForEach(relationship => relStr.AppendLine($"            ///Property <see cref=\"{relationship.FromEntityAttribute.CamelCase()}\"/> to Vocab '{relationship.ToEntity}' with Property '{relationship.ToEntityAttribute.CamelCase()}'"));
+                        vocabInfo.IncomingRelationships = relStr;
+                    }
+                    if (vocabInfo.OutgoingRelationships == null)
+                    {
+                        var relStr = new StringBuilder();
+                        relationshipToList.ForEach(relationship => relStr.AppendLine($"            ///Property <see cref=\"{relationship.ToEntityAttribute.CamelCase()}\"/> from Vocab '{relationship.FromEntity}' with Property '{relationship.FromEntityAttribute.CamelCase()}'"));
+                        vocabInfo.OutgoingRelationships = relStr;
+                    }
 
-                var relStr = new StringBuilder();
-                relationshipFromList.ForEach(relationship => relStr.AppendLine($"            ///Property <see cref=\"{relationship.FromEntityAttribute.CamelCase()}\"/> to Vocab '{relationship.ToEntity}' with Property '{relationship.ToEntityAttribute.CamelCase()}'"));
-                template = template.Replace("{{IncomingRelationships}}", relStr.ToString().Trim());
-                relStr = new StringBuilder();
-                relationshipToList.ForEach(relationship => relStr.AppendLine($"            ///Property <see cref=\"{relationship.ToEntityAttribute.CamelCase()}\"/> from Vocab '{relationship.FromEntity}' with Property '{relationship.FromEntityAttribute.CamelCase()}'"));
-                template = template.Replace("{{OutgoingRelationships}}", relStr.ToString().Trim());
+                    VocabInfos.Add(vocabInfo);
+                }
 
-                if (!Directory.Exists(path))
-                    Directory.CreateDirectory(path);
+                var newProperties = properties
+                    .Where(prop => 
+                      !vocabInfo.GroupProperties.Any(a => 
+                        a.Properties.Any(p => p == prop || p.StartsWith(prop[..prop.IndexOf("nameof")]))))
+                    .ToList();
 
-                var file = path + "\\" + entityName + ".cs";
-                if (File.Exists(file))
-                    File.Delete(file);
-
-                File.WriteAllText(file, template.ToString());
-
-                //path = path.Replace("Vocabs", "Sample Data");
-                //if (!Directory.Exists(path))
-                //    Directory.CreateDirectory(path);
-
-                //file = path + "\\" + entityName + ".csv";
-                //if (File.Exists(file))
-                //    File.Delete(file);
-
-                //File.WriteAllText(file, string.Join(",", propList));
-
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine($" => File has been generated - {entityName}.cs");
                 Console.ForegroundColor = ConsoleColor.White;
+                Console.Write($" - Generated ");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.Write($"{newProperties.Count()}");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine($" new Vocab Property/ies");
 
-                VocabGeneratedCount++;
+                vocabInfo.GroupProperties.Add(new GroupProperties
+                {
+                    AtCorpusPath = entity.AtCorpusPath,
+                    Properties = newProperties
+                });
 
-                if (!EntityCodes.Contains(entityName))
-                    EntityCodes.Add(entityName);
+                vocabInfo.Keys.AddRange(keys);
             }
             catch (Exception ex)
             {
                 Console.Error.WriteLine(ex.ToString());
             }
+        }
+
+        private static void GenerateVocabFiles()
+        {
+            var cdmSubFolder = opts.FullPath[(opts.FullPath.IndexOf("schemaDocuments") + "schemaDocuments".Length)..].Replace(Path.GetFileName(opts.FullPath), "");
+            var path = opts.CICdmProjPath.TrimTrailingPath() +
+                    @"\Vocabs\" +
+                    cdmSubFolder.TrimTrailingPath() + "\\";
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write($"Generating Vocabs to ");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write($"{path}");
+
+            foreach (var vocabInfo in VocabInfos)
+            {
+                var vocabCorpusPath = vocabInfo.AtCorpusPath[..vocabInfo.AtCorpusPath.IndexOf(vocabInfo.EntityType)].Replace("local:/", "").TrimTrailingPath();
+                var vocabPath = path + (string.IsNullOrEmpty(vocabCorpusPath.TrimTrailingPath()) ? "" : vocabCorpusPath.TrimTrailingPath() + "\\");
+                var vocabKeyGroup = new StringBuilder();
+                foreach (var groupProperty in vocabInfo.GroupProperties)
+                {
+                    var corpusPath = groupProperty.AtCorpusPath[..groupProperty.AtCorpusPath.IndexOf(vocabInfo.EntityType)].Replace("local:/", "").TrimTrailingPath();
+                    var groupPath = opts.CICdmProjPath.TrimTrailingPath() +
+                        @"\Vocabs\" +
+                        cdmSubFolder.TrimTrailingPath() + "\\" +
+                        (string.IsNullOrEmpty(corpusPath.TrimTrailingPath()) ? "" : corpusPath.TrimTrailingPath() + "\\");
+
+                    var @namespace = Path.GetFileName(groupPath.TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar));
+                    
+                    if (@namespace == "schemaDocuments")
+                        @namespace = "";
+                    else
+                        @namespace = " for " + @namespace.CamelCase();
+
+                    vocabKeyGroup.AppendLine($"            AddGroup(\"{vocabInfo.EntityType} Details{@namespace}\", group =>");
+                    vocabKeyGroup.AppendLine("            {");
+                    vocabKeyGroup.AppendLine(string.Join(Environment.NewLine, groupProperty.Properties));
+                    vocabKeyGroup.AppendLine("            });");
+                }
+
+                string template = File.ReadAllText("Templates/VocabularyTemplate.txt");
+
+                template = template.Replace("{{EntityType}}", vocabInfo.EntityType);
+                template = template.Replace("{{EntityTypeName}}", vocabInfo.EntityTypeName);
+                template = template.Replace("{{entitytype}}", vocabInfo.EntityType.ToLowerInvariant());
+                template = template.Replace("{{VocabKeyGroup}}", vocabKeyGroup.ToString().Trim());
+                template = template.Replace("{{Keys}}", string.Join(Environment.NewLine, vocabInfo.Keys.Distinct().OrderBy(s => s)).Trim());
+                template = template.Replace("{{IncomingRelationships}}", vocabInfo.IncomingRelationships.ToString().Trim());
+                template = template.Replace("{{OutgoingRelationships}}", vocabInfo.OutgoingRelationships.ToString().Trim());
+
+                if (!Directory.Exists(vocabPath))
+                    Directory.CreateDirectory(vocabPath);
+
+                var file = vocabPath + "\\" + vocabInfo.EntityType + ".cs";
+
+                if (File.Exists(file))
+                    File.Delete(file);
+
+                File.WriteAllText(file, template.ToString());
+
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write($"\tFile has been generated - ");
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine($"{vocabInfo.EntityType}.cs");
+            }
+
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine($"Total Vocabs generated: {VocabInfos.Count}");
         }
 
         private static async Task<Dictionary<string, List<string>>> GetAppManifestFile(string directory)
@@ -402,8 +446,8 @@ namespace CluedIn.Vocabulariess.CDM.CLI
             {
                 var entityTypes = new StringBuilder();
 
-                EntityCodes.OrderBy(s => s).ToList().
-                    ForEach(entityCode => entityTypes.AppendLine($"        public const string {entityCode} = \"/{entityCode}\";"));
+                VocabInfos.OrderBy(s => s.EntityType).ToList().
+                    ForEach(vocabInfo => entityTypes.AppendLine($"        public const string {vocabInfo.EntityType} = \"/{vocabInfo.EntityType}\";"));
 
                 var template = File.ReadAllText("Templates/EntityTypesTemplate.txt");
                 template = template.Replace("{{EntityTypes}}", entityTypes.ToString().Trim());
