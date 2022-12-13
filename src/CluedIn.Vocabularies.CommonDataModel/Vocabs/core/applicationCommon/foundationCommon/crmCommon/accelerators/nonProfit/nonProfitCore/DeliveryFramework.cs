@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,63 +13,63 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("DeliveryFramework Details for NonProfitCore", group =>
             {
-			    Country = group.Add(new VocabularyKey(nameof(Country), "Country", VocabularyKeyDataType.GeographyCountry, VocabularyKeyVisibility.Visible)); 
-			    DeliveryFrameworkId = group.Add(new VocabularyKey(nameof(DeliveryFrameworkId), "Delivery Framework", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DeliveryFrameworkType = group.Add(new VocabularyKey(nameof(DeliveryFrameworkType), "Delivery Framework Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EndDate = group.Add(new VocabularyKey(nameof(EndDate), "End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Goal = group.Add(new VocabularyKey(nameof(Goal), "Goal", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PlannedEndDate = group.Add(new VocabularyKey(nameof(PlannedEndDate), "Planned End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PlannedStartDate = group.Add(new VocabularyKey(nameof(PlannedStartDate), "Planned Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Region = group.Add(new VocabularyKey(nameof(Region), "Region", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Scope = group.Add(new VocabularyKey(nameof(Scope), "Scope", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StartDate = group.Add(new VocabularyKey(nameof(StartDate), "Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Status = group.Add(new VocabularyKey(nameof(Status), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                Country = group.Add(new VocabularyKey(nameof(Country), "Country", VocabularyKeyDataType.GeographyCountry, VocabularyKeyVisibility.Visible));
+                DeliveryFrameworkId = group.Add(new VocabularyKey(nameof(DeliveryFrameworkId), "Delivery Framework", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DeliveryFrameworkType = group.Add(new VocabularyKey(nameof(DeliveryFrameworkType), "Delivery Framework Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EndDate = group.Add(new VocabularyKey(nameof(EndDate), "End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Goal = group.Add(new VocabularyKey(nameof(Goal), "Goal", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PlannedEndDate = group.Add(new VocabularyKey(nameof(PlannedEndDate), "Planned End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PlannedStartDate = group.Add(new VocabularyKey(nameof(PlannedStartDate), "Planned Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Region = group.Add(new VocabularyKey(nameof(Region), "Region", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Scope = group.Add(new VocabularyKey(nameof(Scope), "Scope", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StartDate = group.Add(new VocabularyKey(nameof(StartDate), "Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Status = group.Add(new VocabularyKey(nameof(Status), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
             AddGroup("DeliveryFramework Details for NonProfitMeasurement", group =>
             {
-			    LogframeStatus = group.Add(new VocabularyKey(nameof(LogframeStatus), "Logframe Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                LogframeStatus = group.Add(new VocabularyKey(nameof(LogframeStatus), "Logframe Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
             AddGroup("DeliveryFramework Details for NonProfitIati", group =>
             {
-			    CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CreatedOnBehalfBy = group.Add(new VocabularyKey(nameof(CreatedOnBehalfBy), "Created By (Delegate)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ModifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(ModifiedOnBehalfBy), "Modified By (Delegate)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CapitalSpend = group.Add(new VocabularyKey(nameof(CapitalSpend), "Capital Spend", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    CollaborationType = group.Add(new VocabularyKey(nameof(CollaborationType), "Collaboration Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CrsChannelId = group.Add(new VocabularyKey(nameof(CrsChannelId), "CRS Channel", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CommitmentDate = group.Add(new VocabularyKey(nameof(CommitmentDate), "Commitment Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    InterestArrears = group.Add(new VocabularyKey(nameof(InterestArrears), "Interest Arrears", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    CrsInterestArrears_Base = group.Add(new VocabularyKey(nameof(CrsInterestArrears_Base), "Interest Arrears (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    InterestReceived = group.Add(new VocabularyKey(nameof(InterestReceived), "Interest Received", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    CrsInterestReceived_Base = group.Add(new VocabularyKey(nameof(CrsInterestReceived_Base), "Interest Received (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    LoanRate1 = group.Add(new VocabularyKey(nameof(LoanRate1), "Loan Rate 1", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    LoanRate2 = group.Add(new VocabularyKey(nameof(LoanRate2), "Loan Rate 2", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    PrincipalArrears = group.Add(new VocabularyKey(nameof(PrincipalArrears), "Principal Arrears", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    CrsPrincipalArrears_Base = group.Add(new VocabularyKey(nameof(CrsPrincipalArrears_Base), "Principal Arrears (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    PrincipalOutstanding = group.Add(new VocabularyKey(nameof(PrincipalOutstanding), "Principal Outstanding", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    CrsPrincipalOutstanding_Base = group.Add(new VocabularyKey(nameof(CrsPrincipalOutstanding_Base), "Principal Outstanding (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    FinalRepaymentDate = group.Add(new VocabularyKey(nameof(FinalRepaymentDate), "Final Repayment Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    FirstRepaymentDate = group.Add(new VocabularyKey(nameof(FirstRepaymentDate), "First Repayment Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ReportingYear = group.Add(new VocabularyKey(nameof(ReportingYear), "Reporting Year", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    CurrencyValueDate = group.Add(new VocabularyKey(nameof(CurrencyValueDate), "Currency Value Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DefaultTiedStatusIdId = group.Add(new VocabularyKey(nameof(DefaultTiedStatusIdId), "Default Tied Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExtractionDate = group.Add(new VocabularyKey(nameof(ExtractionDate), "Extraction Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PhaseoutYear = group.Add(new VocabularyKey(nameof(PhaseoutYear), "Phaseout Year", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    FssPriority = group.Add(new VocabularyKey(nameof(FssPriority), "Priority", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    HierarchyLevel = group.Add(new VocabularyKey(nameof(HierarchyLevel), "Hierarchy Level", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    HumanitarianScope = group.Add(new VocabularyKey(nameof(HumanitarianScope), "Humanitarian Scope", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    IatiActivityId = group.Add(new VocabularyKey(nameof(IatiActivityId), "IATI Activity Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SecondaryReporter = group.Add(new VocabularyKey(nameof(SecondaryReporter), "Secondary Reporter", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOnBehalfBy = group.Add(new VocabularyKey(nameof(CreatedOnBehalfBy), "Created By (Delegate)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(ModifiedOnBehalfBy), "Modified By (Delegate)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CapitalSpend = group.Add(new VocabularyKey(nameof(CapitalSpend), "Capital Spend", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                CollaborationType = group.Add(new VocabularyKey(nameof(CollaborationType), "Collaboration Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CrsChannelId = group.Add(new VocabularyKey(nameof(CrsChannelId), "CRS Channel", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CommitmentDate = group.Add(new VocabularyKey(nameof(CommitmentDate), "Commitment Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InterestArrears = group.Add(new VocabularyKey(nameof(InterestArrears), "Interest Arrears", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                CrsInterestArrears_Base = group.Add(new VocabularyKey(nameof(CrsInterestArrears_Base), "Interest Arrears (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                InterestReceived = group.Add(new VocabularyKey(nameof(InterestReceived), "Interest Received", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                CrsInterestReceived_Base = group.Add(new VocabularyKey(nameof(CrsInterestReceived_Base), "Interest Received (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                LoanRate1 = group.Add(new VocabularyKey(nameof(LoanRate1), "Loan Rate 1", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                LoanRate2 = group.Add(new VocabularyKey(nameof(LoanRate2), "Loan Rate 2", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                PrincipalArrears = group.Add(new VocabularyKey(nameof(PrincipalArrears), "Principal Arrears", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                CrsPrincipalArrears_Base = group.Add(new VocabularyKey(nameof(CrsPrincipalArrears_Base), "Principal Arrears (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                PrincipalOutstanding = group.Add(new VocabularyKey(nameof(PrincipalOutstanding), "Principal Outstanding", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                CrsPrincipalOutstanding_Base = group.Add(new VocabularyKey(nameof(CrsPrincipalOutstanding_Base), "Principal Outstanding (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                FinalRepaymentDate = group.Add(new VocabularyKey(nameof(FinalRepaymentDate), "Final Repayment Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FirstRepaymentDate = group.Add(new VocabularyKey(nameof(FirstRepaymentDate), "First Repayment Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ReportingYear = group.Add(new VocabularyKey(nameof(ReportingYear), "Reporting Year", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                CurrencyValueDate = group.Add(new VocabularyKey(nameof(CurrencyValueDate), "Currency Value Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DefaultTiedStatusIdId = group.Add(new VocabularyKey(nameof(DefaultTiedStatusIdId), "Default Tied Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExtractionDate = group.Add(new VocabularyKey(nameof(ExtractionDate), "Extraction Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PhaseoutYear = group.Add(new VocabularyKey(nameof(PhaseoutYear), "Phaseout Year", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                FssPriority = group.Add(new VocabularyKey(nameof(FssPriority), "Priority", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                HierarchyLevel = group.Add(new VocabularyKey(nameof(HierarchyLevel), "Hierarchy Level", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                HumanitarianScope = group.Add(new VocabularyKey(nameof(HumanitarianScope), "Humanitarian Scope", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                IatiActivityId = group.Add(new VocabularyKey(nameof(IatiActivityId), "IATI Activity Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SecondaryReporter = group.Add(new VocabularyKey(nameof(SecondaryReporter), "Secondary Reporter", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="AccountId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="DonorId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
@@ -93,7 +92,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="ReviewerId"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="ObjectiveId"/> to Vocab 'Objective.cdm.json/Objective' with Property 'ObjectiveId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="DeliveryFrameworkId"/> from Vocab 'Budget.cdm.json/Budget' with Property 'DeliveryFrameworkId'
             ///Property <see cref="DeliveryFrameworkId"/> from Vocab 'DeliveryFramework.cdm.json/DeliveryFramework' with Property 'ParentDeliveryFrameworkId'

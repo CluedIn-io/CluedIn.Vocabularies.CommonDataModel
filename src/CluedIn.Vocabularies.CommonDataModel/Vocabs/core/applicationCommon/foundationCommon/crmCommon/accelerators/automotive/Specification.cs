@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,14 +13,14 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("Specification Details for Automotive", group =>
             {
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SpecificationId = group.Add(new VocabularyKey(nameof(SpecificationId), "Specification", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SpecificationId = group.Add(new VocabularyKey(nameof(SpecificationId), "Specification", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="LeadId"/> to Vocab 'Lead.cdm.json/Lead' with Property 'LeadId'
             ///Property <see cref="AttributeTypeId"/> to Vocab 'AttributeType.cdm.json/AttributeType' with Property 'AttributeTypeId'
@@ -91,7 +90,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="SpecificationId"/> from Vocab 'Device.cdm.json/Device' with Property 'SpecificationId'
             ///Property <see cref="SpecificationAccessoryId"/> from Vocab 'DeviceComponent.cdm.json/DeviceComponent' with Property 'SpecificationAccessoryId'

@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,35 +13,35 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("Feedback Details for ApplicationCommon", group =>
             {
-			    FeedbackId = group.Add(new VocabularyKey(nameof(FeedbackId), "Feedback", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Rating = group.Add(new VocabularyKey(nameof(Rating), "Rating", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    MinRating = group.Add(new VocabularyKey(nameof(MinRating), "Minimum Rating", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    MaxRating = group.Add(new VocabularyKey(nameof(MaxRating), "Maximum Rating", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    NormalizedRating = group.Add(new VocabularyKey(nameof(NormalizedRating), "Normalized Rating", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    Comments = group.Add(new VocabularyKey(nameof(Comments), "Comments", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Source = group.Add(new VocabularyKey(nameof(Source), "Source", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), "Version Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    OwningUser = group.Add(new VocabularyKey(nameof(OwningUser), "Owning User", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    OwningTeam = group.Add(new VocabularyKey(nameof(OwningTeam), "Owning Team", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ClosedOn = group.Add(new VocabularyKey(nameof(ClosedOn), "Closed On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    Title = group.Add(new VocabularyKey(nameof(Title), "Title", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                FeedbackId = group.Add(new VocabularyKey(nameof(FeedbackId), "Feedback", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Rating = group.Add(new VocabularyKey(nameof(Rating), "Rating", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                MinRating = group.Add(new VocabularyKey(nameof(MinRating), "Minimum Rating", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                MaxRating = group.Add(new VocabularyKey(nameof(MaxRating), "Maximum Rating", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                NormalizedRating = group.Add(new VocabularyKey(nameof(NormalizedRating), "Normalized Rating", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                Comments = group.Add(new VocabularyKey(nameof(Comments), "Comments", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Source = group.Add(new VocabularyKey(nameof(Source), "Source", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), "Version Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwningUser = group.Add(new VocabularyKey(nameof(OwningUser), "Owning User", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwningTeam = group.Add(new VocabularyKey(nameof(OwningTeam), "Owning Team", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ClosedOn = group.Add(new VocabularyKey(nameof(ClosedOn), "Closed On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                Title = group.Add(new VocabularyKey(nameof(Title), "Title", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
             AddGroup("Feedback Details for Portals", group =>
             {
-			    PublishedToWeb = group.Add(new VocabularyKey(nameof(PublishedToWeb), "Published To Web", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    AuthorURL = group.Add(new VocabularyKey(nameof(AuthorURL), "Author URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
-			    AdxContactEmail = group.Add(new VocabularyKey(nameof(AdxContactEmail), "Email", VocabularyKeyDataType.Email, VocabularyKeyVisibility.Visible)); 
-			    AdxContactUsername = group.Add(new VocabularyKey(nameof(AdxContactUsername), "Username", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    AdxCreatedByContact = group.Add(new VocabularyKey(nameof(AdxCreatedByContact), "Created By Name (Contact)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                PublishedToWeb = group.Add(new VocabularyKey(nameof(PublishedToWeb), "Published To Web", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                AuthorURL = group.Add(new VocabularyKey(nameof(AuthorURL), "Author URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible));
+                AdxContactEmail = group.Add(new VocabularyKey(nameof(AdxContactEmail), "Email", VocabularyKeyDataType.Email, VocabularyKeyVisibility.Visible));
+                AdxContactUsername = group.Add(new VocabularyKey(nameof(AdxContactUsername), "Username", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AdxCreatedByContact = group.Add(new VocabularyKey(nameof(AdxCreatedByContact), "Created By Name (Contact)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="OwningBusinessUnit"/> to Vocab 'BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
             ///Property <see cref="OwningBusinessUnit"/> to Vocab 'BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
@@ -62,7 +61,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="ClosedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwnerId"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="FeedbackId"/> from Vocab 'Feedback.cdm.json/Feedback' with Property 'RegardingObjectId'
             #endregion

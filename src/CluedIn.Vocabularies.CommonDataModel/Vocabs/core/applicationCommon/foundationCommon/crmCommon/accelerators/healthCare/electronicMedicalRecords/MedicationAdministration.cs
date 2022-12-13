@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,34 +13,34 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("MedicationAdministration Details for ElectronicMedicalRecords", group =>
             {
-			    ContextType = group.Add(new VocabularyKey(nameof(ContextType), "Context Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DosageDose = group.Add(new VocabularyKey(nameof(DosageDose), "Dosage Dose", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    DosageRateQuantity = group.Add(new VocabularyKey(nameof(DosageRateQuantity), "Dosage Quantity", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    DosageRateType = group.Add(new VocabularyKey(nameof(DosageRateType), "Dosage Rate Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DosageText = group.Add(new VocabularyKey(nameof(DosageText), "Dosage Text", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EffectiveDateTime = group.Add(new VocabularyKey(nameof(EffectiveDateTime), "Effective Date time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EffectivePeriodEndDate = group.Add(new VocabularyKey(nameof(EffectivePeriodEndDate), "Effective Period End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EffectivePeriodStartDate = group.Add(new VocabularyKey(nameof(EffectivePeriodStartDate), "Effective Period Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EffectiveType = group.Add(new VocabularyKey(nameof(EffectiveType), "Effective Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    MedicationAdministrationId = group.Add(new VocabularyKey(nameof(MedicationAdministrationId), "Medication Administration", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    MedicationAdministrationNumber = group.Add(new VocabularyKey(nameof(MedicationAdministrationNumber), "Medication Administration Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    MedicationType = group.Add(new VocabularyKey(nameof(MedicationType), "Medication Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    NotGiven = group.Add(new VocabularyKey(nameof(NotGiven), "Not Given", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    RateRatioQuantityDenominatorComparator = group.Add(new VocabularyKey(nameof(RateRatioQuantityDenominatorComparator), "Ratio Denominator Comparator", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RateRatioQuantityDenominatorUnit = group.Add(new VocabularyKey(nameof(RateRatioQuantityDenominatorUnit), "Ratio Denominator Unit", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RateRatioQuantityDenominatorValue = group.Add(new VocabularyKey(nameof(RateRatioQuantityDenominatorValue), "Ratio Denominator Value", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    RateRatioQuantityNumeratorComparator = group.Add(new VocabularyKey(nameof(RateRatioQuantityNumeratorComparator), "Ratio Numerator Comparator", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RateRatioQuantityNumeratorSystem = group.Add(new VocabularyKey(nameof(RateRatioQuantityNumeratorSystem), "Ratio Numerator System", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RateRatioQuantityNumeratorUnit = group.Add(new VocabularyKey(nameof(RateRatioQuantityNumeratorUnit), "Ratio Numerator Unit", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RateRatioQuantityNumeratorValue = group.Add(new VocabularyKey(nameof(RateRatioQuantityNumeratorValue), "Ratio Numerator Value", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    RateRatiotQuantityDenominatorSystem = group.Add(new VocabularyKey(nameof(RateRatiotQuantityDenominatorSystem), "Ratio Denominator System", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Status = group.Add(new VocabularyKey(nameof(Status), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SubjectType = group.Add(new VocabularyKey(nameof(SubjectType), "Subject Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                ContextType = group.Add(new VocabularyKey(nameof(ContextType), "Context Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DosageDose = group.Add(new VocabularyKey(nameof(DosageDose), "Dosage Dose", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                DosageRateQuantity = group.Add(new VocabularyKey(nameof(DosageRateQuantity), "Dosage Quantity", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                DosageRateType = group.Add(new VocabularyKey(nameof(DosageRateType), "Dosage Rate Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DosageText = group.Add(new VocabularyKey(nameof(DosageText), "Dosage Text", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EffectiveDateTime = group.Add(new VocabularyKey(nameof(EffectiveDateTime), "Effective Date time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EffectivePeriodEndDate = group.Add(new VocabularyKey(nameof(EffectivePeriodEndDate), "Effective Period End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EffectivePeriodStartDate = group.Add(new VocabularyKey(nameof(EffectivePeriodStartDate), "Effective Period Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EffectiveType = group.Add(new VocabularyKey(nameof(EffectiveType), "Effective Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MedicationAdministrationId = group.Add(new VocabularyKey(nameof(MedicationAdministrationId), "Medication Administration", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MedicationAdministrationNumber = group.Add(new VocabularyKey(nameof(MedicationAdministrationNumber), "Medication Administration Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MedicationType = group.Add(new VocabularyKey(nameof(MedicationType), "Medication Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                NotGiven = group.Add(new VocabularyKey(nameof(NotGiven), "Not Given", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                RateRatioQuantityDenominatorComparator = group.Add(new VocabularyKey(nameof(RateRatioQuantityDenominatorComparator), "Ratio Denominator Comparator", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RateRatioQuantityDenominatorUnit = group.Add(new VocabularyKey(nameof(RateRatioQuantityDenominatorUnit), "Ratio Denominator Unit", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RateRatioQuantityDenominatorValue = group.Add(new VocabularyKey(nameof(RateRatioQuantityDenominatorValue), "Ratio Denominator Value", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                RateRatioQuantityNumeratorComparator = group.Add(new VocabularyKey(nameof(RateRatioQuantityNumeratorComparator), "Ratio Numerator Comparator", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RateRatioQuantityNumeratorSystem = group.Add(new VocabularyKey(nameof(RateRatioQuantityNumeratorSystem), "Ratio Numerator System", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RateRatioQuantityNumeratorUnit = group.Add(new VocabularyKey(nameof(RateRatioQuantityNumeratorUnit), "Ratio Numerator Unit", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RateRatioQuantityNumeratorValue = group.Add(new VocabularyKey(nameof(RateRatioQuantityNumeratorValue), "Ratio Numerator Value", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                RateRatiotQuantityDenominatorSystem = group.Add(new VocabularyKey(nameof(RateRatiotQuantityDenominatorSystem), "Ratio Denominator System", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Status = group.Add(new VocabularyKey(nameof(Status), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SubjectType = group.Add(new VocabularyKey(nameof(SubjectType), "Subject Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="PerfomerOnBehalfOfId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="SubjectTypePatientId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
@@ -201,7 +200,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="MedicationAdministrationId"/> from Vocab 'MedicationAdministrationDefinition.cdm.json/MedicationAdministrationDefinition' with Property 'MedicationAdministrationId'
             ///Property <see cref="MedicationAdministrationId"/> from Vocab 'MedicationAdministrationDevice.cdm.json/MedicationAdministrationDevice' with Property 'MedicationAdministrationId'

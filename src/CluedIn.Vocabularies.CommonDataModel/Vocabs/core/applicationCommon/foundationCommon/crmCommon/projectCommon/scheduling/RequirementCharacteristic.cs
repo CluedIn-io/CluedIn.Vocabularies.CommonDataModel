@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,12 +13,12 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("RequirementCharacteristic Details for Scheduling", group =>
             {
-			    RequirementCharacteristicId = group.Add(new VocabularyKey(nameof(RequirementCharacteristicId), "Requirement Characteristic", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                RequirementCharacteristicId = group.Add(new VocabularyKey(nameof(RequirementCharacteristicId), "Requirement Characteristic", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
@@ -34,9 +33,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="RatingValue"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/RatingValue.cdm.json/RatingValue' with Property 'RatingValueId'
             ///Property <see cref="ResourceRequirement"/> to Vocab 'ResourceRequirement.cdm.json/ResourceRequirement' with Property 'ResourceRequirementId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

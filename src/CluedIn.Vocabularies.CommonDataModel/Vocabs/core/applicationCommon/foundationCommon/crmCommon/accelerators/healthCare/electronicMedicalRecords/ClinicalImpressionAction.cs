@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,13 +13,13 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("ClinicalImpressionAction Details for ElectronicMedicalRecords", group =>
             {
-			    ActionType = group.Add(new VocabularyKey(nameof(ActionType), "Action Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ClinicalImpressionActionId = group.Add(new VocabularyKey(nameof(ClinicalImpressionActionId), "Clinical Impression Action", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                ActionType = group.Add(new VocabularyKey(nameof(ActionType), "Action Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ClinicalImpressionActionId = group.Add(new VocabularyKey(nameof(ClinicalImpressionActionId), "Clinical Impression Action", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="ActionAppointmentId"/> to Vocab 'AppointmentEMR.cdm.json/AppointmentEMR' with Property 'ActivityId'
             ///Property <see cref="ClinicalImpressionIdentifierId"/> to Vocab 'ClinicalImpression.cdm.json/ClinicalImpression' with Property 'ClinicalImpressionId'
@@ -41,9 +40,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="ActionProcedureRequestId"/> to Vocab 'ProcedureRequest.cdm.json/ProcedureRequest' with Property 'ProcedureRequestId'
             ///Property <see cref="ActionReferralRequestId"/> to Vocab 'ReferralRequest.cdm.json/ReferralRequest' with Property 'ReferralRequestId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

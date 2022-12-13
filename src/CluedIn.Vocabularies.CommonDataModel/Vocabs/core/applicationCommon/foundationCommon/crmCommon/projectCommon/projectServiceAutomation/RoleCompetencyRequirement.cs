@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,13 +13,13 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("RoleCompetencyRequirement Details for ProjectServiceAutomation", group =>
             {
-			    RoleCompetencyRequirementId = group.Add(new VocabularyKey(nameof(RoleCompetencyRequirementId), "Role competency requirement", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    BookableCharacteristicType = group.Add(new VocabularyKey(nameof(BookableCharacteristicType), "Bookable Characteristic Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                RoleCompetencyRequirementId = group.Add(new VocabularyKey(nameof(RoleCompetencyRequirementId), "Role competency requirement", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BookableCharacteristicType = group.Add(new VocabularyKey(nameof(BookableCharacteristicType), "Bookable Characteristic Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="ResourceCategory"/> to Vocab 'BookableResourceCategory.cdm.json/BookableResourceCategory' with Property 'BookableResourceCategoryId'
             ///Property <see cref="Characteristic"/> to Vocab 'Characteristic.cdm.json/Characteristic' with Property 'CharacteristicId'
@@ -35,9 +34,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             ///Property <see cref="RatingValue"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/RatingValue.cdm.json/RatingValue' with Property 'RatingValueId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,20 +13,20 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("CourseHistory Details for HigherEducation", group =>
             {
-			    CourseHistoryId = group.Add(new VocabularyKey(nameof(CourseHistoryId), "Course History", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Course History Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ContinuingEducation = group.Add(new VocabularyKey(nameof(ContinuingEducation), "Continuing Education", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CreditsAttempted = group.Add(new VocabularyKey(nameof(CreditsAttempted), "Credits Attempted", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    CreditsEarrned = group.Add(new VocabularyKey(nameof(CreditsEarrned), "Credits Earrned", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    GradePoints = group.Add(new VocabularyKey(nameof(GradePoints), "Grade Points", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    LastDateofAttendance = group.Add(new VocabularyKey(nameof(LastDateofAttendance), "Last Date of Attendance", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    LetterGrade = group.Add(new VocabularyKey(nameof(LetterGrade), "Letter Grade", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    MidTermLetterGrade = group.Add(new VocabularyKey(nameof(MidTermLetterGrade), "Mid Term Letter Grade", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    MidTermNumericGrade = group.Add(new VocabularyKey(nameof(MidTermNumericGrade), "Mid Term Numeric Grade", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+                CourseHistoryId = group.Add(new VocabularyKey(nameof(CourseHistoryId), "Course History", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Course History Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ContinuingEducation = group.Add(new VocabularyKey(nameof(ContinuingEducation), "Continuing Education", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreditsAttempted = group.Add(new VocabularyKey(nameof(CreditsAttempted), "Credits Attempted", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                CreditsEarrned = group.Add(new VocabularyKey(nameof(CreditsEarrned), "Credits Earrned", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                GradePoints = group.Add(new VocabularyKey(nameof(GradePoints), "Grade Points", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                LastDateofAttendance = group.Add(new VocabularyKey(nameof(LastDateofAttendance), "Last Date of Attendance", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LetterGrade = group.Add(new VocabularyKey(nameof(LetterGrade), "Letter Grade", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MidTermLetterGrade = group.Add(new VocabularyKey(nameof(MidTermLetterGrade), "Mid Term Letter Grade", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MidTermNumericGrade = group.Add(new VocabularyKey(nameof(MidTermNumericGrade), "Mid Term Numeric Grade", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="StudentId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
             ///Property <see cref="AcademicPeriodDetailsId"/> to Vocab 'AcademicPeriodDetail.cdm.json/AcademicPeriodDetail' with Property 'AcademicPeriodDetailsId'
@@ -44,9 +43,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="CourseSectionId"/> to Vocab 'CourseSection.cdm.json/CourseSection' with Property 'CourseSectionId'
             ///Property <see cref="RegistrationStatusId"/> to Vocab 'RegistrationStatus.cdm.json/RegistrationStatus' with Property 'RegistrationStatusId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

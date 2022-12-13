@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,14 +13,14 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("HotelRoomReservation Details for EventManagement", group =>
             {
-			    HotelRoomReservationId = group.Add(new VocabularyKey(nameof(HotelRoomReservationId), "Hotel Room Reservation", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Reservation Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RewardsProgramNumber = group.Add(new VocabularyKey(nameof(RewardsProgramNumber), "Rewards Program Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SpecialRequests = group.Add(new VocabularyKey(nameof(SpecialRequests), "Special Requests", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                HotelRoomReservationId = group.Add(new VocabularyKey(nameof(HotelRoomReservationId), "Hotel Room Reservation", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Reservation Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RewardsProgramNumber = group.Add(new VocabularyKey(nameof(RewardsProgramNumber), "Rewards Program Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SpecialRequests = group.Add(new VocabularyKey(nameof(SpecialRequests), "Special Requests", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="Attendee"/> to Vocab 'EventRegistration.cdm.json/EventRegistration' with Property 'EventRegistrationId'
             ///Property <see cref="HotelRoomAllocation"/> to Vocab 'HotelRoomAllocation.cdm.json/HotelRoomAllocation' with Property 'HotelRoomAllocationId'
@@ -35,9 +34,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

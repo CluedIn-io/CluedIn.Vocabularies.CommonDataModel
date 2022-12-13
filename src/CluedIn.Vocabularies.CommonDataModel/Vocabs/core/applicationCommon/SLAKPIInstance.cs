@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,28 +13,28 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("SLAKPIInstance Details for ApplicationCommon", group =>
             {
-			    SLAKPIInstanceId = group.Add(new VocabularyKey(nameof(SLAKPIInstanceId), "SLA KPI InstanceId", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ComputedFailureTime = group.Add(new VocabularyKey(nameof(ComputedFailureTime), "Computed Failure Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ComputedWarningTime = group.Add(new VocabularyKey(nameof(ComputedWarningTime), "Computed Warning Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    FailureTime = group.Add(new VocabularyKey(nameof(FailureTime), "Failure Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    OwningUser = group.Add(new VocabularyKey(nameof(OwningUser), "Owning User", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    OwningTeam = group.Add(new VocabularyKey(nameof(OwningTeam), "Owning Team", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Status = group.Add(new VocabularyKey(nameof(Status), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SucceededOn = group.Add(new VocabularyKey(nameof(SucceededOn), "Succeeded On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    WarningTime = group.Add(new VocabularyKey(nameof(WarningTime), "Warning Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), "Version Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    WarningTimeReached = group.Add(new VocabularyKey(nameof(WarningTimeReached), "Warning Time Reached", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                SLAKPIInstanceId = group.Add(new VocabularyKey(nameof(SLAKPIInstanceId), "SLA KPI InstanceId", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ComputedFailureTime = group.Add(new VocabularyKey(nameof(ComputedFailureTime), "Computed Failure Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ComputedWarningTime = group.Add(new VocabularyKey(nameof(ComputedWarningTime), "Computed Warning Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FailureTime = group.Add(new VocabularyKey(nameof(FailureTime), "Failure Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwningUser = group.Add(new VocabularyKey(nameof(OwningUser), "Owning User", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwningTeam = group.Add(new VocabularyKey(nameof(OwningTeam), "Owning Team", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Status = group.Add(new VocabularyKey(nameof(Status), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SucceededOn = group.Add(new VocabularyKey(nameof(SucceededOn), "Succeeded On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WarningTime = group.Add(new VocabularyKey(nameof(WarningTime), "Warning Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), "Version Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WarningTimeReached = group.Add(new VocabularyKey(nameof(WarningTimeReached), "Warning Time Reached", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
             AddGroup("SLAKPIInstance Details for Service", group =>
             {
 
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="Regarding"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="Regarding"/> to Vocab 'Activity.cdm.json/Activity' with Property 'ActivityId'
@@ -61,9 +60,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="Regarding"/> to Vocab 'Task.cdm.json/Task' with Property 'ActivityId'
             ///Property <see cref="OwnerId"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

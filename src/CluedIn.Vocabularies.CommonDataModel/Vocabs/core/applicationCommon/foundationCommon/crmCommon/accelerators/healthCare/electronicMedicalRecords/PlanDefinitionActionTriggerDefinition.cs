@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,24 +13,24 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("PlanDefinitionActionTriggerDefinition Details for ElectronicMedicalRecords", group =>
             {
-			    CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CreatedOnBehalfBy = group.Add(new VocabularyKey(nameof(CreatedOnBehalfBy), "Created By (Delegate)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ModifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(ModifiedOnBehalfBy), "Modified By (Delegate)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EventName = group.Add(new VocabularyKey(nameof(EventName), "Event Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EventTimingType = group.Add(new VocabularyKey(nameof(EventTimingType), "Event Timing Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PlanDefinitionActionTriggerDefinitionId = group.Add(new VocabularyKey(nameof(PlanDefinitionActionTriggerDefinitionId), "Plan Definition Action Trigger Definition", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Timingdate = group.Add(new VocabularyKey(nameof(Timingdate), "Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Timingdatetime = group.Add(new VocabularyKey(nameof(Timingdatetime), "Date Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Triggertype = group.Add(new VocabularyKey(nameof(Triggertype), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), "Time Zone Rule Version Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOnBehalfBy = group.Add(new VocabularyKey(nameof(CreatedOnBehalfBy), "Created By (Delegate)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(ModifiedOnBehalfBy), "Modified By (Delegate)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EventName = group.Add(new VocabularyKey(nameof(EventName), "Event Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EventTimingType = group.Add(new VocabularyKey(nameof(EventTimingType), "Event Timing Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PlanDefinitionActionTriggerDefinitionId = group.Add(new VocabularyKey(nameof(PlanDefinitionActionTriggerDefinitionId), "Plan Definition Action Trigger Definition", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Timingdate = group.Add(new VocabularyKey(nameof(Timingdate), "Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Timingdatetime = group.Add(new VocabularyKey(nameof(Timingdatetime), "Date Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Triggertype = group.Add(new VocabularyKey(nameof(Triggertype), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), "Time Zone Rule Version Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="EventDataId"/> to Vocab 'DataRequirement.cdm.json/DataRequirement' with Property 'DataRequirementId'
             ///Property <see cref="PlanDefinitionActionId"/> to Vocab 'PlanDefinitionAction.cdm.json/PlanDefinitionAction' with Property 'PlanDefinitionActionId'
@@ -41,9 +40,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="EventtimingId"/> to Vocab 'Timing.cdm.json/Timing' with Property 'TimingId'
             ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

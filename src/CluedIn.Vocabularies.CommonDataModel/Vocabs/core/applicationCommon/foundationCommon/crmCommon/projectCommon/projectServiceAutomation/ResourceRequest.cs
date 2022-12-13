@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,13 +13,13 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("ResourceRequest Details for ProjectServiceAutomation", group =>
             {
-			    ResourceRequestId = group.Add(new VocabularyKey(nameof(ResourceRequestId), "Resource Request", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "State", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EntityName = group.Add(new VocabularyKey(nameof(EntityName), "Entity Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PositionDescription = group.Add(new VocabularyKey(nameof(PositionDescription), "Position Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                ResourceRequestId = group.Add(new VocabularyKey(nameof(ResourceRequestId), "Resource Request", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "State", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EntityName = group.Add(new VocabularyKey(nameof(EntityName), "Entity Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PositionDescription = group.Add(new VocabularyKey(nameof(PositionDescription), "Position Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="Roleid"/> to Vocab 'BookableResourceCategory.cdm.json/BookableResourceCategory' with Property 'BookableResourceCategoryId'
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
@@ -36,9 +35,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="RequestedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="ResourceRequirementId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/scheduling/ResourceRequirement.cdm.json/ResourceRequirement' with Property 'ResourceRequirementId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

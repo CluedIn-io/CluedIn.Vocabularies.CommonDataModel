@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,12 +13,12 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("WebsiteLanguage Details for Portals", group =>
             {
-			    WebsiteLanguageId = group.Add(new VocabularyKey(nameof(WebsiteLanguageId), "Website Language", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                WebsiteLanguageId = group.Add(new VocabularyKey(nameof(WebsiteLanguageId), "Website Language", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="PortalLanguageId"/> to Vocab 'PortalLanguage.cdm.json/PortalLanguage' with Property 'PortalLanguageId'
             ///Property <see cref="PublishingState"/> to Vocab 'PublishingState.cdm.json/PublishingState' with Property 'PublishingStateId'
@@ -34,7 +33,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="WebsiteLanguageId"/> from Vocab 'Blog.cdm.json/Blog' with Property 'BlogPostLanguageId'
             ///Property <see cref="WebsiteLanguageId"/> from Vocab 'Forum.cdm.json/Forum' with Property 'ForumLanguageId'

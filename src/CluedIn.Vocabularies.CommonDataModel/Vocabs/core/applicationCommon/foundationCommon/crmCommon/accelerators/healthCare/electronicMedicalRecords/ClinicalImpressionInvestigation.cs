@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,13 +13,13 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("ClinicalImpressionInvestigation Details for ElectronicMedicalRecords", group =>
             {
-			    ClinicalImpressionInvestigationId = group.Add(new VocabularyKey(nameof(ClinicalImpressionInvestigationId), "Clinical Impression Investigation", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ItemType = group.Add(new VocabularyKey(nameof(ItemType), "Item Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                ClinicalImpressionInvestigationId = group.Add(new VocabularyKey(nameof(ClinicalImpressionInvestigationId), "Clinical Impression Investigation", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ItemType = group.Add(new VocabularyKey(nameof(ItemType), "Item Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="ClinicalImpressionId"/> to Vocab 'ClinicalImpression.cdm.json/ClinicalImpression' with Property 'ClinicalImpressionId'
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
@@ -62,7 +61,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="ItemtypeQuestionnaireResponseId"/> to Vocab 'CodeableConcept.cdm.json/CodeableConcept' with Property 'CodeableConceptId'
             ///Property <see cref="ItemTypeRiskAssessmentId"/> to Vocab 'RiskAssessment.cdm.json/RiskAssessment' with Property 'RiskAssessmentId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="ClinicalImpressionInvestigationId"/> from Vocab 'ClinicalImpressionInvestigationItem.cdm.json/ClinicalImpressionInvestigationItem' with Property 'ClinicalmpressionInvestigationId'
             #endregion

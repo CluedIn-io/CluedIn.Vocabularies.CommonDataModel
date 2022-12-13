@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,19 +13,19 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("Owner Details for ApplicationCommon", group =>
             {
-			    VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    OwnerId = group.Add(new VocabularyKey(nameof(OwnerId), "Owner", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Owner Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    OwnerIdType = group.Add(new VocabularyKey(nameof(OwnerIdType), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    YomiName = group.Add(new VocabularyKey(nameof(YomiName), "Yomi Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerId = group.Add(new VocabularyKey(nameof(OwnerId), "Owner", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Owner Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwnerIdType = group.Add(new VocabularyKey(nameof(OwnerIdType), VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                YomiName = group.Add(new VocabularyKey(nameof(YomiName), "Yomi Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
-            
+
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

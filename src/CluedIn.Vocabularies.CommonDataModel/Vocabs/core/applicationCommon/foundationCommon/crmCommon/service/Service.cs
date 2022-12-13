@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,27 +13,27 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("Service Details for Service", group =>
             {
-			    ServiceId = group.Add(new VocabularyKey(nameof(ServiceId), "Service", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), "Version Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), "Time Zone Rule Version Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    AnchorOffset = group.Add(new VocabularyKey(nameof(AnchorOffset), "Anchor Offset", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    CalendarId = group.Add(new VocabularyKey(nameof(CalendarId), "Calendar", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Duration = group.Add(new VocabularyKey(nameof(Duration), "Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    Granularity = group.Add(new VocabularyKey(nameof(Granularity), "Granularity", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    InitialStatusCode = group.Add(new VocabularyKey(nameof(InitialStatusCode), "Initial Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IsSchedulable = group.Add(new VocabularyKey(nameof(IsSchedulable), "Status", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    IsVisible = group.Add(new VocabularyKey(nameof(IsVisible), "Is Visible", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    ShowResources = group.Add(new VocabularyKey(nameof(ShowResources), "Show Resources", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    StrategyId = group.Add(new VocabularyKey(nameof(StrategyId), "Strategy", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                ServiceId = group.Add(new VocabularyKey(nameof(ServiceId), "Service", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), "Version Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), "Time Zone Rule Version Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AnchorOffset = group.Add(new VocabularyKey(nameof(AnchorOffset), "Anchor Offset", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                CalendarId = group.Add(new VocabularyKey(nameof(CalendarId), "Calendar", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Duration = group.Add(new VocabularyKey(nameof(Duration), "Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                Granularity = group.Add(new VocabularyKey(nameof(Granularity), "Granularity", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InitialStatusCode = group.Add(new VocabularyKey(nameof(InitialStatusCode), "Initial Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsSchedulable = group.Add(new VocabularyKey(nameof(IsSchedulable), "Status", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                IsVisible = group.Add(new VocabularyKey(nameof(IsVisible), "Is Visible", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                ShowResources = group.Add(new VocabularyKey(nameof(ShowResources), "Show Resources", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                StrategyId = group.Add(new VocabularyKey(nameof(StrategyId), "Strategy", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="OriginatingCaseId"/> to Vocab 'Case.cdm.json/Case' with Property 'IncidentId'
             ///Property <see cref="RegardingObjectId"/> to Vocab 'Case.cdm.json/Case' with Property 'IncidentId'
@@ -599,7 +598,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwnerId"/> to Vocab 'User.cdm.json/User' with Property 'BusinessUnitId'
             ///Property <see cref="OwningUser"/> to Vocab 'User.cdm.json/User' with Property 'BusinessUnitId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="ServiceId"/> from Vocab 'CaseResolution.cdm.json/CaseResolution' with Property 'ServiceId'
             ///Property <see cref="ServiceId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/Account.cdm.json/Account' with Property 'PreferredServiceId'

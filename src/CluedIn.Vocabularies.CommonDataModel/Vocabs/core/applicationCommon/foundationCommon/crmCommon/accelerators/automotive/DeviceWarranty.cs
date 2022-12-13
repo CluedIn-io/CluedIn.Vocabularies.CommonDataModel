@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,15 +13,15 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("DeviceWarranty Details for Automotive", group =>
             {
-			    DeviceWarrantyId = group.Add(new VocabularyKey(nameof(DeviceWarrantyId), "Device Warranty", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IssuedOn = group.Add(new VocabularyKey(nameof(IssuedOn), "Issued On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ValidFrom = group.Add(new VocabularyKey(nameof(ValidFrom), "Valid From", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ValidTo = group.Add(new VocabularyKey(nameof(ValidTo), "Valid To", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                DeviceWarrantyId = group.Add(new VocabularyKey(nameof(DeviceWarrantyId), "Device Warranty", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IssuedOn = group.Add(new VocabularyKey(nameof(IssuedOn), "Issued On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ValidFrom = group.Add(new VocabularyKey(nameof(ValidFrom), "Valid From", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ValidTo = group.Add(new VocabularyKey(nameof(ValidTo), "Valid To", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="DeviceId"/> to Vocab 'Device.cdm.json/Device' with Property 'DeviceId'
             ///Property <see cref="DeviceId"/> to Vocab 'Device.cdm.json/Device' with Property 'DeviceId'
@@ -55,7 +54,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="UnitId"/> to Vocab 'Unit.cdm.json/Unit' with Property 'UnitId'
             ///Property <see cref="WarrantyLimitId"/> to Vocab 'WarrantyLimit.cdm.json/WarrantyLimit' with Property 'WarrantyLimitId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="DeviceWarrantyId"/> from Vocab 'ServiceOrderJobDetail.cdm.json/ServiceOrderJobDetail' with Property 'DeviceWarrantyId'
             #endregion

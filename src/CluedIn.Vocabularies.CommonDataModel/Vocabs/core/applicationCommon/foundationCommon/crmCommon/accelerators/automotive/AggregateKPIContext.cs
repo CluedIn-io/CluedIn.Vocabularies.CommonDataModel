@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,13 +13,13 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("AggregateKPIContext Details for Automotive", group =>
             {
-			    AggregateKPIContextId = group.Add(new VocabularyKey(nameof(AggregateKPIContextId), "Aggregate KPI Context", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TargetValue = group.Add(new VocabularyKey(nameof(TargetValue), "Target Value", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                AggregateKPIContextId = group.Add(new VocabularyKey(nameof(AggregateKPIContextId), "Aggregate KPI Context", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TargetValue = group.Add(new VocabularyKey(nameof(TargetValue), "Target Value", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="AggregateKPIId"/> to Vocab 'AggregateKPI.cdm.json/AggregateKPI' with Property 'AggregateKPIId'
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
@@ -41,7 +40,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="DeviceId"/> to Vocab 'Device.cdm.json/Device' with Property 'DeviceId'
             ///Property <see cref="UserId"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="AggregateKPIContextId"/> from Vocab 'AggregateKPIMeasurement.cdm.json/AggregateKPIMeasurement' with Property 'AggregateKPIContextId'
             #endregion

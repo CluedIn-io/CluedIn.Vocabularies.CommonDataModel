@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,13 +13,13 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("DeviceWarrantyLimit Details for Automotive", group =>
             {
-			    DeviceWarrantyLimitId = group.Add(new VocabularyKey(nameof(DeviceWarrantyLimitId), "Device Warranty Limit", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Value = group.Add(new VocabularyKey(nameof(Value), "Value", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                DeviceWarrantyLimitId = group.Add(new VocabularyKey(nameof(DeviceWarrantyLimitId), "Device Warranty Limit", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Value = group.Add(new VocabularyKey(nameof(Value), "Value", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="DeviceId"/> to Vocab 'Device.cdm.json/Device' with Property 'DeviceId'
             ///Property <see cref="DeviceMeasureId"/> to Vocab 'DeviceMeasure.cdm.json/DeviceMeasure' with Property 'DeviceMeasureId'
@@ -39,9 +38,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="UnitId"/> to Vocab 'Unit.cdm.json/Unit' with Property 'UnitId'
             ///Property <see cref="WarrantyLimitId"/> to Vocab 'WarrantyLimit.cdm.json/WarrantyLimit' with Property 'WarrantyLimitId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,27 +13,27 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("Schedule Details for ElectronicMedicalRecords", group =>
             {
-			    Active = group.Add(new VocabularyKey(nameof(Active), "Active", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    Comment = group.Add(new VocabularyKey(nameof(Comment), "Comment", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PlanningHorizonEndDateTime = group.Add(new VocabularyKey(nameof(PlanningHorizonEndDateTime), "End Date Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PlanningHorizonStartDateTime = group.Add(new VocabularyKey(nameof(PlanningHorizonStartDateTime), "Start Date Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ScheduleId = group.Add(new VocabularyKey(nameof(ScheduleId), "Schedule", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ScheduleNumber = group.Add(new VocabularyKey(nameof(ScheduleNumber), "Schedule Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                Active = group.Add(new VocabularyKey(nameof(Active), "Active", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                Comment = group.Add(new VocabularyKey(nameof(Comment), "Comment", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PlanningHorizonEndDateTime = group.Add(new VocabularyKey(nameof(PlanningHorizonEndDateTime), "End Date Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PlanningHorizonStartDateTime = group.Add(new VocabularyKey(nameof(PlanningHorizonStartDateTime), "Start Date Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ScheduleId = group.Add(new VocabularyKey(nameof(ScheduleId), "Schedule", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ScheduleNumber = group.Add(new VocabularyKey(nameof(ScheduleNumber), "Schedule Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
             AddGroup("Schedule Details for NonProfitVolunteers", group =>
             {
-			    EffectiveFrom = group.Add(new VocabularyKey(nameof(EffectiveFrom), "Effective From", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EffectiveTo = group.Add(new VocabularyKey(nameof(EffectiveTo), "Effective To", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EndPeriod = group.Add(new VocabularyKey(nameof(EndPeriod), "End Period", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    HoursPerDay = group.Add(new VocabularyKey(nameof(HoursPerDay), "Hours per Day", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    StartPeriod = group.Add(new VocabularyKey(nameof(StartPeriod), "Start Period", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TotalHours = group.Add(new VocabularyKey(nameof(TotalHours), "Total Hours", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    WorkingDays = group.Add(new VocabularyKey(nameof(WorkingDays), "Working Days", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                EffectiveFrom = group.Add(new VocabularyKey(nameof(EffectiveFrom), "Effective From", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EffectiveTo = group.Add(new VocabularyKey(nameof(EffectiveTo), "Effective To", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EndPeriod = group.Add(new VocabularyKey(nameof(EndPeriod), "End Period", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                HoursPerDay = group.Add(new VocabularyKey(nameof(HoursPerDay), "Hours per Day", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                StartPeriod = group.Add(new VocabularyKey(nameof(StartPeriod), "Start Period", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TotalHours = group.Add(new VocabularyKey(nameof(TotalHours), "Total Hours", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                WorkingDays = group.Add(new VocabularyKey(nameof(WorkingDays), "Working Days", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="ActorPatientId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
             ///Property <see cref="ActorPractitionerId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
@@ -133,7 +132,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="ScheduleId"/> from Vocab 'PlanDefinitionActionTriggerDefinition.cdm.json/PlanDefinitionActionTriggerDefinition' with Property 'EventreferenceId'
             ///Property <see cref="ScheduleId"/> from Vocab 'ScheduleActor.cdm.json/ScheduleActor' with Property 'ScheduleId'

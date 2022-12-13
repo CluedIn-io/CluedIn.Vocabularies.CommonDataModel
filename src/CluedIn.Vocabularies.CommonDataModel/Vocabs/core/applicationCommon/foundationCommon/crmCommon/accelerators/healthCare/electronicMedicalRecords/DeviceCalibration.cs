@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,15 +13,15 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("DeviceCalibration Details for ElectronicMedicalRecords", group =>
             {
-			    CalibrationState = group.Add(new VocabularyKey(nameof(CalibrationState), "State", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CalibrationTime = group.Add(new VocabularyKey(nameof(CalibrationTime), "Calibration Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DeviceCalibrationId = group.Add(new VocabularyKey(nameof(DeviceCalibrationId), "Device Calibration", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                CalibrationState = group.Add(new VocabularyKey(nameof(CalibrationState), "State", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CalibrationTime = group.Add(new VocabularyKey(nameof(CalibrationTime), "Calibration Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DeviceCalibrationId = group.Add(new VocabularyKey(nameof(DeviceCalibrationId), "Device Calibration", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
@@ -38,9 +37,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             ///Property <see cref="DeviceMetricIdentifierId"/> to Vocab 'DeviceMetric.cdm.json/DeviceMetric' with Property 'DeviceMetricId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

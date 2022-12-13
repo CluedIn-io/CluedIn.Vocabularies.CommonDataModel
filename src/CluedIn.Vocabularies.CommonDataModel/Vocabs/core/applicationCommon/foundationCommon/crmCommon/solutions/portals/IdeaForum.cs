@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,20 +13,20 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("IdeaForum Details for Portals", group =>
             {
-			    IdeaForumId = group.Add(new VocabularyKey(nameof(IdeaForumId), "Idea Forum", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Title", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CommentPolicy = group.Add(new VocabularyKey(nameof(CommentPolicy), "Comment Policy", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IdeaSubmissionPolicy = group.Add(new VocabularyKey(nameof(IdeaSubmissionPolicy), "Idea Submission Policy", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PartialURL = group.Add(new VocabularyKey(nameof(PartialURL), "Partial URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
-			    Summary = group.Add(new VocabularyKey(nameof(Summary), "Summary", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    VotesPerIdea = group.Add(new VocabularyKey(nameof(VotesPerIdea), "Votes Per Idea", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    VotesPerUser = group.Add(new VocabularyKey(nameof(VotesPerUser), "Votes Per User", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    VotingPolicy = group.Add(new VocabularyKey(nameof(VotingPolicy), "Voting Policy", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    VotingType = group.Add(new VocabularyKey(nameof(VotingType), "Voting Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                IdeaForumId = group.Add(new VocabularyKey(nameof(IdeaForumId), "Idea Forum", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Title", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CommentPolicy = group.Add(new VocabularyKey(nameof(CommentPolicy), "Comment Policy", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IdeaSubmissionPolicy = group.Add(new VocabularyKey(nameof(IdeaSubmissionPolicy), "Idea Submission Policy", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PartialURL = group.Add(new VocabularyKey(nameof(PartialURL), "Partial URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible));
+                Summary = group.Add(new VocabularyKey(nameof(Summary), "Summary", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                VotesPerIdea = group.Add(new VocabularyKey(nameof(VotesPerIdea), "Votes Per Idea", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                VotesPerUser = group.Add(new VocabularyKey(nameof(VotesPerUser), "Votes Per User", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                VotingPolicy = group.Add(new VocabularyKey(nameof(VotingPolicy), "Voting Policy", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                VotingType = group.Add(new VocabularyKey(nameof(VotingType), "Voting Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
@@ -41,7 +40,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="WebsiteId"/> to Vocab 'Website.cdm.json/Website' with Property 'WebsiteId'
             ///Property <see cref="WebsiteLanguageId"/> to Vocab 'WebsiteLanguage.cdm.json/WebsiteLanguage' with Property 'WebsiteLanguageId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="IdeaForumId"/> from Vocab 'Idea.cdm.json/Idea' with Property 'IdeaForumId'
             #endregion

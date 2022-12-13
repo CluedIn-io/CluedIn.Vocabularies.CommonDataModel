@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,16 +13,16 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("LeadToOpportunitySalesProcess Details for Banking", group =>
             {
-			    LeadId = group.Add(new VocabularyKey(nameof(LeadId), "Lead", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    OpportunityId = group.Add(new VocabularyKey(nameof(OpportunityId), "Opportunity Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                LeadId = group.Add(new VocabularyKey(nameof(LeadId), "Lead", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OpportunityId = group.Add(new VocabularyKey(nameof(OpportunityId), "Opportunity Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="OpportunityId"/> to Vocab 'Opportunity.cdm.json/Opportunity' with Property 'OpportunityId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

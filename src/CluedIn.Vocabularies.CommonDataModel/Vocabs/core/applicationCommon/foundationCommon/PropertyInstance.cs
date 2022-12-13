@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,20 +13,20 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("PropertyInstance Details for FoundationCommon", group =>
             {
-			    Name = group.Add(new VocabularyKey(nameof(Name), "name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ValueInteger = group.Add(new VocabularyKey(nameof(ValueInteger), "Integer Value", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    ValueDecimal = group.Add(new VocabularyKey(nameof(ValueDecimal), "Decimal Value", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    ValueDouble = group.Add(new VocabularyKey(nameof(ValueDouble), "Double Value", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    ValueString = group.Add(new VocabularyKey(nameof(ValueString), "String Value", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IsValid = group.Add(new VocabularyKey(nameof(IsValid), "Is Valid", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    TransactionCurrencyId = group.Add(new VocabularyKey(nameof(TransactionCurrencyId), "Currency", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
+                Name = group.Add(new VocabularyKey(nameof(Name), "name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ValueInteger = group.Add(new VocabularyKey(nameof(ValueInteger), "Integer Value", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                ValueDecimal = group.Add(new VocabularyKey(nameof(ValueDecimal), "Decimal Value", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                ValueDouble = group.Add(new VocabularyKey(nameof(ValueDouble), "Double Value", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                ValueString = group.Add(new VocabularyKey(nameof(ValueString), "String Value", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsValid = group.Add(new VocabularyKey(nameof(IsValid), "Is Valid", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                TransactionCurrencyId = group.Add(new VocabularyKey(nameof(TransactionCurrencyId), "Currency", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
             });
             AddGroup("PropertyInstance Details for Sales", group =>
             {
 
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="DynamicPropertyId"/> to Vocab 'Property.cdm.json/Property' with Property 'DynamicPropertyId'
             ///Property <see cref="DynamicPropertyId"/> to Vocab 'Property.cdm.json/Property' with Property 'DynamicPropertyId'
@@ -46,9 +45,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="DynamicPropertyInstanceid"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
             ///Property <see cref="DynamicPropertyInstanceid"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

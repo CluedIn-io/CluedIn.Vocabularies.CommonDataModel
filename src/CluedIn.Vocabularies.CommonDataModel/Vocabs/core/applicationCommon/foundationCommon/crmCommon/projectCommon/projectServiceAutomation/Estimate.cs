@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,13 +13,13 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("Estimate Details for ProjectServiceAutomation", group =>
             {
-			    EstimateId = group.Add(new VocabularyKey(nameof(EstimateId), "Estimate", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EstimateHeaderType = group.Add(new VocabularyKey(nameof(EstimateHeaderType), "Estimate Header Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                EstimateId = group.Add(new VocabularyKey(nameof(EstimateId), "Estimate", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EstimateHeaderType = group.Add(new VocabularyKey(nameof(EstimateHeaderType), "Estimate Header Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="AccountCustomer"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="AccountVendor"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
@@ -58,7 +57,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="Unit"/> to Vocab '/core/applicationCommon/foundationCommon/Unit.cdm.json/Unit' with Property 'UoMId'
             ///Property <see cref="UnitSchedule"/> to Vocab '/core/applicationCommon/foundationCommon/UnitGroup.cdm.json/UnitGroup' with Property 'UoMScheduleId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="EstimateId"/> from Vocab 'EstimateLine.cdm.json/EstimateLine' with Property 'Estimate'
             ///Property <see cref="EstimateId"/> from Vocab 'Fact.cdm.json/Fact' with Property 'Estimate'

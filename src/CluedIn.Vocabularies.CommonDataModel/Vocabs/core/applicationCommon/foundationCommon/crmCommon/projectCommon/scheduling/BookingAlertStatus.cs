@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,15 +13,15 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("BookingAlertStatus Details for Scheduling", group =>
             {
-			    BookingAlertStatusId = group.Add(new VocabularyKey(nameof(BookingAlertStatusId), "Booking Alert Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    InternalFlags = group.Add(new VocabularyKey(nameof(InternalFlags), "Internal Flags", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    NextTimeToShow = group.Add(new VocabularyKey(nameof(NextTimeToShow), "Next Time To Show", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Status = group.Add(new VocabularyKey(nameof(Status), "Alert Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                BookingAlertStatusId = group.Add(new VocabularyKey(nameof(BookingAlertStatusId), "Booking Alert Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InternalFlags = group.Add(new VocabularyKey(nameof(InternalFlags), "Internal Flags", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                NextTimeToShow = group.Add(new VocabularyKey(nameof(NextTimeToShow), "Next Time To Show", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Status = group.Add(new VocabularyKey(nameof(Status), "Alert Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="BookingAlert"/> to Vocab 'BookingAlert.cdm.json/BookingAlert' with Property 'ActivityId'
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
@@ -35,9 +34,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

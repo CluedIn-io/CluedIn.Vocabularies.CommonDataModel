@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,18 +13,18 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("MedicalIdentifier Details for ElectronicMedicalRecords", group =>
             {
-			    IdentifierSystem = group.Add(new VocabularyKey(nameof(IdentifierSystem), "Identifier System", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IdentifierType = group.Add(new VocabularyKey(nameof(IdentifierType), "Identifier Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    MedicalIdentifierId = group.Add(new VocabularyKey(nameof(MedicalIdentifierId), "Medical Identifier", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PeriodEnd = group.Add(new VocabularyKey(nameof(PeriodEnd), "Period End", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PeriodStart = group.Add(new VocabularyKey(nameof(PeriodStart), "Period Start", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Use = group.Add(new VocabularyKey(nameof(Use), "Use", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Value = group.Add(new VocabularyKey(nameof(Value), "Identifier Value", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                IdentifierSystem = group.Add(new VocabularyKey(nameof(IdentifierSystem), "Identifier System", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IdentifierType = group.Add(new VocabularyKey(nameof(IdentifierType), "Identifier Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MedicalIdentifierId = group.Add(new VocabularyKey(nameof(MedicalIdentifierId), "Medical Identifier", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PeriodEnd = group.Add(new VocabularyKey(nameof(PeriodEnd), "Period End", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PeriodStart = group.Add(new VocabularyKey(nameof(PeriodStart), "Period Start", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Use = group.Add(new VocabularyKey(nameof(Use), "Use", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Value = group.Add(new VocabularyKey(nameof(Value), "Identifier Value", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="AssignerId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="AssigneeId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
@@ -44,9 +43,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

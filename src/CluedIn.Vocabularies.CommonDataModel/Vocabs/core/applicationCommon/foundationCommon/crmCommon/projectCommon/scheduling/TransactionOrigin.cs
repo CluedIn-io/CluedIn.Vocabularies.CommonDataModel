@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,16 +13,16 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("TransactionOrigin Details for Scheduling", group =>
             {
-			    TransactionOriginId = group.Add(new VocabularyKey(nameof(TransactionOriginId), "Transaction Origin", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Origin = group.Add(new VocabularyKey(nameof(Origin), "Origin", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    OriginType = group.Add(new VocabularyKey(nameof(OriginType), "Origin Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Transaction = group.Add(new VocabularyKey(nameof(Transaction), "Transaction", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TransactionType = group.Add(new VocabularyKey(nameof(TransactionType), "Transaction Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                TransactionOriginId = group.Add(new VocabularyKey(nameof(TransactionOriginId), "Transaction Origin", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Origin = group.Add(new VocabularyKey(nameof(Origin), "Origin", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OriginType = group.Add(new VocabularyKey(nameof(OriginType), "Origin Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Transaction = group.Add(new VocabularyKey(nameof(Transaction), "Transaction", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TransactionType = group.Add(new VocabularyKey(nameof(TransactionType), "Transaction Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
@@ -35,9 +34,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

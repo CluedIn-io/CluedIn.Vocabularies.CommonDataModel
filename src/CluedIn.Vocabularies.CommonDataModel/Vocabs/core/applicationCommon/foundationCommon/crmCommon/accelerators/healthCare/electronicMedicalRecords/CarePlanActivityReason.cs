@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,12 +13,12 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("CarePlanActivityReason Details for ElectronicMedicalRecords", group =>
             {
-			    CarePlanActivityReasonId = group.Add(new VocabularyKey(nameof(CarePlanActivityReasonId), "Care Plan Activity Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                CarePlanActivityReasonId = group.Add(new VocabularyKey(nameof(CarePlanActivityReasonId), "Care Plan Activity Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="ActivityId"/> to Vocab 'CarePlanActivity.cdm.json/CarePlanActivity' with Property 'CarePlanActivityId'
             ///Property <see cref="CarePlanActivityId"/> to Vocab 'CarePlanActivity.cdm.json/CarePlanActivity' with Property 'CarePlanActivityId'
@@ -63,9 +62,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             ///Property <see cref="PlanActivityReasonReferenceId"/> to Vocab 'Condition.cdm.json/Condition' with Property 'ConditionId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,27 +13,27 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("ActivityParty Details for ApplicationCommon", group =>
             {
-			    ActivityPartyId = group.Add(new VocabularyKey(nameof(ActivityPartyId), "Activity Party", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ParticipationTypeMask = group.Add(new VocabularyKey(nameof(ParticipationTypeMask), "Participation Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    AddressUsed = group.Add(new VocabularyKey(nameof(AddressUsed), "Address ", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DoNotFax = group.Add(new VocabularyKey(nameof(DoNotFax), "Do not allow Faxes", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    ScheduledStart = group.Add(new VocabularyKey(nameof(ScheduledStart), "Scheduled Start", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ScheduledEnd = group.Add(new VocabularyKey(nameof(ScheduledEnd), "Scheduled End", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Effort = group.Add(new VocabularyKey(nameof(Effort), "Effort", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    DoNotEMail = group.Add(new VocabularyKey(nameof(DoNotEMail), "Do not allow Emails", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    ExchangeEntryId = group.Add(new VocabularyKey(nameof(ExchangeEntryId), "Exchange Entry", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DoNotPostalMail = group.Add(new VocabularyKey(nameof(DoNotPostalMail), "Do not allow Postal Mails", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    DoNotPhone = group.Add(new VocabularyKey(nameof(DoNotPhone), "Do not allow Phone Calls", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    InstanceTypeCode = group.Add(new VocabularyKey(nameof(InstanceTypeCode), "Appointment Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IsPartyDeleted = group.Add(new VocabularyKey(nameof(IsPartyDeleted), "Is Party Deleted", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    AddressUsedEmailColumnNumber = group.Add(new VocabularyKey(nameof(AddressUsedEmailColumnNumber), "Email column number of party", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+                ActivityPartyId = group.Add(new VocabularyKey(nameof(ActivityPartyId), "Activity Party", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ParticipationTypeMask = group.Add(new VocabularyKey(nameof(ParticipationTypeMask), "Participation Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AddressUsed = group.Add(new VocabularyKey(nameof(AddressUsed), "Address ", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DoNotFax = group.Add(new VocabularyKey(nameof(DoNotFax), "Do not allow Faxes", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                ScheduledStart = group.Add(new VocabularyKey(nameof(ScheduledStart), "Scheduled Start", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ScheduledEnd = group.Add(new VocabularyKey(nameof(ScheduledEnd), "Scheduled End", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Effort = group.Add(new VocabularyKey(nameof(Effort), "Effort", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                DoNotEMail = group.Add(new VocabularyKey(nameof(DoNotEMail), "Do not allow Emails", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                ExchangeEntryId = group.Add(new VocabularyKey(nameof(ExchangeEntryId), "Exchange Entry", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DoNotPostalMail = group.Add(new VocabularyKey(nameof(DoNotPostalMail), "Do not allow Postal Mails", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                DoNotPhone = group.Add(new VocabularyKey(nameof(DoNotPhone), "Do not allow Phone Calls", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                InstanceTypeCode = group.Add(new VocabularyKey(nameof(InstanceTypeCode), "Appointment Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsPartyDeleted = group.Add(new VocabularyKey(nameof(IsPartyDeleted), "Is Party Deleted", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                AddressUsedEmailColumnNumber = group.Add(new VocabularyKey(nameof(AddressUsedEmailColumnNumber), "Email column number of party", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
             });
             AddGroup("ActivityParty Details for Service", group =>
             {
 
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="PartyId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="ActivityId"/> to Vocab 'Activity.cdm.json/Activity' with Property 'ActivityId'
@@ -57,9 +56,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="ActivityId"/> to Vocab 'Task.cdm.json/Task' with Property 'ActivityId'
             ///Property <see cref="OwnerId"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

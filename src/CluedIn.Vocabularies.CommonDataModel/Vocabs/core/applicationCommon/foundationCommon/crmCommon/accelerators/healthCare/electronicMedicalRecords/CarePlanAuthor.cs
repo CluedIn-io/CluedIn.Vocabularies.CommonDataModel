@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,13 +13,13 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("CarePlanAuthor Details for ElectronicMedicalRecords", group =>
             {
-			    CarePlanAuthorId = group.Add(new VocabularyKey(nameof(CarePlanAuthorId), "Care Plan Author", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PlanAuthorType = group.Add(new VocabularyKey(nameof(PlanAuthorType), "Author Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                CarePlanAuthorId = group.Add(new VocabularyKey(nameof(CarePlanAuthorId), "Care Plan Author", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PlanAuthorType = group.Add(new VocabularyKey(nameof(PlanAuthorType), "Author Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="PlanAuthorOrgazniationIdentifierId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="PlanAuthorPatientIdentifierId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
@@ -41,9 +40,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             ///Property <see cref="PlanAuthorCareTeamIdentifierId"/> to Vocab 'CareTeam.cdm.json/CareTeam' with Property 'CareTeamId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

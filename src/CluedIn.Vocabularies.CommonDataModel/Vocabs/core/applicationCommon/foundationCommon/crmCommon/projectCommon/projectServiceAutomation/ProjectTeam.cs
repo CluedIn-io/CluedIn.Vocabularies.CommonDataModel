@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,34 +13,34 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("ProjectTeam Details for ProjectServiceAutomation", group =>
             {
-			    ProjectTeamId = group.Add(new VocabularyKey(nameof(ProjectTeamId), "Project Team", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PositionName = group.Add(new VocabularyKey(nameof(PositionName), "Position Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    AllocationMethod = group.Add(new VocabularyKey(nameof(AllocationMethod), "Allocation method", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    AssignedHours = group.Add(new VocabularyKey(nameof(AssignedHours), "Assigned Hours", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    BillingType = group.Add(new VocabularyKey(nameof(BillingType), "Billing Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CalendarId = group.Add(new VocabularyKey(nameof(CalendarId), "Calendar Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    From = group.Add(new VocabularyKey(nameof(From), "From", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    HardBookedHours = group.Add(new VocabularyKey(nameof(HardBookedHours), "Hard Booked Hours", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    Hours = group.Add(new VocabularyKey(nameof(Hours), "Hours", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    HoursRequested = group.Add(new VocabularyKey(nameof(HoursRequested), "Required Hours (Deprecated in v3.0)", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    MembershipStatus = group.Add(new VocabularyKey(nameof(MembershipStatus), "Membership Status (Deprecated in v3.0)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    MSProjectClientId = group.Add(new VocabularyKey(nameof(MSProjectClientId), "MS Project Client Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Number = group.Add(new VocabularyKey(nameof(Number), "Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    Percentage = group.Add(new VocabularyKey(nameof(Percentage), "Percentage", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    ProjectApprover = group.Add(new VocabularyKey(nameof(ProjectApprover), "Project Approver", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    RequiredHours = group.Add(new VocabularyKey(nameof(RequiredHours), "Required Hours", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    RoleDescription = group.Add(new VocabularyKey(nameof(RoleDescription), "Position Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SoftBookedHours = group.Add(new VocabularyKey(nameof(SoftBookedHours), "Soft Booked Hours", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    To = group.Add(new VocabularyKey(nameof(To), "To", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ApplicantCount = group.Add(new VocabularyKey(nameof(ApplicantCount), "Applicant count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    ApplicantCountDate = group.Add(new VocabularyKey(nameof(ApplicantCountDate), "Applicant count (Last Updated On)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ApplicantCountState = group.Add(new VocabularyKey(nameof(ApplicantCountState), "Applicant count (State)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    ApplicantsAvailable = group.Add(new VocabularyKey(nameof(ApplicantsAvailable), "Applicants available (Deprecated in v3.0)", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
+                ProjectTeamId = group.Add(new VocabularyKey(nameof(ProjectTeamId), "Project Team", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PositionName = group.Add(new VocabularyKey(nameof(PositionName), "Position Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AllocationMethod = group.Add(new VocabularyKey(nameof(AllocationMethod), "Allocation method", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AssignedHours = group.Add(new VocabularyKey(nameof(AssignedHours), "Assigned Hours", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                BillingType = group.Add(new VocabularyKey(nameof(BillingType), "Billing Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CalendarId = group.Add(new VocabularyKey(nameof(CalendarId), "Calendar Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                From = group.Add(new VocabularyKey(nameof(From), "From", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                HardBookedHours = group.Add(new VocabularyKey(nameof(HardBookedHours), "Hard Booked Hours", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                Hours = group.Add(new VocabularyKey(nameof(Hours), "Hours", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                HoursRequested = group.Add(new VocabularyKey(nameof(HoursRequested), "Required Hours (Deprecated in v3.0)", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                MembershipStatus = group.Add(new VocabularyKey(nameof(MembershipStatus), "Membership Status (Deprecated in v3.0)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MSProjectClientId = group.Add(new VocabularyKey(nameof(MSProjectClientId), "MS Project Client Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Number = group.Add(new VocabularyKey(nameof(Number), "Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                Percentage = group.Add(new VocabularyKey(nameof(Percentage), "Percentage", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                ProjectApprover = group.Add(new VocabularyKey(nameof(ProjectApprover), "Project Approver", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                RequiredHours = group.Add(new VocabularyKey(nameof(RequiredHours), "Required Hours", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                RoleDescription = group.Add(new VocabularyKey(nameof(RoleDescription), "Position Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SoftBookedHours = group.Add(new VocabularyKey(nameof(SoftBookedHours), "Soft Booked Hours", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                To = group.Add(new VocabularyKey(nameof(To), "To", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ApplicantCount = group.Add(new VocabularyKey(nameof(ApplicantCount), "Applicant count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                ApplicantCountDate = group.Add(new VocabularyKey(nameof(ApplicantCountDate), "Applicant count (Last Updated On)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ApplicantCountState = group.Add(new VocabularyKey(nameof(ApplicantCountState), "Applicant count (State)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                ApplicantsAvailable = group.Add(new VocabularyKey(nameof(ApplicantsAvailable), "Applicants available (Deprecated in v3.0)", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="ResourceCategory"/> to Vocab 'BookableResourceCategory.cdm.json/BookableResourceCategory' with Property 'BookableResourceCategoryId'
             ///Property <see cref="Project"/> to Vocab 'Project.cdm.json/Project' with Property 'ProjectId'
@@ -66,7 +65,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/scheduling/Organization.cdm.json/Organization' with Property 'OrganizationId'
             ///Property <see cref="BookableResource"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/BookableResource.cdm.json/BookableResource' with Property 'BookableResourceId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="ProjectTeamId"/> from Vocab 'FindWorkEvent.cdm.json/FindWorkEvent' with Property 'Work'
             ///Property <see cref="ProjectTeamId"/> from Vocab 'ProjectTask.cdm.json/ProjectTask' with Property 'AssignedTeamMembers'

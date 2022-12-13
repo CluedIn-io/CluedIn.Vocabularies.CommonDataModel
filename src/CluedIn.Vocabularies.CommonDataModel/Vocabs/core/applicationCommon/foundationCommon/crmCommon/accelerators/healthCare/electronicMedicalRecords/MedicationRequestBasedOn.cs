@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,13 +13,13 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("MedicationRequestBasedOn Details for ElectronicMedicalRecords", group =>
             {
-			    MedicationRequestBasedOnId = group.Add(new VocabularyKey(nameof(MedicationRequestBasedOnId), "Medication Request Based On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    MedicationRequestBasedOnType = group.Add(new VocabularyKey(nameof(MedicationRequestBasedOnType), "Based On Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                MedicationRequestBasedOnId = group.Add(new VocabularyKey(nameof(MedicationRequestBasedOnId), "Medication Request Based On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MedicationRequestBasedOnType = group.Add(new VocabularyKey(nameof(MedicationRequestBasedOnType), "Based On Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="MedicationRequesBasedOnCarePlanId"/> to Vocab 'CarePlan.cdm.json/CarePlan' with Property 'CarePlanId'
             ///Property <see cref="MedicationRequesBasedOnMedicationRequestId"/> to Vocab 'MedicationRequest.cdm.json/MedicationRequest' with Property 'MedicationRequestId'
@@ -40,9 +39,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="MedicationRequesBasedOnProcedureRequestId"/> to Vocab 'ProcedureRequest.cdm.json/ProcedureRequest' with Property 'ProcedureRequestId'
             ///Property <see cref="MedicationRequesBasedOnReferralRequestId"/> to Vocab 'ReferralRequest.cdm.json/ReferralRequest' with Property 'ReferralRequestId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

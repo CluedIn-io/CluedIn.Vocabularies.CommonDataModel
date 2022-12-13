@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,16 +13,16 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("ForumPost Details for Portals", group =>
             {
-			    CommunityForumPostId = group.Add(new VocabularyKey(nameof(CommunityForumPostId), "Forum Post", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Content = group.Add(new VocabularyKey(nameof(Content), "Content", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Date = group.Add(new VocabularyKey(nameof(Date), "Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    HelpfulVoteCount = group.Add(new VocabularyKey(nameof(HelpfulVoteCount), "Helpful Vote Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    IsAnswer = group.Add(new VocabularyKey(nameof(IsAnswer), "Answer?", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
+                CommunityForumPostId = group.Add(new VocabularyKey(nameof(CommunityForumPostId), "Forum Post", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Content = group.Add(new VocabularyKey(nameof(Content), "Content", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Date = group.Add(new VocabularyKey(nameof(Date), "Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                HelpfulVoteCount = group.Add(new VocabularyKey(nameof(HelpfulVoteCount), "Helpful Vote Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                IsAnswer = group.Add(new VocabularyKey(nameof(IsAnswer), "Answer?", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="AuthorId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
@@ -39,7 +38,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="PublishingStateId"/> to Vocab 'PublishingState.cdm.json/PublishingState' with Property 'PublishingStateId'
             ///Property <see cref="RegardingId"/> to Vocab 'ForumPost.cdm.json/ForumPost' with Property 'CommunityForumPostId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="CommunityForumPostId"/> from Vocab 'Forum.cdm.json/Forum' with Property 'LastPostID'
             ///Property <see cref="CommunityForumPostId"/> from Vocab 'ForumPost.cdm.json/ForumPost' with Property 'RegardingId'

@@ -2,7 +2,6 @@
 using CommandLine;
 using Microsoft.CommonDataModel.ObjectModel.Cdm;
 using Microsoft.CommonDataModel.ObjectModel.Storage;
-using Microsoft.CommonDataModel.ObjectModel.Utilities;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -210,8 +209,8 @@ namespace CluedIn.Vocabulariess.CDM.CLI
                 }
 
                 var newProperties = properties
-                    .Where(prop => 
-                      !vocabInfo.GroupProperties.Any(a => 
+                    .Where(prop =>
+                      !vocabInfo.GroupProperties.Any(a =>
                         a.Properties.Any(p => p == prop || p.StartsWith(prop[..prop.IndexOf("nameof")]))))
                     .ToList();
 
@@ -249,19 +248,23 @@ namespace CluedIn.Vocabulariess.CDM.CLI
 
             foreach (var vocabInfo in VocabInfos)
             {
-                var vocabCorpusPath = vocabInfo.AtCorpusPath[..vocabInfo.AtCorpusPath.IndexOf(vocabInfo.EntityType)].Replace("local:/", "").TrimTrailingPath();
+                var vocabCorpusPath = vocabInfo.AtCorpusPath[..vocabInfo.AtCorpusPath.IndexOf(vocabInfo.EntityType)]
+                    .Replace("local:/", "")
+                    .TrimTrailingPath();
                 var vocabPath = path + (string.IsNullOrEmpty(vocabCorpusPath.TrimTrailingPath()) ? "" : vocabCorpusPath.TrimTrailingPath() + "\\");
                 var vocabKeyGroup = new StringBuilder();
                 foreach (var groupProperty in vocabInfo.GroupProperties)
                 {
-                    var corpusPath = groupProperty.AtCorpusPath[..groupProperty.AtCorpusPath.IndexOf(vocabInfo.EntityType)].Replace("local:/", "").TrimTrailingPath();
+                    var corpusPath = groupProperty.AtCorpusPath[..groupProperty.AtCorpusPath.IndexOf(vocabInfo.EntityType)]
+                        .Replace("local:/", "")
+                        .TrimTrailingPath();
                     var groupPath = opts.CICdmProjPath.TrimTrailingPath() +
                         @"\Vocabs\" +
                         cdmSubFolder.TrimTrailingPath() + "\\" +
                         (string.IsNullOrEmpty(corpusPath.TrimTrailingPath()) ? "" : corpusPath.TrimTrailingPath() + "\\");
 
                     var @namespace = Path.GetFileName(groupPath.TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar));
-                    
+
                     if (@namespace == "schemaDocuments")
                         @namespace = "";
                     else
@@ -431,7 +434,7 @@ namespace CluedIn.Vocabulariess.CDM.CLI
             else
             {
                 CdmCorpus.CalculateEntityGraphAsync(manifest).Wait();
-                
+
                 foreach (CdmE2ERelationship relationship in CdmCorpus.FetchIncomingRelationships(entity))
                     relationshipFromList.Add(relationship);
 

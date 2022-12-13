@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,22 +13,22 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("TestDrive Details for Automotive", group =>
             {
-			    ActualDuration = group.Add(new VocabularyKey(nameof(ActualDuration), "Actual Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    ActualEnd = group.Add(new VocabularyKey(nameof(ActualEnd), "Actual End", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ActualStart = group.Add(new VocabularyKey(nameof(ActualStart), "Actual Start", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IdentificationExpiresOn = group.Add(new VocabularyKey(nameof(IdentificationExpiresOn), "Identification Expires On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IdentificationNumber = group.Add(new VocabularyKey(nameof(IdentificationNumber), "Identification Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IdentificationType = group.Add(new VocabularyKey(nameof(IdentificationType), "Identification Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ScheduledDuration = group.Add(new VocabularyKey(nameof(ScheduledDuration), "Scheduled Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    ScheduledEnd = group.Add(new VocabularyKey(nameof(ScheduledEnd), "Scheduled End", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ScheduledStart = group.Add(new VocabularyKey(nameof(ScheduledStart), "Scheduled Start", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TestDriveId = group.Add(new VocabularyKey(nameof(TestDriveId), "Test Drive", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Year = group.Add(new VocabularyKey(nameof(Year), "Year", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                ActualDuration = group.Add(new VocabularyKey(nameof(ActualDuration), "Actual Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                ActualEnd = group.Add(new VocabularyKey(nameof(ActualEnd), "Actual End", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ActualStart = group.Add(new VocabularyKey(nameof(ActualStart), "Actual Start", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IdentificationExpiresOn = group.Add(new VocabularyKey(nameof(IdentificationExpiresOn), "Identification Expires On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IdentificationNumber = group.Add(new VocabularyKey(nameof(IdentificationNumber), "Identification Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IdentificationType = group.Add(new VocabularyKey(nameof(IdentificationType), "Identification Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ScheduledDuration = group.Add(new VocabularyKey(nameof(ScheduledDuration), "Scheduled Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                ScheduledEnd = group.Add(new VocabularyKey(nameof(ScheduledEnd), "Scheduled End", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ScheduledStart = group.Add(new VocabularyKey(nameof(ScheduledStart), "Scheduled Start", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TestDriveId = group.Add(new VocabularyKey(nameof(TestDriveId), "Test Drive", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Year = group.Add(new VocabularyKey(nameof(Year), "Year", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="LeadId"/> to Vocab 'Lead.cdm.json/Lead' with Property 'LeadId'
             ///Property <see cref="BusinessId"/> to Vocab 'Business.cdm.json/Business' with Property 'BusinessId'
@@ -61,7 +60,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="CustomerId"/> to Vocab '/core/applicationCommon/Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="OpportunityId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/sales/Opportunity.cdm.json/Opportunity' with Property 'OpportunityId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="TestDriveId"/> from Vocab 'DealerPlateDeviceAssignment.cdm.json/DealerPlateDeviceAssignment' with Property 'TestDriveId'
             #endregion

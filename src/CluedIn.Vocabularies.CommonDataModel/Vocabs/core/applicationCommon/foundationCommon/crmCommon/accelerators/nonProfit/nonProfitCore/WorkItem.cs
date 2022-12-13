@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,14 +13,14 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("WorkItem Details for NonProfitCore", group =>
             {
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Work Item Title", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    WorkItemId = group.Add(new VocabularyKey(nameof(WorkItemId), "Work Item", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    WorkItemPriorityType = group.Add(new VocabularyKey(nameof(WorkItemPriorityType), "Work Item Priority", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    WorkItemType = group.Add(new VocabularyKey(nameof(WorkItemType), "Work Item Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                Name = group.Add(new VocabularyKey(nameof(Name), "Work Item Title", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WorkItemId = group.Add(new VocabularyKey(nameof(WorkItemId), "Work Item", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WorkItemPriorityType = group.Add(new VocabularyKey(nameof(WorkItemPriorityType), "Work Item Priority", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WorkItemType = group.Add(new VocabularyKey(nameof(WorkItemType), "Work Item Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="BeneficiaryId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="BeneficiaryId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
@@ -57,7 +56,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="WorkItemActionId"/> from Vocab 'IndicatorValueUsage.cdm.json/IndicatorValueUsage' with Property 'WorkItemActionId'
             ///Property <see cref="WorkItemId"/> from Vocab 'IndicatorValueUsage.cdm.json/IndicatorValueUsage' with Property 'WorkItemId'

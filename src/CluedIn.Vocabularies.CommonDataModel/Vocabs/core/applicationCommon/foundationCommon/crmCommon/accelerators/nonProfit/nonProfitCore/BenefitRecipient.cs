@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,14 +13,14 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("BenefitRecipient Details for NonProfitCore", group =>
             {
-			    BenefitRecipientId = group.Add(new VocabularyKey(nameof(BenefitRecipientId), "Benefit Recipient", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    BenefitRecipientType = group.Add(new VocabularyKey(nameof(BenefitRecipientType), "Benefit Recipient Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                BenefitRecipientId = group.Add(new VocabularyKey(nameof(BenefitRecipientId), "Benefit Recipient", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BenefitRecipientType = group.Add(new VocabularyKey(nameof(BenefitRecipientType), "Benefit Recipient Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="BeneficiaryId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="BeneficiaryId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
@@ -40,7 +39,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="ParentBenefitRecipientId"/> to Vocab 'BenefitRecipient.cdm.json/BenefitRecipient' with Property 'BenefitRecipientId'
             ///Property <see cref="ResourceCatalogId"/> to Vocab 'ResourceCatalog.cdm.json/ResourceCatalog' with Property 'ResourceCatalogId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="BenefitRecipientId"/> from Vocab 'BenefitRecipient.cdm.json/BenefitRecipient' with Property 'ParentBenefitRecipientId'
             #endregion

@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,20 +13,20 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("BookingSetupMetadata Details for Scheduling", group =>
             {
-			    BookingSetupMetadataId = group.Add(new VocabularyKey(nameof(BookingSetupMetadataId), "Booking Setup Metadata", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EntityLogicalName = group.Add(new VocabularyKey(nameof(EntityLogicalName), "Entity Logical Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    AvailableDurationMinimumPercentage = group.Add(new VocabularyKey(nameof(AvailableDurationMinimumPercentage), "Available Duration Minimum(%)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    BookingRelationshipLogicalName = group.Add(new VocabularyKey(nameof(BookingRelationshipLogicalName), "Booking Relationship Logical Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    BookingStatusFieldLogicalName = group.Add(new VocabularyKey(nameof(BookingStatusFieldLogicalName), "Booking Status Field Logical Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CancelBookingsWhenMoving = group.Add(new VocabularyKey(nameof(CancelBookingsWhenMoving), "Cancel Bookings When Moving", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    DefaultBookingDuration = group.Add(new VocabularyKey(nameof(DefaultBookingDuration), "Default Booking Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    DisableRequirementAutoCreation = group.Add(new VocabularyKey(nameof(DisableRequirementAutoCreation), "Disable Requirement Auto Creation for Bookings", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    RequirementRelationshipLogicalName = group.Add(new VocabularyKey(nameof(RequirementRelationshipLogicalName), "Requirement Relationship Logical Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ResourceAvailabilityRetrievalLimit = group.Add(new VocabularyKey(nameof(ResourceAvailabilityRetrievalLimit), "Resource Availability Retrieval Limit", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+                BookingSetupMetadataId = group.Add(new VocabularyKey(nameof(BookingSetupMetadataId), "Booking Setup Metadata", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EntityLogicalName = group.Add(new VocabularyKey(nameof(EntityLogicalName), "Entity Logical Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AvailableDurationMinimumPercentage = group.Add(new VocabularyKey(nameof(AvailableDurationMinimumPercentage), "Available Duration Minimum(%)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                BookingRelationshipLogicalName = group.Add(new VocabularyKey(nameof(BookingRelationshipLogicalName), "Booking Relationship Logical Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BookingStatusFieldLogicalName = group.Add(new VocabularyKey(nameof(BookingStatusFieldLogicalName), "Booking Status Field Logical Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CancelBookingsWhenMoving = group.Add(new VocabularyKey(nameof(CancelBookingsWhenMoving), "Cancel Bookings When Moving", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                DefaultBookingDuration = group.Add(new VocabularyKey(nameof(DefaultBookingDuration), "Default Booking Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                DisableRequirementAutoCreation = group.Add(new VocabularyKey(nameof(DisableRequirementAutoCreation), "Disable Requirement Auto Creation for Bookings", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                RequirementRelationshipLogicalName = group.Add(new VocabularyKey(nameof(RequirementRelationshipLogicalName), "Requirement Relationship Logical Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ResourceAvailabilityRetrievalLimit = group.Add(new VocabularyKey(nameof(ResourceAvailabilityRetrievalLimit), "Resource Availability Retrieval Limit", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
@@ -47,7 +46,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="RetrieveConstraintsQuery"/> to Vocab 'Configuration.cdm.json/Configuration' with Property 'ConfigurationId'
             ///Property <see cref="RetrieveResourcesQuery"/> to Vocab 'Configuration.cdm.json/Configuration' with Property 'ConfigurationId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="BookingSetupMetadataId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/BookableResourceBooking.cdm.json/BookableResourceBooking' with Property 'BookingSetupMetadataId'
             ///Property <see cref="BookingSetupMetadataId"/> from Vocab 'ResourceRequirement.cdm.json/ResourceRequirement' with Property 'BookingSetupMetadataId'

@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,13 +13,13 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("Communication Details for ElectronicMedicalRecords", group =>
             {
-			    CommunicationId = group.Add(new VocabularyKey(nameof(CommunicationId), "Communication", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Display = group.Add(new VocabularyKey(nameof(Display), "Display", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PreferredCommunication = group.Add(new VocabularyKey(nameof(PreferredCommunication), "Preferred Communication", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                CommunicationId = group.Add(new VocabularyKey(nameof(CommunicationId), "Communication", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Display = group.Add(new VocabularyKey(nameof(Display), "Display", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PreferredCommunication = group.Add(new VocabularyKey(nameof(PreferredCommunication), "Preferred Communication", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="RequesterAgentOrganizationId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="RequesterOnBehalfOfId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
@@ -194,7 +193,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="CommunicationRequestId"/> from Vocab 'CarePlanActivity.cdm.json/CarePlanActivity' with Property 'ReferenceCommunicationRequestIdentifierId'
             ///Property <see cref="CommunicationRequestId"/> from Vocab 'CommunicationRequestBasedOn.cdm.json/CommunicationRequestBasedOn' with Property 'CommunicationRequestId'

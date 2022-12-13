@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,21 +13,21 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("PropertyOptionSetItem Details for FoundationCommon", group =>
             {
-			    DynamicPropertyOptionSetValueId = group.Add(new VocabularyKey(nameof(DynamicPropertyOptionSetValueId), "Property Option Set ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), "Version Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), "Time Zone Rule Version Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    DynamicPropertyOptionName = group.Add(new VocabularyKey(nameof(DynamicPropertyOptionName), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DynamicPropertyOptionValue = group.Add(new VocabularyKey(nameof(DynamicPropertyOptionValue), "Value", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    DynamicPropertyOptionDescription = group.Add(new VocabularyKey(nameof(DynamicPropertyOptionDescription), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DynamicPropertyOptionSetValueSequenceNumber = group.Add(new VocabularyKey(nameof(DynamicPropertyOptionSetValueSequenceNumber), "Internal Use Only", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
+                DynamicPropertyOptionSetValueId = group.Add(new VocabularyKey(nameof(DynamicPropertyOptionSetValueId), "Property Option Set ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), "Version Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), "Time Zone Rule Version Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                DynamicPropertyOptionName = group.Add(new VocabularyKey(nameof(DynamicPropertyOptionName), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DynamicPropertyOptionValue = group.Add(new VocabularyKey(nameof(DynamicPropertyOptionValue), "Value", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                DynamicPropertyOptionDescription = group.Add(new VocabularyKey(nameof(DynamicPropertyOptionDescription), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DynamicPropertyOptionSetValueSequenceNumber = group.Add(new VocabularyKey(nameof(DynamicPropertyOptionSetValueSequenceNumber), "Internal Use Only", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="OrganizationId"/> to Vocab 'Organization.cdm.json/Organization' with Property 'OrganizationId'
             ///Property <see cref="DynamicPropertyId"/> to Vocab 'Property.cdm.json/Property' with Property 'DynamicPropertyId'
@@ -38,7 +37,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="TransactionCurrencyId"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="DynamicPropertyOptionSetValueId"/> from Vocab 'Property.cdm.json/Property' with Property 'DefaultValueOptionSet'
             #endregion

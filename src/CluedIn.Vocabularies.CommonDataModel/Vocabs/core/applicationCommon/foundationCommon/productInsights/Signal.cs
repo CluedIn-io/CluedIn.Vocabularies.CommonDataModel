@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,23 +13,23 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("Signal Details for ProductInsights", group =>
             {
-			    SignalTime = group.Add(new VocabularyKey(nameof(SignalTime), "Signal Timestamp", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Timezone = group.Add(new VocabularyKey(nameof(Timezone), "Timezone", VocabularyKeyDataType.TimeZone, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Signal Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Version = group.Add(new VocabularyKey(nameof(Version), "Signal Version", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ServerTime = group.Add(new VocabularyKey(nameof(ServerTime), "Server Timestamp", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PartNumber = group.Add(new VocabularyKey(nameof(PartNumber), "Part Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DeviceId = group.Add(new VocabularyKey(nameof(DeviceId), "Device Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SerialNumber = group.Add(new VocabularyKey(nameof(SerialNumber), "Serial Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                SignalTime = group.Add(new VocabularyKey(nameof(SignalTime), "Signal Timestamp", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Timezone = group.Add(new VocabularyKey(nameof(Timezone), "Timezone", VocabularyKeyDataType.TimeZone, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Signal Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Version = group.Add(new VocabularyKey(nameof(Version), "Signal Version", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ServerTime = group.Add(new VocabularyKey(nameof(ServerTime), "Server Timestamp", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PartNumber = group.Add(new VocabularyKey(nameof(PartNumber), "Part Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DeviceId = group.Add(new VocabularyKey(nameof(DeviceId), "Device Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SerialNumber = group.Add(new VocabularyKey(nameof(SerialNumber), "Serial Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="AssetId"/> to Vocab 'Asset.cdm.json/Asset' with Property 'AssetId'
             ///Property <see cref="ProductId"/> to Vocab '/core/applicationCommon/foundationCommon/Product.cdm.json/Product' with Property 'ProductId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

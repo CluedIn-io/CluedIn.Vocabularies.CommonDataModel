@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,37 +13,37 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("Article Details for ApplicationCommon", group =>
             {
-			    KbArticleId = group.Add(new VocabularyKey(nameof(KbArticleId), "Article", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SubjectId = group.Add(new VocabularyKey(nameof(SubjectId), "Subject", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ArticleXml = group.Add(new VocabularyKey(nameof(ArticleXml), "Article XML", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Title = group.Add(new VocabularyKey(nameof(Title), "Title", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Number = group.Add(new VocabularyKey(nameof(Number), "Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Content = group.Add(new VocabularyKey(nameof(Content), "Content", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Comments = group.Add(new VocabularyKey(nameof(Comments), "Comments", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status ", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), "Title", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    KeyWords = group.Add(new VocabularyKey(nameof(KeyWords), "Key Words", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    LanguageCode = group.Add(new VocabularyKey(nameof(LanguageCode), "Language", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    EntityImageId = group.Add(new VocabularyKey(nameof(EntityImageId), "Entity Image Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
+                KbArticleId = group.Add(new VocabularyKey(nameof(KbArticleId), "Article", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SubjectId = group.Add(new VocabularyKey(nameof(SubjectId), "Subject", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ArticleXml = group.Add(new VocabularyKey(nameof(ArticleXml), "Article XML", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Title = group.Add(new VocabularyKey(nameof(Title), "Title", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Number = group.Add(new VocabularyKey(nameof(Number), "Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Content = group.Add(new VocabularyKey(nameof(Content), "Content", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Comments = group.Add(new VocabularyKey(nameof(Comments), "Comments", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status ", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), "Title", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                KeyWords = group.Add(new VocabularyKey(nameof(KeyWords), "Key Words", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LanguageCode = group.Add(new VocabularyKey(nameof(LanguageCode), "Language", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                EntityImageId = group.Add(new VocabularyKey(nameof(EntityImageId), "Entity Image Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
             });
             AddGroup("Article Details for Portals", group =>
             {
-			    PublishToWeb = group.Add(new VocabularyKey(nameof(PublishToWeb), "Publish to Web", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    AverageRating = group.Add(new VocabularyKey(nameof(AverageRating), "Average Rating", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    AverageRatingWholeNumber = group.Add(new VocabularyKey(nameof(AverageRatingWholeNumber), "Average Rating (Whole Number)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    Downvotes = group.Add(new VocabularyKey(nameof(Downvotes), "Downvotes", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    RatingCount = group.Add(new VocabularyKey(nameof(RatingCount), "Rating Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    RatingSum = group.Add(new VocabularyKey(nameof(RatingSum), "Rating Sum", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    Upvotes = group.Add(new VocabularyKey(nameof(Upvotes), "Upvotes", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+                PublishToWeb = group.Add(new VocabularyKey(nameof(PublishToWeb), "Publish to Web", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                AverageRating = group.Add(new VocabularyKey(nameof(AverageRating), "Average Rating", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                AverageRatingWholeNumber = group.Add(new VocabularyKey(nameof(AverageRatingWholeNumber), "Average Rating (Whole Number)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                Downvotes = group.Add(new VocabularyKey(nameof(Downvotes), "Downvotes", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                RatingCount = group.Add(new VocabularyKey(nameof(RatingCount), "Rating Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                RatingSum = group.Add(new VocabularyKey(nameof(RatingSum), "Rating Sum", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                Upvotes = group.Add(new VocabularyKey(nameof(Upvotes), "Upvotes", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="KbArticleTemplateId"/> to Vocab 'ArticleTemplate.cdm.json/ArticleTemplate' with Property 'KbArticleTemplateId'
             ///Property <see cref="OrganizationId"/> to Vocab 'Organization.cdm.json/Organization' with Property 'OrganizationId'
@@ -112,7 +111,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningUser"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="PrimaryAuthorId"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="KnowledgearticleId"/> from Vocab 'Activity.cdm.json/Activity' with Property 'RegardingObjectId'
             ///Property <see cref="KnowledgearticleId"/> from Vocab 'ActivityParty.cdm.json/ActivityParty' with Property 'PartyId'

@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,13 +13,13 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("IndicatorValueUsage Details for NonProfitCore", group =>
             {
-			    IndicatorValueUsageId = group.Add(new VocabularyKey(nameof(IndicatorValueUsageId), "Indicator Value Usage", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Usage Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    UsageType = group.Add(new VocabularyKey(nameof(UsageType), "Usage Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                IndicatorValueUsageId = group.Add(new VocabularyKey(nameof(IndicatorValueUsageId), "Indicator Value Usage", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Usage Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                UsageType = group.Add(new VocabularyKey(nameof(UsageType), "Usage Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="IndicatorValueId"/> to Vocab 'IndicatorValue.cdm.json/IndicatorValue' with Property 'IndicatorValueId'
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
@@ -39,9 +38,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="WorkItemActionId"/> to Vocab 'WorkItemAction.cdm.json/WorkItemAction' with Property 'WorkItemActionId'
             ///Property <see cref="WorkItemId"/> to Vocab 'WorkItem.cdm.json/WorkItem' with Property 'WorkItemId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

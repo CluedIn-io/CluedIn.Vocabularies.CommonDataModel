@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,21 +13,21 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("NutritionOrder Details for ElectronicMedicalRecords", group =>
             {
-			    AdditiveProductName = group.Add(new VocabularyKey(nameof(AdditiveProductName), "Additive Product Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    AdministrationInstruction = group.Add(new VocabularyKey(nameof(AdministrationInstruction), "Administration Instruction", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    BaseFormulaProductName = group.Add(new VocabularyKey(nameof(BaseFormulaProductName), "Base Formula Product Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CaloricDensity = group.Add(new VocabularyKey(nameof(CaloricDensity), "Caloric Density", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    DateTime = group.Add(new VocabularyKey(nameof(DateTime), "DateTime", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    MaxVolumeToDeliver = group.Add(new VocabularyKey(nameof(MaxVolumeToDeliver), "Max Volume to Deliver", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    NutritionOrderId = group.Add(new VocabularyKey(nameof(NutritionOrderId), "Nutrition Order", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    NutritionOrderNumber = group.Add(new VocabularyKey(nameof(NutritionOrderNumber), "Nutrition Order Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    OralDietInstruction = group.Add(new VocabularyKey(nameof(OralDietInstruction), "Instruction", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Status = group.Add(new VocabularyKey(nameof(Status), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                AdditiveProductName = group.Add(new VocabularyKey(nameof(AdditiveProductName), "Additive Product Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AdministrationInstruction = group.Add(new VocabularyKey(nameof(AdministrationInstruction), "Administration Instruction", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BaseFormulaProductName = group.Add(new VocabularyKey(nameof(BaseFormulaProductName), "Base Formula Product Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CaloricDensity = group.Add(new VocabularyKey(nameof(CaloricDensity), "Caloric Density", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                DateTime = group.Add(new VocabularyKey(nameof(DateTime), "DateTime", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MaxVolumeToDeliver = group.Add(new VocabularyKey(nameof(MaxVolumeToDeliver), "Max Volume to Deliver", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                NutritionOrderId = group.Add(new VocabularyKey(nameof(NutritionOrderId), "Nutrition Order", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                NutritionOrderNumber = group.Add(new VocabularyKey(nameof(NutritionOrderNumber), "Nutrition Order Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OralDietInstruction = group.Add(new VocabularyKey(nameof(OralDietInstruction), "Instruction", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Status = group.Add(new VocabularyKey(nameof(Status), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="OrdererId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
             ///Property <see cref="PatientId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
@@ -206,7 +205,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             ///Property <see cref="ScheduleId"/> to Vocab 'Timing.cdm.json/Timing' with Property 'TimingId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="NutritionOrderId"/> from Vocab 'CarePlanActivity.cdm.json/CarePlanActivity' with Property 'ReferenceNutritionOrderIdentifierId'
             ///Property <see cref="NutritionOrderId"/> from Vocab 'GoalAddresses.cdm.json/GoalAddresses' with Property 'AddressesTypeNutritionOrderId'

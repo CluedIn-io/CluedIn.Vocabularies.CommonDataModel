@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,31 +13,31 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("Speaker Details for EventManagement", group =>
             {
-			    SpeakerId = group.Add(new VocabularyKey(nameof(SpeakerId), "Speaker", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ProcessId = group.Add(new VocabularyKey(nameof(ProcessId), "Process Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    StageId = group.Add(new VocabularyKey(nameof(StageId), "Stage Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EntityImageId = group.Add(new VocabularyKey(nameof(EntityImageId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    About = group.Add(new VocabularyKey(nameof(About), "About", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Accomplishments = group.Add(new VocabularyKey(nameof(Accomplishments), "Accomplishments", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Blog = group.Add(new VocabularyKey(nameof(Blog), "Blog", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
-			    Email = group.Add(new VocabularyKey(nameof(Email), "Email", VocabularyKeyDataType.Email, VocabularyKeyVisibility.Visible)); 
-			    EventRegistration = group.Add(new VocabularyKey(nameof(EventRegistration), "Event Registration", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    LinkedIn = group.Add(new VocabularyKey(nameof(LinkedIn), "LinkedIn", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
-			    Publications = group.Add(new VocabularyKey(nameof(Publications), "Publications", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Speakercost = group.Add(new VocabularyKey(nameof(Speakercost), "Speaker Cost", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    SpeakercostBase = group.Add(new VocabularyKey(nameof(SpeakercostBase), "Speaker Cost (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Title = group.Add(new VocabularyKey(nameof(Title), "Title", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TransactionCurrencyId = group.Add(new VocabularyKey(nameof(TransactionCurrencyId), "Currency", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Twitter = group.Add(new VocabularyKey(nameof(Twitter), "Twitter", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
-			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Website = group.Add(new VocabularyKey(nameof(Website), "Website", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
+                SpeakerId = group.Add(new VocabularyKey(nameof(SpeakerId), "Speaker", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProcessId = group.Add(new VocabularyKey(nameof(ProcessId), "Process Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                StageId = group.Add(new VocabularyKey(nameof(StageId), "Stage Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EntityImageId = group.Add(new VocabularyKey(nameof(EntityImageId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                About = group.Add(new VocabularyKey(nameof(About), "About", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Accomplishments = group.Add(new VocabularyKey(nameof(Accomplishments), "Accomplishments", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Blog = group.Add(new VocabularyKey(nameof(Blog), "Blog", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible));
+                Email = group.Add(new VocabularyKey(nameof(Email), "Email", VocabularyKeyDataType.Email, VocabularyKeyVisibility.Visible));
+                EventRegistration = group.Add(new VocabularyKey(nameof(EventRegistration), "Event Registration", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LinkedIn = group.Add(new VocabularyKey(nameof(LinkedIn), "LinkedIn", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible));
+                Publications = group.Add(new VocabularyKey(nameof(Publications), "Publications", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Speakercost = group.Add(new VocabularyKey(nameof(Speakercost), "Speaker Cost", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                SpeakercostBase = group.Add(new VocabularyKey(nameof(SpeakercostBase), "Speaker Cost (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Title = group.Add(new VocabularyKey(nameof(Title), "Title", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TransactionCurrencyId = group.Add(new VocabularyKey(nameof(TransactionCurrencyId), "Currency", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Twitter = group.Add(new VocabularyKey(nameof(Twitter), "Twitter", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible));
+                Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Website = group.Add(new VocabularyKey(nameof(Website), "Website", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="EventId"/> to Vocab 'Event.cdm.json/Event' with Property 'EventId'
             ///Property <see cref="Event"/> to Vocab 'Event.cdm.json/Event' with Property 'EventId'
@@ -65,7 +64,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             ///Property <see cref="TransactionCurrencyId"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="SpeakerId"/> from Vocab 'SpeakerEngagement.cdm.json/SpeakerEngagement' with Property 'Speaker'
             #endregion

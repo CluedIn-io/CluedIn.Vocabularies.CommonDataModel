@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,21 +13,21 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("Course Details for HigherEducation", group =>
             {
-			    CourseId = group.Add(new VocabularyKey(nameof(CourseId), "Course", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Course Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    AcademicLevel = group.Add(new VocabularyKey(nameof(AcademicLevel), "Academic Level", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CourseNumber = group.Add(new VocabularyKey(nameof(CourseNumber), "Course Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EndDate = group.Add(new VocabularyKey(nameof(EndDate), "End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExternalIdentifier = group.Add(new VocabularyKey(nameof(ExternalIdentifier), "External Identifier", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExternalSourceSystem = group.Add(new VocabularyKey(nameof(ExternalSourceSystem), "External Source System", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Prerequisites = group.Add(new VocabularyKey(nameof(Prerequisites), "Prerequisites", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Section = group.Add(new VocabularyKey(nameof(Section), "Section", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StartDate = group.Add(new VocabularyKey(nameof(StartDate), "Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Subject = group.Add(new VocabularyKey(nameof(Subject), "Subject", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                CourseId = group.Add(new VocabularyKey(nameof(CourseId), "Course", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Course Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AcademicLevel = group.Add(new VocabularyKey(nameof(AcademicLevel), "Academic Level", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CourseNumber = group.Add(new VocabularyKey(nameof(CourseNumber), "Course Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EndDate = group.Add(new VocabularyKey(nameof(EndDate), "End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExternalIdentifier = group.Add(new VocabularyKey(nameof(ExternalIdentifier), "External Identifier", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExternalSourceSystem = group.Add(new VocabularyKey(nameof(ExternalSourceSystem), "External Source System", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Prerequisites = group.Add(new VocabularyKey(nameof(Prerequisites), "Prerequisites", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Section = group.Add(new VocabularyKey(nameof(Section), "Section", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StartDate = group.Add(new VocabularyKey(nameof(StartDate), "Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Subject = group.Add(new VocabularyKey(nameof(Subject), "Subject", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="CampusId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="StudentId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
@@ -67,7 +66,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="CourseId"/> from Vocab 'CourseHistory.cdm.json/CourseHistory' with Property 'CourseId'
             ///Property <see cref="CourseId"/> from Vocab 'CourseSection.cdm.json/CourseSection' with Property 'CourseId'

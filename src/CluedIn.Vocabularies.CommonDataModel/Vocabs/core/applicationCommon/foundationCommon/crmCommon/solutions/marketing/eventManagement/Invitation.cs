@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,22 +13,22 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("Invitation Details for EventManagement", group =>
             {
-			    EventPortalInvitation = group.Add(new VocabularyKey(nameof(EventPortalInvitation), "Event Portal Invitation", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
+                EventPortalInvitation = group.Add(new VocabularyKey(nameof(EventPortalInvitation), "Event Portal Invitation", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
             });
             AddGroup("Invitation Details for Portals", group =>
             {
-			    InvitationId = group.Add(new VocabularyKey(nameof(InvitationId), "Invitation", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExpiryDate = group.Add(new VocabularyKey(nameof(ExpiryDate), "Expiry Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    InvitationCode = group.Add(new VocabularyKey(nameof(InvitationCode), "Invitation Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    MaximumRedemptions = group.Add(new VocabularyKey(nameof(MaximumRedemptions), "Maximum Redemptions", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    Redemptions = group.Add(new VocabularyKey(nameof(Redemptions), "Redemptions", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    RedemptionWorkflow = group.Add(new VocabularyKey(nameof(RedemptionWorkflow), "Redemption Workflow", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                InvitationId = group.Add(new VocabularyKey(nameof(InvitationId), "Invitation", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExpiryDate = group.Add(new VocabularyKey(nameof(ExpiryDate), "Expiry Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InvitationCode = group.Add(new VocabularyKey(nameof(InvitationCode), "Invitation Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MaximumRedemptions = group.Add(new VocabularyKey(nameof(MaximumRedemptions), "Maximum Redemptions", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                Redemptions = group.Add(new VocabularyKey(nameof(Redemptions), "Redemptions", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                RedemptionWorkflow = group.Add(new VocabularyKey(nameof(RedemptionWorkflow), "Redemption Workflow", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="AssignToAccount"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="AssignToAccount"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
@@ -47,9 +46,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="RedeemedContact"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/marketing/Contact.cdm.json/Contact' with Property 'ContactId'
             ///Property <see cref="Website"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/portals/Website.cdm.json/Website' with Property 'WebsiteId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

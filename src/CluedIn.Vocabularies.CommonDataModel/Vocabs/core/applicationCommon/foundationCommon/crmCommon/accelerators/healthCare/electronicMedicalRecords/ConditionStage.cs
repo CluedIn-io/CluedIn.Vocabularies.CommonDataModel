@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,12 +13,12 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("ConditionStage Details for ElectronicMedicalRecords", group =>
             {
-			    ConditionStageId = group.Add(new VocabularyKey(nameof(ConditionStageId), "Condition Stage", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                ConditionStageId = group.Add(new VocabularyKey(nameof(ConditionStageId), "Condition Stage", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="StageAssessmentDiagnosticRecordId"/> to Vocab 'CodeableConcept.cdm.json/CodeableConcept' with Property 'CodeableConceptId'
             ///Property <see cref="ConditionId"/> to Vocab 'Condition.cdm.json/Condition' with Property 'ConditionId'
@@ -38,9 +37,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="StageAssessmentClinicalImpressionId"/> to Vocab 'Observation.cdm.json/Observation' with Property 'ObservationId'
             ///Property <see cref="StageAssessmentObservationId"/> to Vocab 'Observation.cdm.json/Observation' with Property 'ObservationId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

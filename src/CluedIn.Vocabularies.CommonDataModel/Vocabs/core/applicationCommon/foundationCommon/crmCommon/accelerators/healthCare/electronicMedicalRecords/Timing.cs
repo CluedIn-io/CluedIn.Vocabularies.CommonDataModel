@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,38 +13,38 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("Timing Details for ElectronicMedicalRecords", group =>
             {
-			    CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CreatedOnBehalfBy = group.Add(new VocabularyKey(nameof(CreatedOnBehalfBy), "Created By (Delegate)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ModifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(ModifiedOnBehalfBy), "Modified By (Delegate)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Code = group.Add(new VocabularyKey(nameof(Code), "Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RepeatBoundDuration = group.Add(new VocabularyKey(nameof(RepeatBoundDuration), "Repeat Bound Duration", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    RepeatboundsType = group.Add(new VocabularyKey(nameof(RepeatboundsType), "Repeat Bound Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RepeatboundsTypePeriodEndDate = group.Add(new VocabularyKey(nameof(RepeatboundsTypePeriodEndDate), "Bound Type Period End", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RepeatboundsTypePeriodStartDate = group.Add(new VocabularyKey(nameof(RepeatboundsTypePeriodStartDate), "Bound Type Period Start", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RepeatboundsTypeRangeHigh = group.Add(new VocabularyKey(nameof(RepeatboundsTypeRangeHigh), "Bound Type Range High", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    RepeatboundsTypeRangeLow = group.Add(new VocabularyKey(nameof(RepeatboundsTypeRangeLow), "Bound Type Range Low", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    RepeatCount = group.Add(new VocabularyKey(nameof(RepeatCount), "Repeat Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    RepeatCountMax = group.Add(new VocabularyKey(nameof(RepeatCountMax), "Count Max", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    RepeatDuration = group.Add(new VocabularyKey(nameof(RepeatDuration), "Duration", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    RepeatDurationMax = group.Add(new VocabularyKey(nameof(RepeatDurationMax), "Duration Max", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    RepeatDurationUnit = group.Add(new VocabularyKey(nameof(RepeatDurationUnit), "Duration Unit", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RepeatFrequency = group.Add(new VocabularyKey(nameof(RepeatFrequency), "Frequency", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    RepeatFrequencyMax = group.Add(new VocabularyKey(nameof(RepeatFrequencyMax), "Frequency Max", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    RepeatOffset = group.Add(new VocabularyKey(nameof(RepeatOffset), "Repeat Offset", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    RepeatPeriod = group.Add(new VocabularyKey(nameof(RepeatPeriod), "Repeat Period", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    RepeatPeriodMax = group.Add(new VocabularyKey(nameof(RepeatPeriodMax), "Repeat Period Max", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    RepeatPeriodUnit = group.Add(new VocabularyKey(nameof(RepeatPeriodUnit), "Repeat Period Unit", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TimingId = group.Add(new VocabularyKey(nameof(TimingId), "Timing", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), "Time Zone Rule Version Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOnBehalfBy = group.Add(new VocabularyKey(nameof(CreatedOnBehalfBy), "Created By (Delegate)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(ModifiedOnBehalfBy), "Modified By (Delegate)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Code = group.Add(new VocabularyKey(nameof(Code), "Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RepeatBoundDuration = group.Add(new VocabularyKey(nameof(RepeatBoundDuration), "Repeat Bound Duration", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                RepeatboundsType = group.Add(new VocabularyKey(nameof(RepeatboundsType), "Repeat Bound Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RepeatboundsTypePeriodEndDate = group.Add(new VocabularyKey(nameof(RepeatboundsTypePeriodEndDate), "Bound Type Period End", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RepeatboundsTypePeriodStartDate = group.Add(new VocabularyKey(nameof(RepeatboundsTypePeriodStartDate), "Bound Type Period Start", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RepeatboundsTypeRangeHigh = group.Add(new VocabularyKey(nameof(RepeatboundsTypeRangeHigh), "Bound Type Range High", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                RepeatboundsTypeRangeLow = group.Add(new VocabularyKey(nameof(RepeatboundsTypeRangeLow), "Bound Type Range Low", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                RepeatCount = group.Add(new VocabularyKey(nameof(RepeatCount), "Repeat Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                RepeatCountMax = group.Add(new VocabularyKey(nameof(RepeatCountMax), "Count Max", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                RepeatDuration = group.Add(new VocabularyKey(nameof(RepeatDuration), "Duration", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                RepeatDurationMax = group.Add(new VocabularyKey(nameof(RepeatDurationMax), "Duration Max", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                RepeatDurationUnit = group.Add(new VocabularyKey(nameof(RepeatDurationUnit), "Duration Unit", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RepeatFrequency = group.Add(new VocabularyKey(nameof(RepeatFrequency), "Frequency", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                RepeatFrequencyMax = group.Add(new VocabularyKey(nameof(RepeatFrequencyMax), "Frequency Max", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                RepeatOffset = group.Add(new VocabularyKey(nameof(RepeatOffset), "Repeat Offset", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                RepeatPeriod = group.Add(new VocabularyKey(nameof(RepeatPeriod), "Repeat Period", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                RepeatPeriodMax = group.Add(new VocabularyKey(nameof(RepeatPeriodMax), "Repeat Period Max", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                RepeatPeriodUnit = group.Add(new VocabularyKey(nameof(RepeatPeriodUnit), "Repeat Period Unit", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TimingId = group.Add(new VocabularyKey(nameof(TimingId), "Timing", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), "Time Zone Rule Version Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
@@ -67,7 +66,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="TimingId"/> from Vocab 'DeviceMetric.cdm.json/DeviceMetric' with Property 'MeasurementPeriodId'
             ///Property <see cref="TimingId"/> from Vocab 'DeviceRequest.cdm.json/DeviceRequest' with Property 'OccurrenceTimingId'

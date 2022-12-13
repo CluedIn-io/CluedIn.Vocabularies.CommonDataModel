@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,21 +13,21 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("OfacMatch Details for NonProfitCore", group =>
             {
-			    MatchType = group.Add(new VocabularyKey(nameof(MatchType), "Match Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    OfacMatchId = group.Add(new VocabularyKey(nameof(OfacMatchId), "OFAC Match", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ReportDate = group.Add(new VocabularyKey(nameof(ReportDate), "Report Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SDNName = group.Add(new VocabularyKey(nameof(SDNName), "SDN Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SDNNumber = group.Add(new VocabularyKey(nameof(SDNNumber), "SDN Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Title = group.Add(new VocabularyKey(nameof(Title), "Title", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                MatchType = group.Add(new VocabularyKey(nameof(MatchType), "Match Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OfacMatchId = group.Add(new VocabularyKey(nameof(OfacMatchId), "OFAC Match", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ReportDate = group.Add(new VocabularyKey(nameof(ReportDate), "Report Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SDNName = group.Add(new VocabularyKey(nameof(SDNName), "SDN Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SDNNumber = group.Add(new VocabularyKey(nameof(SDNNumber), "SDN Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Title = group.Add(new VocabularyKey(nameof(Title), "Title", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
             AddGroup("OfacMatch Details for NonProfitForSales", group =>
             {
 
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="OfacMatchCustomerId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="OfacMatchCustomerId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
@@ -48,9 +47,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             ///Property <see cref="RequestId"/> to Vocab 'Request.cdm.json/Request' with Property 'RequestId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

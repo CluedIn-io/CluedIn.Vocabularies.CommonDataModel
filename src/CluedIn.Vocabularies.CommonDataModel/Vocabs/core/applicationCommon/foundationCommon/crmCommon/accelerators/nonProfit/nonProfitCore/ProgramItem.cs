@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,22 +13,22 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("ProgramItem Details for NonProfitCore", group =>
             {
-			    DateFulfilled = group.Add(new VocabularyKey(nameof(DateFulfilled), "Date Fulfilled", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DueDate = group.Add(new VocabularyKey(nameof(DueDate), "Due Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EndDate = group.Add(new VocabularyKey(nameof(EndDate), "End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ObligationType = group.Add(new VocabularyKey(nameof(ObligationType), "Obligation Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ObservationType = group.Add(new VocabularyKey(nameof(ObservationType), "Observation Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ProgramItemId = group.Add(new VocabularyKey(nameof(ProgramItemId), "Program Item", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RatingType = group.Add(new VocabularyKey(nameof(RatingType), "Rating", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StartDate = group.Add(new VocabularyKey(nameof(StartDate), "Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SubType = group.Add(new VocabularyKey(nameof(SubType), "SubType", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                DateFulfilled = group.Add(new VocabularyKey(nameof(DateFulfilled), "Date Fulfilled", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DueDate = group.Add(new VocabularyKey(nameof(DueDate), "Due Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EndDate = group.Add(new VocabularyKey(nameof(EndDate), "End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ObligationType = group.Add(new VocabularyKey(nameof(ObligationType), "Obligation Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ObservationType = group.Add(new VocabularyKey(nameof(ObservationType), "Observation Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProgramItemId = group.Add(new VocabularyKey(nameof(ProgramItemId), "Program Item", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RatingType = group.Add(new VocabularyKey(nameof(RatingType), "Rating", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StartDate = group.Add(new VocabularyKey(nameof(StartDate), "Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SubType = group.Add(new VocabularyKey(nameof(SubType), "SubType", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="BudgetId"/> to Vocab 'Budget.cdm.json/Budget' with Property 'BudgetId'
             ///Property <see cref="DeliveryFrameworkId"/> to Vocab 'DeliveryFramework.cdm.json/DeliveryFramework' with Property 'DeliveryFrameworkId'
@@ -64,7 +63,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             ///Property <see cref="ResultId"/> to Vocab 'Result.cdm.json/Result' with Property 'ResultId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="ProgramItemId"/> from Vocab 'ProgramItemRelationship.cdm.json/ProgramItemRelationship' with Property 'RelatedFromProgramItemId'
             ///Property <see cref="ProgramItemId"/> from Vocab 'ProgramItemRelationship.cdm.json/ProgramItemRelationship' with Property 'RelatedToProgramItemId'

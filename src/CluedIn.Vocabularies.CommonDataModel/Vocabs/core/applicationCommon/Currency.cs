@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,22 +13,22 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("Currency Details for ApplicationCommon", group =>
             {
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), "Version Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TransactionCurrencyId = group.Add(new VocabularyKey(nameof(TransactionCurrencyId), "Transaction Currency", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    CurrencySymbol = group.Add(new VocabularyKey(nameof(CurrencySymbol), "Currency Symbol", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CurrencyName = group.Add(new VocabularyKey(nameof(CurrencyName), "Currency Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ISOCurrencyCode = group.Add(new VocabularyKey(nameof(ISOCurrencyCode), "Currency Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CurrencyPrecision = group.Add(new VocabularyKey(nameof(CurrencyPrecision), "Currency Precision", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    EntityImageId = group.Add(new VocabularyKey(nameof(EntityImageId), "Entity Image Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), "Version Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TransactionCurrencyId = group.Add(new VocabularyKey(nameof(TransactionCurrencyId), "Transaction Currency", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                CurrencySymbol = group.Add(new VocabularyKey(nameof(CurrencySymbol), "Currency Symbol", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CurrencyName = group.Add(new VocabularyKey(nameof(CurrencyName), "Currency Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ISOCurrencyCode = group.Add(new VocabularyKey(nameof(ISOCurrencyCode), "Currency Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CurrencyPrecision = group.Add(new VocabularyKey(nameof(CurrencyPrecision), "Currency Precision", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                EntityImageId = group.Add(new VocabularyKey(nameof(EntityImageId), "Entity Image Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="ModifiedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="CreatedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
@@ -37,7 +36,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="CreatedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="TransactionCurrencyId"/> from Vocab 'Account.cdm.json/Account' with Property 'TransactionCurrencyId'
             ///Property <see cref="TransactionCurrencyId"/> from Vocab 'Activity.cdm.json/Activity' with Property 'TransactionCurrencyId'

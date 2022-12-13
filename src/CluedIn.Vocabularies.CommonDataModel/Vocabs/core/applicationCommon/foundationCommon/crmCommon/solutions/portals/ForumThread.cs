@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,18 +13,18 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("ForumThread Details for Portals", group =>
             {
-			    CommunityForumThreadId = group.Add(new VocabularyKey(nameof(CommunityForumThreadId), "Forum Thread", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IsAnswered = group.Add(new VocabularyKey(nameof(IsAnswered), "Answered?", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    LastPostDate = group.Add(new VocabularyKey(nameof(LastPostDate), "Last Post Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Locked = group.Add(new VocabularyKey(nameof(Locked), "Locked", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    PostCount = group.Add(new VocabularyKey(nameof(PostCount), "Post Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    Sticky = group.Add(new VocabularyKey(nameof(Sticky), "Sticky?", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    ViewCount = group.Add(new VocabularyKey(nameof(ViewCount), "View Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+                CommunityForumThreadId = group.Add(new VocabularyKey(nameof(CommunityForumThreadId), "Forum Thread", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsAnswered = group.Add(new VocabularyKey(nameof(IsAnswered), "Answered?", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                LastPostDate = group.Add(new VocabularyKey(nameof(LastPostDate), "Last Post Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Locked = group.Add(new VocabularyKey(nameof(Locked), "Locked", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                PostCount = group.Add(new VocabularyKey(nameof(PostCount), "Post Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                Sticky = group.Add(new VocabularyKey(nameof(Sticky), "Sticky?", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                ViewCount = group.Add(new VocabularyKey(nameof(ViewCount), "View Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="ForumId"/> to Vocab 'Forum.cdm.json/Forum' with Property 'CommunityForumId'
             ///Property <see cref="FirstPostId"/> to Vocab 'ForumPost.cdm.json/ForumPost' with Property 'CommunityForumPostId'
@@ -52,7 +51,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             ///Property <see cref="WebsiteId"/> to Vocab 'Website.cdm.json/Website' with Property 'WebsiteId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="CommunityForumThreadId"/> from Vocab 'ForumPost.cdm.json/ForumPost' with Property 'ForumThreadId'
             ///Property <see cref="ForumThreadTypeId"/> from Vocab 'ForumThread.cdm.json/ForumThread' with Property 'TypeId'

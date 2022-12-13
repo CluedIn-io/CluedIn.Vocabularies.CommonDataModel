@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,26 +13,26 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("Segment Details for Marketing", group =>
             {
-			    SegmentId = group.Add(new VocabularyKey(nameof(SegmentId), "Segment", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Segmentname = group.Add(new VocabularyKey(nameof(Segmentname), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ActivationStatus = group.Add(new VocabularyKey(nameof(ActivationStatus), "Activation status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    FilterQuery = group.Add(new VocabularyKey(nameof(FilterQuery), "Filter query", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    MemberIDs = group.Add(new VocabularyKey(nameof(MemberIDs), "Member IDs", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ProvisioningState = group.Add(new VocabularyKey(nameof(ProvisioningState), "Provisioning state", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    QueryDefinition = group.Add(new VocabularyKey(nameof(QueryDefinition), "Query definition", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SegmentType = group.Add(new VocabularyKey(nameof(SegmentType), "Segment type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                SegmentId = group.Add(new VocabularyKey(nameof(SegmentId), "Segment", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Segmentname = group.Add(new VocabularyKey(nameof(Segmentname), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ActivationStatus = group.Add(new VocabularyKey(nameof(ActivationStatus), "Activation status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FilterQuery = group.Add(new VocabularyKey(nameof(FilterQuery), "Filter query", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MemberIDs = group.Add(new VocabularyKey(nameof(MemberIDs), "Member IDs", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProvisioningState = group.Add(new VocabularyKey(nameof(ProvisioningState), "Provisioning state", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                QueryDefinition = group.Add(new VocabularyKey(nameof(QueryDefinition), "Query definition", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SegmentType = group.Add(new VocabularyKey(nameof(SegmentType), "Segment type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
             AddGroup("Segment Details for CustomerInsights", group =>
             {
-			    LastEvaluationDate = group.Add(new VocabularyKey(nameof(LastEvaluationDate), "Last Evaluation Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    MemberCount = group.Add(new VocabularyKey(nameof(MemberCount), "Member Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Version = group.Add(new VocabularyKey(nameof(Version), "Version", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+                LastEvaluationDate = group.Add(new VocabularyKey(nameof(LastEvaluationDate), "Last Evaluation Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MemberCount = group.Add(new VocabularyKey(nameof(MemberCount), "Member Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Version = group.Add(new VocabularyKey(nameof(Version), "Version", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
@@ -45,7 +44,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="SegmentId"/> from Vocab 'CustomerJourney.cdm.json/CustomerJourney' with Property 'SuppressionSegmentId'
             ///Property <see cref="SegmentId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/accelerators/financialServices/banking/CustomerJourney.cdm.json/CustomerJourney' with Property 'SuppressionSegmentId'

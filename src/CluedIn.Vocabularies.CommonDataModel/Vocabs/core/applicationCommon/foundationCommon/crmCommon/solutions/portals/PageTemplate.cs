@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,18 +13,18 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("PageTemplate Details for Portals", group =>
             {
-			    PageTemplateId = group.Add(new VocabularyKey(nameof(PageTemplateId), "Page Template", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IsDefault = group.Add(new VocabularyKey(nameof(IsDefault), "Is Default", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    RewriteURL = group.Add(new VocabularyKey(nameof(RewriteURL), "Rewrite Url", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EntityName = group.Add(new VocabularyKey(nameof(EntityName), "Entity Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    UseWebsiteHeaderAndFooter = group.Add(new VocabularyKey(nameof(UseWebsiteHeaderAndFooter), "Use Website Header and Footer", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
+                PageTemplateId = group.Add(new VocabularyKey(nameof(PageTemplateId), "Page Template", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsDefault = group.Add(new VocabularyKey(nameof(IsDefault), "Is Default", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                RewriteURL = group.Add(new VocabularyKey(nameof(RewriteURL), "Rewrite Url", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EntityName = group.Add(new VocabularyKey(nameof(EntityName), "Entity Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                UseWebsiteHeaderAndFooter = group.Add(new VocabularyKey(nameof(UseWebsiteHeaderAndFooter), "Use Website Header and Footer", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
@@ -39,7 +38,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="WebsiteId"/> to Vocab 'Website.cdm.json/Website' with Property 'WebsiteId'
             ///Property <see cref="WebTemplateId"/> to Vocab 'WebTemplate.cdm.json/WebTemplate' with Property 'WebTemplateId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="PageTemplateId"/> from Vocab 'Blog.cdm.json/Blog' with Property 'ArchiveTemplateId'
             ///Property <see cref="PageTemplateId"/> from Vocab 'Blog.cdm.json/Blog' with Property 'HomeTemplateId'

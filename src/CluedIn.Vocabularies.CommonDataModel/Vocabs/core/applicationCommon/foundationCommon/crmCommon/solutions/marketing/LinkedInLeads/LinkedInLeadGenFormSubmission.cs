@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,22 +13,22 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("LinkedInLeadGenFormSubmission Details for LinkedInLeads", group =>
             {
-			    LinkedInFormSubmissionId = group.Add(new VocabularyKey(nameof(LinkedInFormSubmissionId), "LinkedIn ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    LinkedInAccountID = group.Add(new VocabularyKey(nameof(LinkedInAccountID), "LinkedIn account", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    LinkedInCampaignID = group.Add(new VocabularyKey(nameof(LinkedInCampaignID), "LinkedIn campaign ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    LinkedInCreativeID = group.Add(new VocabularyKey(nameof(LinkedInCreativeID), "LinkedIn Creative ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    LinkedInLeadGenFormSubmissionTextId = group.Add(new VocabularyKey(nameof(LinkedInLeadGenFormSubmissionTextId), "LinkedIn Lead Gen Form Submission Text Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    LinkedInUserProfileID = group.Add(new VocabularyKey(nameof(LinkedInUserProfileID), "LinkedIn User Profile", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    MatchingStatus = group.Add(new VocabularyKey(nameof(MatchingStatus), "Matching status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ProcessingState = group.Add(new VocabularyKey(nameof(ProcessingState), "Processing State", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SubmissionDate = group.Add(new VocabularyKey(nameof(SubmissionDate), "Submission date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    LinkedInFormName = group.Add(new VocabularyKey(nameof(LinkedInFormName), "Source Form", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                LinkedInFormSubmissionId = group.Add(new VocabularyKey(nameof(LinkedInFormSubmissionId), "LinkedIn ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LinkedInAccountID = group.Add(new VocabularyKey(nameof(LinkedInAccountID), "LinkedIn account", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LinkedInCampaignID = group.Add(new VocabularyKey(nameof(LinkedInCampaignID), "LinkedIn campaign ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LinkedInCreativeID = group.Add(new VocabularyKey(nameof(LinkedInCreativeID), "LinkedIn Creative ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LinkedInLeadGenFormSubmissionTextId = group.Add(new VocabularyKey(nameof(LinkedInLeadGenFormSubmissionTextId), "LinkedIn Lead Gen Form Submission Text Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LinkedInUserProfileID = group.Add(new VocabularyKey(nameof(LinkedInUserProfileID), "LinkedIn User Profile", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MatchingStatus = group.Add(new VocabularyKey(nameof(MatchingStatus), "Matching status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProcessingState = group.Add(new VocabularyKey(nameof(ProcessingState), "Processing State", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SubmissionDate = group.Add(new VocabularyKey(nameof(SubmissionDate), "Submission date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LinkedInFormName = group.Add(new VocabularyKey(nameof(LinkedInFormName), "Source Form", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="LinkedInCampaign"/> to Vocab 'LinkedInCampaign.cdm.json/LinkedInCampaign' with Property 'LinkedInCampaignID'
             ///Property <see cref="LinkedinformId"/> to Vocab 'LinkedInLeadGenForm.cdm.json/LinkedInLeadGenForm' with Property 'LinkedinformId'
@@ -45,7 +44,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="Lead"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/marketing/Lead.cdm.json/Lead' with Property 'LeadId'
             ///Property <see cref="CustomerJourney"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/marketing/CustomerJourney.cdm.json/CustomerJourney' with Property 'CustomerJourneyId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="LinkedInFormSubmissionId"/> from Vocab 'LinkedInFormSubmissionAnswer.cdm.json/LinkedInFormSubmissionAnswer' with Property 'LinkedInFormSubmissionID'
             #endregion

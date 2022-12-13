@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,23 +13,23 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("SessionTrack Details for EventManagement", group =>
             {
-			    SessionTrackId = group.Add(new VocabularyKey(nameof(SessionTrackId), "Session Track", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    AudienceType = group.Add(new VocabularyKey(nameof(AudienceType), "Audience Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IndustryType = group.Add(new VocabularyKey(nameof(IndustryType), "Industry", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Keywords = group.Add(new VocabularyKey(nameof(Keywords), "Keywords", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    NumberOfRegistrations = group.Add(new VocabularyKey(nameof(NumberOfRegistrations), "Number of Registrations", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    PublishStatus = group.Add(new VocabularyKey(nameof(PublishStatus), "Publish Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SessionsInTrack = group.Add(new VocabularyKey(nameof(SessionsInTrack), "Sessions in track", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    TargetNumberOfSessions = group.Add(new VocabularyKey(nameof(TargetNumberOfSessions), "Target number of sessions", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    TrackCode = group.Add(new VocabularyKey(nameof(TrackCode), "Track code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TrackGoal = group.Add(new VocabularyKey(nameof(TrackGoal), "Track goal", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TrackType = group.Add(new VocabularyKey(nameof(TrackType), "Track Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                SessionTrackId = group.Add(new VocabularyKey(nameof(SessionTrackId), "Session Track", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AudienceType = group.Add(new VocabularyKey(nameof(AudienceType), "Audience Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IndustryType = group.Add(new VocabularyKey(nameof(IndustryType), "Industry", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Keywords = group.Add(new VocabularyKey(nameof(Keywords), "Keywords", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                NumberOfRegistrations = group.Add(new VocabularyKey(nameof(NumberOfRegistrations), "Number of Registrations", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                PublishStatus = group.Add(new VocabularyKey(nameof(PublishStatus), "Publish Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SessionsInTrack = group.Add(new VocabularyKey(nameof(SessionsInTrack), "Sessions in track", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                TargetNumberOfSessions = group.Add(new VocabularyKey(nameof(TargetNumberOfSessions), "Target number of sessions", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                TrackCode = group.Add(new VocabularyKey(nameof(TrackCode), "Track code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TrackGoal = group.Add(new VocabularyKey(nameof(TrackGoal), "Track goal", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TrackType = group.Add(new VocabularyKey(nameof(TrackType), "Track Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="EventId"/> to Vocab 'Event.cdm.json/Event' with Property 'EventId'
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
@@ -43,7 +42,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="SessionTrackId"/> from Vocab 'Pass.cdm.json/Pass' with Property 'Track'
             #endregion

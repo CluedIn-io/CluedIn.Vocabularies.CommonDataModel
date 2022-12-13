@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,48 +13,48 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("ResourceRequirement Details for Scheduling", group =>
             {
-			    ResourceRequirementId = group.Add(new VocabularyKey(nameof(ResourceRequirementId), "Resource Requirement", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    AllocationMethod = group.Add(new VocabularyKey(nameof(AllocationMethod), "Allocation Method", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CalendarId = group.Add(new VocabularyKey(nameof(CalendarId), "Calendar Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Duration = group.Add(new VocabularyKey(nameof(Duration), "Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    Effort = group.Add(new VocabularyKey(nameof(Effort), "Effort", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    FromDate = group.Add(new VocabularyKey(nameof(FromDate), "From Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    FulfilledDuration = group.Add(new VocabularyKey(nameof(FulfilledDuration), "Fulfilled Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    InternalFlags = group.Add(new VocabularyKey(nameof(InternalFlags), "Internal Flags", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IsPrimary = group.Add(new VocabularyKey(nameof(IsPrimary), "Is Primary", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    IsTemplate = group.Add(new VocabularyKey(nameof(IsTemplate), "Is Template", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    Latitude = group.Add(new VocabularyKey(nameof(Latitude), "Latitude", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Longitude = group.Add(new VocabularyKey(nameof(Longitude), "Longitude", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Percentage = group.Add(new VocabularyKey(nameof(Percentage), "Percentage", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    PoolType = group.Add(new VocabularyKey(nameof(PoolType), "Pool Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ProposedDuration = group.Add(new VocabularyKey(nameof(ProposedDuration), "Proposed Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    RemainingDuration = group.Add(new VocabularyKey(nameof(RemainingDuration), "Remaining Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    RequirementGroupControlViewId = group.Add(new VocabularyKey(nameof(RequirementGroupControlViewId), "Requirement Group Control View Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ResourceType = group.Add(new VocabularyKey(nameof(ResourceType), "Resource Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SortOptions = group.Add(new VocabularyKey(nameof(SortOptions), "Sort Options", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TemplateRequirementId = group.Add(new VocabularyKey(nameof(TemplateRequirementId), "Template Requirement Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TimeFromPromised = group.Add(new VocabularyKey(nameof(TimeFromPromised), "Time From Promised", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TimeToPromised = group.Add(new VocabularyKey(nameof(TimeToPromised), "Time To Promised", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TimeWindowEnd = group.Add(new VocabularyKey(nameof(TimeWindowEnd), "Time Window End", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TimeWindowStart = group.Add(new VocabularyKey(nameof(TimeWindowStart), "Time Window Start", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ToDate = group.Add(new VocabularyKey(nameof(ToDate), "To Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    WorkLocation = group.Add(new VocabularyKey(nameof(WorkLocation), "Work Location", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    City = group.Add(new VocabularyKey(nameof(City), "City", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CostPrice = group.Add(new VocabularyKey(nameof(CostPrice), "Cost Price", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    CostPriceBase = group.Add(new VocabularyKey(nameof(CostPriceBase), "Cost Price (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Country = group.Add(new VocabularyKey(nameof(Country), "Country/Region", VocabularyKeyDataType.GeographyCountry, VocabularyKeyVisibility.Visible)); 
-			    DeprecatedFulfilledHours = group.Add(new VocabularyKey(nameof(DeprecatedFulfilledHours), "Fulfilled Hours (Deprecated)", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    DeprecatedHours = group.Add(new VocabularyKey(nameof(DeprecatedHours), "Hours (Deprecated)", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    Quantity = group.Add(new VocabularyKey(nameof(Quantity), "Quantity (Deprecated in v3.0)", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    RequestStatus = group.Add(new VocabularyKey(nameof(RequestStatus), "Request Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateOrProvince = group.Add(new VocabularyKey(nameof(StateOrProvince), "State/Province", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                ResourceRequirementId = group.Add(new VocabularyKey(nameof(ResourceRequirementId), "Resource Requirement", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AllocationMethod = group.Add(new VocabularyKey(nameof(AllocationMethod), "Allocation Method", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CalendarId = group.Add(new VocabularyKey(nameof(CalendarId), "Calendar Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Duration = group.Add(new VocabularyKey(nameof(Duration), "Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                Effort = group.Add(new VocabularyKey(nameof(Effort), "Effort", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                FromDate = group.Add(new VocabularyKey(nameof(FromDate), "From Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FulfilledDuration = group.Add(new VocabularyKey(nameof(FulfilledDuration), "Fulfilled Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                InternalFlags = group.Add(new VocabularyKey(nameof(InternalFlags), "Internal Flags", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsPrimary = group.Add(new VocabularyKey(nameof(IsPrimary), "Is Primary", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                IsTemplate = group.Add(new VocabularyKey(nameof(IsTemplate), "Is Template", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                Latitude = group.Add(new VocabularyKey(nameof(Latitude), "Latitude", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Longitude = group.Add(new VocabularyKey(nameof(Longitude), "Longitude", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Percentage = group.Add(new VocabularyKey(nameof(Percentage), "Percentage", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                PoolType = group.Add(new VocabularyKey(nameof(PoolType), "Pool Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProposedDuration = group.Add(new VocabularyKey(nameof(ProposedDuration), "Proposed Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                RemainingDuration = group.Add(new VocabularyKey(nameof(RemainingDuration), "Remaining Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                RequirementGroupControlViewId = group.Add(new VocabularyKey(nameof(RequirementGroupControlViewId), "Requirement Group Control View Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ResourceType = group.Add(new VocabularyKey(nameof(ResourceType), "Resource Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SortOptions = group.Add(new VocabularyKey(nameof(SortOptions), "Sort Options", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TemplateRequirementId = group.Add(new VocabularyKey(nameof(TemplateRequirementId), "Template Requirement Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TimeFromPromised = group.Add(new VocabularyKey(nameof(TimeFromPromised), "Time From Promised", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TimeToPromised = group.Add(new VocabularyKey(nameof(TimeToPromised), "Time To Promised", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TimeWindowEnd = group.Add(new VocabularyKey(nameof(TimeWindowEnd), "Time Window End", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TimeWindowStart = group.Add(new VocabularyKey(nameof(TimeWindowStart), "Time Window Start", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ToDate = group.Add(new VocabularyKey(nameof(ToDate), "To Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WorkLocation = group.Add(new VocabularyKey(nameof(WorkLocation), "Work Location", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                City = group.Add(new VocabularyKey(nameof(City), "City", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CostPrice = group.Add(new VocabularyKey(nameof(CostPrice), "Cost Price", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                CostPriceBase = group.Add(new VocabularyKey(nameof(CostPriceBase), "Cost Price (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Country = group.Add(new VocabularyKey(nameof(Country), "Country/Region", VocabularyKeyDataType.GeographyCountry, VocabularyKeyVisibility.Visible));
+                DeprecatedFulfilledHours = group.Add(new VocabularyKey(nameof(DeprecatedFulfilledHours), "Fulfilled Hours (Deprecated)", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                DeprecatedHours = group.Add(new VocabularyKey(nameof(DeprecatedHours), "Hours (Deprecated)", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                Quantity = group.Add(new VocabularyKey(nameof(Quantity), "Quantity (Deprecated in v3.0)", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                RequestStatus = group.Add(new VocabularyKey(nameof(RequestStatus), "Request Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateOrProvince = group.Add(new VocabularyKey(nameof(StateOrProvince), "State/Province", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Type = group.Add(new VocabularyKey(nameof(Type), "Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="BookingSetupMetadataId"/> to Vocab 'BookingSetupMetadata.cdm.json/BookingSetupMetadata' with Property 'BookingSetupMetadataId'
             ///Property <see cref="Priority"/> to Vocab 'Priority.cdm.json/Priority' with Property 'PriorityId'
@@ -89,7 +88,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="ResourceRequirementId"/> from Vocab 'RequirementCharacteristic.cdm.json/RequirementCharacteristic' with Property 'ResourceRequirement'
             ///Property <see cref="ResourceRequirementId"/> from Vocab 'RequirementOrganizationUnit.cdm.json/RequirementOrganizationUnit' with Property 'ResourceRequirement'

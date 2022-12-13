@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,18 +13,18 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("FinancingOpportunityDetail Details for Automotive", group =>
             {
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    AmountLimit = group.Add(new VocabularyKey(nameof(AmountLimit), "Amount Limit", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    AmountType = group.Add(new VocabularyKey(nameof(AmountType), "Amount Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    BalanceType = group.Add(new VocabularyKey(nameof(BalanceType), "Balance Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    FinancingOpportunityDetailId = group.Add(new VocabularyKey(nameof(FinancingOpportunityDetailId), "Financing Opportunity Detail", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Value = group.Add(new VocabularyKey(nameof(Value), "Value", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    ValueBase = group.Add(new VocabularyKey(nameof(ValueBase), "Value (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                AmountLimit = group.Add(new VocabularyKey(nameof(AmountLimit), "Amount Limit", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AmountType = group.Add(new VocabularyKey(nameof(AmountType), "Amount Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BalanceType = group.Add(new VocabularyKey(nameof(BalanceType), "Balance Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FinancingOpportunityDetailId = group.Add(new VocabularyKey(nameof(FinancingOpportunityDetailId), "Financing Opportunity Detail", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Value = group.Add(new VocabularyKey(nameof(Value), "Value", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                ValueBase = group.Add(new VocabularyKey(nameof(ValueBase), "Value (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="FinancingOpportunityId"/> to Vocab 'FinancingOpportunity.cdm.json/FinancingOpportunity' with Property 'FinancingOpportunityId'
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
@@ -42,9 +41,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             ///Property <see cref="TransactionCurrencyId"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

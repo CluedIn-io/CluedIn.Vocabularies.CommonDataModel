@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,20 +13,20 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("CarePlan Details for ElectronicMedicalRecords", group =>
             {
-			    CarePlanId = group.Add(new VocabularyKey(nameof(CarePlanId), "Care Plan", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CarePlanIdentifier = group.Add(new VocabularyKey(nameof(CarePlanIdentifier), "Identifier", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ContextType = group.Add(new VocabularyKey(nameof(ContextType), "Context Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PlanDescription = group.Add(new VocabularyKey(nameof(PlanDescription), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PlanEndDate = group.Add(new VocabularyKey(nameof(PlanEndDate), "End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PlanIntent = group.Add(new VocabularyKey(nameof(PlanIntent), "Intent", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PlanStartDate = group.Add(new VocabularyKey(nameof(PlanStartDate), "Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PlanStatus = group.Add(new VocabularyKey(nameof(PlanStatus), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SubjectType = group.Add(new VocabularyKey(nameof(SubjectType), "Subject Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Title = group.Add(new VocabularyKey(nameof(Title), "Title", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                CarePlanId = group.Add(new VocabularyKey(nameof(CarePlanId), "Care Plan", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CarePlanIdentifier = group.Add(new VocabularyKey(nameof(CarePlanIdentifier), "Identifier", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ContextType = group.Add(new VocabularyKey(nameof(ContextType), "Context Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PlanDescription = group.Add(new VocabularyKey(nameof(PlanDescription), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PlanEndDate = group.Add(new VocabularyKey(nameof(PlanEndDate), "End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PlanIntent = group.Add(new VocabularyKey(nameof(PlanIntent), "Intent", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PlanStartDate = group.Add(new VocabularyKey(nameof(PlanStartDate), "Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PlanStatus = group.Add(new VocabularyKey(nameof(PlanStatus), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SubjectType = group.Add(new VocabularyKey(nameof(SubjectType), "Subject Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Title = group.Add(new VocabularyKey(nameof(Title), "Title", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="PerformerTypeOrganizationId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="PlanAuthorOrgazniationIdentifierId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
@@ -348,7 +347,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="CarePlanId"/> from Vocab 'CarePlanActivity.cdm.json/CarePlanActivity' with Property 'CarePlanId'
             ///Property <see cref="CarePlanId"/> from Vocab 'CarePlanAddresses.cdm.json/CarePlanAddresses' with Property 'CarePlanId'

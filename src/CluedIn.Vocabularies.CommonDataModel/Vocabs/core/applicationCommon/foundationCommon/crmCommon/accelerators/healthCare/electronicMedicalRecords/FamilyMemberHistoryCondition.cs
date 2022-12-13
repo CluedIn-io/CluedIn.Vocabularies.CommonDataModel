@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,19 +13,19 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("FamilyMemberHistoryCondition Details for ElectronicMedicalRecords", group =>
             {
-			    ConditionOnsetAge = group.Add(new VocabularyKey(nameof(ConditionOnsetAge), "Condition Onset Age", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    ConditionOnsetPeriodEndDate = group.Add(new VocabularyKey(nameof(ConditionOnsetPeriodEndDate), "Condition Onset Period End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ConditionOnsetPeriodStartDate = group.Add(new VocabularyKey(nameof(ConditionOnsetPeriodStartDate), "Condition Onset Period Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ConditionOnsetRangeHigh = group.Add(new VocabularyKey(nameof(ConditionOnsetRangeHigh), "Condition Onset Range High", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    ConditionOnsetRangeLow = group.Add(new VocabularyKey(nameof(ConditionOnsetRangeLow), "Condition Onset Range Low", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    ConditionOnsetString = group.Add(new VocabularyKey(nameof(ConditionOnsetString), "Condition Onset Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ConditionOnsetType = group.Add(new VocabularyKey(nameof(ConditionOnsetType), "Condition Onset Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    FamilyMemberHistoryConditionId = group.Add(new VocabularyKey(nameof(FamilyMemberHistoryConditionId), "Family Member History Condition", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                ConditionOnsetAge = group.Add(new VocabularyKey(nameof(ConditionOnsetAge), "Condition Onset Age", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                ConditionOnsetPeriodEndDate = group.Add(new VocabularyKey(nameof(ConditionOnsetPeriodEndDate), "Condition Onset Period End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ConditionOnsetPeriodStartDate = group.Add(new VocabularyKey(nameof(ConditionOnsetPeriodStartDate), "Condition Onset Period Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ConditionOnsetRangeHigh = group.Add(new VocabularyKey(nameof(ConditionOnsetRangeHigh), "Condition Onset Range High", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                ConditionOnsetRangeLow = group.Add(new VocabularyKey(nameof(ConditionOnsetRangeLow), "Condition Onset Range Low", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                ConditionOnsetString = group.Add(new VocabularyKey(nameof(ConditionOnsetString), "Condition Onset Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ConditionOnsetType = group.Add(new VocabularyKey(nameof(ConditionOnsetType), "Condition Onset Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FamilyMemberHistoryConditionId = group.Add(new VocabularyKey(nameof(FamilyMemberHistoryConditionId), "Family Member History Condition", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="ConditionCodeId"/> to Vocab 'CodeableConcept.cdm.json/CodeableConcept' with Property 'CodeableConceptId'
             ///Property <see cref="ConditionOutcomeId"/> to Vocab 'CodeableConcept.cdm.json/CodeableConcept' with Property 'CodeableConceptId'
@@ -44,9 +43,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

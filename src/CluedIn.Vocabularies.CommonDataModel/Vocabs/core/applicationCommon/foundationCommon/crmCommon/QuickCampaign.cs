@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,28 +13,28 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("QuickCampaign Details for CrmCommon", group =>
             {
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ProcessId = group.Add(new VocabularyKey(nameof(ProcessId), "Process", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    StageId = group.Add(new VocabularyKey(nameof(StageId), "Process Stage", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    OnHoldTime = group.Add(new VocabularyKey(nameof(OnHoldTime), "On Hold Time (Minutes)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    LastOnHoldTime = group.Add(new VocabularyKey(nameof(LastOnHoldTime), "Last On Hold Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    BulkOperationNumber = group.Add(new VocabularyKey(nameof(BulkOperationNumber), "Bulk Operation Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CreatedRecordTypeCode = group.Add(new VocabularyKey(nameof(CreatedRecordTypeCode), "Activity Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ErrorNumber = group.Add(new VocabularyKey(nameof(ErrorNumber), "Error Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    FailureCount = group.Add(new VocabularyKey(nameof(FailureCount), "No. of Failures", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    OperationTypeCode = group.Add(new VocabularyKey(nameof(OperationTypeCode), "Operation", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    WorkflowInfo = group.Add(new VocabularyKey(nameof(WorkflowInfo), "Workflow information", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Parameters = group.Add(new VocabularyKey(nameof(Parameters), "Parameters", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SuccessCount = group.Add(new VocabularyKey(nameof(SuccessCount), "No. of Successes", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    TargetedRecordTypeCode = group.Add(new VocabularyKey(nameof(TargetedRecordTypeCode), "Members Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TargetMembersCount = group.Add(new VocabularyKey(nameof(TargetMembersCount), "Total Members", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    ServiceId = group.Add(new VocabularyKey(nameof(ServiceId), "Service", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProcessId = group.Add(new VocabularyKey(nameof(ProcessId), "Process", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                StageId = group.Add(new VocabularyKey(nameof(StageId), "Process Stage", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                OnHoldTime = group.Add(new VocabularyKey(nameof(OnHoldTime), "On Hold Time (Minutes)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                LastOnHoldTime = group.Add(new VocabularyKey(nameof(LastOnHoldTime), "Last On Hold Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BulkOperationNumber = group.Add(new VocabularyKey(nameof(BulkOperationNumber), "Bulk Operation Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedRecordTypeCode = group.Add(new VocabularyKey(nameof(CreatedRecordTypeCode), "Activity Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ErrorNumber = group.Add(new VocabularyKey(nameof(ErrorNumber), "Error Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                FailureCount = group.Add(new VocabularyKey(nameof(FailureCount), "No. of Failures", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                OperationTypeCode = group.Add(new VocabularyKey(nameof(OperationTypeCode), "Operation", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WorkflowInfo = group.Add(new VocabularyKey(nameof(WorkflowInfo), "Workflow information", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Parameters = group.Add(new VocabularyKey(nameof(Parameters), "Parameters", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SuccessCount = group.Add(new VocabularyKey(nameof(SuccessCount), "No. of Successes", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                TargetedRecordTypeCode = group.Add(new VocabularyKey(nameof(TargetedRecordTypeCode), "Members Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TargetMembersCount = group.Add(new VocabularyKey(nameof(TargetMembersCount), "Total Members", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                ServiceId = group.Add(new VocabularyKey(nameof(ServiceId), "Service", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="RegardingObjectId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="RegardingObjectId"/> to Vocab 'CampaignActivity.cdm.json/CampaignActivity' with Property 'ActivityId'
@@ -59,7 +58,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="SLAId"/> to Vocab '/core/applicationCommon/SLA.cdm.json/SLA' with Property 'SLAId'
             ///Property <see cref="SLAInvokedId"/> to Vocab '/core/applicationCommon/SLA.cdm.json/SLA' with Property 'SLAId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="ActivityId"/> from Vocab 'CampaignResponse.cdm.json/CampaignResponse' with Property 'RegardingObjectId'
             ///Property <see cref="ActivityId"/> from Vocab 'sales/OpportunityClose.cdm.json/OpportunityClose' with Property 'RegardingObjectId'

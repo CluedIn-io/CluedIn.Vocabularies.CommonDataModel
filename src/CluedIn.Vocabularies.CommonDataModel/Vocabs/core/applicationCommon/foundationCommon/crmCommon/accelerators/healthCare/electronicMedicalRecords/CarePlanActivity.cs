@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,28 +13,28 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("CarePlanActivity Details for ElectronicMedicalRecords", group =>
             {
-			    ActivityDailyAmount = group.Add(new VocabularyKey(nameof(ActivityDailyAmount), "Daily Amount", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    ActivityDefinitionType = group.Add(new VocabularyKey(nameof(ActivityDefinitionType), "Activity Definition Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ActivityDescription = group.Add(new VocabularyKey(nameof(ActivityDescription), "Activity Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ActivityEndDate = group.Add(new VocabularyKey(nameof(ActivityEndDate), "Activity End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ActivityIdentifier = group.Add(new VocabularyKey(nameof(ActivityIdentifier), "Activity ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ActivityProductReferenceType = group.Add(new VocabularyKey(nameof(ActivityProductReferenceType), "Product Reference Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ActivityProductType = group.Add(new VocabularyKey(nameof(ActivityProductType), "Activity Product Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ActivityProhibited = group.Add(new VocabularyKey(nameof(ActivityProhibited), "Activity Prohibited", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    ActivityQuantity = group.Add(new VocabularyKey(nameof(ActivityQuantity), "Activity Quantity", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    ActivityReferenceType = group.Add(new VocabularyKey(nameof(ActivityReferenceType), "Activity Reference Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ActivityScheduledType = group.Add(new VocabularyKey(nameof(ActivityScheduledType), "Activity Scheduled Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ActivityStartDate = group.Add(new VocabularyKey(nameof(ActivityStartDate), "Activity Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ActivityStatus = group.Add(new VocabularyKey(nameof(ActivityStatus), "Activity Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ActivityStatusReason = group.Add(new VocabularyKey(nameof(ActivityStatusReason), "Reason Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ActivityString = group.Add(new VocabularyKey(nameof(ActivityString), "Activity String", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CarePlanActivityId = group.Add(new VocabularyKey(nameof(CarePlanActivityId), "Care Plan Activity", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EmrstatusCode = group.Add(new VocabularyKey(nameof(EmrstatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                ActivityDailyAmount = group.Add(new VocabularyKey(nameof(ActivityDailyAmount), "Daily Amount", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                ActivityDefinitionType = group.Add(new VocabularyKey(nameof(ActivityDefinitionType), "Activity Definition Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ActivityDescription = group.Add(new VocabularyKey(nameof(ActivityDescription), "Activity Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ActivityEndDate = group.Add(new VocabularyKey(nameof(ActivityEndDate), "Activity End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ActivityIdentifier = group.Add(new VocabularyKey(nameof(ActivityIdentifier), "Activity ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ActivityProductReferenceType = group.Add(new VocabularyKey(nameof(ActivityProductReferenceType), "Product Reference Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ActivityProductType = group.Add(new VocabularyKey(nameof(ActivityProductType), "Activity Product Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ActivityProhibited = group.Add(new VocabularyKey(nameof(ActivityProhibited), "Activity Prohibited", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                ActivityQuantity = group.Add(new VocabularyKey(nameof(ActivityQuantity), "Activity Quantity", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                ActivityReferenceType = group.Add(new VocabularyKey(nameof(ActivityReferenceType), "Activity Reference Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ActivityScheduledType = group.Add(new VocabularyKey(nameof(ActivityScheduledType), "Activity Scheduled Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ActivityStartDate = group.Add(new VocabularyKey(nameof(ActivityStartDate), "Activity Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ActivityStatus = group.Add(new VocabularyKey(nameof(ActivityStatus), "Activity Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ActivityStatusReason = group.Add(new VocabularyKey(nameof(ActivityStatusReason), "Reason Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ActivityString = group.Add(new VocabularyKey(nameof(ActivityString), "Activity String", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CarePlanActivityId = group.Add(new VocabularyKey(nameof(CarePlanActivityId), "Care Plan Activity", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EmrstatusCode = group.Add(new VocabularyKey(nameof(EmrstatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="PerformerTypeOrganizationId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="PerformerTypePatientId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
@@ -171,7 +170,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             ///Property <see cref="PlanActivityReasonReferenceId"/> to Vocab 'Condition.cdm.json/Condition' with Property 'ConditionId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="CarePlanActivityId"/> from Vocab 'CarePlanActivity.cdm.json/CarePlanActivity' with Property 'ActivityTimingId'
             ///Property <see cref="CarePlanActivityId"/> from Vocab 'CarePlanActivityGoal.cdm.json/CarePlanActivityGoal' with Property 'ActivityId'

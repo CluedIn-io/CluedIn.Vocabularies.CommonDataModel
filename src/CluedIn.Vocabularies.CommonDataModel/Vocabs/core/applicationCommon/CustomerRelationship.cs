@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,18 +13,18 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("CustomerRelationship Details for ApplicationCommon", group =>
             {
-			    VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CustomerRoleId = group.Add(new VocabularyKey(nameof(CustomerRoleId), "Role 1", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CustomerRelationshipId = group.Add(new VocabularyKey(nameof(CustomerRelationshipId), "Customer Relationship", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PartnerRoleId = group.Add(new VocabularyKey(nameof(PartnerRoleId), "Role 2", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CustomerRoleDescription = group.Add(new VocabularyKey(nameof(CustomerRoleDescription), "Description 1", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PartnerRoleDescription = group.Add(new VocabularyKey(nameof(PartnerRoleDescription), "Description 2", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+                VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CustomerRoleId = group.Add(new VocabularyKey(nameof(CustomerRoleId), "Role 1", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CustomerRelationshipId = group.Add(new VocabularyKey(nameof(CustomerRelationshipId), "Customer Relationship", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PartnerRoleId = group.Add(new VocabularyKey(nameof(PartnerRoleId), "Role 2", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CustomerRoleDescription = group.Add(new VocabularyKey(nameof(CustomerRoleDescription), "Description 1", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PartnerRoleDescription = group.Add(new VocabularyKey(nameof(PartnerRoleDescription), "Description 2", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="PartnerId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="CustomerId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
@@ -42,7 +41,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwningTeam"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="CustomerRelationshipId"/> from Vocab 'CustomerRelationship.cdm.json/CustomerRelationship' with Property 'ConverseRelationshipId'
             #endregion

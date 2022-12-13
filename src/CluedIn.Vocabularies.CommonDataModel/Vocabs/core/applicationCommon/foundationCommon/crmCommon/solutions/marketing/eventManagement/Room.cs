@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,20 +13,20 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("Room Details for EventManagement", group =>
             {
-			    RoomId = group.Add(new VocabularyKey(nameof(RoomId), "Room", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    AVSupport = group.Add(new VocabularyKey(nameof(AVSupport), "A/V support", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Capacity = group.Add(new VocabularyKey(nameof(Capacity), "Capacity", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DisabledAccess = group.Add(new VocabularyKey(nameof(DisabledAccess), "Disabled Access", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    InternetConnection = group.Add(new VocabularyKey(nameof(InternetConnection), "Internet connection", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Other = group.Add(new VocabularyKey(nameof(Other), "Other", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    VideoConferencing = group.Add(new VocabularyKey(nameof(VideoConferencing), "Video conferencing", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    WhiteBoard = group.Add(new VocabularyKey(nameof(WhiteBoard), "Whiteboard", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                RoomId = group.Add(new VocabularyKey(nameof(RoomId), "Room", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AVSupport = group.Add(new VocabularyKey(nameof(AVSupport), "A/V support", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Capacity = group.Add(new VocabularyKey(nameof(Capacity), "Capacity", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DisabledAccess = group.Add(new VocabularyKey(nameof(DisabledAccess), "Disabled Access", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InternetConnection = group.Add(new VocabularyKey(nameof(InternetConnection), "Internet connection", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Other = group.Add(new VocabularyKey(nameof(Other), "Other", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                VideoConferencing = group.Add(new VocabularyKey(nameof(VideoConferencing), "Video conferencing", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WhiteBoard = group.Add(new VocabularyKey(nameof(WhiteBoard), "Whiteboard", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="Building"/> to Vocab 'Building.cdm.json/Building' with Property 'BuildingId'
             ///Property <see cref="Event"/> to Vocab 'Event.cdm.json/Event' with Property 'EventId'
@@ -65,7 +64,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             ///Property <see cref="PrimaryContact"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/marketing/Contact.cdm.json/Contact' with Property 'ContactId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="HotelRoomAllocationId"/> from Vocab 'HotelRoomReservation.cdm.json/HotelRoomReservation' with Property 'HotelRoomAllocation'
             ///Property <see cref="RoomId"/> from Vocab 'Layout.cdm.json/Layout' with Property 'Room'

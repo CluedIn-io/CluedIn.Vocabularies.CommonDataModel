@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,33 +13,33 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("CampaignResponse Details for CrmCommon", group =>
             {
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ProcessId = group.Add(new VocabularyKey(nameof(ProcessId), "Process", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    StageId = group.Add(new VocabularyKey(nameof(StageId), "Process Stage", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    OnHoldTime = group.Add(new VocabularyKey(nameof(OnHoldTime), "On Hold Time (Minutes)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    LastOnHoldTime = group.Add(new VocabularyKey(nameof(LastOnHoldTime), "Last On Hold Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ChannelTypeCode = group.Add(new VocabularyKey(nameof(ChannelTypeCode), "Channel", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CompanyName = group.Add(new VocabularyKey(nameof(CompanyName), "Company Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Customer = group.Add(new VocabularyKey(nameof(Customer), "Customer", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EmailAddress = group.Add(new VocabularyKey(nameof(EmailAddress), "Email", VocabularyKeyDataType.Email, VocabularyKeyVisibility.Visible)); 
-			    Fax = group.Add(new VocabularyKey(nameof(Fax), "Fax", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    FirstName = group.Add(new VocabularyKey(nameof(FirstName), "First Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    LastName = group.Add(new VocabularyKey(nameof(LastName), "Last Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Partner = group.Add(new VocabularyKey(nameof(Partner), "Outsource Vendor", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PromotionCodeName = group.Add(new VocabularyKey(nameof(PromotionCodeName), "Promotion Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ReceivedOn = group.Add(new VocabularyKey(nameof(ReceivedOn), "Received On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ResponseCode = group.Add(new VocabularyKey(nameof(ResponseCode), "Response Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Telephone = group.Add(new VocabularyKey(nameof(Telephone), "Phone", VocabularyKeyDataType.PhoneNumber, VocabularyKeyVisibility.Visible)); 
-			    YomiCompanyName = group.Add(new VocabularyKey(nameof(YomiCompanyName), "Yomi Company Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    YomiFirstName = group.Add(new VocabularyKey(nameof(YomiFirstName), "Yomi First Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    YomiLastName = group.Add(new VocabularyKey(nameof(YomiLastName), "Yomi Last Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ServiceId = group.Add(new VocabularyKey(nameof(ServiceId), "Service", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProcessId = group.Add(new VocabularyKey(nameof(ProcessId), "Process", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                StageId = group.Add(new VocabularyKey(nameof(StageId), "Process Stage", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                OnHoldTime = group.Add(new VocabularyKey(nameof(OnHoldTime), "On Hold Time (Minutes)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                LastOnHoldTime = group.Add(new VocabularyKey(nameof(LastOnHoldTime), "Last On Hold Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ChannelTypeCode = group.Add(new VocabularyKey(nameof(ChannelTypeCode), "Channel", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CompanyName = group.Add(new VocabularyKey(nameof(CompanyName), "Company Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Customer = group.Add(new VocabularyKey(nameof(Customer), "Customer", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EmailAddress = group.Add(new VocabularyKey(nameof(EmailAddress), "Email", VocabularyKeyDataType.Email, VocabularyKeyVisibility.Visible));
+                Fax = group.Add(new VocabularyKey(nameof(Fax), "Fax", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FirstName = group.Add(new VocabularyKey(nameof(FirstName), "First Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LastName = group.Add(new VocabularyKey(nameof(LastName), "Last Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Partner = group.Add(new VocabularyKey(nameof(Partner), "Outsource Vendor", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PromotionCodeName = group.Add(new VocabularyKey(nameof(PromotionCodeName), "Promotion Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ReceivedOn = group.Add(new VocabularyKey(nameof(ReceivedOn), "Received On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ResponseCode = group.Add(new VocabularyKey(nameof(ResponseCode), "Response Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Telephone = group.Add(new VocabularyKey(nameof(Telephone), "Phone", VocabularyKeyDataType.PhoneNumber, VocabularyKeyVisibility.Visible));
+                YomiCompanyName = group.Add(new VocabularyKey(nameof(YomiCompanyName), "Yomi Company Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                YomiFirstName = group.Add(new VocabularyKey(nameof(YomiFirstName), "Yomi First Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                YomiLastName = group.Add(new VocabularyKey(nameof(YomiLastName), "Yomi Last Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ServiceId = group.Add(new VocabularyKey(nameof(ServiceId), "Service", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="RegardingObjectId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="OriginatingActivityId"/> to Vocab 'Activity.cdm.json/Activity' with Property 'ActivityId'
@@ -72,7 +71,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OriginatingActivityId"/> to Vocab 'RecurringAppointment.cdm.json/RecurringAppointment' with Property 'ActivityId'
             ///Property <see cref="OriginatingActivityId"/> to Vocab 'PhoneCall.cdm.json/PhoneCall' with Property 'ActivityId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="ActivityId"/> from Vocab 'Lead.cdm.json/Lead' with Property 'RelatedObjectId'
             ///Property <see cref="ActivityId"/> from Vocab 'accelerators/automotive/Lead.cdm.json/Lead' with Property 'RelatedObjectId'

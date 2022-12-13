@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,20 +13,20 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("MarketingWebsite Details for Marketing", group =>
             {
-			    WebsiteId = group.Add(new VocabularyKey(nameof(WebsiteId), "Website", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    InsightsPlaceholder = group.Add(new VocabularyKey(nameof(InsightsPlaceholder), "Insights", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Javascriptcode = group.Add(new VocabularyKey(nameof(Javascriptcode), "JavaScript code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RemoteWebsiteID = group.Add(new VocabularyKey(nameof(RemoteWebsiteID), "Remote website ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ShouldBeRemoved = group.Add(new VocabularyKey(nameof(ShouldBeRemoved), "Should be removed", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    Timeout = group.Add(new VocabularyKey(nameof(Timeout), "Timeout", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    Url = group.Add(new VocabularyKey(nameof(Url), "URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
-			    Purpose = group.Add(new VocabularyKey(nameof(Purpose), "Purpose", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                WebsiteId = group.Add(new VocabularyKey(nameof(WebsiteId), "Website", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InsightsPlaceholder = group.Add(new VocabularyKey(nameof(InsightsPlaceholder), "Insights", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Javascriptcode = group.Add(new VocabularyKey(nameof(Javascriptcode), "JavaScript code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RemoteWebsiteID = group.Add(new VocabularyKey(nameof(RemoteWebsiteID), "Remote website ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ShouldBeRemoved = group.Add(new VocabularyKey(nameof(ShouldBeRemoved), "Should be removed", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                Timeout = group.Add(new VocabularyKey(nameof(Timeout), "Timeout", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                Url = group.Add(new VocabularyKey(nameof(Url), "URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible));
+                Purpose = group.Add(new VocabularyKey(nameof(Purpose), "Purpose", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
@@ -39,7 +38,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="WebsiteId"/> from Vocab 'FormPage.cdm.json/FormPage' with Property 'WebSite'
             ///Property <see cref="WebsiteId"/> from Vocab 'GeoPin.cdm.json/GeoPin' with Property 'WebsiteGeoPinsId'

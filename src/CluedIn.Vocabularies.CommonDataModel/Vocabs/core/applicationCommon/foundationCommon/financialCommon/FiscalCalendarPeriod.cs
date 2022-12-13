@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,21 +13,21 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("FiscalCalendarPeriod Details for FinancialCommon", group =>
             {
-			    FiscalCalendarPeriodId = group.Add(new VocabularyKey(nameof(FiscalCalendarPeriodId), "Fiscal Calendar Period ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    FiscalCalendarName = group.Add(new VocabularyKey(nameof(FiscalCalendarName), "Fiscal Calendar Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PeriodName = group.Add(new VocabularyKey(nameof(PeriodName), "Period Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PeriodOffset = group.Add(new VocabularyKey(nameof(PeriodOffset), "Period Offset", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    YearName = group.Add(new VocabularyKey(nameof(YearName), "Year Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    YearOffset = group.Add(new VocabularyKey(nameof(YearOffset), "Year Offset", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    Quarter = group.Add(new VocabularyKey(nameof(Quarter), "Quarter", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    QuarterOffset = group.Add(new VocabularyKey(nameof(QuarterOffset), "Quarter Offset", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    Month = group.Add(new VocabularyKey(nameof(Month), "Month", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                FiscalCalendarPeriodId = group.Add(new VocabularyKey(nameof(FiscalCalendarPeriodId), "Fiscal Calendar Period ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FiscalCalendarName = group.Add(new VocabularyKey(nameof(FiscalCalendarName), "Fiscal Calendar Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PeriodName = group.Add(new VocabularyKey(nameof(PeriodName), "Period Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PeriodOffset = group.Add(new VocabularyKey(nameof(PeriodOffset), "Period Offset", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                YearName = group.Add(new VocabularyKey(nameof(YearName), "Year Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                YearOffset = group.Add(new VocabularyKey(nameof(YearOffset), "Year Offset", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                Quarter = group.Add(new VocabularyKey(nameof(Quarter), "Quarter", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                QuarterOffset = group.Add(new VocabularyKey(nameof(QuarterOffset), "Quarter Offset", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                Month = group.Add(new VocabularyKey(nameof(Month), "Month", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
-            
+
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="FiscalCalendarPeriodId"/> from Vocab 'FinancialActivity.cdm.json/FinancialActivity' with Property 'FiscalCalendarPeriodKey'
             #endregion

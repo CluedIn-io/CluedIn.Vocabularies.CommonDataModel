@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,20 +13,20 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("Sponsorship Details for EventManagement", group =>
             {
-			    SponsorshipId = group.Add(new VocabularyKey(nameof(SponsorshipId), "Sponsorship", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EntityImageId = group.Add(new VocabularyKey(nameof(EntityImageId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SponsorshipAmount = group.Add(new VocabularyKey(nameof(SponsorshipAmount), "Sponsorship Amount", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    SponsorshipAmountBase = group.Add(new VocabularyKey(nameof(SponsorshipAmountBase), "Sponsorship Amount (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SponsorshipCategory = group.Add(new VocabularyKey(nameof(SponsorshipCategory), "Sponsorship Category", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SponsorshipType = group.Add(new VocabularyKey(nameof(SponsorshipType), "Sponsorship Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TransactionCurrencyId = group.Add(new VocabularyKey(nameof(TransactionCurrencyId), "Currency", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                SponsorshipId = group.Add(new VocabularyKey(nameof(SponsorshipId), "Sponsorship", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EntityImageId = group.Add(new VocabularyKey(nameof(EntityImageId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SponsorshipAmount = group.Add(new VocabularyKey(nameof(SponsorshipAmount), "Sponsorship Amount", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                SponsorshipAmountBase = group.Add(new VocabularyKey(nameof(SponsorshipAmountBase), "Sponsorship Amount (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SponsorshipCategory = group.Add(new VocabularyKey(nameof(SponsorshipCategory), "Sponsorship Category", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SponsorshipType = group.Add(new VocabularyKey(nameof(SponsorshipType), "Sponsorship Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TransactionCurrencyId = group.Add(new VocabularyKey(nameof(TransactionCurrencyId), "Currency", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="Sponsor"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="Event"/> to Vocab 'Event.cdm.json/Event' with Property 'EventId'
@@ -41,7 +40,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="SponsorshipId"/> from Vocab 'SponsorableArticle.cdm.json/SponsorableArticle' with Property 'EventSponsorship'
             #endregion

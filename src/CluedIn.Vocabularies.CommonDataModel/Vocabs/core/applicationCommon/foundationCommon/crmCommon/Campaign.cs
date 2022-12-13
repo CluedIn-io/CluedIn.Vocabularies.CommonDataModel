@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,59 +13,59 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("Campaign Details for CrmCommon", group =>
             {
-			    CampaignId = group.Add(new VocabularyKey(nameof(CampaignId), "Campaign", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EmailAddress = group.Add(new VocabularyKey(nameof(EmailAddress), "Email Address", VocabularyKeyDataType.Email, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ProcessId = group.Add(new VocabularyKey(nameof(ProcessId), "Process Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    StageId = group.Add(new VocabularyKey(nameof(StageId), "Stage Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ActualEnd = group.Add(new VocabularyKey(nameof(ActualEnd), "Actual End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ActualStart = group.Add(new VocabularyKey(nameof(ActualStart), "Actual Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    BudgetedCost = group.Add(new VocabularyKey(nameof(BudgetedCost), "Budget Allocated", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    BudgetedCostBase = group.Add(new VocabularyKey(nameof(BudgetedCostBase), "Budget Allocated (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CodeName = group.Add(new VocabularyKey(nameof(CodeName), "Campaign Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExpectedResponse = group.Add(new VocabularyKey(nameof(ExpectedResponse), "Expected Response Percentage", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    ExpectedRevenue = group.Add(new VocabularyKey(nameof(ExpectedRevenue), "Estimated Revenue", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    ExpectedRevenueBase = group.Add(new VocabularyKey(nameof(ExpectedRevenueBase), "Estimated Revenue (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IsTemplate = group.Add(new VocabularyKey(nameof(IsTemplate), "Template", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    Message = group.Add(new VocabularyKey(nameof(Message), "Message", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Objective = group.Add(new VocabularyKey(nameof(Objective), "Offer", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    OtherCost = group.Add(new VocabularyKey(nameof(OtherCost), "Miscellaneous Costs", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    OtherCostBase = group.Add(new VocabularyKey(nameof(OtherCostBase), "Miscellaneous Costs (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PromotionCodeName = group.Add(new VocabularyKey(nameof(PromotionCodeName), "Promotion Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ProposedEnd = group.Add(new VocabularyKey(nameof(ProposedEnd), "Proposed End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ProposedStart = group.Add(new VocabularyKey(nameof(ProposedStart), "Proposed Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TotalActualCost = group.Add(new VocabularyKey(nameof(TotalActualCost), "Total Cost of Campaign", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    TotalActualCostBase = group.Add(new VocabularyKey(nameof(TotalActualCostBase), "Total Cost of Campaign (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TotalCampaignActivityActualCost = group.Add(new VocabularyKey(nameof(TotalCampaignActivityActualCost), "Total Cost of Campaign Activities", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    TotalCampaignActivityActualCostBase = group.Add(new VocabularyKey(nameof(TotalCampaignActivityActualCostBase), "Total Cost of Campaign Activities (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TypeCode = group.Add(new VocabularyKey(nameof(TypeCode), "Campaign Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EntityImageId = group.Add(new VocabularyKey(nameof(EntityImageId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
+                CampaignId = group.Add(new VocabularyKey(nameof(CampaignId), "Campaign", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EmailAddress = group.Add(new VocabularyKey(nameof(EmailAddress), "Email Address", VocabularyKeyDataType.Email, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProcessId = group.Add(new VocabularyKey(nameof(ProcessId), "Process Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                StageId = group.Add(new VocabularyKey(nameof(StageId), "Stage Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ActualEnd = group.Add(new VocabularyKey(nameof(ActualEnd), "Actual End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ActualStart = group.Add(new VocabularyKey(nameof(ActualStart), "Actual Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BudgetedCost = group.Add(new VocabularyKey(nameof(BudgetedCost), "Budget Allocated", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                BudgetedCostBase = group.Add(new VocabularyKey(nameof(BudgetedCostBase), "Budget Allocated (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CodeName = group.Add(new VocabularyKey(nameof(CodeName), "Campaign Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExpectedResponse = group.Add(new VocabularyKey(nameof(ExpectedResponse), "Expected Response Percentage", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                ExpectedRevenue = group.Add(new VocabularyKey(nameof(ExpectedRevenue), "Estimated Revenue", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                ExpectedRevenueBase = group.Add(new VocabularyKey(nameof(ExpectedRevenueBase), "Estimated Revenue (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsTemplate = group.Add(new VocabularyKey(nameof(IsTemplate), "Template", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                Message = group.Add(new VocabularyKey(nameof(Message), "Message", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Objective = group.Add(new VocabularyKey(nameof(Objective), "Offer", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OtherCost = group.Add(new VocabularyKey(nameof(OtherCost), "Miscellaneous Costs", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                OtherCostBase = group.Add(new VocabularyKey(nameof(OtherCostBase), "Miscellaneous Costs (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PromotionCodeName = group.Add(new VocabularyKey(nameof(PromotionCodeName), "Promotion Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProposedEnd = group.Add(new VocabularyKey(nameof(ProposedEnd), "Proposed End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProposedStart = group.Add(new VocabularyKey(nameof(ProposedStart), "Proposed Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TotalActualCost = group.Add(new VocabularyKey(nameof(TotalActualCost), "Total Cost of Campaign", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                TotalActualCostBase = group.Add(new VocabularyKey(nameof(TotalActualCostBase), "Total Cost of Campaign (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TotalCampaignActivityActualCost = group.Add(new VocabularyKey(nameof(TotalCampaignActivityActualCost), "Total Cost of Campaign Activities", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                TotalCampaignActivityActualCostBase = group.Add(new VocabularyKey(nameof(TotalCampaignActivityActualCostBase), "Total Cost of Campaign Activities (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TypeCode = group.Add(new VocabularyKey(nameof(TypeCode), "Campaign Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EntityImageId = group.Add(new VocabularyKey(nameof(EntityImageId), VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
             });
             AddGroup("Campaign Details for NonProfitForSales", group =>
             {
-			    EntityImage = group.Add(new VocabularyKey(nameof(EntityImage), "Entity Image", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    AppealSegment = group.Add(new VocabularyKey(nameof(AppealSegment), "Appeal Segment", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    AquisitionSource = group.Add(new VocabularyKey(nameof(AquisitionSource), "Acquisition Source", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CampaignCategory = group.Add(new VocabularyKey(nameof(CampaignCategory), "Campaign Category", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CampaignType = group.Add(new VocabularyKey(nameof(CampaignType), "Campaign Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Channel = group.Add(new VocabularyKey(nameof(Channel), "Channel", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Effort = group.Add(new VocabularyKey(nameof(Effort), "Effort", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    FirstResponseDate = group.Add(new VocabularyKey(nameof(FirstResponseDate), "First Response Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    LastResponseDate = group.Add(new VocabularyKey(nameof(LastResponseDate), "Last Response Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SourceCode = group.Add(new VocabularyKey(nameof(SourceCode), "Source Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StartDate = group.Add(new VocabularyKey(nameof(StartDate), "Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SubChannel = group.Add(new VocabularyKey(nameof(SubChannel), "SubChannel", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                EntityImage = group.Add(new VocabularyKey(nameof(EntityImage), "Entity Image", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AppealSegment = group.Add(new VocabularyKey(nameof(AppealSegment), "Appeal Segment", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AquisitionSource = group.Add(new VocabularyKey(nameof(AquisitionSource), "Acquisition Source", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CampaignCategory = group.Add(new VocabularyKey(nameof(CampaignCategory), "Campaign Category", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CampaignType = group.Add(new VocabularyKey(nameof(CampaignType), "Campaign Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Channel = group.Add(new VocabularyKey(nameof(Channel), "Channel", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Effort = group.Add(new VocabularyKey(nameof(Effort), "Effort", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FirstResponseDate = group.Add(new VocabularyKey(nameof(FirstResponseDate), "First Response Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LastResponseDate = group.Add(new VocabularyKey(nameof(LastResponseDate), "Last Response Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SourceCode = group.Add(new VocabularyKey(nameof(SourceCode), "Source Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StartDate = group.Add(new VocabularyKey(nameof(StartDate), "Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SubChannel = group.Add(new VocabularyKey(nameof(SubChannel), "SubChannel", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
             AddGroup("Campaign Details for NonProfitIati", group =>
             {
 
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="RegardingObjectId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="RegardingObjectId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
@@ -153,7 +152,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="SLAId"/> to Vocab '/core/applicationCommon/SLA.cdm.json/SLA' with Property 'SLAId'
             ///Property <see cref="SLAInvokedId"/> to Vocab '/core/applicationCommon/SLA.cdm.json/SLA' with Property 'SLAId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="CampaignId"/> from Vocab 'CampaignActivity.cdm.json/CampaignActivity' with Property 'RegardingObjectId'
             ///Property <see cref="CampaignId"/> from Vocab 'CampaignItem.cdm.json/CampaignItem' with Property 'CampaignId'

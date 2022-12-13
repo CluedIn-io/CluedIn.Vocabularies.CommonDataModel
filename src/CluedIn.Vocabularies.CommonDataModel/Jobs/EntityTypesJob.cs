@@ -1,13 +1,13 @@
 ﻿using CluedIn.Core;
 using CluedIn.Core.Data.Relational;
+using CluedIn.DataStore.Document.Queries;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using System.Linq;
-using CluedIn.DataStore.Document.Queries;
 using System.Reflection;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace CluedIn.Vocabularies.CommonDataModel.Jobs
 {
@@ -47,7 +47,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Jobs
 
                     //entityTypes became empty after this line
                     logger.LogDebug($"[CommonDataModel] EntityTypes: {entityTypes.Count()}.");
-                    
+
                     var constValues = GetConstants(typeof(CommonDataModelEntityTypes));
 
                     List<Guid> newGuids = new List<Guid>();
@@ -113,7 +113,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Jobs
                 logger.LogError(ex, $"[CommonDataModel] EntityQueries.GetEntityTypes throw an error!");
             }
             result = result.DistinctBy(n => n.Type).ToList();
-            
+
             logger.LogDebug($"[CommonDataModel] EntityTypes Identified: {result.Count()}");
 
             return result;
@@ -127,7 +127,7 @@ namespace CluedIn.Vocabularies.CommonDataModel.Jobs
                     o => o.Name != null);
             return organizations;
         }
-        
+
         private List<string> GetConstants(Type type)
         {
             FieldInfo[] fieldInfos = type.GetFields(BindingFlags.Public |

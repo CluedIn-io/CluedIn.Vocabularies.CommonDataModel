@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,13 +13,13 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("ObservationBasedOn Details for ElectronicMedicalRecords", group =>
             {
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ObsBasedOnType = group.Add(new VocabularyKey(nameof(ObsBasedOnType), "Based On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ObservationBasedOnId = group.Add(new VocabularyKey(nameof(ObservationBasedOnId), "Observation Based On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ObsBasedOnType = group.Add(new VocabularyKey(nameof(ObsBasedOnType), "Based On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ObservationBasedOnId = group.Add(new VocabularyKey(nameof(ObservationBasedOnId), "Observation Based On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="ObsBasedOnTypeCarePlanId"/> to Vocab 'CarePlan.cdm.json/CarePlan' with Property 'CarePlanId'
             ///Property <see cref="ObsBasedOnTypeImmunizationRequestId"/> to Vocab 'CodeableConcept.cdm.json/CodeableConcept' with Property 'CodeableConceptId'
@@ -43,9 +42,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="ObsBasedOnTypeProcedureRequestId"/> to Vocab 'ProcedureRequest.cdm.json/ProcedureRequest' with Property 'ProcedureRequestId'
             ///Property <see cref="ObsBasedOnTypeReferralRequestId"/> to Vocab 'ReferralRequest.cdm.json/ReferralRequest' with Property 'ReferralRequestId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

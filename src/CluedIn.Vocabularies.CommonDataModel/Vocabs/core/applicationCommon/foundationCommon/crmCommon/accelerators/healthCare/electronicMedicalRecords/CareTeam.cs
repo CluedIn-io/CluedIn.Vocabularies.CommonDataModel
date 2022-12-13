@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,19 +13,19 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("CareTeam Details for ElectronicMedicalRecords", group =>
             {
-			    EntityImage = group.Add(new VocabularyKey(nameof(EntityImage), "Entity Image", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CareTeamId = group.Add(new VocabularyKey(nameof(CareTeamId), "Care Team", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CareTeamNumber = group.Add(new VocabularyKey(nameof(CareTeamNumber), "Care Team Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CareTeamStatus = group.Add(new VocabularyKey(nameof(CareTeamStatus), "Care Team Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ContextType = group.Add(new VocabularyKey(nameof(ContextType), "Context Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PeriodEnd = group.Add(new VocabularyKey(nameof(PeriodEnd), "Period End", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PeriodStart = group.Add(new VocabularyKey(nameof(PeriodStart), "Period Start", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SubjectType = group.Add(new VocabularyKey(nameof(SubjectType), "Subject Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                EntityImage = group.Add(new VocabularyKey(nameof(EntityImage), "Entity Image", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CareTeamId = group.Add(new VocabularyKey(nameof(CareTeamId), "Care Team", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CareTeamNumber = group.Add(new VocabularyKey(nameof(CareTeamNumber), "Care Team Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CareTeamStatus = group.Add(new VocabularyKey(nameof(CareTeamStatus), "Care Team Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ContextType = group.Add(new VocabularyKey(nameof(ContextType), "Context Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PeriodEnd = group.Add(new VocabularyKey(nameof(PeriodEnd), "Period End", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PeriodStart = group.Add(new VocabularyKey(nameof(PeriodStart), "Period Start", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SubjectType = group.Add(new VocabularyKey(nameof(SubjectType), "Subject Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="OrganizationId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="MemberOrganizationId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
@@ -161,7 +160,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="CareTeamId"/> from Vocab 'CarePlanActivityPerformer.cdm.json/CarePlanActivityPerformer' with Property 'PerformerTypeCareTeamId'
             ///Property <see cref="CareTeamId"/> from Vocab 'CarePlanAuthor.cdm.json/CarePlanAuthor' with Property 'PlanAuthorCareTeamIdentifierId'

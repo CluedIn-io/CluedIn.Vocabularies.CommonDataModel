@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,32 +13,32 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("SLA Details for ApplicationCommon", group =>
             {
-			    SLAId = group.Add(new VocabularyKey(nameof(SLAId), "SLA", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    BusinessHoursId = group.Add(new VocabularyKey(nameof(BusinessHoursId), "Business Hours", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ObjectTypeCode = group.Add(new VocabularyKey(nameof(ObjectTypeCode), "Object Type Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ChangedAttributeList = group.Add(new VocabularyKey(nameof(ChangedAttributeList), "ChangedAttributeList", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ApplicableFrom = group.Add(new VocabularyKey(nameof(ApplicableFrom), "Applicable From", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IsDefault = group.Add(new VocabularyKey(nameof(IsDefault), "Is Default", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), "Version Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SolutionId = group.Add(new VocabularyKey(nameof(SolutionId), "Solution", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    ComponentState = group.Add(new VocabularyKey(nameof(ComponentState), "Component State", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    OverwriteTime = group.Add(new VocabularyKey(nameof(OverwriteTime), "Record Overwrite Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IsManaged = group.Add(new VocabularyKey(nameof(IsManaged), "Is Managed", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    SLAIdUnique = group.Add(new VocabularyKey(nameof(SLAIdUnique), "Unique Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    ApplicableFromPickList = group.Add(new VocabularyKey(nameof(ApplicableFromPickList), "Applicable From", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    WorkflowId = group.Add(new VocabularyKey(nameof(WorkflowId), "Workflow ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    AllowPauseResume = group.Add(new VocabularyKey(nameof(AllowPauseResume), "Allow Pause and Resume", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    SLAType = group.Add(new VocabularyKey(nameof(SLAType), "SLA Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PrimaryEntityOTC = group.Add(new VocabularyKey(nameof(PrimaryEntityOTC), "Primary Entity", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+                SLAId = group.Add(new VocabularyKey(nameof(SLAId), "SLA", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BusinessHoursId = group.Add(new VocabularyKey(nameof(BusinessHoursId), "Business Hours", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ObjectTypeCode = group.Add(new VocabularyKey(nameof(ObjectTypeCode), "Object Type Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ChangedAttributeList = group.Add(new VocabularyKey(nameof(ChangedAttributeList), "ChangedAttributeList", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ApplicableFrom = group.Add(new VocabularyKey(nameof(ApplicableFrom), "Applicable From", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsDefault = group.Add(new VocabularyKey(nameof(IsDefault), "Is Default", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), "Version Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SolutionId = group.Add(new VocabularyKey(nameof(SolutionId), "Solution", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                ComponentState = group.Add(new VocabularyKey(nameof(ComponentState), "Component State", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OverwriteTime = group.Add(new VocabularyKey(nameof(OverwriteTime), "Record Overwrite Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsManaged = group.Add(new VocabularyKey(nameof(IsManaged), "Is Managed", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                SLAIdUnique = group.Add(new VocabularyKey(nameof(SLAIdUnique), "Unique Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                ApplicableFromPickList = group.Add(new VocabularyKey(nameof(ApplicableFromPickList), "Applicable From", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WorkflowId = group.Add(new VocabularyKey(nameof(WorkflowId), "Workflow ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AllowPauseResume = group.Add(new VocabularyKey(nameof(AllowPauseResume), "Allow Pause and Resume", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                SLAType = group.Add(new VocabularyKey(nameof(SLAType), "SLA Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PrimaryEntityOTC = group.Add(new VocabularyKey(nameof(PrimaryEntityOTC), "Primary Entity", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="Regarding"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="Regarding"/> to Vocab 'Activity.cdm.json/Activity' with Property 'ActivityId'
@@ -83,7 +82,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="Regarding"/> to Vocab 'Task.cdm.json/Task' with Property 'ActivityId'
             ///Property <see cref="OwnerId"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="SLAId"/> from Vocab 'Account.cdm.json/Account' with Property 'SLAId'
             ///Property <see cref="SLAId"/> from Vocab 'Account.cdm.json/Account' with Property 'SLAInvokedId'

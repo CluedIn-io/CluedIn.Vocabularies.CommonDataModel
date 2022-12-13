@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,13 +13,13 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("OpportunityRelationship Details for Sales", group =>
             {
-			    CustomerOpportunityRoleId = group.Add(new VocabularyKey(nameof(CustomerOpportunityRoleId), "Opportunity Relationship", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    OpportunityRoleId = group.Add(new VocabularyKey(nameof(OpportunityRoleId), "Customer Role", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    OpportunityStateCode = group.Add(new VocabularyKey(nameof(OpportunityStateCode), "Opportunity Status", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    OpportunityStatusCode = group.Add(new VocabularyKey(nameof(OpportunityStatusCode), "Opportunity Status Reason", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+                CustomerOpportunityRoleId = group.Add(new VocabularyKey(nameof(CustomerOpportunityRoleId), "Opportunity Relationship", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OpportunityRoleId = group.Add(new VocabularyKey(nameof(OpportunityRoleId), "Customer Role", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OpportunityStateCode = group.Add(new VocabularyKey(nameof(OpportunityStateCode), "Opportunity Status", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                OpportunityStatusCode = group.Add(new VocabularyKey(nameof(OpportunityStatusCode), "Opportunity Status Reason", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="OpportunityId"/> to Vocab 'Opportunity.cdm.json/Opportunity' with Property 'OpportunityId'
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
@@ -35,9 +34,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="CustomerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/Contact.cdm.json/Contact' with Property 'ContactId'
             ///Property <see cref="CustomerId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/Account.cdm.json/Account' with Property 'AccountId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

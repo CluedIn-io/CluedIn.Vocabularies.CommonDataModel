@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,14 +13,14 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("ClinicalImpressionFinding Details for ElectronicMedicalRecords", group =>
             {
-			    Basis = group.Add(new VocabularyKey(nameof(Basis), "Basis", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ClinicalImpressionFindingId = group.Add(new VocabularyKey(nameof(ClinicalImpressionFindingId), "Clinical Impression Finding", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ItemType = group.Add(new VocabularyKey(nameof(ItemType), "Item Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                Basis = group.Add(new VocabularyKey(nameof(Basis), "Basis", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ClinicalImpressionFindingId = group.Add(new VocabularyKey(nameof(ClinicalImpressionFindingId), "Clinical Impression Finding", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ItemType = group.Add(new VocabularyKey(nameof(ItemType), "Item Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="ClinicalImpressionIdentifierId"/> to Vocab 'ClinicalImpression.cdm.json/ClinicalImpression' with Property 'ClinicalImpressionId'
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
@@ -39,9 +38,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="ItemConditionId"/> to Vocab 'Condition.cdm.json/Condition' with Property 'ConditionId'
             ///Property <see cref="ItemObservationId"/> to Vocab 'Observation.cdm.json/Observation' with Property 'ObservationId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

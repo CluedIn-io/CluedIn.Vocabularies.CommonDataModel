@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,28 +13,28 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("Entitlement Details for Service", group =>
             {
-			    EntitlementId = group.Add(new VocabularyKey(nameof(EntitlementId), "Entitlement", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EmailAddress = group.Add(new VocabularyKey(nameof(EmailAddress), "Email Address", VocabularyKeyDataType.Email, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Entitlement Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ProcessId = group.Add(new VocabularyKey(nameof(ProcessId), "Process Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    StageId = group.Add(new VocabularyKey(nameof(StageId), "Stage Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    AllocationTypeCode = group.Add(new VocabularyKey(nameof(AllocationTypeCode), "Allocation Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DecreaseRemainingOn = group.Add(new VocabularyKey(nameof(DecreaseRemainingOn), "Decrease Remaining On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EndDate = group.Add(new VocabularyKey(nameof(EndDate), "End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EntitlementTemplateId = group.Add(new VocabularyKey(nameof(EntitlementTemplateId), "Entitlement Template", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    KbAccessLevel = group.Add(new VocabularyKey(nameof(KbAccessLevel), "KB Access Level", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RemainingTerms = group.Add(new VocabularyKey(nameof(RemainingTerms), "Remaining Terms", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    RestrictCaseCreation = group.Add(new VocabularyKey(nameof(RestrictCaseCreation), "Restrict based on entitlement terms", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    StartDate = group.Add(new VocabularyKey(nameof(StartDate), "Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TotalTerms = group.Add(new VocabularyKey(nameof(TotalTerms), "Total Terms", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    IsDefault = group.Add(new VocabularyKey(nameof(IsDefault), "Is Default", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
+                EntitlementId = group.Add(new VocabularyKey(nameof(EntitlementId), "Entitlement", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EmailAddress = group.Add(new VocabularyKey(nameof(EmailAddress), "Email Address", VocabularyKeyDataType.Email, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Entitlement Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProcessId = group.Add(new VocabularyKey(nameof(ProcessId), "Process Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                StageId = group.Add(new VocabularyKey(nameof(StageId), "Stage Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AllocationTypeCode = group.Add(new VocabularyKey(nameof(AllocationTypeCode), "Allocation Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DecreaseRemainingOn = group.Add(new VocabularyKey(nameof(DecreaseRemainingOn), "Decrease Remaining On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EndDate = group.Add(new VocabularyKey(nameof(EndDate), "End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EntitlementTemplateId = group.Add(new VocabularyKey(nameof(EntitlementTemplateId), "Entitlement Template", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                KbAccessLevel = group.Add(new VocabularyKey(nameof(KbAccessLevel), "KB Access Level", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RemainingTerms = group.Add(new VocabularyKey(nameof(RemainingTerms), "Remaining Terms", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                RestrictCaseCreation = group.Add(new VocabularyKey(nameof(RestrictCaseCreation), "Restrict based on entitlement terms", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                StartDate = group.Add(new VocabularyKey(nameof(StartDate), "Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TotalTerms = group.Add(new VocabularyKey(nameof(TotalTerms), "Total Terms", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                IsDefault = group.Add(new VocabularyKey(nameof(IsDefault), "Is Default", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="CreatedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="ModifiedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
@@ -57,7 +56,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="ContactId"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/Contact.cdm.json/Contact' with Property 'ContactId'
             ///Property <see cref="ProductId"/> to Vocab '/core/applicationCommon/foundationCommon/Product.cdm.json/Product' with Property 'ProductId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="EntitlementId"/> from Vocab 'Case.cdm.json/Case' with Property 'EntitlementId'
             ///Property <see cref="EntitlementId"/> from Vocab 'CaseResolution.cdm.json/CaseResolution' with Property 'RegardingObjectId'

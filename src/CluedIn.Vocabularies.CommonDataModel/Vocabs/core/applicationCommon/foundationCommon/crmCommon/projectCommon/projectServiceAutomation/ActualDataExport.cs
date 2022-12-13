@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,18 +13,18 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("ActualDataExport Details for ProjectServiceAutomation", group =>
             {
-			    DataExportId = group.Add(new VocabularyKey(nameof(DataExportId), "Actual Data Export", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DataToken = group.Add(new VocabularyKey(nameof(DataToken), "Data Token", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EntityName = group.Add(new VocabularyKey(nameof(EntityName), "Entity Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExportedRecordCount = group.Add(new VocabularyKey(nameof(ExportedRecordCount), "Exported Record Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    ExportStatus = group.Add(new VocabularyKey(nameof(ExportStatus), "Export Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    LinkedEntityData = group.Add(new VocabularyKey(nameof(LinkedEntityData), "Linked Entity Data", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PagingData = group.Add(new VocabularyKey(nameof(PagingData), "Paging Data", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                DataExportId = group.Add(new VocabularyKey(nameof(DataExportId), "Actual Data Export", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DataToken = group.Add(new VocabularyKey(nameof(DataToken), "Data Token", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EntityName = group.Add(new VocabularyKey(nameof(EntityName), "Entity Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExportedRecordCount = group.Add(new VocabularyKey(nameof(ExportedRecordCount), "Exported Record Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                ExportStatus = group.Add(new VocabularyKey(nameof(ExportStatus), "Export Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LinkedEntityData = group.Add(new VocabularyKey(nameof(LinkedEntityData), "Linked Entity Data", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PagingData = group.Add(new VocabularyKey(nameof(PagingData), "Paging Data", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
@@ -37,9 +36,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

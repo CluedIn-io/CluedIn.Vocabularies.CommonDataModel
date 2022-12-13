@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,34 +13,34 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("FamilyMemberHistory Details for ElectronicMedicalRecords", group =>
             {
-			    Age = group.Add(new VocabularyKey(nameof(Age), "Age", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    AgeRangeHigh = group.Add(new VocabularyKey(nameof(AgeRangeHigh), "Age Range High", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    AgeRangeLow = group.Add(new VocabularyKey(nameof(AgeRangeLow), "Age Range Low", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    AgeString = group.Add(new VocabularyKey(nameof(AgeString), "Age", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    AgeType = group.Add(new VocabularyKey(nameof(AgeType), "Age Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    BornDate = group.Add(new VocabularyKey(nameof(BornDate), "Date of Birth", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    BornDateString = group.Add(new VocabularyKey(nameof(BornDateString), "Born String", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    BornPeriodEndDate = group.Add(new VocabularyKey(nameof(BornPeriodEndDate), "Date of Birth Period End", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    BornPeriodStartDate = group.Add(new VocabularyKey(nameof(BornPeriodStartDate), "Date of Birth Period Start", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    BornType = group.Add(new VocabularyKey(nameof(BornType), "Born Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Date = group.Add(new VocabularyKey(nameof(Date), "Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DeceasedAge = group.Add(new VocabularyKey(nameof(DeceasedAge), "Deceased Age", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    DeceasedAgeHigh = group.Add(new VocabularyKey(nameof(DeceasedAgeHigh), "Deceased Age High", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    DeceasedAgeLow = group.Add(new VocabularyKey(nameof(DeceasedAgeLow), "Deceased Age Low", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    DeceasedBoolean = group.Add(new VocabularyKey(nameof(DeceasedBoolean), "Deceased", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    DeceasedDate = group.Add(new VocabularyKey(nameof(DeceasedDate), "Deceased Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DeceasedDateString = group.Add(new VocabularyKey(nameof(DeceasedDateString), "Deceased Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DeceasedType = group.Add(new VocabularyKey(nameof(DeceasedType), "Deceased Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    FamilyMemberHistoryId = group.Add(new VocabularyKey(nameof(FamilyMemberHistoryId), "Family Member History", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    FamilyMemberHistoryNumber = group.Add(new VocabularyKey(nameof(FamilyMemberHistoryNumber), "Family Member History Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Gender = group.Add(new VocabularyKey(nameof(Gender), "Gender", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    NotDone = group.Add(new VocabularyKey(nameof(NotDone), "Not Done", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    Status = group.Add(new VocabularyKey(nameof(Status), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                Age = group.Add(new VocabularyKey(nameof(Age), "Age", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                AgeRangeHigh = group.Add(new VocabularyKey(nameof(AgeRangeHigh), "Age Range High", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                AgeRangeLow = group.Add(new VocabularyKey(nameof(AgeRangeLow), "Age Range Low", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                AgeString = group.Add(new VocabularyKey(nameof(AgeString), "Age", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AgeType = group.Add(new VocabularyKey(nameof(AgeType), "Age Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BornDate = group.Add(new VocabularyKey(nameof(BornDate), "Date of Birth", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BornDateString = group.Add(new VocabularyKey(nameof(BornDateString), "Born String", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BornPeriodEndDate = group.Add(new VocabularyKey(nameof(BornPeriodEndDate), "Date of Birth Period End", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BornPeriodStartDate = group.Add(new VocabularyKey(nameof(BornPeriodStartDate), "Date of Birth Period Start", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BornType = group.Add(new VocabularyKey(nameof(BornType), "Born Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Date = group.Add(new VocabularyKey(nameof(Date), "Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DeceasedAge = group.Add(new VocabularyKey(nameof(DeceasedAge), "Deceased Age", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                DeceasedAgeHigh = group.Add(new VocabularyKey(nameof(DeceasedAgeHigh), "Deceased Age High", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                DeceasedAgeLow = group.Add(new VocabularyKey(nameof(DeceasedAgeLow), "Deceased Age Low", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                DeceasedBoolean = group.Add(new VocabularyKey(nameof(DeceasedBoolean), "Deceased", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                DeceasedDate = group.Add(new VocabularyKey(nameof(DeceasedDate), "Deceased Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DeceasedDateString = group.Add(new VocabularyKey(nameof(DeceasedDateString), "Deceased Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DeceasedType = group.Add(new VocabularyKey(nameof(DeceasedType), "Deceased Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FamilyMemberHistoryId = group.Add(new VocabularyKey(nameof(FamilyMemberHistoryId), "Family Member History", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FamilyMemberHistoryNumber = group.Add(new VocabularyKey(nameof(FamilyMemberHistoryNumber), "Family Member History Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Gender = group.Add(new VocabularyKey(nameof(Gender), "Gender", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                NotDone = group.Add(new VocabularyKey(nameof(NotDone), "Not Done", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                Status = group.Add(new VocabularyKey(nameof(Status), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="PatientId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
             ///Property <see cref="ReasonReferenceAllergyIntoleranceId"/> to Vocab 'AllergyIntolerance.cdm.json/AllergyIntolerance' with Property 'AllergyIntoleranceId'
@@ -120,7 +119,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             ///Property <see cref="ReasonReferenceObservationId"/> to Vocab 'Observation.cdm.json/Observation' with Property 'ObservationId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="FamilyMemberHistoryId"/> from Vocab 'ClinicalImpressionInvestigation.cdm.json/ClinicalImpressionInvestigation' with Property 'ItemFamilyMemberHistoryId'
             ///Property <see cref="FamilyMemberHistoryId"/> from Vocab 'ClinicalImpressionInvestigationItem.cdm.json/ClinicalImpressionInvestigationItem' with Property 'ItemtypeFamilyMemberHistoryId'

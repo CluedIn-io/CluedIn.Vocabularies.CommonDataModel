@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,16 +13,16 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("TeamMembership Details for ApplicationCommon", group =>
             {
-			    TeamMembershipId = group.Add(new VocabularyKey(nameof(TeamMembershipId), "Team Membership Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                TeamMembershipId = group.Add(new VocabularyKey(nameof(TeamMembershipId), "Team Membership Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="TeamId"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
             ///Property <see cref="SystemUserId"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

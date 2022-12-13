@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,14 +13,14 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("KnowledgeArticleIncident Details for Service", group =>
             {
-			    KnowledgeArticleIncidentId = group.Add(new VocabularyKey(nameof(KnowledgeArticleIncidentId), "KnowledgeArticle Incident", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    KnowledgeUsage = group.Add(new VocabularyKey(nameof(KnowledgeUsage), "Knowledge Usage ", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IsSentToCustomer = group.Add(new VocabularyKey(nameof(IsSentToCustomer), "Sent To Customer", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
+                KnowledgeArticleIncidentId = group.Add(new VocabularyKey(nameof(KnowledgeArticleIncidentId), "KnowledgeArticle Incident", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                KnowledgeUsage = group.Add(new VocabularyKey(nameof(KnowledgeUsage), "Knowledge Usage ", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsSentToCustomer = group.Add(new VocabularyKey(nameof(IsSentToCustomer), "Sent To Customer", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="IncidentId"/> to Vocab 'Case.cdm.json/Case' with Property 'IncidentId'
             ///Property <see cref="CreatedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
@@ -36,9 +35,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="KnowledgearticleId"/> to Vocab '/core/applicationCommon/foundationCommon/KnowledgeArticle.cdm.json/KnowledgeArticle' with Property 'KnowledgearticleId'
             ///Property <see cref="TransactionCurrencyId"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

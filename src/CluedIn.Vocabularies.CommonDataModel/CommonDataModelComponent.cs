@@ -25,7 +25,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
                 Container.Install(new CommonDataModelInstaller());
                 State = ServiceState.Started;
 
-                var entityTypeJob = Container.Resolve<ICdmJob>(); 
+                var entityTypeJob = Container.Resolve<ICdmJob>();
                 var cancellationTokenSource = new CancellationTokenSource();
                 Task.Run(async () =>
                 {

@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,17 +13,17 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("FormPage Details for Marketing", group =>
             {
-			    FormpageId = group.Add(new VocabularyKey(nameof(FormpageId), "Form page", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ConfirmationMessage = group.Add(new VocabularyKey(nameof(ConfirmationMessage), "Confirmation message", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ErrorMessage = group.Add(new VocabularyKey(nameof(ErrorMessage), "Error message", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    LimitExceededMessage = group.Add(new VocabularyKey(nameof(LimitExceededMessage), "Limit exceeded message", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RedirectURL = group.Add(new VocabularyKey(nameof(RedirectURL), "Redirect URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
-			    Javascriptcode = group.Add(new VocabularyKey(nameof(Javascriptcode), "Javascript code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                FormpageId = group.Add(new VocabularyKey(nameof(FormpageId), "Form page", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ConfirmationMessage = group.Add(new VocabularyKey(nameof(ConfirmationMessage), "Confirmation message", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ErrorMessage = group.Add(new VocabularyKey(nameof(ErrorMessage), "Error message", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LimitExceededMessage = group.Add(new VocabularyKey(nameof(LimitExceededMessage), "Limit exceeded message", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RedirectURL = group.Add(new VocabularyKey(nameof(RedirectURL), "Redirect URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible));
+                Javascriptcode = group.Add(new VocabularyKey(nameof(Javascriptcode), "Javascript code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
@@ -39,9 +38,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="MarketingPage"/> to Vocab 'MarketingPage.cdm.json/MarketingPage' with Property 'MarketingPageId'
             ///Property <see cref="WebSite"/> to Vocab 'MarketingWebsite.cdm.json/MarketingWebsite' with Property 'WebsiteId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

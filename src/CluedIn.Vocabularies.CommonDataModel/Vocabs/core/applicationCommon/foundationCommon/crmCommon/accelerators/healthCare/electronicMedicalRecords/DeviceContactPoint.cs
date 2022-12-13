@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,18 +13,18 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("DeviceContactPoint Details for ElectronicMedicalRecords", group =>
             {
-			    ContactPointPeriodEndDate = group.Add(new VocabularyKey(nameof(ContactPointPeriodEndDate), "Period End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ContactPointPeriodStartDate = group.Add(new VocabularyKey(nameof(ContactPointPeriodStartDate), "Period Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ContactPointRank = group.Add(new VocabularyKey(nameof(ContactPointRank), "Rank", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    ContactPointSystem = group.Add(new VocabularyKey(nameof(ContactPointSystem), "System", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ContactPointUse = group.Add(new VocabularyKey(nameof(ContactPointUse), "Use", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ContactPointValue = group.Add(new VocabularyKey(nameof(ContactPointValue), "Value", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DeviceContactPointId = group.Add(new VocabularyKey(nameof(DeviceContactPointId), "Device Contact Point", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                ContactPointPeriodEndDate = group.Add(new VocabularyKey(nameof(ContactPointPeriodEndDate), "Period End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ContactPointPeriodStartDate = group.Add(new VocabularyKey(nameof(ContactPointPeriodStartDate), "Period Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ContactPointRank = group.Add(new VocabularyKey(nameof(ContactPointRank), "Rank", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                ContactPointSystem = group.Add(new VocabularyKey(nameof(ContactPointSystem), "System", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ContactPointUse = group.Add(new VocabularyKey(nameof(ContactPointUse), "Use", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ContactPointValue = group.Add(new VocabularyKey(nameof(ContactPointValue), "Value", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DeviceContactPointId = group.Add(new VocabularyKey(nameof(DeviceContactPointId), "Device Contact Point", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="DeviceIdentifierId"/> to Vocab 'Device.cdm.json/Device' with Property 'DeviceId'
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
@@ -41,9 +40,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

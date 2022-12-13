@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,24 +13,24 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("Note Details for ApplicationCommon", group =>
             {
-			    AnnotationId = group.Add(new VocabularyKey(nameof(AnnotationId), "Note", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ObjectTypeCode = group.Add(new VocabularyKey(nameof(ObjectTypeCode), "Object Type ", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Subject = group.Add(new VocabularyKey(nameof(Subject), "Title", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IsDocument = group.Add(new VocabularyKey(nameof(IsDocument), "Is Document", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    NoteText = group.Add(new VocabularyKey(nameof(NoteText), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    MimeType = group.Add(new VocabularyKey(nameof(MimeType), "Mime Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    LangId = group.Add(new VocabularyKey(nameof(LangId), "Language ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DocumentBody = group.Add(new VocabularyKey(nameof(DocumentBody), "Document", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    FileSize = group.Add(new VocabularyKey(nameof(FileSize), "File Size (Bytes)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    FileName = group.Add(new VocabularyKey(nameof(FileName), "File Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), "Version Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StepId = group.Add(new VocabularyKey(nameof(StepId), "Step Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+                AnnotationId = group.Add(new VocabularyKey(nameof(AnnotationId), "Note", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ObjectTypeCode = group.Add(new VocabularyKey(nameof(ObjectTypeCode), "Object Type ", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Subject = group.Add(new VocabularyKey(nameof(Subject), "Title", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsDocument = group.Add(new VocabularyKey(nameof(IsDocument), "Is Document", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                NoteText = group.Add(new VocabularyKey(nameof(NoteText), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MimeType = group.Add(new VocabularyKey(nameof(MimeType), "Mime Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LangId = group.Add(new VocabularyKey(nameof(LangId), "Language ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DocumentBody = group.Add(new VocabularyKey(nameof(DocumentBody), "Document", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FileSize = group.Add(new VocabularyKey(nameof(FileSize), "File Size (Bytes)", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                FileName = group.Add(new VocabularyKey(nameof(FileName), "File Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), "Version Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StepId = group.Add(new VocabularyKey(nameof(StepId), "Step Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="ObjectId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="ObjectId"/> to Vocab 'Appointment.cdm.json/Appointment' with Property 'ActivityId'
@@ -58,9 +57,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwningTeam"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

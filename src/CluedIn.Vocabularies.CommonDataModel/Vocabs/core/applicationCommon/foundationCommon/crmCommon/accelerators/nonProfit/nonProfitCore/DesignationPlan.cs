@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,22 +13,22 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("DesignationPlan Details for NonProfitCore", group =>
             {
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    AmountOfPledgeMax = group.Add(new VocabularyKey(nameof(AmountOfPledgeMax), "Amount Of Pledge Max", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    AmountOfPledgeMaxBase = group.Add(new VocabularyKey(nameof(AmountOfPledgeMaxBase), "Amount Of Pledge Max (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    DesignationPlanId = group.Add(new VocabularyKey(nameof(DesignationPlanId), "Designation Plan", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    NumberOfPaymentsMax = group.Add(new VocabularyKey(nameof(NumberOfPaymentsMax), "Number Of Payments Max", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    PercentageOfPaymentsMax = group.Add(new VocabularyKey(nameof(PercentageOfPaymentsMax), "Percentage Of Payments Max", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    PercentageOfPledgeMax = group.Add(new VocabularyKey(nameof(PercentageOfPledgeMax), "Percentage Of Pledge Max", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    PerPaymentMaxAmount = group.Add(new VocabularyKey(nameof(PerPaymentMaxAmount), "Per Payment Max Amount", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    PerPaymentMaxAmountBase = group.Add(new VocabularyKey(nameof(PerPaymentMaxAmountBase), "Per Payment Max Amount (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    PerPaymentMaxPercent = group.Add(new VocabularyKey(nameof(PerPaymentMaxPercent), "Per Payment Max Percent", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    PriorityOrder = group.Add(new VocabularyKey(nameof(PriorityOrder), "Priority Order", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    ValidFromDate = group.Add(new VocabularyKey(nameof(ValidFromDate), "Valid From Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ValidToDate = group.Add(new VocabularyKey(nameof(ValidToDate), "Valid To Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                AmountOfPledgeMax = group.Add(new VocabularyKey(nameof(AmountOfPledgeMax), "Amount Of Pledge Max", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                AmountOfPledgeMaxBase = group.Add(new VocabularyKey(nameof(AmountOfPledgeMaxBase), "Amount Of Pledge Max (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                DesignationPlanId = group.Add(new VocabularyKey(nameof(DesignationPlanId), "Designation Plan", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                NumberOfPaymentsMax = group.Add(new VocabularyKey(nameof(NumberOfPaymentsMax), "Number Of Payments Max", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                PercentageOfPaymentsMax = group.Add(new VocabularyKey(nameof(PercentageOfPaymentsMax), "Percentage Of Payments Max", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                PercentageOfPledgeMax = group.Add(new VocabularyKey(nameof(PercentageOfPledgeMax), "Percentage Of Pledge Max", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                PerPaymentMaxAmount = group.Add(new VocabularyKey(nameof(PerPaymentMaxAmount), "Per Payment Max Amount", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                PerPaymentMaxAmountBase = group.Add(new VocabularyKey(nameof(PerPaymentMaxAmountBase), "Per Payment Max Amount (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                PerPaymentMaxPercent = group.Add(new VocabularyKey(nameof(PerPaymentMaxPercent), "Per Payment Max Percent", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                PriorityOrder = group.Add(new VocabularyKey(nameof(PriorityOrder), "Priority Order", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                ValidFromDate = group.Add(new VocabularyKey(nameof(ValidFromDate), "Valid From Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ValidToDate = group.Add(new VocabularyKey(nameof(ValidToDate), "Valid To Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
             AddGroup("DesignationPlan Details for NonProfitForSales", group =>
             {
@@ -39,7 +38,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             {
 
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="DesignationPlanDesignationId"/> to Vocab 'Designation.cdm.json/Designation' with Property 'DesignationId'
             ///Property <see cref="DesignationPlanDesignationId"/> to Vocab 'Designation.cdm.json/Designation' with Property 'DesignationId'
@@ -60,9 +59,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="TransactionCurrencyId"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
             ///Property <see cref="DesignationPlanPaymentScheduleId"/> to Vocab 'PaymentSchedule.cdm.json/PaymentSchedule' with Property 'PaymentScheduleId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

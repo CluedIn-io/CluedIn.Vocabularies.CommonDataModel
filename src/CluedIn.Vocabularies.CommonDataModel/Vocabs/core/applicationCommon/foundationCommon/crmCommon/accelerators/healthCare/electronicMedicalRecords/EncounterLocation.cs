@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,15 +13,15 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("EncounterLocation Details for ElectronicMedicalRecords", group =>
             {
-			    EncounterLocationEndDate = group.Add(new VocabularyKey(nameof(EncounterLocationEndDate), "End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EncounterLocationId = group.Add(new VocabularyKey(nameof(EncounterLocationId), "Encounter Location", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EncounterLocationStartDate = group.Add(new VocabularyKey(nameof(EncounterLocationStartDate), "Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EncounterLocationStatus = group.Add(new VocabularyKey(nameof(EncounterLocationStatus), "Location Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                EncounterLocationEndDate = group.Add(new VocabularyKey(nameof(EncounterLocationEndDate), "End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EncounterLocationId = group.Add(new VocabularyKey(nameof(EncounterLocationId), "Encounter Location", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EncounterLocationStartDate = group.Add(new VocabularyKey(nameof(EncounterLocationStartDate), "Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EncounterLocationStatus = group.Add(new VocabularyKey(nameof(EncounterLocationStatus), "Location Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="EncounterId"/> to Vocab 'Encounter.cdm.json/Encounter' with Property 'EncounterId'
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
@@ -39,9 +38,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             ///Property <see cref="EncounterLocationIdentifierId"/> to Vocab 'Location.cdm.json/Location' with Property 'LocationId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,16 +13,16 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("RequirementRelationship Details for Scheduling", group =>
             {
-			    RequirementrelationshipId = group.Add(new VocabularyKey(nameof(RequirementrelationshipId), "Requirement Relationship", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    MinConditionCount = group.Add(new VocabularyKey(nameof(MinConditionCount), "Min Condition Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    Operator = group.Add(new VocabularyKey(nameof(Operator), "Operator", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ResourceGroupings = group.Add(new VocabularyKey(nameof(ResourceGroupings), "Part of Same", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RequirementGroupControlViewId = group.Add(new VocabularyKey(nameof(RequirementGroupControlViewId), "Requirement Group Control View Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                RequirementrelationshipId = group.Add(new VocabularyKey(nameof(RequirementrelationshipId), "Requirement Relationship", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MinConditionCount = group.Add(new VocabularyKey(nameof(MinConditionCount), "Min Condition Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                Operator = group.Add(new VocabularyKey(nameof(Operator), "Operator", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ResourceGroupings = group.Add(new VocabularyKey(nameof(ResourceGroupings), "Part of Same", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RequirementGroupControlViewId = group.Add(new VocabularyKey(nameof(RequirementGroupControlViewId), "Requirement Group Control View Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="RequirementGroup"/> to Vocab 'RequirementGroup.cdm.json/RequirementGroup' with Property 'RequirementgroupId'
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
@@ -37,7 +36,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             ///Property <see cref="ParentRequirementRelationship"/> to Vocab 'RequirementRelationship.cdm.json/RequirementRelationship' with Property 'RequirementrelationshipId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="RequirementrelationshipId"/> from Vocab 'RequirementRelationship.cdm.json/RequirementRelationship' with Property 'ParentRequirementRelationship'
             ///Property <see cref="RequirementrelationshipId"/> from Vocab 'ResourceRequirement.cdm.json/ResourceRequirement' with Property 'RequirementRelationship'

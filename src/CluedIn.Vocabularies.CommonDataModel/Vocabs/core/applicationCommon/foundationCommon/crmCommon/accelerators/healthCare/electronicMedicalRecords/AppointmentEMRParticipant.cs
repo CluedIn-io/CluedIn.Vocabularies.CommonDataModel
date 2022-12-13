@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,15 +13,15 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("AppointmentEMRParticipant Details for ElectronicMedicalRecords", group =>
             {
-			    AppointmentEMRParticipantId = group.Add(new VocabularyKey(nameof(AppointmentEMRParticipantId), "Appointment (EMR) Participant", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ParticipantActorType = group.Add(new VocabularyKey(nameof(ParticipantActorType), "Participant Actor Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ParticipationStatus = group.Add(new VocabularyKey(nameof(ParticipationStatus), "Participation Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Required = group.Add(new VocabularyKey(nameof(Required), "Required", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                AppointmentEMRParticipantId = group.Add(new VocabularyKey(nameof(AppointmentEMRParticipantId), "Appointment (EMR) Participant", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ParticipantActorType = group.Add(new VocabularyKey(nameof(ParticipantActorType), "Participant Actor Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ParticipationStatus = group.Add(new VocabularyKey(nameof(ParticipationStatus), "Participation Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Required = group.Add(new VocabularyKey(nameof(Required), "Required", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="ActorPatientId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
             ///Property <see cref="ActorPhysicianId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
@@ -45,9 +44,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="ActorLocationId"/> to Vocab 'Location.cdm.json/Location' with Property 'LocationId'
             ///Property <see cref="ParticpantTypeId"/> to Vocab 'CodeableConcept.cdm.json/CodeableConcept' with Property 'CodeableConceptId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

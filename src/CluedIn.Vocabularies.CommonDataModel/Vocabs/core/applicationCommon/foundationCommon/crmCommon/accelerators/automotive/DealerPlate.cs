@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,16 +13,16 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("DealerPlate Details for Automotive", group =>
             {
-			    Comments = group.Add(new VocabularyKey(nameof(Comments), "Comments", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DealerPlateId = group.Add(new VocabularyKey(nameof(DealerPlateId), "Dealer Plate", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IssuedBy = group.Add(new VocabularyKey(nameof(IssuedBy), "Issued By", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RegistrationNumber = group.Add(new VocabularyKey(nameof(RegistrationNumber), "Registration Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ValidFrom = group.Add(new VocabularyKey(nameof(ValidFrom), "Valid From", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ValidTo = group.Add(new VocabularyKey(nameof(ValidTo), "Valid To", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                Comments = group.Add(new VocabularyKey(nameof(Comments), "Comments", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DealerPlateId = group.Add(new VocabularyKey(nameof(DealerPlateId), "Dealer Plate", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IssuedBy = group.Add(new VocabularyKey(nameof(IssuedBy), "Issued By", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RegistrationNumber = group.Add(new VocabularyKey(nameof(RegistrationNumber), "Registration Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ValidFrom = group.Add(new VocabularyKey(nameof(ValidFrom), "Valid From", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ValidTo = group.Add(new VocabularyKey(nameof(ValidTo), "Valid To", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="BusinessOperationId"/> to Vocab 'BusinessOperation.cdm.json/BusinessOperation' with Property 'BusinessOperationId'
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
@@ -54,7 +53,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="DeviceId"/> to Vocab 'Device.cdm.json/Device' with Property 'DeviceId'
             ///Property <see cref="TestDriveId"/> to Vocab 'TestDrive.cdm.json/TestDrive' with Property 'TestDriveId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="DealerPlateId"/> from Vocab 'DealerPlateDeviceAssignment.cdm.json/DealerPlateDeviceAssignment' with Property 'DealerPlateId'
             #endregion

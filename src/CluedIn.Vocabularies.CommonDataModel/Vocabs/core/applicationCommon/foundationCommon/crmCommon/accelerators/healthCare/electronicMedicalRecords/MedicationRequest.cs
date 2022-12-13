@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,28 +13,28 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("MedicationRequest Details for ElectronicMedicalRecords", group =>
             {
-			    AuthoredOn = group.Add(new VocabularyKey(nameof(AuthoredOn), "Authored On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ContextType = group.Add(new VocabularyKey(nameof(ContextType), "Context Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DispenseRequestNumberOfRepeatsAllowed = group.Add(new VocabularyKey(nameof(DispenseRequestNumberOfRepeatsAllowed), "Dispense Request Number of Repeats Allowed", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    DispenseRequestQuantity = group.Add(new VocabularyKey(nameof(DispenseRequestQuantity), "Dispense Request Quantity", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    DispenseRequestValidityPeriodEndDate = group.Add(new VocabularyKey(nameof(DispenseRequestValidityPeriodEndDate), "Dispense Request Validity Period End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DispenseRequestValidityPeriodStartDate = group.Add(new VocabularyKey(nameof(DispenseRequestValidityPeriodStartDate), "Dispense Request Validity Period Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExpectedSupplyDuration = group.Add(new VocabularyKey(nameof(ExpectedSupplyDuration), "Expected Supply Duration", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    GroupIdentifier = group.Add(new VocabularyKey(nameof(GroupIdentifier), "Group Identifier", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Identifier = group.Add(new VocabularyKey(nameof(Identifier), "Medication Request Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Intent = group.Add(new VocabularyKey(nameof(Intent), "Intent", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    MedicationRequestId = group.Add(new VocabularyKey(nameof(MedicationRequestId), "Medication Request", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    MedicationType = group.Add(new VocabularyKey(nameof(MedicationType), "Medication Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Priority = group.Add(new VocabularyKey(nameof(Priority), "Priority", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RequesterAgentType = group.Add(new VocabularyKey(nameof(RequesterAgentType), "Requester Agent Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Status = group.Add(new VocabularyKey(nameof(Status), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SubjectType = group.Add(new VocabularyKey(nameof(SubjectType), "Subject Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SubstitutionAllowed = group.Add(new VocabularyKey(nameof(SubstitutionAllowed), "Substitution Allowed", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                AuthoredOn = group.Add(new VocabularyKey(nameof(AuthoredOn), "Authored On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ContextType = group.Add(new VocabularyKey(nameof(ContextType), "Context Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DispenseRequestNumberOfRepeatsAllowed = group.Add(new VocabularyKey(nameof(DispenseRequestNumberOfRepeatsAllowed), "Dispense Request Number of Repeats Allowed", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                DispenseRequestQuantity = group.Add(new VocabularyKey(nameof(DispenseRequestQuantity), "Dispense Request Quantity", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                DispenseRequestValidityPeriodEndDate = group.Add(new VocabularyKey(nameof(DispenseRequestValidityPeriodEndDate), "Dispense Request Validity Period End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DispenseRequestValidityPeriodStartDate = group.Add(new VocabularyKey(nameof(DispenseRequestValidityPeriodStartDate), "Dispense Request Validity Period Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExpectedSupplyDuration = group.Add(new VocabularyKey(nameof(ExpectedSupplyDuration), "Expected Supply Duration", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                GroupIdentifier = group.Add(new VocabularyKey(nameof(GroupIdentifier), "Group Identifier", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Identifier = group.Add(new VocabularyKey(nameof(Identifier), "Medication Request Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Intent = group.Add(new VocabularyKey(nameof(Intent), "Intent", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MedicationRequestId = group.Add(new VocabularyKey(nameof(MedicationRequestId), "Medication Request", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MedicationType = group.Add(new VocabularyKey(nameof(MedicationType), "Medication Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Priority = group.Add(new VocabularyKey(nameof(Priority), "Priority", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RequesterAgentType = group.Add(new VocabularyKey(nameof(RequesterAgentType), "Requester Agent Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Status = group.Add(new VocabularyKey(nameof(Status), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SubjectType = group.Add(new VocabularyKey(nameof(SubjectType), "Subject Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SubstitutionAllowed = group.Add(new VocabularyKey(nameof(SubstitutionAllowed), "Substitution Allowed", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="DispenseRequestPerformerId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="RequesterAgentTypeOrganizationId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
@@ -182,7 +181,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="MedicationRequestId"/> from Vocab 'CarePlanActivity.cdm.json/CarePlanActivity' with Property 'ReferenceMedicationRequestIdentifierId'
             ///Property <see cref="MedicationRequestId"/> from Vocab 'ClinicalImpressionAction.cdm.json/ClinicalImpressionAction' with Property 'ActionMedicationRequestId'

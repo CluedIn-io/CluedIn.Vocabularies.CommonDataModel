@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,16 +13,16 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("AggregateKPI Details for Automotive", group =>
             {
-			    AggregateKPIId = group.Add(new VocabularyKey(nameof(AggregateKPIId), "Aggregate KPI", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    FormulaDescription = group.Add(new VocabularyKey(nameof(FormulaDescription), "Formula Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    MeasurementType = group.Add(new VocabularyKey(nameof(MeasurementType), "Measurement Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    UsageDescription = group.Add(new VocabularyKey(nameof(UsageDescription), "Usage Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                AggregateKPIId = group.Add(new VocabularyKey(nameof(AggregateKPIId), "Aggregate KPI", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                FormulaDescription = group.Add(new VocabularyKey(nameof(FormulaDescription), "Formula Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MeasurementType = group.Add(new VocabularyKey(nameof(MeasurementType), "Measurement Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                UsageDescription = group.Add(new VocabularyKey(nameof(UsageDescription), "Usage Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
@@ -71,7 +70,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="DeviceId"/> to Vocab 'Device.cdm.json/Device' with Property 'DeviceId'
             ///Property <see cref="UserId"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="AggregateKPIContextId"/> from Vocab 'AggregateKPIMeasurement.cdm.json/AggregateKPIMeasurement' with Property 'AggregateKPIContextId'
             ///Property <see cref="AggregateKPIId"/> from Vocab 'AggregateKPIContext.cdm.json/AggregateKPIContext' with Property 'AggregateKPIId'

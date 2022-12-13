@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,22 +13,22 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("Specimen Details for ElectronicMedicalRecords", group =>
             {
-			    AccessionNumber = group.Add(new VocabularyKey(nameof(AccessionNumber), "Accession Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CollectedQuantity = group.Add(new VocabularyKey(nameof(CollectedQuantity), "Quantity", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    CollectionCollectedDateTime = group.Add(new VocabularyKey(nameof(CollectionCollectedDateTime), "Collected Date Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CollectionCollectedPeriodEnd = group.Add(new VocabularyKey(nameof(CollectionCollectedPeriodEnd), "Collected Period End", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CollectionCollectedPeriodStart = group.Add(new VocabularyKey(nameof(CollectionCollectedPeriodStart), "Collected Period Start", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CollectionCollectedType = group.Add(new VocabularyKey(nameof(CollectionCollectedType), "Collected Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ReceivedTime = group.Add(new VocabularyKey(nameof(ReceivedTime), "Received Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SpecimenId = group.Add(new VocabularyKey(nameof(SpecimenId), "Specimen", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SpecimenNumber = group.Add(new VocabularyKey(nameof(SpecimenNumber), "Specimen Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Status = group.Add(new VocabularyKey(nameof(Status), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SubjectType = group.Add(new VocabularyKey(nameof(SubjectType), "Subject Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                AccessionNumber = group.Add(new VocabularyKey(nameof(AccessionNumber), "Accession Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CollectedQuantity = group.Add(new VocabularyKey(nameof(CollectedQuantity), "Quantity", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                CollectionCollectedDateTime = group.Add(new VocabularyKey(nameof(CollectionCollectedDateTime), "Collected Date Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CollectionCollectedPeriodEnd = group.Add(new VocabularyKey(nameof(CollectionCollectedPeriodEnd), "Collected Period End", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CollectionCollectedPeriodStart = group.Add(new VocabularyKey(nameof(CollectionCollectedPeriodStart), "Collected Period Start", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CollectionCollectedType = group.Add(new VocabularyKey(nameof(CollectionCollectedType), "Collected Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ReceivedTime = group.Add(new VocabularyKey(nameof(ReceivedTime), "Received Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SpecimenId = group.Add(new VocabularyKey(nameof(SpecimenId), "Specimen", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SpecimenNumber = group.Add(new VocabularyKey(nameof(SpecimenNumber), "Specimen Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Status = group.Add(new VocabularyKey(nameof(Status), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SubjectType = group.Add(new VocabularyKey(nameof(SubjectType), "Subject Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="CollectionCollectorId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
             ///Property <see cref="SubjectTypePatientId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
@@ -138,7 +137,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="SpecimenId"/> from Vocab 'Observation.cdm.json/Observation' with Property 'SpecimenId'
             ///Property <see cref="SpecimenId"/> from Vocab 'ProcedureRequestSpecimen.cdm.json/ProcedureRequestSpecimen' with Property 'SpecimenId'

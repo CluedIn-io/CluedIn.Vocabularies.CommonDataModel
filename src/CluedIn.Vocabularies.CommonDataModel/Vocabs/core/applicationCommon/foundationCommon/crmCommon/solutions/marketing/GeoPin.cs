@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,33 +13,33 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("GeoPin Details for Marketing", group =>
             {
-			    GeopinId = group.Add(new VocabularyKey(nameof(GeopinId), "Geo pin", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CampaignGeoPinsId = group.Add(new VocabularyKey(nameof(CampaignGeoPinsId), "Campaign geo pins", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CenterLatitude = group.Add(new VocabularyKey(nameof(CenterLatitude), "Center latitude", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    CenterLongitude = group.Add(new VocabularyKey(nameof(CenterLongitude), "Center longitude", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    City = group.Add(new VocabularyKey(nameof(City), "City", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Country = group.Add(new VocabularyKey(nameof(Country), "Country/Region", VocabularyKeyDataType.GeographyCountry, VocabularyKeyVisibility.Visible)); 
-			    KPIEmailClickedCount = group.Add(new VocabularyKey(nameof(KPIEmailClickedCount), "KPI email clicked count", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    KPIEmailOpenedCount = group.Add(new VocabularyKey(nameof(KPIEmailOpenedCount), "KPI email opened count", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    KPIRedirectLinkClickedCount = group.Add(new VocabularyKey(nameof(KPIRedirectLinkClickedCount), "KPI redirect link clicked count", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    KPIWebsiteClickedCount = group.Add(new VocabularyKey(nameof(KPIWebsiteClickedCount), "KPI website clicked count", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    KPIWebsiteVisitedCount = group.Add(new VocabularyKey(nameof(KPIWebsiteVisitedCount), "KPI website visited count", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    KpiFormSubmittedCount = group.Add(new VocabularyKey(nameof(KpiFormSubmittedCount), VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    NorthwestLatitude = group.Add(new VocabularyKey(nameof(NorthwestLatitude), "Northwest latitude", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    NorthwestLongitude = group.Add(new VocabularyKey(nameof(NorthwestLongitude), "Northwest longitude", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    PostalCode = group.Add(new VocabularyKey(nameof(PostalCode), "Postal code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RedirectURLGeoPinsId = group.Add(new VocabularyKey(nameof(RedirectURLGeoPinsId), "Redirect URL geo pins", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RequestBuilderService_mktgeopins = group.Add(new VocabularyKey(nameof(RequestBuilderService_mktgeopins), "Marketing interactions", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ResultParserService_mktgeopins = group.Add(new VocabularyKey(nameof(ResultParserService_mktgeopins), "Marketing interactions", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ServerIdMarketing = group.Add(new VocabularyKey(nameof(ServerIdMarketing), "serverId_marketing", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SoutheastLatitude = group.Add(new VocabularyKey(nameof(SoutheastLatitude), "Southeast latitude", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    SoutheastLongitude = group.Add(new VocabularyKey(nameof(SoutheastLongitude), "Southeast longitude", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    State = group.Add(new VocabularyKey(nameof(State), "State", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                GeopinId = group.Add(new VocabularyKey(nameof(GeopinId), "Geo pin", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CampaignGeoPinsId = group.Add(new VocabularyKey(nameof(CampaignGeoPinsId), "Campaign geo pins", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CenterLatitude = group.Add(new VocabularyKey(nameof(CenterLatitude), "Center latitude", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                CenterLongitude = group.Add(new VocabularyKey(nameof(CenterLongitude), "Center longitude", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                City = group.Add(new VocabularyKey(nameof(City), "City", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Country = group.Add(new VocabularyKey(nameof(Country), "Country/Region", VocabularyKeyDataType.GeographyCountry, VocabularyKeyVisibility.Visible));
+                KPIEmailClickedCount = group.Add(new VocabularyKey(nameof(KPIEmailClickedCount), "KPI email clicked count", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                KPIEmailOpenedCount = group.Add(new VocabularyKey(nameof(KPIEmailOpenedCount), "KPI email opened count", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                KPIRedirectLinkClickedCount = group.Add(new VocabularyKey(nameof(KPIRedirectLinkClickedCount), "KPI redirect link clicked count", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                KPIWebsiteClickedCount = group.Add(new VocabularyKey(nameof(KPIWebsiteClickedCount), "KPI website clicked count", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                KPIWebsiteVisitedCount = group.Add(new VocabularyKey(nameof(KPIWebsiteVisitedCount), "KPI website visited count", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                KpiFormSubmittedCount = group.Add(new VocabularyKey(nameof(KpiFormSubmittedCount), VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                NorthwestLatitude = group.Add(new VocabularyKey(nameof(NorthwestLatitude), "Northwest latitude", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                NorthwestLongitude = group.Add(new VocabularyKey(nameof(NorthwestLongitude), "Northwest longitude", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                PostalCode = group.Add(new VocabularyKey(nameof(PostalCode), "Postal code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RedirectURLGeoPinsId = group.Add(new VocabularyKey(nameof(RedirectURLGeoPinsId), "Redirect URL geo pins", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RequestBuilderService_mktgeopins = group.Add(new VocabularyKey(nameof(RequestBuilderService_mktgeopins), "Marketing interactions", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ResultParserService_mktgeopins = group.Add(new VocabularyKey(nameof(ResultParserService_mktgeopins), "Marketing interactions", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ServerIdMarketing = group.Add(new VocabularyKey(nameof(ServerIdMarketing), "serverId_marketing", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SoutheastLatitude = group.Add(new VocabularyKey(nameof(SoutheastLatitude), "Southeast latitude", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                SoutheastLongitude = group.Add(new VocabularyKey(nameof(SoutheastLongitude), "Southeast longitude", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                State = group.Add(new VocabularyKey(nameof(State), "State", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="ContactGeoPinsId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
             ///Property <see cref="CustomerJourney"/> to Vocab 'CustomerJourney.cdm.json/CustomerJourney' with Property 'CustomerJourneyId'
@@ -59,9 +58,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="MarketingPageGeoPinsId"/> to Vocab 'MarketingPage.cdm.json/MarketingPage' with Property 'MarketingPageId'
             ///Property <see cref="WebsiteGeoPinsId"/> to Vocab 'MarketingWebsite.cdm.json/MarketingWebsite' with Property 'WebsiteId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

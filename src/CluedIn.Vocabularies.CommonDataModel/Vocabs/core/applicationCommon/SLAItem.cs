@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,29 +13,29 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("SLAItem Details for ApplicationCommon", group =>
             {
-			    SLAItemId = group.Add(new VocabularyKey(nameof(SLAItemId), "SLA Item", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    OwningBusinessUnit = group.Add(new VocabularyKey(nameof(OwningBusinessUnit), "Owning Business Unit", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RelatedField = group.Add(new VocabularyKey(nameof(RelatedField), "Related Case Field", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), "Version Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ApplicableWhenXml = group.Add(new VocabularyKey(nameof(ApplicableWhenXml), "ApplicableWhenXml", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SuccessConditionsXml = group.Add(new VocabularyKey(nameof(SuccessConditionsXml), "SuccessConditionsXml", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SolutionId = group.Add(new VocabularyKey(nameof(SolutionId), "Solution", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    ComponentState = group.Add(new VocabularyKey(nameof(ComponentState), "Component State", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    OverwriteTime = group.Add(new VocabularyKey(nameof(OverwriteTime), "Record Overwrite Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IsManaged = group.Add(new VocabularyKey(nameof(IsManaged), "Is Managed", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    SLAItemIdUnique = group.Add(new VocabularyKey(nameof(SLAItemIdUnique), "Unique Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    SequenceNumber = group.Add(new VocabularyKey(nameof(SequenceNumber), "Sequence", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    FailureAfter = group.Add(new VocabularyKey(nameof(FailureAfter), "Failure After", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    WarnAfter = group.Add(new VocabularyKey(nameof(WarnAfter), "Warn After", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    OwningUser = group.Add(new VocabularyKey(nameof(OwningUser), "Owning User", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    WorkflowId = group.Add(new VocabularyKey(nameof(WorkflowId), "Workflow ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                SLAItemId = group.Add(new VocabularyKey(nameof(SLAItemId), "SLA Item", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OwningBusinessUnit = group.Add(new VocabularyKey(nameof(OwningBusinessUnit), "Owning Business Unit", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RelatedField = group.Add(new VocabularyKey(nameof(RelatedField), "Related Case Field", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), "Version Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ApplicableWhenXml = group.Add(new VocabularyKey(nameof(ApplicableWhenXml), "ApplicableWhenXml", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SuccessConditionsXml = group.Add(new VocabularyKey(nameof(SuccessConditionsXml), "SuccessConditionsXml", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SolutionId = group.Add(new VocabularyKey(nameof(SolutionId), "Solution", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                ComponentState = group.Add(new VocabularyKey(nameof(ComponentState), "Component State", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OverwriteTime = group.Add(new VocabularyKey(nameof(OverwriteTime), "Record Overwrite Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsManaged = group.Add(new VocabularyKey(nameof(IsManaged), "Is Managed", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                SLAItemIdUnique = group.Add(new VocabularyKey(nameof(SLAItemIdUnique), "Unique Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                SequenceNumber = group.Add(new VocabularyKey(nameof(SequenceNumber), "Sequence", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                FailureAfter = group.Add(new VocabularyKey(nameof(FailureAfter), "Failure After", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                WarnAfter = group.Add(new VocabularyKey(nameof(WarnAfter), "Warn After", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                OwningUser = group.Add(new VocabularyKey(nameof(OwningUser), "Owning User", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                WorkflowId = group.Add(new VocabularyKey(nameof(WorkflowId), "Workflow ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="TransactionCurrencyId"/> to Vocab 'Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
             ///Property <see cref="SLAId"/> to Vocab 'SLA.cdm.json/SLA' with Property 'SLAId'
@@ -47,9 +46,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="CreatedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="ModifiedOnBehalfBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

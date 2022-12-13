@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,24 +13,24 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("ResourceSpecification Details for Service", group =>
             {
-			    ResourceSpecId = group.Add(new VocabularyKey(nameof(ResourceSpecId), "Resource Spec", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), "Version Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), "Time Zone Rule Version Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Constraints = group.Add(new VocabularyKey(nameof(Constraints), "Constraints", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EffortRequired = group.Add(new VocabularyKey(nameof(EffortRequired), "Effort Required", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    ObjectiveExpression = group.Add(new VocabularyKey(nameof(ObjectiveExpression), "Objective Expression", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ObjectTypeCode = group.Add(new VocabularyKey(nameof(ObjectTypeCode), "Object Type ", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RequiredCount = group.Add(new VocabularyKey(nameof(RequiredCount), "Required Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    SameSite = group.Add(new VocabularyKey(nameof(SameSite), "Same Site", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
+                ResourceSpecId = group.Add(new VocabularyKey(nameof(ResourceSpecId), "Resource Spec", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                VersionNumber = group.Add(new VocabularyKey(nameof(VersionNumber), "Version Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TimeZoneRuleVersionNumber = group.Add(new VocabularyKey(nameof(TimeZoneRuleVersionNumber), "Time Zone Rule Version Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                UTCConversionTimeZoneCode = group.Add(new VocabularyKey(nameof(UTCConversionTimeZoneCode), "UTC Conversion Time Zone Code", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Constraints = group.Add(new VocabularyKey(nameof(Constraints), "Constraints", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EffortRequired = group.Add(new VocabularyKey(nameof(EffortRequired), "Effort Required", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                ObjectiveExpression = group.Add(new VocabularyKey(nameof(ObjectiveExpression), "Objective Expression", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ObjectTypeCode = group.Add(new VocabularyKey(nameof(ObjectTypeCode), "Object Type ", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RequiredCount = group.Add(new VocabularyKey(nameof(RequiredCount), "Required Count", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                SameSite = group.Add(new VocabularyKey(nameof(SameSite), "Same Site", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="CreatedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="ModifiedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
@@ -41,7 +40,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="GroupObjectId"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             ///Property <see cref="OrganizationId"/> to Vocab '/core/applicationCommon/foundationCommon/Organization.cdm.json/Organization' with Property 'OrganizationId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="ResourceSpecId"/> from Vocab 'ActivityParty.cdm.json/ActivityParty' with Property 'ResourceSpecId'
             ///Property <see cref="ResourceSpecId"/> from Vocab 'Resource.cdm.json/Resource' with Property 'ResourceId'

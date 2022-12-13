@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,52 +13,52 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("RecurringAppointment Details for ApplicationCommon", group =>
             {
-			    IsWeekDayPattern = group.Add(new VocabularyKey(nameof(IsWeekDayPattern), "Every Weekday", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    RuleId = group.Add(new VocabularyKey(nameof(RuleId), "Recurrence Rule", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IsNthYearly = group.Add(new VocabularyKey(nameof(IsNthYearly), "Nth Yearly", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    GroupId = group.Add(new VocabularyKey(nameof(GroupId), "Group Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    LastExpandedInstanceDate = group.Add(new VocabularyKey(nameof(LastExpandedInstanceDate), "Last Expanded Instance Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EffectiveEndDate = group.Add(new VocabularyKey(nameof(EffectiveEndDate), "Effective End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PatternStartDate = group.Add(new VocabularyKey(nameof(PatternStartDate), "Recurrence Range Start", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IsRegenerate = group.Add(new VocabularyKey(nameof(IsRegenerate), "Regenerate", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    FirstDayOfWeek = group.Add(new VocabularyKey(nameof(FirstDayOfWeek), "First Day Of Week", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    OutlookOwnerApptId = group.Add(new VocabularyKey(nameof(OutlookOwnerApptId), "Outlook Recurring Appointment Master Owner", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    RecurrencePatternType = group.Add(new VocabularyKey(nameof(RecurrencePatternType), "Recurrence Frequency", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    NextExpansionInstanceDate = group.Add(new VocabularyKey(nameof(NextExpansionInstanceDate), "Next Expanded Instance Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExpansionStateCode = group.Add(new VocabularyKey(nameof(ExpansionStateCode), "Expansion State Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PatternEndDate = group.Add(new VocabularyKey(nameof(PatternEndDate), "Recurrence Range End", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    GlobalObjectId = group.Add(new VocabularyKey(nameof(GlobalObjectId), "Outlook Recurring Appointment Master", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EffectiveStartDate = group.Add(new VocabularyKey(nameof(EffectiveStartDate), "Effective Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DayOfMonth = group.Add(new VocabularyKey(nameof(DayOfMonth), "Day Of Month", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StartTime = group.Add(new VocabularyKey(nameof(StartTime), "Pattern Start Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Occurrences = group.Add(new VocabularyKey(nameof(Occurrences), "Occurrences", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    IsAllDayEvent = group.Add(new VocabularyKey(nameof(IsAllDayEvent), "All Day Event", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    SeriesStatus = group.Add(new VocabularyKey(nameof(SeriesStatus), "Series Status", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    IsNthMonthly = group.Add(new VocabularyKey(nameof(IsNthMonthly), "Nth Monthly", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    EndTime = group.Add(new VocabularyKey(nameof(EndTime), "Pattern End Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DaysOfWeekMask = group.Add(new VocabularyKey(nameof(DaysOfWeekMask), "Days Of Week Mask", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Instance = group.Add(new VocabularyKey(nameof(Instance), "Instance", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DeletedExceptionsList = group.Add(new VocabularyKey(nameof(DeletedExceptionsList), "Deleted Appointments", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Interval = group.Add(new VocabularyKey(nameof(Interval), "Interval", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    Duration = group.Add(new VocabularyKey(nameof(Duration), "Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    MonthOfYear = group.Add(new VocabularyKey(nameof(MonthOfYear), "Month Of Year", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Location = group.Add(new VocabularyKey(nameof(Location), "Location", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PatternEndType = group.Add(new VocabularyKey(nameof(PatternEndType), "Pattern End Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    ProcessId = group.Add(new VocabularyKey(nameof(ProcessId), "Process", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    StageId = group.Add(new VocabularyKey(nameof(StageId), "Process Stage", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    IsUnsafe = group.Add(new VocabularyKey(nameof(IsUnsafe), "IsUnsafe", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+                IsWeekDayPattern = group.Add(new VocabularyKey(nameof(IsWeekDayPattern), "Every Weekday", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                RuleId = group.Add(new VocabularyKey(nameof(RuleId), "Recurrence Rule", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsNthYearly = group.Add(new VocabularyKey(nameof(IsNthYearly), "Nth Yearly", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                GroupId = group.Add(new VocabularyKey(nameof(GroupId), "Group Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LastExpandedInstanceDate = group.Add(new VocabularyKey(nameof(LastExpandedInstanceDate), "Last Expanded Instance Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EffectiveEndDate = group.Add(new VocabularyKey(nameof(EffectiveEndDate), "Effective End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PatternStartDate = group.Add(new VocabularyKey(nameof(PatternStartDate), "Recurrence Range Start", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsRegenerate = group.Add(new VocabularyKey(nameof(IsRegenerate), "Regenerate", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                FirstDayOfWeek = group.Add(new VocabularyKey(nameof(FirstDayOfWeek), "First Day Of Week", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                OutlookOwnerApptId = group.Add(new VocabularyKey(nameof(OutlookOwnerApptId), "Outlook Recurring Appointment Master Owner", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                RecurrencePatternType = group.Add(new VocabularyKey(nameof(RecurrencePatternType), "Recurrence Frequency", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                NextExpansionInstanceDate = group.Add(new VocabularyKey(nameof(NextExpansionInstanceDate), "Next Expanded Instance Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExpansionStateCode = group.Add(new VocabularyKey(nameof(ExpansionStateCode), "Expansion State Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PatternEndDate = group.Add(new VocabularyKey(nameof(PatternEndDate), "Recurrence Range End", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                GlobalObjectId = group.Add(new VocabularyKey(nameof(GlobalObjectId), "Outlook Recurring Appointment Master", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EffectiveStartDate = group.Add(new VocabularyKey(nameof(EffectiveStartDate), "Effective Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DayOfMonth = group.Add(new VocabularyKey(nameof(DayOfMonth), "Day Of Month", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StartTime = group.Add(new VocabularyKey(nameof(StartTime), "Pattern Start Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Occurrences = group.Add(new VocabularyKey(nameof(Occurrences), "Occurrences", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                IsAllDayEvent = group.Add(new VocabularyKey(nameof(IsAllDayEvent), "All Day Event", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                SeriesStatus = group.Add(new VocabularyKey(nameof(SeriesStatus), "Series Status", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                IsNthMonthly = group.Add(new VocabularyKey(nameof(IsNthMonthly), "Nth Monthly", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                EndTime = group.Add(new VocabularyKey(nameof(EndTime), "Pattern End Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DaysOfWeekMask = group.Add(new VocabularyKey(nameof(DaysOfWeekMask), "Days Of Week Mask", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Instance = group.Add(new VocabularyKey(nameof(Instance), "Instance", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DeletedExceptionsList = group.Add(new VocabularyKey(nameof(DeletedExceptionsList), "Deleted Appointments", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Interval = group.Add(new VocabularyKey(nameof(Interval), "Interval", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                Duration = group.Add(new VocabularyKey(nameof(Duration), "Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                MonthOfYear = group.Add(new VocabularyKey(nameof(MonthOfYear), "Month Of Year", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Location = group.Add(new VocabularyKey(nameof(Location), "Location", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PatternEndType = group.Add(new VocabularyKey(nameof(PatternEndType), "Pattern End Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                ProcessId = group.Add(new VocabularyKey(nameof(ProcessId), "Process", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                StageId = group.Add(new VocabularyKey(nameof(StageId), "Process Stage", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                IsUnsafe = group.Add(new VocabularyKey(nameof(IsUnsafe), "IsUnsafe", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
             });
             AddGroup("RecurringAppointment Details for CrmCommon", group =>
             {
-			    OptionalAttendees = group.Add(new VocabularyKey(nameof(OptionalAttendees), "Optional Attendees", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RequiredAttendees = group.Add(new VocabularyKey(nameof(RequiredAttendees), "Required Attendees", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                OptionalAttendees = group.Add(new VocabularyKey(nameof(OptionalAttendees), "Optional Attendees", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RequiredAttendees = group.Add(new VocabularyKey(nameof(RequiredAttendees), "Required Attendees", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="RegardingObjectId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="OwningBusinessUnit"/> to Vocab 'BusinessUnit.cdm.json/BusinessUnit' with Property 'BusinessUnitId'
@@ -84,7 +83,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwnerId"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
             ///Property <see cref="OwningTeam"/> to Vocab 'Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="ActivityId"/> from Vocab 'ActivityParty.cdm.json/ActivityParty' with Property 'ActivityId'
             ///Property <see cref="ActivityId"/> from Vocab 'Appointment.cdm.json/Appointment' with Property 'SeriesId'

@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,28 +13,28 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("ProcedureRequest Details for ElectronicMedicalRecords", group =>
             {
-			    AsNeededBoolean = group.Add(new VocabularyKey(nameof(AsNeededBoolean), "As needed", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    AuthoredOn = group.Add(new VocabularyKey(nameof(AuthoredOn), "Authored On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ContextType = group.Add(new VocabularyKey(nameof(ContextType), "Context", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DoNotPerform = group.Add(new VocabularyKey(nameof(DoNotPerform), "Do not perform", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    Intent = group.Add(new VocabularyKey(nameof(Intent), "Intent", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    OccurenceDateTime = group.Add(new VocabularyKey(nameof(OccurenceDateTime), "Occurrence Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    OccurencePeriodEndDate = group.Add(new VocabularyKey(nameof(OccurencePeriodEndDate), "Occurrence End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    OccurencePeriodStartDate = group.Add(new VocabularyKey(nameof(OccurencePeriodStartDate), "Occurrence Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    OccurrenceType = group.Add(new VocabularyKey(nameof(OccurrenceType), "Occurrence Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PerformerType = group.Add(new VocabularyKey(nameof(PerformerType), "Performer Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Priority = group.Add(new VocabularyKey(nameof(Priority), "Priority", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ProcedureRequestId = group.Add(new VocabularyKey(nameof(ProcedureRequestId), "Procedure Request", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ProcedureRequestNumber = group.Add(new VocabularyKey(nameof(ProcedureRequestNumber), "Procedure Request Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RequesterAgent = group.Add(new VocabularyKey(nameof(RequesterAgent), "Requester Agent", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Requisition = group.Add(new VocabularyKey(nameof(Requisition), "Requisition Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Status = group.Add(new VocabularyKey(nameof(Status), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SubjectType = group.Add(new VocabularyKey(nameof(SubjectType), "Subject Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                AsNeededBoolean = group.Add(new VocabularyKey(nameof(AsNeededBoolean), "As needed", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                AuthoredOn = group.Add(new VocabularyKey(nameof(AuthoredOn), "Authored On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ContextType = group.Add(new VocabularyKey(nameof(ContextType), "Context", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DoNotPerform = group.Add(new VocabularyKey(nameof(DoNotPerform), "Do not perform", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                Intent = group.Add(new VocabularyKey(nameof(Intent), "Intent", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OccurenceDateTime = group.Add(new VocabularyKey(nameof(OccurenceDateTime), "Occurrence Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OccurencePeriodEndDate = group.Add(new VocabularyKey(nameof(OccurencePeriodEndDate), "Occurrence End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OccurencePeriodStartDate = group.Add(new VocabularyKey(nameof(OccurencePeriodStartDate), "Occurrence Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OccurrenceType = group.Add(new VocabularyKey(nameof(OccurrenceType), "Occurrence Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PerformerType = group.Add(new VocabularyKey(nameof(PerformerType), "Performer Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Priority = group.Add(new VocabularyKey(nameof(Priority), "Priority", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProcedureRequestId = group.Add(new VocabularyKey(nameof(ProcedureRequestId), "Procedure Request", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProcedureRequestNumber = group.Add(new VocabularyKey(nameof(ProcedureRequestNumber), "Procedure Request Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RequesterAgent = group.Add(new VocabularyKey(nameof(RequesterAgent), "Requester Agent", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Requisition = group.Add(new VocabularyKey(nameof(Requisition), "Requisition Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Status = group.Add(new VocabularyKey(nameof(Status), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SubjectType = group.Add(new VocabularyKey(nameof(SubjectType), "Subject Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="PerformerAgentOrganizationId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="RequesterAgentOrganizationId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
@@ -209,7 +208,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="ProcedureRequestId"/> from Vocab 'CarePlanActivity.cdm.json/CarePlanActivity' with Property 'ReferenceProcedureRequestIdentifierId'
             ///Property <see cref="ProcedureRequestId"/> from Vocab 'ClinicalImpressionAction.cdm.json/ClinicalImpressionAction' with Property 'ActionProcedureRequestId'

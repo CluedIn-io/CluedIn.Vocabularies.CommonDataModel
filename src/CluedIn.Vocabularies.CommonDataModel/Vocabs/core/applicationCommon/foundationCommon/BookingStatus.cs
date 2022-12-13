@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,21 +13,21 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("BookingStatus Details for FoundationCommon", group =>
             {
-			    BookingStatusId = group.Add(new VocabularyKey(nameof(BookingStatusId), "Booking Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Type a detailed description of the booking status.", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Status = group.Add(new VocabularyKey(nameof(Status), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "ExchangeRate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
+                BookingStatusId = group.Add(new VocabularyKey(nameof(BookingStatusId), "Booking Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), "Type a detailed description of the booking status.", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Status = group.Add(new VocabularyKey(nameof(Status), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "ExchangeRate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
             });
             AddGroup("BookingStatus Details for ProjectCommon", group =>
             {
-			    ImageURL = group.Add(new VocabularyKey(nameof(ImageURL), "Image Url", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
-			    StatusColor = group.Add(new VocabularyKey(nameof(StatusColor), "Status Color", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CommitType = group.Add(new VocabularyKey(nameof(CommitType), "Commit Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                ImageURL = group.Add(new VocabularyKey(nameof(ImageURL), "Image Url", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible));
+                StatusColor = group.Add(new VocabularyKey(nameof(StatusColor), "Status Color", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CommitType = group.Add(new VocabularyKey(nameof(CommitType), "Commit Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="CreatedBy"/> to Vocab 'crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
@@ -44,7 +43,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             ///Property <see cref="TransactionCurrencyId"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="BookingStatusId"/> from Vocab 'BookableResourceBooking.cdm.json/BookableResourceBooking' with Property 'BookingStatus'
             #endregion

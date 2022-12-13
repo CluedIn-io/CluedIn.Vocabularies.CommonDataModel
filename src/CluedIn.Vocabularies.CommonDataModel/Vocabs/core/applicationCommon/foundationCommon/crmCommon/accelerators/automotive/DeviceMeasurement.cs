@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,15 +13,15 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("DeviceMeasurement Details for Automotive", group =>
             {
-			    DeviceMeasurementId = group.Add(new VocabularyKey(nameof(DeviceMeasurementId), "Device Measurement", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    MeasuredOn = group.Add(new VocabularyKey(nameof(MeasuredOn), "Measured On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    MeasuredValue = group.Add(new VocabularyKey(nameof(MeasuredValue), "Measured Value", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Value = group.Add(new VocabularyKey(nameof(Value), "Value", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                DeviceMeasurementId = group.Add(new VocabularyKey(nameof(DeviceMeasurementId), "Device Measurement", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MeasuredOn = group.Add(new VocabularyKey(nameof(MeasuredOn), "Measured On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MeasuredValue = group.Add(new VocabularyKey(nameof(MeasuredValue), "Measured Value", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Value = group.Add(new VocabularyKey(nameof(Value), "Value", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="DeviceId"/> to Vocab 'Device.cdm.json/Device' with Property 'DeviceId'
             ///Property <see cref="DeviceMeasureId"/> to Vocab 'DeviceMeasure.cdm.json/DeviceMeasure' with Property 'DeviceMeasureId'
@@ -42,9 +41,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="MeasuredById"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="ServiceOrderId"/> to Vocab 'ServiceOrder.cdm.json/ServiceOrder' with Property 'ServiceOrderId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

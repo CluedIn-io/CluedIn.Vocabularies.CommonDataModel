@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,20 +13,20 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("PreviousEducation Details for HigherEducation", group =>
             {
-			    PreviousEducationId = group.Add(new VocabularyKey(nameof(PreviousEducationId), "Previous Education", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Previous Education Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ClassSize = group.Add(new VocabularyKey(nameof(ClassSize), "Class Size", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    DateofEnrollment = group.Add(new VocabularyKey(nameof(DateofEnrollment), "Date of Enrollment", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    GPA = group.Add(new VocabularyKey(nameof(GPA), "GPA", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    Graduated = group.Add(new VocabularyKey(nameof(Graduated), "Graduated", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    GraduationDate = group.Add(new VocabularyKey(nameof(GraduationDate), "Graduation Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    LastDateofAttendance = group.Add(new VocabularyKey(nameof(LastDateofAttendance), "Last Date of Attendance", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Major = group.Add(new VocabularyKey(nameof(Major), "Major", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Rank = group.Add(new VocabularyKey(nameof(Rank), "Rank", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
+                PreviousEducationId = group.Add(new VocabularyKey(nameof(PreviousEducationId), "Previous Education", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Previous Education Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ClassSize = group.Add(new VocabularyKey(nameof(ClassSize), "Class Size", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                DateofEnrollment = group.Add(new VocabularyKey(nameof(DateofEnrollment), "Date of Enrollment", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                GPA = group.Add(new VocabularyKey(nameof(GPA), "GPA", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                Graduated = group.Add(new VocabularyKey(nameof(Graduated), "Graduated", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                GraduationDate = group.Add(new VocabularyKey(nameof(GraduationDate), "Graduation Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LastDateofAttendance = group.Add(new VocabularyKey(nameof(LastDateofAttendance), "Last Date of Attendance", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Major = group.Add(new VocabularyKey(nameof(Major), "Major", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Rank = group.Add(new VocabularyKey(nameof(Rank), "Rank", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="SchoolNameId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="StudentId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
@@ -43,9 +42,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             ///Property <see cref="DegreeId"/> to Vocab 'Program.cdm.json/Program' with Property 'ProgramId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

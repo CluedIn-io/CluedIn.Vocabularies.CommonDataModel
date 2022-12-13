@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,36 +13,36 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("ContractLine Details for Service", group =>
             {
-			    ContractDetailId = group.Add(new VocabularyKey(nameof(ContractDetailId), "Contract Line", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Title = group.Add(new VocabularyKey(nameof(Title), "Title", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ActiveOn = group.Add(new VocabularyKey(nameof(ActiveOn), "Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    AllotmentsOverage = group.Add(new VocabularyKey(nameof(AllotmentsOverage), "Allotments Overage", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    AllotmentsRemaining = group.Add(new VocabularyKey(nameof(AllotmentsRemaining), "Allotments Remaining", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    AllotmentsUsed = group.Add(new VocabularyKey(nameof(AllotmentsUsed), "Allotments Used", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    ContractStateCode = group.Add(new VocabularyKey(nameof(ContractStateCode), "Contract State", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Discount = group.Add(new VocabularyKey(nameof(Discount), "Discount", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    DiscountBase = group.Add(new VocabularyKey(nameof(DiscountBase), "Discount (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DiscountPercentage = group.Add(new VocabularyKey(nameof(DiscountPercentage), "Discount (%)", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    EffectivityCalendar = group.Add(new VocabularyKey(nameof(EffectivityCalendar), "Support Calendar", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExpiresOn = group.Add(new VocabularyKey(nameof(ExpiresOn), "End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    InitialQuantity = group.Add(new VocabularyKey(nameof(InitialQuantity), "Quantity", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    LineItemOrder = group.Add(new VocabularyKey(nameof(LineItemOrder), "Line Item Order", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    Net = group.Add(new VocabularyKey(nameof(Net), "Net", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    NetBase = group.Add(new VocabularyKey(nameof(NetBase), "Net (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Price = group.Add(new VocabularyKey(nameof(Price), "Total Price", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    PriceBase = group.Add(new VocabularyKey(nameof(PriceBase), "Total Price (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ProductSerialNumber = group.Add(new VocabularyKey(nameof(ProductSerialNumber), "Serial Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Rate = group.Add(new VocabularyKey(nameof(Rate), "Rate", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    RateBase = group.Add(new VocabularyKey(nameof(RateBase), "Rate (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ServiceContractUnitsCode = group.Add(new VocabularyKey(nameof(ServiceContractUnitsCode), "Service Contract Units", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TotalAllotments = group.Add(new VocabularyKey(nameof(TotalAllotments), "Total Allotments", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    AccountId = group.Add(new VocabularyKey(nameof(AccountId), "Account", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ContactId = group.Add(new VocabularyKey(nameof(ContactId), "Contact", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                ContractDetailId = group.Add(new VocabularyKey(nameof(ContractDetailId), "Contract Line", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Title = group.Add(new VocabularyKey(nameof(Title), "Title", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ActiveOn = group.Add(new VocabularyKey(nameof(ActiveOn), "Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AllotmentsOverage = group.Add(new VocabularyKey(nameof(AllotmentsOverage), "Allotments Overage", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                AllotmentsRemaining = group.Add(new VocabularyKey(nameof(AllotmentsRemaining), "Allotments Remaining", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                AllotmentsUsed = group.Add(new VocabularyKey(nameof(AllotmentsUsed), "Allotments Used", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                ContractStateCode = group.Add(new VocabularyKey(nameof(ContractStateCode), "Contract State", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Discount = group.Add(new VocabularyKey(nameof(Discount), "Discount", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                DiscountBase = group.Add(new VocabularyKey(nameof(DiscountBase), "Discount (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DiscountPercentage = group.Add(new VocabularyKey(nameof(DiscountPercentage), "Discount (%)", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                EffectivityCalendar = group.Add(new VocabularyKey(nameof(EffectivityCalendar), "Support Calendar", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExpiresOn = group.Add(new VocabularyKey(nameof(ExpiresOn), "End Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InitialQuantity = group.Add(new VocabularyKey(nameof(InitialQuantity), "Quantity", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                LineItemOrder = group.Add(new VocabularyKey(nameof(LineItemOrder), "Line Item Order", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                Net = group.Add(new VocabularyKey(nameof(Net), "Net", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                NetBase = group.Add(new VocabularyKey(nameof(NetBase), "Net (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Price = group.Add(new VocabularyKey(nameof(Price), "Total Price", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                PriceBase = group.Add(new VocabularyKey(nameof(PriceBase), "Total Price (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProductSerialNumber = group.Add(new VocabularyKey(nameof(ProductSerialNumber), "Serial Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Rate = group.Add(new VocabularyKey(nameof(Rate), "Rate", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                RateBase = group.Add(new VocabularyKey(nameof(RateBase), "Rate (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ServiceContractUnitsCode = group.Add(new VocabularyKey(nameof(ServiceContractUnitsCode), "Service Contract Units", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TotalAllotments = group.Add(new VocabularyKey(nameof(TotalAllotments), "Total Allotments", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                AccountId = group.Add(new VocabularyKey(nameof(AccountId), "Account", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ContactId = group.Add(new VocabularyKey(nameof(ContactId), "Contact", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="ContractId"/> to Vocab 'Contract.cdm.json/Contract' with Property 'ContractId'
             ///Property <see cref="CreatedBy"/> to Vocab 'User.cdm.json/User' with Property 'SystemUserId'
@@ -63,7 +62,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="UoMId"/> to Vocab '/core/applicationCommon/foundationCommon/Unit.cdm.json/Unit' with Property 'UoMId'
             ///Property <see cref="UoMScheduleId"/> to Vocab '/core/applicationCommon/foundationCommon/UnitGroup.cdm.json/UnitGroup' with Property 'UoMScheduleId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="ContractDetailId"/> from Vocab 'Case.cdm.json/Case' with Property 'ContractDetailId'
             ///Property <see cref="ContractDetailId"/> from Vocab '/core/applicationCommon/foundationCommon/crmCommon/solutions/portals/Case.cdm.json/Case' with Property 'ContractDetailId'

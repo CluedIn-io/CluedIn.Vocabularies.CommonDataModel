@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,42 +13,42 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("Device Details for Automotive", group =>
             {
-			    EntityImage = group.Add(new VocabularyKey(nameof(EntityImage), "Image", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    ChassisNumber = group.Add(new VocabularyKey(nameof(ChassisNumber), "Chassis Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Condition = group.Add(new VocabularyKey(nameof(Condition), "Condition", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DeviceId = group.Add(new VocabularyKey(nameof(DeviceId), "Device", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DeviceNumber = group.Add(new VocabularyKey(nameof(DeviceNumber), "Device Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ListPrice = group.Add(new VocabularyKey(nameof(ListPrice), "List Price", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    ListPriceBase = group.Add(new VocabularyKey(nameof(ListPriceBase), "List Price (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    ListPriceComments = group.Add(new VocabularyKey(nameof(ListPriceComments), "List Price Comments", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RegistrationNumber = group.Add(new VocabularyKey(nameof(RegistrationNumber), "Registration Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    URL = group.Add(new VocabularyKey(nameof(URL), "URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible)); 
-			    VendorsStockNumber = group.Add(new VocabularyKey(nameof(VendorsStockNumber), "Vendors Stock Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    VIN = group.Add(new VocabularyKey(nameof(VIN), "VIN", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Year = group.Add(new VocabularyKey(nameof(Year), "Year", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                EntityImage = group.Add(new VocabularyKey(nameof(EntityImage), "Image", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                ChassisNumber = group.Add(new VocabularyKey(nameof(ChassisNumber), "Chassis Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Condition = group.Add(new VocabularyKey(nameof(Condition), "Condition", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DeviceId = group.Add(new VocabularyKey(nameof(DeviceId), "Device", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DeviceNumber = group.Add(new VocabularyKey(nameof(DeviceNumber), "Device Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ListPrice = group.Add(new VocabularyKey(nameof(ListPrice), "List Price", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                ListPriceBase = group.Add(new VocabularyKey(nameof(ListPriceBase), "List Price (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                ListPriceComments = group.Add(new VocabularyKey(nameof(ListPriceComments), "List Price Comments", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RegistrationNumber = group.Add(new VocabularyKey(nameof(RegistrationNumber), "Registration Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                URL = group.Add(new VocabularyKey(nameof(URL), "URL", VocabularyKeyDataType.Uri, VocabularyKeyVisibility.Visible));
+                VendorsStockNumber = group.Add(new VocabularyKey(nameof(VendorsStockNumber), "Vendors Stock Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                VIN = group.Add(new VocabularyKey(nameof(VIN), "VIN", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Year = group.Add(new VocabularyKey(nameof(Year), "Year", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
             AddGroup("Device Details for ElectronicMedicalRecords", group =>
             {
-			    CarrierAIDC = group.Add(new VocabularyKey(nameof(CarrierAIDC), "UDI Carrier AIDC", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    DeviceStatus = group.Add(new VocabularyKey(nameof(DeviceStatus), "Device Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExpirationDate = group.Add(new VocabularyKey(nameof(ExpirationDate), "Expiration Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    LotNumber = group.Add(new VocabularyKey(nameof(LotNumber), "Lot Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Manufacturer = group.Add(new VocabularyKey(nameof(Manufacturer), "Manufacturer", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ManufacturerDate = group.Add(new VocabularyKey(nameof(ManufacturerDate), "Manufacturer Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Model = group.Add(new VocabularyKey(nameof(Model), "Model", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    UDI = group.Add(new VocabularyKey(nameof(UDI), "UDI", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    UDICarrierHRF = group.Add(new VocabularyKey(nameof(UDICarrierHRF), "UDI Carrier HRF", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    UDIEntryType = group.Add(new VocabularyKey(nameof(UDIEntryType), "UDI Entry Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    UDIIssuer = group.Add(new VocabularyKey(nameof(UDIIssuer), "UDI Issuer", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    UdiJurisdiction = group.Add(new VocabularyKey(nameof(UdiJurisdiction), "Jurisdiction", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Version = group.Add(new VocabularyKey(nameof(Version), "Version", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                CarrierAIDC = group.Add(new VocabularyKey(nameof(CarrierAIDC), "UDI Carrier AIDC", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                DeviceStatus = group.Add(new VocabularyKey(nameof(DeviceStatus), "Device Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExpirationDate = group.Add(new VocabularyKey(nameof(ExpirationDate), "Expiration Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LotNumber = group.Add(new VocabularyKey(nameof(LotNumber), "Lot Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Manufacturer = group.Add(new VocabularyKey(nameof(Manufacturer), "Manufacturer", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ManufacturerDate = group.Add(new VocabularyKey(nameof(ManufacturerDate), "Manufacturer Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Model = group.Add(new VocabularyKey(nameof(Model), "Model", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                UDI = group.Add(new VocabularyKey(nameof(UDI), "UDI", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                UDICarrierHRF = group.Add(new VocabularyKey(nameof(UDICarrierHRF), "UDI Carrier HRF", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                UDIEntryType = group.Add(new VocabularyKey(nameof(UDIEntryType), "UDI Entry Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                UDIIssuer = group.Add(new VocabularyKey(nameof(UDIIssuer), "UDI Issuer", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                UdiJurisdiction = group.Add(new VocabularyKey(nameof(UdiJurisdiction), "Jurisdiction", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Version = group.Add(new VocabularyKey(nameof(Version), "Version", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="LeadId"/> to Vocab 'Lead.cdm.json/Lead' with Property 'LeadId'
             ///Property <see cref="LeadId"/> to Vocab 'Lead.cdm.json/Lead' with Property 'LeadId'
@@ -511,7 +510,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             ///Property <see cref="SpecificationTypeId"/> to Vocab 'LeadSpecificationType.cdm.json/LeadSpecificationType' with Property 'LeadSpecificationTypeId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="DeviceId"/> from Vocab 'AggregateKPIContext.cdm.json/AggregateKPIContext' with Property 'DeviceId'
             ///Property <see cref="DeviceId"/> from Vocab 'DealDevice.cdm.json/DealDevice' with Property 'DeviceId'

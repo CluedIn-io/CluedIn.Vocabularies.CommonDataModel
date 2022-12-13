@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,13 +13,13 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("FinancialActivity Details for FinancialCommon", group =>
             {
-			    FinancialActivityId = group.Add(new VocabularyKey(nameof(FinancialActivityId), "Financial Activity ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    LedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(LedgerDimensionDisplayValue), "Ledger Dimension Display Value", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TransactionCurrencyCode = group.Add(new VocabularyKey(nameof(TransactionCurrencyCode), "Transaction Currency Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    AccountingCurrencyAmount = group.Add(new VocabularyKey(nameof(AccountingCurrencyAmount), "AccountingCurrencyAmount", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    AccountingDate = group.Add(new VocabularyKey(nameof(AccountingDate), "AccountingDate", VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible)); 
+                FinancialActivityId = group.Add(new VocabularyKey(nameof(FinancialActivityId), "Financial Activity ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                LedgerDimensionDisplayValue = group.Add(new VocabularyKey(nameof(LedgerDimensionDisplayValue), "Ledger Dimension Display Value", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TransactionCurrencyCode = group.Add(new VocabularyKey(nameof(TransactionCurrencyCode), "Transaction Currency Code", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AccountingCurrencyAmount = group.Add(new VocabularyKey(nameof(AccountingCurrencyAmount), "AccountingCurrencyAmount", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                AccountingDate = group.Add(new VocabularyKey(nameof(AccountingDate), "AccountingDate", VocabularyKeyDataType.DateTime, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="MainAccountCategoryKey"/> to Vocab 'MainAccountCategory.cdm.json/MainAccountCategory' with Property 'MainAccountCategoryId'
             ///Property <see cref="MainAccountKey"/> to Vocab 'MainAccount.cdm.json/MainAccount' with Property 'MainAccountId'
@@ -29,9 +28,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="FiscalCalendarPeriodKey"/> to Vocab 'FiscalCalendarPeriod.cdm.json/FiscalCalendarPeriod' with Property 'FiscalCalendarPeriodId'
             ///Property <see cref="LedgerId"/> to Vocab 'Ledger.cdm.json/Ledger' with Property 'LedgerId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

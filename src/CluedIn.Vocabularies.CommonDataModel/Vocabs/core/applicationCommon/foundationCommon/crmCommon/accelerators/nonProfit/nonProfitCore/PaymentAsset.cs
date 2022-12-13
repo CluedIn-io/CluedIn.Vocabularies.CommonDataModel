@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,22 +13,22 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("PaymentAsset Details for NonProfitCore", group =>
             {
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    Amount = group.Add(new VocabularyKey(nameof(Amount), "Amount", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    AmountBase = group.Add(new VocabularyKey(nameof(AmountBase), "Amount (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    AssetType = group.Add(new VocabularyKey(nameof(AssetType), "Asset Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    BookDate = group.Add(new VocabularyKey(nameof(BookDate), "Book Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PaymentAssetCategory = group.Add(new VocabularyKey(nameof(PaymentAssetCategory), "Payment Asset Category", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PaymentAssetId = group.Add(new VocabularyKey(nameof(PaymentAssetId), "Payment Asset", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PaymentAssetSubcategory = group.Add(new VocabularyKey(nameof(PaymentAssetSubcategory), "Payment Asset Subcategory", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Quantity = group.Add(new VocabularyKey(nameof(Quantity), "Quantity", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    Symbol = group.Add(new VocabularyKey(nameof(Symbol), "Symbol", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                Amount = group.Add(new VocabularyKey(nameof(Amount), "Amount", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                AmountBase = group.Add(new VocabularyKey(nameof(AmountBase), "Amount (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                AssetType = group.Add(new VocabularyKey(nameof(AssetType), "Asset Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BookDate = group.Add(new VocabularyKey(nameof(BookDate), "Book Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PaymentAssetCategory = group.Add(new VocabularyKey(nameof(PaymentAssetCategory), "Payment Asset Category", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PaymentAssetId = group.Add(new VocabularyKey(nameof(PaymentAssetId), "Payment Asset", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PaymentAssetSubcategory = group.Add(new VocabularyKey(nameof(PaymentAssetSubcategory), "Payment Asset Subcategory", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Quantity = group.Add(new VocabularyKey(nameof(Quantity), "Quantity", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                Symbol = group.Add(new VocabularyKey(nameof(Symbol), "Symbol", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
@@ -50,7 +49,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="TransferredOnTransactionId"/> to Vocab 'Transaction.cdm.json/Transaction' with Property 'TransactionId'
             ///Property <see cref="TransactionCurrencyId"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="PaymentAssetId"/> from Vocab 'PaymentAsset.cdm.json/PaymentAsset' with Property 'OriginalAssetAdjustedId'
             ///Property <see cref="PaymentAssetId"/> from Vocab 'PaymentAsset.cdm.json/PaymentAsset' with Property 'PaymentAssetPledgedAssetId'

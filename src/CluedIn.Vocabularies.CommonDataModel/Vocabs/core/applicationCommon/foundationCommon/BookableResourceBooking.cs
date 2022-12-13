@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,36 +13,36 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("BookableResourceBooking Details for FoundationCommon", group =>
             {
-			    BookableResourceBookingId = group.Add(new VocabularyKey(nameof(BookableResourceBookingId), "Bookable Resource Booking", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ProcessId = group.Add(new VocabularyKey(nameof(ProcessId), "Process Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    StageId = group.Add(new VocabularyKey(nameof(StageId), "Stage Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    BookingType = group.Add(new VocabularyKey(nameof(BookingType), "Booking Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Duration = group.Add(new VocabularyKey(nameof(Duration), "Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    EndTime = group.Add(new VocabularyKey(nameof(EndTime), "End Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StartTime = group.Add(new VocabularyKey(nameof(StartTime), "Start Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "ExchangeRate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
+                BookableResourceBookingId = group.Add(new VocabularyKey(nameof(BookableResourceBookingId), "Bookable Resource Booking", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProcessId = group.Add(new VocabularyKey(nameof(ProcessId), "Process Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                StageId = group.Add(new VocabularyKey(nameof(StageId), "Stage Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                BookingType = group.Add(new VocabularyKey(nameof(BookingType), "Booking Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Duration = group.Add(new VocabularyKey(nameof(Duration), "Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                EndTime = group.Add(new VocabularyKey(nameof(EndTime), "End Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StartTime = group.Add(new VocabularyKey(nameof(StartTime), "Start Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "ExchangeRate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
             });
             AddGroup("BookableResourceBooking Details for ProjectCommon", group =>
             {
-			    ActualArrivalTime = group.Add(new VocabularyKey(nameof(ActualArrivalTime), "Actual Arrival Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ActualTravelDuration = group.Add(new VocabularyKey(nameof(ActualTravelDuration), "Actual Travel Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    AllowOverlapping = group.Add(new VocabularyKey(nameof(AllowOverlapping), "Allow Overlapping", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    BookingMethod = group.Add(new VocabularyKey(nameof(BookingMethod), "Booking Method", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CascadeCrewChanges = group.Add(new VocabularyKey(nameof(CascadeCrewChanges), "Cascade Crew Changes", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    AcceptCascadeCrewChanges = group.Add(new VocabularyKey(nameof(AcceptCascadeCrewChanges), "Accept Cascade Crew Changes", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible)); 
-			    Effort = group.Add(new VocabularyKey(nameof(Effort), "Capacity", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    EstimatedArrivalTime = group.Add(new VocabularyKey(nameof(EstimatedArrivalTime), "Estimated Arrival Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EstimatedTravelDuration = group.Add(new VocabularyKey(nameof(EstimatedTravelDuration), "Estimated Travel Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    Latitude = group.Add(new VocabularyKey(nameof(Latitude), "Latitude", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Longitude = group.Add(new VocabularyKey(nameof(Longitude), "Longitude", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    MilesTraveled = group.Add(new VocabularyKey(nameof(MilesTraveled), "Miles Traveled", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    WorkLocation = group.Add(new VocabularyKey(nameof(WorkLocation), "Work Location", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                ActualArrivalTime = group.Add(new VocabularyKey(nameof(ActualArrivalTime), "Actual Arrival Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ActualTravelDuration = group.Add(new VocabularyKey(nameof(ActualTravelDuration), "Actual Travel Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                AllowOverlapping = group.Add(new VocabularyKey(nameof(AllowOverlapping), "Allow Overlapping", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                BookingMethod = group.Add(new VocabularyKey(nameof(BookingMethod), "Booking Method", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CascadeCrewChanges = group.Add(new VocabularyKey(nameof(CascadeCrewChanges), "Cascade Crew Changes", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                AcceptCascadeCrewChanges = group.Add(new VocabularyKey(nameof(AcceptCascadeCrewChanges), "Accept Cascade Crew Changes", VocabularyKeyDataType.Boolean, VocabularyKeyVisibility.Visible));
+                Effort = group.Add(new VocabularyKey(nameof(Effort), "Capacity", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                EstimatedArrivalTime = group.Add(new VocabularyKey(nameof(EstimatedArrivalTime), "Estimated Arrival Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EstimatedTravelDuration = group.Add(new VocabularyKey(nameof(EstimatedTravelDuration), "Estimated Travel Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                Latitude = group.Add(new VocabularyKey(nameof(Latitude), "Latitude", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Longitude = group.Add(new VocabularyKey(nameof(Longitude), "Longitude", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                MilesTraveled = group.Add(new VocabularyKey(nameof(MilesTraveled), "Miles Traveled", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                WorkLocation = group.Add(new VocabularyKey(nameof(WorkLocation), "Work Location", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="Resource"/> to Vocab 'BookableResource.cdm.json/BookableResource' with Property 'BookableResourceId'
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/User.cdm.json/User' with Property 'SystemUserId'
@@ -75,7 +74,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             ///Property <see cref="TransactionCurrencyId"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="BookableResourceBookingHeaderId"/> from Vocab 'BookableResourceBooking.cdm.json/BookableResourceBooking' with Property 'Header'
             ///Property <see cref="BookableResourceBookingId"/> from Vocab 'crmCommon/CampaignActivity.cdm.json/CampaignActivity' with Property 'RegardingObjectId'

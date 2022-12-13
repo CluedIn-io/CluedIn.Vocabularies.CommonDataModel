@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,30 +13,30 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("Request Details for NonProfitCore", group =>
             {
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    AmountProjected = group.Add(new VocabularyKey(nameof(AmountProjected), "Amount Projected", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    AmountProjectedBase = group.Add(new VocabularyKey(nameof(AmountProjectedBase), "Amount Projected (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    AmountRecommended = group.Add(new VocabularyKey(nameof(AmountRecommended), "Amount Recommended", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    AmountRecommendedBase = group.Add(new VocabularyKey(nameof(AmountRecommendedBase), "Amount Recommended (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    AmountRequested = group.Add(new VocabularyKey(nameof(AmountRequested), "Amount Requested", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    AmountRequestedBase = group.Add(new VocabularyKey(nameof(AmountRequestedBase), "Amount Requested (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    ApplicationID = group.Add(new VocabularyKey(nameof(ApplicationID), "Application ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ConflictOfInterestDetail = group.Add(new VocabularyKey(nameof(ConflictOfInterestDetail), "Conflict of Interest Detail", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ConflictOfInterestStatus = group.Add(new VocabularyKey(nameof(ConflictOfInterestStatus), "Conflict of Interest Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    InitialApplicationChannel = group.Add(new VocabularyKey(nameof(InitialApplicationChannel), "Initial Application Channel", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Purpose = group.Add(new VocabularyKey(nameof(Purpose), "Purpose", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RequestedDuration = group.Add(new VocabularyKey(nameof(RequestedDuration), "Requested Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    RequestedStartDate = group.Add(new VocabularyKey(nameof(RequestedStartDate), "Requested Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RequestId = group.Add(new VocabularyKey(nameof(RequestId), "Request", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    RequestType = group.Add(new VocabularyKey(nameof(RequestType), "Request Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Requirements = group.Add(new VocabularyKey(nameof(Requirements), "Requirements", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Stage = group.Add(new VocabularyKey(nameof(Stage), "Stage", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    SubmittedDate = group.Add(new VocabularyKey(nameof(SubmittedDate), "Submitted Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TotalProjectBudget = group.Add(new VocabularyKey(nameof(TotalProjectBudget), "Total Project Budget", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    TotalProjectBudgetBase = group.Add(new VocabularyKey(nameof(TotalProjectBudgetBase), "Total Project Budget (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                AmountProjected = group.Add(new VocabularyKey(nameof(AmountProjected), "Amount Projected", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                AmountProjectedBase = group.Add(new VocabularyKey(nameof(AmountProjectedBase), "Amount Projected (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                AmountRecommended = group.Add(new VocabularyKey(nameof(AmountRecommended), "Amount Recommended", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                AmountRecommendedBase = group.Add(new VocabularyKey(nameof(AmountRecommendedBase), "Amount Recommended (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                AmountRequested = group.Add(new VocabularyKey(nameof(AmountRequested), "Amount Requested", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                AmountRequestedBase = group.Add(new VocabularyKey(nameof(AmountRequestedBase), "Amount Requested (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                ApplicationID = group.Add(new VocabularyKey(nameof(ApplicationID), "Application ID", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ConflictOfInterestDetail = group.Add(new VocabularyKey(nameof(ConflictOfInterestDetail), "Conflict of Interest Detail", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ConflictOfInterestStatus = group.Add(new VocabularyKey(nameof(ConflictOfInterestStatus), "Conflict of Interest Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                InitialApplicationChannel = group.Add(new VocabularyKey(nameof(InitialApplicationChannel), "Initial Application Channel", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Purpose = group.Add(new VocabularyKey(nameof(Purpose), "Purpose", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RequestedDuration = group.Add(new VocabularyKey(nameof(RequestedDuration), "Requested Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                RequestedStartDate = group.Add(new VocabularyKey(nameof(RequestedStartDate), "Requested Start Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RequestId = group.Add(new VocabularyKey(nameof(RequestId), "Request", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                RequestType = group.Add(new VocabularyKey(nameof(RequestType), "Request Type", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Requirements = group.Add(new VocabularyKey(nameof(Requirements), "Requirements", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Stage = group.Add(new VocabularyKey(nameof(Stage), "Stage", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                SubmittedDate = group.Add(new VocabularyKey(nameof(SubmittedDate), "Submitted Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TotalProjectBudget = group.Add(new VocabularyKey(nameof(TotalProjectBudget), "Total Project Budget", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                TotalProjectBudgetBase = group.Add(new VocabularyKey(nameof(TotalProjectBudgetBase), "Total Project Budget (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
             AddGroup("Request Details for NonProfitForSales", group =>
             {
@@ -45,19 +44,19 @@ namespace CluedIn.Vocabularies.CommonDataModel
             });
             AddGroup("Request Details for NonProfitIati", group =>
             {
-			    CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CreatedOnBehalfBy = group.Add(new VocabularyKey(nameof(CreatedOnBehalfBy), "Created By (Delegate)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ModifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(ModifiedOnBehalfBy), "Modified By (Delegate)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    AmountProjected_Base = group.Add(new VocabularyKey(nameof(AmountProjected_Base), "Amount Projected (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    AmountRecommended_Base = group.Add(new VocabularyKey(nameof(AmountRecommended_Base), "Amount Recommended (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    AmountRequested_Base = group.Add(new VocabularyKey(nameof(AmountRequested_Base), "Amount Requested (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    RenewalOfAwardId = group.Add(new VocabularyKey(nameof(RenewalOfAwardId), "Renewal of Award", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TotalProjectBudget_Base = group.Add(new VocabularyKey(nameof(TotalProjectBudget_Base), "Total Project Budget (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                CreatedOn = group.Add(new VocabularyKey(nameof(CreatedOn), "Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CreatedOnBehalfBy = group.Add(new VocabularyKey(nameof(CreatedOnBehalfBy), "Created By (Delegate)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ImportSequenceNumber = group.Add(new VocabularyKey(nameof(ImportSequenceNumber), "Import Sequence Number", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                ModifiedOn = group.Add(new VocabularyKey(nameof(ModifiedOn), "Modified On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ModifiedOnBehalfBy = group.Add(new VocabularyKey(nameof(ModifiedOnBehalfBy), "Modified By (Delegate)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AmountProjected_Base = group.Add(new VocabularyKey(nameof(AmountProjected_Base), "Amount Projected (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                AmountRecommended_Base = group.Add(new VocabularyKey(nameof(AmountRecommended_Base), "Amount Recommended (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                AmountRequested_Base = group.Add(new VocabularyKey(nameof(AmountRequested_Base), "Amount Requested (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                RenewalOfAwardId = group.Add(new VocabularyKey(nameof(RenewalOfAwardId), "Renewal of Award", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TotalProjectBudget_Base = group.Add(new VocabularyKey(nameof(TotalProjectBudget_Base), "Total Project Budget (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                OverriddenCreatedOn = group.Add(new VocabularyKey(nameof(OverriddenCreatedOn), "Record Created On", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="FiscalSponsorId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="RecipientId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
@@ -85,7 +84,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             ///Property <see cref="TransactionCurrencyId"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="RequestId"/> from Vocab 'Award.cdm.json/Award' with Property 'RequestId'
             ///Property <see cref="RequestId"/> from Vocab 'OfacMatch.cdm.json/OfacMatch' with Property 'RequestId'

@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,14 +13,14 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("ParticipatingOrganization Details for NonProfitIati", group =>
             {
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ParticipatingOrganizationActivityId = group.Add(new VocabularyKey(nameof(ParticipatingOrganizationActivityId), "Participating Organization Activity Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ParticipatingOrganizationId = group.Add(new VocabularyKey(nameof(ParticipatingOrganizationId), "Participating Organization", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    OrganizationRole = group.Add(new VocabularyKey(nameof(OrganizationRole), "Organization Role", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ParticipatingOrganizationActivityId = group.Add(new VocabularyKey(nameof(ParticipatingOrganizationActivityId), "Participating Organization Activity Id", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ParticipatingOrganizationId = group.Add(new VocabularyKey(nameof(ParticipatingOrganizationId), "Participating Organization", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OrganizationRole = group.Add(new VocabularyKey(nameof(OrganizationRole), "Organization Role", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="AccountId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="CrsChannelId"/> to Vocab 'NonEmbeddedCodelist.cdm.json/NonEmbeddedCodelist' with Property 'NonEmbeddedCodelistId'
@@ -39,9 +38,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             ///Property <see cref="DeliveryFrameworkId"/> to Vocab 'DeliveryFramework.cdm.json/DeliveryFramework' with Property 'DeliveryFrameworkId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

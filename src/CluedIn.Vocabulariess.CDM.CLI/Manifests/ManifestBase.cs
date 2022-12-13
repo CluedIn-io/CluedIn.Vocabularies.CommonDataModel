@@ -3,10 +3,8 @@ using Microsoft.CommonDataModel.ObjectModel.Cdm;
 using Microsoft.CommonDataModel.ObjectModel.Storage;
 using Microsoft.CommonDataModel.ObjectModel.Utilities;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using System.Text;
 
 namespace CluedIn.Vocabulariess.CDM.CLI
 {

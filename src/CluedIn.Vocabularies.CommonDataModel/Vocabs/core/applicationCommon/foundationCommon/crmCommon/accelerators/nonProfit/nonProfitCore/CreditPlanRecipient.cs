@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,14 +13,14 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("CreditPlanRecipient Details for NonProfitCore", group =>
             {
-			    CreditRecipientId = group.Add(new VocabularyKey(nameof(CreditRecipientId), "Credit Plan Recipient", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PercentageOfPayment = group.Add(new VocabularyKey(nameof(PercentageOfPayment), "Percentage of Payment", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    SoftCreditReason = group.Add(new VocabularyKey(nameof(SoftCreditReason), "Soft Credit Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                CreditRecipientId = group.Add(new VocabularyKey(nameof(CreditRecipientId), "Credit Plan Recipient", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PercentageOfPayment = group.Add(new VocabularyKey(nameof(PercentageOfPayment), "Percentage of Payment", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                SoftCreditReason = group.Add(new VocabularyKey(nameof(SoftCreditReason), "Soft Credit Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="CreditPlanRecipientCustomerId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="CreditPlanRecipientCustomerId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
@@ -39,9 +38,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

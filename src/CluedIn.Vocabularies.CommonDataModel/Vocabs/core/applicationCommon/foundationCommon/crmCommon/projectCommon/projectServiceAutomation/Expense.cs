@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,29 +13,29 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("Expense Details for ProjectServiceAutomation", group =>
             {
-			    ExpenseId = group.Add(new VocabularyKey(nameof(ExpenseId), "Expense", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExpensePurpose = group.Add(new VocabularyKey(nameof(ExpensePurpose), "Expense Purpose", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ProcessId = group.Add(new VocabularyKey(nameof(ProcessId), "Process Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    StageId = group.Add(new VocabularyKey(nameof(StageId), "Stage Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible)); 
-			    TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Amount = group.Add(new VocabularyKey(nameof(Amount), "Amount", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    AmountBase = group.Add(new VocabularyKey(nameof(AmountBase), "Amount (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExpenseStatus = group.Add(new VocabularyKey(nameof(ExpenseStatus), "Expense Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ExternalComments = group.Add(new VocabularyKey(nameof(ExternalComments), "External Comments", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Quantity = group.Add(new VocabularyKey(nameof(Quantity), "Quantity", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    SalesTaxAmount = group.Add(new VocabularyKey(nameof(SalesTaxAmount), "Sales tax amount", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    SalesTaxAmountBase = group.Add(new VocabularyKey(nameof(SalesTaxAmountBase), "Sales tax amount (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TargetExpenseStatus = group.Add(new VocabularyKey(nameof(TargetExpenseStatus), "Target Expense Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TransactionDate = group.Add(new VocabularyKey(nameof(TransactionDate), "Transaction Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Price = group.Add(new VocabularyKey(nameof(Price), "Price", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    PriceBase = group.Add(new VocabularyKey(nameof(PriceBase), "Price (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    TotalAmount = group.Add(new VocabularyKey(nameof(TotalAmount), "Total Amount", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    TotalAmountBase = group.Add(new VocabularyKey(nameof(TotalAmountBase), "Total Amount (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                ExpenseId = group.Add(new VocabularyKey(nameof(ExpenseId), "Expense", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExpensePurpose = group.Add(new VocabularyKey(nameof(ExpensePurpose), "Expense Purpose", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProcessId = group.Add(new VocabularyKey(nameof(ProcessId), "Process Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                StageId = group.Add(new VocabularyKey(nameof(StageId), "Stage Id", VocabularyKeyDataType.Guid, VocabularyKeyVisibility.Visible));
+                TraversedPath = group.Add(new VocabularyKey(nameof(TraversedPath), "Traversed Path", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Amount = group.Add(new VocabularyKey(nameof(Amount), "Amount", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                AmountBase = group.Add(new VocabularyKey(nameof(AmountBase), "Amount (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExpenseStatus = group.Add(new VocabularyKey(nameof(ExpenseStatus), "Expense Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ExternalComments = group.Add(new VocabularyKey(nameof(ExternalComments), "External Comments", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Quantity = group.Add(new VocabularyKey(nameof(Quantity), "Quantity", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                SalesTaxAmount = group.Add(new VocabularyKey(nameof(SalesTaxAmount), "Sales tax amount", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                SalesTaxAmountBase = group.Add(new VocabularyKey(nameof(SalesTaxAmountBase), "Sales tax amount (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TargetExpenseStatus = group.Add(new VocabularyKey(nameof(TargetExpenseStatus), "Target Expense Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TransactionDate = group.Add(new VocabularyKey(nameof(TransactionDate), "Transaction Date", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Price = group.Add(new VocabularyKey(nameof(Price), "Price", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                PriceBase = group.Add(new VocabularyKey(nameof(PriceBase), "Price (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                TotalAmount = group.Add(new VocabularyKey(nameof(TotalAmount), "Total Amount", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                TotalAmountBase = group.Add(new VocabularyKey(nameof(TotalAmountBase), "Total Amount (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
@@ -72,7 +71,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="ExpenseCategoryId"/> from Vocab 'Expense.cdm.json/Expense' with Property 'ExpenseCategory'
             ///Property <see cref="ExpenseId"/> from Vocab 'ExpenseReceipt.cdm.json/ExpenseReceipt' with Property 'ExpenseId'

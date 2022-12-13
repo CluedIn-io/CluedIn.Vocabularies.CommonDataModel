@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,19 +13,19 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("TradeIn Details for Automotive", group =>
             {
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    AppraisalSource = group.Add(new VocabularyKey(nameof(AppraisalSource), "Appraisal Source", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    AppraisedValue = group.Add(new VocabularyKey(nameof(AppraisedValue), "Appraised Value", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    AppraisedValueBase = group.Add(new VocabularyKey(nameof(AppraisedValueBase), "Appraised Value (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    OfferPrice = group.Add(new VocabularyKey(nameof(OfferPrice), "Offer Price", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    OfferPriceBase = group.Add(new VocabularyKey(nameof(OfferPriceBase), "Offer Price (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    TradeInId = group.Add(new VocabularyKey(nameof(TradeInId), "Trade In", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                AppraisalSource = group.Add(new VocabularyKey(nameof(AppraisalSource), "Appraisal Source", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                AppraisedValue = group.Add(new VocabularyKey(nameof(AppraisedValue), "Appraised Value", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                AppraisedValueBase = group.Add(new VocabularyKey(nameof(AppraisedValueBase), "Appraised Value (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                Description = group.Add(new VocabularyKey(nameof(Description), "Description", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                OfferPrice = group.Add(new VocabularyKey(nameof(OfferPrice), "Offer Price", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                OfferPriceBase = group.Add(new VocabularyKey(nameof(OfferPriceBase), "Offer Price (Base)", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                TradeInId = group.Add(new VocabularyKey(nameof(TradeInId), "Trade In", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="LeadId"/> to Vocab 'Lead.cdm.json/Lead' with Property 'LeadId'
             ///Property <see cref="DealId"/> to Vocab 'Deal.cdm.json/Deal' with Property 'DealId'
@@ -47,9 +46,9 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="CustomerId"/> to Vocab '/core/applicationCommon/Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="TransactionCurrencyId"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
             #endregion
-            
+
             #region Outgoing Relationships
-            
+
             #endregion
         }
 

@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,22 +13,22 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("Pass Details for EventManagement", group =>
             {
-			    PassId = group.Add(new VocabularyKey(nameof(PassId), "Pass", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    CostPerUnit = group.Add(new VocabularyKey(nameof(CostPerUnit), "Cost per unit", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    CostPerUnitBase = group.Add(new VocabularyKey(nameof(CostPerUnitBase), "Cost per unit (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    NoOfPassesAllocated = group.Add(new VocabularyKey(nameof(NoOfPassesAllocated), "No of passes allocated", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    NoOfPassesSold = group.Add(new VocabularyKey(nameof(NoOfPassesSold), "No of passes sold", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    PassPrice = group.Add(new VocabularyKey(nameof(PassPrice), "Pass Price", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    PassPriceBase = group.Add(new VocabularyKey(nameof(PassPriceBase), "Pass Price (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    NoOfPassesLeft = group.Add(new VocabularyKey(nameof(NoOfPassesLeft), "No of passes left", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    TotalCost = group.Add(new VocabularyKey(nameof(TotalCost), "Total cost", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible)); 
-			    TotalcostBase = group.Add(new VocabularyKey(nameof(TotalcostBase), "Total cost (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                PassId = group.Add(new VocabularyKey(nameof(PassId), "Pass", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                CostPerUnit = group.Add(new VocabularyKey(nameof(CostPerUnit), "Cost per unit", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                ExchangeRate = group.Add(new VocabularyKey(nameof(ExchangeRate), "Exchange Rate", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                CostPerUnitBase = group.Add(new VocabularyKey(nameof(CostPerUnitBase), "Cost per unit (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                NoOfPassesAllocated = group.Add(new VocabularyKey(nameof(NoOfPassesAllocated), "No of passes allocated", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                NoOfPassesSold = group.Add(new VocabularyKey(nameof(NoOfPassesSold), "No of passes sold", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                PassPrice = group.Add(new VocabularyKey(nameof(PassPrice), "Pass Price", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                PassPriceBase = group.Add(new VocabularyKey(nameof(PassPriceBase), "Pass Price (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                NoOfPassesLeft = group.Add(new VocabularyKey(nameof(NoOfPassesLeft), "No of passes left", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                TotalCost = group.Add(new VocabularyKey(nameof(TotalCost), "Total cost", VocabularyKeyDataType.Currency, VocabularyKeyVisibility.Visible));
+                TotalcostBase = group.Add(new VocabularyKey(nameof(TotalcostBase), "Total cost (Base)", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="CreatedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="ModifiedBy"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/service/User.cdm.json/User' with Property 'SystemUserId'
@@ -57,7 +56,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="TransactionCurrencyId"/> to Vocab '/core/applicationCommon/Currency.cdm.json/Currency' with Property 'TransactionCurrencyId'
             ///Property <see cref="Track"/> to Vocab 'SessionTrack.cdm.json/SessionTrack' with Property 'SessionTrackId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="PassId"/> from Vocab 'AttendeePass.cdm.json/AttendeePass' with Property 'Pass'
             ///Property <see cref="AttendeePassId"/> from Vocab 'CheckIn.cdm.json/CheckIn' with Property 'PurchasedPassesId'

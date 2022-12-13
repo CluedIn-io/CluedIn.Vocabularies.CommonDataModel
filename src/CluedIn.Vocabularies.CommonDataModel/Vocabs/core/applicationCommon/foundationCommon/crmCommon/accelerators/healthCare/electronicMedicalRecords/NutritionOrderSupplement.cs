@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,14 +13,14 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("NutritionOrderSupplement Details for ElectronicMedicalRecords", group =>
             {
-			    Instruction = group.Add(new VocabularyKey(nameof(Instruction), "Instruction", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    NutritionOrderSupplementId = group.Add(new VocabularyKey(nameof(NutritionOrderSupplementId), "Nutrition Order Supplement", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    ProductName = group.Add(new VocabularyKey(nameof(ProductName), "Product Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Quantity = group.Add(new VocabularyKey(nameof(Quantity), "Quantity", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                Instruction = group.Add(new VocabularyKey(nameof(Instruction), "Instruction", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                NutritionOrderSupplementId = group.Add(new VocabularyKey(nameof(NutritionOrderSupplementId), "Nutrition Order Supplement", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                ProductName = group.Add(new VocabularyKey(nameof(ProductName), "Product Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Quantity = group.Add(new VocabularyKey(nameof(Quantity), "Quantity", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="TypeId"/> to Vocab 'CodeableConcept.cdm.json/CodeableConcept' with Property 'CodeableConceptId'
             ///Property <see cref="NutritionOrderId"/> to Vocab 'NutritionOrder.cdm.json/NutritionOrder' with Property 'NutritionOrderId'
@@ -52,7 +51,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             ///Property <see cref="ScheduleId"/> to Vocab 'Timing.cdm.json/Timing' with Property 'TimingId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="NutritionOrderSupplementId"/> from Vocab 'NutritionOrderSupplementSchedule.cdm.json/NutritionOrderSupplementSchedule' with Property 'NutritionOrderSupplementId'
             #endregion

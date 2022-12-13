@@ -1,4 +1,3 @@
-using CluedIn.Core.Data;
 using CluedIn.Core.Data.Vocabularies;
 
 namespace CluedIn.Vocabularies.CommonDataModel
@@ -14,24 +13,24 @@ namespace CluedIn.Vocabularies.CommonDataModel
 
             AddGroup("Encounter Details for ElectronicMedicalRecords", group =>
             {
-			    Class = group.Add(new VocabularyKey(nameof(Class), "Class", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Duration = group.Add(new VocabularyKey(nameof(Duration), "Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible)); 
-			    EncounterClass = group.Add(new VocabularyKey(nameof(EncounterClass), "Class", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EncounterEndDate = group.Add(new VocabularyKey(nameof(EncounterEndDate), "End Date/Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EncounterId = group.Add(new VocabularyKey(nameof(EncounterId), "Encounter", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EncounterIdentifier = group.Add(new VocabularyKey(nameof(EncounterIdentifier), "Encounter Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EncounterLength = group.Add(new VocabularyKey(nameof(EncounterLength), "Duration", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible)); 
-			    EncounterStartDate = group.Add(new VocabularyKey(nameof(EncounterStartDate), "Start Date/Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    EncounterStatus = group.Add(new VocabularyKey(nameof(EncounterStatus), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    HospitalizationPreAdmissionNumber = group.Add(new VocabularyKey(nameof(HospitalizationPreAdmissionNumber), "Pre Admission Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PeriodEnd = group.Add(new VocabularyKey(nameof(PeriodEnd), "Period End", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    PeriodStart = group.Add(new VocabularyKey(nameof(PeriodStart), "Period Start", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    Priority = group.Add(new VocabularyKey(nameof(Priority), "Priority", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
-			    StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible)); 
+                Class = group.Add(new VocabularyKey(nameof(Class), "Class", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Duration = group.Add(new VocabularyKey(nameof(Duration), "Duration", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                EncounterClass = group.Add(new VocabularyKey(nameof(EncounterClass), "Class", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EncounterEndDate = group.Add(new VocabularyKey(nameof(EncounterEndDate), "End Date/Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EncounterId = group.Add(new VocabularyKey(nameof(EncounterId), "Encounter", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EncounterIdentifier = group.Add(new VocabularyKey(nameof(EncounterIdentifier), "Encounter Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EncounterLength = group.Add(new VocabularyKey(nameof(EncounterLength), "Duration", VocabularyKeyDataType.Number, VocabularyKeyVisibility.Visible));
+                EncounterStartDate = group.Add(new VocabularyKey(nameof(EncounterStartDate), "Start Date/Time", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                EncounterStatus = group.Add(new VocabularyKey(nameof(EncounterStatus), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                HospitalizationPreAdmissionNumber = group.Add(new VocabularyKey(nameof(HospitalizationPreAdmissionNumber), "Pre Admission Number", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Name = group.Add(new VocabularyKey(nameof(Name), "Name", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PeriodEnd = group.Add(new VocabularyKey(nameof(PeriodEnd), "Period End", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                PeriodStart = group.Add(new VocabularyKey(nameof(PeriodStart), "Period Start", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                Priority = group.Add(new VocabularyKey(nameof(Priority), "Priority", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StateCode = group.Add(new VocabularyKey(nameof(StateCode), "Status", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
+                StatusCode = group.Add(new VocabularyKey(nameof(StatusCode), "Status Reason", VocabularyKeyDataType.Text, VocabularyKeyVisibility.Visible));
             });
-            
+
             #region Incoming Relationships
             ///Property <see cref="OnBehalfOfId"/> to Vocab 'Account.cdm.json/Account' with Property 'AccountId'
             ///Property <see cref="EncounterPatientIdentifierId"/> to Vocab 'Contact.cdm.json/Contact' with Property 'ContactId'
@@ -254,7 +253,7 @@ namespace CluedIn.Vocabularies.CommonDataModel
             ///Property <see cref="OwningUser"/> to Vocab '/core/applicationCommon/foundationCommon/crmCommon/projectCommon/User.cdm.json/User' with Property 'SystemUserId'
             ///Property <see cref="OwningTeam"/> to Vocab '/core/applicationCommon/Team.cdm.json/Team' with Property 'TeamId'
             #endregion
-            
+
             #region Outgoing Relationships
             ///Property <see cref="EncounterId"/> from Vocab 'AppointmentEMRRequestedPeriod.cdm.json/AppointmentEMRRequestedPeriod' with Property 'AppointmentEMRId'
             ///Property <see cref="EncounterId"/> from Vocab 'CarePlan.cdm.json/CarePlan' with Property 'EncounterIdentifierId'
